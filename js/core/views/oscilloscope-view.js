@@ -1,11 +1,13 @@
 // oscilloscope view
 
-oscilloscope = {
+oscilloscopeView = {
 
     canvas: null,       // canvas for visualization
     analyzer: null,     // audio analyzer
     startTime: null,    // start time for visualization
     endTime: null,      // end time for visualization
+    pause: false,       // pause flag for visualization
+    dataArray: null,    // data array for signal data
 
     init: function (canvas, analyzer) {
         this.canvas = canvas;
@@ -18,6 +20,8 @@ oscilloscope = {
             const html = document.querySelector('html');
             const htmlWidth = html.clientWidth;
             const htmlHeight = html.clientHeight;
+
+            // auto size canvas (maximize)
             if (this.canvas.width !== htmlWidth - settings.ui.clientWidthBorder)
                 this.canvas.width = htmlWidth - settings.ui.clientWidthBorder;
             if (this.canvas.height !== htmlHeight - settings.ui.clientHeightBorder)
@@ -25,30 +29,34 @@ oscilloscope = {
 
             const canvasHeight = this.canvas.height;
             const canvasWidth = this.canvas.width;
+
             const bufferLength = this.analyzer.frequencyBinCount;
-            const dataArray = new Uint8Array(bufferLength);
-            this.analyzer.getByteTimeDomainData(dataArray);
+            if (this.dataArray == null || !settings.oscilloscope.pause) {
+                // refresh draw buffer
+                this.dataArray = new Uint8Array(bufferLength);
+                this.analyzer.getByteTimeDomainData(this.dataArray);
+            }
 
             const drawContext = this.canvas.getContext('2d');
+            // clear view
             drawContext.clearRect(0, 0, canvasWidth, canvasHeight);
 
             var x = -1;
             var y = -1;
 
-            // instant value
-            const ival = document.querySelector('#ival');
-            ival.textContent = dataArray[0];
+            if (!settings.oscilloscope.pause)
+                signalMeasures.setValue(this.dataArray[0]);
 
-            for (var i = 0; i < dataArray.length; i++) {
-                var value = dataArray[i];
+            for (var i = 0; i < this.dataArray.length; i++) {
+                var value = this.dataArray[i];
 
                 // adjust y position (y multiplier, y position shift)
-                var relval = (value - 128) * settings.oscilloscope.yMultiplier;// + 128;
+                var relval = (value - 128) * settings.oscilloscope.yMultiplier;
 
                 var percent = relval / 128;
                 var height = canvasHeight * percent / 2.0;
                 var offset = canvasHeight / 2 + height;
-                var barWidth = canvasWidth / dataArray.length;
+                var barWidth = canvasWidth / this.dataArray.length;
 
                 var nx = i * barWidth;
                 var ny = offset;
@@ -67,8 +75,7 @@ oscilloscope = {
                 y = ny;
             }
 
-            if (!settings.oscilloscope.pause)
-                requestAnimationFrame(this.visualize.bind(this));
+            app.requestAnimationFrame();
 
         } else {
             console.warn("Analyzer not set up yet");
