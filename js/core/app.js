@@ -20,6 +20,7 @@ app = {
 
     tasks: [],                  // tasks,
     canvas: null,               // canvas for visualization
+    ui: null,                   // UI component
 
     // operations
 
@@ -33,6 +34,8 @@ app = {
         this.signalView2 = new SignalView();
         this.signalMeasuresView1.init(1, this.signalMeasures1);
         this.signalMeasuresView2.init(2, this.signalMeasures2);
+
+        ui.init();
 
         this.inputDevice = signalInputDevice;
         this.stream = await this.inputDevice.getMediaStream();
