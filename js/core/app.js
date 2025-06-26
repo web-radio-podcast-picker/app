@@ -1,13 +1,22 @@
 // this is the main app body
 
-var inputDevice = internalSoundcard;
-var input = inputDevice.getMediaStream();
+sigapp = {
 
-if (input != undefined) {
+    run: async function () {
 
-    // input media stream ok
+        var inputDevice = internalSoundcard;
+        var input = await inputDevice.getMediaStream();
 
-}
-else {
-    console.error("no input media stream");
-}
+        if (input != undefined) {
+            console.log("Input media stream ok");
+        }
+        else {
+            console.error("No input media stream");
+        }
+    }
+};
+
+document.addEventListener('DOMContentLoaded', function () {
+    console.log('DOM fully loaded and parsed');
+    sigapp.run();
+}, false);
