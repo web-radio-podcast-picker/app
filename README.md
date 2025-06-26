@@ -10,4 +10,4 @@ main purposes:
 - modules to enhance functionalities (speech/recognition, sound/voice effects, ...)
 - high quality rendering
 
-  
+project status: on going
