@@ -1,10 +1,10 @@
 // signal measures
-signalMeasures = {
+class SignalMeasures {
 
-    value: null,    // digitalized value
+    value = null;    // digitalized value
 
     // set digital value
-    setValue: function (value) {
+    setValue(value) {
         this.value = value;
-    },
+    }
 }

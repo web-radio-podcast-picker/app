@@ -1,23 +1,23 @@
 // signal view
 
-signalView = {
+class SignalView {
 
-    canvas: null,           // canvas for visualization
-    analyzer: null,         // audio analyzer
-    lastStartTime: null,    // last start time for visualization
-    startTime: null,        // start time for visualization
-    endTime: null,          // end time for visualization
-    pause: false,           // pause flag for visualization
-    dataArray: null,        // data array for signal data
-    measures: null,         // measures of signal data
+    canvas = null;           // canvas for visualization
+    analyzer = null;         // audio analyzer
+    lastStartTime = null;    // last start time for visualization
+    startTime = null;        // start time for visualization
+    endTime = null;          // end time for visualization
+    pause = false;           // pause flag for visualization
+    dataArray = null;        // data array for signal data
+    measures = null;         // measures of signal data
 
-    init: function (canvas, analyzer, measures) {
+    init(canvas, analyzer, measures) {
         this.canvas = canvas;
         this.analyzer = analyzer;
         this.measures = measures;
-    },
+    }
 
-    visualize: function () {
+    run() {
         if (this.analyzer != null) {
 
             this.lastStartTime = this.startTime;
@@ -50,7 +50,7 @@ signalView = {
             var y = -1;
 
             if (!this.pause)
-                signalMeasures.setValue(this.dataArray[0]);
+                this.measures.setValue(this.dataArray[0]);
 
             for (var i = 0; i < this.dataArray.length; i++) {
                 var value = this.dataArray[i];
@@ -86,5 +86,5 @@ signalView = {
         } else {
             console.warn("Analyzer not set up yet");
         }
-    },
-};
+    }
+}

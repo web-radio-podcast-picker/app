@@ -1,10 +1,17 @@
 // signal measures view
-signalMeasuresView = {
+class SignalMeasuresView {
 
-    visualize: function () {
+    channel = null;     // channel number
+
+    init(channel, signalMeasures) {
+        this.signalMeasures = signalMeasures;
+        this.channel = channel;
+    }
+
+    run() {
         // instant value
-        const value = signalMeasures.value;
-        const ival = document.querySelector('#ival');
+        const value = this.signalMeasures.value;
+        const ival = document.querySelector('#ival_' + this.channel);
         ival.textContent = value;
     }
 }

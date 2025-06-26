@@ -15,20 +15,27 @@ canvas {
 .value {
     display: inline-block;
     border: #444444 solid 1px;
-    color:white;
 }
 
 .label {
     display: inline-block;
-    color: white;
     margin-right: 0.5em;
 }
 
-#top-pane {
+#top-pane-1 {
     top: 1em;
     left: 1em;
     position: absolute;
     z-index: 10;
+    color: cyan;
+}
+
+#top-pane-2 {
+    top: 3em;
+    left: 1em;
+    position: absolute;
+    z-index: 10;
+    color: yellow;
 }
 
 #ival {
