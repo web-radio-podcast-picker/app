@@ -1,22 +1,27 @@
-// oscilloscope view
+// signal view
 
-oscilloscopeView = {
+signalView = {
 
-    canvas: null,       // canvas for visualization
-    analyzer: null,     // audio analyzer
-    startTime: null,    // start time for visualization
-    endTime: null,      // end time for visualization
-    pause: false,       // pause flag for visualization
-    dataArray: null,    // data array for signal data
+    canvas: null,           // canvas for visualization
+    analyzer: null,         // audio analyzer
+    lastStartTime: null,    // last start time for visualization
+    startTime: null,        // start time for visualization
+    endTime: null,          // end time for visualization
+    pause: false,           // pause flag for visualization
+    dataArray: null,        // data array for signal data
+    measures: null,         // measures of signal data
 
-    init: function (canvas, analyzer) {
+    init: function (canvas, analyzer, measures) {
         this.canvas = canvas;
         this.analyzer = analyzer;
+        this.measures = measures;
     },
 
     visualize: function () {
         if (this.analyzer != null) {
 
+            this.lastStartTime = this.startTime;
+            this.startTime = Date.now();
             const html = document.querySelector('html');
             const htmlWidth = html.clientWidth;
             const htmlHeight = html.clientHeight;
@@ -31,7 +36,7 @@ oscilloscopeView = {
             const canvasWidth = this.canvas.width;
 
             const bufferLength = this.analyzer.frequencyBinCount;
-            if (this.dataArray == null || !settings.oscilloscope.pause) {
+            if (this.dataArray == null || !this.pause) {
                 // refresh draw buffer
                 this.dataArray = new Uint8Array(bufferLength);
                 this.analyzer.getByteTimeDomainData(this.dataArray);
@@ -44,7 +49,7 @@ oscilloscopeView = {
             var x = -1;
             var y = -1;
 
-            if (!settings.oscilloscope.pause)
+            if (!this.pause)
                 signalMeasures.setValue(this.dataArray[0]);
 
             for (var i = 0; i < this.dataArray.length; i++) {
@@ -75,6 +80,7 @@ oscilloscopeView = {
                 y = ny;
             }
 
+            this.endTime = Date.now();
             app.requestAnimationFrame();
 
         } else {

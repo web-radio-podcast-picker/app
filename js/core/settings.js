@@ -16,13 +16,14 @@ window.settings = {
     },
 
     oscilloscope: {
-        pause: false,   // pause the oscilloscope
-        yMultiplier: 2, // multiplier for Y-axis scaling
+        pause: false,           // pause the oscilloscope
+        yMultiplier: 2,         // multiplier for Y-axis scaling
+        measures: null          // measures for signal data
     },
 
     ui: {
-        clientWidthBorder: 0, // default border width for client area
-        clientHeightBorder: 4 // default border height for client area
+        clientWidthBorder: 0,   // default border width for client area
+        clientHeightBorder: 4   // default border height for client area
     }
 };
 

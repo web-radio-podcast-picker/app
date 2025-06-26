@@ -9,11 +9,15 @@ app = {
     analyzer: null,             // audio analyzer
     stream: null,               // media stream
     audioContext: null,         // audio context
-    oscilloscopeView: null,     // oscilloscope view
+    // channel 1
+    signalView: null,           // oscilloscope view
     signalMeasuresView: null,   // signal measures view
-    signalMeasures: null,       // signal measures
-    views: [],                  // views,
     signalMeasures: null,       // signal measures data
+    // channel 2
+    signalView2: null,          // oscilloscope view for channel 2
+    signalMeasuresView2: null,  // signal measures view for channel 2   
+    signalMeasures2: null,      // signal measures data for channel 2
+    tasks: [],                  // tasks,
     canvas: null,               // canvas for visualization
 
     // operations
@@ -22,7 +26,7 @@ app = {
 
         this.signalMeasures = signalMeasures;
         this.signalMeasuresView = signalMeasuresView;
-        this.oscilloscopeView = oscilloscopeView;
+        this.signalView = signalView;
         this.inputDevice = signalInputDevice;
         this.stream = await this.inputDevice.getMediaStream();
         this.canvas = document.querySelector('canvas');
@@ -45,17 +49,21 @@ app = {
         if (settings.debug.info)
             console.log("Input stream set");
 
-        // run views
-        // Setup a timer to visualize some stuff.
-        this.oscilloscopeView.init(this.canvas, this.analyzer);
-        this.views.push(this.oscilloscopeView);
-        this.views.push(this.signalMeasuresView);
+        // setup tasks & views
+        this.signalView.init(
+            this.canvas,
+            this.analyzer,
+            this.signalMeasures);
 
+        this.tasks.push(this.signalView);
+        this.tasks.push(this.signalMeasuresView);
+
+        // Setup a timer to visualize some stuff.
         this.requestAnimationFrame();
     },
 
     requestAnimationFrame: function () {
-        this.views.forEach(view => {
+        this.tasks.forEach(view => {
             requestAnimationFrame(view.visualize.bind(view));
         });
     }
