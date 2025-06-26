@@ -8,7 +8,7 @@ signalInputDevice = {
 
     init: function () {
         if (settings.debug.trace) {
-            console.log('Internal soundcard initialized');
+            console.log('Input initialized');
         }
     },
 
@@ -18,8 +18,7 @@ signalInputDevice = {
                 .mediaDevices
                 .getUserMedia({
                     audio: settings.audioInput,
-                    video: false,
-                    ons
+                    video: false
                 });
             console.log('Media stream obtained:', stream);
             return stream;

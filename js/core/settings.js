@@ -15,12 +15,12 @@ window.settings = {
     },
 
     oscilloscope: {
-
+        yMultiplier: 2, // multiplier for Y-axis scaling
     },
 
     ui: {
         clientWidthBorder: 0, // default border width for client area
-        clientHeightBorder: 0 // default border height for client area
+        clientHeightBorder: 4 // default border height for client area
     }
 };
 

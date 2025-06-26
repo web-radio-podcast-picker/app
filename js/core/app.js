@@ -1,6 +1,6 @@
 // this is the main app body
 
-sigapp = {
+app = {
 
     // properties
 
@@ -59,21 +59,33 @@ sigapp = {
             const drawContext = this.canvas.getContext('2d');
             drawContext.clearRect(0, 0, canvasWidth, canvasHeight);
 
-            var x = 0;
-            var y = 0;
+            var x = -1;
+            var y = -1;
+
+            // instant value
+            const ival = document.querySelector('#ival');
+            ival.textContent = dataArray[0];
 
             for (var i = 0; i < dataArray.length; i++) {
                 var value = dataArray[i];
-                var percent = value / 256;
-                var height = canvasHeight * percent;
-                var offset = canvasHeight - height - 1;
+
+                // adjust y position (y multiplier, y position shift)
+                var relval = (value - 128) * settings.oscilloscope.yMultiplier;// + 128;
+
+                var percent = relval / 128;
+                var height = canvasHeight * percent / 2.0;
+                var offset = canvasHeight / 2 + height;
                 var barWidth = canvasWidth / dataArray.length;
 
-                drawContext.fillStyle = 'white';
+                //drawContext.fillStyle = 'white';
                 //drawContext.fillRect(i * barWidth, offset, 1, 1);
 
                 var nx = i * barWidth;
                 var ny = offset;
+                if (x == -1 && y == -1) {
+                    x = nx;
+                    y = ny;
+                }
                 drawContext.beginPath();
                 drawContext.moveTo(x, y);
                 drawContext.lineTo(nx, ny);
@@ -93,5 +105,5 @@ sigapp = {
 
 document.addEventListener('DOMContentLoaded', function () {
     console.log('DOM fully loaded and parsed');
-    sigapp.run();
+    app.run();
 }, false);
