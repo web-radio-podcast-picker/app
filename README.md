@@ -8,4 +8,6 @@ main purposes:
 - sound analysis (fft,...)
 - signal generator (wave,square,...)
 - modules to enhance functionalities (speech/recognition, sound/voice effects, ...)
+- high quality rendering
 
+  
