@@ -1,6 +1,6 @@
-// soundcard signal input manager
+// signal input manager
 
-internalSoundcard = {
+signalInputDevice = {
 
     constructor: function () {
         this.init();
@@ -18,7 +18,8 @@ internalSoundcard = {
                 .mediaDevices
                 .getUserMedia({
                     audio: settings.audioInput,
-                    video: false
+                    video: false,
+                    ons
                 });
             console.log('Media stream obtained:', stream);
             return stream;
