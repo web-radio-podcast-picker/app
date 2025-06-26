@@ -7,7 +7,7 @@ signalInputDevice = {
     },
 
     init: function () {
-        if (settings.debug.trace) {
+        if (settings.debug.info) {
             console.log('Input initialized');
         }
     },
@@ -20,7 +20,8 @@ signalInputDevice = {
                     audio: settings.audioInput,
                     video: false
                 });
-            console.log('Media stream obtained:', stream);
+            if (settings.debug.info)
+                console.log('Media stream obtained:', stream);
             return stream;
         } catch (err) {
             console.error('Error accessing media devices.', err);

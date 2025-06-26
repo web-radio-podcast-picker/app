@@ -8,7 +8,7 @@ body {
 }
 
 canvas {
-    background-color:#110022;
+    background-color:#000000;
     border: #444444 solid 1px;
 }
 
@@ -28,6 +28,7 @@ canvas {
     top: 1em;
     left: 1em;
     position: absolute;
+    z-index: 10;
 }
 
 #ival {

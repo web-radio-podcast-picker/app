@@ -2,7 +2,8 @@
 window.settings = {
 
     debug: {
-        trace: true
+        trace: true,
+        info: true
     },
 
     audioInput: {
@@ -15,6 +16,7 @@ window.settings = {
     },
 
     oscilloscope: {
+        pause: false,   // pause the oscilloscope
         yMultiplier: 2, // multiplier for Y-axis scaling
     },
 
@@ -29,4 +31,5 @@ navigator.getUserMedia = (navigator.getUserMedia ||
     navigator.mozGetUserMedia ||
     navigator.msGetUserMedia);
 
-console.log('Settings initialized:', settings);
+if (settings.debug.info)
+    console.log('Settings initialized:', settings);
