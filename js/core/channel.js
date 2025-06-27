@@ -4,7 +4,12 @@ class Channel {
 
     channelId = null;           // channel id (1, 2,...)
 
+    // audioInputDevice
+    // generator
+    // file
+    // channel (CH1, CH2, ...)
     sourceId = null;            // source id of the signal, e.g., 'input', 'file', etc.
+
     source = null;              // signal source (audioInputDevice, ...)
     streamSource = null;        // media stream source
     stream = null;              // media stream

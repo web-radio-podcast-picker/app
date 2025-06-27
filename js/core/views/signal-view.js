@@ -3,9 +3,6 @@
 class SignalView {
 
     canvas = null;           // canvas for visualization
-    lastStartTime = null;    // last start time for visualization
-    startTime = null;        // start time for visualization
-    endTime = null;          // end time for visualization
     pause = false;           // pause flag for visualization
     dataArray = null;        // data array for signal data
     channel = null;          // channel
@@ -17,8 +14,6 @@ class SignalView {
 
     run() {
 
-        this.lastStartTime = this.startTime;
-        this.startTime = Date.now();
         const html = document.querySelector('html');
         const htmlWidth = html.clientWidth;
         const htmlHeight = html.clientHeight;
@@ -74,7 +69,5 @@ class SignalView {
             x = nx;
             y = ny;
         }
-
-        this.endTime = Date.now();
     }
 }

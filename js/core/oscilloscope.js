@@ -5,6 +5,12 @@ oscilloscope = {
     channels: [],             // array of channels
     audioContext: null,       // audio context for processing
 
+    lastStartTime: null,      // last start time for visualization
+    startTime: null,          // start time for visualization
+    endTime: null,            // end time for visualization
+    scanPeriod: null,         // scan period (in ms, eg view period)
+    scanFrq: null,            // scan frequency (in Hz, eg 1000 ms / view period)
+
     addChannel(channel) {
         // add a channel to the oscilloscope
         channel.view.init(app.canvas, channel);

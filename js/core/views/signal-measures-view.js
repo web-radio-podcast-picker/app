@@ -16,5 +16,8 @@ class SignalMeasuresView {
         $('#vmin_' + c).text(this.signalMeasures.vMin);
         $('#vmax_' + c).text(this.signalMeasures.vMax);
         $('#vavg_' + c).text(this.signalMeasures.vAvg);
+
+        $('#stime').text(oscilloscope.scanPeriod);
+        $('#sfrq').text(oscilloscope.scanFrq);
     }
 }

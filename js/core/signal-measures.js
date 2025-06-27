@@ -6,7 +6,7 @@ class SignalMeasures {
     volts = 0;                  // volts value (calculated from digitalized value)
     vMin = Number.MAX_VALUE;    // minimum volts value
     vMax = Number.MIN_VALUE;    // maximum volts value
-    vAvg = null;                   // average volts value
+    vAvg = null;                // average volts value
 
     // set digital value
     setValue(channel, value) {
