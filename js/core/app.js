@@ -43,6 +43,7 @@ app = {
         startViewTask.init(this.canvas);
 
         this.tasks.push(getSamplesTask);
+        this.tasks.push(publishBuffersTasks);
         this.tasks.push(startViewTask);
         this.tasks.push(channelsAnimationTask);
         this.tasks.push(requestAnimationFrameTask);

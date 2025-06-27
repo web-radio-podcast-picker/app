@@ -15,7 +15,10 @@ class SignalMeasuresView {
         $('#iv_' + c).text(this.signalMeasures.volts);
         $('#vmin_' + c).text(this.signalMeasures.vMin);
         $('#vmax_' + c).text(this.signalMeasures.vMax);
-        $('#vavg_' + c).text(this.signalMeasures.vAvg.toFixed(7));
+        $('#vavg_' + c).text(
+            this.signalMeasures.vAvg == null ?
+                '' :
+                this.signalMeasures.vAvg.toFixed(7));
 
         $('#stime').text(oscilloscope.scanPeriod);
         $('#sfrq').text(oscilloscope.scanFrq);

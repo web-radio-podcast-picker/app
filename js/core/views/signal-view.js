@@ -4,7 +4,6 @@ class SignalView {
 
     canvas = null;           // canvas for visualization
     pause = false;           // pause flag for visualization
-    dataArray = null;        // data array for signal data
     channel = null;          // channel
 
     init(canvas, channel) {
@@ -27,47 +26,44 @@ class SignalView {
         const canvasHeight = this.canvas.height;
         const canvasWidth = this.canvas.width;
 
-        const bufferLength = getSamplesTask.bufferLength;
-        if (this.dataArray == null || !this.pause) {
-            // refresh draw buffer
-            this.dataArray = [...getSamplesTask.dataArray];
-        }
-
         const drawContext = this.canvas.getContext('2d');
 
         var x = -1;
         var y = -1;
 
-        if (!this.pause)
-            this.channel.measures.setValue(this.channel, this.dataArray[0]);
+        const dataArray = this.channel.measures.dataArray;
 
-        for (var i = 0; i < this.dataArray.length; i += 1) {
-            var value = this.dataArray[i];
+        if (!this.pause && dataArray != null)
+            this.channel.measures.setValue(this.channel, dataArray[0]);
 
-            // adjust y position (y multiplier, y position shift)
-            var relval = (value - 128) * this.channel.yMultiplier;
+        if (dataArray != null)
+            for (var i = 0; i < dataArray.length; i += 1) {
+                var value = dataArray[i];
 
-            var percent = relval / 128;
-            var height = canvasHeight * percent / 2.0;
-            var offset = canvasHeight / 2 + height;
-            offset += this.channel.yOffset;
-            var barWidth = canvasWidth / this.dataArray.length;
+                // adjust y position (y multiplier, y position shift)
+                var relval = (value - 128) * this.channel.yMultiplier;
 
-            var nx = i * barWidth;
-            var ny = offset;
-            if (x == -1 && y == -1) {
+                var percent = relval / 128;
+                var height = canvasHeight * percent / 2.0;
+                var offset = canvasHeight / 2 + height;
+                offset += this.channel.yOffset;
+                var barWidth = canvasWidth / dataArray.length;
+
+                var nx = i * barWidth;
+                var ny = offset;
+                if (x == -1 && y == -1) {
+                    x = nx;
+                    y = ny;
+                }
+                drawContext.beginPath();
+                drawContext.moveTo(x, y);
+                drawContext.lineTo(nx, ny);
+                drawContext.strokeStyle = this.channel.color;
+                drawContext.lineWidth = this.channel.lineWidth;
+                drawContext.stroke();
+
                 x = nx;
                 y = ny;
             }
-            drawContext.beginPath();
-            drawContext.moveTo(x, y);
-            drawContext.lineTo(nx, ny);
-            drawContext.strokeStyle = this.channel.color;
-            drawContext.lineWidth = this.channel.lineWidth;
-            drawContext.stroke();
-
-            x = nx;
-            y = ny;
-        }
     }
 }

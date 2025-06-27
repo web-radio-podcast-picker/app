@@ -8,6 +8,8 @@ class SignalMeasures {
     vMax = Number.MIN_VALUE;    // maximum volts value
     vAvg = null;                // average volts value
 
+    dataArray = null;           // array of samples datas
+
     // set digital value
     setValue(channel, value) {
         this.value = value;
@@ -25,4 +27,9 @@ class SignalMeasures {
     valueToVolt(channel, value) {
         return (value - 128) * channel.vScale / 128.0; // convert to volts
     }
+
+    setData(data) {
+        this.dataArray = data;
+    }
+
 }
