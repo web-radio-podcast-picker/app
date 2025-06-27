@@ -20,10 +20,5 @@ class SignalMeasuresView {
                 '' :
                 this.signalMeasures.vAvg.toFixed(7));
         $('#yscale_' + c).text(this.channel.yScale);
-
-        $('#stime').text(oscilloscope.scanPeriod);
-        $('#sfrq').text(oscilloscope.scanFrq);
-        $('#buffsz').text(getSamplesTask.analyzer.frequencyBinCount);
-        $('#echps').text(getSamplesTask.analyzer.context.sampleRate);
     }
 }

@@ -6,6 +6,7 @@ app = {
 
     audioInputChannel: null,    // audio input channel (shared)
     oscilloscope: null,         // oscilloscope channels manager
+    oscilloscopeView: null,     // oscilloscope view
     tasks: [],                  // tasks,
     canvas: null,               // canvas for visualization
     ui: null,                   // UI component
@@ -15,6 +16,7 @@ app = {
     async run() {
 
         this.oscilloscope = oscilloscope;
+        this.oscilloscopeView = new OscilloscopeView();
         this.canvas = document.querySelector('canvas');
         this.audioInputChannel = await this.initDefaultAudioInput();
         this.oscilloscope.addChannel(this.audioInputChannel);
@@ -47,6 +49,7 @@ app = {
         this.tasks.push(channelsMeasuresTask);
         this.tasks.push(startViewTask);
         this.tasks.push(channelsAnimationTask);
+        this.tasks.push(this.oscilloscopeView);
         this.tasks.push(requestAnimationFrameTask);
 
         // Setup a timer to visualize some stuff.
