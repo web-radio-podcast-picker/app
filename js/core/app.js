@@ -4,13 +4,9 @@ app = {
 
     // properties
 
-    // default input device
-    inputDevice: null,          // input device for audio
-    input: null,                // input media stream source
-    stream: null,               // media stream
-    analyzer: null,             // audio analyzer
-
+    audioInput: null,           // audio input channel
     audioContext: null,         // audio context
+    channels: [],               // array of channels
 
     // channel 1
     signalView1: null,          // oscilloscope view
@@ -48,18 +44,23 @@ app = {
     },
 
     async initDefaultInput() {
-        this.inputDevice = signalInputDevice;
-        this.stream = await this.inputDevice.getMediaStream();
-        if (this.stream != undefined) {
+
+        const inp = this.audioInput = new Channel();
+        inp.source = signalInputDevice;
+        inp.stream = await inp.source.getMediaStream();
+
+        this.audioContext = new AudioContext(); // not before getMediaStream
+
+        if (this.audioInput.stream != undefined) {
             if (settings.debug.info)
                 console.log("Input media stream ok");
 
-            this.audioContext = new AudioContext();
-            this.input = this.audioContext.createMediaStreamSource(stream);
-            this.analyzer = this.audioContext.createAnalyser();
-            this.input.connect(this.analyzer);
+            inp.streamSource = this.audioContext.createMediaStreamSource(inp.stream);
+            inp.analyzer = this.audioContext.createAnalyser();
+            inp.streamSource.connect(inp.analyzer);
+
             if (settings.debug.info)
-                console.log("Input stream set", this.analyzer);
+                console.log("Input stream set", inp.analyzer);
             return true;
         }
         else {
@@ -71,7 +72,7 @@ app = {
     start() {
         // setup tasks & views
 
-        getSamplesTask.init(this.analyzer);
+        getSamplesTask.init(this.audioInput.analyzer);
 
         startViewTask.init(this.canvas);
 
