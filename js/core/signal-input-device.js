@@ -17,7 +17,7 @@ signalInputDevice = {
             stream = await navigator
                 .mediaDevices
                 .getUserMedia({
-                    audio: settings.audioInput,
+                    audio: true,
                     video: false
                 });
             if (settings.debug.info)
