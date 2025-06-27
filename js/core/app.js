@@ -59,7 +59,7 @@ app = {
         this.analyzer = this.audioContext.createAnalyser();
         this.input.connect(this.analyzer);
         if (settings.debug.info)
-            console.log("Input stream set");
+            console.log("Input stream set", this.analyzer);
 
         // setup tasks & views
 
