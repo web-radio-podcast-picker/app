@@ -1,16 +1,6 @@
-// signal input manager
+// audio input device manager
 
-signalInputDevice = {
-
-    constructor: function () {
-        this.init();
-    },
-
-    init: function () {
-        if (settings.debug.info) {
-            console.log('Input initialized');
-        }
-    },
+audioInputDevice = {
 
     getMediaStream: async function () {
         try {

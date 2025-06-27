@@ -4,16 +4,20 @@ class Channel {
 
     channelId = null;           // channel id (1, 2,...)
 
-    sourceId = null;            // source id ('input',...)
-    source = null;              // signal source (signalInputDevice, ...)
+    sourceId = null;            // source id of the signal, e.g., 'input', 'file', etc.
+    source = null;              // signal source (audioInputDevice, ...)
     streamSource = null;        // media stream source
     stream = null;              // media stream
     analyzer = null;            // audio analyzer
 
-    signalView = null;          // oscilloscope view
-    signalMeasures = null;      // signal measures data
-    signalMeasuresView = null;  // signal measures view
+    view = null;                // oscilloscope view
+    measures = null;            // signal measures data
+    measuresView = null;        // signal measures view
 
-    minV = -2.5;                // minimum volt for signal
-    maxV = 2.5;                 // maximum volt for signal
+    pause = false;              // pause the channel oscilloscope
+    color = 'cyan';             // color for channel 1
+    lineWidth = 1;              // line width for channel 1
+
+    yMultiplier = 2;            // multiplier for Y-axis scaling
+    yOffset = 0;                // Y-axis offset for channel 1
 }

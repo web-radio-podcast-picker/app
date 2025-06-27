@@ -6,7 +6,6 @@ app = {
 
     audioInput: null,           // audio input channel
     audioContext: null,         // audio context
-    channels: [],               // array of channels
 
     // channel 1
     signalView1: null,          // oscilloscope view
@@ -39,14 +38,14 @@ app = {
         this.canvas = document.querySelector('canvas');
         ui.init();
 
-        const defaultInputIsOk = await this.initDefaultInput();
+        const defaultInputIsOk = await this.initDefaultAudioInput();
         if (defaultInputIsOk) this.start();
     },
 
-    async initDefaultInput() {
+    async initDefaultAudioInput() {
 
         const inp = this.audioInput = new Channel();
-        inp.source = signalInputDevice;
+        inp.source = audioInputDevice;
         inp.stream = await inp.source.getMediaStream();
 
         this.audioContext = new AudioContext(); // not before getMediaStream
