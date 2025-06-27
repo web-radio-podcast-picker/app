@@ -16,9 +16,22 @@ window.settings = {
     },
 
     oscilloscope: {
-        pause: false,           // pause the oscilloscope
-        yMultiplier: 2,         // multiplier for Y-axis scaling
-        measures: null          // measures for signal data
+        channel1: {
+            pause: false,           // pause the oscilloscope
+            yMultiplier: 2,         // multiplier for Y-axis scaling
+            measures: null,         // measures for signal data,
+            color: 'cyan',          // color for channel 1
+            lineWidth: 1,           // line width for channel 1
+            yOffset: 0              // Y-axis offset for channel 1
+        },
+        channel2: {
+            pause: false,           // pause the oscilloscope
+            yMultiplier: 2,         // multiplier for Y-axis scaling
+            measures: null,         // measures for signal data
+            color: 'yellow',        // color for channel 2
+            lineWidth: 1,           // line width for channel 2
+            yOffset: 200            // Y-axis offset for channel 1
+        }
     },
 
     ui: {

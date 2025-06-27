@@ -9,12 +9,12 @@ class SignalView {
     endTime = null;          // end time for visualization
     pause = false;           // pause flag for visualization
     dataArray = null;        // data array for signal data
-    measures = null;         // measures of signal data
+    properties = null;       // properties for signal view
 
-    init(canvas, analyzer, measures) {
+    init(canvas, analyzer, properties) {
         this.canvas = canvas;
         this.analyzer = analyzer;
-        this.measures = measures;
+        this.properties = properties;
     }
 
     run() {
@@ -43,24 +43,23 @@ class SignalView {
             }
 
             const drawContext = this.canvas.getContext('2d');
-            // clear view
-            drawContext.clearRect(0, 0, canvasWidth, canvasHeight);
 
             var x = -1;
             var y = -1;
 
             if (!this.pause)
-                this.measures.setValue(this.dataArray[0]);
+                this.properties.measures.setValue(this.dataArray[0]);
 
-            for (var i = 0; i < this.dataArray.length; i++) {
+            for (var i = 0; i < this.dataArray.length; i += 1) {
                 var value = this.dataArray[i];
 
                 // adjust y position (y multiplier, y position shift)
-                var relval = (value - 128) * settings.oscilloscope.yMultiplier;
+                var relval = (value - 128) * this.properties.yMultiplier;
 
                 var percent = relval / 128;
                 var height = canvasHeight * percent / 2.0;
                 var offset = canvasHeight / 2 + height;
+                offset += this.properties.yOffset;
                 var barWidth = canvasWidth / this.dataArray.length;
 
                 var nx = i * barWidth;
@@ -72,8 +71,8 @@ class SignalView {
                 drawContext.beginPath();
                 drawContext.moveTo(x, y);
                 drawContext.lineTo(nx, ny);
-                drawContext.strokeStyle = 'white';
-                drawContext.lineWidth = 1;
+                drawContext.strokeStyle = this.properties.color;
+                drawContext.lineWidth = this.properties.lineWidth;
                 drawContext.stroke();
 
                 x = nx;

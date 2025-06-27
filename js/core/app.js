@@ -34,6 +34,8 @@ app = {
         this.signalView2 = new SignalView();
         this.signalMeasuresView1.init(1, this.signalMeasures1);
         this.signalMeasuresView2.init(2, this.signalMeasures2);
+        settings.oscilloscope.channel1.measures = this.signalMeasures1;
+        settings.oscilloscope.channel2.measures = this.signalMeasures2;
 
         ui.init();
 
@@ -60,13 +62,24 @@ app = {
             console.log("Input stream set");
 
         // setup tasks & views
+
+        startViewTask.init(this.canvas);
+
         this.signalView1.init(
             this.canvas,
             this.analyzer,
-            this.signalMeasures1);
+            settings.oscilloscope.channel1);
 
+        this.signalView2.init(
+            this.canvas,
+            this.analyzer,
+            settings.oscilloscope.channel2);
+
+        this.tasks.push(startViewTask);
         this.tasks.push(this.signalView1);
         this.tasks.push(this.signalMeasuresView1);
+        /*this.tasks.push(this.signalView2);
+        this.tasks.push(this.signalMeasuresView2);*/
 
         // Setup a timer to visualize some stuff.
         this.requestAnimationFrame();

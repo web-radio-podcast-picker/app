@@ -19,7 +19,11 @@ canvas {
 
 .label {
     display: inline-block;
-    margin-right: 0.5em;
+    margin-left: 0.5em;
+}
+
+.top-pane {
+    line-height: 1.5em;
 }
 
 #top-pane-1 {
@@ -38,7 +42,6 @@ canvas {
     color: yellow;
 }
 
-#ival {
-    width: 4em;
-    height: 1em;
+#ival_1 {
+    width: 3em;
 }
