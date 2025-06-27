@@ -4,11 +4,14 @@ app = {
 
     // properties
 
+    // default input device
     inputDevice: null,          // input device for audio
     input: null,                // input media stream source
-    analyzer: null,             // audio analyzer
     stream: null,               // media stream
+    analyzer: null,             // audio analyzer
+
     audioContext: null,         // audio context
+
     // channel 1
     signalView1: null,          // oscilloscope view
     signalMeasuresView1: null,  // signal measures view
@@ -24,7 +27,7 @@ app = {
 
     // operations
 
-    run: async function () {
+    async run() {
 
         this.signalMeasures1 = new SignalMeasures();
         this.signalMeasures2 = new SignalMeasures();
@@ -37,30 +40,35 @@ app = {
         settings.oscilloscope.channel1.measures = this.signalMeasures1;
         settings.oscilloscope.channel2.measures = this.signalMeasures2;
 
+        this.canvas = document.querySelector('canvas');
         ui.init();
 
+        const defaultInputIsOk = await this.initDefaultInput();
+        if (defaultInputIsOk) this.start();
+    },
+
+    async initDefaultInput() {
         this.inputDevice = signalInputDevice;
         this.stream = await this.inputDevice.getMediaStream();
-        this.canvas = document.querySelector('canvas');
-
         if (this.stream != undefined) {
             if (settings.debug.info)
                 console.log("Input media stream ok");
-            this.setInput(this.stream);
+
+            this.audioContext = new AudioContext();
+            this.input = this.audioContext.createMediaStreamSource(stream);
+            this.analyzer = this.audioContext.createAnalyser();
+            this.input.connect(this.analyzer);
+            if (settings.debug.info)
+                console.log("Input stream set", this.analyzer);
+            return true;
         }
         else {
             console.error("No input media stream");
+            return false;
         }
     },
 
-    setInput(stream) {
-        this.audioContext = new (window.AudioContext || window.webkitAudioContext)();
-        this.input = this.audioContext.createMediaStreamSource(stream);
-        this.analyzer = this.audioContext.createAnalyser();
-        this.input.connect(this.analyzer);
-        if (settings.debug.info)
-            console.log("Input stream set", this.analyzer);
-
+    start() {
         // setup tasks & views
 
         getSamplesTask.init(this.analyzer);

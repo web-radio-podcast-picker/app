@@ -22,7 +22,8 @@ window.settings = {
             measures: null,         // measures for signal data,
             color: 'cyan',          // color for channel 1
             lineWidth: 1,           // line width for channel 1
-            yOffset: 0              // Y-axis offset for channel 1
+            yOffset: 0,             // Y-axis offset for channel 1
+            source: 'input'         // source of the signal, e.g., 'input', 'file', etc.
         },
         channel2: {
             pause: false,           // pause the oscilloscope
@@ -30,7 +31,8 @@ window.settings = {
             measures: null,         // measures for signal data
             color: 'yellow',        // color for channel 2
             lineWidth: 1,           // line width for channel 2
-            yOffset: 200            // Y-axis offset for channel 1
+            yOffset: 200,           // Y-axis offset for channel 1
+            source: 'oscillator'    // source of the signal, e.g., 'input', 'file', etc.
         }
     },
 
