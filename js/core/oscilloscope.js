@@ -22,30 +22,34 @@ oscilloscope = {
         if (source != null || source != undefined) {
 
             // source provided
-            channel.source = source;
-            channel.stream = await channel.source.getMediaStream();
-            this.audioContext = new AudioContext(); // not before getMediaStream
-
-            if (channel.stream != undefined) {
-                if (settings.debug.info)
-                    console.log("Input media stream ok");
-
-                channel.streamSource = this.audioContext.createMediaStreamSource(channel.stream);
-                channel.analyzer = this.audioContext.createAnalyser();
-                channel.streamSource.connect(channel.analyzer);
-
-                if (settings.debug.info)
-                    console.log("Input stream set", channel.analyzer);
-            }
-            else {
-                channel.error = "No input media stream";
-                console.error(channel.error);
-            }
+            await this.initChannelFromSource(channel, source);
 
         } else {
             // dynamic source from classname (sourceId)
         }
 
         return channel;
+    },
+
+    async initChannelFromSource(channel, source) {
+        channel.source = source;
+        channel.stream = await channel.source.getMediaStream();
+        this.audioContext = new AudioContext(); // not before getMediaStream
+
+        if (channel.stream != undefined) {
+            if (settings.debug.info)
+                console.log("Input media stream ok");
+
+            channel.streamSource = this.audioContext.createMediaStreamSource(channel.stream);
+            channel.analyzer = this.audioContext.createAnalyser();
+            channel.streamSource.connect(channel.analyzer);
+
+            if (settings.debug.info)
+                console.log("Input stream set", channel.analyzer);
+        }
+        else {
+            channel.error = "No input media stream";
+            console.error(channel.error);
+        }
     }
 }
