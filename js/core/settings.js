@@ -20,10 +20,5 @@ window.settings = {
     }
 };
 
-navigator.getUserMedia = (navigator.getUserMedia ||
-    navigator.webkitGetUserMedia ||
-    navigator.mozGetUserMedia ||
-    navigator.msGetUserMedia);
-
 if (settings.debug.info)
     console.log('Settings initialized:', settings);

@@ -9,9 +9,24 @@ body {
     font-size: 14px;
 }
 
+.no-select {
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
 canvas {
     background-color:#000000;
     border: #444444 solid 1px;
+}
+
+button {
+    vertical-align: middle;
+}
+
+.left-margin { 
+    margin-left: 1em;
 }
 
 .value {
@@ -73,6 +88,6 @@ canvas {
     color: yellow;
 }
 
-.btn_pause {
+.btn_pause,.btn-closech {
     width: 2em;
 }
