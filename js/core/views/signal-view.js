@@ -33,9 +33,6 @@ class SignalView {
 
         const dataArray = this.channel.measures.dataArray;
 
-        if (!this.pause && dataArray != null)
-            this.channel.measures.setValue(this.channel, dataArray[0]);
-
         if (dataArray != null)
             for (var i = 0; i < dataArray.length; i += 1) {
                 var value = dataArray[i];

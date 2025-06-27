@@ -44,6 +44,7 @@ app = {
 
         this.tasks.push(getSamplesTask);
         this.tasks.push(publishBuffersTasks);
+        this.tasks.push(channelsMeasuresTask);
         this.tasks.push(startViewTask);
         this.tasks.push(channelsAnimationTask);
         this.tasks.push(requestAnimationFrameTask);
