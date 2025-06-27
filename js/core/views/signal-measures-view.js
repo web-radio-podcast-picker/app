@@ -1,7 +1,7 @@
 // signal measures view
 class SignalMeasuresView {
 
-    channel = null;     // channel number
+    channel = null;     // channel
 
     init(channel, signalMeasures) {
         this.signalMeasures = signalMeasures;
@@ -9,11 +9,12 @@ class SignalMeasuresView {
     }
 
     run() {
-        // instant value
-        const ival = document.querySelector('#ival_' + this.channel);
-        ival.textContent = this.signalMeasures.value;
-        $('#iv_' + this.channel).text(this.signalMeasures.volts);
-        $('#ivmin_' + this.channel).text(this.signalMeasures.vMin);
-        $('#ivmax_' + this.channel).text(this.signalMeasures.vMax);
+        const c = this.channel.channelId;
+        $('#csid_' + c).text(this.channel.sourceId);
+        $('#ival_' + c).text(this.signalMeasures.value);
+        $('#iv_' + c).text(this.signalMeasures.volts);
+        $('#vmin_' + c).text(this.signalMeasures.vMin);
+        $('#vmax_' + c).text(this.signalMeasures.vMax);
+        $('#vavg_' + c).text(this.signalMeasures.vAvg);
     }
 }

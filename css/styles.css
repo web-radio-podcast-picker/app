@@ -22,6 +22,10 @@ canvas {
     width: 4.6em !important;
 }
 
+.maxlong-value {
+    width: 11em !important;
+}
+
 .label {
     display: inline-block;
     margin-left: 0.5em;

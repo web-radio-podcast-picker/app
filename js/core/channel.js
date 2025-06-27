@@ -29,6 +29,6 @@ class Channel {
         this.measures = new SignalMeasures();
         this.measuresView = new SignalMeasuresView();
         this.view = new SignalView();
-        this.measuresView.init(channelId, this.measures);
+        this.measuresView.init(this, this.measures);
     }
 }
