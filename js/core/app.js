@@ -4,18 +4,8 @@ app = {
 
     // properties
 
-    audioInput: null,           // audio input channel
+    audioInputChannel: null,    // audio input channel (shared)
     oscilloscope: null,         // oscilloscope channels manager
-
-    // channel 1
-    signalView1: null,          // oscilloscope view
-    signalMeasuresView1: null,  // signal measures view
-    signalMeasures1: null,      // signal measures data
-    // channel 2
-    signalView2: null,          // oscilloscope view for channel 2
-    signalMeasuresView2: null,  // signal measures view for channel 2   
-    signalMeasures2: null,      // signal measures data for channel 2
-
     tasks: [],                  // tasks,
     canvas: null,               // canvas for visualization
     ui: null,                   // UI component
@@ -25,57 +15,34 @@ app = {
     async run() {
 
         this.oscilloscope = oscilloscope;
-
-        this.signalMeasures1 = new SignalMeasures();
-        this.signalMeasures2 = new SignalMeasures();
-        this.signalMeasuresView1 = new SignalMeasuresView();
-        this.signalMeasuresView2 = new SignalMeasuresView();
-        this.signalView1 = new SignalView();
-        this.signalView2 = new SignalView();
-        this.signalMeasuresView1.init(1, this.signalMeasures1);
-        this.signalMeasuresView2.init(2, this.signalMeasures2);
-        settings.oscilloscope.channel1.measures = this.signalMeasures1;
-        settings.oscilloscope.channel2.measures = this.signalMeasures2;
-
+        this.canvas = document.querySelector('canvas');
+        this.audioInputChannel = await this.initDefaultAudioInput();
+        this.oscilloscope.addChannel(this.audioInputChannel);
         this.initUI();
 
-        const audioInputChannel = await this.initDefaultAudioInput();
-        if (audioInputChannel.error == null) this.start();
+        if (this.audioInputChannel.error == null) this.start();
     },
 
     initUI() {
-        this.canvas = document.querySelector('canvas');
-        ui.init();
+        ui.init(this.oscilloscope);
     },
 
     async initDefaultAudioInput() {
-
-        const inp = this.audioInput = await oscilloscope.createChannel(
+        // build a channel for the default audio input device
+        return await oscilloscope.createChannel(
             'audioInputDevice', audioInputDevice);
-        return inp;
     },
 
     start() {
-        // setup tasks & views
+        // setup tasks
 
-        getSamplesTask.init(this.audioInput.analyzer);
-
+        getSamplesTask.init(this.audioInputChannel.analyzer);
+        channelsAnimationTask.init(this.oscilloscope);
         startViewTask.init(this.canvas);
-
-        this.signalView1.init(
-            this.canvas,
-            settings.oscilloscope.channel1);
-
-        this.signalView2.init(
-            this.canvas,
-            settings.oscilloscope.channel2);
 
         this.tasks.push(getSamplesTask);
         this.tasks.push(startViewTask);
-        this.tasks.push(this.signalView1);
-        this.tasks.push(this.signalMeasuresView1);
-        this.tasks.push(this.signalView2);
-        this.tasks.push(this.signalMeasuresView2);
+        this.tasks.push(channelsAnimationTask);
         this.tasks.push(requestAnimationFrameTask);
 
         // Setup a timer to visualize some stuff.

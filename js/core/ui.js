@@ -2,10 +2,16 @@
 
 ui = {
 
-    init() {
-        // Initialize UI components   
-        this.init_btns(1, app.signalView1);
-        this.init_btns(2, app.signalView2);
+    oscilloscope: null, // reference to the oscilloscope manager
+
+    init(oscilloscope) {
+        // Initialize UI components
+        //this.init_btns(1, app.signalView1);
+        //this.init_btns(2, app.signalView2);
+        this.oscilloscope = oscilloscope;
+        this.oscilloscope.channels.forEach(channel => {
+            this.init_btns(channel.channelId, channel.view);
+        });
         console.log("UI initialized");
     },
 

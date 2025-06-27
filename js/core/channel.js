@@ -14,7 +14,6 @@ class Channel {
     measures = null;            // signal measures data
     measuresView = null;        // signal measures view
 
-    pause = false;              // pause the channel oscilloscope
     color = 'cyan';             // color for channel 1
     lineWidth = 1;              // line width for channel 1
 

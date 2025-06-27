@@ -10,6 +10,7 @@ oscilloscope = {
 
     addChannel(channel) {
         // add a channel to the oscilloscope
+        channel.view.init(app.canvas, channel);
         this.channels.push(channel);
     },
 
