@@ -1,4 +1,4 @@
-// manage measures for channels from data buffer
+// compute measures for channels from data buffer
 
 channelsMeasuresTask = {
 

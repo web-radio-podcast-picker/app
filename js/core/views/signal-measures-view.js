@@ -19,6 +19,7 @@ class SignalMeasuresView {
             this.signalMeasures.vAvg == null ?
                 '' :
                 this.signalMeasures.vAvg.toFixed(7));
+        $('#yscale_' + c).text(this.channel.yScale);
 
         $('#stime').text(oscilloscope.scanPeriod);
         $('#sfrq').text(oscilloscope.scanFrq);

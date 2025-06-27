@@ -38,7 +38,7 @@ class SignalView {
                 var value = dataArray[i];
 
                 // adjust y position (y multiplier, y position shift)
-                var relval = (value - 128) * this.channel.yMultiplier;
+                var relval = (value - 128) * this.channel.yScale;
 
                 var percent = relval / 128;
                 var height = canvasHeight * percent / 2.0;

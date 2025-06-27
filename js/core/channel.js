@@ -23,7 +23,7 @@ class Channel {
     lineWidth = 1;              // line width for channel 1
 
     vScale = 1;                 // volt scale (256 digital value corresponding volts)
-    yMultiplier = 2;            // multiplier for Y-axis scaling
+    yScale = 2;                 // multiplier for Y-axis scaling
     yOffset = 0;                // Y-axis offset for channel 1
 
     error = null;              // error message if any
