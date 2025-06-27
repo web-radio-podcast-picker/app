@@ -12,6 +12,21 @@ window.settings = {
 
     oscilloscope: {
         vPerDiv: 1,             // volts per division
+        channels: {
+            // channels colors
+            colors: [
+                'cyan',
+                'yellow',
+                'lightgreen',
+                'magenta',
+                'lightblue',
+                'pink',
+                'magenta',
+                'orange',
+                'red',
+                'white'
+            ]
+        }
     },
 
     ui: {

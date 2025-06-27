@@ -15,6 +15,28 @@ oscilloscope = {
         // add a channel to the oscilloscope
         channel.view.init(app.canvas, channel);
         this.channels.push(channel);
+        // add controls for the Channel
+        this.addControls(channel);
+    },
+
+    addControls(channel) {
+        var $model = $('#channel-pane').clone();
+        $model.removeClass('hidden');
+        const id = channel.channelId;
+        const colors = settings.oscilloscope.channels.colors;
+        const colLength = colors.length;
+        const colIndex = colLength % id;
+        const col = colors[colIndex];
+        $model.css('color', col);
+        var $elems = $model.find('*');
+        $.each($elems, (i, e) => {
+            var $e = $(e);
+            var id = $e.attr('id');
+            if (id !== undefined && id.endsWith('_')) {
+                $e.attr('id', id + channel.channelId);
+            }
+        });
+        $('#top-panes').append($model);
     },
 
     async createChannel(sourceId, source) {

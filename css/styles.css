@@ -29,6 +29,10 @@ button {
     margin-left: 1em;
 }
 
+.hidden {
+    display: none;
+}
+
 .value {
     display: inline-block;
     border: #444444 solid 1px;
@@ -51,6 +55,13 @@ button {
     display: inline-block;
     margin-left: 0.5em;
     color: darkgrey !important;
+}
+
+#top-panes {
+    display: block;
+    position: absolute;
+    top: 0px;
+    left: 0px;
 }
 
 .top-pane,#bottom-pane {
