@@ -12,6 +12,10 @@ channelsMeasuresTask = {
     compute(channel) {
         // compute properties from the data buffer
         const m = channel.measures;
-        channel.measures.setValue(channel, m.dataArray[0]);
+        const d = m.dataArray;
+        channel.measures.setValue(channel, d[0]);
+        for (var i = 0; i < d.length; i++) {
+
+        }
     }
 }
