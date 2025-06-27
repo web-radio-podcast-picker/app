@@ -42,6 +42,14 @@ canvas {
     line-height: 1.5em;
 }
 
+.row-pane {
+    padding: 4px;
+}
+
+.row-pane:hover {
+    background-color: darkblue;
+}
+
 #bottom-pane {
     top: calc(100% - 3em);
     left: 1em;

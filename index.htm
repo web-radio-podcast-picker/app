@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-<!-- speak is not supported by Firefox, Safari -->
 
 <head>
     <meta charset="utf-8" />
@@ -38,7 +37,7 @@
 
     <canvas></canvas>
 
-    <div id="top-pane-1" class="top-pane">
+    <div id="top-pane-1" class="top-pane row-pane">
         <span class="label">CH1</span>
         <button type="button" class="btn_pause" id="btn_pause_1">▶</button>
 
@@ -64,16 +63,28 @@
         <span id="vavg_1" class="value long-value"></span>
         <span class="unit">V</span>
 
+        <span class="label">frq</span>
+        <span id="frq_1" class="value long-value"></span>
+        <span class="unit">Hz</span>
+
+        <span class="label">frqMin</span>
+        <span id="frqmin_1" class="value long-value"></span>
+        <span class="unit">Hz</span>
+
+        <span class="label">frqMax</span>
+        <span id="frqmax_1" class="value long-value"></span>
+        <span class="unit">Hz</span>
+
     </div>
 
-    <div id="top-pane-2" class="top-pane">
+    <div id="top-pane-2" class="top-pane row-pane">
         <span class="label">CH2</span>
         <button type="button" class="btn_pause" id="btn_pause_2">▶</button>
         <span class="label">value</span>
         <span id="ival_2" class="value"></span>
     </div>
 
-    <div id="bottom-pane">
+    <div id="bottom-pane" class="row-pane">
         <span class="label">sTime</span>
         <span id="stime" class="value short-value"></span>
         <span class="unit">ms</span>
