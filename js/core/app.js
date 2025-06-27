@@ -63,23 +63,25 @@ app = {
 
         // setup tasks & views
 
+        getSamplesTask.init(this.analyzer);
+
         startViewTask.init(this.canvas);
 
         this.signalView1.init(
             this.canvas,
-            this.analyzer,
             settings.oscilloscope.channel1);
 
         this.signalView2.init(
             this.canvas,
-            this.analyzer,
             settings.oscilloscope.channel2);
 
+        this.tasks.push(getSamplesTask);
         this.tasks.push(startViewTask);
         this.tasks.push(this.signalView1);
         this.tasks.push(this.signalMeasuresView1);
-        /*this.tasks.push(this.signalView2);
-        this.tasks.push(this.signalMeasuresView2);*/
+        this.tasks.push(this.signalView2);
+        this.tasks.push(this.signalMeasuresView2);
+        this.tasks.push(requestAnimationFrameTask);
 
         // Setup a timer to visualize some stuff.
         this.requestAnimationFrame();

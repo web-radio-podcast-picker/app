@@ -42,6 +42,10 @@ canvas {
     color: yellow;
 }
 
-#ival_1 {
+#ival_1,#ival_2 {
     width: 3em;
+}
+
+.btn_pause {
+    width: 2em;
 }
