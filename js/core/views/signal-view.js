@@ -8,11 +8,11 @@ class SignalView {
     endTime = null;          // end time for visualization
     pause = false;           // pause flag for visualization
     dataArray = null;        // data array for signal data
-    properties = null;       // properties for signal view
+    channel = null;          // channel
 
-    init(canvas, properties) {
+    init(canvas, channel) {
         this.canvas = canvas;
-        this.properties = properties;
+        this.channel = channel;
     }
 
     run() {
@@ -44,18 +44,18 @@ class SignalView {
         var y = -1;
 
         if (!this.pause)
-            this.properties.measures.setValue(this.dataArray[0]);
+            this.channel.measures.setValue(this.channel, this.dataArray[0]);
 
         for (var i = 0; i < this.dataArray.length; i += 1) {
             var value = this.dataArray[i];
 
             // adjust y position (y multiplier, y position shift)
-            var relval = (value - 128) * this.properties.yMultiplier;
+            var relval = (value - 128) * this.channel.yMultiplier;
 
             var percent = relval / 128;
             var height = canvasHeight * percent / 2.0;
             var offset = canvasHeight / 2 + height;
-            offset += this.properties.yOffset;
+            offset += this.channel.yOffset;
             var barWidth = canvasWidth / this.dataArray.length;
 
             var nx = i * barWidth;
@@ -67,8 +67,8 @@ class SignalView {
             drawContext.beginPath();
             drawContext.moveTo(x, y);
             drawContext.lineTo(nx, ny);
-            drawContext.strokeStyle = this.properties.color;
-            drawContext.lineWidth = this.properties.lineWidth;
+            drawContext.strokeStyle = this.channel.color;
+            drawContext.lineWidth = this.channel.lineWidth;
             drawContext.stroke();
 
             x = nx;

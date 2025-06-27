@@ -15,11 +15,17 @@ canvas {
 .value {
     display: inline-block;
     border: #444444 solid 1px;
+    width: 3em;
+}
+
+.long-value {
+    width: 4.6em !important;
 }
 
 .label {
     display: inline-block;
     margin-left: 0.5em;
+    color: darkgrey !important;
 }
 
 .top-pane {
@@ -40,10 +46,6 @@ canvas {
     position: absolute;
     z-index: 10;
     color: yellow;
-}
-
-#ival_1,#ival_2 {
-    width: 3em;
 }
 
 .btn_pause {

@@ -2,10 +2,7 @@
 
 oscilloscope = {
 
-    vPerDiv: 1,               // volts per division
-
     channels: [],             // array of channels
-
     audioContext: null,       // audio context for processing
 
     addChannel(channel) {

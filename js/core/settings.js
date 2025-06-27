@@ -7,33 +7,11 @@ window.settings = {
     },
 
     audioInput: {
-        deviceId: 'default',    // default device ID for audio input/output
-        channelCount: 2,        // stereo by default
-        sampleRate: 44100,      // default sample rate
-        bufferSize: 1024,       // default buffer size
-        latency: 0.1,           // default latency in seconds
-        audioEnabled: true
+        vScale: 5,  // volt scale (256 digital value corresponding volts) for audio input
     },
 
     oscilloscope: {
-        channel1: {
-            pause: false,           // pause the oscilloscope
-            yMultiplier: 2,         // multiplier for Y-axis scaling
-            measures: null,         // measures for signal data,
-            color: 'cyan',          // color for channel 1
-            lineWidth: 1,           // line width for channel 1
-            yOffset: 0,             // Y-axis offset for channel 1
-            source: 'input'         // source of the signal, e.g., 'input', 'file', etc.
-        },
-        channel2: {
-            pause: false,           // pause the oscilloscope
-            yMultiplier: 2,         // multiplier for Y-axis scaling
-            measures: null,         // measures for signal data
-            color: 'yellow',        // color for channel 2
-            lineWidth: 1,           // line width for channel 2
-            yOffset: 200,           // Y-axis offset for channel 1
-            source: 'oscillator'    // source of the signal, e.g., 'input', 'file', etc.
-        }
+        vPerDiv: 1,             // volts per division
     },
 
     ui: {

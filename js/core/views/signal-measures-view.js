@@ -10,8 +10,10 @@ class SignalMeasuresView {
 
     run() {
         // instant value
-        const value = this.signalMeasures.value;
         const ival = document.querySelector('#ival_' + this.channel);
-        ival.textContent = value;
+        ival.textContent = this.signalMeasures.value;
+        $('#iv_' + this.channel).text(this.signalMeasures.volts);
+        $('#ivmin_' + this.channel).text(this.signalMeasures.vMin);
+        $('#ivmax_' + this.channel).text(this.signalMeasures.vMax);
     }
 }

@@ -29,8 +29,10 @@ app = {
 
     async initDefaultAudioInput() {
         // build a channel for the default audio input device
-        return await oscilloscope.createChannel(
+        const channel = await oscilloscope.createChannel(
             'audioInputDevice', audioInputDevice);
+        channel.vScale = settings.audioInput.vScale;
+        return channel;
     },
 
     start() {
