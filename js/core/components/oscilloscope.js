@@ -35,6 +35,9 @@ oscilloscope = {
             if (id !== undefined && id.endsWith('_')) {
                 $e.attr('id', id + channel.channelId);
             }
+            if ($e.hasClass('channel-label')) {
+                $e.css('background-color', col);
+            }
         });
         $('#top-panes').append($model);
     },

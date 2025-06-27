@@ -57,6 +57,12 @@ button {
     color: darkgrey !important;
 }
 
+.channel-label {
+    color: black;
+    font-weight: bold;
+    padding: 4px;
+}
+
 #top-panes {
     display: block;
     position: absolute;
