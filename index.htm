@@ -40,9 +40,22 @@
 
     <canvas></canvas>
 
+    <!-- top right menu -->
+
+    <div id="top-right-menu">
+        <span id="btn_menu" class="menu-item menu-item-blue">menu</span>
+        <div id="top-right-menu-body" class="hidden">
+            <span id="btn_add_ch" class="menu-item menu-item-blue">+ CH</span>
+        </div>
+    </div>
+
+    <!-- channels pannels -->
+
     <div id="top-panes">
 
     </div>
+
+    <!-- oscilloscope datas -->
 
     <div id="bottom-pane" class="row-pane">
         <span class="label">scTime</span>
@@ -64,10 +77,12 @@
 
     <div id="channel-pane" class="top-pane row-pane hidden">
         <span class="label channel-label">CH1</span>
-        <button type="button" class="btn_pause" id="btn_pause_">▶</button>
 
         <span class="label">source</span>
         <span id="csid_" class="value maxlong-value"></span>
+
+        <span class="label">xScale x</span>
+        <span id="xscale_" class="value short-value"></span>
 
         <span class="label">yScale x</span>
         <span id="yscale_" class="value short-value"></span>
@@ -103,7 +118,8 @@
         <span id="frqmax_" class="value long-value"></span>
         <span class="unit">Hz</span>
 
-        <button type="button" class="btn_closech left-margin" id="btn_closech_">X</button>
+        <button type="button" class="btn_pause left-margin" id="btn_pause_">▶</button>
+        <button type="button" class="btn_closech" id="btn_closech_">X</button>
 
     </div>
 

@@ -20,5 +20,6 @@ class SignalMeasuresView {
                 '' :
                 this.signalMeasures.vAvg.toFixed(7));
         $('#yscale_' + c).text(this.channel.yScale);
+        $('#xscale_' + c).text(this.channel.xScale);
     }
 }

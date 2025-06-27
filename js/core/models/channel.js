@@ -24,9 +24,11 @@ class Channel {
 
     vScale = 1;                 // volt scale (256 digital value corresponding volts)
     yScale = 2;                 // multiplier for Y-axis scaling
+    xScale = 1;                 // multiplier for X-axis scaling
     yOffset = 0;                // Y-axis offset for channel 1
+    xOffset = 0;                // X-axis offset for channel 1
 
-    error = null;              // error message if any
+    error = null;               // error message if any
 
     constructor(channelId, sourceId) {
         this.channelId = channelId;

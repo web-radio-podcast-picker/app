@@ -23,6 +23,7 @@ canvas {
 
 button {
     vertical-align: middle;
+    cursor: pointer;
 }
 
 .left-margin { 
@@ -61,6 +62,45 @@ button {
     color: black;
     font-weight: bold;
     padding: 4px;
+}
+
+#top-right-menu {
+    display: block;
+    position: absolute;
+    top: 0px;
+    left: calc(100% - 120px);
+    text-align: center;
+    padding: 8px;
+}
+
+.menu-item {
+    display: inline-block;
+    line-height: 1.5em;
+    padding: 4px;
+    cursor: pointer;
+    width: 96px;
+    text-align: center;
+    opacity: 0.9;
+}
+
+.menu-item-blue {
+    color: lightblue;
+    background-color: blue;
+    border: skyblue solid 1px;    
+}
+
+/*#btn_menu {
+}*/
+
+#top-right-menu-body {
+    width: 96px;
+    padding: 0px;
+}
+
+.menu-item-blue:hover {
+    background-color: lightskyblue;
+    border-color: blue;
+    color: black;
 }
 
 #top-panes {
