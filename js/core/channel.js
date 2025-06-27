@@ -20,4 +20,15 @@ class Channel {
 
     yMultiplier = 2;            // multiplier for Y-axis scaling
     yOffset = 0;                // Y-axis offset for channel 1
+
+    error = null;              // error message if any
+
+    constructor(channelId, sourceId) {
+        this.channelId = channelId;
+        this.sourceId = sourceId;
+        this.measures = new SignalMeasures();
+        this.measuresView = new SignalMeasuresView();
+        this.view = new SignalView();
+        this.measuresView.init(channelId, this.measures);
+    }
 }

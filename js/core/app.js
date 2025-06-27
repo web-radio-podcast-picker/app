@@ -5,7 +5,7 @@ app = {
     // properties
 
     audioInput: null,           // audio input channel
-    audioContext: null,         // audio context
+    oscilloscope: null,         // oscilloscope channels manager
 
     // channel 1
     signalView1: null,          // oscilloscope view
@@ -24,6 +24,8 @@ app = {
 
     async run() {
 
+        this.oscilloscope = oscilloscope;
+
         this.signalMeasures1 = new SignalMeasures();
         this.signalMeasures2 = new SignalMeasures();
         this.signalMeasuresView1 = new SignalMeasuresView();
@@ -35,37 +37,22 @@ app = {
         settings.oscilloscope.channel1.measures = this.signalMeasures1;
         settings.oscilloscope.channel2.measures = this.signalMeasures2;
 
+        this.initUI();
+
+        const audioInputChannel = await this.initDefaultAudioInput();
+        if (audioInputChannel.error == null) this.start();
+    },
+
+    initUI() {
         this.canvas = document.querySelector('canvas');
         ui.init();
-
-        const defaultInputIsOk = await this.initDefaultAudioInput();
-        if (defaultInputIsOk) this.start();
     },
 
     async initDefaultAudioInput() {
 
-        const inp = this.audioInput = new Channel();
-        inp.source = audioInputDevice;
-        inp.stream = await inp.source.getMediaStream();
-
-        this.audioContext = new AudioContext(); // not before getMediaStream
-
-        if (this.audioInput.stream != undefined) {
-            if (settings.debug.info)
-                console.log("Input media stream ok");
-
-            inp.streamSource = this.audioContext.createMediaStreamSource(inp.stream);
-            inp.analyzer = this.audioContext.createAnalyser();
-            inp.streamSource.connect(inp.analyzer);
-
-            if (settings.debug.info)
-                console.log("Input stream set", inp.analyzer);
-            return true;
-        }
-        else {
-            console.error("No input media stream");
-            return false;
-        }
+        const inp = this.audioInput = await oscilloscope.createChannel(
+            'audioInputDevice', audioInputDevice);
+        return inp;
     },
 
     start() {
