@@ -21,7 +21,6 @@ window.settings = {
                 'magenta',
                 'lightblue',
                 'pink',
-                'magenta',
                 'orange',
                 'red',
                 'white'

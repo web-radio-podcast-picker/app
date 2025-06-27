@@ -30,6 +30,8 @@ class Channel {
 
     error = null;               // error message if any
 
+    ui = false;                 // indicates if ui is built for this channel
+
     constructor(channelId, sourceId) {
         this.channelId = channelId;
         this.sourceId = sourceId;

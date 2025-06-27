@@ -23,17 +23,20 @@ oscilloscope = {
         var $model = $('#channel-pane').clone();
         $model.removeClass('hidden');
         const id = channel.channelId;
+        $model.attr('id', 'channel-pane_' + id);
         const colors = settings.oscilloscope.channels.colors;
         const colLength = colors.length;
-        const colIndex = colLength % id;
+        const colIndex = (id - 1) % colLength;
         const col = colors[colIndex];
         $model.css('color', col);
+        channel.color = col;
+        $model.find('#channel-label').text('CH' + channel.channelId);
         var $elems = $model.find('*');
         $.each($elems, (i, e) => {
             var $e = $(e);
-            var id = $e.attr('id');
-            if (id !== undefined && id.endsWith('_')) {
-                $e.attr('id', id + channel.channelId);
+            var eid = $e.attr('id');
+            if (eid !== undefined && eid.endsWith('_')) {
+                $e.attr('id', eid + id);
             }
             if ($e.hasClass('channel-label')) {
                 $e.css('background-color', col);

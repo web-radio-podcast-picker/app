@@ -60,6 +60,12 @@ app = {
         this.tasks.forEach(view => {
             requestAnimationFrame((() => view.run()).bind(view));
         });
+    },
+
+    async addChannel() {
+        const channel = await oscilloscope.createChannel('audioInputDevice', audioInputDevice);
+        oscilloscope.addChannel(channel);
+        this.initUI();
     }
 
 };
