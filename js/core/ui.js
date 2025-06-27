@@ -13,7 +13,7 @@ ui = {
         // Initialize buttons and other UI elements
         const $e = $('#btn_pause_' + channel);
         const fn = () => {
-            if (sigView.pause) {
+            if (!sigView.pause) {
                 $e.text('||');
             } else {
                 $e.text('▶');
