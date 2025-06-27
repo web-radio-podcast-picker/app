@@ -5,6 +5,8 @@ body {
     margin: 0;
     padding: 0;
     overflow: hidden;
+    font-family: Arial, sans-serif;
+    font-size: 14px;
 }
 
 canvas {
@@ -23,7 +25,7 @@ canvas {
 }
 
 .long-value {
-    width: 4.6em !important;
+    width: 5.5em !important;
 }
 
 .maxlong-value {
