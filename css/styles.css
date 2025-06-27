@@ -18,6 +18,10 @@ canvas {
     width: 3em;
 }
 
+.short-value {
+    width: 1.5em !important;
+}
+
 .long-value {
     width: 4.6em !important;
 }
@@ -32,8 +36,15 @@ canvas {
     color: darkgrey !important;
 }
 
-.top-pane {
+.top-pane,#bottom-pane {
     line-height: 1.5em;
+}
+
+#bottom-pane {
+    top: calc(100% - 3em);
+    left: 1em;
+    position: absolute;
+    color: darkgray;
 }
 
 #top-pane-1 {
