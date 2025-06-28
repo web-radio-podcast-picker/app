@@ -79,6 +79,10 @@ ui = {
         });
     },
 
+    reflectOscilloPauseState() {
+        $('#btn_opause').text(oscilloscope.pause ? '▶' : '⏸');
+    },
+
     addControls(channel) {
         var $model = $('#channel-pane').clone();
         $model.removeClass('hidden');

@@ -102,6 +102,7 @@ app = {
 
     toggleOPause() {
         oscilloscope.pause = !oscilloscope.pause;
+        ui.reflectOscilloPauseState();
         if (!oscilloscope.pause)
             app.requestAnimationFrame();
     }
