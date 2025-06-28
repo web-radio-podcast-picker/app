@@ -2,8 +2,9 @@
 
 ui = {
 
-    oscilloscope: null, // reference to the oscilloscope manager
-    uiInitialized: false,
+    oscilloscope: null,     // reference to the oscilloscope manager
+    uiInitialized: false,   // indicates if ui is already globally initialized
+    popupId: null,          // any id of an html popup currently opened/showed
 
     init(oscilloscope) {
         this.oscilloscope = oscilloscope;
@@ -27,7 +28,7 @@ ui = {
         const $e = $('#btn_pause_' + channel);
         const fn = () => {
             if (!sigView.pause) {
-                $e.text('||');
+                $e.text('⏸');
             } else {
                 $e.text('▶');
             }
@@ -39,10 +40,14 @@ ui = {
         });
 
         // close
-        $('#btn_closech_' + channel)
-            .on('click', () => {
-                app.deleteChannel(channel);
-            });
+        $('#btn_closech_' + channel).on('click', () => {
+            app.deleteChannel(channel);
+        });
+
+        // settings
+        $('#btn_chsett_' + channel).on('click', () => {
+            this.editChannelSettings(channel);
+        });
     },
 
     init_ui() {
@@ -52,6 +57,9 @@ ui = {
         });
         $('#btn_add_ch').on('click', async () => {
             await app.addChannel();
+        });
+        $('#btn_restart').on('click', () => {
+            window.location.reload(false);
         });
     },
 
@@ -85,6 +93,22 @@ ui = {
         // remove the controls of a channel
         var $ctlr = $('#channel-pane_' + channel.channelId);
         $ctlr.remove();
+    },
+
+    editChannelSettings(channel) {
+
+    },
+
+    openPopup() {
+        // build and open a new popup
+        // close any previous one
+        if (this.popup != null)
+            this.closePopup();
+    },
+
+    closePopup() {
+
+        this.popup = null;
     }
 
 }
