@@ -67,6 +67,7 @@ app = {
         const channel = await oscilloscope.createChannel('audioInputDevice', audioInputDevice);
         oscilloscope.addChannel(channel);
         this.initUI();
+        this.requestAnimationFrame();
     },
 
     deleteChannel(channelId) {
@@ -76,6 +77,7 @@ app = {
         else {
             ui.removeControls(channel);
             oscilloscope.removeChannel(channel);
+            this.requestAnimationFrame();
         }
     },
 
@@ -84,6 +86,7 @@ app = {
         t.forEach(channel => {
             this.deleteChannel(channel.channelId);
         });
+        this.requestAnimationFrame();
     },
 
     togglePower() {
