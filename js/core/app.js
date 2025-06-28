@@ -10,6 +10,7 @@ app = {
     tasks: [],                  // tasks,
     canvas: null,               // canvas for visualization
     ui: null,                   // UI component
+    powerOn: true,              // indicates if turned on or off
 
     // operations
 
@@ -75,6 +76,24 @@ app = {
         else {
             ui.removeControls(channel);
             oscilloscope.removeChannel(channel);
+        }
+    },
+
+    deleteAllChannels() {
+        const t = [...oscilloscope.channels];
+        t.forEach(channel => {
+            this.deleteChannel(channel.channelId);
+        });
+    },
+
+    togglePower() {
+        if (this.powerOn) {
+            this.deleteAllChannels();
+            ui.powerOff();
+            this.powerOn = false;
+        }
+        else {
+            window.location.reload(false);
         }
     }
 

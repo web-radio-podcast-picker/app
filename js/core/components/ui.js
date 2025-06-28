@@ -4,7 +4,7 @@ ui = {
 
     oscilloscope: null,     // reference to the oscilloscope manager
     uiInitialized: false,   // indicates if ui is already globally initialized
-    popupId: null,          // any id of an html popup currently opened/showed
+    popupId: null,          // any id of an html popupId currently opened/showed
 
     init(oscilloscope) {
         this.oscilloscope = oscilloscope;
@@ -61,6 +61,14 @@ ui = {
         $('#btn_restart').on('click', () => {
             window.location.reload(false);
         });
+        $('#btn_power').on('click', () => {
+            app.togglePower();
+        });
+    },
+
+    powerOff() {
+        $('#btn_add_ch').toggleClass('menu-item-disabled');
+        $('#btn_restart').toggleClass('menu-item-disabled');
     },
 
     addControls(channel) {
@@ -99,16 +107,16 @@ ui = {
 
     },
 
-    openPopup() {
-        // build and open a new popup
+    openpopupId() {
+        // build and open a new popupId
         // close any previous one
-        if (this.popup != null)
-            this.closePopup();
+        if (this.popupId != null)
+            this.closepopupId();
     },
 
-    closePopup() {
-
-        this.popup = null;
+    closepopupId() {
+        $('#' + popupId).remove();
+        this.popupId = null;
     }
 
 }
