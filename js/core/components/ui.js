@@ -56,19 +56,24 @@ ui = {
             $('#top-right-menu-body').toggleClass('hidden');
         });
         $('#btn_add_ch').on('click', async () => {
-            await app.addChannel();
+            if (app.powerOn)
+                await app.addChannel();
         });
         $('#btn_restart').on('click', () => {
-            window.location.reload(false);
+            if (app.powerOn)
+                window.location.reload(false);
         });
         $('#btn_power').on('click', () => {
             app.togglePower();
         });
     },
 
-    powerOff() {
-        $('#btn_add_ch').toggleClass('menu-item-disabled');
-        $('#btn_restart').toggleClass('menu-item-disabled');
+    turnOffMenu() {
+        const t = ['#btn_add_ch', '#btn_restart'];
+        t.forEach(b => {
+            $(b)
+                .toggleClass('menu-item-disabled');
+        });
     },
 
     addControls(channel) {

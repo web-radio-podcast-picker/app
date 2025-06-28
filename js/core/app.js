@@ -89,7 +89,7 @@ app = {
     togglePower() {
         if (this.powerOn) {
             this.deleteAllChannels();
-            ui.powerOff();
+            ui.turnOffMenu();
             this.powerOn = false;
         }
         else {

@@ -127,6 +127,7 @@ button {
     color: lightblue;
     background-color: #444444;
     border: skyblue solid 1px;    
+    cursor: default;
 }
 
 /*#btn_menu {
