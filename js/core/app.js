@@ -66,6 +66,16 @@ app = {
         const channel = await oscilloscope.createChannel('audioInputDevice', audioInputDevice);
         oscilloscope.addChannel(channel);
         this.initUI();
+    },
+
+    deleteChannel(channelId) {
+        const channel = oscilloscope.getChannel(channelId);
+        if (channel == null)
+            console.error('channel not found', channelId);
+        else {
+            ui.removeControls(channel);
+            oscilloscope.removeChannel(channel);
+        }
     }
 
 };

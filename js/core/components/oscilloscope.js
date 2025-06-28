@@ -11,44 +11,44 @@ oscilloscope = {
     scanPeriod: null,         // scan period (in ms, eg view period)
     scanFrq: null,            // scan frequency (in Hz, eg 1000 ms / view period)
 
+    getChannel(channelId) {
+        var r = null;
+        // get a channel from channel id, null if not found
+        this.channels.forEach(channel => {
+            if (channel.channelId == channelId) {
+                r = channel;
+                return;
+            }
+        });
+        return r;
+    },
+
+    removeChannel(channel) {
+        const idx = this.channels.indexOf(channel);
+        if (idx != -1) {
+            this.channels.splice(idx, 1);
+        }
+        else
+            console.error('channel not found', channel);
+    },
+
     addChannel(channel) {
         // add a channel to the oscilloscope
         channel.view.init(app.canvas, channel);
         this.channels.push(channel);
         // add controls for the Channel
-        this.addControls(channel);
-    },
-
-    addControls(channel) {
-        var $model = $('#channel-pane').clone();
-        $model.removeClass('hidden');
-        const id = channel.channelId;
-        $model.attr('id', 'channel-pane_' + id);
-        const colors = settings.oscilloscope.channels.colors;
-        const colLength = colors.length;
-        const colIndex = (id - 1) % colLength;
-        const col = colors[colIndex];
-        $model.css('color', col);
-        channel.color = col;
-        $model.find('#channel-label').text('CH' + channel.channelId);
-        var $elems = $model.find('*');
-        $.each($elems, (i, e) => {
-            var $e = $(e);
-            var eid = $e.attr('id');
-            if (eid !== undefined && eid.endsWith('_')) {
-                $e.attr('id', eid + id);
-            }
-            if ($e.hasClass('channel-label')) {
-                $e.css('background-color', col);
-            }
-        });
-        $('#top-panes').append($model);
+        ui.addControls(channel);
     },
 
     async createChannel(sourceId, source) {
 
         // create a new channel and return it
-        const channel = new Channel(this.channels.length + 1, sourceId);
+        var chId = 0;
+        this.channels.forEach(channel => {
+            chId = Math.max(chId, channel.channelId);
+        });
+        chId++;
+        const channel = new Channel(chId, sourceId);
 
         if (source != null || source != undefined) {
 

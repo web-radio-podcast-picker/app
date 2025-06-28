@@ -83,6 +83,10 @@ button {
     opacity: 0.9;
 }
 
+.menu-item-double-height {
+    line-height: 3em !important;
+}
+
 .menu-item-blue {
     color: lightblue;
     background-color: blue;
