@@ -10,6 +10,7 @@ oscilloscope = {
     endTime: null,            // end time for visualization
     scanPeriod: null,         // scan period (in ms, eg view period)
     scanFrq: null,            // scan frequency (in Hz, eg 1000 ms / view period)
+    pause: false,             // pause on/off all channels
 
     getChannel(channelId) {
         var r = null;

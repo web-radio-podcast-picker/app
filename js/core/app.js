@@ -95,6 +95,12 @@ app = {
         else {
             window.location.reload(false);
         }
+    },
+
+    toggleOPause() {
+        oscilloscope.pause = !oscilloscope.pause;
+        if (!oscilloscope.pause)
+            app.requestAnimationFrame();
     }
 
 };

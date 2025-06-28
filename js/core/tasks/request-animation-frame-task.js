@@ -4,7 +4,7 @@ requestAnimationFrameTask = {
 
     run() {
         oscilloscope.endTime = Date.now();
-        if (app.powerOn)
+        if (app.powerOn && !oscilloscope.pause)
             app.requestAnimationFrame();
     }
 

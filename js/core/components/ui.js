@@ -66,10 +66,13 @@ ui = {
         $('#btn_power').on('click', () => {
             app.togglePower();
         });
+        $('#btn_opause').on('click', () => {
+            app.toggleOPause();
+        });
     },
 
     turnOffMenu() {
-        const t = ['#btn_add_ch', '#btn_restart'];
+        const t = ['#btn_add_ch', '#btn_restart', '#btn_opause'];
         t.forEach(b => {
             $(b)
                 .toggleClass('menu-item-disabled');
