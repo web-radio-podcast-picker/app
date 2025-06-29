@@ -18,7 +18,7 @@ app = {
 
         this.oscilloscope = oscilloscope;
         this.oscilloscopeView = new OscilloscopeView();
-        this.canvas = document.querySelector('canvas');
+        this.canvas = $('#cnv_oscillo')[0];
         this.audioInputChannel = await this.initDefaultAudioInput();
         this.oscilloscope.addChannel(this.audioInputChannel);
         this.initUI();

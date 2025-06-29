@@ -17,8 +17,13 @@ body {
 }
 
 canvas {
-    background-color:#000000;
+    background-color: transparent;
     border: #444444 solid 1px;
+    position: absolute;
+}
+
+#cnv_grid {
+    
 }
 
 button {
