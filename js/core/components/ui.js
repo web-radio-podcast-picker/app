@@ -129,6 +129,23 @@ ui = {
     closepopupId() {
         $('#' + popupId).remove();
         this.popupId = null;
+    },
+
+    setupCanvasSize(canvas) {
+        const html = document.querySelector('html');
+        const htmlWidth = html.clientWidth;
+        const htmlHeight = html.clientHeight;
+        var updated = false;
+        // auto size canvas (maximize)
+        if (canvas.width !== htmlWidth - settings.ui.clientWidthBorder) {
+            canvas.width = htmlWidth - settings.ui.clientWidthBorder;
+            updated = true;
+        }
+        if (canvas.height !== htmlHeight - settings.ui.clientHeightBorder) {
+            canvas.height = htmlHeight - settings.ui.clientHeightBorder;
+            updated = true;
+        }
+        return updated;
     }
 
 }

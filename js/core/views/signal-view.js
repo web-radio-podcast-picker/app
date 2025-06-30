@@ -13,19 +13,9 @@ class SignalView {
 
     run() {
 
-        const html = document.querySelector('html');
-        const htmlWidth = html.clientWidth;
-        const htmlHeight = html.clientHeight;
-
-        // auto size canvas (maximize)
-        if (this.canvas.width !== htmlWidth - settings.ui.clientWidthBorder)
-            this.canvas.width = htmlWidth - settings.ui.clientWidthBorder;
-        if (this.canvas.height !== htmlHeight - settings.ui.clientHeightBorder)
-            this.canvas.height = htmlHeight - settings.ui.clientHeightBorder;
-
+        ui.setupCanvasSize(this.canvas);
         const canvasHeight = this.canvas.height;
         const canvasWidth = this.canvas.width;
-
         const drawContext = this.canvas.getContext('2d');
 
         var x = -1;
