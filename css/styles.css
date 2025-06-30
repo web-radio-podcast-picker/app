@@ -175,6 +175,10 @@ button {
     color: darkgray;
 }
 
+#bottom-pane > span.label {
+    color: #444444 !important;
+}
+
 #top-pane-1 {
     top: 1em;
     left: 1em;
