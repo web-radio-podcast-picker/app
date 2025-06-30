@@ -36,7 +36,8 @@ window.settings = {
                 font: '14px Arial',
                 color: '#555555',
                 xRel: 6,
-                yRel: 2
+                yRel: -4,
+                timeUnityRel: 20
             }
         }
     },

@@ -12,7 +12,7 @@ class GridView {
 
     run() {
 
-        const updated = !ui.setupCanvasSize(this.canvas);
+        const updated = ui.setupCanvasSize(this.canvas);
 
         if (updated || !this.drawn) {
 
@@ -23,17 +23,29 @@ class GridView {
             const vDivCount = settings.oscilloscope.grid.vDivCount;
             const divw = canvasWidth / settings.oscilloscope.grid.hDivCount;
             const divh = canvasHeight / vDivCount;
+            const timePerDiv = oscilloscope.getTimePerDiv(divw);
 
             for (var x = 0; x < canvasWidth; x += divw) {
 
                 this.drawGridLine(dc, x, 0, x, canvasHeight - 1);
 
+                var yDivNum = 0;
                 for (var y = 0; y < canvasHeight; y += divh) {
                     this.drawGridLine(dc, 0, y, canvasWidth - 1, y);
                     var v = (vDivCount / 2 - (y / divh)) * settings.oscilloscope.vPerDiv
                         .toFixed(5);
                     this.drawUnit(dc, 0, y, vround(v) + 'v');
+
+                    yDivNum++;
+                    if (yDivNum == vDivCount) {
+                        this.drawUnit(dc,
+                            x, y
+                        + settings.oscilloscope.grid.units.timeUnityRel,
+                            tround(x * timePerDiv * 1000) + 'ms');
+                    }
+
                 }
+
             }
 
             this.drawn = true;

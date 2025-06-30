@@ -51,6 +51,11 @@ ui = {
     },
 
     init_ui() {
+        // events
+        $(window).resize(() => {
+            if (oscilloscope.pause)
+                app.requestAnimationFrame();
+        });
         // menu buttons
         $('#btn_menu').on('click', () => {
             $('#top-right-menu-body').toggleClass('hidden');
@@ -146,6 +151,15 @@ ui = {
             updated = true;
         }
         return updated;
-    }
+    },
 
+    checkSizeChanged() {
+        const html = document.querySelector('html');
+        const htmlWidth = html.clientWidth;
+        const htmlHeight = html.clientHeight;
+        var updated =
+            canvas.width !== htmlWidth - settings.ui.clientWidthBorder
+            || canvas.height !== htmlHeight - settings.ui.clientHeightBorder;
+        return updated;
+    }
 }

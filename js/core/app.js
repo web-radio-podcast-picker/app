@@ -128,3 +128,7 @@ document.addEventListener('DOMContentLoaded', function () {
 function vround(v) {
     return parseFloat(v.toFixed(5));
 }
+
+function tround(t) {
+    return parseFloat(t.toFixed(3));
+}

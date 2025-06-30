@@ -83,5 +83,13 @@ oscilloscope = {
             channel.error = "No input media stream";
             console.error(channel.error);
         }
+    },
+
+    getTimePerDiv(divw) {
+        const frq = getSamplesTask.analyzer.context.sampleRate;
+        if (frq == null) return 0;
+        const scTime = 1.0 / frq;
+        const pixelTime = scTime / settings.oscilloscope.grid.hDivCount;
+        return pixelTime * divw;
     }
 }
