@@ -28,6 +28,7 @@ window.settings = {
         },
         grid: {
             color: '#333333',
+            //color: 'red',
             hDivCount: 10,
             vDivCount: 10,
             lineWidth: 1,
@@ -44,7 +45,7 @@ window.settings = {
 
     ui: {
         clientWidthBorder: 0,   // default border width for client area
-        clientHeightBorder: 4   // default border height for client area
+        clientHeightBorder: 0   // default border height for client area
     }
 
 };

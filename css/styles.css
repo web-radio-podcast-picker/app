@@ -24,8 +24,11 @@ html,body,#frame {
 
 canvas {
     background-color: transparent;
-    border: #444444 solid 1px;
+    /*border: #444444 solid 1px;*/
+    border: none;
     position: absolute;
+    /* fix main view real left position on edge */
+    left: 4px;
 }
 
 .canvas-uninitialized {
@@ -101,19 +104,19 @@ button {
 }
 
 .menu-item-blue {
-    color: lightblue;
+    color: yellow;
     background-color: blue;
     border: skyblue solid 1px;    
 }
 
 .menu-item-blue:hover {
-    background-color: lightskyblue;
+    background-color: #44AAff;
     border-color: blue;
-    color: black;
+    color: white;
 }
 
 .menu-item-darkblue {
-    color: whitesmoke;
+    color: white;
     background-color: rgba(0, 0, 255, 0.747);
     border: skyblue solid 1px;    
 }
@@ -211,4 +214,8 @@ button {
 
 .btn_ch {
     width: 2em;
+}
+
+#vdiv,#tdiv {
+    margin-left: 1em;
 }

@@ -114,12 +114,12 @@ app = {
 
     toggleOPause() {
         if (oscilloscope.pause)
-            this.applyPause();
+            this.performTogglePause();
         else
             this.togglePauseRequested = true;
     },
 
-    applyPause() {
+    performTogglePause() {
         this.togglePauseRequested = false;
         oscilloscope.pause = !oscilloscope.pause;
         ui.reflectOscilloPauseState();
@@ -167,7 +167,7 @@ function voltToText(v) {
     const z = vround(v);
     return z;
 }
-e
+
 function valueToVolt(channel, value) {
     return float32ToVolt(value) * channel.vScale;
 }
