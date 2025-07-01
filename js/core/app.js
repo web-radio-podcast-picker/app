@@ -154,7 +154,7 @@ function milli(n) {
 // -1..1 -> 0..256
 function float32ToByteRange(channel, f) {
     const v = valueToVolt(channel, f);
-    return v * 256 / channel.vScale + 128;
+    return v * 128 / channel.vScale + 128;
 }
 
 // normalize to -1 ... 1 ? (input calibration. 255 <=> x Volts)
@@ -167,7 +167,7 @@ function voltToText(v) {
     const z = vround(v);
     return z;
 }
-
+e
 function valueToVolt(channel, value) {
     return float32ToVolt(value) * channel.vScale;
 }
