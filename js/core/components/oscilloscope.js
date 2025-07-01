@@ -8,9 +8,16 @@ oscilloscope = {
     lastStartTime: null,      // last start time for visualization
     startTime: null,          // start time for visualization
     endTime: null,            // end time for visualization
+
+    pause: false,             // pause on/off all channels
+
     scanPeriod: null,         // scan period (in ms, eg view period)
     scanFrq: null,            // scan frequency (in Hz, eg 1000 ms / view period)
-    pause: false,             // pause on/off all channels
+    vDiv: settings.oscilloscope.vPerDiv,     // volts per div
+    tDiv: 0,                  // time per div
+    smTime: 0,                // sampling period
+    smFrq: 0,                 // sampling frequency
+    pixelTime: 0,             // pixel time
 
     getChannel(channelId) {
         var r = null;
@@ -86,10 +93,11 @@ oscilloscope = {
     },
 
     getTimePerDiv(divw) {
-        const frq = getSamplesTask.analyzer.context.sampleRate;
-        if (frq == null) return 0;
-        const scTime = 1.0 / frq;
-        const pixelTime = scTime / settings.oscilloscope.grid.hDivCount;
-        return pixelTime * divw;
+        this.smFrq = getSamplesTask.analyzer.context.sampleRate;
+        if (this.smFrq == null || this.smFrq == 0) return 0;
+        const scTime = 1.0 / this.smFrq;
+        this.pixelTime = scTime / settings.oscilloscope.grid.hDivCount;
+        this.tDiv = this.pixelTime * divw;
+        return this.tDiv;
     }
 }

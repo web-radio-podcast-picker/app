@@ -25,27 +25,28 @@ class GridView {
             const divh = canvasHeight / vDivCount;
             const timePerDiv = oscilloscope.getTimePerDiv(divw);
 
+            var dx = 0;
             for (var x = 0; x < canvasWidth; x += divw) {
 
                 this.drawGridLine(dc, x, 0, x, canvasHeight - 1);
 
-                var yDivNum = 0;
-                for (var y = 0; y < canvasHeight; y += divh) {
+                var y = 0;
+                for (var dy = 0; dy <= vDivCount; dy++) {
                     this.drawGridLine(dc, 0, y, canvasWidth - 1, y);
                     var v = (vDivCount / 2 - (y / divh)) * settings.oscilloscope.vPerDiv
                         .toFixed(5);
                     this.drawUnit(dc, 0, y, vround(v) + 'v');
 
-                    yDivNum++;
-                    if (yDivNum == vDivCount) {
+                    if (dy == vDivCount - 1) {
                         this.drawUnit(dc,
                             x, y
                         + settings.oscilloscope.grid.units.timeUnityRel,
-                            tround(x * timePerDiv * 1000) + 'ms');
+                            tround(dx * timePerDiv * 1000) + 'ms');
                     }
 
+                    y += divh;
                 }
-
+                dx++;
             }
 
             this.drawn = true;

@@ -27,7 +27,7 @@ window.settings = {
             ]
         },
         grid: {
-            color: '#444444',
+            color: '#333333',
             hDivCount: 10,
             vDivCount: 10,
             lineWidth: 1,

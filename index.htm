@@ -39,94 +39,102 @@
 
 <body class="no-select">
 
-    <!-- drawings -->
+    <div id="frame">
 
-    <canvas id="cnv_grid"></canvas>
+        <!-- drawings -->
 
-    <canvas id="cnv_oscillo" class="canvas-uninitialized"></canvas>
+        <canvas id="cnv_grid"></canvas>
 
-    <!-- top right menu -->
+        <canvas id="cnv_oscillo" class="canvas-uninitialized"></canvas>
 
-    <div id="top-right-menu">
-        <span id="btn_menu" class="menu-item menu-item-blue">menu</span>
-        <div id="top-right-menu-body">
-            <span id="btn_add_ch" class="menu-item menu-item-blue menu-item-double-height">+ CH</span>
-            <span id="btn_opause" class="menu-item menu-item-bluegreen menu-item-double-height">⏸</span>
-            <span id="btn_restart" class="menu-item menu-item-bluegreen menu-item-double-height">⟲</span>
-            <span id="btn_power" class="menu-item menu-item-red menu-item-double-height">⚡</span>
+        <!-- top right menu -->
+
+        <div id="top-right-menu">
+            <span id="btn_menu" class="menu-item menu-item-blue">menu</span>
+            <div id="top-right-menu-body">
+                <span id="btn_add_ch" class="menu-item menu-item-blue menu-item-double-height">+ CH</span>
+                <span id="btn_units" class="menu-item menu-item-darkblue menu-item-double-height">
+                    v/Div<span id="vdiv" class="value value"></span><br>
+                    t/Div<span id="tdiv" class="value value"></span>
+                </span>
+                <span id="btn_opause" class="menu-item menu-item-bluegreen menu-item-double-height">⏸</span>
+                <span id="btn_restart" class="menu-item menu-item-bluegreen menu-item-double-height">⟲</span>
+                <span id="btn_power" class="menu-item menu-item-red menu-item-double-height">⚡</span>
+            </div>
         </div>
-    </div>
 
-    <!-- channels pannels -->
+        <!-- channels pannels -->
 
-    <div id="top-panes"></div>
+        <div id="top-panes"></div>
 
-    <!-- oscilloscope datas -->
+        <!-- oscilloscope datas -->
 
-    <div id="bottom-pane" class="row-pane">
-        <span class="label">scTime</span>
-        <span id="stime" class="value short-value"></span>
-        <span class="unit">ms</span>
+        <div id="bottom-pane" class="row-pane">
+            <span class="label">scTime</span>
+            <span id="stime" class="value short-value"></span>
+            <span class="unit">ms</span>
 
-        <span class="label">scRt</span>
-        <span id="sfrq" class="value"></span>
-        <span class="unit">Fps</span>
+            <span class="label">scRt</span>
+            <span id="sfrq" class="value"></span>
+            <span class="unit">Fps</span>
 
-        <span class="label">ech/s</span>
-        <span id="echps" class="value"></span>
+            <span class="label">ech/s</span>
+            <span id="echps" class="value"></span>
 
-        <span class="label">buffer size</span>
-        <span id="buffsz" class="value"></span>
-    </div>
+            <span class="label">buffer size</span>
+            <span id="buffsz" class="value"></span>
+        </div>
 
-    <!-- html models -->
+        <!-- html models -->
 
-    <div id="channel-pane" class="top-pane row-pane hidden">
-        <span id="channel-label" class="label channel-label">CH1</span>
+        <div id="channel-pane" class="top-pane row-pane hidden">
+            <span id="channel-label" class="label channel-label">CH1</span>
 
-        <span class="label">source</span>
-        <span id="csid_" class="value maxlong-value"></span>
+            <span class="label">source</span>
+            <span id="csid_" class="value maxlong-value"></span>
 
-        <span class="label">X x</span>
-        <span id="xscale_" class="value short-value"></span>
+            <span class="label">X x</span>
+            <span id="xscale_" class="value short-value"></span>
 
-        <span class="label">Y x</span>
-        <span id="yscale_" class="value short-value"></span>
+            <span class="label">Y x</span>
+            <span id="yscale_" class="value short-value"></span>
 
-        <span class="label">value</span>
-        <span id="ival_" class="value"></span>
+            <span class="label">value</span>
+            <span id="ival_" class="value"></span>
 
-        <span class="label">v</span>
-        <span id="iv_" class="value long-value"></span>
-        <span class="unit">V</span>
+            <span class="label">v</span>
+            <span id="iv_" class="value long-value"></span>
+            <span class="unit">V</span>
 
-        <span class="label">vMin</span>
-        <span id="vmin_" class="value long-value"></span>
-        <span class="unit">V</span>
+            <span class="label">vMin</span>
+            <span id="vmin_" class="value long-value"></span>
+            <span class="unit">V</span>
 
-        <span class="label">vMax</span>
-        <span id="vmax_" class="value long-value"></span>
-        <span class="unit">V</span>
+            <span class="label">vMax</span>
+            <span id="vmax_" class="value long-value"></span>
+            <span class="unit">V</span>
 
-        <span class="label">vAvg</span>
-        <span id="vavg_" class="value long-value"></span>
-        <span class="unit">V</span>
+            <span class="label">vAvg</span>
+            <span id="vavg_" class="value long-value"></span>
+            <span class="unit">V</span>
 
-        <span class="label">frq</span>
-        <span id="frq_" class="value long-value"></span>
-        <span class="unit">Hz</span>
+            <span class="label">frq</span>
+            <span id="frq_" class="value long-value"></span>
+            <span class="unit">Hz</span>
 
-        <span class="label">frqMin</span>
-        <span id="frqmin_" class="value long-value"></span>
-        <span class="unit">Hz</span>
+            <span class="label">frqMin</span>
+            <span id="frqmin_" class="value long-value"></span>
+            <span class="unit">Hz</span>
 
-        <span class="label">frqMax</span>
-        <span id="frqmax_" class="value long-value"></span>
-        <span class="unit">Hz</span>
+            <span class="label">frqMax</span>
+            <span id="frqmax_" class="value long-value"></span>
+            <span class="unit">Hz</span>
 
-        <button type="button" class="btn_ch left-margin" id="btn_pause_">▶</button>
-        <button type="button" class="btn_ch" id="btn_chsett_">⚙</button>
-        <button type="button" class="btn_ch" id="btn_closech_">X</button>
+            <button type="button" class="btn_ch left-margin" id="btn_pause_">▶</button>
+            <button type="button" class="btn_ch" id="btn_chsett_">⚙</button>
+            <button type="button" class="btn_ch" id="btn_closech_">X</button>
+
+        </div>
 
     </div>
 

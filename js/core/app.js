@@ -132,3 +132,7 @@ function vround(v) {
 function tround(t) {
     return parseFloat(t.toFixed(3));
 }
+
+function milli(n) {
+    return n * 1000;
+}
