@@ -29,7 +29,7 @@ class SignalView {
                 value = float32ToByteRange(this.channel, value);
 
                 // adjust y position (y multiplier, y position shift)
-                var relval = (value - 128) * this.channel.yScale;
+                var relval = (128 - value) * this.channel.yScale;
 
                 var percent = relval / 128;
                 var height = canvasHeight * percent / 2.0;

@@ -113,11 +113,14 @@ app = {
     },
 
     toggleOPause() {
-        this.togglePauseRequested = true;
+        if (oscilloscope.pause)
+            this.applyPause();
+        else
+            this.togglePauseRequested = true;
     },
 
     applyPause() {
-        togglePauseRequested = false;
+        this.togglePauseRequested = false;
         oscilloscope.pause = !oscilloscope.pause;
         ui.reflectOscilloPauseState();
         if (!oscilloscope.pause)
