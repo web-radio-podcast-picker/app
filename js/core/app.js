@@ -136,3 +136,23 @@ function tround(t) {
 function milli(n) {
     return n * 1000;
 }
+
+function float32ToByteRange(f) {
+    const v = float32ToVolt(f);
+    return f * 256 + 128;
+}
+
+function float32ToVolt(f) {
+    //return f; // -1 .. 1 ?
+    return f / 1.5;     // -1.5 .. 1.5 ?
+}
+function voltToText(v) {
+    if (v == null || v == undefined) return Number.NaN;
+    const z = vround(v);
+    return z;
+}
+
+function valueToVolt(channel, value) {
+    return float32ToVolt(value);
+}
+

@@ -26,6 +26,7 @@ class SignalView {
         if (dataArray != null)
             for (var i = 0; i < dataArray.length; i += 1) {
                 var value = dataArray[i];
+                value = float32ToByteRange(value);
 
                 // adjust y position (y multiplier, y position shift)
                 var relval = (value - 128) * this.channel.yScale;
@@ -53,4 +54,5 @@ class SignalView {
                 y = ny;
             }
     }
+
 }

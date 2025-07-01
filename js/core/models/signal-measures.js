@@ -13,7 +13,7 @@ class SignalMeasures {
     // set digital value
     setValue(channel, value) {
         this.value = value;
-        this.volts = this.valueToVolt(channel, value);
+        this.volts = valueToVolt(channel, value) * channel.vScale;
         if (this.volts < this.vMin)
             this.vMin = this.volts;
         if (this.volts > this.vMax)
@@ -22,10 +22,6 @@ class SignalMeasures {
             this.vAvg = this.volts;
         else
             this.vAvg = (this.vAvg + this.volts) / 2.0; // calculate average
-    }
-
-    valueToVolt(channel, value) {
-        return (value - 128) * channel.vScale / 128.0; // convert to volts
     }
 
     setData(data) {

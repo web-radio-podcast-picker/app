@@ -10,12 +10,12 @@ getSamplesTask = {
     init(analyzer) {
         this.analyzer = analyzer;
         this.bufferLength = this.analyzer.frequencyBinCount;
-        this.dataArray = new Uint8Array(this.bufferLength);
+        this.dataArray = new Float32Array(this.bufferLength);
     },
 
     run() {
         if (this.analyzer != null) {
-            this.analyzer.getByteTimeDomainData(this.dataArray);
+            this.analyzer.getFloatTimeDomainData(this.dataArray);
         } else {
             console.error("Analyzer not initialized");
             return;
