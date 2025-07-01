@@ -13,6 +13,8 @@ app = {
     ui: null,                   // UI component
     powerOn: true,              // indicates if turned on or off
 
+    togglePauseRequested: false,
+
     // operations
 
     async run() {
@@ -111,6 +113,11 @@ app = {
     },
 
     toggleOPause() {
+        this.togglePauseRequested = true;
+    },
+
+    applyPause() {
+        togglePauseRequested = false;
         oscilloscope.pause = !oscilloscope.pause;
         ui.reflectOscilloPauseState();
         if (!oscilloscope.pause)
@@ -125,6 +132,10 @@ document.addEventListener('DOMContentLoaded', function () {
     app.run();
 }, false);
 
+function vround7(v) {
+    return parseFloat(v.toFixed(7));
+}
+
 function vround(v) {
     return parseFloat(v.toFixed(5));
 }
@@ -137,22 +148,24 @@ function milli(n) {
     return n * 1000;
 }
 
-function float32ToByteRange(f) {
-    const v = float32ToVolt(f);
-    return f * 256 + 128;
+// -1..1 -> 0..256
+function float32ToByteRange(channel, f) {
+    const v = valueToVolt(channel, f);
+    return v * 256 / channel.vScale + 128;
 }
 
+// normalize to -1 ... 1 ? (input calibration. 255 <=> x Volts)
 function float32ToVolt(f) {
     //return f; // -1 .. 1 ?
     return f / 1.5;     // -1.5 .. 1.5 ?
 }
 function voltToText(v) {
-    if (v == null || v == undefined) return Number.NaN;
+    if (v == null || v == undefined || isNaN(v)) return Number.NaN;
     const z = vround(v);
     return z;
 }
 
 function valueToVolt(channel, value) {
-    return float32ToVolt(value);
+    return float32ToVolt(value) * channel.vScale;
 }
 

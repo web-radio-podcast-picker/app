@@ -26,7 +26,7 @@ class SignalView {
         if (dataArray != null)
             for (var i = 0; i < dataArray.length; i += 1) {
                 var value = dataArray[i];
-                value = float32ToByteRange(value);
+                value = float32ToByteRange(this.channel, value);
 
                 // adjust y position (y multiplier, y position shift)
                 var relval = (value - 128) * this.channel.yScale;
@@ -35,7 +35,8 @@ class SignalView {
                 var height = canvasHeight * percent / 2.0;
                 var offset = canvasHeight / 2 + height;
                 offset += this.channel.yOffset;
-                var barWidth = canvasWidth / dataArray.length;
+
+                var barWidth = canvasWidth / dataArray.length;      // full buffer view
 
                 var nx = i * barWidth;
                 var ny = offset;

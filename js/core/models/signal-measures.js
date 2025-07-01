@@ -1,27 +1,26 @@
 // signal measures
 class SignalMeasures {
 
-    value = null;               // digitalized value
+    value = null;               // input value              (-1..1)
 
     volts = 0;                  // volts value (calculated from digitalized value)
     vMin = Number.MAX_VALUE;    // minimum volts value
     vMax = Number.MIN_VALUE;    // maximum volts value
-    vAvg = null;                // average volts value
+    vAvg = 0;                   // average volts value
 
-    dataArray = null;           // array of samples datas
+    dataArray = null;           // array of samples datas   (-1..1)
 
-    // set digital value
+    // set input value
     setValue(channel, value) {
         this.value = value;
-        this.volts = valueToVolt(channel, value) * channel.vScale;
-        if (this.volts < this.vMin)
-            this.vMin = this.volts;
-        if (this.volts > this.vMax)
-            this.vMax = this.volts;
-        if (this.vAvg == null)
-            this.vAvg = this.volts;
-        else
-            this.vAvg = (this.vAvg + this.volts) / 2.0; // calculate average
+        this.volts = valueToVolt(channel, value);
+    }
+
+    // set measures from input value
+    setMeasures(channel, min, max, avg) {
+        this.vMin = valueToVolt(channel, min);
+        this.vMax = valueToVolt(channel, max);
+        this.vAvg = valueToVolt(channel, avg);
     }
 
     setData(data) {

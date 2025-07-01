@@ -12,13 +12,16 @@ class SignalMeasuresView {
         const c = this.channel.channelId;
         $('#csid_' + c).text(this.channel.sourceId);
         //$('#ival_' + c).text(this.signalMeasures.value);
+
         $('#iv_' + c).text(voltToText(this.signalMeasures.volts));
         $('#vmin_' + c).text(voltToText(this.signalMeasures.vMin));
         $('#vmax_' + c).text(voltToText(this.signalMeasures.vMax));
+
         $('#vavg_' + c).text(
             this.signalMeasures.vAvg == null ?
                 '' :
-                this.signalMeasures.vAvg.toFixed(7));
+                vround7(this.signalMeasures.vAvg));
+
         $('#yscale_' + c).text(this.channel.yScale);
         $('#xscale_' + c).text(this.channel.xScale);
     }
