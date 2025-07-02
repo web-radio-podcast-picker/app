@@ -107,6 +107,7 @@ ui = {
             const w = $popup.width();
             const h = $popup.height();
             pos.left -= w;
+            pos.left -= settings.ui.menuContainerWidth; // 3*1em
             $popup.css('left', pos.left + 'px');
             $popup.css('top', pos.top + 'px');
         }
@@ -158,18 +159,6 @@ ui = {
 
     editChannelSettings(channel) {
 
-    },
-
-    openpopupId() {
-        // build and open a new popupId
-        // close any previous one
-        if (this.popupId != null)
-            this.closepopupId();
-    },
-
-    closepopupId() {
-        $('#' + popupId).remove();
-        this.popupId = null;
     },
 
     setupCanvasSize(canvas) {
