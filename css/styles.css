@@ -84,14 +84,24 @@ button {
     display: block;
     position: absolute;
     top: 0px;
-    left: calc(100% - 120px);
+    left: calc(100% - 118px);
     text-align: center;
     padding: 8px;
 }
 
+.popup-pane {    
+}
+
+#pop_settings {
+    position: absolute;
+    background-color: darkblue;
+    padding: 1em;
+    z-index: 20;
+}
+
 .menu-item {
     display: inline-block;
-    line-height: 1.5em;
+    line-height: 3em;
     padding: 4px;
     cursor: pointer;
     width: 96px;
@@ -99,8 +109,8 @@ button {
     opacity: 0.9;
 }
 
-.menu-item-double-height {
-    line-height: 3em !important;
+.menu-item-half-height {
+    line-height: 1.5em !important;
 }
 
 .menu-item-blue {
@@ -109,9 +119,24 @@ button {
     border: skyblue solid 1px;    
 }
 
+.menu-item-blue:hover,
+.menu-item-darkblue:hover,
+.menu-item-bluegreen:hover,
+.menu-item-red:hover {
+    border-color: black;
+}
+
+.menu-item-blue,
+.menu-item-darkblue,
+.menu-item-bluegreen,
+.menu-item-red {
+    /*border-color: black !important;*/
+    border: none !important;
+}
+
+
 .menu-item-blue:hover {
     background-color: #44AAff;
-    border-color: blue;
     color: white;
 }
 
@@ -123,7 +148,6 @@ button {
 
 .menu-item-darkblue:hover {
     background-color: rgb(2, 151, 243);
-    border-color: blue;
     color: rgb(255, 255, 255);
 }
 
@@ -135,7 +159,6 @@ button {
 
 .menu-item-bluegreen:hover {
     background-color: rgb(0, 141, 110);
-    border-color: blue;
     color: white;
 }
 
@@ -147,9 +170,10 @@ button {
 
 .menu-item-red:hover {
     background-color: rgb(167, 123, 140);
-    border-color: blue;
     color: black;
 }
+
+
 
 .menu-item-disabled,.menu-item-disabled:hover  {
     color: lightblue;

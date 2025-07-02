@@ -74,6 +74,42 @@ ui = {
         $('#btn_opause').on('click', () => {
             app.toggleOPause();
         });
+        $('#btn_oset').on('click', () => {
+            this.togglePopup('#btn_oset', 'pop_settings');
+        });
+    },
+
+    togglePopup(control, popupId, showState) {
+        if (this.popupId != null && this.popupId != popupId) {
+            // change popup
+            const p = this.popupId;
+            this.popupId = null;
+            this.togglePopup(control, p, false);
+        }
+        const $popup = $('#' + popupId);
+        const visible = !$popup.hasClass('hidden');
+        this.popupId = null;
+        if (showState === undefined) {
+            $popup.toggleClass('hidden');
+            if (!visible)
+                this.popupId = popupId;
+        } else {
+            if (!showState)
+                $popup.addClass('hidden');
+            else {
+                $popup.removeClass('hidden');
+                this.popupId = popupId;
+            }
+        }
+        if (this.popupId != null) {
+            const $ctrl = $(control);
+            var pos = $ctrl.offset();
+            const w = $popup.width();
+            const h = $popup.height();
+            pos.left -= w;
+            $popup.css('left', pos.left + 'px');
+            $popup.css('top', pos.top + 'px');
+        }
     },
 
     turnOffMenu() {
