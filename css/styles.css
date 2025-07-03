@@ -152,6 +152,18 @@ div#pop_settings > span.menu-item {
     color: white;
 }
 
+.no-pointer {
+    cursor: default;
+}
+
+.btn-sub {
+    cursor: pointer;
+}
+
+.btn-sub-blue:hover {
+    background-color: #77CCFF;
+}
+
 .menu-item-darkblue {
     color: white;
     background-color: rgba(0, 0, 255, 0.747);

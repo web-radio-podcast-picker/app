@@ -5,6 +5,7 @@ ui = {
     oscilloscope: null,     // reference to the oscilloscope manager
     uiInitialized: false,   // indicates if ui is already globally initialized
     popupId: null,          // any id of an html popupId currently opened/showed
+    popupCtrlId: null,      // popup control placement if any else null
 
     init(oscilloscope) {
         this.oscilloscope = oscilloscope;
@@ -75,7 +76,7 @@ ui = {
             app.toggleOPause();
         });
         $('#btn_oset').on('click', () => {
-            this.togglePopup('#btn_oset', 'pop_settings');
+            this.togglePopup(/*'#btn_oset'*/null, 'pop_settings');
         });
     },
 
@@ -102,27 +103,44 @@ ui = {
         const $popup = $('#' + popupId);
         const visible = !$popup.hasClass('hidden');
         this.popupId = null;
+        this.popupCtrlId = null;
         if (showState === undefined) {
             $popup.toggleClass('hidden');
-            if (!visible)
+            if (!visible) {
                 this.popupId = popupId;
+                this.popupCtrlId = control;
+            }
         } else {
             if (!showState)
                 $popup.addClass('hidden');
             else {
                 $popup.removeClass('hidden');
                 this.popupId = popupId;
+                this.popupCtrlId = control;
             }
         }
-        if (this.popupId != null && control != null) {
-            const $ctrl = $(control);
-            var pos = $ctrl.offset();
+        if (this.popupId != null) {
             const w = $popup.width();
             const h = $popup.height();
-            pos.left -= w;
-            pos.left -= settings.ui.menuContainerWidth; // 3*1em
-            $popup.css('left', pos.left + 'px');
-            $popup.css('top', pos.top + 'px');
+            var left = 0;
+            var top = 0;
+            if (control != null) {
+                // left align
+                const $ctrl = $(control);
+                var pos = $ctrl.offset();
+                pos.left -= w;
+                pos.left -= settings.ui.menuContainerWidth; // 3*1em
+                left = pos.left;
+                top = pos.top;
+            } else {
+                // center
+                const vs = this.viewSize();
+                left = (vs.width - w) / 2.0;
+                top = (vs.height - h) / 2.0;
+            }
+            this.popupCtrlId = control;
+            $popup.css('left', left);
+            $popup.css('top', top);
         }
     },
 
@@ -174,10 +192,15 @@ ui = {
 
     },
 
-    setupCanvasSize(canvas) {
+    viewSize() {
         const html = document.querySelector('html');
-        const htmlWidth = html.clientWidth;
-        const htmlHeight = html.clientHeight;
+        return { width: html.clientWidth, height: html.clientHeight };
+    },
+
+    setupCanvasSize(canvas) {
+        const vs = this.viewSize();
+        const htmlWidth = vs.width;
+        const htmlHeight = vs.height;
         var updated = false;
         // auto size canvas (maximize)
         if (canvas.width !== htmlWidth - settings.ui.clientWidthBorder) {
