@@ -80,7 +80,11 @@ ui = {
     },
 
     toggleMenu() {
-        $('#top-right-menu-body').toggleClass('hidden');
+        const $mb = $('#top-right-menu-body');
+        $mb.toggleClass('hidden');
+        $('#btn_menu').text($mb.hasClass('hidden') ?
+            '▼' : '▲');
+
         if (this.popupId != null) {
             const p = this.popupId;
             this.popupId = null;
