@@ -56,7 +56,7 @@ button {
 
 .value {
     display: inline-block;
-    border: #444444 solid 1px;
+    /*border: #444444 solid 1px;*/
     width: 3em;
 }
 
