@@ -67,8 +67,23 @@
         <!-- menu popups -->
 
         <div id="pop_settings" class="popup-pane hidden">
-            <span id="btn_X" class="menu-item menu-item-darkblue">X</span>
-            <span id="btn_Y" class="menu-item menu-item-darkblue">Y</span>
+            <div class="popup-icon">⚙</div>
+            <div class="popup-title">Oscilloscope settings</div>
+            <div class="opts-grid">
+                <div class="gr1 gc1 opts-list">
+                    <span id="btn_os_view" class="gr1 gc1 menu-item menu-item-darkblue">View</span>
+                    <span id="btn_os_in" class="gr2 gc1 menu-item menu-item-darkblue">Input</span>
+                    <span id="btn_os_out" class="gr3 gc1 menu-item menu-item-darkblue">Output</span>
+                </div>
+                <div id="opts_os_view" class="gr1 gc2 opts-pane">
+                    <span class="gr1 gc1 opt-label">client width border</span>
+                    <span class="gr2 gc1 opt-label">client height border</span>
+                    <input title="client width border" id="opt_os_clientWidthBorder" class="gr1 gc2 opt-value-edit"
+                        value="0"></input>
+                    <input title="client height border" id="opt_os_clientHeightBorder" class="gr2 gc2 opt-value-edit"
+                        value="0"></input>
+                </div>
+            </div>
         </div>
 
         <!-- channels pannels -->
