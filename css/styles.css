@@ -139,14 +139,7 @@ div.opts-grid > div.popup-grid {
     padding: 1em;
     padding-right: 0em;
     padding-bottom: 0em;
-}
-
-.opt-value-edit {
-    height: fit-content;
-    background-color: transparent;
-    border: black solid 2px;
-    color: yellow;
-    text-align: right;
+    grid-auto-rows: 2.5em;
 }
 
 .opts-list {
@@ -159,6 +152,26 @@ div.opts-grid > div.popup-grid {
     left: -1em;
     margin-right: -1em;
     margin-bottom: -1em;
+}
+
+.opt-value-edit {
+    height: fit-content;
+    background-color: #000055AA;
+    border: black solid 2px;
+    color: yellow;
+    text-align: right;
+    margin: 1em;
+    margin-top: 0px;
+}
+
+.opt-value-edit:focus-visible {
+    background-color: #0000FFAA;
+    outline: #44AAff solid 2px;
+}
+
+.opt-label {
+    margin: 1em;
+    margin-top: 0px;
 }
 
 #pop_settings {
@@ -237,6 +250,11 @@ div.popup-grid > span.menu-item {
     background-color: #44AAff;
     color: white;
 }
+
+.selected {
+    background-color: darkblue !important;
+}
+
 
 .no-pointer {
     cursor: default;
