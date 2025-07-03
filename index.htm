@@ -71,15 +71,23 @@
             <div class="popup-icon">⚙</div>
             <div class="popup-title">Oscilloscope settings</div>
             <div class="opts-grid">
+                <!-- options groups -->
                 <div class="gr1 gc1 opts-list">
-                    <span id="btn_os_view" class="gr1 gc1 menu-item menu-item-darkblue selected">Display</span>
+                    <span id="btn_os_disp" class="gr1 gc1 menu-item menu-item-darkblue selected">Display</span>
                     <span id="btn_os_in" class="gr2 gc1 menu-item menu-item-darkblue">Input</span>
                     <span id="btn_os_out" class="gr3 gc1 menu-item menu-item-darkblue">Output</span>
                 </div>
-                <div id="opts_os_view" class="gr1 gc2 opts-pane">
-                    <span class="gr1 gc1 opt-label">client width border</span>
-                    <span class="gr2 gc1 opt-label">client height border</span>
-                    <span class="gr3 gc1 opt-label">menu container width</span>
+                <!-- input -->
+                <div id="opts_os_in" class="gr1 gc2 opts-pane">
+                </div>
+                <!-- output -->
+                <div id="opts_os_out" class="gr1 gc2 opts-pane">
+                </div>
+                <!-- display -->
+                <div id="opts_os_disp" class="gr1 gc2 opts-pane">
+                    <span class="gr1 gc1 opt-label">screen right border width</span>
+                    <span class="gr2 gc1 opt-label">screen bottom border with</span>
+                    <span class="gr3 gc1 opt-label">right menu container width</span>
                     <input id="opt_os_clientWidthBorder" class="gr1 gc2 opt-value-edit" value="0"></input>
                     <input id="opt_os_clientHeightBorder" class="gr2 gc2 opt-value-edit" value="0"></input>
                     <input id="opt_os_menuContainerWidth" class="gr3 gc2 opt-value-edit" value="0"></input>

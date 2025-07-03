@@ -51,7 +51,7 @@ button {
 }
 
 .hidden {
-    display: none;
+    display: none !important;
 }
 
 .value {
@@ -200,10 +200,6 @@ div.opts-grid > div.popup-grid {
     opacity: 0.9;
 }
 
-#pop_settings {
-   
-}
-
 div.popup-grid > span.menu-item {
     margin: 0.5em;
 }
@@ -340,6 +336,10 @@ div.popup-grid > span.menu-item {
 
 /*#btn_menu {
 }*/
+
+#pop_settings {
+    min-width: 500px;
+}
 
 #top-right-menu-body {
     width: 96px;

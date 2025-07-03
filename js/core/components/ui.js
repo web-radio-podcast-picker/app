@@ -74,6 +74,80 @@ ui = {
 
     init_popup_settings() {
 
+        const refresh = () => app.requestAnimationFrame();
+
+        // groups
+        this.initTabs(
+            'btn_os_disp',
+            'btn_os_in',
+            'btn_os_out');
+
+        // display
+        this.bind(
+            'opt_os_clientWidthBorder',
+            'settings.ui.clientWidthBorder',
+            null, refresh);
+        this.bind(
+            'opt_os_clientHeightBorder',
+            'settings.ui.clientHeightBorder',
+            null, refresh);
+        this.bind(
+            'opt_os_menuContainerWidth',
+            'settings.ui.menuContainerWidth',
+            null, refresh);
+
+        // input
+
+    },
+
+    initTabs(...tabs) {
+        if (settings.debug.trace)
+            console.trace('initTabs', tabs);
+        const t = this;
+        tabs.forEach(e => {
+            const $c = $('#' + e);
+            $c.on('click', () => {
+                if (!$c.hasClass('selected'))
+                    t.selectTab($c.attr('id'), tabs);
+            });
+        });
+    },
+
+    selectTab(selectedTabId, tabs) {
+        const panes = [...tabs];
+        const btIdToPaneId = t => t.replace('btn_', 'opts_');
+        panes.forEach((v, i) => {
+            panes[i] = btIdToPaneId(panes[i]);
+        });
+        const selectedPane = btIdToPaneId(selectedTabId);
+        tabs.forEach(e => {
+            const $t = $('#' + e);
+            const pId = btIdToPaneId(e);
+            const $p = $('#' + pId);
+            if ($t.hasClass('selected')) {
+                $t.removeClass('selected');
+                $p.addClass('hidden');
+            }
+            if ($t.attr('id') == selectedTabId) {
+                $t.addClass('selected');
+                $p.removeClass('hidden');
+            }
+        });
+    },
+
+    bind(controlId, valuePath, sym, onChanged) {
+        var $c = $('#' + controlId);
+        $c.attr('value', eval(valuePath));
+        $c.on('change', () => {
+            if (settings.debug.trace)
+                console.trace('value changed: ' + controlId);
+            const $v = $c[0].value;
+            if (sym == null)
+                sym = '';
+            eval(valuePath + '=' + sym + $v + sym);
+            if (onChanged != null)
+                onChanged();
+        });
     },
 
     init_right_menu() {
