@@ -197,6 +197,7 @@ div.opts-grid > div.popup-grid {
 .opt-label {
     margin: 1em;
     margin-top: 0px;
+    opacity: 0.9;
 }
 
 #pop_settings {
@@ -280,7 +281,6 @@ div.popup-grid > span.menu-item {
     background-color: darkblue !important;
     cursor: default;
 }
-
 
 .no-pointer {
     cursor: default;

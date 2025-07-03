@@ -57,6 +57,26 @@ ui = {
             if (oscilloscope.pause)
                 app.requestAnimationFrame();
         });
+        // menus & popups
+        this.init_right_menu();
+        this.init_popups();
+    },
+
+    init_popups() {
+        $('.popup-close').on('click', () => {
+            const p = this.popupId;
+            this.popupId = null;
+            this.control = null;
+            this.togglePopup(null, p, false);
+        });
+        this.init_popup_settings();
+    },
+
+    init_popup_settings() {
+
+    },
+
+    init_right_menu() {
         // menu buttons
         $('#btn_menu').on('click', () => {
             this.toggleMenu();
@@ -98,6 +118,7 @@ ui = {
             // change popup
             const p = this.popupId;
             this.popupId = null;
+            this.control = null;
             this.togglePopup(control, p, false);
         }
         const $popup = $('#' + popupId);
