@@ -58,7 +58,7 @@ ui = {
         });
         // menu buttons
         $('#btn_menu').on('click', () => {
-            $('#top-right-menu-body').toggleClass('hidden');
+            this.toggleMenu();
         });
         $('#btn_add_ch').on('click', async () => {
             if (app.powerOn)
@@ -77,6 +77,15 @@ ui = {
         $('#btn_oset').on('click', () => {
             this.togglePopup('#btn_oset', 'pop_settings');
         });
+    },
+
+    toggleMenu() {
+        $('#top-right-menu-body').toggleClass('hidden');
+        if (this.popupId != null) {
+            const p = this.popupId;
+            this.popupId = null;
+            this.togglePopup(null, p, false);
+        }
     },
 
     togglePopup(control, popupId, showState) {
@@ -101,7 +110,7 @@ ui = {
                 this.popupId = popupId;
             }
         }
-        if (this.popupId != null) {
+        if (this.popupId != null && control != null) {
             const $ctrl = $(control);
             var pos = $ctrl.offset();
             const w = $popup.width();

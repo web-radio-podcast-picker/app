@@ -104,6 +104,10 @@ button {
     opacity: 0.9;
 }
 
+div#pop_settings > span.menu-item {
+    margin: 0.5em;
+}
+
 .menu-item {
     display: inline-block;
     line-height: 3em;
