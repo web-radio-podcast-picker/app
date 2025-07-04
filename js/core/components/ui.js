@@ -97,12 +97,42 @@ ui = {
             null, refresh);
 
         // input
+        // oscilloscope.scanFrq
+        this.bind(
+            'opt_os_smpfrqcy',
+            'oscilloscope.audioContext.sampleRate',
+            null, null, true);
+    },
 
+    bind(controlId, valuePath, sym, onChanged, readOnly) {
+        if (readOnly == null)
+            readOnly = false;
+        const $c = $('#' + controlId);
+
+        if (readOnly) {
+            $c.addClass('read-only');
+            $c.attr('readonly', '');
+        }
+
+        app.addOnStartUI(() => {
+            $c.attr('value', eval(valuePath));
+        });
+
+        if (!readOnly)
+            $c.on('change', () => {
+                if (settings.debug.trace)
+                    console.trace('value changed: ' + controlId);
+                const $v = $c[0].value;
+                if (sym == null)
+                    sym = '';
+                if (onChanged != null)
+                    onChanged();
+                else
+                    eval(valuePath + '=' + sym + $v + sym);
+            });
     },
 
     initTabs(...tabs) {
-        if (settings.debug.trace)
-            console.trace('initTabs', tabs);
         const t = this;
         tabs.forEach(e => {
             const $c = $('#' + e);
@@ -132,21 +162,6 @@ ui = {
                 $t.addClass('selected');
                 $p.removeClass('hidden');
             }
-        });
-    },
-
-    bind(controlId, valuePath, sym, onChanged) {
-        var $c = $('#' + controlId);
-        $c.attr('value', eval(valuePath));
-        $c.on('change', () => {
-            if (settings.debug.trace)
-                console.trace('value changed: ' + controlId);
-            const $v = $c[0].value;
-            if (sym == null)
-                sym = '';
-            eval(valuePath + '=' + sym + $v + sym);
-            if (onChanged != null)
-                onChanged();
         });
     },
 

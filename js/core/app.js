@@ -13,9 +13,19 @@ app = {
     ui: null,                   // UI component
     powerOn: true,              // indicates if turned on or off
 
-    togglePauseRequested: false,
+    togglePauseRequested: false,    // request whole oscilloscope to pause at end of frame
+    onStartUI: null,            // ui started callback
 
     // operations
+
+    addOnStartUI(fn) {
+        if (this.onStartUI == null)
+            this.onStartUI = () => { fn(); }
+        else {
+            const f = this.onStartUI;
+            this.onStartUI = () => { fn(); f(); }
+        }
+    },
 
     async run() {
 
@@ -38,6 +48,12 @@ app = {
 
     startUI() {
         $(this.canvas).removeClass('canvas-uninitialized');
+        // ui started event
+        if (this.onStartUI != null) {
+            const f = this.onStartUI;
+            this.onStartUI = null;
+            f();
+        }
         // Setup a timer to visualize some stuff.
         this.requestAnimationFrame();
     },

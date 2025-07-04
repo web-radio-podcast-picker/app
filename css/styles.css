@@ -78,6 +78,10 @@ button {
     color: darkgrey !important;
 }
 
+.unit {
+    color: yellow;
+}
+
 .channel-label {
     color: black;
     font-weight: bold;
@@ -130,6 +134,10 @@ div.opts-grid > div.popup-grid {
     line-height: 1.5em;
     text-align: center;
     cursor: pointer;
+}
+
+div.opts-pane > span.unit {
+
 }
 
 .popup-close:hover > div.btn-red {
@@ -249,10 +257,6 @@ div.popup-grid > span.menu-item {
     /*border: skyblue solid 1px;*/
 }
 
-.btn-blue {
-    
-}
-
 .menu-item-blue:hover,
 .menu-item-darkblue:hover,
 .menu-item-bluegreen:hover,
@@ -276,6 +280,10 @@ div.popup-grid > span.menu-item {
 .selected {
     background-color: darkblue !important;
     cursor: default;
+}
+
+.read-only {
+    background-color: #0000FFAA !important;
 }
 
 .no-pointer {

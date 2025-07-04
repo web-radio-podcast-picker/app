@@ -81,6 +81,14 @@
 
                 <!-- input -->
                 <div id="opts_os_in" class="gr1 gc2 opts-pane">
+                    <span class="gr1 gc1 opt-label">source</span>
+                    <span class="gr2 gc1 opt-label">sampling frequency</span>
+                    <select class="gr1 gc2 opt-value-edit" id="opt_os_audio_source" readonly>
+                        <option value="AudioInput" selected>Audio Input</option>
+                    </select>
+                    <div class="gr2 gc2"><input id="opt_os_smpfrqcy" class="opt-value-edit"></input>
+                        <span class="unit">Hz</span>
+                    </div>
                 </div>
 
                 <!-- output -->
@@ -92,9 +100,9 @@
                     <span class="gr1 gc1 opt-label">screen right border width</span>
                     <span class="gr2 gc1 opt-label">screen bottom border with</span>
                     <span class="gr3 gc1 opt-label">right menu container width</span>
-                    <input id="opt_os_clientWidthBorder" class="gr1 gc2 opt-value-edit" value="0"></input>
-                    <input id="opt_os_clientHeightBorder" class="gr2 gc2 opt-value-edit" value="0"></input>
-                    <input id="opt_os_menuContainerWidth" class="gr3 gc2 opt-value-edit" value="0"></input>
+                    <input id="opt_os_clientWidthBorder" class="gr1 gc2 opt-value-edit"></input>
+                    <input id="opt_os_clientHeightBorder" class="gr2 gc2 opt-value-edit"></input>
+                    <input id="opt_os_menuContainerWidth" class="gr3 gc2 opt-value-edit"></input>
                 </div>
             </div>
         </div>
