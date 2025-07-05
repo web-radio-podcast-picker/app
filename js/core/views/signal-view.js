@@ -4,6 +4,7 @@ class SignalView {
 
     canvas = null;           // canvas for visualization
     pause = false;           // pause flag for visualization
+    hidden = false;          // hidden for vizualisation
     channel = null;          // channel
 
     init(canvas, channel) {

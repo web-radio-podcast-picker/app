@@ -97,7 +97,6 @@ ui = {
             null, refresh);
 
         // input
-        // oscilloscope.scanFrq
         this.bind(
             'opt_os_smpfrqcy',
             'oscilloscope.audioContext.sampleRate',
