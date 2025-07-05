@@ -3,10 +3,13 @@
 requestAnimationFrameTask = {
 
     run() {
-        oscilloscope.endTime = Date.now();
-
-        if (app.togglePauseRequested)
-            app.performTogglePause();
+        app.endFramePermanentOperations.forEach(fn => {
+            fn();
+        });
+        app.endFrameOneShotOperations.forEach(fn => {
+            fn();
+        });
+        app.endFrameOneShotOperations.length = 0;
 
         if (app.powerOn && !oscilloscope.pause)
             app.requestAnimationFrame();

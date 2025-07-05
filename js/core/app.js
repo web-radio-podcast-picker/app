@@ -13,8 +13,10 @@ app = {
     ui: null,                   // UI component
     powerOn: true,              // indicates if turned on or off
 
-    togglePauseRequested: false,    // request whole oscilloscope to pause at end of frame
     onStartUI: null,            // ui started callback
+
+    endFramePermanentOperations: [], // end frame operations (always)
+    endFrameOneShotOperations: [],   // end frame operations (single shot)
 
     // operations
 
@@ -31,6 +33,9 @@ app = {
 
         this.oscilloscope = oscilloscope;
         this.oscilloscopeView = new OscilloscopeView();
+        this.endFramePermanentOperations.push(() => {
+            oscilloscope.endTime = Date.now();
+        });
         this.gridView = new GridView();
         this.canvas = $('#cnv_oscillo')[0];
         this.gridView.init($('#cnv_grid')[0]);
@@ -130,13 +135,16 @@ app = {
 
     toggleOPause() {
         if (oscilloscope.pause)
+            // unpause immediately
             this.performTogglePause();
         else
-            this.togglePauseRequested = true;
+            this.endFrameOneShotOperations.push(() => {
+                // delay pause until end of frame
+                this.performTogglePause();
+            });
     },
 
     performTogglePause() {
-        this.togglePauseRequested = false;
         oscilloscope.pause = !oscilloscope.pause;
         ui.reflectOscilloPauseState();
         if (!oscilloscope.pause)
