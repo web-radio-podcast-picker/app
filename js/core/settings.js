@@ -13,6 +13,7 @@ window.settings = {
 
     oscilloscope: {
         vPerDiv: 1,             // volts per division
+        tPerDiv: 40,            // time per division in milliseconds
         channels: {
             // channels colors
             colors: [
@@ -29,7 +30,6 @@ window.settings = {
         },
         grid: {
             color: '#333333',
-            //color: 'red',
             hDivCount: 10,
             vDivCount: 10,
             lineWidth: 1,

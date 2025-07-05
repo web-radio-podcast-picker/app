@@ -13,8 +13,6 @@ oscilloscope = {
 
     scanPeriod: null,         // scan period (in ms, eg view period)
     scanFrq: null,            // scan frequency (in Hz, eg 1000 ms / view period)
-    vDiv: settings.oscilloscope.vPerDiv,     // volts per div
-    tDiv: 0,                  // time per div
     smTime: 0,                // sampling period
     smFrq: 0,                 // sampling frequency
     pixelTime: 0,             // pixel time
@@ -97,7 +95,7 @@ oscilloscope = {
         if (this.smFrq == null || this.smFrq == 0) return 0;
         const scTime = 1.0 / this.smFrq;
         this.pixelTime = scTime / settings.oscilloscope.grid.hDivCount;
-        this.tDiv = this.pixelTime * divw;
-        return this.tDiv;
+        settings.oscilloscope.tPerDiv = this.pixelTime * divw;
+        return settings.oscilloscope.tPerDiv;
     }
 }

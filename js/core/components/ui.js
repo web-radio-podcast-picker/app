@@ -78,6 +78,7 @@ ui = {
 
         // groups
         this.initTabs(
+            'btn_os_grid',
             'btn_os_disp',
             'btn_os_in',
             'btn_os_out');
@@ -99,11 +100,15 @@ ui = {
         // input
         this.bind(
             'opt_os_smpfrqcy',
-            'oscilloscope.audioContext.sampleRate',
+            'app.audioInputChannel.streamSource.context.sampleRate',
             null, null, true);
         this.bind(
             'opt_os_inputChannelsCount',
             'settings.audioInput.channelsCount',
+            null, null, true);
+        this.bind(
+            'opt_os_frequencyBinCount',
+            'app.audioInputChannel.analyzer.frequencyBinCount',
             null, null, true);
         this.bind(
             'opt_os_inputVscale',
@@ -115,11 +120,28 @@ ui = {
             'opt_os_outputChannelsCount',
             'oscilloscope.audioContext.destination.maxChannelCount',
             null, null, true);
-
         this.bind(
             'opt_os_channelInterpretation',
             'oscilloscope.audioContext.destination.channelInterpretation',
             null, null, true);
+
+        // grid
+        this.bind(
+            'opt_os_dv',
+            'settings.oscilloscope.vPerDiv',
+            null, null);
+        this.bind(
+            'opt_os_dt',
+            'settings.oscilloscope.tPerDiv',
+            null, null);
+        this.bind(
+            'opt_os_hdiv',
+            'settings.oscilloscope.grid.hDivCount',
+            null, null);
+        this.bind(
+            'opt_os_vdiv',
+            'settings.oscilloscope.grid.vDivCount',
+            null, null);
     },
 
     bind(controlId, valuePath, sym, onChanged, readOnly) {

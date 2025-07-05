@@ -76,7 +76,8 @@
                 <div class="gr1 gc1 opts-list">
                     <span id="btn_os_in" class="gr1 gc1 menu-item menu-item-darkblue selected">Input</span>
                     <span id="btn_os_out" class="gr2 gc1 menu-item menu-item-darkblue">Output</span>
-                    <span id="btn_os_disp" class="gr3 gc1 menu-item menu-item-darkblue">Display</span>
+                    <span id="btn_os_grid" class="gr3 gc1 menu-item menu-item-darkblue">Grid</span>
+                    <span id="btn_os_disp" class="gr4 gc1 menu-item menu-item-darkblue">Display</span>
                 </div>
 
                 <!-- input -->
@@ -84,7 +85,8 @@
                     <span class="gr1 gc1 opt-label">source</span>
                     <span class="gr2 gc1 opt-label">sample rate</span>
                     <span class="gr3 gc1 opt-label">channels count</span>
-                    <span class="opt-label">signal range</span>
+                    <span class="gr4 gc1 opt-label">frequency bin count</span>
+                    <span class="gr5 gc1 opt-label">signal range</span>
                     <select class="gr1 gc2 opt-value-edit read-only" id="opt_os_audio_source" readonly>
                         <option value="AudioInput" selected>Audio Input</option>
                     </select>
@@ -93,7 +95,8 @@
                         <span class="unit">Hz</span>
                     </div>
                     <input id="opt_os_inputChannelsCount" class="gr3 gc2 opt-value-edit"></input>
-                    <div class="gr4 gc2">
+                    <input id="opt_os_frequencyBinCount" class="gr4 gc2 opt-value-edit"></input>
+                    <div class="gr5 gc2">
                         <input id="opt_os_inputVscale" class="opt-value-edit"></input>
                         <span class="unit">V</span>
                     </div>
@@ -107,6 +110,24 @@
                     <input id="opt_os_channelInterpretation" class="gr2 gc2 opt-value-edit"></input>
                 </div>
 
+                <!-- grid -->
+                <div id="opts_os_grid" class="gr1 gc2 opts-pane hidden">
+                    <span class="gr1 gc1 opt-label">Δ V</span>
+                    <span class="gr2 gc1 opt-label">Δ t</span>
+                    <span class="gr3 gc1 opt-label">horizontal divs count</span>
+                    <span class="gr4 gc1 opt-label">vertical divs count</span>
+                    <div class="gr1 gc2">
+                        <input id="opt_os_dv" class="opt-value-edit"></input>
+                        <span class="unit">V</span>
+                    </div>
+                    <div class="gr2 gc2">
+                        <input id="opt_os_dt" class="opt-value-edit"></input>
+                        <span class="unit">ms</span>
+                    </div>
+                    <input id="opt_os_hdiv" class="gr3 gc2 opt-value-edit"></input>
+                    <input id="opt_os_vdiv" class="gr4 gc2 opt-value-edit"></input>
+                </div>
+
                 <!-- display -->
                 <div id="opts_os_disp" class="gr1 gc2 opts-pane hidden">
                     <span class="gr1 gc1 opt-label">screen right border width</span>
@@ -116,71 +137,73 @@
                     <input id="opt_os_clientHeightBorder" class="gr2 gc2 opt-value-edit"></input>
                     <input id="opt_os_menuContainerWidth" class="gr3 gc2 opt-value-edit"></input>
                 </div>
+
             </div>
         </div>
+    </div>
 
-        <!-- channels pannels -->
+    <!-- channels pannels -->
 
-        <div id="top-panes"></div>
+    <div id="top-panes"></div>
 
-        <!-- oscilloscope datas -->
+    <!-- oscilloscope datas -->
 
-        <div id="bottom-pane" class="row-pane">
-            <span class="label">scTime</span>
-            <span id="stime" class="value short-value"></span>
-            <span class="value">ms</span>
+    <div id="bottom-pane" class="row-pane">
+        <span class="label">scTime</span>
+        <span id="stime" class="value short-value"></span>
+        <span class="value">ms</span>
 
-            <span class="label">scRt</span>
-            <span id="sfrq" class="value"></span>
-            <span class="value">Fps</span>
+        <span class="label">scRt</span>
+        <span id="sfrq" class="value"></span>
+        <span class="value">Fps</span>
 
-            <span class="label">sp/s</span>
-            <span id="echps" class="value"></span>
+        <span class="label">sp/s</span>
+        <span id="echps" class="value"></span>
 
-            <span class="label">buffer size</span>
-            <span id="buffsz" class="value"></span>
-        </div>
+        <span class="label">buffer size</span>
+        <span id="buffsz" class="value"></span>
+    </div>
 
-        <!-- html models -->
+    <!-- html models -->
 
-        <div id="channel-pane" class="top-pane row-pane hidden">
-            <span id="channel-label" class="label channel-label">CH1</span>
+    <div id="channel-pane" class="top-pane row-pane hidden">
+        <span id="channel-label" class="label channel-label">CH1</span>
 
-            <span class="label">source</span>
-            <span id="csid_" class="value maxlong-value"></span>
+        <span class="label">source</span>
+        <span id="csid_" class="value maxlong-value"></span>
 
-            <span class="label">X x</span>
-            <span id="xscale_" class="value short-value"></span>
+        <span class="label">X x</span>
+        <span id="xscale_" class="value short-value"></span>
 
-            <span class="label">Y x</span>
-            <span id="yscale_" class="value short-value"></span>
+        <span class="label">Y x</span>
+        <span id="yscale_" class="value short-value"></span>
 
-            <!--
+        <!--
             <span class="label">value</span>
             <span id="ival_" class="value"></span>
             -->
 
-            <span class="label">v</span>
-            <span id="iv_" class="value long-value"></span>
-            <span class="unit">V</span>
+        <span class="label">v</span>
+        <span id="iv_" class="value long-value"></span>
+        <span class="unit">V</span>
 
-            <span class="label">vMin</span>
-            <span id="vmin_" class="value long-value"></span>
-            <span class="unit">V</span>
+        <span class="label">vMin</span>
+        <span id="vmin_" class="value long-value"></span>
+        <span class="unit">V</span>
 
-            <span class="label">vMax</span>
-            <span id="vmax_" class="value long-value"></span>
-            <span class="unit">V</span>
+        <span class="label">vMax</span>
+        <span id="vmax_" class="value long-value"></span>
+        <span class="unit">V</span>
 
-            <span class="label">vAvg</span>
-            <span id="vavg_" class="value long-value"></span>
-            <span class="unit">V</span>
+        <span class="label">vAvg</span>
+        <span id="vavg_" class="value long-value"></span>
+        <span class="unit">V</span>
 
-            <span class="label">frq</span>
-            <span id="frq_" class="value long-value"></span>
-            <span class="unit">Hz</span>
+        <span class="label">frq</span>
+        <span id="frq_" class="value long-value"></span>
+        <span class="unit">Hz</span>
 
-            <!--
+        <!--
             <span class="label">frqMin</span>
             <span id="frqmin_" class="value long-value"></span>
             <span class="unit">Hz</span>
@@ -190,11 +213,11 @@
             <span class="unit">Hz</span>
             -->
 
-            <button type="button" class="btn-ch btn-bluegreen left-margin" id="btn_pause_">▶</button>
-            <button type="button" class="btn-ch btn-blue" id="btn_chsett_">⚙</button>
-            <button type="button" class="btn-ch btn-red" id="btn_closech_">X</button>
+        <button type="button" class="btn-ch btn-bluegreen left-margin" id="btn_pause_">▶</button>
+        <button type="button" class="btn-ch btn-blue" id="btn_chsett_">⚙</button>
+        <button type="button" class="btn-ch btn-red" id="btn_closech_">X</button>
 
-        </div>
+    </div>
 
     </div>
 
