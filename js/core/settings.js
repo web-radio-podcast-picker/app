@@ -8,6 +8,7 @@ window.settings = {
 
     audioInput: {
         vScale: 5,  // volt scale (256 digital value corresponding volts) for audio input
+        channelsCount: 1, // number of audio input channels
     },
 
     oscilloscope: {

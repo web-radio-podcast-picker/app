@@ -195,6 +195,7 @@ div.opts-pane > span.unit {
     text-align: right;
     margin: 1em;
     margin-top: 0px;
+    padding: 4px;
 }
 
 .opt-value-edit:focus-visible {
@@ -283,7 +284,7 @@ div.popup-grid > span.menu-item {
 }
 
 .read-only {
-    background-color: #0000FFAA !important;
+    background-color: #00008BAA !important;
 }
 
 .no-pointer {
@@ -346,7 +347,7 @@ div.popup-grid > span.menu-item {
 }*/
 
 #pop_settings {
-    min-width: 500px;
+    min-width: 512px;
 }
 
 #top-right-menu-body {

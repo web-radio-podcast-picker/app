@@ -101,6 +101,25 @@ ui = {
             'opt_os_smpfrqcy',
             'oscilloscope.audioContext.sampleRate',
             null, null, true);
+        this.bind(
+            'opt_os_inputChannelsCount',
+            'settings.audioInput.channelsCount',
+            null, null, true);
+        this.bind(
+            'opt_os_inputVscale',
+            'settings.audioInput.vScale',
+            null, null);
+
+        // output
+        this.bind(
+            'opt_os_outputChannelsCount',
+            'oscilloscope.audioContext.destination.maxChannelCount',
+            null, null, true);
+
+        this.bind(
+            'opt_os_channelInterpretation',
+            'oscilloscope.audioContext.destination.channelInterpretation',
+            null, null, true);
     },
 
     bind(controlId, valuePath, sym, onChanged, readOnly) {
