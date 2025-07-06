@@ -17,23 +17,25 @@ class SignalView {
         ui.setupCanvasSize(this.canvas);
         const canvasHeight = this.canvas.height;
         const canvasWidth = this.canvas.width;
-        const drawContext = this.canvas.getContext('2d');
-
-        var x = -1;
-        var y = -1;
-
         const dataArray = this.channel.measures.dataArray;
 
-        if (dataArray != null)
+        if (dataArray != null) {
+
+            var x = -1;
+            var y = -1;
+            const drawContext = this.canvas.getContext('2d');
+
+            const signalRange = settings.audioInput.vScale;
+            const displayRange = settings.oscilloscope.vPerDiv * 5.0;        // 10/2 ?
+
             for (var i = 0; i < dataArray.length; i += 1) {
                 var value = dataArray[i];
-                value = float32ToByteRange(this.channel, value);
-
-                // adjust y position (y multiplier, y position shift)
-                var relval = (128 - value) * this.channel.yScale;
-
-                var percent = relval / 128;
+                value = valueToVolt(this.channel, value);
+                // adjust y position (y multiplier, y position shift, v scale)                
+                var percent = -value / signalRange;
+                percent *= signalRange / displayRange; // adjust to display range
                 var height = canvasHeight * percent / 2.0;
+                height *= this.channel.yScale;
                 var offset = canvasHeight / 2 + height;
                 offset += this.channel.yOffset;
 
@@ -55,6 +57,7 @@ class SignalView {
                 x = nx;
                 y = ny;
             }
+        }
     }
 
 }
