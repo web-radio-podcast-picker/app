@@ -6,6 +6,7 @@ ui = {
     uiInitialized: false,   // indicates if ui is already globally initialized
     popupId: null,          // any id of an html popupId currently opened/showed
     popupCtrlId: null,      // popup control placement if any else null
+    bindings: [], // array of bindings for controls
 
     init(oscilloscope) {
         this.oscilloscope = oscilloscope;
@@ -144,6 +145,16 @@ ui = {
             null, null);
     },
 
+    initBindedControls() {
+        // Initialize bindings for UI controls
+        this.bindings.forEach(b => {
+            if (b.init != null) {
+                b.init();
+            }
+        });
+        app.updateDisplay();
+    },
+
     bind(controlId, valuePath, sym, onChanged, readOnly) {
         if (readOnly == null)
             readOnly = false;
@@ -154,11 +165,16 @@ ui = {
             $c.attr('readonly', '');
         }
 
-        app.addOnStartUI(() => {
+        const fn = () => {
             $c.attr('value', eval(valuePath));
+        };
+        app.addOnStartUI(() => {
+            fn();
         });
+        this.bindings.push({ init: fn });
 
-        if (!readOnly)
+        if (!readOnly) {
+            const t = this;
             $c.on('change', () => {
                 if (settings.debug.trace)
                     console.trace('value changed: ' + controlId);
@@ -169,7 +185,9 @@ ui = {
                     onChanged();
                 else
                     eval(valuePath + '=' + sym + $v + sym);
+                this.initBindedControls();
             });
+        }
     },
 
     initTabs(...tabs) {
@@ -232,8 +250,10 @@ ui = {
     toggleMenu() {
         const $mb = $('#top-right-menu-body');
         $mb.toggleClass('hidden');
-        $('#btn_menu').text($mb.hasClass('hidden') ?
-            '▼' : '▲');
+        const visible = !$mb.hasClass('hidden');
+        $('#btn_menu').text(visible ? '▼' : '▲');
+        if (visible)
+            this.initBindedControls();
 
         if (this.popupId != null) {
             const p = this.popupId;
@@ -259,6 +279,7 @@ ui = {
             if (!visible) {
                 this.popupId = popupId;
                 this.popupCtrlId = control;
+                this.initBindedControls();
             }
         } else {
             if (!showState)
@@ -267,6 +288,7 @@ ui = {
                 $popup.removeClass('hidden');
                 this.popupId = popupId;
                 this.popupCtrlId = control;
+                this.initBindedControls();
             }
         }
         if (this.popupId != null) {

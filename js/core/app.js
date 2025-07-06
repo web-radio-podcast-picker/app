@@ -17,6 +17,7 @@ app = {
 
     endFramePermanentOperations: [], // end frame operations (always)
     endFrameOneShotOperations: [],   // end frame operations (single shot)
+    startFrameOneShotOperations: [],     // start frame operations (single shot)
 
     // operations
 
@@ -60,6 +61,13 @@ app = {
             f();
         }
         // Setup a timer to visualize some stuff.
+        this.requestAnimationFrame();
+    },
+
+    updateDisplay() {
+        this.startFrameOneShotOperations.push(() => {
+            this.gridView.enableViewUpdate();
+        });
         this.requestAnimationFrame();
     },
 

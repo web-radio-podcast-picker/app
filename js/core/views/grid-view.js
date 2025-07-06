@@ -10,6 +10,10 @@ class GridView {
         ui.setupCanvasSize(this.canvas);
     }
 
+    enableViewUpdate() {
+        this.drawn = false; // reset drawn flag
+    }
+
     run() {
 
         const updated = ui.setupCanvasSize(this.canvas);
@@ -19,6 +23,7 @@ class GridView {
             const canvasHeight = this.canvas.height;
             const canvasWidth = this.canvas.width;
             const dc = this.canvas.getContext('2d');
+            dc.clearRect(0, 0, canvasWidth, canvasHeight);
 
             const vDivCount = settings.oscilloscope.grid.vDivCount;
             const divw = canvasWidth / settings.oscilloscope.grid.hDivCount;

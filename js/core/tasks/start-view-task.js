@@ -25,5 +25,10 @@ startViewTask = {
         const canvasHeight = this.canvas.height;
         const canvasWidth = this.canvas.width;
         drawContext.clearRect(0, 0, canvasWidth, canvasHeight);
+
+        app.startFrameOneShotOperations.forEach(fn => {
+            fn();
+        });
+        app.startFrameOneShotOperations.length = 0;
     }
 }
