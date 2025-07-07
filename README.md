@@ -10,6 +10,8 @@ main purposes:
 - apply effects on signals (reverb,echo,filter,...)
 - maths (combinate signal together)
 - multi channels
+- audio channel input
+- line out
 - high quality rendering
 
 project status: on going
