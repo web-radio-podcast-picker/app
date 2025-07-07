@@ -12,7 +12,6 @@ main purposes:
 - multi channels
 - audio channel input
 - line out
-- high quality rendering
 
 project status: on going
 
