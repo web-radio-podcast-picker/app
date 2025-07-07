@@ -1,17 +1,18 @@
-# soundcard oscilloscope signal analyzer generator
+# oscilloscope + signal analyzer + generator
 
-a javascript application running a soundcard signal oscilloscope and generator
-and analyzing capabilities (fft,math) in the browser
+A javascript application running in the browser
 
 main purposes:
 
-- oscilloscope
-- sound analysis (fft,...)
+- oscilloscope (time,frequency,cursor,markers,lissajous,...)
+- sound analysis (FFT, frequency, min/max/average, ...)
 - signal generator (wave,square,...)
-- maths
-- multichannels
+- apply effects on signals (reverb,echo,filter,...)
+- maths (combinate signal together)
+- multi channels
 - high quality rendering
 
 project status: on going
 
 ![screenshot](doc/screenshot-0.1.png)
+v 0.1
