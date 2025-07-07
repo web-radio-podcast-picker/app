@@ -13,7 +13,7 @@ window.settings = {
 
     oscilloscope: {
         vPerDiv: 0.5,           // volts per division
-        tPerDiv: 40,            // time per division in milliseconds
+        tPerDiv: 1,             // time per division in milliseconds
         channels: {
             // channels colors
             colors: [

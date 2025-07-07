@@ -28,7 +28,9 @@ class GridView {
             const vDivCount = settings.oscilloscope.grid.vDivCount;
             const divw = canvasWidth / settings.oscilloscope.grid.hDivCount;
             const divh = canvasHeight / vDivCount;
-            const timePerDiv = oscilloscope.getTimePerDiv(divw);
+
+            const timePerDiv = settings.oscilloscope.tPerDiv;
+
             const vPerDiv = settings.oscilloscope.vPerDiv;
             const cratio = vDivCount / 10.0;
             const vdelta = vPerDiv / cratio;
@@ -48,7 +50,7 @@ class GridView {
                         this.drawUnit(dc,
                             x, y
                         + settings.oscilloscope.grid.units.timeUnityRel,
-                            tround(dx * timePerDiv * 1000) + 'ms');
+                            tround(dx * timePerDiv) + 'ms');
                     }
 
                     v -= vdelta;

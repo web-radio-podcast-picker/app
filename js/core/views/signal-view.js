@@ -28,6 +28,10 @@ class SignalView {
             const signalRange = settings.audioInput.vScale;
             const displayRange = settings.oscilloscope.vPerDiv * 5.0;        // 10/2 ?
 
+            const timePerDiv = settings.oscilloscope.tPerDiv;
+            // full buffer view : scale 1ms/div
+            const barWidth = canvasWidth / dataArray.length / timePerDiv;
+
             for (var i = 0; i < dataArray.length; i += 1) {
                 var value = dataArray[i];
                 value = valueToVolt(this.channel, value);
@@ -38,8 +42,6 @@ class SignalView {
                 height *= this.channel.yScale;
                 var offset = canvasHeight / 2 + height;
                 offset += this.channel.yOffset;
-
-                var barWidth = canvasWidth / dataArray.length;      // full buffer view
 
                 var nx = i * barWidth;
                 var ny = offset;
