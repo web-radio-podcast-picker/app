@@ -1,4 +1,4 @@
-# soundcard signal analyzer generator
+# soundcard oscilloscope signal analyzer generator
 
 a javascript application running a soundcard signal oscilloscope and generator
 and analyzing capabilities (fft,math) in the browser
