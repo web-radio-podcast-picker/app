@@ -58,6 +58,8 @@ ui = {
             if (oscilloscope.pause)
                 app.requestAnimationFrame();
         });
+        // properties
+        $('input').attr('autocomplete', 'off');
         // menus & popups
         this.init_right_menu();
         this.init_popups();
