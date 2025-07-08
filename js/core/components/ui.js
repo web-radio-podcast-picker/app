@@ -330,7 +330,7 @@ ui = {
 
     addControls(channel) {
         var $model = $('#channel_pane').clone();
-        //$model.removeClass('hidden');
+        $model.removeClass('hidden');
         const id = channel.channelId;
         $model.attr('id', 'channel_pane_' + id);
         const colors = settings.oscilloscope.channels.colors;
@@ -358,7 +358,7 @@ ui = {
         $channelShortcut.css('grid-column', id);
         const toggleControls = () => {
             $('#channel_pane_' + id).toggleClass('hidden');
-            $('#s_channel_label_' + id).toggleClass('hidden');
+            //$('#s_channel_label_' + id).toggleClass('hidden');
         }
         $channelShortcut.on('click', () => {
             toggleControls();
