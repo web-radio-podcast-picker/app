@@ -83,9 +83,35 @@ button {
 }
 
 .channel-label {
-    color: black;
-    font-weight: bold;
+    color: #444444 !important;;
+    /*font-weight: bold;*/
     padding: 4px;
+}
+
+.channel-label:hover {
+    opacity: 0.8;
+    color: black !important;
+    cursor: pointer;
+}
+
+#channels-deck {
+    position: absolute;
+    width: calc(100% - 120px);
+}
+
+#channels_shortcuts_deck {
+    display: flex;
+    flex-wrap: wrap;
+    grid-auto-columns: min-content;
+}
+
+#channels_shortcuts_deck > span.channel-label {
+    margin-bottom: 0.5em;
+}
+
+#channels_infos_deck {
+    display: grid;
+    grid-template-rows: min-content;
 }
 
 #top-right-menu {
@@ -355,12 +381,12 @@ div.popup-grid > span.menu-item {
     padding: 0px;
 }
 
-#top-panes {
+/*#top-panes {
     display: block;
     position: absolute;
     top: 0px;
     left: 0px;
-}
+}*/
 
 .top-pane,#bottom-pane {
     line-height: 1.5em;

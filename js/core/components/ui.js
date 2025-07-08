@@ -329,17 +329,18 @@ ui = {
     },
 
     addControls(channel) {
-        var $model = $('#channel-pane').clone();
-        $model.removeClass('hidden');
+        var $model = $('#channel_pane').clone();
+        //$model.removeClass('hidden');
         const id = channel.channelId;
-        $model.attr('id', 'channel-pane_' + id);
+        $model.attr('id', 'channel_pane_' + id);
         const colors = settings.oscilloscope.channels.colors;
         const colLength = colors.length;
         const colIndex = (id - 1) % colLength;
         const col = colors[colIndex];
         $model.css('color', col);
         channel.color = col;
-        $model.find('#channel-label').text('CH' + channel.channelId);
+        $channelLabel = $model.find('#channel_label');
+        $channelLabel.text('CH' + id);
         var $elems = $model.find('*');
         $.each($elems, (i, e) => {
             var $e = $(e);
@@ -351,13 +352,29 @@ ui = {
                 $e.css('background-color', col);
             }
         });
-        $('#top-panes').append($model);
+        $('#channels_infos_deck').append($model);
+        $channelShortcut = $channelLabel.clone();
+        $channelShortcut.attr('id', 's_' + $channelLabel.attr('id') + '_' + id);
+        $channelShortcut.css('grid-column', id);
+        const toggleControls = () => {
+            $('#channel_pane_' + id).toggleClass('hidden');
+            $('#s_channel_label_' + id).toggleClass('hidden');
+        }
+        $channelShortcut.on('click', () => {
+            toggleControls();
+        });
+        $channelLabel.on('click', () => {
+            toggleControls();
+        });
+
+        $('#channels_shortcuts_deck').append($channelShortcut);
     },
 
     removeControls(channel) {
         // remove the controls of a channel
-        var $ctlr = $('#channel-pane_' + channel.channelId);
-        $ctlr.remove();
+        const id = channel.channelId;
+        $('#channel_pane_' + id).remove();
+        $('#s_channel_label_' + id).remove();
     },
 
     editChannelSettings(channel) {

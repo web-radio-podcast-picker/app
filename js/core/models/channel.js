@@ -19,14 +19,14 @@ class Channel {
     measures = null;            // signal measures data
     measuresView = null;        // signal measures view
 
-    color = 'cyan';             // color for channel 1
-    lineWidth = 1;              // line width for channel 1
+    color = 'cyan';             // color for channel
+    lineWidth = 1;              // line width for channel
 
     vScale = 1;                 // volt scale (256 digital value corresponding volts)
     yScale = 1;                 // multiplier for Y-axis scaling
     xScale = 1;                 // multiplier for X-axis scaling
-    yOffset = 0;                // Y-axis offset for channel 1
-    xOffset = 0;                // X-axis offset for channel 1
+    yOffset = 0;                // Y-axis offset for channel
+    xOffset = 0;                // X-axis offset for channel
 
     error = null;               // error message if any
 
