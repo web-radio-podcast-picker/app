@@ -84,7 +84,6 @@ button {
 
 .channel-label {
     color: #444444 !important;;
-    /*font-weight: bold;*/
     padding: 4px;
 }
 
@@ -99,10 +98,16 @@ button {
     width: calc(100% - 120px);
 }
 
+.channel-pane {
+    margin-left: 2.7em;
+}
+
 #channels_shortcuts_deck {
     display: flex;
     flex-wrap: wrap;
     grid-auto-columns: min-content;
+    padding-left: 3em;
+    padding-top: 0.5em;
 }
 
 #channels_shortcuts_deck > span.channel-label {
@@ -143,7 +148,6 @@ div.opts-grid > div.popup-grid {
 .popup-title {
     position: relative;
     top: -1.35em;
-    /*top: -3.05em;*/
     margin-bottom: -1em;
     opacity: 0.9;
     left: 1.5em;
@@ -173,7 +177,6 @@ div.opts-pane > span.unit {
 .popup-icon {
     position: relative;
     top: -0.5em;
-    /*top: -1.4em;*/
     font-size: 2em;
     left: -0.25em;
     margin-bottom: -0.75em;
@@ -185,11 +188,6 @@ div.opts-pane > span.unit {
     display: grid;
     grid-template-columns: min-content;
     padding-top:0.5em;
-    /*
-    position: relative;
-    top: -2em;
-    margin-bottom: -2em;
-    */
 }
 
 .opts-pane {
@@ -263,6 +261,24 @@ div.popup-grid > span.menu-item {
 .gr4 {
     grid-row: 4;
 }
+.gr5 {
+    grid-row: 5;
+}
+.gr6 {
+    grid-row: 6;
+}
+.gr7 {
+    grid-row: 7;
+}
+.gr8 {
+    grid-row: 8;
+}
+.gr9 {
+    grid-row: 9;
+}
+.gr10 {
+    grid-row: 10;
+}
 
 .menu-item {
     display: inline-block;
@@ -281,7 +297,6 @@ div.popup-grid > span.menu-item {
 .menu-item-blue, .btn-blue {
     color: yellow;
     background-color: blue;
-    /*border: skyblue solid 1px;*/
 }
 
 .menu-item-blue:hover,
@@ -295,7 +310,6 @@ div.popup-grid > span.menu-item {
 .menu-item-darkblue,
 .menu-item-bluegreen,
 .menu-item-red {
-    /*border-color: black !important;*/
     border: none !important;
 }
 
@@ -339,7 +353,6 @@ div.popup-grid > span.menu-item {
 .menu-item-bluegreen,.btn-bluegreen {
     color: lightblue;
     background-color: rgb(0, 90, 97);
-    /*border: skyblue solid 1px;*/
 }
 
 .menu-item-bluegreen:hover,.btn-bluegreen:hover {
@@ -350,7 +363,6 @@ div.popup-grid > span.menu-item {
 .menu-item-red,.btn-red {
     color: orange;
     background-color: rgb(110, 75, 93);
-    /*border: skyblue solid 1px;    */
 }
 
 .btn-red {
@@ -369,9 +381,6 @@ div.popup-grid > span.menu-item {
     cursor: default;
 }
 
-/*#btn_menu {
-}*/
-
 #pop_settings {
     min-width: 512px;
 }
@@ -380,13 +389,6 @@ div.popup-grid > span.menu-item {
     width: 96px;
     padding: 0px;
 }
-
-/*#top-panes {
-    display: block;
-    position: absolute;
-    top: 0px;
-    left: 0px;
-}*/
 
 .top-pane,#bottom-pane {
     line-height: 1.5em;
