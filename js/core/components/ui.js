@@ -359,7 +359,8 @@ ui = {
         const col = colors[colIndex];
         $model.css('color', col);
         channel.color = col;
-        $channelLabel = $model.find('#channel_label');
+        $channelLabel = $model.find('#channel_label_');
+        $channelLabel.attr('id', $channelLabel.attr('id') + id);
         $channelLabel.text('CH' + id);
         const $elems = $model.find('*');
         const $unit = $model.find('.unit');
@@ -376,7 +377,7 @@ ui = {
         });
         $('#channels_infos_deck').append($model);
         $channelShortcut = $channelLabel.clone();
-        $channelShortcut.attr('id', 's_' + $channelLabel.attr('id') + '_' + id);
+        $channelShortcut.attr('id', 's_' + $channelLabel.attr('id'));
         $channelShortcut.css('grid-column', id);
         const toggleControls = () => {
             $('#channel_pane_' + id).toggleClass('hidden');

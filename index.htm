@@ -170,41 +170,36 @@
     <!-- html models -->
 
     <div id="channel_pane" class="channel-pane top-pane row-pane hidden">
-        <span id="channel_label" class="label channel-label">CH1</span>
+        <span id="channel_label_" class="gr1 gc1 label channel-label">CH1</span>
 
-        <span class="label">source</span>
-        <span id="csid_" class="value maxlong-value"></span>
+        <span class="gr1 gc2 label">source</span>
+        <span id="csid_" class="gr1 gc3 value maxlong-value"></span>
 
-        <span class="label">Δt</span>
-        <span id="xscale_" class="value short-value"></span>
+        <span class="gr1 gc4 label">Δt</span>
+        <span id="xscale_" class="gr1 gc5 value short-value"></span>
 
-        <span class="label">ΔV</span>
-        <span id="yscale_" class="value short-value"></span>
+        <span class="gr1 gc6 label">ΔV</span>
+        <span id="yscale_" class="gr1 gc7 value short-value"></span>
 
-        <!--
-            <span class="label">value</span>
-            <span id="ival_" class="value"></span>
-            -->
+        <span class="gr1 gc8 label">vIns</span>
+        <span id="iv_" class="gr1 gc9 value long-value"></span>
+        <span class="gr1 gc10 unit">V</span>
 
-        <span class="label">v</span>
-        <span id="iv_" class="value long-value"></span>
-        <span class="unit">V</span>
+        <span class="gr2 gc8 label">vMin</span>
+        <span id="vmin_" class="gr2 gc9 value long-value"></span>
+        <span class="gr2 gc10 unit">V</span>
 
-        <span class="label">vMin</span>
-        <span id="vmin_" class="value long-value"></span>
-        <span class="unit">V</span>
+        <span class="gr3 gc8 label">vMax</span>
+        <span id="vmax_" class="gr3 gc9 value long-value"></span>
+        <span class="gr3 gc10 unit">V</span>
 
-        <span class="label">vMax</span>
-        <span id="vmax_" class="value long-value"></span>
-        <span class="unit">V</span>
+        <span class="gr4 gc8 label">vAvg</span>
+        <span id="vavg_" class="gr4 gc9 value long-value"></span>
+        <span class="gr4 gc10 unit">V</span>
 
-        <span class="label">vAvg</span>
-        <span id="vavg_" class="value long-value"></span>
-        <span class="unit">V</span>
-
-        <span class="label">frq</span>
-        <span id="frq_" class="value long-value"></span>
-        <span class="unit">Hz</span>
+        <span class="gr1 gc11 label">frq</span>
+        <span id="frq_" class="gr1 gc12 value long-value"></span>
+        <span class="gr1 gc13 unit">Hz</span>
 
         <!--
             <span class="label">frqMin</span>
@@ -216,10 +211,12 @@
             <span class="unit">Hz</span>
             -->
 
-        <button type="button" class="btn-ch btn-bluegreen left-margin" id="btn_pause_">▶</button>
-        <button type="button" class="btn-ch btn-bluegreen" id="btn_viewch_">⌾</button>
-        <button type="button" class="btn-ch btn-blue" id="btn_chsett_">⚙</button>
-        <button type="button" class="btn-ch btn-red" id="btn_closech_">✕</button>
+        <div class="gr1 gc14 flex">
+            <button type="button" class="btn-ch btn-bluegreen left-margin" id="btn_pause_">▶</button>
+            <button type="button" class="btn-ch btn-bluegreen dleft-margin" id="btn_viewch_">⌾</button>
+            <button type="button" class="btn-ch btn-blue dleft-margin" id="btn_chsett_">⚙</button>
+            <button type="button" class="btn-ch btn-red dleft-margin" id="btn_closech_">✕</button>
+        </div>
 
     </div>
 
