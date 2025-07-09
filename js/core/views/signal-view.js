@@ -4,6 +4,7 @@ class SignalView {
 
     canvas = null;           // canvas for visualization
     pause = false;           // pause flag for visualization
+    visible = true;          // visible flag for visualization
     hidden = false;          // hidden for vizualisation
     channel = null;          // channel
 
@@ -13,6 +14,8 @@ class SignalView {
     }
 
     run() {
+
+        if (!this.visible) return;
 
         ui.setupCanvasSize(this.canvas);
         const canvasHeight = this.canvas.height;

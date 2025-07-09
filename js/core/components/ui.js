@@ -50,6 +50,14 @@ ui = {
         $('#btn_chsett_' + channel).on('click', () => {
             this.editChannelSettings(channel);
         });
+
+        // visible
+        const $vb = $('#btn_viewch_' + channel);
+        $vb.on('click', () => {
+            $vb.toggleClass('line-through');
+            sigView.visible = !sigView.visible;
+            app.requestAnimationFrame();
+        });
     },
 
     init_ui() {

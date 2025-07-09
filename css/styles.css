@@ -46,6 +46,10 @@ button {
     height: 2.5em;
 }
 
+.line-through {
+    text-decoration: line-through;
+}
+
 .left-margin { 
     margin-left: 1em;
 }
