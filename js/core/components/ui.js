@@ -78,6 +78,8 @@ ui = {
     init_popup_settings() {
 
         const refresh = () => app.requestAnimationFrame();
+        const refreshOnUpdate = { onChange: refresh };
+        const readOnly = { readOnly: true };
 
         // groups
         this.initTabs(
@@ -87,64 +89,59 @@ ui = {
             'btn_os_out');
 
         // display
-        this.bind(
+        this.bind(this.binding(
             'opt_os_clientWidthBorder',
             'settings.ui.clientWidthBorder',
-            null, refresh);
-        this.bind(
+            refreshOnUpdate));
+        this.bind(this.binding(
             'opt_os_clientHeightBorder',
             'settings.ui.clientHeightBorder',
-            null, refresh);
-        this.bind(
+            refreshOnUpdate));
+        this.bind(this.binding(
             'opt_os_menuContainerWidth',
             'settings.ui.menuContainerWidth',
-            null, refresh);
+            refreshOnUpdate));
 
         // input
-        this.bind(
+        this.bind(this.binding(
             'opt_os_smpfrqcy',
             'app.audioInputChannel.streamSource.context.sampleRate',
-            null, null, true);
-        this.bind(
+            { readOnly: true }));
+        this.bind(this.binding(
             'opt_os_inputChannelsCount',
             'settings.audioInput.channelsCount',
-            null, null, true);
-        this.bind(
+            { readOnly: true }));
+        this.bind(this.binding(
             'opt_os_frequencyBinCount',
             'app.audioInputChannel.analyzer.frequencyBinCount',
-            null, null, true);
-        this.bind(
+            { readOnly: true }));
+        this.bind(this.binding(
             'opt_os_inputVscale',
-            'settings.audioInput.vScale',
-            null, null);
+            'settings.audioInput.vScale'));
 
         // output
-        this.bind(
+        this.bind(this.binding(
             'opt_os_outputChannelsCount',
             'oscilloscope.audioContext.destination.maxChannelCount',
-            null, null, true);
-        this.bind(
+            readOnly));
+        this.bind(this.binding(
             'opt_os_channelInterpretation',
             'oscilloscope.audioContext.destination.channelInterpretation',
-            null, null, true);
+            readOnly));
 
         // grid
-        this.bind(
+        this.bind(this.binding(
             'opt_os_dv',
-            'settings.oscilloscope.vPerDiv',
-            null, null);
-        this.bind(
+            'settings.oscilloscope.vPerDiv'));
+        this.bind(this.binding(
             'opt_os_dt',
-            'settings.oscilloscope.tPerDiv',
-            null, null);
-        this.bind(
+            'settings.oscilloscope.tPerDiv'));
+        this.bind(this.binding(
             'opt_os_hdiv',
-            'settings.oscilloscope.grid.hDivCount',
-            null, null);
-        this.bind(
+            'settings.oscilloscope.grid.hDivCount'));
+        this.bind(this.binding(
             'opt_os_vdiv',
-            'settings.oscilloscope.grid.vDivCount',
-            null, null);
+            'settings.oscilloscope.grid.vDivCount'));
     },
 
     initBindedControls() {
@@ -157,7 +154,20 @@ ui = {
         app.updateDisplay();
     },
 
-    bind(controlId, valuePath, sym, onChanged, readOnly) {
+    binding(controlId, valuePath, t) {
+        const r = {
+            controlId: controlId,
+            valuePath: valuePath,
+            sym: null,
+            onChanged: null,
+            readOnly: false,
+            unit: ''
+        };
+        return t == null ? r : { ...r, ...t };
+    },
+
+    bind(binding) {
+        const { controlId, valuePath, sym, onChanged, readOnly, unit } = binding;
         if (readOnly == null)
             readOnly = false;
         const $c = $('#' + controlId);
@@ -168,7 +178,7 @@ ui = {
         }
 
         const fn = () => {
-            $c.attr('value', eval(valuePath));
+            $c.attr('value', eval(valuePath) + unit);
         };
         app.addOnStartUI(() => {
             fn();
@@ -181,12 +191,12 @@ ui = {
                 if (settings.debug.trace)
                     console.trace('value changed: ' + controlId);
                 const $v = $c[0].value;
-                if (sym == null)
-                    sym = '';
+                const s = (sym == null)
+                    ? '' : sym;
                 if (onChanged != null)
                     onChanged();
                 else
-                    eval(valuePath + '=' + sym + $v + sym);
+                    eval(valuePath + '=' + s + $v + s);
                 this.initBindedControls();
             });
         }
@@ -331,7 +341,7 @@ ui = {
     },
 
     addControls(channel) {
-        var $model = $('#channel_pane').clone();
+        const $model = $('#channel_pane').clone();
         $model.removeClass('hidden');
         const id = channel.channelId;
         $model.attr('id', 'channel_pane_' + id);
@@ -343,7 +353,9 @@ ui = {
         channel.color = col;
         $channelLabel = $model.find('#channel_label');
         $channelLabel.text('CH' + id);
-        var $elems = $model.find('*');
+        const $elems = $model.find('*');
+        const $unit = $model.find('.unit');
+        $unit.css('color', col);
         $.each($elems, (i, e) => {
             var $e = $(e);
             var eid = $e.attr('id');
@@ -372,7 +384,7 @@ ui = {
     },
 
     removeControls(channel) {
-        // remove the controls of a channel
+        // remove the controls for a channel
         const id = channel.channelId;
         $('#channel_pane_' + id).remove();
         $('#s_channel_label_' + id).remove();

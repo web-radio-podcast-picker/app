@@ -8,7 +8,7 @@ class OscilloscopeView {
         $('#buffsz').text(getSamplesTask.analyzer.frequencyBinCount);
         $('#echps').text(oscilloscope.smFrq);
         $('#vdiv').text(vround(settings.oscilloscope.vPerDiv) + 'V');
-        $('#tdiv').text(tround(milli(settings.oscilloscope.tPerDiv)) + 'ms');
+        $('#tdiv').text(tround(settings.oscilloscope.tPerDiv) + 'ms');
     }
 
 }

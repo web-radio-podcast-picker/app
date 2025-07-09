@@ -56,8 +56,11 @@ button {
 
 .value {
     display: inline-block;
-    /*border: #444444 solid 1px;*/
     width: 3em;
+}
+
+div#channels_infos_deck > div > span.value {
+    text-align: right;
 }
 
 .short-value {
@@ -365,10 +368,6 @@ div.popup-grid > span.menu-item {
     background-color: rgb(110, 75, 93);
 }
 
-.btn-red {
-    margin-top: -1px;
-}
-
 .menu-item-red:hover,.btn-red:hover {
     background-color: rgb(167, 123, 140);
     color: white;
@@ -430,7 +429,9 @@ div.popup-grid > span.menu-item {
 }
 
 .btn-ch {
-
+    border: none;
+    font-size: 1em;
+    padding: 0px;
 }
 
 #vdiv,#tdiv {
