@@ -93,6 +93,14 @@ div#channels_infos_deck > div > span.value {
     color: yellow;
 }
 
+div.channel-pane > span.unit {
+    margin-left: 0.5em;
+}
+
+div.channel-pane > span.label {
+    margin-right: 0.5em;
+}
+
 .channel-label {
     color: #444444 !important;;
     padding: 4px;
