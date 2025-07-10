@@ -172,8 +172,10 @@ ui = {
             valuePath: valuePath,
             sym: null,
             onChanged: null,
+            onInit: null,
             readOnly: false,
-            unit: ''
+            unit: '',
+            attr: 'value'
         };
         return t == null ? r : { ...r, ...t };
     },
@@ -194,7 +196,7 @@ ui = {
                 if (attr == 'text')
                     $c.text(eval(valuePath) + unit);
                 else
-                    $c.attr('value', eval(valuePath) + unit);
+                    $c.attr(attr, eval(valuePath) + unit);
             }
             else onInit();
         };
