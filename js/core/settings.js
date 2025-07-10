@@ -1,6 +1,10 @@
 // app settings
 window.settings = {
 
+    app: {
+        version: '0.3'
+    },
+
     debug: {
         trace: true,
         info: true
