@@ -480,8 +480,26 @@ div.popup-grid > span.menu-item {
     color: darkgray;
 }
 
-#bottom-pane > span.label {
+#bottom-pane:hover,
+#right_bottom_pane:hover {
+    background-color: unset !important;
+}
+
+#bottom-pane > span.label,
+#right_bottom_pane > span.label {
     color: #444444 !important;
+}
+
+#right_bottom_pane {
+    position: absolute;
+    top: calc(100% - 3em);
+    left: calc(100% - 8em);
+    width: 10em;    
+    color: darkgray;
+}
+
+#right_bottom_pane > span.read-only {
+    background-color: unset !important;
 }
 
 #top-pane-1 {

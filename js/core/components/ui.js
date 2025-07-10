@@ -68,6 +68,10 @@ ui = {
         });
         // properties
         $('input').attr('autocomplete', 'off');
+        this.bind(this.binding(
+            'app_ver',
+            'settings.app.version',
+            { readOnly: true, attr: 'text' }));
         // menus & popups
         this.init_right_menu();
         this.init_popups();
@@ -114,15 +118,15 @@ ui = {
         this.bind(this.binding(
             'opt_os_smpfrqcy',
             'app.audioInputChannel.streamSource.context.sampleRate',
-            { readOnly: true }));
+            readOnly));
         this.bind(this.binding(
             'opt_os_inputChannelsCount',
             'settings.audioInput.channelsCount',
-            { readOnly: true }));
+            readOnly));
         this.bind(this.binding(
             'opt_os_frequencyBinCount',
             'app.audioInputChannel.analyzer.frequencyBinCount',
-            { readOnly: true }));
+            readOnly));
         this.bind(this.binding(
             'opt_os_inputVscale',
             'settings.audioInput.vScale'));
@@ -175,7 +179,7 @@ ui = {
     },
 
     bind(binding) {
-        const { controlId, valuePath, sym, onChanged, readOnly, unit } = binding;
+        const { controlId, valuePath, sym, onChanged, onInit, readOnly, unit, attr } = binding;
         if (readOnly == null)
             readOnly = false;
         const $c = $('#' + controlId);
@@ -186,7 +190,13 @@ ui = {
         }
 
         const fn = () => {
-            $c.attr('value', eval(valuePath) + unit);
+            if (onInit == null) {
+                if (attr == 'text')
+                    $c.text(eval(valuePath) + unit);
+                else
+                    $c.attr('value', eval(valuePath) + unit);
+            }
+            else onInit();
         };
         app.addOnStartUI(() => {
             fn();
