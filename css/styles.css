@@ -58,6 +58,10 @@ button {
     margin-left: 0.5em;
 }
 
+.align-left {
+    text-align:left !important;
+}
+
 .hidden {
     display: none !important;
 }
@@ -122,6 +126,53 @@ div.channel-pane > span.label {
     display: grid;
     grid-auto-columns: min-content;
     align-items: baseline;
+}
+
+.input-widget { 
+    position: absolute;
+    z-index: 40;
+    background-color: #0000CC;
+    border: #FFFF0077 solid 1px;
+    padding: 1em;
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: auto;
+    align-items: stretch;
+}
+
+div.input-widget-value-vpane > input {
+    font-size: 24px;
+    background-color: #000055AA;
+    color: yellow;
+    border: none;
+    padding: 4px;
+    margin: 0px !important;
+    font-size: 18px !important;
+    text-align: left;
+    width: 5em;
+    padding: 0.5em;
+}
+
+.input-widget-buttons-vpane {
+    font-size: 18px !important;
+    display: grid;
+    grid-template-rows: auto;
+    align-items: center;
+}
+
+.input-widget-value-vpane {
+    display: grid;
+    grid-template-rows: auto;
+    align-items: center;
+}
+
+.input-widget-buttons-vpane > button {
+    border: darkblue solid 1px;
+}
+
+.unit-big {
+    font-size: 24px;
+    margin-left: 0.5em;
 }
 
 .flex {
@@ -374,6 +425,16 @@ div.popup-grid > span.menu-item {
     background-color: blue;
 }
 
+.btn-darkblue {
+    color: yellow;
+    background-color: rgb(1, 1, 173);
+}
+
+.btn-darkblue:hover {
+    background-color: rgb(2, 151, 243);
+    color: rgb(255, 255, 255);
+}
+
 .menu-item-blue:hover,
 .menu-item-darkblue:hover,
 .menu-item-bluegreen:hover,
@@ -522,6 +583,11 @@ div.popup-grid > span.menu-item {
     border: none;
     font-size: 1em;
     padding: 0px;
+}
+
+.btn-valid {
+    border: none !important;
+    font-size: 14px !important;
 }
 
 #vdiv,#tdiv {

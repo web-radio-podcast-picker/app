@@ -17,6 +17,7 @@
     <!-- settings -->
     <script src="./js/core/settings.js"></script>
     <!-- kernel loader -->
+    <script src="./js/core/globals.js"></script>
     <script src="./js/core/libs/converters.js"></script>
     <script src="./js/core/components/audio-input-device.js"></script>
     <script src="./js/core/views/oscilloscope-view.js"></script>
@@ -174,11 +175,28 @@
 
     <!-- html models -->
 
+    <!-- input widgets -->
+
+    <div id="input_widget" class="input-widget hidden">
+        <div class="gr1 gc1 input-widget-value-vpane">
+            <div class="gr2 gc1 input-widget-buttons-vpane">
+                <button id="btn_valid_ok" class="gr1 gc1 btn-ch btn-valid btn-red">✕</button>
+                <button id="btn_valid_cancel" class="gr1 gc2 btn-ch btn-valid btn-bluegreen">✔</button>
+            </div>
+        </div>
+        <div class="gr1 gc2 dleft-margin input-widget-buttons-vpane">
+            <button class="gr1 gc1 btn-ch btn-darkblue">+</button>
+            <button class="gr2 gc1 btn-ch btn-darkblue">-</button>
+        </div>
+    </div>
+
+    <!-- channels controls -->
+
     <div id="channel_pane" class="channel-pane top-pane row-pane hidden">
         <span id="channel_label_" class="gr1 gc1 label channel-label">CH1</span>
 
         <span class="gr1 gc2 label">source</span>
-        <span id="csid_" class="gr1 gc3 value maxlong-value"></span>
+        <span id="csid_" class="gr1 gc3 value maxlong-value align-left"></span>
 
         <span class="gr1 gc4 label">Δt</span>
         <span id="xscale_" class="gr1 gc5 value short-value"></span>
@@ -220,8 +238,6 @@
             <button type="button" class="btn-ch btn-blue dleft-margin" id="btn_chsett_">⚙</button>
             <button type="button" class="btn-ch btn-red dleft-margin" id="btn_closech_">✕</button>
         </div>
-
-    </div>
 
     </div>
 

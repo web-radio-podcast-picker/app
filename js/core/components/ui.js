@@ -5,8 +5,9 @@ ui = {
     oscilloscope: null,     // reference to the oscilloscope manager
     uiInitialized: false,   // indicates if ui is already globally initialized
     popupId: null,          // any id of an html popupId currently opened/showed
+    $inputWidget: null,     // input widget if any
     popupCtrlId: null,      // popup control placement if any else null
-    bindings: [], // array of bindings for controls
+    bindings: [],           // array of bindings for controls
 
     init(oscilloscope) {
         this.oscilloscope = oscilloscope;
@@ -73,7 +74,7 @@ ui = {
             'settings.app.version',
             { readOnly: true, attr: 'text' }));
         // menus & popups
-        this.init_right_menu();
+        this.initRightMenu();
         this.init_popups();
     },
 
@@ -83,6 +84,7 @@ ui = {
             this.popupId = null;
             this.control = null;
             this.togglePopup(null, p, false);
+            this.closeInputWidget();
         });
         this.init_popup_settings();
     },
@@ -159,9 +161,8 @@ ui = {
     initBindedControls() {
         // Initialize bindings for UI controls
         this.bindings.forEach(b => {
-            if (b.init != null) {
+            if (b.init != null)
                 b.init();
-            }
         });
         app.updateDisplay();
     },
@@ -175,13 +176,14 @@ ui = {
             onInit: null,
             readOnly: false,
             unit: '',
-            attr: 'value'
+            attr: 'value',
+            digits: 5
         };
         return t == null ? r : { ...r, ...t };
     },
 
     bind(binding) {
-        const { controlId, valuePath, sym, onChanged, onInit, readOnly, unit, attr } = binding;
+        const { controlId, valuePath, sym, onChanged, onInit, readOnly, unit, attr, digits } = binding;
         if (readOnly == null)
             readOnly = false;
         const $c = $('#' + controlId);
@@ -189,24 +191,31 @@ ui = {
         if (readOnly) {
             $c.addClass('read-only');
             $c.attr('readonly', '');
+        } else {
+            // input widget
+            $c.on('click', () => {
+                t.openInputWidget(controlId);
+            });
         }
 
+        const t = this;
         const fn = () => {
+            // initial value
             if (onInit == null) {
                 if (attr == 'text')
                     $c.text(eval(valuePath) + unit);
                 else
                     $c.attr(attr, eval(valuePath) + unit);
             }
-            else onInit();
+            else
+                onInit();
         };
         app.addOnStartUI(() => {
             fn();
         });
-        this.bindings.push({ init: fn });
+        this.bindings.push({ init: fn, props: binding });
 
         if (!readOnly) {
-            const t = this;
             $c.on('change', () => {
                 if (settings.debug.trace)
                     console.trace('value changed: ' + controlId);
@@ -220,6 +229,23 @@ ui = {
                 this.initBindedControls();
             });
         }
+    },
+
+    getBinding(controlId) {
+        var r = null;
+        this.bindings.forEach(b => {
+            if (b.props.controlId == controlId) {
+                r = b;
+            }
+        });
+        return r.props;
+    },
+
+    updateBindingSourceAndTarget(controlId, value) {
+        const b = this.getBinding(controlId);
+        const $c = $('#' + controlId);
+        $c.attr(b.attr, value);
+        eval(b.valuePath + '=' + value);
     },
 
     initTabs(...tabs) {
@@ -253,9 +279,10 @@ ui = {
                 $p.removeClass('hidden');
             }
         });
+        this.closeInputWidget();
     },
 
-    init_right_menu() {
+    initRightMenu() {
         // menu buttons
         $('#btn_menu').on('click', () => {
             this.toggleMenu();
@@ -291,6 +318,7 @@ ui = {
             const p = this.popupId;
             this.popupId = null;
             this.togglePopup(null, p, false);
+            this.closeInputWidget();
         }
     },
 
@@ -358,6 +386,64 @@ ui = {
 
     reflectOscilloPauseState() {
         $('#btn_opause').text(oscilloscope.pause ? '▶' : '⏸');
+    },
+
+    closeInputWidget() {
+        if (this.$inputWidget != null) {
+            this.$inputWidget.remove();
+            this.$inputWidget = null;
+        }
+    },
+
+    openInputWidget(controlId) {
+        this.closeInputWidget();
+        const $c = $('#' + controlId);
+        const $w = $('#input_widget').clone();
+        const $cnt = $w.find('.input-widget-value-vpane');
+        const binding = this.getBinding(controlId);
+
+        const $i = $c.clone();
+        $i.attr('id', null);
+        $i.css('width', binding.digits / 1.5 + 'em');
+        $i.css('grid-column', 1);
+        $i.css('grid-row', 1);
+        var nxCol = 2;
+
+        const $p = $c.parent();
+        const pid = $p.attr('id');
+        const hasUnit = pid == null || !pid.startsWith('opts_');
+        if (hasUnit) {
+            const $u = $c.parent().find('.unit').clone();
+            $u.addClass('unit-big');
+            $u.css('grid-column', nxCol);
+            $u.css('grid-row', 1);
+            nxCol++;
+            $u.attr('id', null);
+            $cnt.prepend($u);
+        }
+        $cnt.prepend($i);
+
+        const $butOk = $w.find('#btn_valid_ok');
+        const $butCancel = $w.find('#btn_valid_cancel');
+        const t = this;
+        $butOk.on('click', () => {
+            t.closeInputWidget();
+        });
+        $butCancel.on('click', () => {
+            t.closeInputWidget();
+        });
+        $butOk.attr('id', null);
+        $butCancel.attr('id', null);
+
+        $('body').append($w);
+        var pos = $c.offset();
+        $w.css('left', pos.left);
+        $w.css('top', pos.top);
+        $w.removeClass('hidden');
+        $i.focus();
+        $i.select();
+
+        this.$inputWidget = $w;
     },
 
     addControls(channel) {

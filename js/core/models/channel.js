@@ -10,7 +10,7 @@ class Channel {
     // channel (CH1, CH2, ...)
     sourceId = null;            // source id of the signal, e.g., 'input', 'file', etc.
 
-    source = null;              // signal source (audioInputDevice, ...)
+    source = null;              // signal source (Source_Id_AudioInput, ...)
     streamSource = null;        // media stream source
     stream = null;              // media stream
     analyzer = null;            // audio analyzer

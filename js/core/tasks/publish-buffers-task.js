@@ -4,7 +4,7 @@ publishBuffersTasks = {
 
     run() {
         oscilloscope.channels.forEach(channel => {
-            if (channel.sourceId == 'audioInputDevice'
+            if (channel.sourceId == Source_Id_AudioInput
                 && !channel.view.pause
                 && !oscilloscope.pause
             )
