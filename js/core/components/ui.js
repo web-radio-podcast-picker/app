@@ -213,22 +213,28 @@ ui = {
         app.addOnStartUI(() => {
             fn();
         });
-        this.bindings.push({ init: fn, props: binding });
+
+        var onChange = () => {
+            if (settings.debug.trace)
+                console.trace('value changed: ' + controlId);
+            const $v = $c[0].value;
+            const s = (sym == null)
+                ? '' : sym;
+            if (onChanged != null)
+                onChanged();
+            else
+                eval(valuePath + '=' + s + $v + s);
+            app.updateDisplay();
+        };
+        this.initBindedControls();
 
         if (!readOnly) {
             $c.on('change', () => {
-                if (settings.debug.trace)
-                    console.trace('value changed: ' + controlId);
-                const $v = $c[0].value;
-                const s = (sym == null)
-                    ? '' : sym;
-                if (onChanged != null)
-                    onChanged();
-                else
-                    eval(valuePath + '=' + s + $v + s);
-                this.initBindedControls();
+                onChange();
             });
         }
+
+        this.bindings.push({ init: fn, onChange: onChange, props: binding });
     },
 
     getBinding(controlId) {
@@ -238,14 +244,14 @@ ui = {
                 r = b;
             }
         });
-        return r.props;
+        return r;
     },
 
     updateBindingSourceAndTarget(controlId, value) {
-        const b = this.getBinding(controlId);
+        const binding = this.getBinding(controlId);
         const $c = $('#' + controlId);
-        $c.attr(b.attr, value);
-        eval(b.valuePath + '=' + value);
+        $c.attr('value', value);
+        binding.onChange();
     },
 
     initTabs(...tabs) {
@@ -396,11 +402,12 @@ ui = {
     },
 
     openInputWidget(controlId) {
+        const t = this;
         this.closeInputWidget();
         const $c = $('#' + controlId);
         const $w = $('#input_widget').clone();
         const $cnt = $w.find('.input-widget-value-vpane');
-        const binding = this.getBinding(controlId);
+        const binding = this.getBinding(controlId).props;
 
         const $i = $c.clone();
         $i.attr('id', null);
@@ -423,17 +430,28 @@ ui = {
         }
         $cnt.prepend($i);
 
+        const validate = () => {
+            const val = $i.val();
+            t.updateBindingSourceAndTarget(controlId, val);
+            t.closeInputWidget();
+        };
+
         const $butOk = $w.find('#btn_valid_ok');
         const $butCancel = $w.find('#btn_valid_cancel');
-        const t = this;
         $butOk.on('click', () => {
-            t.closeInputWidget();
+            validate();
         });
         $butCancel.on('click', () => {
             t.closeInputWidget();
         });
         $butOk.attr('id', null);
         $butCancel.attr('id', null);
+        $i.on('keydown', (e) => {
+            if (e.key === 'Enter') {
+                e.preventDefault();
+                validate();
+            }
+        });
 
         $('body').append($w);
         var pos = $c.offset();
