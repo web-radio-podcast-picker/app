@@ -170,6 +170,10 @@ div.input-widget-value-vpane > input {
     border: darkblue solid 1px;
 }
 
+div#iw_delta_pane > button {
+    width: 1.4em;
+}
+
 .unit-big {
     font-size: 24px;
     margin-left: 0.5em;

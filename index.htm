@@ -178,7 +178,7 @@
     <!-- input widgets -->
 
     <div id="input_widget" class="input-widget hidden">
-        <div class="gr1 gc1 input-widget-value-vpane">
+        <div id="iw_vpane" class="gr1 gc1 input-widget-value-vpane">
             <div class="gr2 gc1 input-widget-buttons-vpane">
                 <button id="btn_valid_cancel" class="gr1 gc1 btn-ch btn-valid btn-red">✕</button>
                 <button id="btn_valid_ok" class="gr1 gc2 btn-ch btn-valid btn-bluegreen">✔</button>
@@ -187,6 +187,15 @@
         <div class="gr1 gc2 dleft-margin input-widget-buttons-vpane">
             <button id="btn_input_plus" class="gr1 gc1 btn-ch btn-darkblue">+</button>
             <button id="btn_input_minus" class="gr2 gc1 btn-ch btn-darkblue">-</button>
+        </div>
+        <div class="gr1 gc3 dleft-margin input-widget-value-vpane">
+            <input id="iw_delta" class="gr1 gc1 opt-value-edit"></input>
+            <div id="iw_delta_pane" class="gr2 gc1 input-widget-buttons-vpane">
+                <button id="btn_iw_delta_plus" class="gr1 gc1 btn-ch btn-darkblue">+</button>
+                <button id="btn_iw_delta_minus" class="gr1 gc2 btn-ch btn-darkblue">-</button>
+                <button id="btn_iw_delta_mul" class="gr1 gc3 btn-ch btn-darkblue">*</button>
+                <button id="btn_iw_delta_div" class="gr1 gc4 btn-ch btn-darkblue">/</button>
+            </div>
         </div>
     </div>
 

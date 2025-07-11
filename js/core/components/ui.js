@@ -417,7 +417,8 @@ ui = {
         this.closeInputWidget();
         const $c = $('#' + controlId);
         const $w = $('#input_widget').clone();
-        const $cnt = $w.find('.input-widget-value-vpane');
+        //const $cnt = $w.find('.input-widget-value-vpane'); 
+        const $cnt = $w.find('#iw_vpane');
         const binding = this.getBinding(controlId).props;
 
         // input,unit,label
@@ -512,9 +513,14 @@ ui = {
         });
 
         // input
+
         $i.on('change', () => {
             validate(false);
         });
+
+        // delta input
+        const $inDel = $w.find('#iw_delta');
+        $inDel.val(binding.input.delta);
 
         $('body').append($w);
         var pos = $c.offset();
