@@ -300,6 +300,10 @@ div.opts-pane > span.unit {
     padding: 4px;
 }
 
+.opt-label-selected {
+    border-bottom: #2666a7 solid 2px;
+}
+
 .opt-value-edit:focus-visible {
     background-color: #0000FFAA;
     outline: #44AAff solid 2px;

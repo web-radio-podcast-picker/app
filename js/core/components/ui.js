@@ -6,6 +6,7 @@ ui = {
     uiInitialized: false,   // indicates if ui is already globally initialized
     popupId: null,          // any id of an html popupId currently opened/showed
     $inputWidget: null,     // input widget if any
+    $inputWidgetLabel: null, // input widget label of edited control if any
     popupCtrlId: null,      // popup control placement if any else null
     bindings: [],           // array of bindings for controls
 
@@ -399,6 +400,10 @@ ui = {
         if (this.$inputWidget != null) {
             this.$inputWidget.remove();
             this.$inputWidget = null;
+            if (this.$inputWidgetLabel != null) {
+                this.$inputWidgetLabel.toggleClass('opt-label-selected');
+                this.$inputWidgetLabel = null;
+            }
         }
     },
 
@@ -418,6 +423,27 @@ ui = {
         var nxCol = 2;
 
         const $p = $c.parent();
+        var tc = $i.attr('class').split(' ');
+        var isRow = false;
+        var row = -1;
+        tc.forEach(c => {
+            if (c.startsWith('gr')) {
+                isRow = true;
+                row = parseInt(c.substring(2));
+            }
+        });
+        const $optPane = isRow ? $p : $p.parent();
+        if (!isRow) {
+            tc = $p.attr('class').split(' ');
+            tc.forEach(c => {
+                if (c.startsWith('gr'))
+                    row = parseInt(c.substring(2));
+            });
+        }
+        const $label = $optPane.find('.gr' + row + '.gc1');
+        $label.toggleClass('opt-label-selected');
+        this.$inputWidgetLabel = $label;
+
         const pid = $p.attr('id');
         const hasUnit = pid == null || !pid.startsWith('opts_');
         if (hasUnit) {
@@ -431,10 +457,11 @@ ui = {
         }
         $cnt.prepend($i);
 
-        const validate = () => {
+        const validate = (close) => {
             const val = $i.val();
             t.updateBindingSourceAndTarget(controlId, val);
-            t.closeInputWidget();
+            if (close == null || close == true)
+                t.closeInputWidget();
         };
 
         const $butOk = $w.find('#btn_valid_ok');
@@ -452,6 +479,9 @@ ui = {
                 e.preventDefault();
                 validate();
             }
+        });
+        $i.on('change', () => {
+            validate(false);
         });
 
         $('body').append($w);
