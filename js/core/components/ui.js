@@ -308,7 +308,8 @@ ui = {
             app.toggleOPause();
         });
         $('#btn_oset').on('click', () => {
-            this.togglePopup(/*'#btn_oset'*/null, 'pop_settings');
+            this.togglePopup(null, 'pop_settings');
+            this.closeInputWidget();
         });
     },
 
