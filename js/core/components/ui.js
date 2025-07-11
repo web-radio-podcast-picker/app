@@ -433,6 +433,7 @@ ui = {
         const $cnt = $w.find('#iw_vpane');
         const binding = this.getBinding(controlId)
         const props = binding.props;
+        props.input.iniDelta = props.input.delta;
 
         // input,unit,label
 
@@ -567,8 +568,6 @@ ui = {
         const dIncDecMulDivValue = (sign, factor) => {
             const $val = $inDel.val();
             var nv = parseFloat($val);
-            if (props.input.iniDelta == null)
-                props.input.iniDelta = nv;
             nv += sign * props.input.iniDelta;
             nv *= factor;
             nv = vround(nv);
