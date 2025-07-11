@@ -182,7 +182,9 @@ ui = {
             attr: 'value',
             digits: 5,
             input: {
-                delta: 1
+                delta: 1,
+                min: 0,
+                max: null
             }
         };
         return t == null ? r : { ...r, ...t };
@@ -517,9 +519,42 @@ ui = {
             validate(false);
         });
 
-        // delta input
+        // delta input: buttons +,-,*,/
+
         const $inDel = $w.find('#iw_delta');
+
+        const dIncDecMulDivValue = (sign, factor) => {
+            const $val = $inDel.val();
+            var v = parseFloat($val);
+            v += sign * binding.input.delta;
+            v *= factor;
+            v = vround(v);
+            v = parseFloat(v);
+            $inDel.val(v);
+            binding.input.delta = v;
+            validate(false);
+        }
+
         $inDel.val(binding.input.delta);
+        const $butDPlus = $w.find('#btn_iw_delta_plus');
+        const $butDMinus = $w.find('#btn_iw_delta_minus');
+        const $butDMul = $w.find('#btn_iw_delta_mul');
+        const $butDDiv = $w.find('#btn_iw_delta_div');
+
+        $butDPlus.on('click', () => {
+            dIncDecMulDivValue(1, 1);
+        });
+        $butDMinus.on('click', () => {
+            dIncDecMulDivValue(-1, 1);
+        });
+        $butDMul.on('click', () => {
+            dIncDecMulDivValue(0, 10);
+        });
+        $butDDiv.on('click', () => {
+            dIncDecMulDivValue(0, 0.1);
+        });
+
+        // add to dom and place
 
         $('body').append($w);
         var pos = $c.offset();
