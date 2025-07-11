@@ -187,7 +187,10 @@ ui = {
                 max: null
             }
         };
-        return t == null ? r : { ...r, ...t };
+        const res = t = null ? r : { ...r, ...t };
+        if (res.input.min == null)
+            res.input.min = 0;
+        return res;
     },
 
     bind(binding) {
@@ -207,25 +210,30 @@ ui = {
         }
 
         const t = this;
-        const fn = () => {
+        const fn = ($ctrl) => {
+            const $o = $c;
+            if ($ctrl == null) $ctrl = $o;
             // initial value
             if (onInit == null) {
+                const v = eval(valuePath) + unit;
                 if (attr == 'text')
-                    $c.text(eval(valuePath) + unit);
+                    $ctrl.text(eval(valuePath) + unit);
                 else
-                    $c.attr(attr, eval(valuePath) + unit);
+                    $ctrl.attr(attr, v);
+                $ctrl.val(v);
+                $ctrl.attr('data-inival', v);
             }
             else
                 onInit();
         };
         app.addOnStartUI(() => {
-            fn();
+            fn($c);
         });
 
         var onChange = () => {
             if (settings.debug.trace)
                 console.trace('value changed: ' + controlId);
-            const $v = $c[0].value;
+            const $v = $c.val();
             const s = (sym == null)
                 ? '' : sym;
             if (onChanged != null)
@@ -234,6 +242,7 @@ ui = {
                 eval(valuePath + '=' + s + $v + s);
             app.updateDisplay();
         };
+
         this.initBindedControls();
 
         if (!readOnly) {
@@ -259,6 +268,8 @@ ui = {
         const binding = this.getBinding(controlId);
         const $c = $('#' + controlId);
         $c.attr('value', value);
+        $c.attr('data-inival', value);
+        $c.val(value);
         binding.onChange();
     },
 
@@ -420,13 +431,14 @@ ui = {
         const $c = $('#' + controlId);
         const $w = $('#input_widget').clone();
         const $cnt = $w.find('#iw_vpane');
-        const binding = this.getBinding(controlId).props;
+        const binding = this.getBinding(controlId)
+        const props = binding.props;
 
         // input,unit,label
 
         const $i = $c.clone();
         $i.attr('id', null);
-        $i.css('width', binding.digits / 1.5 + 'em');
+        $i.css('width', props.digits / 1.5 + 'em');
         $i.css('grid-column', 1);
         $i.css('grid-row', 1);
         var nxCol = 2;
@@ -485,23 +497,32 @@ ui = {
         });
         $butOk.attr('id', null);
         $butCancel.attr('id', null);
-        $i.on('keydown', (e) => {
-            if (e.key === 'Enter') {
-                e.preventDefault();
-                validate();
-            }
-        });
 
         // buttons +,-
 
-        const incDecValue = (sign) => {
+        const checkRange = (nv) => {
+            return (props.input.min == null || nv > props.input.min)
+                && (props.input.max == null || nv < props.input.max);
+        }
+
+        const getInpVal = () => {
             const $val = $i.val();
             var v = parseFloat($val);
-            v += sign * binding.input.delta;
             v = vround(v);
-            v = parseFloat(v);
-            $i.val(v);
-            validate(false);
+            return v;
+        }
+
+        const incDecValue = (sign) => {
+            var v = getInpVal();
+
+            var nv = v + sign * props.input.delta;
+            nv = vround(nv);
+            nv = parseFloat(nv);
+
+            if (checkRange(nv)) {
+                $i.val(nv);
+                validate(false);
+            }
         }
 
         const $butPlus = $w.find('#btn_input_plus');
@@ -515,8 +536,28 @@ ui = {
 
         // input
 
+        validateOrRestore = () => {
+            const v = getInpVal();
+            const chk = !checkRange(v);
+            if (chk) {
+                const iv = $i.attr('data-inival');
+                $i.val(iv);
+                $i.attr(props.attr, iv);
+            }
+            return chk;
+        }
+
         $i.on('change', () => {
+            validateOrRestore();
             validate(false);
+        });
+        $i.on('keydown', (e) => {
+            if (e.key === 'Enter') {
+                e.preventDefault();
+                const chk = validateOrRestore();
+                if (!chk)
+                    validate();
+            }
         });
 
         // delta input: buttons +,-,*,/
@@ -526,16 +567,16 @@ ui = {
         const dIncDecMulDivValue = (sign, factor) => {
             const $val = $inDel.val();
             var v = parseFloat($val);
-            v += sign * binding.input.delta;
+            v += sign * props.input.delta;
             v *= factor;
             v = vround(v);
             v = parseFloat(v);
             $inDel.val(v);
-            binding.input.delta = v;
+            props.input.delta = v;
             validate(false);
         }
 
-        $inDel.val(binding.input.delta);
+        $inDel.val(props.input.delta);
         const $butDPlus = $w.find('#btn_iw_delta_plus');
         const $butDMinus = $w.find('#btn_iw_delta_minus');
         const $butDMul = $w.find('#btn_iw_delta_mul');
