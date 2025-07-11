@@ -330,6 +330,14 @@ ui = {
             this.togglePopup(null, 'pop_settings');
             this.closeInputWidget();
         });
+        $('#vdiv').on('click', () => {
+            this.openInputWidget('opt_os_dv',
+                { targetControlId: 'vdiv' })
+        });
+        $('#tdiv').on('click', () => {
+            this.openInputWidget('opt_os_dt',
+                { targetControlId: 'tdiv' })
+        });
     },
 
     toggleMenu() {
@@ -425,7 +433,7 @@ ui = {
         }
     },
 
-    openInputWidget(controlId) {
+    openInputWidget(controlId, opts) {
         const t = this;
         this.closeInputWidget();
         const $c = $('#' + controlId);
@@ -601,10 +609,26 @@ ui = {
         // add to dom and place
 
         $('body').append($w);
-        var pos = $c.offset();
-        $w.css('left', pos.left);
-        $w.css('top', pos.top);
+        const $controlTarget =
+            (opts != null && opts.targetControlId != null) ?
+                $('#' + opts.targetControlId) : $c;
+        var pos = $controlTarget.offset();
+        var vs = this.viewSize()
+
+        setPos = (pos) => {
+            $w.css('left', pos.left);
+            $w.css('top', pos.top);
+        }
+        setPos(pos);
         $w.removeClass('hidden');
+
+        var ww = $w.width()
+        var wh = $w.height()
+        if (ww + pos.left > vs.width) {
+            pos.left = vs.width - ww - settings.ui.menuContainerWidth;
+        }
+        setPos(pos);
+
         $i.focus();
         $i.select();
 

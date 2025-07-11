@@ -7,6 +7,9 @@ body {
     overflow: hidden;
     font-family: Arial, sans-serif;
     font-size: 14px;
+    position: absolute;
+    left: 0px;
+    top: 0px;
 }
 
 html,body,#frame {
@@ -24,7 +27,6 @@ html,body,#frame {
 
 canvas {
     background-color: transparent;
-    /*border: #444444 solid 1px;*/
     border: none;
     position: absolute;
     /* fix main view real left position on edge */
