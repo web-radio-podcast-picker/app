@@ -566,14 +566,18 @@ ui = {
 
         const dIncDecMulDivValue = (sign, factor) => {
             const $val = $inDel.val();
-            var v = parseFloat($val);
-            v += sign * props.input.delta;
-            v *= factor;
-            v = vround(v);
-            v = parseFloat(v);
-            $inDel.val(v);
-            props.input.delta = v;
-            validate(false);
+            var nv = parseFloat($val);
+            if (props.input.iniDelta == null)
+                props.input.iniDelta = nv;
+            nv += sign * props.input.iniDelta;
+            nv *= factor;
+            nv = vround(nv);
+            nv = parseFloat(nv);
+            if (nv > 0) {
+                $inDel.val(nv);
+                props.input.delta = nv;
+                validate(false);
+            }
         }
 
         $inDel.val(props.input.delta);
