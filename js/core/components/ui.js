@@ -147,10 +147,12 @@ ui = {
         // grid
         this.bind(this.binding(
             'opt_os_dv',
-            'settings.oscilloscope.vPerDiv'));
+            'settings.oscilloscope.vPerDiv',
+            { input: { delta: 0.1 } }));
         this.bind(this.binding(
             'opt_os_dt',
-            'settings.oscilloscope.tPerDiv'));
+            'settings.oscilloscope.tPerDiv',
+            { input: { delta: 0.1 } }));
         this.bind(this.binding(
             'opt_os_hdiv',
             'settings.oscilloscope.grid.hDivCount'));
@@ -178,7 +180,10 @@ ui = {
             readOnly: false,
             unit: '',
             attr: 'value',
-            digits: 5
+            digits: 5,
+            input: {
+                delta: 1
+            }
         };
         return t == null ? r : { ...r, ...t };
     },
@@ -415,6 +420,8 @@ ui = {
         const $cnt = $w.find('.input-widget-value-vpane');
         const binding = this.getBinding(controlId).props;
 
+        // input,unit,label
+
         const $i = $c.clone();
         $i.attr('id', null);
         $i.css('width', binding.digits / 1.5 + 'em');
@@ -457,6 +464,8 @@ ui = {
         }
         $cnt.prepend($i);
 
+        // buttons ok,cancel
+
         const validate = (close) => {
             const val = $i.val();
             t.updateBindingSourceAndTarget(controlId, val);
@@ -480,6 +489,29 @@ ui = {
                 validate();
             }
         });
+
+        // buttons +,-
+
+        const incDecValue = (sign) => {
+            const $val = $i.val();
+            var v = parseFloat($val);
+            v += sign * binding.input.delta;
+            v = vround(v);
+            v = parseFloat(v);
+            $i.val(v);
+            validate(false);
+        }
+
+        const $butPlus = $w.find('#btn_input_plus');
+        const $butMinus = $w.find('#btn_input_minus');
+        $butPlus.on('click', () => {
+            incDecValue(1);
+        });
+        $butMinus.on('click', () => {
+            incDecValue(-1);
+        });
+
+        // input
         $i.on('change', () => {
             validate(false);
         });
