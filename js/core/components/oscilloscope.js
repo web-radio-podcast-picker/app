@@ -13,9 +13,12 @@ oscilloscope = {
 
     scanPeriod: null,         // scan period (in ms, eg view period)
     scanFrq: null,            // scan frequency (in Hz, eg 1000 ms / view period)
-    smTime: 0,                // sampling period
-    smFrq: 0,                 // sampling frequency
-    sampleTime: 0,             // pixel time
+    frameDuration: null,
+    frameFPS: null,
+
+    /*smTime: 0,                // sampling period
+    smFrq: 0,  */               // sampling frequency
+    /*sampleTime: 0,*/           // pixel time
 
     getChannel(channelId) {
         var r = null;
@@ -90,19 +93,37 @@ oscilloscope = {
         }
     },
 
-    initSampleProps() {
+    // NOT USED
+    /*initSampleProps() {
         this.smFrq = getSamplesTask.analyzer.context.sampleRate;    // or oscilloscope.scanFrq
         if (this.smFrq == null || this.smFrq == 0) return 0;
         this.sampleTime = 1.0 / this.smFrq;
         const buffl = 1024;     // reference buffer length in samples
         this.bufferTime = buffl * this.sampleTime;    // buffer length in seconds
-    },
+    },*/
 
     // auto time per division calculation (@obsolete)
-    getTimePerDiv(canvasWidth, divw) {
+    /*getTimePerDiv(canvasWidth, divw) {
         this.initSampleProps();
         // scale 1 pixel / 1 sample
         settings.oscilloscope.tPerDiv = this.sampleTime * divw * buffl / canvasWidth;
         return settings.oscilloscope.tPerDiv;
+    },*/
+
+    frameStartCallback() {
+        // called at the start of the frame
+        this.lastStartTime = this.startTime;
+        this.startTime = Date.now();
+    },
+
+    frameEndCallback() {
+        // called at the end of the frame        
+        this.endTime = Date.now();
+        this.frameDuration = this.endTime - this.startTime;
+        this.frameFPS = 1000.0 / this.frameDuration; // Hz
+        if (this.lastStartTime != null) {
+            this.scanPeriod = this.startTime - this.lastStartTime;
+            this.scanFrq = (1000 / this.scanPeriod).toFixed(2);
+        }
     }
 }

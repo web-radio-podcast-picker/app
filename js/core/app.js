@@ -17,6 +17,7 @@ app = {
 
     endFramePermanentOperations: [], // end frame operations (always)
     endFrameOneShotOperations: [],   // end frame operations (single shot)
+    startFramePermanentOperations: [], // start frame operations (always)
     startFrameOneShotOperations: [],     // start frame operations (single shot)
 
     // operations
@@ -35,8 +36,12 @@ app = {
         this.oscilloscope = oscilloscope;
         this.oscilloscopeView = new OscilloscopeView();
         this.endFramePermanentOperations.push(() => {
-            oscilloscope.endTime = Date.now();
-        });
+            //oscilloscope.endTime = Date.now();
+            oscilloscope.frameEndCallback();
+        })
+        this.startFramePermanentOperations.push(() => {
+            oscilloscope.frameStartCallback();
+        })
         this.gridView = new GridView();
         this.canvas = $('#cnv_oscillo')[0];
         this.gridView.init($('#cnv_grid')[0]);
@@ -83,19 +88,23 @@ app = {
     },
 
     start() {
-        // setup tasks
-
+        // setup the tasks
         getSamplesTask.init(this.audioInputChannel.analyzer);
         channelsAnimationTask.init(this.oscilloscope);
         startViewTask.init(this.canvas);
 
+        // grab data
         this.tasks.push(getSamplesTask);
         this.tasks.push(publishBuffersTasks);
         this.tasks.push(channelsMeasuresTask);
+
+        // views tasks
         this.tasks.push(startViewTask);
         this.tasks.push(this.gridView);
         this.tasks.push(channelsAnimationTask);
         this.tasks.push(this.oscilloscopeView);
+
+        // end of frame
         this.tasks.push(requestAnimationFrameTask);
 
         this.startUI();

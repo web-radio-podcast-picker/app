@@ -49,6 +49,7 @@ window.settings = {
     },
 
     ui: {
+        maxRefreshRate: 240,    // maximum views refresh rate in Fps
         clientWidthBorder: 4,   // default border width for client area
         clientHeightBorder: 2,  // default border height for client area
         menuContainerWidth: 42  // 3 * 1em

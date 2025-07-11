@@ -105,6 +105,12 @@ ui = {
 
         // display
         this.bind(this.binding(
+            'opt_os_mrr',
+            'settings.ui.maxRefreshRate', {
+            ...refreshOnUpdate,
+            ...{ input: { delta: 1 } }
+        }))
+        this.bind(this.binding(
             'opt_os_clientWidthBorder',
             'settings.ui.clientWidthBorder',
             refreshOnUpdate));
