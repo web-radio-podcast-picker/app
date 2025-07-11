@@ -622,11 +622,12 @@ ui = {
         setPos(pos);
         $w.removeClass('hidden');
 
-        var ww = $w.width()
-        var wh = $w.height()
-        if (ww + pos.left > vs.width) {
+        const ww = $w.width()
+        const wh = $w.height()
+        if (ww + pos.left >= vs.width)
             pos.left = vs.width - ww - settings.ui.menuContainerWidth;
-        }
+        if (wh + pos.top >= vs.height)
+            pos.top = vs.height - wh;
         setPos(pos);
 
         $i.focus();
