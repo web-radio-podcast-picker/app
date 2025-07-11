@@ -417,7 +417,6 @@ ui = {
         this.closeInputWidget();
         const $c = $('#' + controlId);
         const $w = $('#input_widget').clone();
-        //const $cnt = $w.find('.input-widget-value-vpane'); 
         const $cnt = $w.find('#iw_vpane');
         const binding = this.getBinding(controlId).props;
 
