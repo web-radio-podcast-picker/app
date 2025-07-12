@@ -432,7 +432,7 @@ ui = {
         if (this.$inputWidget != null) {
             // must bkp inputs props
             const binding = this.getBinding(this.inputWidgetControlId)
-            binding.props_bkp = structuredClone(binding.props)
+            binding.props_bkp = deepClone(binding.props)
             // remove & destroy controls
             this.$inputWidget.remove();
             this.$inputWidget = null;
@@ -452,7 +452,7 @@ ui = {
         this.inputWidgetControlId = controlId
         const binding = this.getBinding(controlId)
         const props = binding.props;
-        binding.props_bkp = structuredClone(binding.props)
+        binding.props_bkp = deepClone(binding.props)
         props.input.iniDelta = props.input.delta;
 
         // input,unit,label
@@ -515,7 +515,7 @@ ui = {
             binding.props.input.value = $i.val()
         });
         $butCancel.on('click', () => {
-            binding.props = structuredClone(binding.props_bkp)
+            binding.props = deepClone(binding.props_bkp)
             $i.val(binding.props.input.value)
             $inDel.val(binding.props.input.delta)
             validate(false);
