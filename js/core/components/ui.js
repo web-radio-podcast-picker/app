@@ -7,6 +7,7 @@ ui = {
     popupId: null,          // any id of an html popupId currently opened/showed
     $inputWidget: null,     // input widget if any
     $inputWidgetLabel: null, // input widget label of edited control if any
+    inputWidgetControlId: null, // input widget binded edited control id if any
     popupCtrlId: null,      // popup control placement if any else null
     bindings: [],           // array of bindings for controls
 
@@ -429,6 +430,10 @@ ui = {
 
     closeInputWidget() {
         if (this.$inputWidget != null) {
+            // must bkp inputs props
+            const binding = this.getBinding(this.inputWidgetControlId)
+            binding.props_bkp = structuredClone(binding.props)
+            // remove & destroy controls
             this.$inputWidget.remove();
             this.$inputWidget = null;
             if (this.$inputWidgetLabel != null) {
@@ -444,6 +449,7 @@ ui = {
         const $c = $('#' + controlId);
         const $w = $('#input_widget').clone();
         const $cnt = $w.find('#iw_vpane');
+        this.inputWidgetControlId = controlId
         const binding = this.getBinding(controlId)
         const props = binding.props;
         binding.props_bkp = structuredClone(binding.props)
