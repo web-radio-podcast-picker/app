@@ -62,6 +62,7 @@ class SignalView {
                 x = nx;
                 y = ny;
             }
+            this.channel.isDisplayed = true;
         }
     }
 

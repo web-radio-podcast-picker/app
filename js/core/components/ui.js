@@ -22,8 +22,8 @@ ui = {
         if (!this.uiInitialized) {
             this.init_ui();
             this.uiInitialized = true;
+            console.log("UI initialized");
         }
-        console.log("UI initialized");
     },
 
     init_btns(channel, sigView) {

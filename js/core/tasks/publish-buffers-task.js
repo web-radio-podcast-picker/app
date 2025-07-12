@@ -5,8 +5,9 @@ publishBuffersTasks = {
     run() {
         oscilloscope.channels.forEach(channel => {
             if (channel.sourceId == Source_Id_AudioInput
-                && !channel.view.pause
-                && !oscilloscope.pause
+                && ((!channel.view.pause
+                    && !oscilloscope.pause)
+                    || !channel.isDisplayed)
             )
                 channel.measures.setData(
                     [...getSamplesTask.dataArray]
