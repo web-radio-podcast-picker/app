@@ -504,6 +504,7 @@ ui = {
         const validate = (close) => {
             const val = $i.val();
             t.updateBindingSourceAndTarget(controlId, val);
+            binding.props.input.value = val;
             if (close == null || close == true)
                 t.closeInputWidget();
         };
