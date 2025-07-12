@@ -124,6 +124,7 @@ app = {
         const d = Date.now() - startFrameTask.frameStartTime
         const f = 1000.0 / d
         const lateEnough = f <= settings.ui.maxRefreshRate
+
         this.frameAvgFPS =
             Math.min(startFrameTask.frameFPS,
                 Math.min(settings.ui.maxRefreshRate, f))

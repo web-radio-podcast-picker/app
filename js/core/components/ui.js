@@ -216,24 +216,25 @@ ui = {
         }
 
         const t = this;
-        const fn = ($ctrl) => {
+        const init = ($ctrl) => {
             const $o = $c;
             if ($ctrl == null) $ctrl = $o;
             // initial value
             if (onInit == null) {
                 const v = eval(valuePath) + unit;
                 if (attr == 'text')
-                    $ctrl.text(eval(valuePath) + unit);
+                    $ctrl.text(v)
                 else
                     $ctrl.attr(attr, v);
                 $ctrl.val(v);
                 $ctrl.attr('data-inival', v);
+                binding.input.value = v
             }
             else
                 onInit();
         };
         app.addOnStartUI(() => {
-            fn($c);
+            init($c);
         });
 
         var onChange = () => {
@@ -255,7 +256,7 @@ ui = {
             });
         }
 
-        this.bindings.push({ init: fn, onChange: onChange, props: binding });
+        this.bindings.push({ init: init, onChange: onChange, props: binding });
     },
 
     getBinding(controlId) {
@@ -445,6 +446,7 @@ ui = {
         const $cnt = $w.find('#iw_vpane');
         const binding = this.getBinding(controlId)
         const props = binding.props;
+        binding.props_bkp = structuredClone(binding.props)
         props.input.iniDelta = props.input.delta;
 
         // input,unit,label
@@ -504,8 +506,13 @@ ui = {
         const $butCancel = $w.find('#btn_valid_cancel');
         $butOk.on('click', () => {
             validate();
+            binding.props.input.value = $i.val()
         });
         $butCancel.on('click', () => {
+            binding.props = structuredClone(binding.props_bkp)
+            $i.val(binding.props.input.value)
+            $inDel.val(binding.props.input.delta)
+            validate(false);
             t.closeInputWidget();
         });
         $butOk.attr('id', null);
