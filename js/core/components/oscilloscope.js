@@ -13,6 +13,8 @@ oscilloscope = {
 
     scanPeriod: null,         // scan period (in ms, eg view period)
     scanFrq: null,            // scan frequency (in Hz, eg 1000 ms / view period)
+
+    framePeriod: null,
     frameDuration: null,
     frameFPS: null,
 
@@ -112,18 +114,18 @@ oscilloscope = {
 
     frameStartCallback() {
         // called at the start of the frame
-        this.lastStartTime = this.startTime;
-        this.startTime = Date.now();
+        const lst = this.lastStartTime
+        this.lastStartTime = this.startTime
+        this.startTime = Date.now()
+        if (lst != null) {
+            this.framePeriod = this.startTime - lst;
+            this.frameFPS = parseFloat((1000 / this.framePeriod).toFixed(2))
+        }
     },
 
     frameEndCallback() {
         // called at the end of the frame        
         this.endTime = Date.now();
         this.frameDuration = this.endTime - this.startTime;
-        this.frameFPS = 1000.0 / this.frameDuration; // Hz
-        if (this.lastStartTime != null) {
-            this.scanPeriod = this.startTime - this.lastStartTime;
-            this.scanFrq = (1000 / this.scanPeriod).toFixed(2);
-        }
     }
 }

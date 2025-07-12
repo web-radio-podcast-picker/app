@@ -12,6 +12,10 @@ function tround(t) {
     return parseFloat(t.toFixed(3));
 }
 
+function fround(t) {
+    return !Number.isFinite(t) ? null : parseFloat(t.toFixed(1))
+}
+
 function milli(n) {
     return n * 1000;
 }

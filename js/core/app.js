@@ -14,11 +14,15 @@ app = {
     powerOn: true,              // indicates if turned on or off
 
     onStartUI: null,            // ui started callback
-
+    lastFrameStartTime: null,
+    frameStartTime: null,
     endFramePermanentOperations: [], // end frame operations (always)
     endFrameOneShotOperations: [],   // end frame operations (single shot)
     startFramePermanentOperations: [], // start frame operations (always)
     startFrameOneShotOperations: [],     // start frame operations (single shot)
+
+    frameSkipCount: 0,
+    frameSkipCountStart: 0,
 
     // operations
 
@@ -35,13 +39,6 @@ app = {
 
         this.oscilloscope = oscilloscope;
         this.oscilloscopeView = new OscilloscopeView();
-        this.endFramePermanentOperations.push(() => {
-            //oscilloscope.endTime = Date.now();
-            oscilloscope.frameEndCallback();
-        })
-        this.startFramePermanentOperations.push(() => {
-            oscilloscope.frameStartCallback();
-        })
         this.gridView = new GridView();
         this.canvas = $('#cnv_oscillo')[0];
         this.gridView.init($('#cnv_grid')[0]);
@@ -93,27 +90,102 @@ app = {
         channelsAnimationTask.init(this.oscilloscope);
         startViewTask.init(this.canvas);
 
+        this.endFramePermanentOperations.push(() => {
+            oscilloscope.frameEndCallback();
+        })
+        this.startFramePermanentOperations.push(() => {
+            oscilloscope.frameStartCallback();
+        })
+
         // grab data
-        this.tasks.push(getSamplesTask);
-        this.tasks.push(publishBuffersTasks);
-        this.tasks.push(channelsMeasuresTask);
+        this.tasks.push(this.task(getSamplesTask));
+        this.tasks.push(this.task(publishBuffersTasks));
+        this.tasks.push(this.task(channelsMeasuresTask));
 
         // views tasks
-        this.tasks.push(startViewTask);
-        this.tasks.push(this.gridView);
-        this.tasks.push(channelsAnimationTask);
-        this.tasks.push(this.oscilloscopeView);
+        this.tasks.push(this.task(startFrameTask, this.mrr));            // frame start
+        this.tasks.push(this.task(startViewTask, this.mrr));
+        this.tasks.push(this.task(this.gridView, this.mrr));
+        this.tasks.push(this.task(channelsAnimationTask, this.mrr));
+        this.tasks.push(this.task(this.oscilloscopeView, this.mrr));
 
         // end of frame
-        this.tasks.push(requestAnimationFrameTask);
+        this.tasks.push(this.task(requestAnimationFrameTask));      // frame end
 
         this.startUI();
     },
 
+    mrr() {
+        // check to know if must limit the refresh rate
+        /*return Number.isFinite(oscilloscope.frameFPS)
+            && (oscilloscope.frameFPS
+                - Math.abs(this.frameSkipCount - this.frameSkipCountStart))
+            > settings.ui.maxRefreshRate
+            ? { value: true, delta: oscilloscope.frameFPS - settings.ui.maxRefreshRate }
+            : { value: false, delta: 0 }*/
+        if (!Number.isFinite(startFrameTask.frameFPS))
+            return { value: false, delta: 0 }
+
+        const tooFast = startFrameTask.frameFPS > settings.ui.maxRefreshRate
+        const d = Date.now() - startFrameTask.frameStartTime
+        const f = 1000.0 / d
+        const lateEnough = f <= settings.ui.maxRefreshRate
+
+        return (tooFast && !lateEnough) ?
+            { value: true, delta: startFrameTask.frameFPS - settings.ui.maxRefreshRate }
+            : { value: false, delta: 0 }
+    },
+
+    task(task, rateLimitFunc) {
+        return { task: task, rateLimitFunc: rateLimitFunc };
+    },
+
     requestAnimationFrame: function () {
-        this.tasks.forEach(view => {
-            requestAnimationFrame((() => view.run()).bind(view));
+
+        const rlf = this.mrr;
+        const rateLimit = rlf != null && rlf != undefined
+            ? (rlf == this.mrr ? this.mrr() : { value: null, data: null })
+            : { value: null, delta: null }
+        const t = this
+
+        this.tasks.forEach(task => {
+            const rlf = task.rateLimitFunc
+            const hasRlf = rlf != null && rlf != undefined ? rlf == this.mrr : false
+            if (!hasRlf
+                || (!rateLimit.value /*&& t.frameSkipCount <= 0*/)) {
+                /*if (hasRlf) {
+                    t.frameSkipCount = 0
+                    t.frameSkipCountStart = 0
+                }*/
+                const fn = task.task
+                requestAnimationFrame((() => fn.run(rateLimit)).bind(fn));
+            }
         });
+
+        if (false) {
+            if (rateLimit.value) {
+                // frame skip
+                const skip = true;
+                if (t.frameSkipCount <= 0) {
+                    //console.log('START skipCount:' + t.frameSkipCount)
+                    t.frameSkipCount = rateLimit.delta
+                    t.frameSkipCountStart = t.frameSkipCount
+                } else {
+                    t.frameSkipCount--;
+                    //console.log('skipCount:' + t.frameSkipCount)
+                }
+            } else {
+                if (t.frameSkipCount > 0) {
+                    //console.log('STOP skip count')
+                    t.frameSkipCount = 0
+                    t.frameSkipCountStart = 0
+                }
+                /*else {
+                    t.frameSkipCount--;
+                    //console.log('skipCount:' + t.frameSkipCount)
+                }*/
+            }
+        }
     },
 
     async addChannel() {
