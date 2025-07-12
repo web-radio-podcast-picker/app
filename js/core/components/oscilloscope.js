@@ -18,10 +18,6 @@ oscilloscope = {
     frameDuration: null,
     frameFPS: null,
 
-    /*smTime: 0,                // sampling period
-    smFrq: 0,  */               // sampling frequency
-    /*sampleTime: 0,*/           // pixel time
-
     getChannel(channelId) {
         var r = null;
         // get a channel from channel id, null if not found
@@ -94,23 +90,6 @@ oscilloscope = {
             console.error(channel.error);
         }
     },
-
-    // NOT USED
-    /*initSampleProps() {
-        this.smFrq = getSamplesTask.analyzer.context.sampleRate;    // or oscilloscope.scanFrq
-        if (this.smFrq == null || this.smFrq == 0) return 0;
-        this.sampleTime = 1.0 / this.smFrq;
-        const buffl = 1024;     // reference buffer length in samples
-        this.bufferTime = buffl * this.sampleTime;    // buffer length in seconds
-    },*/
-
-    // auto time per division calculation (@obsolete)
-    /*getTimePerDiv(canvasWidth, divw) {
-        this.initSampleProps();
-        // scale 1 pixel / 1 sample
-        settings.oscilloscope.tPerDiv = this.sampleTime * divw * buffl / canvasWidth;
-        return settings.oscilloscope.tPerDiv;
-    },*/
 
     frameStartCallback() {
         // called at the start of the frame

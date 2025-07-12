@@ -21,8 +21,8 @@ app = {
     startFramePermanentOperations: [], // start frame operations (always)
     startFrameOneShotOperations: [],     // start frame operations (single shot)
 
-    frameSkipCount: 0,
-    frameSkipCountStart: 0,
+    frameAvgFPS: 0,
+    frameAvgPeriod: 0,
 
     // operations
 
@@ -117,12 +117,6 @@ app = {
 
     mrr() {
         // check to know if must limit the refresh rate
-        /*return Number.isFinite(oscilloscope.frameFPS)
-            && (oscilloscope.frameFPS
-                - Math.abs(this.frameSkipCount - this.frameSkipCountStart))
-            > settings.ui.maxRefreshRate
-            ? { value: true, delta: oscilloscope.frameFPS - settings.ui.maxRefreshRate }
-            : { value: false, delta: 0 }*/
         if (!Number.isFinite(startFrameTask.frameFPS))
             return { value: false, delta: 0 }
 
@@ -130,9 +124,17 @@ app = {
         const d = Date.now() - startFrameTask.frameStartTime
         const f = 1000.0 / d
         const lateEnough = f <= settings.ui.maxRefreshRate
+        this.frameAvgFPS =
+            Math.min(startFrameTask.frameFPS,
+                Math.min(settings.ui.maxRefreshRate, f))
+        this.frameAvgPeriod = 1.0 / this.frameAvgFPS
 
         return (tooFast && !lateEnough) ?
-            { value: true, delta: startFrameTask.frameFPS - settings.ui.maxRefreshRate }
+            {
+                value: true,
+                frameFPS: startFrameTask.frameFPS,
+                frameAvgFPS: this.frameAvgFPS
+            }
             : { value: false, delta: 0 }
     },
 
@@ -151,41 +153,11 @@ app = {
         this.tasks.forEach(task => {
             const rlf = task.rateLimitFunc
             const hasRlf = rlf != null && rlf != undefined ? rlf == this.mrr : false
-            if (!hasRlf
-                || (!rateLimit.value /*&& t.frameSkipCount <= 0*/)) {
-                /*if (hasRlf) {
-                    t.frameSkipCount = 0
-                    t.frameSkipCountStart = 0
-                }*/
+            if (!hasRlf || !rateLimit.value) {
                 const fn = task.task
                 requestAnimationFrame((() => fn.run(rateLimit)).bind(fn));
             }
         });
-
-        if (false) {
-            if (rateLimit.value) {
-                // frame skip
-                const skip = true;
-                if (t.frameSkipCount <= 0) {
-                    //console.log('START skipCount:' + t.frameSkipCount)
-                    t.frameSkipCount = rateLimit.delta
-                    t.frameSkipCountStart = t.frameSkipCount
-                } else {
-                    t.frameSkipCount--;
-                    //console.log('skipCount:' + t.frameSkipCount)
-                }
-            } else {
-                if (t.frameSkipCount > 0) {
-                    //console.log('STOP skip count')
-                    t.frameSkipCount = 0
-                    t.frameSkipCountStart = 0
-                }
-                /*else {
-                    t.frameSkipCount--;
-                    //console.log('skipCount:' + t.frameSkipCount)
-                }*/
-            }
-        }
     },
 
     async addChannel() {
