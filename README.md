@@ -15,5 +15,8 @@ main purposes:
 
 project status: on going
 
+![screenshot](doc/screenshot-0.4.png)
+v 0.4
+
 ![screenshot](doc/screenshot-0.1.png)
 v 0.1
