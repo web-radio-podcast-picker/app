@@ -3,7 +3,7 @@
 class OscilloscopeView {
 
     run() {
-        $('#stime').text(app.frameAvgPeriod);
+        $('#stime').text(pround(app.frameAvgPeriod * 1000));
         $('#sfrq').text(fround(app.frameAvgFPS));
         $('#buffsz').text(getSamplesTask.analyzer.frequencyBinCount);
         $('#echps').text(getSamplesTask.analyzer.context.sampleRate);

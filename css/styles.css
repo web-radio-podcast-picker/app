@@ -77,6 +77,10 @@ div#channels_infos_deck > div > span.value {
     text-align: right;
 }
 
+.medium-value {
+    width: 3em !important;
+}
+
 .short-value {
     width: 1.5em !important;
 }

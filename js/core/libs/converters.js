@@ -9,7 +9,11 @@ function vround(v) {
 }
 
 function tround(t) {
-    return parseFloat(t.toFixed(3));
+    return !Number.isFinite(t) ? null : parseFloat(t.toFixed(3));
+}
+
+function pround(t) {
+    return !Number.isFinite(t) ? null : parseFloat(t.toFixed(2));
 }
 
 function fround(t) {

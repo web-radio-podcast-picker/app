@@ -237,8 +237,6 @@ ui = {
         });
 
         var onChange = () => {
-            if (settings.debug.trace)
-                console.trace('value changed: ' + controlId);
             const $v = $c.val();
             const s = (sym == null)
                 ? '' : sym;
