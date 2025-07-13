@@ -17,6 +17,7 @@ class SignalMeasuresView {
         $('#vmax_' + c).text(voltToText(this.signalMeasures.vMax));
 
         $('#frq_' + c).text(this.signalMeasures.frq);
+        $('#frqpe_' + c).text(tround(this.signalMeasures.frqPe));
         $('#frqmin_' + c).text(this.signalMeasures.frqMin);
         $('#frqmax_' + c).text(this.signalMeasures.frqMax);
 

@@ -9,6 +9,7 @@ class SignalMeasures {
     vAvg = 0;                   // average volts value
 
     frq = 0
+    frqPe = 0
     frqMin = 0
 
     dataArray = null;           // array of samples datas   (-1..1)
@@ -29,6 +30,7 @@ class SignalMeasures {
         this.vMax = valueToVolt(channel, max);
         this.vAvg = valueToVolt(channel, avg);
         this.frq = frq
+        this.frqPe = 1000.0 / frq
         this.frqMin = frqMin
         this.frqMax = frqMax
     }
