@@ -48,13 +48,17 @@ channelsMeasuresTask = {
             }
             for (var i = 0; i < n; i++) {
                 const v = f[i];
-                if (v > m.minDb && v < m.maxDb && mini == null)
+                if (v > m.minDb && v < m.maxDb && mini == null) {
                     mini = i
+                    break
+                }
             }
             for (var i = n - 1; i >= 0; i--) {
                 const v = f[i];
-                if (v > m.minDb && v < m.maxDb && maxi == null)
+                if (v > m.minDb && v < m.maxDb && maxi == null) {
                     maxi = i
+                    break
+                }
             }
         }
 
