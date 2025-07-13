@@ -13,7 +13,9 @@ publishBuffersTasks = {
                     [...getSamplesTask.dataArray],
                     [...getSamplesTask.fftDataArray],
                     getSamplesTask.sampleRate,
-                    getSamplesTask.channelCount
+                    getSamplesTask.channelCount,
+                    getSamplesTask.minDb,
+                    getSamplesTask.maxDb
                 );
         });
     }

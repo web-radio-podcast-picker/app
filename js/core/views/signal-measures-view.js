@@ -17,6 +17,8 @@ class SignalMeasuresView {
         $('#vmax_' + c).text(voltToText(this.signalMeasures.vMax));
 
         $('#frq_' + c).text(this.signalMeasures.frq);
+        $('#frqmin_' + c).text(this.signalMeasures.frqMin);
+        $('#frqmax_' + c).text(this.signalMeasures.frqMax);
 
         $('#vavg_' + c).text(
             this.signalMeasures.vAvg == null ?

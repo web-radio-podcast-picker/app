@@ -8,7 +8,8 @@ class SignalMeasures {
     vMax = Number.MIN_VALUE;    // maximum volts value
     vAvg = 0;                   // average volts value
 
-    frq = 0;
+    frq = 0
+    frqMin = 0
 
     dataArray = null;           // array of samples datas   (-1..1)
     fftDataArray = null;        // array of fft datas (divs of 0..sampleRate/2)
@@ -23,18 +24,22 @@ class SignalMeasures {
     }
 
     // set measures from input value
-    setMeasures(channel, min, max, avg, frq) {
+    setMeasures(channel, min, max, avg, frq, frqMin, frqMax) {
         this.vMin = valueToVolt(channel, min);
         this.vMax = valueToVolt(channel, max);
         this.vAvg = valueToVolt(channel, avg);
         this.frq = frq
+        this.frqMin = frqMin
+        this.frqMax = frqMax
     }
 
-    setData(data, fftData, sampleRate, channelCount) {
+    setData(data, fftData, sampleRate, channelCount, minDb, maxDb) {
         this.dataArray = data;
         this.fftDataArray = fftData;
         this.sampleRate = sampleRate;
         this.channelCount = channelCount
+        this.minDb = minDb
+        this.maxDb = maxDb
     }
 
 }

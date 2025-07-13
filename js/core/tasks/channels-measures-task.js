@@ -31,31 +31,53 @@ channelsMeasuresTask = {
         if (d.length > 0)
             vAvg /= d.length;
 
-        // frequency
-        var maxf = -Number.MAX_VALUE
+        // frequency ins, min, max
+        var pwdf = -Number.MAX_VALUE
+        var pwdi = null
+        var minv = Number.MAX_VALUE
+        var mini = null
         var maxi = null
         var n = f.length / m.channelCount
         if (f != null) {
             for (var i = 0; i < n; i++) {
                 const v = f[i];
-                if (v > maxf) {
-                    maxf = v
-                    maxi = i
+                // max
+                if (v > pwdf) {
+                    pwdf = v
+                    pwdi = i
                 }
+                // min
+                if (v < minv) {
+                    minv = v
+                }
+            }
+            for (var i = 0; i < n; i++) {
+                const v = f[i];
+                if (v >= m.minDb && mini == null)
+                    mini = i
+            }
+            for (var i = n - 1; i >= 0; i--) {
+                const v = f[i];
+                if (v >= m.minDb && maxi == null)
+                    maxi = i
             }
         }
 
-        var rt = n > 0 ? m.sampleRate / n : 0
+        const rt = n > 0 ? m.sampleRate / n : 0
+        var drt = rt / 2.0
         var frq = 0
-        if (rt > 0) {
-            frq = (rt / 2.0) * (maxi + 1)
-        }
+        frq = drt * (pwdi + 1)
+
+        const minFrq = drt * (mini + 1)
+        const maxFrq = drt * (maxi + 1)
 
         channel.measures.setMeasures(
             channel,
             vMin,
             vMax,
             vAvg,
-            frq);
+            frq,
+            minFrq,
+            maxFrq);
     }
 }

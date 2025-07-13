@@ -13,6 +13,9 @@ getSamplesTask = {
     sampleRate: 0,      // sample rate
     channelCount: 0,    // fft array channel count
 
+    minDb: null,        // input min db
+    maxDb: null,        // input max db
+
     init(analyzer) {
         this.analyzer = analyzer;
         this.bufferLength = this.analyzer.frequencyBinCount;
@@ -21,6 +24,8 @@ getSamplesTask = {
         this.fftLength = this.analyzer.fftSize / this.channelCount
         this.fftDataArray = new Float32Array(this.fftLength)
         this.sampleRate = this.analyzer.context.sampleRate
+        this.minDb = this.analyzer.minDecibels
+        this.maxDb = this.analyzer.maxDecibels
     },
 
     run() {
