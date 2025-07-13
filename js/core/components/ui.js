@@ -353,12 +353,13 @@ ui = {
         $('#btn_menu').text(visible ? '▼' : '▲');
         if (visible)
             this.initBindedControls();
+        else
+            this.closeInputWidget();
 
         if (this.popupId != null) {
             const p = this.popupId;
             this.popupId = null;
             this.togglePopup(null, p, false);
-            this.closeInputWidget();
         }
     },
 
