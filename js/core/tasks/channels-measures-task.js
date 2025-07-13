@@ -34,7 +34,6 @@ channelsMeasuresTask = {
         // frequency ins, min, max
         var pwdf = -Number.MAX_VALUE
         var pwdi = null
-        var minv = Number.MAX_VALUE
         var mini = null
         var maxi = null
         var n = f.length / m.channelCount
@@ -46,19 +45,15 @@ channelsMeasuresTask = {
                     pwdf = v
                     pwdi = i
                 }
-                // min
-                if (v < minv) {
-                    minv = v
-                }
             }
             for (var i = 0; i < n; i++) {
                 const v = f[i];
-                if (v >= m.minDb && mini == null)
+                if (v > m.minDb && v < m.maxDb && mini == null)
                     mini = i
             }
             for (var i = n - 1; i >= 0; i--) {
                 const v = f[i];
-                if (v >= m.minDb && maxi == null)
+                if (v > m.minDb && v < m.maxDb && maxi == null)
                     maxi = i
             }
         }
