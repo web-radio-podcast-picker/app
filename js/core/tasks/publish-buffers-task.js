@@ -10,7 +10,10 @@ publishBuffersTasks = {
                     || !channel.isDisplayed)
             )
                 channel.measures.setData(
-                    [...getSamplesTask.dataArray]
+                    [...getSamplesTask.dataArray],
+                    [...getSamplesTask.fftDataArray],
+                    getSamplesTask.sampleRate,
+                    getSamplesTask.channelCount
                 );
         });
     }

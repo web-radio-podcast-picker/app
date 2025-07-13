@@ -13,9 +13,12 @@ channelsMeasuresTask = {
         // compute properties from the data buffer
         const m = channel.measures;
         const d = m.dataArray;
-        // instant volt
+        const f = m.fftDataArray;
+
+        // V instant
         channel.measures.setValue(channel, d[0]);
-        // min/max/avg
+
+        // V min/max/avg
         var vMin = Number.MAX_VALUE;
         var vMax = Number.MIN_VALUE;
         var vAvg = 0;
@@ -27,6 +30,32 @@ channelsMeasuresTask = {
         }
         if (d.length > 0)
             vAvg /= d.length;
-        channel.measures.setMeasures(channel, vMin, vMax, vAvg);
+
+        // frequency
+        var maxf = -Number.MAX_VALUE
+        var maxi = null
+        var n = f.length / m.channelCount
+        if (f != null) {
+            for (var i = 0; i < n; i++) {
+                const v = f[i];
+                if (v > maxf) {
+                    maxf = v
+                    maxi = i
+                }
+            }
+        }
+
+        var rt = n > 0 ? m.sampleRate / n : 0
+        var frq = 0
+        if (rt > 0) {
+            frq = (rt / 2.0) * (maxi + 1)
+        }
+
+        channel.measures.setMeasures(
+            channel,
+            vMin,
+            vMax,
+            vAvg,
+            frq);
     }
 }
