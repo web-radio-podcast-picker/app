@@ -2,7 +2,7 @@
 window.settings = {
 
     app: {
-        version: '0.4'
+        version: '0.5.1'
     },
 
     debug: {
