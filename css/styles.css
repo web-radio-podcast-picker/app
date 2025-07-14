@@ -137,7 +137,6 @@ div.channel-pane > span.label {
 .channel-menu-pane {
     display: flex;
     grid-column: span 16 !important;
-    margin-top: 1em;
 }
 
 div.channel-menu-pane > span.menu-item {
@@ -150,6 +149,7 @@ div.channel-menu-pane > span.menu-item {
     z-index: 20;
     opacity: 0.9;
     color: white;
+    background-color: darkblue;
 }
 
 .input-widget { 

@@ -5,6 +5,7 @@ ui = {
     oscilloscope: null,     // reference to the oscilloscope manager
     uiInitialized: false,   // indicates if ui is already globally initialized
     popupId: null,          // any id of an html popupId currently opened/showed
+    editChannel: null,      // channel edited if any
     $inputWidget: null,     // input widget if any
     $inputWidgetLabel: null, // input widget label of edited control if any
     inputWidgetControlId: null, // input widget binded edited control id if any
@@ -365,7 +366,7 @@ ui = {
         }
     },
 
-    togglePopup(control, popupId, showState) {
+    togglePopup(control, popupId, showState, align) {
         if (this.popupId != null && this.popupId != popupId) {
             // change popup
             const p = this.popupId;
@@ -408,10 +409,17 @@ ui = {
                 left = pos.left;
                 top = pos.top;
             } else {
-                // center
-                const vs = this.viewSize();
-                left = (vs.width - w) / 2.0;
-                top = (vs.height - h) / 2.0;
+                if (align == 'center-top') {
+                    const vs = this.viewSize();
+                    left = (vs.width - w) / 2.0;
+                    top = (vs.height - h) / 4.0;
+                }
+                else {
+                    // center
+                    const vs = this.viewSize();
+                    left = (vs.width - w) / 2.0;
+                    top = (vs.height - h) / 2.0;
+                }
             }
             this.popupCtrlId = control;
             $popup.css('left', left);
@@ -721,8 +729,16 @@ ui = {
     },
 
     toggleChannelSettings(channel) {
-        this.setupChannelSettingsPane(channel)
-        this.togglePopup(null, 'channel_settings_pane')
+        const curCh = this.editChannel
+        if (this.editChannel != null) {
+            this.togglePopup(null, 'channel_settings_pane', false)
+            this.editChannel = null
+        }
+        if (channel != curCh) {
+            this.editChannel = channel
+            this.setupChannelSettingsPane(channel)
+            this.togglePopup(null, 'channel_settings_pane', true, 'center-top')
+        }
     },
 
     viewSize() {
