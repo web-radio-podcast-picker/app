@@ -146,6 +146,7 @@ div.channel-menu-pane > span.menu-item {
 #channel_settings_label {
     writing-mode: vertical-rl;
     rotate: 180deg;
+    margin-right:0.5em;
 }
 
 #channel_settings_pane {

@@ -74,6 +74,7 @@ ui = {
         });
         // properties
         $('input').attr('autocomplete', 'off');
+        // bindins
         this.bind(this.binding(
             'app_ver',
             'settings.app.version',
@@ -81,6 +82,7 @@ ui = {
         // menus & popups
         this.initRightMenu();
         this.init_popups();
+        this.initChanelSettingsPane()
     },
 
     init_popups() {
@@ -357,12 +359,15 @@ ui = {
         if (visible)
             this.initBindedControls();
         else
-            this.closeInputWidget();
+            this.closeInputWidget(); 0
+    },
 
+    closePopup() {
+        if (this.popupId == null) return
         if (this.popupId != null) {
-            const p = this.popupId;
-            this.popupId = null;
-            this.togglePopup(null, p, false);
+            const p = this.popupId
+            this.popupId = null
+            this.togglePopup(null, p, false)
         }
     },
 
@@ -674,8 +679,16 @@ ui = {
 
     setupChannelSettingsPane(channel) {
         const $channelLabel = $('#channel_settings_label')
-        const id = channel.channelId;
-        this.setupChannelLabel($channelLabel, id, channel);
+        const id = channel.channelId
+        this.setupChannelLabel($channelLabel, id, channel)
+    },
+
+    initChanelSettingsPane() {
+        const $channelLabel = $('#channel_settings_label')
+        const t = this
+        $channelLabel.on('click', () => {
+            this.toggleChannelSettings(this.editChannel)
+        })
     },
 
     setupChannelLabel($channelLabel, id, channel) {
