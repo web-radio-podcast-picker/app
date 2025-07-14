@@ -353,7 +353,7 @@ ui = {
         const $mb = $('#top-right-menu-body');
         $mb.toggleClass('hidden');
         const visible = !$mb.hasClass('hidden');
-        $('#btn_menu').text(visible ? '▼' : '▲');
+        $('#btn_menu').text(!visible ? '▼' : '▲');
         if (visible)
             this.initBindedControls();
         else
@@ -668,8 +668,14 @@ ui = {
     },
 
     setupChannelSettingsPane(channel) {
-        const $model = $('#ch_settings_').clone();
+        const $channelLabel = $('#channel_settings_label')
         const id = channel.channelId;
+        this.setupChannelLabel($channelLabel, id, channel);
+    },
+
+    setupChannelLabel($channelLabel, id, channel) {
+        $channelLabel.text('CH' + id);
+        $channelLabel.css('background-color', channel.color);
     },
 
     addControls(channel) {
@@ -687,7 +693,7 @@ ui = {
 
         $channelLabel = $model.find('#channel_label_');
         $channelLabel.attr('id', $channelLabel.attr('id') + id);
-        $channelLabel.text('CH' + id);
+        this.setupChannelLabel($channelLabel, id, channel);
 
         const $elems = $model.find('*');
         const $unit = $model.find('.unit');
@@ -773,3 +779,4 @@ ui = {
         return updated;
     }
 }
+
