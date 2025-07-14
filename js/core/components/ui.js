@@ -409,16 +409,21 @@ ui = {
                 left = pos.left;
                 top = pos.top;
             } else {
-                if (align == 'center-top') {
-                    const vs = this.viewSize();
+                const vs = this.viewSize()
+                if (align == 'center-middle-top') {
                     left = (vs.width - w) / 2.0;
                     top = (vs.height - h) / 4.0;
                 }
                 else {
-                    // center
-                    const vs = this.viewSize();
-                    left = (vs.width - w) / 2.0;
-                    top = (vs.height - h) / 2.0;
+                    if (align == 'center-top') {
+                        left = (vs.width - w) / 2.0;
+                        top = 12;
+                    }
+                    else {
+                        // center
+                        left = (vs.width - w) / 2.0;
+                        top = (vs.height - h) / 2.0;
+                    }
                 }
             }
             this.popupCtrlId = control;
@@ -721,7 +726,7 @@ ui = {
             toggleControls();
         });
         $channelLabel.on('click', () => {
-            toggleControls();
+            this.toggleChannelSettings(channel)
         });
 
         $('#channels_shortcuts_deck').append($channelShortcut);
