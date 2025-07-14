@@ -15,7 +15,7 @@ ui = {
         this.oscilloscope = oscilloscope;
         this.oscilloscope.channels.forEach(channel => {
             if (!channel.ui) {
-                this.init_btns(channel.channelId, channel.view);
+                this.init_btns(channel, channel.view);
                 channel.ui = true;
             }
         });
@@ -29,8 +29,10 @@ ui = {
     init_btns(channel, sigView) {
         // Initialize buttons and other UI elements for a channel
 
-        // channel pause buttons
-        const $e = $('#btn_pause_' + channel);
+        const id = channel.channelId
+
+        // id pause buttons
+        const $e = $('#btn_pause_' + id);
         const fn = () => {
             if (!sigView.pause) {
                 $e.text('⏸');
@@ -45,17 +47,17 @@ ui = {
         });
 
         // close
-        $('#btn_closech_' + channel).on('click', () => {
-            app.deleteChannel(channel);
+        $('#btn_closech_' + id).on('click', () => {
+            app.deleteChannel(id);
         });
 
         // settings
-        $('#btn_chsett_' + channel).on('click', () => {
-            this.editChannelSettings(channel);
+        $('#btn_chsett_' + id).on('click', () => {
+            this.toggleChannelSettings(channel);
         });
 
         // visible
-        const $vb = $('#btn_viewch_' + channel);
+        const $vb = $('#btn_viewch_' + id);
         $vb.on('click', () => {
             $vb.toggleClass('line-through');
             sigView.visible = !sigView.visible;
@@ -415,6 +417,8 @@ ui = {
             $popup.css('left', left);
             $popup.css('top', top);
         }
+        if (!$popup.hasClass('hidden'))
+            this.closeInputWidget()
     },
 
     turnOffMenu() {
@@ -655,23 +659,32 @@ ui = {
         this.$inputWidget = $w;
     },
 
+    setupChannelSettingsPane(channel) {
+        const $model = $('#ch_settings_').clone();
+        const id = channel.channelId;
+    },
+
     addControls(channel) {
-        const $model = $('#channel_pane').clone();
+        const $model = $('#channel_pane_').clone();
         $model.removeClass('hidden');
         const id = channel.channelId;
-        $model.attr('id', 'channel_pane_' + id);
+        $model.attr('id', $model.attr('id') + id);
+
         const colors = settings.oscilloscope.channels.colors;
         const colLength = colors.length;
         const colIndex = (id - 1) % colLength;
         const col = colors[colIndex];
         $model.css('color', col);
         channel.color = col;
+
         $channelLabel = $model.find('#channel_label_');
         $channelLabel.attr('id', $channelLabel.attr('id') + id);
         $channelLabel.text('CH' + id);
+
         const $elems = $model.find('*');
         const $unit = $model.find('.unit');
         $unit.css('color', col);
+
         $.each($elems, (i, e) => {
             var $e = $(e);
             var eid = $e.attr('id');
@@ -682,6 +695,7 @@ ui = {
                 $e.css('background-color', col);
             }
         });
+
         $('#channels_infos_deck').append($model);
         $channelShortcut = $channelLabel.clone();
         $channelShortcut.attr('id', 's_' + $channelLabel.attr('id'));
@@ -706,8 +720,9 @@ ui = {
         $('#s_channel_label_' + id).remove();
     },
 
-    editChannelSettings(channel) {
-
+    toggleChannelSettings(channel) {
+        this.setupChannelSettingsPane(channel)
+        this.togglePopup(null, 'channel_settings_pane')
     },
 
     viewSize() {

@@ -208,7 +208,7 @@
 
     <!-- channels controls -->
 
-    <div id="channel_pane" class="channel-pane top-pane row-pane hidden">
+    <div id="channel_pane_" class="channel-pane top-pane row-pane hidden">
         <span id="channel_label_" class="gr1 gc1 label channel-label">CH1</span>
 
         <span class="gr1 gc2 label">src</span>
@@ -217,8 +217,8 @@
         <span class="gr1 gc4 label">✕t</span>
         <span id="xscale_" class="gr1 gc5 value short-value"></span>
 
-        <span class="gr1 gc6 label">✕V</span>
-        <span id="yscale_" class="gr1 gc7 value short-value"></span>
+        <span class="gr2 gc4 label">✕V</span>
+        <span id="yscale_" class="gr2 gc5 value short-value"></span>
 
         <span class="gr1 gc8 label">Vins</span>
         <span id="iv_" class="gr1 gc9 value long-value"></span>
@@ -256,9 +256,24 @@
             <button type="button" class="btn-ch btn-bluegreen left-margin" id="btn_pause_">▶</button>
             <button type="button" class="btn-ch btn-bluegreen dleft-margin" id="btn_viewch_">⌾</button>
             <button type="button" class="btn-ch btn-blue dleft-margin" id="btn_chsett_">⚙</button>
-            <button type="button" class="btn-ch btn-red dleft-margin" id="btn_closech_">✕</button>
         </div>
 
+        <button type="button" class="gr1 gc16 btn-ch btn-red dleft-margin" id="btn_closech_">✕</button>
+
+    </div>
+
+    <!-- chennel settings pane -->
+
+    <div id="channel_settings_pane" class="hidden">
+        <div class="channel-menu-pane">
+            <span id="btn_ch_src" class="menu-item menu-item-blue">SRC</span>
+            <span id="btn_ch_trig" class="menu-item menu-item-blue">TRIG</span>
+            <span id="btn_ch_fft" class="menu-item menu-item-blue">FFT</span>
+            <span id="btn_ch_gen" class="menu-item menu-item-blue">GEN</span>
+            <span id="btn_ch_out" class="menu-item menu-item-blue">OUT</span>
+            <span id="btn_ch_out" class="menu-item menu-item-blue">FILT</span>
+            <span id="btn_ch_out" class="menu-item menu-item-blue">EFF</span>
+        </div>
     </div>
 
 </body>

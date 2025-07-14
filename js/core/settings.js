@@ -2,7 +2,7 @@
 window.settings = {
 
     app: {
-        version: '0.5.1'
+        version: '0.6'
     },
 
     debug: {
@@ -49,7 +49,7 @@ window.settings = {
     },
 
     ui: {
-        maxRefreshRate: 240,    // maximum views refresh rate in Fps
+        maxRefreshRate: 25,    // maximum views refresh rate in Fps
         clientWidthBorder: 4,   // default border width for client area
         clientHeightBorder: 2,  // default border height for client area
         menuContainerWidth: 42  // 3 * 1em

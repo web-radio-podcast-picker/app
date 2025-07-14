@@ -134,6 +134,24 @@ div.channel-pane > span.label {
     align-items: baseline;
 }
 
+.channel-menu-pane {
+    display: flex;
+    grid-column: span 16 !important;
+    margin-top: 1em;
+}
+
+div.channel-menu-pane > span.menu-item {
+    margin-right: 0.5em;
+}
+
+#channel_settings_pane {
+    position: absolute;
+    padding: 1em;
+    z-index: 20;
+    opacity: 0.9;
+    color: white;
+}
+
 .input-widget { 
     position: absolute;
     z-index: 40;
@@ -376,6 +394,12 @@ div.popup-grid > span.menu-item {
 .gc14 {
     grid-column: 14;
 }
+.gc15 {
+    grid-column: 15;
+}
+.gc16 {
+    grid-column: 16;
+}
 .gr1 {
     grid-row: 1;
 }
@@ -550,7 +574,7 @@ div.popup-grid > span.menu-item {
 }
 
 .row-pane:hover {
-    background-color: #00008bcc;
+    /*background-color: #00008bcc;*/
 }
 
 #bottom-pane {
