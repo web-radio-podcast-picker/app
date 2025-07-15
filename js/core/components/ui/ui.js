@@ -185,7 +185,9 @@ ui = {
 
     selectTab(selectedTabId, tabs) {
         const panes = [...tabs];
-        const btIdToPaneId = t => t.replace('btn_', 'opts_');
+        const btIdToPaneId = t => {
+            return t.replace('btn_', 'opts_');
+        }
         panes.forEach((v, i) => {
             panes[i] = btIdToPaneId(panes[i]);
         });

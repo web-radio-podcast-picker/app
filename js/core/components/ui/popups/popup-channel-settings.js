@@ -9,6 +9,15 @@ class PopupChannelSettings {
         $channelLabel.on('click', () => {
             this.toggleChannelSettings(this.editChannel)
         })
+        ui.initTabs(
+            'btn_ch_src',
+            'btn_ch_disp',
+            'btn_ch_trig',
+            'btn_ch_fft',
+            'btn_ch_out',
+            'btn_ch_filt',
+            'btn_ch_eff'
+        )
     }
 
     setupChannelSettingsPane(channel) {

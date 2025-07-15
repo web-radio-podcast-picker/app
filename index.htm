@@ -16,7 +16,7 @@
     <script src="./js/ext/jquery-3.7.1.min.js"></script>
     <!-- settings -->
     <script src="./js/core/settings.js"></script>
-    <!-- kernel loader -->
+    <!-- code loader -->
     <script src="./js/core/globals.js"></script>
     <script src="./js/core/libs/converters.js"></script>
     <script src="./js/core/libs/data.js"></script>
@@ -270,24 +270,45 @@
     <!-- chennel settings pane -->
 
     <div id="channel_settings_pane" class="hidden">
+        <!-- tabs -->
         <div class="channel-menu-pane">
             <span id="channel_settings_label" class="label channel-label">CH1</span>
-            <span id="btn_ch_src" class="menu-item menu-item-blue">SRC</span>
+            <span id="btn_ch_src" class="menu-item menu-item-blue selected">SRC</span>
             <span id="btn_ch_disp" class="menu-item menu-item-blue">DISP</span>
             <span id="btn_ch_trig" class="menu-item menu-item-blue">TRIG</span>
             <span id="btn_ch_fft" class="menu-item menu-item-blue">FFT</span>
             <span id="btn_ch_out" class="menu-item menu-item-blue">OUT</span>
-            <span id="btn_ch_out" class="menu-item menu-item-blue">FILT</span>
-            <span id="btn_ch_out" class="menu-item menu-item-blue no-margin">EFF</span>
+            <span id="btn_ch_filt" class="menu-item menu-item-blue">FILT</span>
+            <span id="btn_ch_eff" class="menu-item menu-item-blue no-margin">EFF</span>
         </div>
-        <div class="channel-menu-pane-horiz-separator">
 
+        <div class="channel-menu-pane-horiz-separator"></div>
+
+        <!-- SRC -->
+        <div id="opts_ch_src" class="channel-menu-pane">
         </div>
-        <div class="channel-menu-pane">
-            <span id="channel_settings_label" class="label channel-label on-off-label">ON</span>
+        <!-- DISP -->
+        <div id="opts_ch_disp" class="channel-menu-pane hidden">
+            <span id="btn_ch_disp_onoff" class="label channel-label on-off-label on">ON</span>
+        </div>
+        <!-- TRIG -->
+        <div id="opts_ch_trig" class="channel-menu-pane hidden">
+            <span id="btn_ch_trg_onoff" class="label channel-label on-off-label off">OFF</span>
             <span id="btn_ch_trg_w1" class="menu-item menu-item-blue">way1</span>
             <span id="btn_ch_trg_w2" class="menu-item menu-item-blue">way2</span>
         </div>
+        <!-- FFT -->
+        <div id="opts_ch_fft" class="channel-menu-pane hidden">
+            <span id="btn_ch_fft_onoff" class="label channel-label on-off-label off">OFF</span>
+        </div>
+        <!-- OUT -->
+        <div id="opts_ch_out" class="channel-menu-pane hidden">
+            <span id="btn_ch_out_onoff" class="label channel-label on-off-label off">OFF</span>
+        </div>
+        <!-- FILT -->
+        <div id="opts_ch_filt" class="channel-menu-pane hidden">
+        </div>
+
     </div>
 
 </body>
