@@ -33,6 +33,9 @@ class Channel {
 
     ui = false;                 // indicates if ui is built for this channel
 
+    triggerOn = false;          // trigger enabled
+    triggerKind = null;
+
     constructor(channelId, sourceId) {
         this.channelId = channelId;
         this.sourceId = sourceId;

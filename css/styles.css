@@ -122,6 +122,16 @@ div.channel-pane > span.label {
     cursor: pointer;
 }
 
+.on-off-label {
+    background-color: rgb(0, 141, 110);    
+    color: #00FF00 !important;
+}
+
+.on-off-label:hover {
+    background-color: darlgreen !important;
+    color: #ffffffaa !important;
+}
+
 #channels-deck {
     position: absolute;
     width: calc(100% - 120px);
@@ -132,6 +142,13 @@ div.channel-pane > span.label {
     display: grid;
     grid-auto-columns: min-content;
     align-items: baseline;
+}
+
+.channel-menu-pane-horiz-separator {
+    margin-top: Calc(0.5em + 1px);
+    margin-bottom: 0.5em;
+    height: 1px;
+    border-top: #0077FF77 solid 1px;
 }
 
 .channel-menu-pane {
@@ -156,6 +173,7 @@ div.channel-menu-pane > span.menu-item {
     opacity: 0.9;
     color: white;
     background-color: darkblue;
+    border: #FFFF0077 solid 1px;
 }
 
 .input-widget { 
@@ -252,6 +270,7 @@ div#iw_delta_pane > button {
     z-index: 20;
     opacity: 0.9;
     color: white;
+    border: #FFFF0077 solid 1px;
 }
 
 .popup-grid {
@@ -514,6 +533,10 @@ div.popup-grid > span.menu-item {
 
 .no-pointer {
     cursor: default;
+}
+
+.no-margin {
+    margin: 0px !important;
 }
 
 .btn-sub {

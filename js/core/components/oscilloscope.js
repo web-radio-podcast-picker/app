@@ -44,7 +44,7 @@ oscilloscope = {
         channel.view.init(app.canvas, channel);
         this.channels.push(channel);
         // add controls for the Channel
-        ui.addControls(channel);
+        ui.channels.addControls(channel);
     },
 
     async createChannel(sourceId, source) {

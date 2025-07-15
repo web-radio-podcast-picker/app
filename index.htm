@@ -35,7 +35,12 @@
     <script src="./js/core/tasks/request-animation-frame-task.js"></script>
     <script src="./js/core/tasks/publish-buffers-task.js"></script>
     <script src="./js/core/tasks/channels-measures-task.js"></script>
-    <script src="./js/core/components/ui.js"></script>
+    <script src="./js/core/components/ui/popups/input-widgets.js"></script>
+    <script src="./js/core/components/ui/popups/popup-channel-settings.js"></script>
+    <script src="./js/core/components/ui/popups/popup-settings.js"></script>
+    <script src="./js/core/components/ui/channels.js"></script>
+    <script src="./js/core/components/ui/oscillo-menu.js"></script>
+    <script src="./js/core/components/ui/ui.js"></script>
     <script src="./js/core/app.js"></script>
 
     <!-- should have http header Permissions-policy: audio -->
@@ -271,10 +276,17 @@
             <span id="btn_ch_disp" class="menu-item menu-item-blue">DISP</span>
             <span id="btn_ch_trig" class="menu-item menu-item-blue">TRIG</span>
             <span id="btn_ch_fft" class="menu-item menu-item-blue">FFT</span>
-            <span id="btn_ch_gen" class="menu-item menu-item-blue">GEN</span>
             <span id="btn_ch_out" class="menu-item menu-item-blue">OUT</span>
             <span id="btn_ch_out" class="menu-item menu-item-blue">FILT</span>
-            <span id="btn_ch_out" class="menu-item menu-item-blue">EFF</span>
+            <span id="btn_ch_out" class="menu-item menu-item-blue no-margin">EFF</span>
+        </div>
+        <div class="channel-menu-pane-horiz-separator">
+
+        </div>
+        <div class="channel-menu-pane">
+            <span id="channel_settings_label" class="label channel-label on-off-label">ON</span>
+            <span id="btn_ch_trg_w1" class="menu-item menu-item-blue">way1</span>
+            <span id="btn_ch_trg_w2" class="menu-item menu-item-blue">way2</span>
         </div>
     </div>
 

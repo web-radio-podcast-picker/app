@@ -174,7 +174,7 @@ app = {
         if (channel == null)
             console.error('channel not found', channelId);
         else {
-            ui.removeControls(channel);
+            ui.channels.removeControls(channel);
             oscilloscope.removeChannel(channel);
             this.requestAnimationFrame();
         }
@@ -212,7 +212,7 @@ app = {
 
     performTogglePause() {
         oscilloscope.pause = !oscilloscope.pause;
-        ui.reflectOscilloPauseState();
+        ui.oscilloMenu.reflectOscilloPauseState();
         if (!oscilloscope.pause)
             app.requestAnimationFrame();
     }
