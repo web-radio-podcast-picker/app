@@ -52,7 +52,7 @@ class PopupChannelSettings {
         const $channelLabel = $('#channel_settings_label')
         const id = channel.channelId
         ui.channels.setupChannelLabel($channelLabel, id, channel)
-        this.paneDisp.setup(channel)
+        this.paneSrcAudio.setup(channel)
         ui.updateToggles()
     }
 
@@ -73,5 +73,9 @@ class PopupChannelSettings {
         this.paneSrcAudio.updatePause()
         this.paneSrcGen.updatePause()
         this.paneSrcMath.updatePause()
+    }
+
+    tabChanged($c) {
+
     }
 }

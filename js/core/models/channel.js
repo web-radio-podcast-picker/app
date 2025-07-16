@@ -44,4 +44,11 @@ class Channel {
         this.view = new SignalView();
         this.measuresView.init(this, this.measures);
     }
+
+    // unset channel source
+    deleteSource() {
+        this.sourceId = Source_Id_None
+        this.streamSource = null
+        this.analyzer = null
+    }
 }

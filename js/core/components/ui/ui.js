@@ -255,6 +255,7 @@ ui = {
     selectTab(selectedTabId, tabs) {
         const panes = [...tabs];
         const btIdToPaneId = t => {
+            if (t === undefined || t == null) return null
             return t.replace('btn_', 'opts_');
         }
         panes.forEach((v, i) => {

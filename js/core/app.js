@@ -80,7 +80,6 @@ app = {
         // build a channel for the default audio input device
         const channel = await oscilloscope.createChannel(
             Source_Id_AudioInput, audioInputDevice);
-        channel.vScale = settings.audioInput.vScale;
         return channel;
     },
 
@@ -161,9 +160,47 @@ app = {
         });
     },
 
+    async setChannelSource(channel, sourceId) {
+        if (channel.sourceId == sourceId) return
+        switch (sourceId) {
+            case Source_Id_AudioInput:
+                this.setChannelSourceAudioInput(channel)
+                break;
+            case Source_Id_Ext:
+                this.setChannelSourceExt(channel)
+                break;
+            case Source_Id_Generator:
+                this.setChannelSourceGenerator(channel)
+                break;
+            case Source_Id_Math:
+                this.setChannelSourceMath(channel)
+                break;
+        }
+    },
+
+    async setChannelSourceAudioInput(channel) {
+        await oscilloscope.initChannelFromSource(
+            channel,
+            Source_Id_AudioInput,
+            audioInputDevice)
+    },
+
+    async setChannelSourceExt(channel) {
+
+    },
+
+    async setChannelSourceGenerator(channel) {
+
+    },
+
+    async setChannelSourceMath(channel) {
+
+    },
+
     async addChannel() {
         const channel = await oscilloscope.createChannel(
-            Source_Id_AudioInput, audioInputDevice);
+            //    Source_Id_AudioInput, audioInputDevice);
+            Source_Id_None, null);
         oscilloscope.addChannel(channel);
         this.initUI();
         this.requestAnimationFrame();

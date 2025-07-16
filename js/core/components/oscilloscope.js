@@ -60,18 +60,24 @@ oscilloscope = {
         if (source != null || source != undefined) {
 
             // source provided
-            await this.initChannelFromSource(channel, source);
+            await this.initChannelFromSource(channel, sourceId, source);
 
         } else {
             // dynamic source from classname (sourceId)
+            // @TODO: NOT IMPLEMENTED
         }
 
         return channel;
     },
 
-    async initChannelFromSource(channel, source) {
+    async initChannelFromSource(channel, sourceId, source) {
+        channel.deleteSource()
+        channel.sourceId = sourceId
         channel.source = source;
-        channel.stream = await channel.source.getMediaStream();
+        if (channel.source != null)
+            channel.stream = await channel.source.getMediaStream();
+        if (sourceId == Source_Id_AudioInput)
+            channel.vScale = settings.audioInput.vScale
         this.audioContext = new AudioContext(); // not before getMediaStream
 
         if (channel.stream != undefined) {
