@@ -14,9 +14,6 @@ class OscilloMenu {
             if (app.powerOn)
                 window.location.reload(false);
         });
-        /*$('#btn_power').on('click', () => {
-            app.togglePower();
-        });*/
         $('#btn_opause').on('click', () => {
             if (app.powerOn)
                 app.toggleOPause();
