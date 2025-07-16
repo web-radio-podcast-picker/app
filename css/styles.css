@@ -162,11 +162,36 @@ div.channel-pane > span.label {
     align-items: baseline;
 }
 
+.channel-opts-pane {
+    display: inline-block;
+}
+
 .channel-menu-pane-horiz-separator {
     margin-top: Calc(0.5em + 1px);
     margin-bottom: 0.5em;
     height: 1px;
     border-top: #0077FFDD solid 1px;
+}
+
+.channel-submenu-pane {
+    /*diplay: grid;*/
+}
+
+div.channel-submenu-pane > span.menu-item {
+    margin-right: 0.25em !important;
+}
+
+div.channel-opts-pane span.opt-label,
+div.channel-opts-pane span.opt-value-edit {
+    margin-left: 0px !important;
+}
+
+div.channel-opts-pane span.opt-value-with-unit {
+    margin-right: 0px !important;
+}
+
+div.channel-opts-pane span.unit {
+    margin-right: 1em !important;
 }
 
 .channel-menu-pane {
@@ -558,6 +583,9 @@ div.popup-grid > span.menu-item {
 
 .no-margin {
     margin: 0px !important;
+}
+.top-dmargin {
+    margin-top: 0.5em !important;
 }
 
 .btn-sub {

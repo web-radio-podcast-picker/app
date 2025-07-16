@@ -286,15 +286,29 @@
 
         <!-- SRC -->
 
-        <div id="opts_ch_src" class="channel-menu-pane">
+        <div id="opts_ch_src" class="channel-submenu-pane">
+            <!-- tabs -->
             <span id="btn_ch_src_audio" class="menu-item menu-item-blue">Audio Input</span>
             <span id="btn_ch_src_ext" class="menu-item menu-item-blue menu-item-disabled">Ext</span>
             <span id="btn_ch_src_gen" class="menu-item menu-item-blue">Generator</span>
             <span id="btn_ch_src_math" class="menu-item menu-item-blue">Math</span>
-            <div id="opts_ch_src_audio hidden"></div>
-            <div id="opts_ch_src_ext hidden"></div>
-            <div id="opts_ch_src_gen hidden"></div>
-            <div id="opts_ch_src_math hidden"></div>
+
+            <div class="channel-menu-pane-horiz-separator"></div>
+
+            <!-- src audio -->
+            <div id="opts_ch_src_audio" class="channel-opts-pane hidden">
+                <div class="top-dmargin">
+                    <span class="opt-label">sample rate</span>
+                    <span id="opt_ch_os_smpfrqcy" class="opt-value-edit opt-value-with-unit read-only">48000</span>
+                    <span class="unit">Hz</span>
+                </div>
+            </div>
+            <!-- src ext -->
+            <div id="opts_ch_src_ext" class="channel-opts-pane hidden"></div>
+            <!-- src gen -->
+            <div id="opts_ch_src_gen" class="channel-opts-pane hidden"></div>
+            <!-- src math -->
+            <div id="opts_ch_src_math" class="channel-opts-pane hidden"></div>
         </div>
 
         <!-- DISP -->

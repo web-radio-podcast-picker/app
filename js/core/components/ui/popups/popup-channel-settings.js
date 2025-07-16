@@ -36,9 +36,18 @@ class PopupChannelSettings {
             this.audioSrcMap[t[0]] = t[1]
         });
         ui.initTabs(this.tabs)
+        this.initTabSrc()
+    }
+
+    initTabSrc() {
+        const readOnly = { readOnly: true };
         ui.initTabs(this.audioSrcTabs)
         if (!settings.extInput.enabled)
             $('#btn_ch_src_ext').addClass('menu-item-disabled')
+        ui.bind(ui.binding(
+            'opt_ch_os_smpfrqcy',
+            'app.audioInputChannel.streamSource.context.sampleRate',
+            readOnly));
     }
 
     setupChannelSettingsPane(channel) {
