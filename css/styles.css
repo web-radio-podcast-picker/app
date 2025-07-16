@@ -584,9 +584,15 @@ div.popup-grid > span.menu-item {
 .no-margin {
     margin: 0px !important;
 }
+
 .top-dmargin {
     margin-top: 0.5em !important;
 }
+
+.bottom-dpadding {
+    padding-bottom: 0.5em !important;
+}
+
 
 .btn-sub {
     cursor: pointer;
