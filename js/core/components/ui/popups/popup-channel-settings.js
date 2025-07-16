@@ -52,6 +52,14 @@ class PopupChannelSettings {
             'opt_ch_os_frequencyBinCount',
             'app.audioInputChannel.analyzer.frequencyBinCount',
             readOnly));
+        ui.bind(ui.binding(
+            'opt_ch_os_inputChannelsCount',
+            'settings.audioInput.channelsCount',
+            readOnly));
+        ui.bind(ui.binding(
+            'opt_ch_os_inputVscale',
+            'settings.audioInput.vScale',
+            readOnly));
     }
 
     setupChannelSettingsPane(channel) {
