@@ -199,7 +199,6 @@ app = {
 
     async addChannel() {
         const channel = await oscilloscope.createChannel(
-            //    Source_Id_AudioInput, audioInputDevice);
             Source_Id_None, null);
         oscilloscope.addChannel(channel);
         this.initUI();
