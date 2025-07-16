@@ -9,11 +9,11 @@ class PopupSettings {
         const readOnly = { readOnly: true };
 
         // groups
-        ui.initTabs(
+        ui.initTabs([
             'btn_os_grid',
             'btn_os_disp',
             'btn_os_in',
-            'btn_os_out');
+            'btn_os_out']);
 
         // display
         ui.bind(ui.binding(

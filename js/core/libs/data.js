@@ -14,7 +14,7 @@ function deepClone(obj) {
     if (obj instanceof Array) {
         var copy = [];
         for (var i = 0, len = obj.length; i < len; i++) {
-            copy[i] = cloneSO(obj[i]);
+            copy[i] = deepClone(obj[i]);
         }
         return copy;
     }

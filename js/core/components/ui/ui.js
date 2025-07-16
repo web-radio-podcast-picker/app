@@ -172,13 +172,18 @@ ui = {
         binding.onChange();
     },
 
-    initTabs(...tabs) {
+    initTabs(tabs, opts) {
         const t = this;
+        if (opts === undefined || opts == null) opts = {}
         tabs.forEach(e => {
             const $c = $('#' + e);
             $c.on('click', () => {
-                if (!$c.hasClass('selected'))
+                if (!$c.hasClass('selected')
+                    && !$c.hasClass('menu-item-disabled')) {
+                    if (opts.onChange)
+                        opts.onChange($c)
                     t.selectTab($c.attr('id'), tabs);
+                }
             });
         });
     },
