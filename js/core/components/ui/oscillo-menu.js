@@ -14,23 +14,30 @@ class OscilloMenu {
             if (app.powerOn)
                 window.location.reload(false);
         });
-        $('#btn_power').on('click', () => {
+        /*$('#btn_power').on('click', () => {
             app.togglePower();
-        });
+        });*/
         $('#btn_opause').on('click', () => {
-            app.toggleOPause();
+            if (app.powerOn)
+                app.toggleOPause();
         });
         $('#btn_oset').on('click', () => {
-            ui.togglePopup(null, 'pop_settings');
-            ui.inputWidgets.closeInputWidget();
+            if (app.powerOn) {
+                ui.togglePopup(null, 'pop_settings');
+                ui.inputWidgets.closeInputWidget();
+            }
         });
         $('#vdiv').on('click', () => {
-            ui.inputWidgets.openInputWidget('opt_os_dv',
-                { targetControlId: 'vdiv' })
+            if (app.powerOn) {
+                ui.inputWidgets.openInputWidget('opt_os_dv',
+                    { targetControlId: 'vdiv' })
+            }
         });
         $('#tdiv').on('click', () => {
-            ui.inputWidgets.openInputWidget('opt_os_dt',
-                { targetControlId: 'tdiv' })
+            if (app.powerOn) {
+                ui.inputWidgets.openInputWidget('opt_os_dt',
+                    { targetControlId: 'tdiv' })
+            }
         });
     }
 
@@ -47,14 +54,5 @@ class OscilloMenu {
             ui.initBindedControls();
         else
             ui.inputWidgets.closeInputWidget(); 0
-    }
-
-    // @TODO: NOT USED
-    turnOffMenu() {
-        const t = ['#btn_add_ch', '#btn_restart', '#btn_opause'];
-        t.forEach(b => {
-            $(b)
-                .toggleClass('menu-item-disabled');
-        });
     }
 }

@@ -188,14 +188,18 @@ app = {
         this.requestAnimationFrame();
     },
 
+    // @TODO: NOT USED
     togglePower() {
         if (this.powerOn) {
-            this.deleteAllChannels();
-            ui.turnOffMenu();
-            this.powerOn = false;
+            this.deleteAllChannels()
+            ui.oscilloMenu.turnOffMenu()
+            ui.closePopup()
+            ui.inputWidgets.closeInputWidget()
+            this.powerOn = false
+            this.updateDisplay()
         }
         else {
-            window.location.reload(false);
+            window.location.reload(false)
         }
     },
 
