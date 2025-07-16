@@ -9,6 +9,8 @@ class SignalMeasuresView {
     }
 
     run() {
+        if (!this.channel.view.visible) return
+
         const c = this.channel.channelId;
         $('#csid_' + c).text(this.channel.sourceId);
 

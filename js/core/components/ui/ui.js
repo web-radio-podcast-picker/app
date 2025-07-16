@@ -8,6 +8,7 @@ ui = {
     popupId: null,          // any id of an html popupId currently opened/showed
     popupCtrlId: null,      // popup control placement if any else null
     bindings: [],           // array of bindings for controls
+    toggles: [],
     oscilloMenu: new OscilloMenu(),
     channels: new Channels(),
     popupSettings: new PopupSettings(),
@@ -47,7 +48,7 @@ ui = {
         // menus & popups
         this.oscilloMenu.initMenu();
         this.init_popups();
-        this.channels.popupSettings.initChannelSettingsPane()
+        this.channels.popupSettings.init()
     },
 
     init_popups() {
@@ -151,6 +152,7 @@ ui = {
         }
 
         this.bindings.push({ init: init, onChange: onChange, props: binding });
+        return this
     },
 
     getBinding(controlId) {
@@ -172,14 +174,65 @@ ui = {
         binding.onChange();
     },
 
-    initToggle(controlId, onChange) {
+    setToggle(controlId, state) {
         const $c = $('#' + controlId)
-        $c.on('click', () => {
-            onChange($c)
-            $c.toggleClass('on')
-            $c.toggleClass('off')
-            $c.text($c.hasClass('on') ? 'ON' : 'OFF')
+        const path = $c.attr('tag')
+        const hasPath = path !== undefined && path != null
+        const inverted = $c.attr('data-inverted') == 'true'
+        const vstate = inverted ? !state : state
+
+        if (vstate) {
+            $c.addClass('on')
+            $c.removeClass('off')
+        }
+        else {
+            $c.addClass('off')
+            $c.removeClass('on')
+        }
+
+        $c.text(vstate ? 'ON' : 'OFF')
+
+        if (hasPath)
+            eval(path + '=' + state)
+        return this
+    },
+
+    updateToggle(controlId) {
+        const $c = $('#' + controlId)
+        const path = $c.attr('tag')
+        const hasPath = path !== undefined && path != null
+        if (hasPath) {
+            // eval context is ui
+            const val = eval(path)
+            this.setToggle(controlId, val)
+        }
+    },
+
+    updateToggles() {
+        const t = this
+        this.toggles.forEach(cid => {
+            const $c = $('#' + cid)
+            t.updateToggle(cid)
         })
+    },
+
+    initToggle(controlId, onChange, path, inverted) {
+        const $c = $('#' + controlId)
+        const hasPath = path !== undefined && path != null
+        if (hasPath)
+            $c.attr('tag', path)
+        if (inverted === undefined || inverted == null)
+            inverted = false
+        $c.attr('data-inverted', inverted ? 'true' : 'false')
+
+        $c.on('click', () => {
+            this.setToggle(controlId,
+                $c.hasClass(
+                    inverted ? 'on' : 'off'))
+            if (onChange != undefined && onChange != null) onChange($c)
+        })
+        this.toggles.push(controlId)
+        return this
     },
 
     initTabs(tabs, opts) {
@@ -195,7 +248,8 @@ ui = {
                     t.selectTab($c.attr('id'), tabs);
                 }
             });
-        });
+        })
+        return this
     },
 
     selectTab(selectedTabId, tabs) {

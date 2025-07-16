@@ -3,6 +3,15 @@ class Channels {
 
     popupSettings = new PopupChannelSettings()
 
+    setPauseButton(id, pause) {
+        const $e = $('#btn_pause_' + id);
+        if (!pause) {
+            $e.text('⏸');
+        } else {
+            $e.text('▶');
+        }
+    }
+
     init_channel_btns(channel, sigView) {
         // Initialize buttons and other UI elements for a channel
 
@@ -11,16 +20,13 @@ class Channels {
         // id pause buttons
         const $e = $('#btn_pause_' + id);
         const fn = () => {
-            if (!sigView.pause) {
-                $e.text('⏸');
-            } else {
-                $e.text('▶');
-            }
+            this.setPauseButton(id, sigView.pause)
         }
         fn(); // Set initial button text
         $e.on('click', () => {
             sigView.pause = !sigView.pause;
             fn();
+            this.popupSettings.paneSrcAudio.updatePause()
         });
 
         // close
@@ -38,8 +44,22 @@ class Channels {
         $vb.on('click', () => {
             $vb.toggleClass('line-through');
             sigView.visible = !sigView.visible;
+            this.popupSettings.paneDisp.updateVisible()
             app.requestAnimationFrame();
         });
+    }
+
+    updatePause(channel) {
+        this.setPauseButton(channel.channelId, channel.view.pause)
+    }
+
+    updateVisible(channel) {
+        const $vb = $('#btn_viewch_' + channel.channelId);
+        if (channel.view.visible)
+            $vb.removeClass('line-through');
+        else
+            $vb.addClass('line-through');
+        app.requestAnimationFrame();
     }
 
     toggleVisible(channel) {
