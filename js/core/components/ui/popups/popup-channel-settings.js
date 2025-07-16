@@ -36,7 +36,12 @@ class PopupChannelSettings {
             this.audioSrcMap[t[0]] = t[1]
         });
         ui.initTabs(this.tabs)
+        this.initTabs()
+    }
+
+    initTabs() {
         this.initTabSrc()
+            .initTabDisp()
     }
 
     initTabSrc() {
@@ -60,6 +65,14 @@ class PopupChannelSettings {
             'opt_ch_os_inputVscale',
             'settings.audioInput.vScale',
             readOnly));
+        return this
+    }
+
+    initTabDisp() {
+        ui.initToggle('btn_ch_disp_onoff',
+            () => ui.channels.toggleVisible(this.editChannel)
+        )
+        return this
     }
 
     setupChannelSettingsPane(channel) {

@@ -42,6 +42,11 @@ class Channels {
         });
     }
 
+    toggleVisible(channel) {
+        const $vb = $('#btn_viewch_' + channel.channelId)
+        $vb.click()
+    }
+
     setupChannelLabel($channelLabel, id, channel) {
         $channelLabel.text('CH' + id);
         $channelLabel.css('background-color', channel.color);

@@ -172,6 +172,16 @@ ui = {
         binding.onChange();
     },
 
+    initToggle(controlId, onChange) {
+        const $c = $('#' + controlId)
+        $c.on('click', () => {
+            onChange($c)
+            $c.toggleClass('on')
+            $c.toggleClass('off')
+            $c.text($c.hasClass('on') ? 'ON' : 'OFF')
+        })
+    },
+
     initTabs(tabs, opts) {
         const t = this;
         if (opts === undefined || opts == null) opts = {}
