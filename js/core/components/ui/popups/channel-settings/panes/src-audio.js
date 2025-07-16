@@ -34,7 +34,7 @@ class ChannelSettingsPaneSrcAudio {
         return this
     }
 
-    updatePause() {
+    updatePause(channel) {
         ui.updateToggle('btn_ch_src_audio_onoff')
     }
 }

@@ -5,6 +5,10 @@ class Channels {
 
     setPauseButton(id, pause) {
         const $e = $('#btn_pause_' + id);
+        this.setPauseButtonLabel($e, pause)
+    }
+
+    setPauseButtonLabel($e, pause) {
         if (!pause) {
             $e.text('⏸');
         } else {
@@ -26,7 +30,7 @@ class Channels {
         $e.on('click', () => {
             sigView.pause = !sigView.pause;
             fn();
-            this.popupSettings.paneSrcAudio.updatePause()
+            this.updatePause(channel)
         });
 
         // close
@@ -51,6 +55,7 @@ class Channels {
 
     updatePause(channel) {
         this.setPauseButton(channel.channelId, channel.view.pause)
+        this.popupSettings.updatePause(channel)
     }
 
     updateVisible(channel) {

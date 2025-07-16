@@ -68,4 +68,10 @@ class PopupChannelSettings {
             ui.togglePopup(null, 'channel_settings_pane', true, 'center-top')
         }
     }
+
+    updatePause(channel) {
+        this.paneSrcAudio.updatePause()
+        this.paneSrcGen.updatePause()
+        this.paneSrcMath.updatePause()
+    }
 }
