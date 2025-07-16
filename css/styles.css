@@ -166,7 +166,7 @@ div.channel-pane > span.label {
     margin-top: Calc(0.5em + 1px);
     margin-bottom: 0.5em;
     height: 1px;
-    border-top: #0077FF77 solid 1px;
+    border-top: #0077FFDD solid 1px;
 }
 
 .channel-menu-pane {
