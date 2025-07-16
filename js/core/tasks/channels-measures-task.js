@@ -70,6 +70,9 @@ channelsMeasuresTask = {
         const minFrq = drt * (mini + 1)
         const maxFrq = drt * (maxi + 1)
 
+        if (vMin == Number.MAX_VALUE) vMin = 0
+        if (vMax == Number.MIN_VALUE) vMax = 0
+
         channel.measures.setMeasures(
             channel,
             vMin,

@@ -37,6 +37,9 @@ function float32ToVolt(f) {
 }
 function voltToText(v) {
     if (v == null || v == undefined || isNaN(v)) return Number.NaN;
+    if (v == Number.MAX_VALUE || v == Number.MIN_VALUE)
+        return '?'
+
     const z = vround(v);
     return z;
 }
