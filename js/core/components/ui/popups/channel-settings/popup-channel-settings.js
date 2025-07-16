@@ -4,6 +4,17 @@ class PopupChannelSettings {
 
     editChannel = null      // edited channel if any
 
+    paneSrcAudio = new ChannelSettingsPaneSrcAudio()
+    paneSrcExt = new ChannelSettingsPaneSrcExt()
+    paneSrcGen = new ChannelSettingsPaneSrcGen()
+    paneSrcMath = new ChannelSettingsPaneSrcMath()
+    paneDisp = new ChannelSettingsPaneDisp()
+    paneTrig = new ChannelSettingsPaneTrig()
+    paneFft = new ChannelSettingsPaneFFT()
+    paneOut = new ChannelSettingsPaneOut()
+    paneFilt = new ChannelSettingsPaneFilt()
+    paneEff = new ChannelSettingsPaneEff()
+
     tabs = ['btn_ch_src',
         'btn_ch_disp',
         'btn_ch_trig',
@@ -35,44 +46,23 @@ class PopupChannelSettings {
         srcMap.forEach(t => {
             this.audioSrcMap[t[0]] = t[1]
         });
-        ui.initTabs(this.tabs)
         this.initTabs()
     }
 
     initTabs() {
-        this.initTabSrc()
-            .initTabDisp()
-    }
-
-    initTabSrc() {
-        const readOnly = { readOnly: true, attr: 'text' };
+        ui.initTabs(this.tabs)
         ui.initTabs(this.audioSrcTabs)
-        if (!settings.extInput.enabled)
-            $('#btn_ch_src_ext').addClass('menu-item-disabled')
-        ui.bind(ui.binding(
-            'opt_ch_os_smpfrqcy',
-            'app.audioInputChannel.streamSource.context.sampleRate',
-            readOnly));
-        ui.bind(ui.binding(
-            'opt_ch_os_frequencyBinCount',
-            'app.audioInputChannel.analyzer.frequencyBinCount',
-            readOnly));
-        ui.bind(ui.binding(
-            'opt_ch_os_inputChannelsCount',
-            'settings.audioInput.channelsCount',
-            readOnly));
-        ui.bind(ui.binding(
-            'opt_ch_os_inputVscale',
-            'settings.audioInput.vScale',
-            readOnly));
-        return this
-    }
 
-    initTabDisp() {
-        ui.initToggle('btn_ch_disp_onoff',
-            () => ui.channels.toggleVisible(this.editChannel)
-        )
-        return this
+        this.paneSrcAudio.init(this)
+        this.paneSrcExt.init(this)
+        this.paneSrcGen.init(this)
+        this.paneSrcMath.init(this)
+        this.paneDisp.init(this)
+        this.paneTrig.init(this)
+        this.paneFft.init(this)
+        this.paneOut.init(this)
+        this.paneFilt.init(this)
+        this.paneEff.init(this)
     }
 
     setupChannelSettingsPane(channel) {
