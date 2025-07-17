@@ -1,20 +1,20 @@
 // get samples task
 
-getSamplesTask = {
+class GetSamplesTask {
 
-    analyzer: null,     // analyzer for getting samples
+    analyzer = null     // analyzer for getting samples
 
-    bufferLength: 0,    // length of the buffer
-    dataArray: null,    // array for storing samples
+    bufferLength = 0    // length of the buffer
+    dataArray = null    // array for storing samples
 
-    fftLength: 0,       // length of the fft buffer
-    fftDataArray: null, // array for storing fft data
+    fftLength = 0       // length of the fft buffer
+    fftDataArray = null // array for storing fft data
 
-    sampleRate: 0,      // sample rate
-    channelCount: 0,    // fft array channel count
+    sampleRate = 0      // sample rate
+    channelCount = 0    // fft array channel count
 
-    minDb: null,        // input min db
-    maxDb: null,        // input max db
+    minDb = null        // input min db
+    maxDb = null        // input max db
 
     init(analyzer) {
         this.analyzer = analyzer;
@@ -26,7 +26,8 @@ getSamplesTask = {
         this.sampleRate = this.analyzer.context.sampleRate
         this.minDb = this.analyzer.minDecibels
         this.maxDb = this.analyzer.maxDecibels
-    },
+        return this
+    }
 
     run() {
         if (this.analyzer != null) {
@@ -38,3 +39,5 @@ getSamplesTask = {
         }
     }
 }
+
+const getSamplesTask = new GetSamplesTask()

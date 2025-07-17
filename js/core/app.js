@@ -179,22 +179,26 @@ app = {
     },
 
     async setChannelSourceAudioInput(channel) {
-        await oscilloscope.initChannelFromSource(
+        await oscilloscope.initChannelForSource(
             channel,
             Source_Id_AudioInput,
             audioInputDevice)
     },
 
     async setChannelSourceExt(channel) {
-
     },
 
     async setChannelSourceGenerator(channel) {
-
+        await oscilloscope.initChannelForGenerator(
+            channel,
+            Source_Id_Generator)
     },
 
     async setChannelSourceMath(channel) {
-
+        await oscilloscope.initChannelForMath(
+            channel,
+            Source_Id_None,
+            null)
     },
 
     async addChannel() {

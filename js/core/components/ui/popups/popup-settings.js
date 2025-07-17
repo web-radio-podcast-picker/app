@@ -55,11 +55,11 @@ class PopupSettings {
         // output
         ui.bind(ui.binding(
             'opt_os_outputChannelsCount',
-            'oscilloscope.audioContext.destination.maxChannelCount',
+            'windowAudioContext.destination.maxChannelCount',
             readOnly));
         ui.bind(ui.binding(
             'opt_os_channelInterpretation',
-            'oscilloscope.audioContext.destination.channelInterpretation',
+            'windowAudioContext.destination.channelInterpretation',
             readOnly));
 
         // grid

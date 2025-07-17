@@ -1,22 +1,37 @@
 // signal measures
 class SignalMeasures {
 
-    value = null;               // input value              (-1..1)
+    value = null               // input value              (-1..1)
 
-    volts = 0;                  // volts value (calculated from digitalized value)
-    vMin = 0;                   // minimum volts value
-    vMax = 0;                   // maximum volts value
-    vAvg = 0;                   // average volts value
+    volts = 0                  // volts value (calculated from digitalized value)
+    vMin = 0                   // minimum volts value
+    vMax = 0                   // maximum volts value
+    vAvg = 0                   // average volts value
 
     frq = 0
     frqPe = 0
     frqMin = 0
 
-    dataArray = null;           // array of samples datas   (-1..1)
-    fftDataArray = null;        // array of fft datas (divs of 0..sampleRate/2)
+    dataArray = null           // array of samples datas   (-1..1)
+    fftDataArray = null        // array of fft datas (divs of 0..sampleRate/2)
 
-    sampleRate = 0;             // rate of samples
-    channelCount = 0;           // fft channel count
+    sampleRate = 0             // rate of samples
+    channelCount = 0           // fft channel count
+
+    reset() {
+        this.volts =
+            this.vMin =
+            this.vMax =
+            this.vAvg =
+            this.frq =
+            this.frqPe =
+            this.frqMin =
+            this.sampleRate =
+            this.channelCount = 0
+        this.dataArray =
+            this.fftDataArray =
+            this.value = null
+    }
 
     // set input value
     setValue(channel, value) {

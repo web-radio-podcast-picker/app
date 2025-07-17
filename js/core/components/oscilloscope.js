@@ -1,10 +1,11 @@
 // oscilloscope manager
 
+// Start off by initializing a new context.
+windowAudioContext = new (window.AudioContext || window.webkitAudioContext)();
+
 oscilloscope = {
 
     channels: [],             // array of channels
-    audioContext: null,       // audio context for processing
-
     lastStartTime: null,      // last start time for visualization
     startTime: null,          // start time for visualization
     endTime: null,            // end time for visualization
@@ -60,7 +61,7 @@ oscilloscope = {
         if (source != null || source != undefined) {
 
             // source provided
-            await this.initChannelFromSource(channel, sourceId, source);
+            await this.initChannelForSource(channel, sourceId, source);
 
         } else {
             // dynamic source from classname (sourceId)
@@ -70,30 +71,55 @@ oscilloscope = {
         return channel;
     },
 
-    async initChannelFromSource(channel, sourceId, source) {
+    initChannelForGenerator(channel, sourceId) {
+        //windowAudioContext
         channel.deleteSource()
         channel.sourceId = sourceId
-        channel.source = source;
+        channel.audioContext = new AudioContext()
+        channel.generator = channel.audioContext.createOscillator()
+        channel.analyzer = channel.audioContext.createAnalyser()
+        channel.generator.connect(channel.analyzer);
+        channel.analyzer.connect(channel.audioContext.destination);
+        channel.vScale = settings.audioInput.vScale
+        channel.generator.start(0)
+        channel.getSamplesTask = new GetSamplesTask()
+            .init(channel.analyzer)
+    },
+
+    initChannelForMath(channel, sourceId) {
+        this.initChannelForNone(channel)
+    },
+
+    initChannelForNone(channel) {
+        channel.deleteSource()
+        channel.sourceId = Source_Id_None
+    },
+
+    async initChannelForSource(channel, sourceId, source) {
+        channel.deleteSource()
+        channel.sourceId = sourceId
+        channel.source = source
         if (channel.source != null)
-            channel.stream = await channel.source.getMediaStream();
+            channel.stream = await channel.source.getMediaStream()
         if (sourceId == Source_Id_AudioInput)
             channel.vScale = settings.audioInput.vScale
-        this.audioContext = new AudioContext(); // not before getMediaStream
+
+        channel.audioContext = new AudioContext() // not before getMediaStream
 
         if (channel.stream != undefined) {
             if (settings.debug.info)
-                console.log("Input media stream ok");
+                console.log("Input media stream ok")
 
-            channel.streamSource = this.audioContext.createMediaStreamSource(channel.stream);
-            channel.analyzer = this.audioContext.createAnalyser();
+            channel.streamSource = channel.audioContext.createMediaStreamSource(channel.stream)
+            channel.analyzer = channel.audioContext.createAnalyser()
             channel.streamSource.connect(channel.analyzer);
 
             if (settings.debug.info)
-                console.log("Input stream set", channel.analyzer);
+                console.log("Input stream set", channel.analyzer)
         }
         else {
-            channel.error = "No input media stream";
-            console.error(channel.error);
+            channel.error = "No input media stream"
+            console.error(channel.error)
         }
     },
 

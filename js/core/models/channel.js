@@ -13,7 +13,9 @@ class Channel {
     streamSource = null;        // media stream source
     stream = null;              // media stream
     analyzer = null;            // audio analyzer
-    oscillator = null           // oscillator if any
+    generator = null            // generator if any
+    audioContext = null         // audio context for processing
+    getSamplesTask = null       // samples provider if required
 
     view = null;                // signal view (drawer)
     measures = null;            // signal measures data
@@ -46,9 +48,14 @@ class Channel {
 
     // unset channel source
     deleteSource() {
+        if (this.generator != null)
+            this.generator.stop()
         this.sourceId = Source_Id_None
-        this.streamSource = null
-        this.oscillator = null
-        this.analyzer = null
+        this.streamSource =
+            this.generator =
+            this.analyzer =
+            this.getSamplesTask =
+            this.audioContext = null
+        this.measures.reset()
     }
 }
