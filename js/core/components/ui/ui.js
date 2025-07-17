@@ -116,14 +116,20 @@ ui = {
             if ($ctrl == null) $ctrl = $o;
             // initial value
             if (onInit == null) {
-                const v = eval(valuePath) + unit;
-                if (attr == 'text')
-                    $ctrl.text(v)
-                else
-                    $ctrl.attr(attr, v);
-                $ctrl.val(v);
-                $ctrl.attr('data-inival', v);
-                binding.input.value = v
+                try {
+                    const v = eval(valuePath) + unit;
+                    if (attr == 'text')
+                        $ctrl.text(v)
+                    else
+                        $ctrl.attr(attr, v);
+                    $ctrl.val(v);
+                    $ctrl.attr('data-inival', v);
+                    binding.input.value = v
+                } catch (err) {
+                    // ignore or debug
+                    if (settings.debug.debug)
+                        console.log(err)
+                }
             }
             else
                 onInit();
@@ -138,8 +144,15 @@ ui = {
                 ? '' : sym;
             if (onChanged != null)
                 onChanged();
-            else
-                eval(valuePath + '=' + s + $v + s);
+            else {
+                try {
+                    eval(valuePath + '=' + s + $v + s);
+                } catch (err) {
+                    // ignore or debug
+                    if (settings.debug.debug)
+                        console.log(err)
+                }
+            }
             app.updateDisplay();
         };
 
@@ -192,8 +205,15 @@ ui = {
 
         $c.text(vstate ? 'ON' : 'OFF')
 
-        if (hasPath)
-            eval(path + '=' + state)
+        if (hasPath) {
+            try {
+                eval(path + '=' + state)
+            } catch (err) {
+                // ignore or debug
+                if (settings.debug.debug)
+                    console.log(err)
+            }
+        }
         return this
     },
 
