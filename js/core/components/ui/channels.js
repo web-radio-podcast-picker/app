@@ -24,11 +24,11 @@ class Channels {
         // id pause buttons
         const $e = $('#btn_pause_' + id);
         const fn = () => {
-            this.setPauseButton(id, sigView.pause)
+            this.setPauseButton(id, channel.pause)
         }
         fn(); // Set initial button text
         $e.on('click', () => {
-            sigView.pause = !sigView.pause;
+            channel.pause = !channel.pause;
             fn();
             this.updatePause(channel)
         });
@@ -54,7 +54,7 @@ class Channels {
     }
 
     updatePause(channel) {
-        this.setPauseButton(channel.channelId, channel.view.pause)
+        this.setPauseButton(channel.channelId, channel.pause)
         this.popupSettings.updatePause(channel)
     }
 

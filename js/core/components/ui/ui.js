@@ -203,8 +203,14 @@ ui = {
         const hasPath = path !== undefined && path != null
         if (hasPath) {
             // eval context is ui
-            const val = eval(path)
-            this.setToggle(controlId, val)
+            try {
+                const val = eval(path)
+                this.setToggle(controlId, val)
+            } catch (err) {
+                // ignore or debug
+                if (settings.debug.debug)
+                    console.log(err)
+            }
         }
     },
 

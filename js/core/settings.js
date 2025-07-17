@@ -6,6 +6,7 @@ window.settings = {
     },
 
     debug: {
+        debug: true,
         trace: true,
         info: true
     },

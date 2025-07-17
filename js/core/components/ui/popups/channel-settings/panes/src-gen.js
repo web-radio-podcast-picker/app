@@ -8,7 +8,7 @@ class ChannelSettingsPaneSrcGen {
 
         ui.initToggle('btn_ch_src_gen_onoff',
             () => ui.channels.updatePause(this.channelSettings.editChannel),
-            'ui.channels.popupSettings.editChannel.view.pause',
+            'ui.channels.popupSettings.editChannel.pause',
             true
         )
 

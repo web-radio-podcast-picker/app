@@ -4,19 +4,18 @@ class Channel {
 
     channelId = null;           // channel id (1, 2,...)
     isDisplayed = false;        // false if not already displayed
+    pause = false               // true if paused (source,view)
 
-    // audioInputDevice
-    // generator
-    // file
-    // channel (CH1, CH2, ...)
+    // audioInputDevice/generator/... (@see globals.js)
     sourceId = null;            // source id of the signal, e.g., 'input', 'file', etc.
 
     source = null;              // signal source (Source_Id_AudioInput, ...)
     streamSource = null;        // media stream source
     stream = null;              // media stream
     analyzer = null;            // audio analyzer
+    oscillator = null           // oscillator if any
 
-    view = null;                // oscilloscope view
+    view = null;                // signal view (drawer)
     measures = null;            // signal measures data
     measuresView = null;        // signal measures view
 
@@ -49,6 +48,7 @@ class Channel {
     deleteSource() {
         this.sourceId = Source_Id_None
         this.streamSource = null
+        this.oscillator = null
         this.analyzer = null
     }
 }

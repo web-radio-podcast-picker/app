@@ -4,8 +4,8 @@ class SignalMeasures {
     value = null;               // input value              (-1..1)
 
     volts = 0;                  // volts value (calculated from digitalized value)
-    vMin = Number.MAX_VALUE;    // minimum volts value
-    vMax = Number.MIN_VALUE;    // maximum volts value
+    vMin = 0;                   // minimum volts value
+    vMax = 0;                   // maximum volts value
     vAvg = 0;                   // average volts value
 
     frq = 0
