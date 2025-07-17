@@ -4,7 +4,7 @@ class Channel {
 
     channelId = null;           // channel id (1, 2,...)
     isDisplayed = false;        // false if not already displayed
-    pause = false               // true if paused (source,view)
+    pause = false               // true if paused (source,view) - use setPause
 
     // audioInputDevice/generator/... (@see globals.js)
     sourceId = null;            // source id of the signal, e.g., 'input', 'file', etc.
@@ -16,6 +16,7 @@ class Channel {
     generator = null            // generator if any
     audioContext = null         // audio context for processing
     getSamplesTask = null       // samples provider if required
+    out = false                 // true if channel is binded to audio output
 
     view = null;                // signal view (drawer)
     measures = null;            // signal measures data
@@ -57,5 +58,8 @@ class Channel {
             this.getSamplesTask =
             this.audioContext = null
         this.measures.reset()
+        if (this.out)
+
+            this.out = false
     }
 }

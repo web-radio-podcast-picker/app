@@ -52,7 +52,9 @@ class PopupChannelSettings {
         const $channelLabel = $('#channel_settings_label')
         const id = channel.channelId
         ui.channels.setupChannelLabel($channelLabel, id, channel)
+
         this.paneSrcAudio.setup(channel)
+
         ui.updateToggles()
     }
 

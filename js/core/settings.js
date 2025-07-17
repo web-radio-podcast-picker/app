@@ -1,4 +1,5 @@
 // app settings
+
 window.settings = {
 
     app: {
@@ -16,12 +17,16 @@ window.settings = {
     },
 
     audioInput: {
-        vScale: 5,  // volt scale (256 digital value corresponding volts) for audio input
-        channelsCount: 1, // number of audio input channels
+        vScale: 5,              // volt scale (256 digital value corresponding volts) for audio input
+        channelsCount: 1,       // number of audio input channels
+    },
+
+    generator: {
+        defaultFrq: 0           // initial generator (oscillator) frq
     },
 
     oscilloscope: {
-        vPerDiv: 0.02,           // volts per division
+        vPerDiv: 0.02,          // volts per division
         tPerDiv: 1,             // time per division in milliseconds
         channels: {
             // channels colors
@@ -54,7 +59,7 @@ window.settings = {
     },
 
     ui: {
-        maxRefreshRate: 25,    // maximum views refresh rate in Fps
+        maxRefreshRate: 25,     // maximum views refresh rate in Fps
         clientWidthBorder: 4,   // default border width for client area
         clientHeightBorder: 2,  // default border height for client area
         menuContainerWidth: 42  // 3 * 1em

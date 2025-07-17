@@ -86,6 +86,14 @@ oscilloscope = {
             .init(channel.analyzer)
     },
 
+    setOut(channel, on) {
+        if (on)
+            channel.analyzer.connect(channel.audioContext.destination)
+        else
+            channel.analyzer.disconnect(channel.audioContext.destination)
+        channel.out = on
+    },
+
     initChannelForMath(channel, sourceId) {
         this.initChannelForNone(channel)
     },
