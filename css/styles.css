@@ -582,8 +582,24 @@ div.popup-grid > span.menu-item {
     cursor: default;
 }
 
+.margin-top {
+    margin-top: 0.5em;
+}
+
 .no-margin {
     margin: 0px !important;
+}
+
+.no-margin-left {
+    margin-left: 0px !important;
+}
+
+.no-padding-left {
+    padding-left: 0px !important;
+}
+
+.no-padding-top {
+    padding-top: 0px !important;
 }
 
 .top-dmargin {
@@ -593,7 +609,6 @@ div.popup-grid > span.menu-item {
 .bottom-dpadding {
     padding-bottom: 0.5em !important;
 }
-
 
 .btn-sub {
     cursor: pointer;
@@ -658,8 +673,28 @@ div.popup-grid > span.menu-item {
     padding: 4px;
 }
 
+div.row-pane > span.label {
+    margin-left: 0px;
+}
+
+div.channel-opts-pane > div.row-pane {
+    padding-left: 0px;
+    display: table;
+    align-items: stretch;
+}
+
+div.channel-opts-pane span.menu-item
+{
+    margin-right: 0.5em;
+    margin-left: 0em;
+}
+
 .row-pane:hover {
     /*background-color: #00008bcc;*/
+}
+
+div.channel-submenu-pane span.on-off-label {
+    margin-left: 0px;
 }
 
 #bottom-pane {

@@ -327,7 +327,18 @@
 
             <!-- src gen -->
             <div id="opts_ch_src_gen" class="channel-opts-pane hidden">
-                <span id="btn_ch_src_gen_onoff" class="label channel-label on-off-label off">OFF</span>
+                <div class="row-pane no-padding-top">
+                    <span id="btn_ch_src_gen_onoff" class="label channel-label on-off-label off">OFF</span>
+                    <span id="btn_ch_gen_sine" class="menu-item menu-item-blue">Sine</span>
+                    <span id="btn_ch_gen_square" class="menu-item menu-item-blue">Square</span>
+                    <span id="btn_ch_gen_sawt" class="menu-item menu-item-blue">Sawtooth</span>
+                    <span id="btn_ch_gen_triang" class="menu-item menu-item-blue">Triangle</span>
+                </div>
+                <div class="row-pane margin-top">
+                    <span class="opt-label no-padding-left no-margin-left">frequency</span>
+                    <span id="opt_ch_gen_frq" class="opt-value-edit"></span>
+                    <span class="unit">Hz</span>
+                </div>
             </div>
 
             <!-- src math -->
