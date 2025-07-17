@@ -11,6 +11,7 @@ class SignalMeasures {
     frq = 0
     frqPe = 0
     frqMin = 0
+    frqMax = 0
 
     dataArray = null           // array of samples datas   (-1..1)
     fftDataArray = null        // array of fft datas (divs of 0..sampleRate/2)
@@ -26,6 +27,7 @@ class SignalMeasures {
             this.frq =
             this.frqPe =
             this.frqMin =
+            this.frqMax =
             this.sampleRate =
             this.channelCount = 0
         this.dataArray =
