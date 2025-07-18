@@ -54,6 +54,7 @@ class PopupChannelSettings {
         ui.channels.setupChannelLabel($channelLabel, id, channel)
 
         this.paneSrcAudio.setup(channel)
+        this.paneSrcGen.setup(channel)
 
         ui.updateToggles()
     }

@@ -77,6 +77,7 @@ ui = {
             valuePath: valuePath,
             sym: null,
             onChanged: null,
+            onPostChanged: null,
             onInit: null,
             readOnly: false,
             unit: '',
@@ -95,7 +96,7 @@ ui = {
     },
 
     bind(binding) {
-        const { controlId, valuePath, sym, onChanged, onInit, readOnly, unit, attr, digits } = binding;
+        const { controlId, valuePath, sym, onChanged, onPostChanged, onInit, readOnly, unit, attr, digits } = binding;
         if (readOnly == null)
             readOnly = false;
         const $c = $('#' + controlId);
@@ -128,7 +129,7 @@ ui = {
                 } catch (err) {
                     // ignore or debug
                     if (settings.debug.debug)
-                        console.log(err)
+                        console.log(valuePath, err)
                 }
             }
             else
@@ -139,14 +140,16 @@ ui = {
         });
 
         var onChange = () => {
-            const $v = $c.val();
+            const v = $c.val();
             const s = (sym == null)
                 ? '' : sym;
             if (onChanged != null)
                 onChanged();
             else {
                 try {
-                    eval(valuePath + '=' + s + $v + s);
+                    eval(valuePath + '=' + s + v + s);
+                    if (onPostChanged != null)
+                        onPostChanged(v)
                 } catch (err) {
                     // ignore or debug
                     if (settings.debug.debug)

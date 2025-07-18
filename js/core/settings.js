@@ -21,13 +21,18 @@ window.settings = {
         channelsCount: 1,       // number of audio input channels
     },
 
+    output: {
+        vScale: 1               // volt scale line out (corresponding to 1 = max sound level)
+    },
+
     generator: {
-        defaultFrq: 0           // initial generator (oscillator) frq
+        defaultFrq: 440,          // initial generator (oscillator) frq
+        defaultFn: 'Sine'       // default fn
     },
 
     oscilloscope: {
-        vPerDiv: 0.02,          // volts per division
-        tPerDiv: 1,             // time per division in milliseconds
+        vPerDiv: 0.5,          // volts per division
+        tPerDiv: 0.5,             // time per division in milliseconds
         channels: {
             // channels colors
             colors: [

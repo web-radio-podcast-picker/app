@@ -24,6 +24,7 @@ function milli(n) {
     return n * 1000;
 }
 
+// @todo NOT USED 
 // -1..1 -> 0..256
 function float32ToByteRange(channel, f) {
     const v = valueToVolt(channel, f);
@@ -45,5 +46,17 @@ function voltToText(v) {
 }
 
 function valueToVolt(channel, value) {
-    return float32ToVolt(value) * settings.audioInput.vScale;
+    switch (channel.sourceId) {
+        case Source_Id_AudioInput:
+            return float32ToVolt(value) * settings.audioInput.vScale;
+        case Source_Id_Generator:
+            // range -1..1 where 1 is sound max on output
+            return value * settings.output.vScale
+        case Source_Id_Math:
+            // range -1..1 where 1 is sound max on output
+            return value * settings.output.vScale
+        default:
+            return value
+    }
+    return 0
 }

@@ -76,7 +76,6 @@ oscilloscope = {
         channel.deleteSource()
         channel.sourceId = sourceId
         channel.audioContext = new AudioContext()
-
         channel.analyzer = channel.audioContext.createAnalyser()
 
         channel.generator.init(
