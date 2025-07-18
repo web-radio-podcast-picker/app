@@ -20,7 +20,7 @@ class OscilloMenu {
         });
         $('#btn_oset').on('click', () => {
             if (app.powerOn) {
-                ui.togglePopup(null, 'pop_settings');
+                ui.popups.togglePopup(null, 'pop_settings');
                 ui.inputWidgets.closeInputWidget();
             }
         });
