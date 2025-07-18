@@ -6,7 +6,7 @@ class ChannelSettingsPaneFFT {
     init(channelSettings) {
         this.channelSettings = channelSettings
 
-        ui.initToggle('btn_ch_fft_onoff',
+        ui.toggles.initToggle('btn_ch_fft_onoff',
             () => { }
         )
     }

@@ -6,7 +6,7 @@ class ChannelSettingsPaneDisp {
     init(channelSettings) {
         this.channelSettings = channelSettings
 
-        ui.initToggle('btn_ch_disp_onoff',
+        ui.toggles.initToggle('btn_ch_disp_onoff',
             () => ui.channels.updateVisible(this.channelSettings.editChannel),
             'ui.channels.popupSettings.editChannel.view.visible'
         )
@@ -15,6 +15,6 @@ class ChannelSettingsPaneDisp {
     }
 
     updateVisible() {
-        ui.updateToggle('btn_ch_disp_onoff')
+        ui.toggles.updateToggle('btn_ch_disp_onoff')
     }
 }

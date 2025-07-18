@@ -26,7 +26,7 @@ class ChannelSettingsPaneSrcAudio {
         ui
             .initTabs(this.audioSrcTabs,
                 { onChange: async ($c) => this.tabChanged($c) })
-            .initToggle('btn_ch_src_audio_onoff',
+            .toggles.initToggle('btn_ch_src_audio_onoff',
                 () => ui.channels.updatePause(this.channelSettings.editChannel),
                 'ui.channels.popupSettings.editChannel.pause',
                 true
@@ -80,7 +80,7 @@ class ChannelSettingsPaneSrcAudio {
     }
 
     updatePause(channel) {
-        ui.updateToggle('btn_ch_src_audio_onoff')
+        ui.toggles.updateToggle('btn_ch_src_audio_onoff')
     }
 
     async tabChanged($c) {

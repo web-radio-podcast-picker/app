@@ -6,7 +6,7 @@ class ChannelSettingsPaneTrig {
     init(channelSettings) {
         this.channelSettings = channelSettings
 
-        ui.initToggle('btn_ch_trg_onoff',
+        ui.toggles.initToggle('btn_ch_trg_onoff',
             () => { }
         )
         return this

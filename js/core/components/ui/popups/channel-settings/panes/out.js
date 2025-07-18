@@ -6,7 +6,7 @@ class ChannelSettingsPaneOut {
     init(channelSettings) {
         this.channelSettings = channelSettings
 
-        ui.initToggle('btn_ch_out_onoff',
+        ui.toggles.initToggle('btn_ch_out_onoff',
             ($c) => {
                 const channel = ui.channels.popupSettings.editChannel
                 const isOn = $c.hasClass('on')
@@ -30,7 +30,7 @@ class ChannelSettingsPaneOut {
     }
 
     updateOn() {
-        ui.updateToggle('btn_ch_out_onoff',
+        ui.toggles.updateToggle('btn_ch_out_onoff',
             ui.channels.popupSettings.editChannel.out &&
             !ui.channels.popupSettings.editChannel.outMute
         )

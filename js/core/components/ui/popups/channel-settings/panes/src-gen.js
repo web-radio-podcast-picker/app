@@ -28,7 +28,7 @@ class ChannelSettingsPaneSrcGen {
                     this.tabChanged($c)
                 }
             })
-            .initToggle('btn_ch_src_gen_onoff',
+            .toggles.initToggle('btn_ch_src_gen_onoff',
                 () => ui.channels.updatePause(this.channelSettings.editChannel),
                 'ui.channels.popupSettings.editChannel.pause',
                 true)
@@ -70,6 +70,6 @@ class ChannelSettingsPaneSrcGen {
     }
 
     updatePause(channel) {
-        ui.updateToggle('btn_ch_src_gen_onoff')
+        ui.toggles.updateToggle('btn_ch_src_gen_onoff')
     }
 }

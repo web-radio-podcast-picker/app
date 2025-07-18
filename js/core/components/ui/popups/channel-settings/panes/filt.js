@@ -6,7 +6,7 @@ class ChannelSettingsPaneFilt {
     init(channelSettings) {
         this.channelSettings = channelSettings
 
-        ui.initToggle('btn_ch_filt_onoff',
+        ui.toggles.initToggle('btn_ch_filt_onoff',
             () => { }
         )
         return this

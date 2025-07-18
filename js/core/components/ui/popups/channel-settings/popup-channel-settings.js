@@ -56,7 +56,7 @@ class PopupChannelSettings {
         this.paneSrcAudio.setup(channel)
         this.paneSrcGen.setup(channel)
 
-        ui.updateToggles()
+        ui.toggles.updateToggles()
     }
 
     toggleChannelSettings(channel) {
