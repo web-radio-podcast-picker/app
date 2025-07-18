@@ -93,6 +93,7 @@ oscilloscope = {
                     channel.analyzer.connect(channel.audioContext.destination)
                 else
                     channel.analyzer.disconnect(channel.audioContext.destination)
+                channel.outConnected = on
             }
         } catch (err) {
             if (settings.debug.debug)

@@ -51,13 +51,27 @@ class Channel {
 
     setPause(pause) {
         this.pause = pause
-        if (this.out || this.outMute) {
+        /*if (this.out || this.outMute) {
             if ((this.pause && this.outConnected)
                 || (!this.pause && !this.outConnected)) {
                 oscilloscope.setOut(this, !this.pause)
                 this.outConnected = !this.pause
             }
             this.outMute = this.pause
+            this.out = !this.outMute
+        }*/
+        this.setPauseOut(pause)
+    }
+
+    setPauseOut(pause) {
+        if (this.out || this.outMute) {
+            const isPaused = this.pause || oscilloscope.pause
+            if ((isPaused && this.outConnected)
+                || (!isPaused && !this.outConnected)) {
+                oscilloscope.setOut(this, !pause)
+                this.outConnected = !pause
+            }
+            this.outMute = pause
             this.out = !this.outMute
         }
     }

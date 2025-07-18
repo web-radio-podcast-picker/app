@@ -53,6 +53,16 @@ class Channels {
         });
     }
 
+    pauseAllOuts(pause) {
+        // pause all channels output (oscilloscope pause)
+        oscilloscope.channels.forEach(channel => {
+            if (channel.out || channel.outMute) {
+                channel.setPauseOut(pause)
+                this.updatePause(channel)
+            }
+        });
+    }
+
     updatePause(channel) {
         channel.setPause(channel.pause)// apply after binding the proprer method call
         this.setPauseButton(channel.channelId, channel.pause)
