@@ -596,6 +596,10 @@ div.popup-grid > span.menu-item {
     margin-left: 0px !important;
 }
 
+.no-margin-bottom {
+    margin-bottom: 0px !important;
+}
+
 .no-padding-left {
     padding-left: 0px !important;
 }

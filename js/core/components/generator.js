@@ -18,7 +18,6 @@ class Generator {
         this.oscillator = oscillator
         this.channel = channel
         this.reset()
-        this.oscillator.connect(channel.analyzer);
     }
 
     start() {

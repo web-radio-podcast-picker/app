@@ -47,14 +47,36 @@ class ChannelSettingsPaneSrcAudio {
                 'opt_ch_os_inputVscale',
                 'settings.audioInput.vScale',
                 readOnly))
+            .bind(ui.binding(
+                'opt_ch_src_gain',
+                'ui.channels.popupSettings.editChannel.gainValue',
+                {
+                    onPostChanged: (v) => this.setGain(v),
+                    input: {
+                        delta: 0.1,
+                        min: 0,
+                        max: null
+                    }
+                }))
+
+        this.setGain(1)
 
         return this
+    }
+
+    setGain(v) {
+        const channel = ui.channels.popupSettings.editChannel
+        if (channel == null) return
+        channel.setGain(eval(v))
+        const binding = ui.getBinding('opt_ch_src_gain')
+        binding.init()
     }
 
     setup(channel) {
         ui.selectTab(
             this.audioSrcMap[channel.sourceId],
             this.audioSrcTabs)
+        this.setGain(channel.gainValue)
     }
 
     updatePause(channel) {

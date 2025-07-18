@@ -76,6 +76,7 @@ oscilloscope = {
         channel.deleteSource()
         channel.sourceId = sourceId
         channel.audioContext = new AudioContext()
+        channel.gain = channel.audioContext.createGain()
         channel.analyzer = channel.audioContext.createAnalyser()
 
         channel.generator.init(
@@ -83,7 +84,11 @@ oscilloscope = {
             channel.audioContext.createOscillator()
         )
 
-        channel.vScale = settings.audioInput.vScale
+        channel.generator.oscillator.connect(channel.gain)
+        channel.gain.connect(channel.analyzer)
+        channel.gain.gain.value = 1       // gain 1
+
+        channel.vScale = settings.output.vScale
         channel.generator.start()
         channel.getSamplesTask = new GetSamplesTask()
             .init(channel.analyzer)

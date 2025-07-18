@@ -13,6 +13,8 @@ class Channel {
     streamSource = null;        // media stream source
     stream = null;              // media stream
     analyzer = null;            // audio analyzer
+    gain = null                 // audio gain
+    gainValue = 1               // gain value
     generator = new Generator() // signal generator
     audioContext = null         // audio context for processing
     getSamplesTask = null       // samples provider if required
@@ -66,6 +68,12 @@ class Channel {
         }
     }
 
+    setGain(v) {
+        this.gainValue = v
+        if (this.gain != null)
+            this.gain.gain.value = v
+    }
+
     // unset channel source
     deleteSource() {
         if (this.generator != null)
@@ -77,11 +85,13 @@ class Channel {
         this.streamSource =
             this.generator.oscillator =
             this.analyzer =
+            this.gain =
             this.getSamplesTask =
             this.audioContext = null
         this.measures.reset()
         this.out =
             this.outConnected =
             this.outMute = false
+        this.gainValue = 1
     }
 }
