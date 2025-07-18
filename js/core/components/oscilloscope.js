@@ -76,12 +76,16 @@ oscilloscope = {
         channel.deleteSource()
         channel.sourceId = sourceId
         channel.audioContext = new AudioContext()
-        channel.generator = channel.audioContext.createOscillator()
+
         channel.analyzer = channel.audioContext.createAnalyser()
-        channel.generator.connect(channel.analyzer);
-        //channel.analyzer.connect(channel.audioContext.destination);
+
+        channel.generator.init(
+            channel,
+            channel.audioContext.createOscillator()
+        )
+
         channel.vScale = settings.audioInput.vScale
-        channel.generator.start(0)
+        channel.generator.start()
         channel.getSamplesTask = new GetSamplesTask()
             .init(channel.analyzer)
     },

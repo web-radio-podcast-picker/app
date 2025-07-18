@@ -13,7 +13,7 @@ class Channel {
     streamSource = null;        // media stream source
     stream = null;              // media stream
     analyzer = null;            // audio analyzer
-    generator = null            // generator if any
+    generator = new Generator() // signal generator
     audioContext = null         // audio context for processing
     getSamplesTask = null       // samples provider if required
     out = false                 // true if channel is binded to audio output
@@ -75,7 +75,7 @@ class Channel {
 
         this.sourceId = Source_Id_None
         this.streamSource =
-            this.generator =
+            this.generator.oscillator =
             this.analyzer =
             this.getSamplesTask =
             this.audioContext = null
