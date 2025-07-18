@@ -17,6 +17,8 @@ class Channel {
     audioContext = null         // audio context for processing
     getSamplesTask = null       // samples provider if required
     out = false                 // true if channel is binded to audio output
+    outMute = false             // if true out is mute due to pause
+    outConnected = false
 
     view = null;                // signal view (drawer)
     measures = null;            // signal measures data
@@ -47,10 +49,26 @@ class Channel {
         this.measuresView.init(this, this.measures);
     }
 
+    setPause(pause) {
+        this.pause = pause
+        if (this.out || this.outMute) {
+            if ((this.pause && this.outConnected)
+                || (!this.pause && !this.outConnected)) {
+                oscilloscope.setOut(this, !this.pause)
+                this.outConnected = !this.pause
+            }
+            this.outMute = this.pause
+            this.out = !this.outMute
+        }
+    }
+
     // unset channel source
     deleteSource() {
         if (this.generator != null)
             this.generator.stop()
+        if (this.out || this.outMute)
+            oscilloscope.setOut(this, false)
+
         this.sourceId = Source_Id_None
         this.streamSource =
             this.generator =
@@ -58,8 +76,8 @@ class Channel {
             this.getSamplesTask =
             this.audioContext = null
         this.measures.reset()
-        if (this.out)
-
-            this.out = false
+        this.out =
+            this.outConnected =
+            this.outMute = false
     }
 }

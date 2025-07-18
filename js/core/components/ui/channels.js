@@ -28,9 +28,9 @@ class Channels {
         }
         fn(); // Set initial button text
         $e.on('click', () => {
-            channel.pause = !channel.pause;
-            fn();
+            channel.setPause(!channel.pause)
             this.updatePause(channel)
+            fn();
         });
 
         // close
@@ -54,6 +54,7 @@ class Channels {
     }
 
     updatePause(channel) {
+        channel.setPause(channel.pause)// apply after binding the proprer method call
         this.setPauseButton(channel.channelId, channel.pause)
         this.popupSettings.updatePause(channel)
     }

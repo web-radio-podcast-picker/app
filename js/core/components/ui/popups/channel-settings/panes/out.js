@@ -8,10 +8,14 @@ class ChannelSettingsPaneOut {
 
         ui.initToggle('btn_ch_out_onoff',
             ($c) => {
-                this.setOut(
-                    ui.channels.popupSettings.editChannel,
-                    $c.hasClass('on')
-                )
+                const channel = ui.channels.popupSettings.editChannel
+                const isOn = $c.hasClass('on')
+                if (channel.pause && isOn) {
+                    channel.out = false
+                    this.updateOn()
+                }
+                else
+                    this.setOut(channel, isOn)
             },
             'ui.channels.popupSettings.editChannel.out'
         )
@@ -21,6 +25,10 @@ class ChannelSettingsPaneOut {
 
     setOut(channel, on) {
         oscilloscope.setOut(channel, on)
+        this.updateOn()
+    }
+
+    updateOn() {
         ui.updateToggle('btn_ch_out_onoff')
     }
 }

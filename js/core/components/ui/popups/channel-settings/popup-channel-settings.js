@@ -75,6 +75,7 @@ class PopupChannelSettings {
         this.paneSrcAudio.updatePause()
         this.paneSrcGen.updatePause()
         this.paneSrcMath.updatePause()
+        this.paneOut.updateOn()
     }
 
     tabChanged($c) {

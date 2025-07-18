@@ -64,5 +64,6 @@ class ChannelSettingsPaneSrcAudio {
     async tabChanged($c) {
         const channelSourceId = $c.text()
         await app.setChannelSource(this.channelSettings.editChannel, channelSourceId)
+        ui.channels.updatePause(this.channelSettings.editChannel)
     }
 }
