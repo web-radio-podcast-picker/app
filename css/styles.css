@@ -673,7 +673,7 @@ div.popup-grid > span.menu-item {
     padding: 4px;
 }
 
-div.row-pane > span.label {
+div.channel-opts-pane > div.row-pane > span.label {
     margin-left: 0px;
 }
 
