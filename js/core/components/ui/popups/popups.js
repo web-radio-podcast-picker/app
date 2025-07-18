@@ -51,7 +51,7 @@ class Popups {
             $popup.toggleClass('hidden');
             if (!visible) {
                 newvis = true
-                ui.initBindedControls();
+                ui.bindings.initBindedControls();
             }
         } else {
             if (!showState)
@@ -59,7 +59,7 @@ class Popups {
             else {
                 $popup.removeClass('hidden');
                 newvis = true
-                ui.initBindedControls();
+                ui.bindings.initBindedControls();
             }
         }
 

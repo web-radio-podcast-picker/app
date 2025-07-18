@@ -31,23 +31,23 @@ class ChannelSettingsPaneSrcAudio {
                 'ui.channels.popupSettings.editChannel.pause',
                 true
             )
-            .bind(ui.binding(
+            .bindings.bind(ui.bindings.binding(
                 'opt_ch_os_smpfrqcy',
                 'app.audioInputChannel.streamSource.context.sampleRate',
                 readOnly))
-            .bind(ui.binding(
+            .bindings.bind(ui.bindings.binding(
                 'opt_ch_os_frequencyBinCount',
                 'app.audioInputChannel.analyzer.frequencyBinCount',
                 readOnly))
-            .bind(ui.binding(
+            .bindings.bind(ui.bindings.binding(
                 'opt_ch_os_inputChannelsCount',
                 'settings.audioInput.channelsCount',
                 readOnly))
-            .bind(ui.binding(
+            .bindings.bind(ui.bindings.binding(
                 'opt_ch_os_inputVscale',
                 'settings.audioInput.vScale',
                 readOnly))
-            .bind(ui.binding(
+            .bindings.bind(ui.bindings.binding(
                 'opt_ch_src_gain',
                 'ui.channels.popupSettings.editChannel.gainValue',
                 {
@@ -68,7 +68,7 @@ class ChannelSettingsPaneSrcAudio {
         const channel = ui.channels.popupSettings.editChannel
         if (channel == null) return
         channel.setGain(eval(v))
-        const binding = ui.getBinding('opt_ch_src_gain')
+        const binding = ui.bindings.getBinding('opt_ch_src_gain')
         binding.init()
     }
 

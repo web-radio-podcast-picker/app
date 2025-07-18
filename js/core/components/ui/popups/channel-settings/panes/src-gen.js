@@ -32,7 +32,7 @@ class ChannelSettingsPaneSrcGen {
                 () => ui.channels.updatePause(this.channelSettings.editChannel),
                 'ui.channels.popupSettings.editChannel.pause',
                 true)
-            .bind(ui.binding(
+            .bindings.bind(ui.bindings.binding(
                 'opt_ch_gen_frq',
                 'ui.channels.popupSettings.editChannel.generator.frequency',
                 { onPostChanged: (v) => this.setFrequency(v) }))
@@ -64,7 +64,7 @@ class ChannelSettingsPaneSrcGen {
         const channel = ui.channels.popupSettings.editChannel
         if (channel == null) return
         channel.generator.frequency = eval(v)
-        const binding = ui.getBinding('opt_ch_gen_frq')
+        const binding = ui.bindings.getBinding('opt_ch_gen_frq')
         binding.init()
         channel.generator.setFrequency(v)
     }

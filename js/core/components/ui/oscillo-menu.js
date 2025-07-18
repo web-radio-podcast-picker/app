@@ -48,7 +48,7 @@ class OscilloMenu {
         const visible = !$mb.hasClass('hidden');
         $('#btn_menu').text(!visible ? '▼' : '▲');
         if (visible)
-            ui.initBindedControls();
+            ui.bindings.initBindedControls();
         else
             ui.inputWidgets.closeInputWidget(); 0
     }

@@ -18,7 +18,7 @@ class InputWidgets {
         inputWidgetControlId,
         $inputWidgetLabel) {
         // must bkp inputs props
-        const binding = ui.getBinding(inputWidgetControlId)
+        const binding = ui.bindings.getBinding(inputWidgetControlId)
         binding.props_bkp = deepClone(binding.props)
         // remove & destroy controls
         $inputWidget.remove();
@@ -36,7 +36,7 @@ class InputWidgets {
         const $w = $('#input_widget').clone();
         const $cnt = $w.find('#iw_vpane');
         this.inputWidgetControlId = controlId
-        const binding = ui.getBinding(controlId)
+        const binding = ui.bindings.getBinding(controlId)
         const props = binding.props;
         binding.props_bkp = deepClone(binding.props)
         props.input.iniDelta = props.input.delta;
@@ -89,7 +89,7 @@ class InputWidgets {
 
         const validate = (close) => {
             const val = $i.val();
-            ui.updateBindingSourceAndTarget(controlId, val);
+            ui.bindings.updateBindingSourceAndTarget(controlId, val);
             binding.props.input.value = val;
             if (close == null || close == true)
                 t.closeInputWidget();
