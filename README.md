@@ -16,7 +16,7 @@ main purposes:
 project status: on going
 
 ![screenshot](doc/screenshot-0.6.png)
-*v 0.6 - signal generator*
+*v 0.6 - channel settings: signal generator*
 
 ![screenshot](doc/screenshot-0.4.png)
 *v 0.4 - input widget*
