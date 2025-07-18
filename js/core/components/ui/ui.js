@@ -217,14 +217,16 @@ ui = {
         return this
     },
 
-    updateToggle(controlId) {
+    updateToggle(controlId, forceVal) {
         const $c = $('#' + controlId)
         const path = $c.attr('tag')
         const hasPath = path !== undefined && path != null
         if (hasPath) {
             // eval context is ui
             try {
-                const val = eval(path)
+                const val =
+                    (forceVal !== undefined && forceVal != null) ?
+                        forceVal : eval(path)
                 this.setToggle(controlId, val)
             } catch (err) {
                 // ignore or debug

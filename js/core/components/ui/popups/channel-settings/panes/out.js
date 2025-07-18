@@ -10,7 +10,8 @@ class ChannelSettingsPaneOut {
             ($c) => {
                 const channel = ui.channels.popupSettings.editChannel
                 const isOn = $c.hasClass('on')
-                if (channel.pause && isOn) {
+                if ((channel.pause || oscilloscope.pause) && isOn) {
+                    // avoid change
                     channel.out = false
                     this.updateOn()
                 }
@@ -29,6 +30,9 @@ class ChannelSettingsPaneOut {
     }
 
     updateOn() {
-        ui.updateToggle('btn_ch_out_onoff')
+        ui.updateToggle('btn_ch_out_onoff',
+            ui.channels.popupSettings.editChannel.out &&
+            !ui.channels.popupSettings.editChannel.outMute
+        )
     }
 }
