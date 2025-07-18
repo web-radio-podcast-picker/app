@@ -6,16 +6,26 @@ class InputWidgets {
 
     closeInputWidget() {
         if (this.$inputWidget != null) {
-            // must bkp inputs props
-            const binding = ui.getBinding(this.inputWidgetControlId)
-            binding.props_bkp = deepClone(binding.props)
-            // remove & destroy controls
-            this.$inputWidget.remove();
-            this.$inputWidget = null;
-            if (this.$inputWidgetLabel != null) {
-                this.$inputWidgetLabel.toggleClass('opt-label-selected');
-                this.$inputWidgetLabel = null;
-            }
+            this.close(
+                this.$inputWidget,
+                this.inputWidgetControlId,
+                this.$inputWidgetLabel)
+        }
+    }
+
+    close(
+        $inputWidget,
+        inputWidgetControlId,
+        $inputWidgetLabel) {
+        // must bkp inputs props
+        const binding = ui.getBinding(inputWidgetControlId)
+        binding.props_bkp = deepClone(binding.props)
+        // remove & destroy controls
+        $inputWidget.remove();
+        $inputWidget = null;
+        if ($inputWidgetLabel != null) {
+            $inputWidgetLabel.toggleClass('opt-label-selected');
+            $inputWidgetLabel = null;
         }
     }
 

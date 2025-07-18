@@ -24,7 +24,7 @@ function milli(n) {
     return n * 1000;
 }
 
-// @todo NOT USED 
+// @TODO: NOT USED 
 // -1..1 -> 0..256
 function float32ToByteRange(channel, f) {
     const v = valueToVolt(channel, f);

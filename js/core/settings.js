@@ -26,13 +26,13 @@ window.settings = {
     },
 
     generator: {
-        defaultFrq: 440,          // initial generator (oscillator) frq
+        defaultFrq: 250,        // initial generator (oscillator) frq
         defaultFn: 'Sine'       // default fn
     },
 
     oscilloscope: {
         vPerDiv: 0.5,          // volts per division
-        tPerDiv: 0.5,             // time per division in milliseconds
+        tPerDiv: 1,            // time per division in milliseconds
         channels: {
             // channels colors
             colors: [

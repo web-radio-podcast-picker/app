@@ -9,6 +9,7 @@ ui = {
     popupCtrlId: null,      // popup control placement if any else null
     bindings: [],           // array of bindings for controls
     toggles: [],
+    popups: {},
     oscilloMenu: new OscilloMenu(),
     channels: new Channels(),
     popupSettings: new PopupSettings(),
@@ -51,15 +52,39 @@ ui = {
         this.channels.popupSettings.init()
     },
 
+    popup(popupId, controlId) {
+        return {
+            popupId: popupId,
+            controlId: controlId,
+            visible: false,
+            inputWidget: null
+        }
+    },
+
+    setPopupInputWidget($ctrl, inputWidget) {
+        const $popup = $ctrl.closest('.popup')
+        if ($popup.length == 0) return false
+        const popupId = $popup.attr('id')
+        const popup = this.popups[popupId]
+        popup.inputWidget = inputWidget
+        return true
+    },
+
     init_popups() {
-        $('.popup-close').on('click', () => {
-            const p = this.popupId;
-            this.popupId = null;
-            this.control = null;
-            this.togglePopup(null, p, false);
-            this.inputWidgets.closeInputWidget();
-        });
-        this.popupSettings.init();
+        $('.popup').each((i, e) => {
+            const $popup = $(e)
+            const popupId = $popup.attr('id')
+            const popup = this.popup(popupId, null)
+            this.popups[popupId] = popup
+            $popup
+                .find('.popup-close')
+                .on('click', (c) => {
+                    popup.visible = false
+                    this.togglePopup(null, popupId, false)
+                    this.inputWidgets.closeInputWidget()
+                })
+        })
+        this.popupSettings.init()
     },
 
     initBindedControls() {
@@ -68,7 +93,7 @@ ui = {
             if (b.init != null)
                 b.init();
         });
-        app.updateDisplay();
+        app.updateDisplay()
     },
 
     binding(controlId, valuePath, t) {
@@ -309,32 +334,18 @@ ui = {
         this.inputWidgets.closeInputWidget();
     },
 
-    closePopup() {
-        if (this.popupId == null) return
-        if (this.popupId != null) {
-            const p = this.popupId
-            this.popupId = null
-            this.togglePopup(null, p, false)
-        }
-    },
+    togglePopup(controlId, popupId, showState, align) {
 
-    togglePopup(control, popupId, showState, align) {
-        if (this.popupId != null && this.popupId != popupId) {
-            // change popup
-            const p = this.popupId;
-            this.popupId = null;
-            this.control = null;
-            this.togglePopup(control, p, false);
-        }
         const $popup = $('#' + popupId);
         const visible = !$popup.hasClass('hidden');
-        this.popupId = null;
-        this.popupCtrlId = null;
+        const popup = this.popups[popupId]
+        popup.controlId = controlId
+        var newvis = false
+
         if (showState === undefined) {
             $popup.toggleClass('hidden');
             if (!visible) {
-                this.popupId = popupId;
-                this.popupCtrlId = control;
+                newvis = true
                 this.initBindedControls();
             }
         } else {
@@ -342,19 +353,22 @@ ui = {
                 $popup.addClass('hidden');
             else {
                 $popup.removeClass('hidden');
-                this.popupId = popupId;
-                this.popupCtrlId = control;
+                newvis = true
                 this.initBindedControls();
             }
         }
-        if (this.popupId != null) {
+
+        popup.visible = newvis
+
+        if (newvis) {
             const w = $popup.width();
             const h = $popup.height();
             var left = 0;
             var top = 0;
-            if (control != null) {
+
+            if (controlId != null) {
                 // left align
-                const $ctrl = $(control);
+                const $ctrl = $(controlId);
                 var pos = $ctrl.offset();
                 pos.left -= w;
                 pos.left -= settings.ui.menuContainerWidth; // 3*1em
@@ -378,11 +392,11 @@ ui = {
                     }
                 }
             }
-            this.popupCtrlId = control;
             $popup.css('left', left);
             $popup.css('top', top);
         }
-        if (!$popup.hasClass('hidden'))
+
+        if (!popup.visible)
             this.inputWidgets.closeInputWidget()
     },
 

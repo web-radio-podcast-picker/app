@@ -310,6 +310,8 @@ div#iw_delta_pane > button {
     padding: 8px;
 }
 
+.popup {}
+
 .popup-pane {    
     position: absolute;
     background-color: darkblue;

@@ -229,7 +229,7 @@ app = {
     },
 
     // @TODO: NOT USED
-    togglePower() {
+    /*togglePower() {
         if (this.powerOn) {
             this.deleteAllChannels()
             ui.oscilloMenu.turnOffMenu()
@@ -241,7 +241,7 @@ app = {
         else {
             window.location.reload(false)
         }
-    },
+    },*/
 
     toggleOPause() {
         if (oscilloscope.pause)
