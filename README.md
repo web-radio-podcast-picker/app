@@ -15,8 +15,11 @@ main purposes:
 
 project status: on going
 
+![screenshot](doc/screenshot-0.6.png)
+*v 0.6 - signal generator*
+
 ![screenshot](doc/screenshot-0.4.png)
-v 0.4
+*v 0.4 - input widget*
 
 ![screenshot](doc/screenshot-0.1.png)
-v 0.1
+*v 0.1 - oscilloscope settings*
