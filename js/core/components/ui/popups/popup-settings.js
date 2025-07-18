@@ -61,6 +61,9 @@ class PopupSettings {
             'opt_os_channelInterpretation',
             'windowAudioContext.destination.channelInterpretation',
             readOnly));
+        ui.bind(ui.binding(
+            'opt_os_outputVscale',
+            'settings.output.vScale'))
 
         // grid
         ui.bind(ui.binding(
