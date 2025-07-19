@@ -27,7 +27,15 @@ window.settings = {
 
     generator: {
         defaultFrq: 250,        // initial generator (oscillator) frq
-        defaultFn: 'Sine'       // default fn
+        defaultFn: 'Sine',      // default fn
+        defaultModulation: {
+            frqMin: 0,    // frequency modulation min hz
+            frqMax: 250,  // frequency modulation max hz
+            frqRate: 2,   // frequency modulation rate hz
+            ampMin: 0.1,    // gain modulation min x
+            ampMax: 1,    // gain modulation max x
+            ampRate: 0.5  // gain modulation rate hz
+        }
     },
 
     oscilloscope: {

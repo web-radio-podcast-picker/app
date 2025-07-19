@@ -346,40 +346,58 @@
                 </div>
 
                 <div class="row-pane margin-top grid g3c">
-                    <div class="gr1 gc1 no-border">
+
+                    <!-- frequency -->
+                    <div class="gr1 gc1">
+                        <span id="btn_ch_gen_frq_onoff" class="label channel-label on-off-label off">OFF</span>
                         <span class="opt-label no-padding-left no-margin-left">frequency</span>
-                        <input id="opt_ch_gen_frq" class="opt-value-edit long-value no-margin-bottom"></input>
+                    </div>
+                    <div class="gr2 gc1 no-border">
+                        <input id="opt_ch_gen_frq"
+                            class="opt-value-edit long-value no-margin-bottom no-margin-left"></input>
                         <span class="unit">Hz</span>
                     </div>
 
+                    <!-- frequency modulation -->
                     <div class="gr1 gc2">
                         <span id="btn_ch_gen_mod_frq_onoff" class="label channel-label on-off-label off">OFF</span>
                         <span class="gr1 gc2 opt-label no-padding-left no-margin-left">frequency modulation</span>
                     </div>
                     <div class="gr2 gc2">
                         <span class="opt-label no-padding-left no-margin-left inline-block short-value">min</span>
-                        <input id="opt_ch_gen_mod_frqmin" class="opt-value-edit long-value no-margin-bottom"></input>
+                        <input id="opt_ch_gen_mod_frq_min" class="opt-value-edit long-value no-margin-bottom"></input>
                         <span class="unit">Hz</span>
                     </div>
                     <div class="gr3 gc2">
                         <span class="opt-label no-padding-left no-margin-left inline-block short-value">max</span>
-                        <input id="opt_ch_gen_mod_frqmax" class="opt-value-edit long-value no-margin-bottom"></input>
+                        <input id="opt_ch_gen_mod_frq_max" class="opt-value-edit long-value no-margin-bottom"></input>
+                        <span class="unit">Hz</span>
+                    </div>
+                    <div class="gr4 gc2">
+                        <span class="opt-label no-padding-left no-margin-left inline-block short-value">rate</span>
+                        <input id="opt_ch_gen_mod_frq_rate" class="opt-value-edit long-value no-margin-bottom"></input>
                         <span class="unit">Hz</span>
                     </div>
 
+                    <!-- amplitude modulation -->
                     <div class="gr1 gc3">
                         <span id="btn_ch_gen_mod_amp_onoff" class="label channel-label on-off-label off">OFF</span>
-                        <span class="opt-label no-padding-left no-margin-left">amplitude modulation</span>
+                        <span class="opt-label no-padding-left no-margin-left">gain modulation</span>
                     </div>
                     <div class="gr2 gc3">
                         <span class="opt-label no-padding-left no-margin-left inline-block short-value">min</span>
-                        <input id="opt_ch_gen_modfrq" class="opt-value-edit long-value no-margin-bottom"></input>
+                        <input id="opt_ch_gen_mod_amp_min" class="opt-value-edit long-value no-margin-bottom"></input>
                         <span class="unit">V</span>
                     </div>
                     <div class="gr3 gc3">
                         <span class="opt-label no-padding-left no-margin-left inline-block short-value">max</span>
-                        <input id="opt_ch_gen_modfrq" class="opt-value-edit long-value no-margin-bottom"></input>
+                        <input id="opt_ch_gen_mod_amp_max" class="opt-value-edit long-value no-margin-bottom"></input>
                         <span class="unit">V</span>
+                    </div>
+                    <div class="gr4 gc3">
+                        <span class="opt-label no-padding-left no-margin-left inline-block short-value">rate</span>
+                        <input id="opt_ch_gen_mod_amp_rate" class="opt-value-edit long-value no-margin-bottom"></input>
+                        <span class="unit">Hz</span>
                     </div>
                 </div>
             </div>

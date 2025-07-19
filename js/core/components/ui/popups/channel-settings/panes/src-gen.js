@@ -23,6 +23,8 @@ class ChannelSettingsPaneSrcGen {
             this.fns[t[0]] = t[1]
         })
 
+        const channel = 'ui.channels.popupSettings.editChannel.'
+
         ui
             .tabs.initTabs(this.tabs, {
                 onChange: $c => {
@@ -31,12 +33,47 @@ class ChannelSettingsPaneSrcGen {
             })
             .toggles.initToggle('btn_ch_src_gen_onoff',
                 () => ui.channels.updatePause(this.channelSettings.editChannel),
-                'ui.channels.popupSettings.editChannel.pause',
+                channel + 'pause',
                 true)
             .bindings.bind(ui.bindings.binding(
                 'opt_ch_gen_frq',
-                'ui.channels.popupSettings.editChannel.generator.frequency',
+                channel + 'generator.frequency',
                 { onPostChanged: (v) => this.setFrequency(v) }))
+            .toggles.initToggle('btn_ch_gen_frq_onoff',
+                () => { },
+                channel + 'generator.frqOn')
+
+            .toggles.initToggle('btn_ch_gen_mod_frq_onoff',
+                () => { },
+                channel + 'generator.frqModulationOn')
+            .bindings.bind(ui.bindings.binding(
+                'opt_ch_gen_mod_frq_min',
+                channel + 'generator.modulation.frqMin',
+                { onPostChanged: (v) => this.setModulation({ frqMin: v }) }))
+            .bindings.bind(ui.bindings.binding(
+                'opt_ch_gen_mod_frq_max',
+                channel + 'generator.modulation.frqMax',
+                { onPostChanged: (v) => this.setModulation({ frqMax: v }) }))
+            .bindings.bind(ui.bindings.binding(
+                'opt_ch_gen_mod_frq_rate',
+                channel + 'generator.modulation.frqRate',
+                { onPostChanged: (v) => this.setModulation({ frqRate: v }) }))
+
+            .toggles.initToggle('btn_ch_gen_mod_amp_onoff',
+                () => { },
+                channel + 'generator.ampModulationOn')
+            .bindings.bind(ui.bindings.binding(
+                'opt_ch_gen_mod_amp_min',
+                channel + 'generator.modulation.ampMin',
+                { onPostChanged: (v) => this.setModulation({ ampMin: v }) }))
+            .bindings.bind(ui.bindings.binding(
+                'opt_ch_gen_mod_amp_max',
+                channel + 'generator.modulation.ampMax',
+                { onPostChanged: (v) => this.setModulation({ ampMax: v }) }))
+            .bindings.bind(ui.bindings.binding(
+                'opt_ch_gen_mod_amp_rate',
+                channel + 'generator.modulation.ampRate',
+                { onPostChanged: (v) => this.setModulation({ ampRate: v }) }))
 
         this.setFn(settings.generator.defaultFn)
 
@@ -51,6 +88,9 @@ class ChannelSettingsPaneSrcGen {
     setup(channel) {
         this.setFn(channel.generator.fnId)
         this.setFrequency(channel.generator.frequency)
+        if (channel.generator.frqMin == null)
+            channel.generator.initModulation(settings.generator.defaultModulation)
+        this.setModulation(channel.generator.modulation)
     }
 
     setFn(fnId) {
@@ -68,6 +108,13 @@ class ChannelSettingsPaneSrcGen {
         const binding = ui.bindings.getBinding('opt_ch_gen_frq')
         binding.init()
         channel.generator.setFrequency(v)
+    }
+
+    setModulation(props) {
+        const channel = ui.channels.popupSettings.editChannel
+        if (channel == null) return
+        const m = { ...channel.generator.modulation, ...props }
+        channel.generator.initModulation(m)
     }
 
     updatePause(channel) {

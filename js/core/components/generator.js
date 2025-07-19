@@ -7,11 +7,37 @@ class Generator {
 
     fnId = null         // active func
     frequency = null    // frequency
+    frqOn = true             // true if frq stable is on
+    frqModulationOn = false  // true if frq modulation is on
+    ampModulationOn = false  // true if amp modulation is on
+
+    modulation = {
+        frqMin: null,         // frequency modulation min
+        frqMax: null,         // frequency modulation max
+        frqRate: null,        // frequency modulation rate
+        ampMin: null,         // frequency modulation min
+        ampMax: null,         // frequency modulation max
+        ampRate: null         // frequency modulation rate
+    }
 
     reset() {
         // reset to defaults
         this.fnId = settings.generator.defaultFn
         this.frequency = settings.generator.defaultFrq
+        const m = settings.generator.defaultModulation
+        this.frqOn = true
+        this.frqModulationOn = false
+        this.ampModulationOn = false
+        this.initModulation(m)
+    }
+
+    initModulation(m) {
+        this.modulation.frqMin = m.frqMin
+        this.modulation.frqMax = m.frqMax
+        this.modulation.frqRate = m.frqRate
+        this.modulation.ampMin = m.ampMin
+        this.modulation.ampMax = m.ampMax
+        this.modulation.ampRate = m.ampRate
     }
 
     init(channel, oscillator) {
