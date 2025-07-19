@@ -23,7 +23,7 @@ class ChannelSettingsPaneSrcGen {
         })
 
         ui
-            .initTabs(this.tabs, {
+            .tabs.initTabs(this.tabs, {
                 onChange: $c => {
                     this.tabChanged($c)
                 }
@@ -54,7 +54,7 @@ class ChannelSettingsPaneSrcGen {
 
     setFn(fnId) {
         const tabId = this.fns[fnId]
-        ui.selectTab(tabId, this.tabs)
+        ui.tabs.selectTab(tabId, this.tabs)
         const channel = ui.channels.popupSettings.editChannel
         if (channel == null) return
         channel.generator.activateFn(fnId)

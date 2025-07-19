@@ -32,7 +32,7 @@ class PopupChannelSettings {
     }
 
     initTabs() {
-        ui.initTabs(this.tabs)
+        ui.tabs.initTabs(this.tabs)
 
         this.paneSrcAudio.init(this)
         this.paneSrcExt.init(this)

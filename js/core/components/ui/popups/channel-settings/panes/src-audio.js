@@ -24,7 +24,7 @@ class ChannelSettingsPaneSrcAudio {
             $('#btn_ch_src_ext').addClass('menu-item-disabled')
 
         ui
-            .initTabs(this.audioSrcTabs,
+            .tabs.initTabs(this.audioSrcTabs,
                 { onChange: async ($c) => this.tabChanged($c) })
             .toggles.initToggle('btn_ch_src_audio_onoff',
                 () => ui.channels.updatePause(this.channelSettings.editChannel),
@@ -73,7 +73,7 @@ class ChannelSettingsPaneSrcAudio {
     }
 
     setup(channel) {
-        ui.selectTab(
+        ui.tabs.selectTab(
             this.audioSrcMap[channel.sourceId],
             this.audioSrcTabs)
         this.setGain(channel.gainValue)

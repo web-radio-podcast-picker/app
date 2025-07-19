@@ -10,7 +10,7 @@ class PopupSettings {
 
         ui
             // groups
-            .initTabs([
+            .tabs.initTabs([
                 'btn_os_grid',
                 'btn_os_disp',
                 'btn_os_in',
