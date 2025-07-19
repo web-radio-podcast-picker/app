@@ -129,6 +129,7 @@ oscilloscope = {
             channel.vScale = settings.audioInput.vScale
 
         channel.audioContext = new AudioContext() // not before getMediaStream
+        channel.gain = channel.audioContext.createGain()
 
         if (channel.stream != undefined) {
             if (settings.debug.info)
@@ -136,7 +137,9 @@ oscilloscope = {
 
             channel.streamSource = channel.audioContext.createMediaStreamSource(channel.stream)
             channel.analyzer = channel.audioContext.createAnalyser()
-            channel.streamSource.connect(channel.analyzer);
+
+            channel.streamSource.connect(channel.gain);
+            channel.gain.connect(channel.analyzer);
 
             if (settings.debug.info)
                 console.log("Input stream set", channel.analyzer)
