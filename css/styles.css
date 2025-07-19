@@ -164,7 +164,7 @@ div.channel-pane > span.label {
 }
 
 .channel-opts-pane {
-    display: inline-block;
+    display: block;
 }
 
 .channel-menu-pane-horiz-separator {
@@ -280,7 +280,11 @@ div#iw_delta_pane > button {
 }
 
 .flex {
-    display: flex;
+    display: flex !important;
+}
+
+.inline-block {
+    display: inline-block !important;
 }
 
 #channels_shortcuts_deck {
@@ -588,6 +592,10 @@ div.popup-grid > span.menu-item {
     margin-top: 0.5em;
 }
 
+.no-border {
+    border: none !important;
+}
+
 .no-margin {
     margin: 0px !important;
 }
@@ -677,6 +685,18 @@ div.popup-grid > span.menu-item {
 
 .row-pane {
     padding: 4px;
+}
+
+.grid {
+    display: grid !important;
+}
+
+.g2c {
+    grid-template-columns: 50% 50%;
+}
+
+.g3c {
+    grid-template-columns: 33% 33% 33%;
 }
 
 div.channel-opts-pane > div.row-pane > span.label {

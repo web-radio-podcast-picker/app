@@ -344,10 +344,43 @@
                     <span id="btn_ch_gen_sawt" class="menu-item menu-item-blue">Sawtooth</span>
                     <span id="btn_ch_gen_triang" class="menu-item menu-item-blue">Triangle</span>
                 </div>
-                <div class="row-pane margin-top">
-                    <span class="opt-label no-padding-left no-margin-left">frequency</span>
-                    <input id="opt_ch_gen_frq" class="opt-value-edit no-margin-bottom"></input>
-                    <span class="unit">Hz</span>
+
+                <div class="row-pane margin-top grid g3c">
+                    <div class="gr1 gc1 no-border">
+                        <span class="opt-label no-padding-left no-margin-left">frequency</span>
+                        <input id="opt_ch_gen_frq" class="opt-value-edit long-value no-margin-bottom"></input>
+                        <span class="unit">Hz</span>
+                    </div>
+
+                    <div class="gr1 gc2">
+                        <span id="btn_ch_gen_mod_frq_onoff" class="label channel-label on-off-label off">OFF</span>
+                        <span class="gr1 gc2 opt-label no-padding-left no-margin-left">frequency modulation</span>
+                    </div>
+                    <div class="gr2 gc2">
+                        <span class="opt-label no-padding-left no-margin-left inline-block short-value">min</span>
+                        <input id="opt_ch_gen_mod_frqmin" class="opt-value-edit long-value no-margin-bottom"></input>
+                        <span class="unit">Hz</span>
+                    </div>
+                    <div class="gr3 gc2">
+                        <span class="opt-label no-padding-left no-margin-left inline-block short-value">max</span>
+                        <input id="opt_ch_gen_mod_frqmax" class="opt-value-edit long-value no-margin-bottom"></input>
+                        <span class="unit">Hz</span>
+                    </div>
+
+                    <div class="gr1 gc3">
+                        <span id="btn_ch_gen_mod_amp_onoff" class="label channel-label on-off-label off">OFF</span>
+                        <span class="opt-label no-padding-left no-margin-left">amplitude modulation</span>
+                    </div>
+                    <div class="gr2 gc3">
+                        <span class="opt-label no-padding-left no-margin-left inline-block short-value">min</span>
+                        <input id="opt_ch_gen_modfrq" class="opt-value-edit long-value no-margin-bottom"></input>
+                        <span class="unit">V</span>
+                    </div>
+                    <div class="gr3 gc3">
+                        <span class="opt-label no-padding-left no-margin-left inline-block short-value">max</span>
+                        <input id="opt_ch_gen_modfrq" class="opt-value-edit long-value no-margin-bottom"></input>
+                        <span class="unit">V</span>
+                    </div>
                 </div>
             </div>
 

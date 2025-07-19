@@ -1,4 +1,5 @@
 // channel settings pane SRC GEN
+
 class ChannelSettingsPaneSrcGen {
 
     channelSettings = null
