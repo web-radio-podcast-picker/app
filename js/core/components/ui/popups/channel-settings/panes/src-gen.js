@@ -107,7 +107,10 @@ class ChannelSettingsPaneSrcGen {
     setFrequency(v) {
         const channel = ui.channels.popupSettings.editChannel
         if (channel == null) return
-        channel.generator.frequency = eval(v)
+        const valst = xeval(v)
+        if (valst.success) {
+            channel.generator.frequency = eval(v)
+        }
         const binding = ui.bindings.getBinding('opt_ch_gen_frq')
         binding.init()
         channel.generator.setFrequency(v)

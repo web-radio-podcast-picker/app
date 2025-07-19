@@ -23,15 +23,9 @@ class Toggles {
         $c.text(vstate ? 'ON' : 'OFF')
 
         if (hasPath) {
-            try {
-                eval(path + '=' + state)
-            } catch (err) {
-                // ignore or debug
-                if (settings.debug.debug)
-                    console.log(err)
-            }
+            xeval(path + '=' + state)
+            return this
         }
-        return this
     }
 
     updateToggle(controlId, forceVal) {
@@ -41,10 +35,13 @@ class Toggles {
         if (hasPath) {
             // eval context is ui
             try {
-                const val =
+                var val =
                     (forceVal !== undefined && forceVal != null) ?
-                        forceVal : eval(path)
-                this.setToggle(controlId, val)
+                        forceVal : xeval(path)
+                if (typeof val == 'object' && val.success)
+                    this.setToggle(controlId, val.value)
+                else
+                    this.setToggle(controlId, val)
             } catch (err) {
                 // ignore or debug
                 if (settings.debug.debug)

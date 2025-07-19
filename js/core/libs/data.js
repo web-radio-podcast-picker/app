@@ -1,5 +1,19 @@
 // data lib functions
 
+// eval expr. handle error. returns success: true and value: value if ok otherwize success: false. eventually log
+function xeval(expr, showError) {
+
+    try {
+        const value = eval(expr)
+        return { success: true, value: value }
+    } catch (err) {
+        // ignore or debug
+        if (settings.debug.debug)
+            console.log(err)
+        return { success: false }
+    }
+}
+
 function deepClone(obj) {
     if (null == obj || obj == undefined || "object" != typeof obj) return obj;
 
@@ -29,5 +43,4 @@ function deepClone(obj) {
     }
 
     throw new Error("Unable to copy obj! Its type isn't supported.");
-
 }

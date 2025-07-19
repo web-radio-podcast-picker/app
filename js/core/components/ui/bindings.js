@@ -59,8 +59,10 @@ class Bindings {
             if ($ctrl == null) $ctrl = $o;
             // initial value
             if (onInit == null) {
-                try {
-                    const v = eval(valuePath) + unit;
+
+                const tv = xeval(valuePath);
+                if (tv.success) {
+                    const v = tv.value + unit
                     if (attr == 'text')
                         $ctrl.text(v)
                     else
@@ -68,10 +70,6 @@ class Bindings {
                     $ctrl.val(v);
                     $ctrl.attr('data-inival', v);
                     binding.input.value = v
-                } catch (err) {
-                    // ignore or debug
-                    if (settings.debug.debug)
-                        console.log(valuePath, err)
                 }
             }
             else

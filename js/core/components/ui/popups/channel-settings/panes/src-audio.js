@@ -67,7 +67,10 @@ class ChannelSettingsPaneSrcAudio {
     setGain(v) {
         const channel = ui.channels.popupSettings.editChannel
         if (channel == null) return
-        channel.setGain(eval(v))
+        const valst = xeval(v)
+        if (valst.success) {
+            channel.setGain(eval(valst.value))
+        }
         const binding = ui.bindings.getBinding('opt_ch_src_gain')
         binding.init()
     }
