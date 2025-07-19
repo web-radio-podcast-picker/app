@@ -130,5 +130,11 @@ class Bindings {
         $c.attr('data-inival', value);
         $c.val(value);
         binding.onChange();
+        return this
+    }
+
+    updateBindingTarget(controlId) {
+        const binding = this.getBinding(controlId)
+        binding.init()
     }
 }

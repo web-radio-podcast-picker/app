@@ -75,4 +75,9 @@ class Generator {
         if (this.oscillator == null) return
         this.oscillator.frequency.value = v
     }
+
+    setModulation(props) {
+        const m = { ...this.modulation, ...props }
+        this.initModulation(m)
+    }
 }

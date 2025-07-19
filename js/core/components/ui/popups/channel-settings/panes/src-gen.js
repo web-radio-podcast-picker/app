@@ -31,6 +31,7 @@ class ChannelSettingsPaneSrcGen {
                     this.tabChanged($c)
                 }
             })
+            // frequency
             .toggles.initToggle('btn_ch_src_gen_onoff',
                 () => ui.channels.updatePause(this.channelSettings.editChannel),
                 channel + 'pause',
@@ -43,6 +44,7 @@ class ChannelSettingsPaneSrcGen {
                 () => { },
                 channel + 'generator.frqOn')
 
+            // modulation frequency
             .toggles.initToggle('btn_ch_gen_mod_frq_onoff',
                 () => { },
                 channel + 'generator.frqModulationOn')
@@ -59,6 +61,7 @@ class ChannelSettingsPaneSrcGen {
                 channel + 'generator.modulation.frqRate',
                 { onPostChanged: (v) => this.setModulation({ frqRate: v }) }))
 
+            // modulation gain
             .toggles.initToggle('btn_ch_gen_mod_amp_onoff',
                 () => { },
                 channel + 'generator.ampModulationOn')
@@ -88,8 +91,8 @@ class ChannelSettingsPaneSrcGen {
     setup(channel) {
         this.setFn(channel.generator.fnId)
         this.setFrequency(channel.generator.frequency)
-        if (channel.generator.frqMin == null)
-            channel.generator.initModulation(settings.generator.defaultModulation)
+        if (channel.generator.modulation.frqMin == null)
+            return
         this.setModulation(channel.generator.modulation)
     }
 
@@ -113,8 +116,9 @@ class ChannelSettingsPaneSrcGen {
     setModulation(props) {
         const channel = ui.channels.popupSettings.editChannel
         if (channel == null) return
-        const m = { ...channel.generator.modulation, ...props }
-        channel.generator.initModulation(m)
+        channel.generator.setModulation(props)
+        // massive display update shortcut
+        ui.bindings.initBindedControls()
     }
 
     updatePause(channel) {
