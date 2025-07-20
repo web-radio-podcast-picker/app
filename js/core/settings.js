@@ -29,9 +29,9 @@ window.settings = {
         defaultFrq: 250,        // initial generator (oscillator) frq
         defaultFn: 'Sine',      // default fn
         defaultModulation: {
-            frqMin: 0,    // frequency modulation min hz
-            frqMax: 250,  // frequency modulation max hz
-            frqRate: 0.5,   // frequency modulation rate hz
+            frqMin: 500,            // frequency modulation min hz
+            frqMax: 1500,       // frequency modulation max hz
+            frqRate: 5,         // frequency modulation rate hz
             ampMin: 0.1,    // gain modulation min x
             ampMax: 1,    // gain modulation max x
             ampRate: 0.5  // gain modulation rate hz

@@ -102,6 +102,8 @@ class ChannelSettingsPaneSrcGen {
     switchModAmp() {
         const channel = ui.channels.popupSettings.editChannel
         if (channel == null) return
+        channel.generator.ampOn = !channel.generator.ampModulationOn
+        this.setModAmp(channel.generator.ampModulationOn)
     }
 
     setFrq(on) {

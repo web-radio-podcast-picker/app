@@ -97,7 +97,10 @@ class Generator {
     }
 
     setupModFrq() {
-        if (this.modFrqTimerId != null) clearInterval(this.modFrqTimerId)
+        if (this.modFrqTimerId != null) {
+            clearInterval(this.modFrqTimerId)
+            this.modFrqTimerId = null
+        }
         if (this.frqModulationOn) {
             const pe = 1000 / Number(this.modulation.frqRate)
                 / settings.generator.modTimerSteps / 2.0 // two turns
@@ -111,15 +114,22 @@ class Generator {
         this.setupModFrq()
     }
 
-    setupAmpFrq() {
-        if (this.modAmpTimerId != null) clearInterval(this.modAmpTimerId)
+    setupModAmp() {
+        if (this.modAmpTimerId != null) {
+            clearInterval(this.modAmpTimerId)
+            this.modAmpTimerId = null
+        }
         if (this.ampModulationOn) {
-
+            const pe = 1000 / Number(this.modulation.ampRate)
+                / settings.generator.modTimerSteps / 2.0 // two turns
+            const fn = () => this.modAmpTimer()
+            this.modulator.modAmpTime = Date.now()
+            this.modAmpTimerId = setInterval(fn, pe)
         }
     }
 
     setupAmpRate() {
-
+        this.setupModAmp()
     }
 
     modFrqTimer() {
@@ -133,7 +143,14 @@ class Generator {
         this.setFrequency(f)
     }
 
-    ampFrqTimer() {
-
+    modAmpTimer() {
+        // 1 sec time = 2PI period
+        const dt = Date.now() - this.modulator.modAmpTime   // ms
+        const ang = dt / 1000.0 * Math.PI * 2.0 * this.modulation.ampRate
+        var f = (Math.sin(ang) + 1.0) / 2.0
+        const fMin = Number(this.modulation.ampMin)
+        f *= (Number(this.modulation.ampMax) - fMin)
+        f += fMin
+        this.channel.setGain(f)
     }
 }
