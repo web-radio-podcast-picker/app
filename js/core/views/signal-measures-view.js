@@ -30,5 +30,6 @@ class SignalMeasuresView {
 
         $('#yscale_' + c).text(this.channel.yScale);
         $('#xscale_' + c).text(this.channel.xScale);
+        $('#gain_' + c).text(this.channel.gainValue);
     }
 }
