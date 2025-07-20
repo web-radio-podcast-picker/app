@@ -42,7 +42,8 @@ window.settings = {
 
     trigger: {
         defaultType: Trigger_Type_Up,
-        sensitivity: 0.0001
+        sensitivity: 0.1,
+        threshold: 0.8
     },
 
     oscilloscope: {

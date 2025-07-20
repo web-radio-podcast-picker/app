@@ -12,8 +12,10 @@ class Trigger {
     }
 
     reset() {
-        this.type = settings.trigger.defaultType
-        this.sensitivity = settings.trigger.sensitivity
+        const t = settings.trigger
+        this.type = t.defaultType
+        this.sensitivity = t.sensitivity
+        this.threshold = t.threshold
         this.isDown = false
         this.threshold = 0
         return this

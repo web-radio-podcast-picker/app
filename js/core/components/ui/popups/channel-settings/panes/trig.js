@@ -37,7 +37,14 @@ class ChannelSettingsPaneTrig {
                 channel + 'trigger.threshold'))
             .bindings.bind(ui.bindings.binding(
                 'opt_ch_trig_sen',
-                channel + 'trigger.sensitivity'))
+                channel + 'trigger.sensitivity',
+                {
+                    input: {
+                        delta: 0.1,
+                        min: 0,
+                        max: null
+                    }
+                }))
 
         this.setType(settings.trigger.defaultType)
 

@@ -29,16 +29,19 @@ class SignalView {
             const drawContext = this.canvas.getContext('2d');
 
             const signalRange = settings.audioInput.vScale;
-            const displayRange = settings.oscilloscope.vPerDiv * 5.0;        // 10/2 ?
+            const displayRange = settings.oscilloscope.vPerDiv * 5.0;        // base
 
             const timePerDiv = settings.oscilloscope.tPerDiv;
             // full buffer view : scale 1ms/div
             const barWidth = canvasWidth / dataArray.length / timePerDiv;
 
-            for (var i = 0; i < dataArray.length; i += 1) {
+            const baseI = this.channel.trigger.isOn ?
+                this.checkTrigger(dataArray) : 0
+
+            for (var i = baseI; i < dataArray.length; i += 1) {
                 var value = dataArray[i];
                 value = valueToVolt(this.channel, value);
-                // adjust y position (y multiplier, y position shift, v scale)                
+                // adjust y position (y multiplier, y position shift, v scale)
                 var percent = -value / signalRange;
                 percent *= signalRange / displayRange; // adjust to display range
                 var height = canvasHeight * percent / 2.0;
@@ -46,7 +49,7 @@ class SignalView {
                 var offset = canvasHeight / 2 + height;
                 offset += this.channel.yOffset;
 
-                var nx = i * barWidth;
+                var nx = (i - baseI) * barWidth
                 var ny = offset;
                 if (x == -1 && y == -1) {
                     x = nx;
@@ -66,4 +69,26 @@ class SignalView {
         }
     }
 
+    checkTrigger(dataArray) {
+        var prevValue = null
+        const trigger = this.channel.trigger
+        const minDelta = trigger.sensitivity
+
+        for (var i = 0; i < dataArray.length; i += 1) {
+            var value = dataArray[i];
+            value = valueToVolt(this.channel, value);
+            if (prevValue == null) prevValue = value
+            const delta = value - prevValue
+            if ((delta > 0 && trigger.type == Trigger_Type_Up)
+                || (delta < 0 && trigger.type == Trigger_Type_Down)) {
+                if (value >= trigger.threshold - minDelta
+                    && value <= trigger.threshold + minDelta
+                )
+                    return i
+            }
+        }
+
+        // not triggered
+        return 0
+    }
 }
