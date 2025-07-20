@@ -7,11 +7,13 @@ class Generator {
 
     fnId = null         // active func
     frequency = null    // frequency
+    frequency_hold = null// frequency value if holded
     frqOn = true             // true if frq stable is on
     frqModulationOn = false  // true if frq modulation is on
     ampModulationOn = false  // true if amp modulation is on
     modFrqTimerId = null
     modAmpTimerId = null
+    gain_hold = null    // gain value if holded
 
     modulator = null
 
@@ -32,6 +34,7 @@ class Generator {
         this.frqOn = true
         this.frqModulationOn = false
         this.ampModulationOn = false
+        this.frequency_hold = null
         this.initModulation(m)
         this.modulator = {
             modFrqTime: 0,
@@ -98,6 +101,7 @@ class Generator {
 
     setupModFrq() {
         if (this.modFrqTimerId != null) {
+            // stop actions
             clearInterval(this.modFrqTimerId)
             this.modFrqTimerId = null
         }
@@ -106,7 +110,17 @@ class Generator {
                 / settings.generator.modTimerSteps / 2.0 // two turns
             const fn = () => this.modFrqTimer()
             this.modulator.modFrqTime = Date.now()
+            if (this.frequency_hold == null)
+                this.frequency_hold = this.frequency
             this.modFrqTimerId = setInterval(fn, pe)
+        }
+        else {
+            // restore frq
+            if (this.frequency_hold != null) {
+                this.frequency = this.frequency_hold
+                this.frequency_hold = null
+                this.setFrequency(this.frequency)
+            }
         }
     }
 
@@ -124,7 +138,16 @@ class Generator {
                 / settings.generator.modTimerSteps / 2.0 // two turns
             const fn = () => this.modAmpTimer()
             this.modulator.modAmpTime = Date.now()
+            if (this.gain_hold == null)
+                this.gain_hold = this.channel.gainValue
             this.modAmpTimerId = setInterval(fn, pe)
+        }
+        else {
+            // restore gain
+            if (this.gain_hold != null) {
+                this.channel.setGain(this.gain_hold)
+                this.gain_hold = null
+            }
         }
     }
 
