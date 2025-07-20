@@ -62,6 +62,7 @@ class Channel {
             if ((isPaused && this.outConnected)
                 || (!isPaused && !this.outConnected)) {
                 oscilloscope.setOut(this, !pause)
+                this.generator.setPause(pause)
             }
             this.outMute = isPaused
             this.out = !this.outMute

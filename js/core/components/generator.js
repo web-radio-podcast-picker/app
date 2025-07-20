@@ -4,6 +4,8 @@ class Generator {
 
     channel = null      // related channel
     oscillator = null   // oscillator (-24khz..24kz)
+    isOn = false        // true if on
+    pause = false
 
     fnId = null         // active func
     frequency = null    // frequency
@@ -58,13 +60,38 @@ class Generator {
     }
 
     start() {
-        if (this.oscillator != null)
+        this.startOscillator()
+        this.isOn = true
+    }
+
+    startOscillator() {
+        if (this.oscillator != null) {
             this.oscillator.start(0)
+        }
     }
 
     stop() {
-        if (this.oscillator != null)
+        this.stopOscillator()
+        this.isOn = false
+    }
+
+    stopOscillator() {
+        if (this.oscillator != null) {
             this.oscillator.stop(0)
+        }
+    }
+
+    setPause(pause) {
+        if (!this.isOn) return
+        this.pause = pause
+        if (pause) {
+            clearInterval(this.modFrqTimerId)
+            clearInterval(this.modAmpTimerId)
+        }
+        else {
+            this.setupModFrq()
+            this.setupModAmp()
+        }
     }
 
     activateFn(fnId) {
