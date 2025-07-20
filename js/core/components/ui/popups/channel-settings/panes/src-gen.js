@@ -114,12 +114,14 @@ class ChannelSettingsPaneSrcGen {
         const channel = ui.channels.popupSettings.editChannel
         if (channel == null) return
         ui.toggles.updateToggle('btn_ch_gen_mod_frq_onoff')
+        channel.generator.setupModFrq()
     }
 
     setModAmp(on) {
         const channel = ui.channels.popupSettings.editChannel
         if (channel == null) return
         ui.toggles.updateToggle('btn_ch_gen_mod_amp_onoff')
+        channel.generator.setupModAmp()
     }
 
     tabChanged($t) {
