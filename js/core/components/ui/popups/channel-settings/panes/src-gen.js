@@ -41,12 +41,12 @@ class ChannelSettingsPaneSrcGen {
                 channel + 'generator.frequency',
                 { onPostChanged: (v) => this.setFrequency(v) }))
             .toggles.initToggle('btn_ch_gen_frq_onoff',
-                () => { },
+                () => { this.switchFrq() },
                 channel + 'generator.frqOn')
 
             // modulation frequency
             .toggles.initToggle('btn_ch_gen_mod_frq_onoff',
-                () => { },
+                () => { this.switchModFrq() },
                 channel + 'generator.frqModulationOn')
             .bindings.bind(ui.bindings.binding(
                 'opt_ch_gen_mod_frq_min',
@@ -63,7 +63,7 @@ class ChannelSettingsPaneSrcGen {
 
             // modulation gain
             .toggles.initToggle('btn_ch_gen_mod_amp_onoff',
-                () => { },
+                () => { this.switchModAmp() },
                 channel + 'generator.ampModulationOn')
             .bindings.bind(ui.bindings.binding(
                 'opt_ch_gen_mod_amp_min',
@@ -83,6 +83,45 @@ class ChannelSettingsPaneSrcGen {
         return this
     }
 
+    switchFrq() {
+        const channel = ui.channels.popupSettings.editChannel
+        if (channel == null) return
+        channel.generator.frqModulationOn = !channel.generator.frqOn
+        this.setModFrq(channel.generator.frqModulationOn)
+        this.setFrq(channel.generator.frqOn)
+    }
+
+    switchModFrq() {
+        const channel = ui.channels.popupSettings.editChannel
+        if (channel == null) return
+        channel.generator.frqOn = !channel.generator.frqModulationOn
+        this.setModFrq(channel.generator.frqModulationOn)
+        this.setFrq(channel.generator.frqOn)
+    }
+
+    switchModAmp() {
+        const channel = ui.channels.popupSettings.editChannel
+        if (channel == null) return
+    }
+
+    setFrq(on) {
+        const channel = ui.channels.popupSettings.editChannel
+        if (channel == null) return
+        ui.toggles.updateToggle('btn_ch_gen_frq_onoff')
+    }
+
+    setModFrq(on) {
+        const channel = ui.channels.popupSettings.editChannel
+        if (channel == null) return
+        ui.toggles.updateToggle('btn_ch_gen_mod_frq_onoff')
+    }
+
+    setModAmp(on) {
+        const channel = ui.channels.popupSettings.editChannel
+        if (channel == null) return
+        ui.toggles.updateToggle('btn_ch_gen_mod_amp_onoff')
+    }
+
     tabChanged($t) {
         const fnId = $t.text()
         this.setFn(fnId)
@@ -94,6 +133,7 @@ class ChannelSettingsPaneSrcGen {
         if (channel.generator.modulation.frqMin == null)
             return
         this.setModulation(channel.generator.modulation)
+        this.setFrq(channel.generator.frqOn)
     }
 
     setFn(fnId) {

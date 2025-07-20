@@ -38,8 +38,10 @@ class Toggles {
                 var val =
                     (forceVal !== undefined && forceVal != null) ?
                         forceVal : xeval(path)
-                if (typeof val == 'object' && val.success)
-                    this.setToggle(controlId, val.value)
+                if (typeof val == 'object') {
+                    if (val.success)
+                        this.setToggle(controlId, val.value)
+                }
                 else
                     this.setToggle(controlId, val)
             } catch (err) {
