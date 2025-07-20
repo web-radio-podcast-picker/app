@@ -15,9 +15,9 @@
     <!-- dependencies -->
     <script src="./js/ext/jquery-3.7.1.min.js"></script>
     <!-- settings -->
+    <script src="./js/core/globals.js"></script>
     <script src="./js/core/settings.js"></script>
     <!-- code loader -->
-    <script src="./js/core/globals.js"></script>
     <script src="./js/core/libs/converters.js"></script>
     <script src="./js/core/libs/data.js"></script>
     <script src="./js/core/components/audio-input-device.js"></script>
@@ -28,6 +28,7 @@
     <script src="./js/core/models/channel.js"></script>
     <script src="./js/core/components/oscilloscope.js"></script>
     <script src="./js/core/components/generator.js"></script>
+    <script src="./js/core/components/trigger.js"></script>
     <script src="./js/core/models/signal-measures.js"></script>
     <script src="./js/core/tasks/channels-animation-task.js"></script>
     <script src="./js/core/tasks/get-samples-task.js"></script>
@@ -431,8 +432,8 @@
 
         <div id="opts_ch_trig" class="channel-menu-pane hidden">
             <span id="btn_ch_trg_onoff" class="label channel-label on-off-label off">OFF</span>
-            <span id="btn_ch_trg_w1" class="menu-item menu-item-blue">way1</span>
-            <span id="btn_ch_trg_w2" class="menu-item menu-item-blue">way2</span>
+            <span id="btn_ch_trg_up" class="menu-item menu-item-blue">Up</span>
+            <span id="btn_ch_trg_down" class="menu-item menu-item-blue">Down</span>
         </div>
 
         <!-- FFT -->

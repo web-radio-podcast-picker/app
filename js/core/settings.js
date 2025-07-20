@@ -39,6 +39,10 @@ window.settings = {
         modTimerSteps: 500
     },
 
+    trigger: {
+        defaultType: Trigger_Type_Up
+    },
+
     oscilloscope: {
         vPerDiv: 0.5,          // volts per division
         tPerDiv: 1,            // time per division in milliseconds

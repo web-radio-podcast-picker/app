@@ -12,3 +12,7 @@ const Gen_Fn_Sin = 'Sine'
 const Gen_Fn_Square = 'Square'
 const Gen_Fn_Sawtooth = 'Sawtooth'
 const Gen_Fn_Triangle = 'Triangle'
+
+// triggers types
+const Trigger_Type_Up = 'Up'
+const Trigger_Type_Down = 'Down'
