@@ -8,7 +8,7 @@ class ChannelSettingsPaneSrcMath {
 
         ui.toggles.initToggle('btn_ch_src_math_onoff',
             () => ui.channels.updatePause(this.channelSettings.editChannel),
-            'ui.channels.popupSettings.editChannel.pause',
+            ui.getCurrentChannelPath('pause'),
             true
         )
 

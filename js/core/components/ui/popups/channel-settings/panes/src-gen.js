@@ -23,7 +23,7 @@ class ChannelSettingsPaneSrcGen {
             this.fns[t[0]] = t[1]
         })
 
-        const channel = 'ui.channels.popupSettings.editChannel.'
+        const channel = ui.getCurrentChannelPath()
 
         ui
             .tabs.initTabs(this.tabs, {
@@ -84,7 +84,7 @@ class ChannelSettingsPaneSrcGen {
     }
 
     switchFrq() {
-        const channel = ui.channels.popupSettings.editChannel
+        const channel = ui.getCurrentChannel()
         if (channel == null) return
         channel.generator.frqModulationOn = !channel.generator.frqOn
         this.setModFrq(channel.generator.frqModulationOn)
@@ -92,7 +92,7 @@ class ChannelSettingsPaneSrcGen {
     }
 
     switchModFrq() {
-        const channel = ui.channels.popupSettings.editChannel
+        const channel = ui.getCurrentChannel()
         if (channel == null) return
         channel.generator.frqOn = !channel.generator.frqModulationOn
         this.setModFrq(channel.generator.frqModulationOn)
@@ -100,28 +100,28 @@ class ChannelSettingsPaneSrcGen {
     }
 
     switchModAmp() {
-        const channel = ui.channels.popupSettings.editChannel
+        const channel = ui.getCurrentChannel()
         if (channel == null) return
         channel.generator.ampOn = !channel.generator.ampModulationOn
         this.setModAmp(channel.generator.ampModulationOn)
     }
 
     setFrq(on) {
-        const channel = ui.channels.popupSettings.editChannel
+        const channel = ui.getCurrentChannel()
         if (channel == null) return
         ui.toggles.updateToggle('btn_ch_gen_frq_onoff')
         ui.bindings.updateBindingTarget('opt_ch_gen_frq')
     }
 
     setModFrq(on) {
-        const channel = ui.channels.popupSettings.editChannel
+        const channel = ui.getCurrentChannel()
         if (channel == null) return
         channel.generator.setupModFrq()
         ui.toggles.updateToggle('btn_ch_gen_mod_frq_onoff')
     }
 
     setModAmp(on) {
-        const channel = ui.channels.popupSettings.editChannel
+        const channel = ui.getCurrentChannel()
         if (channel == null) return
         channel.generator.setupModAmp()
         ui.toggles.updateToggle('btn_ch_gen_mod_amp_onoff')
@@ -144,13 +144,13 @@ class ChannelSettingsPaneSrcGen {
     setFn(fnId) {
         const tabId = this.fns[fnId]
         ui.tabs.selectTab(tabId, this.tabs)
-        const channel = ui.channels.popupSettings.editChannel
+        const channel = ui.getCurrentChannel()
         if (channel == null) return
         channel.generator.activateFn(fnId)
     }
 
     setFrequency(v) {
-        const channel = ui.channels.popupSettings.editChannel
+        const channel = ui.getCurrentChannel()
         if (channel == null) return
         const valst = xeval(v)
         if (valst.success) {
@@ -162,7 +162,7 @@ class ChannelSettingsPaneSrcGen {
     }
 
     setModulation(props) {
-        const channel = ui.channels.popupSettings.editChannel
+        const channel = ui.getCurrentChannel()
         if (channel == null) return
         channel.generator.setModulation(props)
         // massive display update shortcut

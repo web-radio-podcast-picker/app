@@ -9,7 +9,7 @@ function xeval(expr, showError) {
     } catch (err) {
         // ignore or debug
         if (settings.debug.debug)
-            console.log(err)
+            console.log(expr, err)
         return { success: false }
     }
 }

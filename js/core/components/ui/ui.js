@@ -54,6 +54,16 @@ ui = {
         this.channels.popupSettings.init()
     },
 
+    getCurrentChannel() {
+        return this.channels.popupSettings.editChannel
+    },
+
+    getCurrentChannelPath(subPath) {
+        return 'ui.channels.popupSettings.editChannel.'
+            + ((subPath == null || subPath === undefined) ?
+                '' : subPath)
+    },
+
     viewSize() {
         const html = document.querySelector('html');
         return { width: html.clientWidth, height: html.clientHeight };

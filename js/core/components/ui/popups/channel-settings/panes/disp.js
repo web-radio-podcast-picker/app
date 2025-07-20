@@ -8,7 +8,7 @@ class ChannelSettingsPaneDisp {
 
         ui.toggles.initToggle('btn_ch_disp_onoff',
             () => ui.channels.updateVisible(this.channelSettings.editChannel),
-            'ui.channels.popupSettings.editChannel.view.visible'
+            ui.getCurrentChannelPath('view.visible')
         )
 
         return this

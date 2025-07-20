@@ -28,7 +28,7 @@ class ChannelSettingsPaneSrcAudio {
                 { onChange: async ($c) => this.tabChanged($c) })
             .toggles.initToggle('btn_ch_src_audio_onoff',
                 () => ui.channels.updatePause(this.channelSettings.editChannel),
-                'ui.channels.popupSettings.editChannel.pause',
+                ui.getCurrentChannelPath('pause'),
                 true
             )
             .bindings.bind(ui.bindings.binding(
@@ -49,7 +49,7 @@ class ChannelSettingsPaneSrcAudio {
                 readOnly))
             .bindings.bind(ui.bindings.binding(
                 'opt_ch_src_gain',
-                'ui.channels.popupSettings.editChannel.gainValue',
+                ui.getCurrentChannelPath('gainValue'),
                 {
                     onPostChanged: (v) => this.setGain(v),
                     input: {
@@ -65,7 +65,7 @@ class ChannelSettingsPaneSrcAudio {
     }
 
     setGain(v) {
-        const channel = ui.channels.popupSettings.editChannel
+        const channel = ui.getCurrentChannel()
         if (channel == null) return
         const valst = xeval(v)
         if (valst.success) {

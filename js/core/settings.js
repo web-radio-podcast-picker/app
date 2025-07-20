@@ -3,7 +3,7 @@
 window.settings = {
 
     app: {
-        version: '0.6'
+        version: '0.7'
     },
 
     debug: {
@@ -29,18 +29,20 @@ window.settings = {
         defaultFrq: 250,        // initial generator (oscillator) frq
         defaultFn: 'Sine',      // default fn
         defaultModulation: {
-            frqMin: 500,            // frequency modulation min hz
+            frqMin: 500,        // frequency modulation min hz
             frqMax: 1500,       // frequency modulation max hz
             frqRate: 5,         // frequency modulation rate hz
-            ampMin: 0.1,    // gain modulation min x
-            ampMax: 1,    // gain modulation max x
-            ampRate: 0.5  // gain modulation rate hz
+            ampMin: 0.1,        // gain modulation min x
+            ampMax: 1,          // gain modulation max x
+            ampRate: 0.5,       // gain modulation rate hz
+            sensitivity: 0.001  // ramp delta v check
         },
         modTimerSteps: 500
     },
 
     trigger: {
-        defaultType: Trigger_Type_Up
+        defaultType: Trigger_Type_Up,
+        sensitivity: 0.0001
     },
 
     oscilloscope: {

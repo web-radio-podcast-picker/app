@@ -15,6 +15,7 @@ class ChannelSettingsPaneTrig {
 
     init(channelSettings) {
         this.channelSettings = channelSettings
+        const channel = ui.getCurrentChannelPath()
 
         this.fnMap.forEach(t => {
             this.tabs.push(t[1])
@@ -24,17 +25,29 @@ class ChannelSettingsPaneTrig {
         ui
             .toggles.initToggle('btn_ch_trg_onoff',
                 () => { },
-                'ui.channels.popupSettings.editChannel.trigger.isOn'
+                ui.getCurrentChannelPath('trigger.isOn')
             )
             .tabs.initTabs(this.tabs, {
                 onChange: $c => {
                     this.tabChanged($c)
                 }
             })
+            .bindings.bind(ui.bindings.binding(
+                'opt_ch_trig_tre',
+                channel + 'trigger.threshold'))
+            .bindings.bind(ui.bindings.binding(
+                'opt_ch_trig_sen',
+                channel + 'trigger.sensitivity'))
 
         this.setType(settings.trigger.defaultType)
 
         return this
+    }
+
+    toggleTrigger() {
+        const channel = ui.getCurrentChannel()
+        if (channel == null) return
+        channel.toggle()
     }
 
     tabChanged($t) {
@@ -45,7 +58,7 @@ class ChannelSettingsPaneTrig {
     setType(typeId) {
         const tabId = this.fns[typeId]
         ui.tabs.selectTab(tabId, this.tabs)
-        const channel = ui.channels.popupSettings.editChannel
+        const channel = ui.getCurrentChannel()
         if (channel == null) return
         channel.trigger.type = typeId
     }

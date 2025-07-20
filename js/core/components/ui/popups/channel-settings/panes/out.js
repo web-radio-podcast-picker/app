@@ -18,7 +18,7 @@ class ChannelSettingsPaneOut {
                 else
                     this.setOut(channel, isOn)
             },
-            'ui.channels.popupSettings.editChannel.out'
+            ui.getCurrentChannelPath('out')
         )
 
         return this
@@ -30,7 +30,7 @@ class ChannelSettingsPaneOut {
     }
 
     updateOn() {
-        const channel = ui.channels.popupSettings.editChannel
+        const channel = ui.getCurrentChannel()
         if (channel == null) return
         ui.toggles.updateToggle('btn_ch_out_onoff',
             channel.out &&
