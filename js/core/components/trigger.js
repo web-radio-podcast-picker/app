@@ -49,7 +49,7 @@ class Trigger {
                 ) {
                     if (j >= minTimeDelta) {
                         this.triggeredV = value
-                        return i - j
+                        return i - j + 1
                     }
                     else
                         j++

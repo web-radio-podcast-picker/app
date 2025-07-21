@@ -42,9 +42,15 @@ window.settings = {
 
     trigger: {
         defaultType: Trigger_Type_Up,
-        sensitivity: 0.3,
-        threshold: 0.1,
+        sensitivity: 0.4,
+        threshold: 0.2,
         timeThreshold: 1
+    },
+
+    markers: {
+        trigger: {
+            yRel: -11            // rel y to the base widget y of value point
+        }
     },
 
     oscilloscope: {

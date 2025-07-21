@@ -17,6 +17,7 @@ class Channel {
     gainValue = 1               // gain value
     generator = new Generator() // signal generator
     trigger = new Trigger()     // trigger
+    markers = new Markers().init(this)     // channel markers
     audioContext = null         // audio context for processing
     getSamplesTask = null       // samples provider if required
     out = false                 // true if channel is binded to audio output

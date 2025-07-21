@@ -24,7 +24,7 @@ class ChannelSettingsPaneTrig {
 
         ui
             .toggles.initToggle('btn_ch_trg_onoff',
-                () => { },
+                () => this.toggleTrigger(),
                 ui.getCurrentChannelPath('trigger.isOn')
             )
             .tabs.initTabs(this.tabs, {
@@ -83,7 +83,8 @@ class ChannelSettingsPaneTrig {
     toggleTrigger() {
         const channel = ui.getCurrentChannel()
         if (channel == null) return
-        channel.toggle()
+        //channel.trigger.toggle()
+        channel.markers.setTriggerControl(channel.trigger.isOn)
     }
 
     tabChanged($t) {

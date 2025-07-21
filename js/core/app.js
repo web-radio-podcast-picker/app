@@ -10,6 +10,7 @@ app = {
     gridView: null,             // grid view
     tasks: [],                  // tasks,
     canvas: null,               // canvas for visualization
+    canvas_mk: null,            // canvas for markers
     ui: null,                   // UI component
     powerOn: true,              // indicates if turned on or off
 
@@ -41,6 +42,7 @@ app = {
         this.oscilloscopeView = new OscilloscopeView();
         this.gridView = new GridView();
         this.canvas = $('#cnv_oscillo')[0];
+        this.canvas_mk = $('#cnv_markers')[0];
         this.gridView.init($('#cnv_grid')[0]);
         this.audioInputChannel = await this.initDefaultAudioInput();
         this.oscilloscope.addChannel(this.audioInputChannel);

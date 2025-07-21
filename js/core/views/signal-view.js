@@ -13,6 +13,15 @@ class SignalView {
         this.channel = channel;
     }
 
+    offsetToVolt(offset) {
+        /*var percent = -value / signalRange;
+        percent *= signalRange / displayRange; // adjust to display range
+        var height = canvasHeight * percent / 2.0;
+        height *= this.channel.yScale;
+        var offset = canvasHeight / 2 + height;
+        offset += this.channel.yOffset;*/
+    }
+
     run() {
 
         if (!this.visible) return;
@@ -38,9 +47,7 @@ class SignalView {
             const baseI = this.channel.trigger.isOn ?
                 this.channel.trigger.checkTrigger(this.channel, dataArray) : 0
 
-            for (var i = baseI; i < dataArray.length; i += 1) {
-                var value = dataArray[i];
-                value = valueToVolt(this.channel, value);
+            const getVoltOffset = (value) => {
                 // adjust y position (y multiplier, y position shift, v scale)
                 var percent = -value / signalRange;
                 percent *= signalRange / displayRange; // adjust to display range
@@ -48,6 +55,22 @@ class SignalView {
                 height *= this.channel.yScale;
                 var offset = canvasHeight / 2 + height;
                 offset += this.channel.yOffset;
+                return offset
+            }
+
+            if (this.channel.trigger.isOn) {
+                // setup the trigger marker
+                const triggerY = getVoltOffset(
+                    this.channel.trigger.threshold)
+                    + settings.markers.trigger.yRel
+                this.channel.markers.setTriggerControlPos(triggerY)
+            }
+
+            for (var i = baseI; i < dataArray.length; i += 1) {
+                var value = dataArray[i];
+
+                value = valueToVolt(this.channel, value);
+                const offset = getVoltOffset(value)
 
                 var nx = (i - baseI) * barWidth
                 var ny = offset;

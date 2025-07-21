@@ -30,6 +30,7 @@ canvas {
     border: none;
     position: absolute;
     /* fix main view real left position on edge */
+    /* @TODO: do it programmatially */
     left: 4px;
 }
 
@@ -220,7 +221,7 @@ div.channel-menu-pane > span.label
 #channel_settings_pane {
     position: absolute;
     padding: 1em;
-    z-index: 20;
+    z-index: 40;
     opacity: 0.9;
     color: white;
     background-color: darkblue;
@@ -229,7 +230,7 @@ div.channel-menu-pane > span.label
 
 .input-widget { 
     position: absolute;
-    z-index: 40;
+    z-index: 60;
     background-color: #0000CC;
     border: #FFFF0077 solid 1px;
     padding: 1em;
@@ -328,7 +329,7 @@ div#iw_delta_pane > button {
     position: absolute;
     background-color: darkblue;
     padding: 1em;
-    z-index: 20;
+    z-index: 50;
     opacity: 0.9;
     color: white;
     border: #FFFF0077 solid 1px;
@@ -770,7 +771,7 @@ div.channel-submenu-pane span.on-off-label {
     background-color: unset !important;
 }
 
-#top-pane-1 {
+/*#top-pane-1 {
     top: 1em;
     left: 1em;
     position: absolute;
@@ -784,7 +785,7 @@ div.channel-submenu-pane span.on-off-label {
     position: absolute;
     z-index: 10;
     color: yellow;
-}
+}*/
 
 .btn-ch {
     border: none;
@@ -799,4 +800,24 @@ div.channel-submenu-pane span.on-off-label {
 
 #vdiv,#tdiv {
     margin-left: 1em;
+}
+
+.trigger-plot {
+    position: absolute;
+    left: 1em;
+    top: 1em;
+    z-index:30;
+
+}
+
+.trigger-plot-back-symbol {
+    font-size: 36px;
+    padding: 0px;
+    /*border: red solid 1px;*/
+    height: auto;
+    width: auto;
+    display: block;
+    margin: 0px;
+    line-height: 22px;
+    cursor: grab
 }

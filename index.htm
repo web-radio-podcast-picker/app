@@ -37,6 +37,7 @@
     <script src="./js/core/tasks/request-animation-frame-task.js"></script>
     <script src="./js/core/tasks/publish-buffers-task.js"></script>
     <script src="./js/core/tasks/channels-measures-task.js"></script>
+    <script src="./js/core/components/ui/markers.js"></script>
     <script src="./js/core/components/ui/tabs.js"></script>
     <script src="./js/core/components/ui/toggles.js"></script>
     <script src="./js/core/components/ui/bindings.js"></script>
@@ -69,6 +70,8 @@
     <canvas id="cnv_grid"></canvas>
 
     <canvas id="cnv_oscillo" class="canvas-uninitialized"></canvas>
+
+    <canvas id="cnv_markers" class="canvas-uninitialized"></canvas>
 
     <!-- channels deck -->
 
@@ -487,6 +490,12 @@
             <span id="btn_ch_eff_onoff" class="label channel-label on-off-label off">OFF</span>
         </div>
 
+    </div>
+
+    <!-- trigger plot -->
+
+    <div id="trigger_plot_" class="trigger-plot hidden">
+        <span class="trigger-plot-back-symbol">⏵</span>
     </div>
 
 </body>
