@@ -57,14 +57,23 @@ drag = {
             iy = y
             $c.attr('data-drag-iy', iy)
         }
-        const dx = x - ix
-        const dy = y - iy
+        var dx = x - ix
+        var dy = y - iy
+
+        if ((d.minx != null && dx < d.minx)
+            || (d.maxx != null && dx > d.maxx))
+            dx = 0
+        if ((d.miny != null && dy < d.miny)
+            || (d.maxy != null && dy > d.maxy))
+            dy = 0
+
         $c.attr('data-drag-dx', dx)
         $c.attr('data-drag-dy', dy)
         const nx = Number($c.attr('data-drag-left')) + dx
         const ny = Number($c.attr('data-drag-top')) + dy
         $c.css('left', nx + 'px')
         $c.css('top', ny + 'px')
+
         if (d.movingCallback != null)
             d.movingCallback(
                 this.deltas($c),
