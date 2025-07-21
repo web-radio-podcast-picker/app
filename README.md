@@ -15,8 +15,11 @@ main purposes:
 
 project status: on going
 
+![screenshot](doc/screenshot-0.7.png)
+*v 0.7 - triggers with graphical markers*
+
 ![screenshot](doc/screenshot-0.6c.png)
-*v 0.6 - channel settings: signal generator*
+*v 0.6 - signal generator (oscillator/modulator)*
 
 ![screenshot](doc/screenshot-0.4.png)
 *v 0.4 - input widget*
