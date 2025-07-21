@@ -14,7 +14,9 @@ class Markers {
         return drag.isDragging(this.$trigger)
     }
 
-    addTriggerControl() {
+    addTriggerControl(enableRefreshDisplay) {
+        if (enableRefreshDisplay === undefined)
+            enableRefreshDisplay = false
         const cnv = app.canvas_mk
         const $trigger = $('#trigger_plot_').clone();
         const id = $trigger.attr('id') + this.channel.channelId
@@ -39,13 +41,15 @@ class Markers {
                 null,
                 null,
                 () => this.channel.trigger.threshold,
-                // start
-                null,
+                null, // start
                 // moving
-                (deltas, base) => updateTrigger(deltas, base),
-                // moved
+                (deltas, base) => {
+                    updateTrigger(deltas, base)
+                    if (enableRefreshDisplay)
+                        oscilloscope.refreshView()
+                },
                 null
-            ))
+            )) // moved        
 
         $trigger.removeClass('hidden');
         this.$trigger = $trigger
@@ -58,10 +62,10 @@ class Markers {
         }
     }
 
-    setTriggerControl(on) {
+    setTriggerControl(on, enableRefreshDisplay) {
         this.removeTriggerControl()
         if (on) {
-            this.addTriggerControl()
+            this.addTriggerControl(enableRefreshDisplay)
         }
     }
 

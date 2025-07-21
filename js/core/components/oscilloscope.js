@@ -150,6 +150,11 @@ oscilloscope = {
         }
     },
 
+    refreshView() {
+        if (this.pause)
+            app.requestAnimationFrame()
+    },
+
     frameStartCallback() {
         // called at the start of the frame
         const lst = this.lastStartTime

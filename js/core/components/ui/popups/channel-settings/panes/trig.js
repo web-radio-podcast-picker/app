@@ -83,8 +83,7 @@ class ChannelSettingsPaneTrig {
     toggleTrigger() {
         const channel = ui.getCurrentChannel()
         if (channel == null) return
-        //channel.trigger.toggle()
-        channel.markers.setTriggerControl(channel.trigger.isOn)
+        channel.markers.setTriggerControl(channel.trigger.isOn, true)
     }
 
     tabChanged($t) {
