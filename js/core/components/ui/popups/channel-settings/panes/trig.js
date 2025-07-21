@@ -57,7 +57,7 @@ class ChannelSettingsPaneTrig {
                 channel + 'trigger.timeThreshold',
                 {
                     input: {
-                        delta: 0.1,
+                        delta: 1,
                         min: 0,
                         max: null
                     }
@@ -83,7 +83,11 @@ class ChannelSettingsPaneTrig {
     toggleTrigger() {
         const channel = ui.getCurrentChannel()
         if (channel == null) return
-        channel.markers.setTriggerControl(channel.trigger.isOn, true)
+        channel.markers.setTriggerControl(
+            channel.trigger.isOn,
+            true,
+            () => ui.bindings.updateBindingTarget('opt_ch_trig_tre')
+        )
     }
 
     tabChanged($t) {

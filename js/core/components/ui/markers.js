@@ -14,7 +14,7 @@ class Markers {
         return drag.isDragging(this.$trigger)
     }
 
-    addTriggerControl(enableRefreshDisplay) {
+    addTriggerControl(enableRefreshDisplay, onUpdateCallback) {
         if (enableRefreshDisplay === undefined)
             enableRefreshDisplay = false
         const cnv = app.canvas_mk
@@ -31,6 +31,8 @@ class Markers {
             const triggerValue = vround(
                 this.channel.view.offsetToVolt(triggerY))
             this.channel.trigger.threshold = triggerValue
+            if (onUpdateCallback !== undefined && onUpdateCallback != null)
+                onUpdateCallback()
         }
 
         drag.addDragControl(
@@ -62,10 +64,10 @@ class Markers {
         }
     }
 
-    setTriggerControl(on, enableRefreshDisplay) {
+    setTriggerControl(on, enableRefreshDisplay, onUpdateCallback) {
         this.removeTriggerControl()
         if (on) {
-            this.addTriggerControl(enableRefreshDisplay)
+            this.addTriggerControl(enableRefreshDisplay, onUpdateCallback)
         }
     }
 
