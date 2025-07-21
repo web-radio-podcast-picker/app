@@ -706,6 +706,20 @@ div.popup-grid > span.menu-item {
     display: inline-block;
 }
 
+div.row-opt span.opt-label {
+    margin-left:0px;
+}
+
+div.row-opt span.unit {
+    margin-left: 0px;
+    margin-right: 1em;
+}
+
+div.row-opt input {
+    margin-left: 0px;
+    margin-right: 0em;
+}
+
 .grid {
     display: grid !important;
 }

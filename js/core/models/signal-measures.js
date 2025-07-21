@@ -6,6 +6,7 @@ class SignalMeasures {
     volts = 0                  // volts value (calculated from digitalized value)
     vMin = 0                   // minimum volts value
     vMax = 0                   // maximum volts value
+    vRange = 0                 // maximum range (vMax - vMin)
     vAvg = 0                   // average volts value
 
     frq = 0
@@ -46,6 +47,7 @@ class SignalMeasures {
         this.vMin = valueToVolt(channel, min);
         this.vMax = valueToVolt(channel, max);
         this.vAvg = valueToVolt(channel, avg);
+        this.vRange = this.vMax - this.vMin
         this.frq = frq
         this.frqPe = 1000.0 / frq
         this.frqMin = frqMin
