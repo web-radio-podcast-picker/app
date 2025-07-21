@@ -20,6 +20,37 @@ class SignalView {
         height *= this.channel.yScale;
         var offset = canvasHeight / 2 + height;
         offset += this.channel.yOffset;*/
+
+        const canvasHeight = this.canvas.height;
+        const signalRange = settings.audioInput.vScale;
+        const displayRange = this.getDisplayRange()
+
+        offset -= this.channel.yOffset
+        var height = offset - canvasHeight / 2.0
+        height /= this.channel.yScale
+        var percent = height * 2.0 / canvasHeight
+        percent /= signalRange / displayRange
+        const value = -percent * signalRange
+        return value
+    }
+
+    getVoltOffset(value) {
+        const canvasHeight = this.canvas.height;
+        const signalRange = settings.audioInput.vScale;
+        const displayRange = this.getDisplayRange()
+
+        // adjust y position (y multiplier, y position shift, v scale)
+        var percent = -value / signalRange;
+        percent *= signalRange / displayRange; // adjust to display range
+        var height = canvasHeight * percent / 2.0;
+        height *= this.channel.yScale;
+        var offset = canvasHeight / 2 + height;
+        offset += this.channel.yOffset;
+        return offset
+    }
+
+    getDisplayRange() {
+        return settings.oscilloscope.vPerDiv * 5.0
     }
 
     run() {
@@ -37,8 +68,8 @@ class SignalView {
             var y = -1;
             const drawContext = this.canvas.getContext('2d');
 
-            const signalRange = settings.audioInput.vScale;
-            const displayRange = settings.oscilloscope.vPerDiv * 5.0;        // base
+            const signalRange = settings.audioInput.vScale
+            const displayRange = this.getDisplayRange()        // base
 
             const timePerDiv = settings.oscilloscope.tPerDiv;
             // full buffer view : scale 1ms/div
@@ -47,22 +78,11 @@ class SignalView {
             const baseI = this.channel.trigger.isOn ?
                 this.channel.trigger.checkTrigger(this.channel, dataArray) : 0
 
-            const getVoltOffset = (value) => {
-                // adjust y position (y multiplier, y position shift, v scale)
-                var percent = -value / signalRange;
-                percent *= signalRange / displayRange; // adjust to display range
-                var height = canvasHeight * percent / 2.0;
-                height *= this.channel.yScale;
-                var offset = canvasHeight / 2 + height;
-                offset += this.channel.yOffset;
-                return offset
-            }
-
             if (this.channel.trigger.isOn
                 && !this.channel.markers.isDraggingTrigger()
             ) {
                 // setup the trigger marker
-                const triggerY = getVoltOffset(
+                const triggerY = this.getVoltOffset(
                     this.channel.trigger.threshold)
                     + settings.markers.trigger.yRel
                 this.channel.markers.setTriggerControlPos(triggerY)
@@ -72,7 +92,7 @@ class SignalView {
                 var value = dataArray[i];
 
                 value = valueToVolt(this.channel, value);
-                const offset = getVoltOffset(value)
+                const offset = this.getVoltOffset(value)
 
                 var nx = (i - baseI) * barWidth
                 var ny = offset;

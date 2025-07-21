@@ -23,12 +23,27 @@ class Markers {
             .css('color', this.channel.color)
         $('body').append($trigger);
 
+        const updateTrigger = (deltas, base) => {
+            var triggerY = this.channel.view.getVoltOffset(base)
+            triggerY += deltas.dy
+            const triggerValue = vround(
+                this.channel.view.offsetToVolt(triggerY))
+            this.channel.trigger.threshold = triggerValue
+        }
+
         drag.addDragControl(
             id,
             drag.props(
+                0,
+                0,
                 null,
                 null,
+                () => this.channel.trigger.threshold,
+                // start
                 null,
+                // moving
+                (deltas, base) => updateTrigger(deltas, base),
+                // moved
                 null
             ))
 

@@ -1,11 +1,16 @@
 drag = {
 
-    props(minx, maxx, miny, maxy) {
+    props(minx, maxx, miny, maxy, getInitialValueFunc,
+        startMoveCallback, movingCallback, movedCallback) {
         return {
             minx: minx,
             maxx: maxx,
             miny: miny,
-            maxy: maxy
+            maxy: maxy,
+            getInitialValueFunc: getInitialValueFunc,
+            startMoveCallback: startMoveCallback,
+            movingCallback: movingCallback,
+            movedCallback: movedCallback
         }
     },
 
@@ -17,23 +22,28 @@ drag = {
         $c.attr('data-drag-on', st)
     },
 
-    startDrag($c) {
+    startDrag($c, d) {
         if (this.isDragging($c)) return
-        console.log('start drag')
         const offset = $c.offset()
         $c.attr('data-drag-left', offset.left)
         $c.attr('data-drag-top', offset.top)
         this.setIsDragging($c, true)
+        const ival = d.getInitialValueFunc()
+        $c.attr('data-drag-base', ival)
+        if (d.startMoveCallback != null)
+            d.startMoveCallback()
     },
 
-    stopDrag($c) {
+    stopDrag($c, d) {
         if (!this.isDragging($c)) return
         $c.attr('data-drag-ix', null)
-        var iy = $c.attr('data-drag-iy', null)
+        $c.attr('data-drag-iy', null)
         this.setIsDragging($c, false)
+        if (d.movedCallback != null)
+            d.movedCallback(this.deltas($c))
     },
 
-    drag($c, e) {
+    drag($c, d, e) {
         if (!this.isDragging($c)) return
         var ix = Number($c.attr('data-drag-ix'))
         var iy = Number($c.attr('data-drag-iy'))
@@ -49,30 +59,39 @@ drag = {
         }
         const dx = x - ix
         const dy = y - iy
-        //console.log(dx + ' - ' + dy)
         $c.attr('data-drag-dx', dx)
         $c.attr('data-drag-dy', dy)
         const nx = Number($c.attr('data-drag-left')) + dx
         const ny = Number($c.attr('data-drag-top')) + dy
-        //console.log(nx + ' - ' + ny)
         $c.css('left', nx + 'px')
         $c.css('top', ny + 'px')
+        if (d.movingCallback != null)
+            d.movingCallback(
+                this.deltas($c),
+                Number($c.attr('data-drag-base'))
+            )
     },
 
     addDragControl(controlId, d) {
         const $c = $('#' + controlId)
         const $body = $('body')
         $c.on('mousedown', (e) => {
-            this.startDrag($c)
+            this.startDrag($c, d)
         })
         $c.on('mouseup', (e) => {
-            this.stopDrag($c)
+            this.stopDrag($c, d)
         })
         $body.on('mouseleave', (e) => {
-            this.stopDrag($c)
+            this.stopDrag($c, d)
         })
         $body.on('mousemove', (e) => {
-            this.drag($c, e)
+            this.drag($c, d, e)
         })
+    },
+
+    deltas($c) {
+        const dx = Number($c.attr('data-drag-dx'))
+        const dy = Number($c.attr('data-drag-dy'))
+        return { dx: dx, dy: dy }
     }
 }

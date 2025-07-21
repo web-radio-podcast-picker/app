@@ -38,7 +38,7 @@ class ChannelSettingsPaneTrig {
                 {
                     input: {
                         delta: 0.1,
-                        min: 0,
+                        min: null,
                         max: null
                     }
                 }))
@@ -58,7 +58,7 @@ class ChannelSettingsPaneTrig {
                 {
                     input: {
                         delta: 0.1,
-                        min: null,
+                        min: 0,
                         max: null
                     }
                 }))
