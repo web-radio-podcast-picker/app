@@ -430,19 +430,36 @@
 
         <!-- TRIG -->
 
-        <div id="opts_ch_trig" class="channel-menu-pane hidden">
-            <span id="btn_ch_trg_onoff" class="label channel-label on-off-label off">OFF</span>
-            <span id="btn_ch_trg_up" class="menu-item menu-item-blue">Up</span>
-            <span id="btn_ch_trg_down" class="menu-item menu-item-blue">Down</span>
-            <div class="row-opt">
-                <span class="opt-label no-padding-left">Threshold</span>
-                <input id="opt_ch_trig_tre" class="opt-value-edit long-value no-margin-bottom"></input>
-                <span class="unit">V</span>
+        <div id="opts_ch_trig" class="channel-menu-pane channel-menu-pane-grid hidden">
+            <div>
+                <span id="btn_ch_trg_onoff" class="label channel-label on-off-label off">OFF</span>
+                <span id="btn_ch_trg_up" class="menu-item menu-item-blue">Up</span>
+                <span id="btn_ch_trg_down" class="menu-item menu-item-blue">Down</span>
             </div>
-            <div class="row-opt">
-                <span class="opt-label no-padding-left">Sensitivity</span>
-                <input id="opt_ch_trig_sen" class="opt-value-edit long-value no-margin-bottom"></input>
-                <span class="unit">V</span>
+            <div class="gr2">
+                <div class="row-opt">
+                    <span class="opt-label no-padding-left">Threshold</span>
+                    <input id="opt_ch_trig_tre" class="opt-value-edit long-value no-margin-bottom"></input>
+                    <span class="unit">V</span>
+                </div>
+                <div class="row-opt">
+                    <span class="opt-label no-padding-left">Sensitivity</span>
+                    <input id="opt_ch_trig_sen" class="opt-value-edit long-value no-margin-bottom"></input>
+                    <span class="unit">V</span>
+                </div>
+                <div class="row-opt">
+                    <span class="opt-label no-padding-left">Time Sensitivity</span>
+                    <input id="opt_ch_trig_tsen" class="opt-value-edit long-value no-margin-bottom"></input>
+                    <span class="unit">Spls</span>
+                </div>
+            </div>
+            <div class="gr3">
+                <div class="row-opt">
+                    <span class="opt-label no-padding-left">Triggered value</span>
+                    <span id="opt_ch_trig_tv"
+                        class="row opt-value-edit inline-block long-value no-margin-bottom"></span>
+                    <span class="unit">V</span>
+                </div>
             </div>
         </div>
 

@@ -34,11 +34,40 @@ class ChannelSettingsPaneTrig {
             })
             .bindings.bind(ui.bindings.binding(
                 'opt_ch_trig_tre',
-                channel + 'trigger.threshold'))
+                channel + 'trigger.threshold',
+                {
+                    input: {
+                        delta: 0.1,
+                        min: 0,
+                        max: null
+                    }
+                }))
             .bindings.bind(ui.bindings.binding(
                 'opt_ch_trig_sen',
                 channel + 'trigger.sensitivity',
                 {
+                    input: {
+                        delta: 0.1,
+                        min: 0,
+                        max: null
+                    }
+                }))
+            .bindings.bind(ui.bindings.binding(
+                'opt_ch_trig_tsen',
+                channel + 'trigger.timeThreshold',
+                {
+                    input: {
+                        delta: 0.1,
+                        min: 0,
+                        max: null
+                    }
+                }))
+            .bindings.bind(ui.bindings.binding(
+                'opt_ch_trig_tv',
+                channel + 'trigger.triggeredV',
+                {
+                    attr: 'text',
+                    readOnly: true,
                     input: {
                         delta: 0.1,
                         min: 0,

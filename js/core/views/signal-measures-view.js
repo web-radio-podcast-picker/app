@@ -31,5 +31,8 @@ class SignalMeasuresView {
         $('#yscale_' + c).text(this.channel.yScale);
         $('#xscale_' + c).text(this.channel.xScale);
         $('#gain_' + c).text(vround(this.channel.gainValue))
+
+        if (this.channel == ui.getCurrentChannel())
+            $('#opt_ch_trig_tv').text(voltToText(this.channel.trigger.triggeredV))
     }
 }

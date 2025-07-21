@@ -200,6 +200,10 @@ div.channel-opts-pane span.unit {
     grid-column: span 16 !important;
 }
 
+.channel-menu-pane-grid {
+    display: grid;
+}
+
 div.channel-menu-pane > span.menu-item,
 div.channel-menu-pane > span.label
 {
@@ -685,6 +689,10 @@ div.popup-grid > span.menu-item {
 
 .top-pane,#bottom-pane {
     line-height: 1.5em;
+}
+
+.row {
+    line-height: 1em;
 }
 
 .row-pane {

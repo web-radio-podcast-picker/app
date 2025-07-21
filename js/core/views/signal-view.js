@@ -36,7 +36,7 @@ class SignalView {
             const barWidth = canvasWidth / dataArray.length / timePerDiv;
 
             const baseI = this.channel.trigger.isOn ?
-                this.checkTrigger(dataArray) : 0
+                this.channel.trigger.checkTrigger(this.channel, dataArray) : 0
 
             for (var i = baseI; i < dataArray.length; i += 1) {
                 var value = dataArray[i];
@@ -69,26 +69,5 @@ class SignalView {
         }
     }
 
-    checkTrigger(dataArray) {
-        var prevValue = null
-        const trigger = this.channel.trigger
-        const minDelta = trigger.sensitivity
 
-        for (var i = 0; i < dataArray.length; i += 1) {
-            var value = dataArray[i];
-            value = valueToVolt(this.channel, value);
-            if (prevValue == null) prevValue = value
-            const delta = value - prevValue
-            if ((delta > 0 && trigger.type == Trigger_Type_Up)
-                || (delta < 0 && trigger.type == Trigger_Type_Down)) {
-                if (value >= trigger.threshold - minDelta
-                    && value <= trigger.threshold + minDelta
-                )
-                    return i
-            }
-        }
-
-        // not triggered
-        return 0
-    }
 }
