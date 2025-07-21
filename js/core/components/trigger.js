@@ -58,6 +58,7 @@ class Trigger {
                     j = 0
             } else
                 j = 0
+            prevValue = value
         }
 
         // not triggered

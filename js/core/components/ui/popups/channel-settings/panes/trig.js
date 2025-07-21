@@ -69,7 +69,7 @@ class ChannelSettingsPaneTrig {
                     attr: 'text',
                     readOnly: true,
                     input: {
-                        delta: 0.1,
+                        delta: 1,
                         min: 0,
                         max: null
                     }
