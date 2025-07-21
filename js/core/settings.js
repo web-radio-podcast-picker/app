@@ -49,7 +49,9 @@ window.settings = {
 
     markers: {
         trigger: {
-            yRel: -11            // rel y to the base widget y of value point
+            yRel: -11,           // rel y to the base widget y of value point
+            dragDx: -21,
+            dragDy: -21
         }
     },
 

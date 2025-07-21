@@ -9,14 +9,29 @@ class Markers {
         return this
     }
 
+    isDraggingTrigger() {
+        if (this.$trigger == null) return
+        return drag.isDragging(this.$trigger)
+    }
+
     addTriggerControl() {
         const cnv = app.canvas_mk
         const $trigger = $('#trigger_plot_').clone();
-        const id = this.channel.channelId;
-        $trigger.attr('id', $trigger.attr('id') + id);
+        const id = $trigger.attr('id') + this.channel.channelId
+        $trigger.attr('id', id);
         $trigger.find('.trigger-plot-back-symbol')
             .css('color', this.channel.color)
         $('body').append($trigger);
+
+        drag.addDragControl(
+            id,
+            drag.props(
+                null,
+                null,
+                null,
+                null
+            ))
+
         $trigger.removeClass('hidden');
         this.$trigger = $trigger
     }

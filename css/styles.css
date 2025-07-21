@@ -807,7 +807,6 @@ div.channel-submenu-pane span.on-off-label {
     left: 1em;
     top: 1em;
     z-index:30;
-
 }
 
 .trigger-plot-back-symbol {
@@ -820,4 +819,8 @@ div.channel-submenu-pane span.on-off-label {
     margin: 0px;
     line-height: 22px;
     cursor: grab
+}
+
+.trigger-plot-back-symbol:hover {
+    text-decoration: line-through;
 }

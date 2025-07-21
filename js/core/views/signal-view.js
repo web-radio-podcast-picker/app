@@ -58,7 +58,9 @@ class SignalView {
                 return offset
             }
 
-            if (this.channel.trigger.isOn) {
+            if (this.channel.trigger.isOn
+                && !this.channel.markers.isDraggingTrigger()
+            ) {
                 // setup the trigger marker
                 const triggerY = getVoltOffset(
                     this.channel.trigger.threshold)
