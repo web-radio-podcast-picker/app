@@ -64,6 +64,14 @@ class Markers {
         }
     }
 
+    setTriggerControlVisibility(vis) {
+        if (this.$trigger == null) return
+        if (vis)
+            this.$trigger.removeClass('hidden')
+        else
+            this.$trigger.addClass('hidden')
+    }
+
     setTriggerControl(on, enableRefreshDisplay, onUpdateCallback) {
         this.removeTriggerControl()
         if (on) {

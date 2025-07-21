@@ -55,6 +55,7 @@ class SignalView {
 
     run() {
 
+        this.channel.markers.setTriggerControlVisibility(this.visible)
         if (!this.visible) return;
 
         ui.setupCanvasSize(this.canvas);
