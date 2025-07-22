@@ -30,6 +30,7 @@ class Channel {
 
     color = 'cyan';             // color for channel
     lineWidth = 1;              // line width for channel
+    tempColor = false
 
     vScale = 1;                 // volt scale (256 digital value corresponding volts)
     yScale = 1;                 // multiplier for Y-axis scaling

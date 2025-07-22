@@ -6,10 +6,15 @@ class ChannelSettingsPaneDisp {
     init(channelSettings) {
         this.channelSettings = channelSettings
 
-        ui.toggles.initToggle('btn_ch_disp_onoff',
-            () => ui.channels.updateVisible(this.channelSettings.editChannel),
-            ui.getCurrentChannelPath('view.visible')
-        )
+        ui
+            .toggles.initToggle('btn_ch_disp_onoff',
+                () => ui.channels.updateVisible(this.channelSettings.editChannel),
+                ui.getCurrentChannelPath('view.visible')
+            )
+            .toggles.initToggle('opt_ch_disp_tempcol_onoff',
+                () => oscilloscope.refreshView(),
+                ui.getCurrentChannelPath('tempColor')
+            )
 
         return this
     }

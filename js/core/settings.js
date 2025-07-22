@@ -59,15 +59,15 @@ window.settings = {
         channels: {
             // channels colors
             colors: [
-                'cyan',
-                'yellow',
-                'lightgreen',
-                'magenta',
-                'lightblue',
-                'pink',
-                'orange',
-                'red',
-                'white'
+                'rgba(0, 255, 255,1)',
+                'rgba(255, 255, 0,1)',
+                'rgba(144, 238, 144,1)',
+                'rgba(255, 0, 255,1)',
+                'rgba(173, 216, 230,1)',
+                'rgba(255, 192, 203,1)',
+                'rgba(255, 165, 0,1)',
+                'rgba(255, 0, 0,1)',
+                'rgba(255, 255, 255,1)'
             ]
         },
         grid: {
