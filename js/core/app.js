@@ -75,7 +75,8 @@ app = {
         this.startFrameOneShotOperations.push(() => {
             this.gridView.enableViewUpdate();
         });
-        this.requestAnimationFrame();
+        //this.requestAnimationFrame();
+        oscilloscope.refreshView()
     },
 
     async initDefaultAudioInput() {
