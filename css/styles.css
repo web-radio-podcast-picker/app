@@ -662,6 +662,15 @@ div.popup-grid > span.menu-item {
     color: white;
 }
 
+.btn-bluegreen-on {
+    background-color: rgb(0, 141, 110);
+}
+
+.btn-blue-green-off {
+    background-color: rgb(0, 90, 97,0.7);
+    color: lightslategray;
+}
+
 .menu-item-red,.btn-red {
     color: orange;
     background-color: rgb(110, 75, 93);
@@ -791,26 +800,18 @@ div.channel-submenu-pane span.on-off-label {
     background-color: unset !important;
 }
 
-/*#top-pane-1 {
-    top: 1em;
-    left: 1em;
-    position: absolute;
-    z-index: 10;
-    color: cyan;
-}
-
-#top-pane-2 {
-    top: 3em;
-    left: 1em;
-    position: absolute;
-    z-index: 10;
-    color: yellow;
-}*/
-
 .btn-ch {
     border: none;
     font-size: 1em;
     padding: 0px;
+}
+
+.btn-round {
+    border-radius: 0.5em;
+    line-height: 1em;
+    height: 1.7em !important;
+    padding-left: 0.3em;
+    padding-right: 0.3em;
 }
 
 .btn-valid {
