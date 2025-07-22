@@ -88,6 +88,8 @@ class ChannelSettingsPaneTrig {
             true,
             () => ui.bindings.updateBindingTarget('opt_ch_trig_tre')
         )
+        if (channel.trigger.isOn)
+            oscilloscope.refreshView()
     }
 
     tabChanged($t) {
