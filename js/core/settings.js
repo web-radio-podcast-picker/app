@@ -9,7 +9,8 @@ window.settings = {
     debug: {
         debug: true,
         trace: true,
-        info: true
+        info: true,
+        stackTrace: false
     },
 
     extInput: {
@@ -59,6 +60,7 @@ window.settings = {
         channels: {
             // channels colors
             colors: [
+                // mandatory rgba notation
                 'rgba(0, 255, 255,1)',
                 'rgba(255, 255, 0,1)',
                 'rgba(144, 238, 144,1)',

@@ -114,7 +114,6 @@ class SignalView {
                     var r = Number(col[0])
                     var g = Number(col[1])
                     var b = Number(col[2])
-                    //var op = Number(col[3])
                     const m = this.channel.measures
                     const absMax = Math.max(Math.abs(m.vMax), Math.abs(m.vMin))
                     const absVal = Math.abs(value)

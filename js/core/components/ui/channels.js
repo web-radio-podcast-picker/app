@@ -54,8 +54,15 @@ class Channels {
 
         // out
         $('#btn_chout_' + id).on('click', () => {
-
+            this.toggleOut(channel)
         })
+    }
+
+    toggleOut(channel) {
+        if (channel.outMute) return
+        channel.out = !channel.out
+        oscilloscope.setOut(channel, channel.out)
+        oscilloscope.refreshView()
     }
 
     pauseAllOuts(pause) {
