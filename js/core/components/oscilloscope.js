@@ -111,7 +111,8 @@ oscilloscope = {
     },
 
     initChannelForMath(channel, sourceId) {
-        this.initChannelForNone(channel)
+        channel.deleteSource()
+        channel.sourceId = sourceId
     },
 
     initChannelForNone(channel) {

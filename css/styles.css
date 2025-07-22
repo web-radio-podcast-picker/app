@@ -844,3 +844,20 @@ div.channel-submenu-pane span.on-off-label {
 .trigger-plot-back-symbol:hover {
     text-decoration: line-through;
 }
+
+.math-expr {
+    width: Calc(100% - 8em);
+    margin-right: 0px;
+    text-align: left;
+    text-transform: uppercase;
+    font-size: 1.5em;
+    padding: 0px;
+    vertical-align: middle;
+}
+
+.kbd {
+    width: 2.5em;
+    height: 2.5em;
+    line-height: 2.5em;
+    border: darkblue solid 1px;
+}

@@ -75,7 +75,6 @@ app = {
         this.startFrameOneShotOperations.push(() => {
             this.gridView.enableViewUpdate();
         });
-        //this.requestAnimationFrame();
         oscilloscope.refreshView()
     },
 
@@ -200,7 +199,7 @@ app = {
     async setChannelSourceMath(channel) {
         await oscilloscope.initChannelForMath(
             channel,
-            Source_Id_None,
+            Source_Id_Math,
             null)
     },
 
