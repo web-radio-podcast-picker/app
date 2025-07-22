@@ -59,7 +59,7 @@ class Channels {
     }
 
     toggleOut(channel) {
-        if (channel.outMute) return
+        if (oscilloscope.pause) return
         channel.out = !channel.out
         oscilloscope.setOut(channel, channel.out)
         oscilloscope.refreshView()
