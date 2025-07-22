@@ -15,6 +15,9 @@ main purposes:
 
 project status: on going
 
+![screenshot](doc/screenshot-0.8.png)
+*v 0.7 - 'temperature' colors*
+
 ![screenshot](doc/screenshot-0.7.png)
 *v 0.7 - triggers with graphical markers*
 
