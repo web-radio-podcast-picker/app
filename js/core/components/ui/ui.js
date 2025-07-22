@@ -37,9 +37,8 @@ ui = {
     init_ui() {
         // events
         $(window).resize(() => {
-            if (oscilloscope.pause)
-                app.requestAnimationFrame();
-        });
+            oscilloscope.refreshView()
+        })
         // properties
         $('input').attr('autocomplete', 'off');
         // bindins

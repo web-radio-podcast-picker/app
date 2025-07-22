@@ -260,8 +260,7 @@ app = {
         oscilloscope.pause = !oscilloscope.pause;
         ui.channels.pauseAllOuts(oscilloscope.pause)
         ui.oscilloMenu.reflectOscilloPauseState();
-        if (!oscilloscope.pause)
-            app.requestAnimationFrame();
+        app.requestAnimationFrame();
     }
 
 };

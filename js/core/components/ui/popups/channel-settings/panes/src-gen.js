@@ -15,7 +15,7 @@ class ChannelSettingsPaneSrcGen {
 
     init(channelSettings) {
         this.channelSettings = channelSettings
-        const refresh = () => app.requestAnimationFrame();
+        const refresh = () => oscilloscope.refreshView()
         const refreshOnUpdate = { onChange: refresh }
 
         this.fnMap.forEach(t => {

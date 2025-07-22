@@ -4,7 +4,7 @@ class PopupSettings {
 
     init() {
 
-        const refresh = () => app.requestAnimationFrame();
+        const refresh = () => oscilloscope.refreshView()
         const refreshOnUpdate = { onChange: refresh };
         const readOnly = { readOnly: true };
 
