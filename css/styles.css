@@ -663,10 +663,11 @@ div.popup-grid > span.menu-item {
 }
 
 .btn-bluegreen-on {
-    background-color: rgb(0, 141, 110);
+    background-color: rgb(0, 172, 134);
+    color:white;
 }
 
-.btn-blue-green-off {
+.btn-bluegreen-off {
     background-color: rgb(0, 90, 97,0.7);
     color: lightslategray;
 }

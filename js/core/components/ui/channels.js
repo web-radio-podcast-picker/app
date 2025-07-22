@@ -51,6 +51,11 @@ class Channels {
             this.popupSettings.paneDisp.updateVisible()
             app.requestAnimationFrame();
         });
+
+        // out
+        $('#btn_chout_' + id).on('click', () => {
+
+        })
     }
 
     pauseAllOuts(pause) {
