@@ -143,7 +143,7 @@ class Channels {
             toggleControls();
         });
         $channelLabel.on('click', () => {
-            this.toggleChannelSettings(channel)
+            this.popupSettings.toggleChannelSettings(channel)
         });
 
         $('#channels_shortcuts_deck').append($channelShortcut);
