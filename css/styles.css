@@ -601,6 +601,10 @@ div.popup-grid > span.menu-item {
     margin-top: 0.5em;
 }
 
+.margin-bottom {
+    margin-bottom: 0.5em;
+}
+
 .no-border {
     border: none !important;
 }
