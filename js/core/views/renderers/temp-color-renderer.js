@@ -7,14 +7,10 @@ class TempColorRenderer {
             var r = t.r
             var g = t.g
             var b = t.b
-            const m = channel.measures
-            const absMax = Math.max(Math.abs(m.vMax), Math.abs(m.vMin))
-            const absVal = Math.abs(props.value)
-            const op = 1.0 - ((absMax - absVal) / absMax)
-            const col = 'rgba(' + r + ',' + g + ',' + b + ',' + op + ')'
+            const col = toRgba(r, g, b, props.absF)
             drawContext.strokeStyle = col
             props.col = col
-            props.op = op
+            props.op = props.absF
             return props
         }
         return props

@@ -91,6 +91,12 @@ class SignalView {
                     x = nx;
                     y = ny;
                 }
+
+                const m = this.channel.measures
+                const absMax = Math.max(Math.abs(m.vMax), Math.abs(m.vMin))
+                const absVal = Math.abs(value)
+                const absF = 1.0 - ((absMax - absVal) / absMax)
+
                 drawContext.beginPath();
                 drawContext.moveTo(x, y);
                 drawContext.lineTo(nx, ny);
@@ -100,6 +106,9 @@ class SignalView {
                     col: col,
                     op: 1,
                     value: value,
+                    absMax: absMax,
+                    absVal: absVal,
+                    absF: absF,
                     offset: offset
                 }
 

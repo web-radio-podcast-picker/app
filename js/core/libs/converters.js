@@ -14,6 +14,17 @@ function parseRgba(s) {
     }
 }
 
+function addLight(c, d) {
+    c += d
+    if (c < 0) c = 0
+    if (c > 255) c = 255
+    return c
+}
+
+function toRgba(r, g, b, a) {
+    return 'rgba(' + r + ',' + g + ',' + b + ',' + a + ')'
+}
+
 function vround7(v) {
     return parseFloat(v.toFixed(7));
 }
