@@ -90,7 +90,7 @@ class Markers {
     }
 
 
-    triggerView(channel, signalView) {
+    triggerView(channel, signalView, drawContext) {
         if (channel.trigger.isOn
             && !channel.markers.isDraggingTrigger()
         ) {

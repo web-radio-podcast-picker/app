@@ -7,11 +7,14 @@ class SignalView {
     visible = true;          // visible flag for visualization
     hidden = false;          // hidden for vizualisation
     channel = null;          // channel
-    renderers = []      // renderers . on sigview, before signal draw
+    renderers = []          // renderers . on sigview, before signal draw
+    pointRenderers = []     // point renderers. on signal point, before signal point
 
     init(canvas, channel) {
         this.canvas = canvas;
         this.channel = channel;
+        this.pointRenderers.push(new TempColorRenderer())
+        this.pointRenderers.push(new BrightRenderer())
     }
 
     offsetToVolt(offset) {
@@ -72,17 +75,8 @@ class SignalView {
             const baseI = this.channel.trigger.isOn ?
                 this.channel.trigger.checkTrigger(this.channel, dataArray) : 0
 
-            /*if (this.channel.trigger.isOn
-                && !this.channel.markers.isDraggingTrigger()
-            ) {
-                // setup the trigger marker
-                const triggerY = this.getVoltOffset(
-                    this.channel.trigger.threshold)
-                    + settings.markers.trigger.yRel
-                this.channel.markers.setTriggerControlPos(triggerY)
-            }*/
             this.renderers.forEach(r => {
-                r(this.channel, this)
+                r(this.channel, this, drawContext)
             })
 
             for (var i = baseI; i < dataArray.length; i += 1) {
@@ -102,22 +96,9 @@ class SignalView {
                 drawContext.lineTo(nx, ny);
                 drawContext.strokeStyle = this.channel.color;
 
-                if (this.channel.tempColor) {
-                    var col = this.channel.color
-                        .replace('rgba(', '')
-                        .replace(')', '')
-                        .replace(' ', '')
-                        .split(',')
-                    var r = Number(col[0])
-                    var g = Number(col[1])
-                    var b = Number(col[2])
-                    const m = this.channel.measures
-                    const absMax = Math.max(Math.abs(m.vMax), Math.abs(m.vMin))
-                    const absVal = Math.abs(value)
-                    const op = 1.0 - ((absMax - absVal) / absMax)
-                    drawContext.strokeStyle =
-                        'rgba(' + r + ',' + g + ',' + b + ',' + op + ')'
-                }
+                this.pointRenderers.forEach(o => {
+                    o.render(value, offset, this.channel, this, drawContext)
+                })
 
                 drawContext.lineWidth = this.channel.lineWidth;
                 drawContext.stroke();
