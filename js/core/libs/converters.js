@@ -1,5 +1,19 @@
 // converters functions
 
+function parseRgba(s) {
+    var t = s
+        .replace('rgba(', '')
+        .replace(')', '')
+        .replace(' ', '')
+        .split(',')
+    return {
+        r: Number(t[0]),
+        g: Number(t[1]),
+        b: Number(t[2]),
+        a: Number(t[3])
+    }
+}
+
 function vround7(v) {
     return parseFloat(v.toFixed(7));
 }

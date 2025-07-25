@@ -94,10 +94,19 @@ class SignalView {
                 drawContext.beginPath();
                 drawContext.moveTo(x, y);
                 drawContext.lineTo(nx, ny);
-                drawContext.strokeStyle = this.channel.color;
+                var col = this.channel.color
+                drawContext.strokeStyle = col;
+                const props = {
+                    col: col,
+                    op: 1,
+                    value: value,
+                    offset: offset
+                }
 
                 this.pointRenderers.forEach(o => {
-                    o.render(value, offset, this.channel, this, drawContext)
+                    var r = o.render(this.channel, this, drawContext, props)
+                    if (r.col !== undefined)
+                        props.col = r.col
                 })
 
                 drawContext.lineWidth = this.channel.lineWidth;
