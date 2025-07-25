@@ -8,7 +8,7 @@ function xeval(expr, showError) {
         return { success: true, value: value }
     } catch (err) {
         // ignore or debug
-        if (settings.debug.debug)
+        if (settings.debug.trace)
             console.log(expr, err.message)
         window.err = err
         if (settings.debug.stackTrace)

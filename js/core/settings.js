@@ -8,7 +8,7 @@ window.settings = {
 
     debug: {
         debug: true,
-        trace: true,
+        trace: false,
         info: true,
         stackTrace: false
     },
