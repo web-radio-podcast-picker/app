@@ -6,6 +6,9 @@ class Markers {
 
     init(channel) {
         this.channel = channel
+        channel.view.renderers.push((channel, signalView) => {
+            this.triggerView(channel, signalView)
+        })
         return this
     }
 
@@ -84,5 +87,18 @@ class Markers {
         const offset = this.$trigger.offset()
         this.$trigger.css('left', offset.left);
         this.$trigger.css('top', y);
+    }
+
+
+    triggerView(channel, signalView) {
+        if (channel.trigger.isOn
+            && !channel.markers.isDraggingTrigger()
+        ) {
+            // setup the trigger marker
+            const triggerY = signalView.getVoltOffset(
+                channel.trigger.threshold)
+                + settings.markers.trigger.yRel
+            channel.markers.setTriggerControlPos(triggerY)
+        }
     }
 }

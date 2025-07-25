@@ -17,7 +17,7 @@ class Channel {
     gainValue = 1               // gain value
     generator = new Generator() // signal generator
     trigger = new Trigger()     // trigger
-    markers = new Markers().init(this)     // channel markers
+    markers = null              // channel markers
     audioContext = null         // audio context for processing
     getSamplesTask = null       // samples provider if required
     out = false                 // true if channel is binded to audio output
@@ -31,6 +31,7 @@ class Channel {
     color = 'cyan';             // color for channel
     lineWidth = 1;              // line width for channel
     tempColor = false
+    bright = false
 
     vScale = 1;                 // volt scale (256 digital value corresponding volts)
     yScale = 1;                 // multiplier for Y-axis scaling
@@ -51,6 +52,7 @@ class Channel {
         this.measures = new SignalMeasures();
         this.measuresView = new SignalMeasuresView();
         this.view = new SignalView();
+        this.markers = new Markers().init(this)
         this.measuresView.init(this, this.measures);
     }
 

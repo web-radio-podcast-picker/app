@@ -15,6 +15,10 @@ class ChannelSettingsPaneDisp {
                 () => oscilloscope.refreshView(),
                 ui.getCurrentChannelPath('tempColor')
             )
+            .toggles.initToggle('opt_ch_disp_htempcol_onoff',
+                () => oscilloscope.refreshView(),
+                ui.getCurrentChannelPath('bright')
+            )
 
         return this
     }

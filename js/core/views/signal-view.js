@@ -7,6 +7,7 @@ class SignalView {
     visible = true;          // visible flag for visualization
     hidden = false;          // hidden for vizualisation
     channel = null;          // channel
+    renderers = []      // renderers . on sigview, before signal draw
 
     init(canvas, channel) {
         this.canvas = canvas;
@@ -14,13 +15,6 @@ class SignalView {
     }
 
     offsetToVolt(offset) {
-        /*var percent = -value / signalRange;
-        percent *= signalRange / displayRange; // adjust to display range
-        var height = canvasHeight * percent / 2.0;
-        height *= this.channel.yScale;
-        var offset = canvasHeight / 2 + height;
-        offset += this.channel.yOffset;*/
-
         const canvasHeight = this.canvas.height;
         const signalRange = settings.audioInput.vScale;
         const displayRange = this.getDisplayRange()
@@ -78,7 +72,7 @@ class SignalView {
             const baseI = this.channel.trigger.isOn ?
                 this.channel.trigger.checkTrigger(this.channel, dataArray) : 0
 
-            if (this.channel.trigger.isOn
+            /*if (this.channel.trigger.isOn
                 && !this.channel.markers.isDraggingTrigger()
             ) {
                 // setup the trigger marker
@@ -86,7 +80,10 @@ class SignalView {
                     this.channel.trigger.threshold)
                     + settings.markers.trigger.yRel
                 this.channel.markers.setTriggerControlPos(triggerY)
-            }
+            }*/
+            this.renderers.forEach(r => {
+                r(this.channel, this)
+            })
 
             for (var i = baseI; i < dataArray.length; i += 1) {
                 var value = dataArray[i];
