@@ -76,7 +76,7 @@ class SignalView {
                 this.channel.trigger.checkTrigger(this.channel, dataArray) : 0
 
             this.renderers.forEach(r => {
-                r(this.channel, this, drawContext)
+                r(this.channel, drawContext)
             })
 
             for (var i = baseI; i < dataArray.length; i += 1) {
@@ -113,7 +113,7 @@ class SignalView {
                 }
 
                 this.pointRenderers.forEach(o => {
-                    var r = o.render(this.channel, this, drawContext, props)
+                    var r = o.render(this.channel, drawContext, props)
                     if (r.col !== undefined)
                         props.col = r.col
                 })

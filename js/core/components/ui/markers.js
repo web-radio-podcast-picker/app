@@ -89,13 +89,12 @@ class Markers {
         this.$trigger.css('top', y);
     }
 
-
-    triggerView(channel, signalView, drawContext) {
+    triggerView(channel, drawContext) {
         if (channel.trigger.isOn
             && !channel.markers.isDraggingTrigger()
         ) {
             // setup the trigger marker
-            const triggerY = signalView.getVoltOffset(
+            const triggerY = channel.view.getVoltOffset(
                 channel.trigger.threshold)
                 + settings.markers.trigger.yRel
             channel.markers.setTriggerControlPos(triggerY)

@@ -1,7 +1,7 @@
 // renderer for bright renderer
 class BrightRenderer {
 
-    render(channel, sigView, drawContext, props) {
+    render(channel, drawContext, props) {
         if (channel.bright) {
             const t = parseRgba(props.col)
             var r = t.r

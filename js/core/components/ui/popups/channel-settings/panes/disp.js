@@ -19,6 +19,16 @@ class ChannelSettingsPaneDisp {
                 () => oscilloscope.refreshView(),
                 ui.getCurrentChannelPath('bright')
             )
+            .bindings.bind(ui.bindings.binding(
+                'opt_disp_stroke_width',
+                ui.getCurrentChannelPath('lineWidth'),
+                {
+                    input: {
+                        delta: 0.5,
+                        min: 0,
+                        max: 9
+                    }
+                }))
 
         return this
     }

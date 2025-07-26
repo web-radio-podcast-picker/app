@@ -445,13 +445,19 @@
 
         <!-- DISP -->
 
-        <div id="opts_ch_disp" class="channel-menu-pane hidden">
-            <span id="btn_ch_disp_onoff" class="label channel-label on-off-label on">ON</span>
-            <div class="row-opt">
+        <div id="opts_ch_disp" class="channel-menu-pane channel-menu-pane-grid hidden">
+            <div class="gr1 row-opt">
+                <span id="btn_ch_disp_onoff" class="label channel-label on-off-label on">ON</span>
                 <span id="opt_ch_disp_tempcol_onoff" class="label channel-label on-off-label off">OFF</span>
                 <span class="opt-label no-padding-left margin-left">Temperature color</span>
                 <span id="opt_ch_disp_htempcol_onoff" class="label channel-label on-off-label off">OFF</span>
                 <span class="opt-label no-padding-left margin-left">Bright</span>
+            </div>
+            <div class="gr2 row-opt">
+                <span class="opt-label no-padding-left no-margin-left">stroke</span>
+                <span class="opt-label no-padding-left no-margin-left">width</span>
+                <input id="opt_disp_stroke_width" class="opt-value-edit no-margin-bottom"></input>
+                <span class="unit">px</span>
             </div>
         </div>
 
