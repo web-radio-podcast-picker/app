@@ -3,11 +3,16 @@
 class Markers {
 
     $trigger = null
+    vAvg = false
+    vMin = false
+    vMax = false
 
     init(channel) {
         this.channel = channel
-        channel.view.renderers.push((channel, signalView) => {
-            this.triggerView(channel, signalView)
+        const renderers = channel.view.renderers
+        renderers.push((channel, dc, props) => {
+            this.triggerView(channel, dc, props)
+            this.axesView(channel, dc, props)
         })
         return this
     }
@@ -29,7 +34,7 @@ class Markers {
         $('body').append($trigger);
 
         const updateTrigger = (deltas, base) => {
-            var triggerY = this.channel.view.getVoltOffset(base)
+            var triggerY = this.channel.view.voltOffset(base)
             triggerY += deltas.dy
             const triggerValue = vround(
                 this.channel.view.offsetToVolt(triggerY))
@@ -89,15 +94,43 @@ class Markers {
         this.$trigger.css('top', y);
     }
 
-    triggerView(channel, drawContext) {
+    triggerView(channel, drawContext, props) {
         if (channel.trigger.isOn
             && !channel.markers.isDraggingTrigger()
         ) {
             // setup the trigger marker
-            const triggerY = channel.view.getVoltOffset(
+            const triggerY = channel.view.voltOffset(
                 channel.trigger.threshold)
                 + settings.markers.trigger.yRel
             channel.markers.setTriggerControlPos(triggerY)
         }
+    }
+
+    axesView(channel, drawContext, props) {
+        const avgDash = [10, 10]
+        const limDash = [5, 10]
+        if (this.vAvg) {
+            var y = channel.view.voltOffset(channel.measures.vAvg)
+            this.drawAxe(drawContext, y, avgDash, channel.color, props)
+        }
+        if (this.vMin) {
+            var y = channel.view.voltOffset(channel.measures.vMin)
+            this.drawAxe(drawContext, y, limDash, channel.color, props)
+        }
+        if (this.vMax) {
+            var y = channel.view.voltOffset(channel.measures.vMax)
+            this.drawAxe(drawContext, y, limDash, channel.color, props)
+        }
+    }
+
+    drawAxe(drawContext, y, dash, color, props) {
+        drawContext.beginPath();
+        drawContext.moveTo(0, y)
+        drawContext.lineTo(props.canvasWidth, y)
+        drawContext.lineWidth = 1;
+        drawContext.strokeStyle = color
+        if (dash != null)
+            drawContext.setLineDash(dash);
+        drawContext.stroke()
     }
 }

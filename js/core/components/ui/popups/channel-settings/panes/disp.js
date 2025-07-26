@@ -19,6 +19,18 @@ class ChannelSettingsPaneDisp {
                 () => oscilloscope.refreshView(),
                 ui.getCurrentChannelPath('bright')
             )
+            .toggles.initToggle('opt_ch_disp_vavg',
+                () => oscilloscope.refreshView(),
+                ui.getCurrentChannelPath('markers.vAvg')
+            )
+            .toggles.initToggle('opt_ch_disp_vmin',
+                () => oscilloscope.refreshView(),
+                ui.getCurrentChannelPath('markers.vMin')
+            )
+            .toggles.initToggle('opt_ch_disp_vmax',
+                () => oscilloscope.refreshView(),
+                ui.getCurrentChannelPath('markers.vMax')
+            )
             .bindings.bind(ui.bindings.binding(
                 'opt_disp_stroke_width',
                 ui.getCurrentChannelPath('lineWidth'),

@@ -31,7 +31,7 @@ class SignalView {
         return value
     }
 
-    getVoltOffset(value) {
+    voltOffset(value) {
         const canvasHeight = this.canvas.height;
         const signalRange = settings.audioInput.vScale;
         const displayRange = this.getDisplayRange()
@@ -75,21 +75,25 @@ class SignalView {
             const baseI = this.channel.trigger.isOn ?
                 this.channel.trigger.checkTrigger(this.channel, dataArray) : 0
 
+            const rprops = {
+                canvasWidth: canvasWidth
+            }
+
             this.renderers.forEach(r => {
-                r(this.channel, drawContext)
+                r(this.channel, drawContext, rprops)
             })
 
             for (var i = baseI; i < dataArray.length; i += 1) {
                 var value = dataArray[i];
 
                 value = valueToVolt(this.channel, value);
-                const offset = this.getVoltOffset(value)
+                const offset = this.voltOffset(value)
 
                 var nx = (i - baseI) * barWidth
                 var ny = offset;
                 if (x == -1 && y == -1) {
-                    x = nx;
-                    y = ny;
+                    x = nx
+                    y = ny
                 }
 
                 const m = this.channel.measures
@@ -97,11 +101,11 @@ class SignalView {
                 const absVal = Math.abs(value)
                 const absF = 1.0 - ((absMax - absVal) / absMax)
 
-                drawContext.beginPath();
-                drawContext.moveTo(x, y);
-                drawContext.lineTo(nx, ny);
+                drawContext.beginPath()
+                drawContext.moveTo(x, y)
+                drawContext.lineTo(nx, ny)
                 var col = this.channel.color
-                drawContext.strokeStyle = col;
+                drawContext.strokeStyle = col
                 const props = {
                     col: col,
                     op: 1,
@@ -118,11 +122,11 @@ class SignalView {
                         props.col = r.col
                 })
 
-                drawContext.lineWidth = this.channel.lineWidth;
-                drawContext.stroke();
+                drawContext.lineWidth = this.channel.lineWidth
+                drawContext.stroke()
 
-                x = nx;
-                y = ny;
+                x = nx
+                y = ny
             }
             this.channel.isDisplayed = true;
         }
