@@ -51,6 +51,11 @@ window.settings = {
     markers: {
         trigger: {
             yRel: -11,           // rel y to the base widget y of value point
+        },
+        lines: {
+            avgDash: [10, 10],
+            limDash: [5, 10],
+            width: 1
         }
     },
 

@@ -107,23 +107,24 @@ class Markers {
     }
 
     axesView(channel, drawContext, props) {
-        const avgDash = [10, 10]
-        const limDash = [5, 10]
+        const avgDash = settings.markers.lines.avgDash
+        const limDash = settings.markers.lines.limDash
+        const width = settings.markers.lines.width
         if (this.vAvg) {
             var y = channel.view.voltOffset(channel.measures.vAvg)
-            this.drawAxe(drawContext, y, avgDash, channel.color, props)
+            this.drawAxe(drawContext, y, avgDash, channel.color, width, props)
         }
         if (this.vMin) {
             var y = channel.view.voltOffset(channel.measures.vMin)
-            this.drawAxe(drawContext, y, limDash, channel.color, props)
+            this.drawAxe(drawContext, y, limDash, channel.color, width, props)
         }
         if (this.vMax) {
             var y = channel.view.voltOffset(channel.measures.vMax)
-            this.drawAxe(drawContext, y, limDash, channel.color, props)
+            this.drawAxe(drawContext, y, limDash, channel.color, width, props)
         }
     }
 
-    drawAxe(drawContext, y, dash, color, props) {
+    drawAxe(drawContext, y, dash, color, width, props) {
         drawContext.beginPath();
         drawContext.moveTo(0, y)
         drawContext.lineTo(props.canvasWidth, y)
