@@ -43,7 +43,7 @@ window.settings = {
 
     trigger: {
         defaultType: Trigger_Type_Up,
-        sensitivity: 0.4,
+        sensitivity: 0.1,
         threshold: 0.2,
         timeThreshold: 1
     },
