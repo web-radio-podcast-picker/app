@@ -104,6 +104,7 @@ class SignalView {
                 drawContext.beginPath()
                 drawContext.moveTo(x, y)
                 drawContext.lineTo(nx, ny)
+                drawContext.setLineDash([]);
                 var col = this.channel.color
                 drawContext.strokeStyle = col
                 const props = {
