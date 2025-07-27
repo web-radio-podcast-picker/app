@@ -865,5 +865,6 @@ div.channel-submenu-pane span.on-off-label {
     width: 2.5em;
     height: 2.5em;
     line-height: 2.5em;
-    border: darkblue solid 1px;
+    border: darkblue solid 1px !important;
+    margin-right: 0em !important;
 }

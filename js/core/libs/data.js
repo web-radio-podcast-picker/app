@@ -1,5 +1,11 @@
 // data lib functions
 
+function remove(t, e) {
+    const index = t.indexOf(e);
+    if (index > -1)
+        t.splice(index, 1)
+}
+
 // eval expr. handle error. returns success: true and value: value if ok otherwize success: false. eventually log
 function xeval(expr, showError) {
 

@@ -16,3 +16,18 @@ const Gen_Fn_Triangle = 'Triangle'
 // triggers types
 const Trigger_Type_Up = 'Up'
 const Trigger_Type_Down = 'Down'
+
+// kbd tags
+const Kbd_Op = 'op'
+const Kbd_Num = 'num'
+const Kbd_Dot = 'dot'
+const Kbd_Ch = 'ch'
+
+// math ops
+const Math_Ops = {
+    '✕': 'x',
+    '+': '+',
+    '-': '-',
+    '/': '/',
+    '.': '.'
+}

@@ -20,6 +20,7 @@
     <!-- code loader -->
     <script src="./js/core/libs/converters.js"></script>
     <script src="./js/core/libs/data.js"></script>
+    <script src="./js/core/components/math-expr.js"></script>
     <script src="./js/core/components/audio-input-device.js"></script>
     <script src="./js/core/views/oscilloscope-view.js"></script>
     <script src="./js/core/views/grid-view.js"></script>
@@ -424,11 +425,22 @@
                     <span class="opt-label no-padding-left">expression</span>
                     <input id="opt_ch_math_expr" class="opt-value-edit math-expr no-margin"></input>
                 </div>
-                <div class="row-opt margin-top">
-                    <span id="btn_ch_math_k_add" class="kbd menu-item menu-item-blue">+</span>
-                    <span id="btn_ch_math_k_min" class="kbd menu-item menu-item-blue">-</span>
-                    <span id="btn_ch_math_k_mul" class="kbd menu-item menu-item-blue">✕</span>
-                    <span id="btn_ch_math_k_div" class="kbd menu-item menu-item-blue">/</span>
+                <div id="kbd_me" class="row-opt margin-top">
+                    <span id="btn_ch_math_k_add" tag="op" class="kbd menu-item menu-item-blue">+</span>
+                    <span id="btn_ch_math_k_min" tag="op" class="kbd menu-item menu-item-blue">-</span>
+                    <span id="btn_ch_math_k_mul" tag="op" class="kbd menu-item menu-item-blue">✕</span>
+                    <span id="btn_ch_math_k_div" tag="op" class="kbd menu-item menu-item-blue">/</span>
+                    <span id="btn_ch_math_k_dot" tag="dot" data-tag="dot" class="kbd menu-item menu-item-blue">.</span>
+                    <span id="btn_ch_math_k_0" tag="num" class="kbd menu-item menu-item-blue">0</span>
+                    <span id="btn_ch_math_k_1" tag="num" class="kbd menu-item menu-item-blue">1</span>
+                    <span id="btn_ch_math_k_2" tag="num" class="kbd menu-item menu-item-blue">2</span>
+                    <span id="btn_ch_math_k_3" tag="num" class="kbd menu-item menu-item-blue">3</span>
+                    <span id="btn_ch_math_k_4" tag="num" class="kbd menu-item menu-item-blue">4</span>
+                    <span id="btn_ch_math_k_5" tag="num" class="kbd menu-item menu-item-blue">5</span>
+                    <span id="btn_ch_math_k_6" tag="num" class="kbd menu-item menu-item-blue">6</span>
+                    <span id="btn_ch_math_k_7" tag="num" class="kbd menu-item menu-item-blue">7</span>
+                    <span id="btn_ch_math_k_8" tag="num" class="kbd menu-item menu-item-blue">8</span>
+                    <span id="btn_ch_math_k_9" tag="num" class="kbd menu-item menu-item-blue">9</span>
                 </div>
             </div>
 
