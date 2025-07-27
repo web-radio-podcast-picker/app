@@ -112,15 +112,21 @@ class Markers {
         const width = settings.markers.lines.width
         if (this.vAvg) {
             var y = channel.view.voltOffset(channel.measures.vAvg)
-            this.drawAxe(drawContext, y, avgDash, channel.color, width, props)
+            this.drawAxe(drawContext, y, avgDash,
+                setRgbaOpacity(channel.color, settings.markers.lines.avgOpacity),
+                width, props)
         }
         if (this.vMin) {
             var y = channel.view.voltOffset(channel.measures.vMin)
-            this.drawAxe(drawContext, y, limDash, channel.color, width, props)
+            this.drawAxe(drawContext, y, limDash,
+                setRgbaOpacity(channel.color, settings.markers.lines.limOpacity),
+                width, props)
         }
         if (this.vMax) {
             var y = channel.view.voltOffset(channel.measures.vMax)
-            this.drawAxe(drawContext, y, limDash, channel.color, width, props)
+            this.drawAxe(drawContext, y, limDash,
+                setRgbaOpacity(channel.color, settings.markers.lines.limOpacity),
+                width, props)
         }
     }
 

@@ -25,6 +25,11 @@ function toRgba(r, g, b, a) {
     return 'rgba(' + r + ',' + g + ',' + b + ',' + a + ')'
 }
 
+function setRgbaOpacity(s, opacity) {
+    const t = parseRgba(s)
+    return toRgba(t.r, t.g, t.b, opacity)
+}
+
 function vround7(v) {
     return parseFloat(v.toFixed(7));
 }

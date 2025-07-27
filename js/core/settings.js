@@ -54,7 +54,9 @@ window.settings = {
         },
         lines: {
             avgDash: [10, 10],
+            avgOpacity: 0.7,
             limDash: [5, 10],
+            limOpacity: 0.7,
             width: 1
         }
     },
