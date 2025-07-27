@@ -59,6 +59,13 @@ window.settings = {
         }
     },
 
+    renderers: {
+        bright: {
+            baseLum: 50,
+            ampFactor: 1 / 4
+        }
+    },
+
     oscilloscope: {
         vPerDiv: 0.5,          // volts per division
         tPerDiv: 1,            // time per division in milliseconds

@@ -14,7 +14,8 @@ class BrightRenderer {
                 b *= pop
             }
 
-            const fop = props.op / 4 * 255 + 50
+            const fop = props.op * settings.renderers.bright.ampFactor * 255
+                + settings.renderers.bright.baseLum
             r = addLight(r, fop)
             g = addLight(g, fop)
             b = addLight(b, fop)
