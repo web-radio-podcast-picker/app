@@ -13,9 +13,10 @@ main purposes:
 - audio channel input
 - line out
 
-⭐**NEW**⭐ **run it at: [https://oscilloscope.infy.uk/](https://https://oscilloscope.infy.uk/)**
+⭐ **run it at: [https://oscilloscope.infy.uk/](https://https://oscilloscope.infy.uk/)** ⭐
 
-continuous deployment provided by *GitHub Action* : **FTP Deploy** at [https://github.com/marketplace/actions/ftp-deploy](https://github.com/marketplace/actions/ftp-deploy). thanks to Sam Kirkland
+[<img alt="Deployed with FTP Deploy Action" src="https://img.shields.io/badge/Deployed With-FTP DEPLOY ACTION-%3CCOLOR%3E?style=for-the-badge&color=0077b6">](https://github.com/SamKirkland/FTP-Deploy-Action)
+continuous deployment provided by *GitHub Action* : **FTP Deploy** at [https://github.com/marketplace/actions/ftp-deploy](https://github.com/marketplace/actions/ftp-deploy)
 
 project status: on going
 
