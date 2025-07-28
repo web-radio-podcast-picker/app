@@ -13,6 +13,10 @@ main purposes:
 - audio channel input
 - line out
 
+⭐**NEW**⭐ **run it at: [https://oscilloscope.infy.uk/](https://https://oscilloscope.infy.uk/)**
+
+continuous deployment provided by *GitHub Action* : **FTP Deploy** at [https://github.com/marketplace/actions/ftp-deploy](https://github.com/marketplace/actions/ftp-deploy). thanks to Sam Kirkland
+
 project status: on going
 
 ![screenshot](doc/screenshot-0.8.png)
