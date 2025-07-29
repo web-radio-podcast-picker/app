@@ -8,12 +8,47 @@
     <title>soundcard signal analyzer generator</title>
 
     <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-J4K3X336J5"></script>
+    <!--<script async src="https://www.googletagmanager.com/gtag/js?id=G-J4K3X336J5"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
         function gtag() { dataLayer.push(arguments); }
         gtag('js', new Date());
         gtag('config', 'G-J4K3X336J5');
+    </script>-->
+    <script>
+        function sendAnalytics() {
+            const data = {
+                v: '2', // Protocol version
+                tid: 'G-J4K3X336J5', // Tracking ID
+                cid: '555', // Client ID (you can generate your own unique one)
+                t: 'pageview', // Hit type
+                dt: document.title, // Document title
+                dl: location.href, // Page URL
+                en: 'page_view', // Custom event
+                _et: '2', // Custom timing
+                tfd: '7634' // Custom field
+            };
+
+            const payload = new URLSearchParams(data).toString();
+            const endpoint = 'https://region1.google-analytics.com/g/collect';
+
+            // Attempt to send using sendBeacon
+            const success = navigator.sendBeacon(endpoint, payload);
+
+            if (!success) {
+                // Fallback if beacon fails
+                fetch(endpoint, {
+                    method: 'POST',
+                    body: payload,
+                    headers: {
+                        'Content-Type': 'application/x-www-form-urlencoded'
+                    },
+                    keepalive: true
+                }).catch(err => console.error('Analytics fallback failed:', err));
+            }
+        }
+
+        window.addEventListener('load', sendAnalytics);
     </script>
 
     <!--
