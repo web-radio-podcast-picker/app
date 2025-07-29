@@ -36,6 +36,28 @@ class OscilloMenu {
                     { targetControlId: 'tdiv' })
             }
         });
+        $('#btn_fs').on('click', () => {
+            settings.ui.fullscreen = !settings.ui.fullscreen
+            this.setFullscreen(settings.ui.fullscreen)
+        })
+
+        this.setFullscreen(false)
+    }
+
+    setFullscreen(fs) {
+        settings.ui.fullscreen = fs
+        if (fs) {
+            document.querySelector('body').requestFullscreen(
+                { navigationUI: 'hide' }
+            )
+        }
+        else {
+            if (document.fullscreenElement)
+                document.exitFullscreen()
+        }
+        $('#btn_fs').text(
+            fs ? '☐' : '⛶'
+        )
     }
 
     reflectOscilloPauseState() {
@@ -43,7 +65,7 @@ class OscilloMenu {
     }
 
     toggleMenu() {
-        const $mb = $('#top-right-menu-body');
+        const $mb = $('#main_menu-body');
         $mb.toggleClass('hidden');
         const visible = !$mb.hasClass('hidden');
         $('#btn_menu').text(!visible ? '▼' : '▲');

@@ -314,12 +314,21 @@ div#iw_delta_pane > button {
     grid-auto-columns: min-content;
 }
 
-#top-right-menu {
+#main_menu {
     display: block;
     position: absolute;
     top: 0px;
     left: calc(100% - 118px);
     text-align: center;
+    padding: 8px;
+}
+
+#buttons_bar {
+    display: block;
+    position: absolute;
+    top: 0px;
+    left: calc(calc(calc(100% - 118px) - 118px) + 0.5em);
+    text-align: right;
     padding: 8px;
 }
 
@@ -697,7 +706,7 @@ div.popup-grid > span.menu-item {
     min-width: 512px;
 }
 
-#top-right-menu-body {
+#main_menu-body {
     width: 96px;
     padding: 0px;
 }
