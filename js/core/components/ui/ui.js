@@ -85,6 +85,30 @@ ui = {
         return updated;
     },
 
+    setupUIComponents() {
+        const vs = this.viewSize();
+        const w = vs.width - settings.ui.clientWidthBorder;
+        const h = vs.height - settings.ui.clientHeightBorder;
+
+        const $b = $('#buttons_bar')
+        const left = w - 118 - 118 + 7
+        const top = h - 42 - 7 * 8
+        $b.css('left', left + 'px')
+        $b.css('top', top + 'px')
+        $b.removeClass('hidden')
+
+        const $p = $('#bottom-pane')
+        $p.css('left', 50 + 'px')
+        const btop = h - 21 - 7 * 4
+        $p.css('top', btop + 'px')
+        $p.removeClass('hidden')
+
+        const $p2 = $('#right_bottom_pane')
+        $p2.css('left', w - 25 * 7 + 'px')
+        $p2.css('top', btop + 'px')
+        $p2.removeClass('hidden')
+    },
+
     checkSizeChanged() {
         const html = document.querySelector('html');
         const htmlWidth = html.clientWidth;

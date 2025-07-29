@@ -8,6 +8,7 @@
     <title>soundcard signal analyzer generator</title>
 
     <!-- Google tag (gtag.js) -->
+    <!--
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-J4K3X336J5"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
@@ -15,6 +16,7 @@
         gtag('js', new Date());
         gtag('config', 'G-J4K3X336J5');
     </script>
+    -->
 
     <!--
         <link rel="icon" type="image/ico" href="/img/bot2.ico">        
@@ -96,7 +98,7 @@
         </div>
     </div>
 
-    <!-- top right menu -->
+    <!-- main menu -->
 
     <div id="main_menu">
         <span id="btn_menu" class="menu-item menu-item-blue ">▲</span>
@@ -109,12 +111,13 @@
             <span id="btn_oset" class="menu-item menu-item-blue">⚙</span>
             <span id="btn_opause" class="menu-item menu-item-bluegreen">⏸</span>
             <span id="btn_restart" class="menu-item menu-item-red">⟲</span>
-            <!--<span id="btn_power" class="menu-item menu-item-red">⚡</span>-->
         </div>
     </div>
 
-    <div id="buttons_bar">
-        <span id="btn_fs" class="menu-item menu-item-darkblue">⛶</span>
+    <!-- main menu / button bar -->
+
+    <div id="buttons_bar" class="hidden">
+        <span id="btn_fs" class="menu-item menu-item-blue">⛶</span>
     </div>
 
     <!-- menu popups -->
@@ -206,7 +209,7 @@
 
     <!-- oscilloscope datas -->
 
-    <div id="bottom-pane" class="row-pane">
+    <div id="bottom-pane" class="row-pane hidden">
         <span class="label">Frm time</span>
         <span id="stime" class="value medium-value"></span>
         <span class="value">ms</span>
@@ -222,7 +225,7 @@
         <span id="buffsz" class="value"></span>
     </div>
 
-    <div id="right_bottom_pane" class="row-pane">
+    <div id="right_bottom_pane" class="row-pane hidden">
         <span class="label">version </span>
         <span id="app_ver" class="value"></span>
     </div>

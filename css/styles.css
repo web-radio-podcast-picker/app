@@ -326,10 +326,10 @@ div#iw_delta_pane > button {
 #buttons_bar {
     display: block;
     position: absolute;
-    top: 0px;
-    left: calc(calc(calc(100% - 118px) - 118px) + 0.5em);
+    /*top: 0px;
+    left: calc(calc(calc(100% - 118px) - 118px) + 0.5em);*/
     text-align: right;
-    padding: 8px;
+    padding: 0px;
 }
 
 .popup {}
@@ -786,8 +786,8 @@ div.channel-submenu-pane span.on-off-label {
 }
 
 #bottom-pane {
-    top: calc(100% - 3em);
-    left: 1em;
+    /*top: calc(100% - 3em);
+    left: 1em;*/
     position: absolute;
     color: darkgray;
 }
@@ -804,8 +804,8 @@ div.channel-submenu-pane span.on-off-label {
 
 #right_bottom_pane {
     position: absolute;
-    top: calc(100% - 3em);
-    left: calc(100% - 8em);
+    /*top: calc(100% - 3em);
+    left: calc(100% - 8em);*/
     width: 10em;    
     color: darkgray;
 }

@@ -52,9 +52,13 @@ class SignalView {
 
     run() {
         this.channel.markers.setTriggerControlVisibility(this.visible)
+
+        const sizeUpdated = ui.setupCanvasSize(this.canvas)
+        if (sizeUpdated)
+            ui.setupUIComponents()
+
         if (!this.visible) return;
 
-        ui.setupCanvasSize(this.canvas);
         const canvasHeight = this.canvas.height;
         const canvasWidth = this.canvas.width;
         const dataArray = this.channel.measures.dataArray;
