@@ -67,14 +67,18 @@ class OscilloMenu {
     toggleMenu() {
         const $mb = $('#main_menu-body');
         $mb.toggleClass('hidden');
-        $('#buttons_bar').toggleClass('hidden')
-        $('#buttons_bar2').toggleClass('hidden')
 
         const visible = !$mb.hasClass('hidden');
         $('#btn_menu').text(!visible ? '▼' : '▲');
-        if (visible)
-            ui.bindings.initBindedControls();
-        else
-            ui.inputWidgets.closeInputWidget();
+        if (visible) {
+            $('#buttons_bar').removeClass('hidden')
+            $('#buttons_bar2').removeClass('hidden')
+            ui.bindings.initBindedControls()
+        }
+        else {
+            $('#buttons_bar').addClass('hidden')
+            $('#buttons_bar2').addClass('hidden')
+            ui.inputWidgets.closeInputWidget()
+        }
     }
 }
