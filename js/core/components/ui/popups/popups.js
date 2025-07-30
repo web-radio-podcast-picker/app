@@ -67,13 +67,13 @@ class Popups {
 
         popup.visible = newvis
 
-        if (newvis) this.updatePopupPosition(controlId, $popup, align)
+        if (newvis) this.updatePopupPositionAndSize(controlId, $popup, align)
 
         if (!popup.visible)
             ui.inputWidgets.closeInputWidget()
     }
 
-    updatePopupPosition(controlId, $popup, align) {
+    updatePopupPositionAndSize(controlId, $popup, align) {
         var bounds = $popup[0].getBoundingClientRect()
         var z = Number($popup.css('zoom'))
         if (z === undefined || z == null) z = 1
@@ -141,13 +141,13 @@ class Popups {
         $popup.css('top', top + 'px');
     }
 
-    updatePopupsPosition() {
+    updatePopupsPositionAndSize() {
         const $popups = $('.popup').not('[class*="hidden"]')
         $popups.each((i, e) => {
             const $popup = $(e)
             const popupId = $popup.attr('id')
             const popup = this.popups[popupId]
-            this.updatePopupPosition(popup.controlId, $popup, popup.align)
+            this.updatePopupPositionAndSize(popup.controlId, $popup, popup.align)
         })
     }
 }

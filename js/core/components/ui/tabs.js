@@ -3,18 +3,23 @@
 class Tabs {
 
     initTabs(tabs, opts) {
-        const t = this;
+        const t = this
         if (opts === undefined || opts == null) opts = {}
         tabs.forEach(e => {
-            const $c = $('#' + e);
+            const $c = $('#' + e)
             $c.on('click', () => {
                 if (!$c.hasClass('selected')
                     && !$c.hasClass('menu-item-disabled')) {
+
                     if (opts.onChange)
                         opts.onChange($c)
-                    t.selectTab($c.attr('id'), tabs);
+
+                    t.selectTab($c.attr('id'), tabs)
+
+                    if (opts.onPostChange)
+                        opts.onPostChange($c)
                 }
-            });
+            })
         })
         return ui
     }

@@ -120,7 +120,7 @@ ui = {
 
         $('#main_menu').removeClass('hidden')
 
-        this.popups.updatePopupsPosition()
+        this.popups.updatePopupsPositionAndSize()
     },
 
     checkSizeChanged() {

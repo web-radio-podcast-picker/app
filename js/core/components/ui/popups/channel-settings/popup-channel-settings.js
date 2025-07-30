@@ -32,7 +32,10 @@ class PopupChannelSettings {
     }
 
     initTabs() {
-        ui.tabs.initTabs(this.tabs)
+        const t = this
+        ui.tabs.initTabs(this.tabs, {
+            onPostChange: $c => t.tabChanged($c)
+        })
 
         this.paneSrcAudio.init(this)
         this.paneSrcExt.init(this)
@@ -81,6 +84,6 @@ class PopupChannelSettings {
     }
 
     tabChanged($c) {
-
+        ui.popups.updatePopupsPositionAndSize()
     }
 }
