@@ -65,30 +65,33 @@ ui = {
 
     viewSize() {
         const html = document.querySelector('html');
-        return { width: html.clientWidth, height: html.clientHeight };
+        return {
+            width: html.clientWidth - settings.ui.clientWidthBorder,
+            height: html.clientHeight - settings.ui.clientHeightBorder
+        };
     },
 
     setupCanvasSize(canvas) {
-        const vs = this.viewSize();
-        const htmlWidth = vs.width;
-        const htmlHeight = vs.height;
-        var updated = false;
+        const vs = this.viewSize()
+        const htmlWidth = vs.width
+        const htmlHeight = vs.height
+        var updated = false
         // auto size canvas (maximize)
-        if (canvas.width !== htmlWidth - settings.ui.clientWidthBorder) {
-            canvas.width = htmlWidth - settings.ui.clientWidthBorder;
-            updated = true;
+        if (canvas.width !== htmlWidth) {
+            canvas.width = htmlWidth
+            updated = true
         }
-        if (canvas.height !== htmlHeight - settings.ui.clientHeightBorder) {
-            canvas.height = htmlHeight - settings.ui.clientHeightBorder;
-            updated = true;
+        if (canvas.height !== htmlHeight) {
+            canvas.height = htmlHeight
+            updated = true
         }
         return updated;
     },
 
     setupUIComponents() {
-        const vs = this.viewSize();
-        const w = vs.width - settings.ui.clientWidthBorder;
-        const h = vs.height - settings.ui.clientHeightBorder;
+        const vs = this.viewSize()
+        const w = vs.width
+        const h = vs.height
 
         var $b = $('#buttons_bar')
         const nbButtons = 1
@@ -116,15 +119,17 @@ ui = {
         $p2.removeClass('hidden')
 
         $('#main_menu').removeClass('hidden')
+
+        this.popups.updatePopupsPosition()
     },
 
     checkSizeChanged() {
-        const html = document.querySelector('html');
-        const htmlWidth = html.clientWidth;
-        const htmlHeight = html.clientHeight;
+        const html = document.querySelector('html')
+        const htmlWidth = html.clientWidth
+        const htmlHeight = html.clientHeight
         var updated =
-            canvas.width !== htmlWidth - settings.ui.clientWidthBorder
-            || canvas.height !== htmlHeight - settings.ui.clientHeightBorder;
-        return updated;
+            canvas.width !== htmlWidth
+            || canvas.height !== htmlHeight
+        return updated
     }
 }
