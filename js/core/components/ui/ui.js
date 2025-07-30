@@ -91,7 +91,8 @@ ui = {
         const h = vs.height - settings.ui.clientHeightBorder;
 
         var $b = $('#buttons_bar')
-        var left = w - 118 - 118 + 7
+        const nbButtons = 1
+        var left = w - 118 * nbButtons - 118 + 7
         var top = h - 42 - 7 * 7 + 5 * 7
         $b.css('left', left + 'px')
         $b.css('top', top + 'px')
@@ -113,6 +114,8 @@ ui = {
         $p2.css('left', w - 25 * 7 + 'px')
         $p2.css('top', btop + 'px')
         $p2.removeClass('hidden')
+
+        $('#main_menu').removeClass('hidden')
     },
 
     checkSizeChanged() {

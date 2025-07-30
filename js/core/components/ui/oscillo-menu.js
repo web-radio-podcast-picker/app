@@ -67,8 +67,8 @@ class OscilloMenu {
     toggleMenu() {
         const $mb = $('#main_menu-body');
         $mb.toggleClass('hidden');
-        const $mb2 = $('#buttons_bar');
-        $mb2.toggleClass('hidden');
+        $('#buttons_bar').toggleClass('hidden')
+        $('#buttons_bar2').toggleClass('hidden')
 
         const visible = !$mb.hasClass('hidden');
         $('#btn_menu').text(!visible ? '▼' : '▲');
