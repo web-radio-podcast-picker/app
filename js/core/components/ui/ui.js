@@ -90,14 +90,20 @@ ui = {
         const w = vs.width - settings.ui.clientWidthBorder;
         const h = vs.height - settings.ui.clientHeightBorder;
 
-        const $b = $('#buttons_bar')
-        const left = w - 118 - 118 + 7
-        const top = h - 42 - 7 * 7
+        var $b = $('#buttons_bar')
+        var left = w - 118 - 118 + 7
+        var top = h - 42 - 7 * 7 + 5 * 7
         $b.css('left', left + 'px')
         $b.css('top', top + 'px')
         $b.removeClass('hidden')
 
-        const $p = $('#bottom-pane')
+        $b = $('#buttons_bar2')
+        left = w - 118 + 7 + 5
+        $b.css('left', left + 'px')
+        $b.css('top', top + 'px')
+        $b.removeClass('hidden')
+
+        var $p = $('#bottom-pane')
         $p.css('left', 50 + 'px')
         const btop = h - 21 - 7 * 6
         $p.css('top', btop + 'px')
