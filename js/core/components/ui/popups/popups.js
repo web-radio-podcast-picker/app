@@ -112,8 +112,8 @@ class Popups {
         if (left < 0) left = 0
         if (top < 0) top = 0
         // resize if outfit
-        const rx = vs.width / (/*left +*/ w)
-        const ry = vs.height / (/*top +*/ h)
+        const rx = vs.width / w
+        const ry = vs.height / h
         if (rx < 1 || ry < 1) {
             if (rx < 1) left = 0
             if (ry < 1) top = 0
@@ -121,7 +121,19 @@ class Popups {
             $popup.css('zoom', zoom)
             // center
             bounds = $popup[0].getBoundingClientRect()
-            left = (vs.width - bounds.width) / 2.0 / zoom
+            switch (align) {
+                case Align_Center_Middle_Top:
+                    left = (vs.width - bounds.width) / 2.0 / zoom;
+                    top = (vs.height - bounds.height) / 4.0 / zoom;
+                    break
+                case Align_Center_Top:
+                    left = (vs.width - bounds.width) / 2.0 / zoom
+                    break
+                default:
+                    left = (vs.width - bounds.width) / 2.0 / zoom
+                    top = (vs.heght - bounds.height) / 2.0 / zoom
+                    break
+            }
         } else {
             $popup.css('zoom', 1)
         }
