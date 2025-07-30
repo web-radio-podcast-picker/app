@@ -99,7 +99,7 @@ ui = {
 
         const $p = $('#bottom-pane')
         $p.css('left', 50 + 'px')
-        const btop = h - 21 - 7 * 4
+        const btop = h - 21 - 7 * 6
         $p.css('top', btop + 'px')
         $p.removeClass('hidden')
 

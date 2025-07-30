@@ -321,6 +321,7 @@ div#iw_delta_pane > button {
     left: calc(100% - 118px);
     text-align: center;
     padding: 8px;
+    z-index:26;
 }
 
 #buttons_bar {
@@ -330,6 +331,7 @@ div#iw_delta_pane > button {
     left: calc(calc(calc(100% - 118px) - 118px) + 0.5em);*/
     text-align: right;
     padding: 0px;
+    z-index:26;
 }
 
 .popup {}
@@ -790,6 +792,7 @@ div.channel-submenu-pane span.on-off-label {
     left: 1em;*/
     position: absolute;
     color: darkgray;
+    z-index:20;
 }
 
 #bottom-pane:hover,
@@ -808,6 +811,7 @@ div.channel-submenu-pane span.on-off-label {
     left: calc(100% - 8em);*/
     width: 10em;    
     color: darkgray;
+    z-index:20;
 }
 
 #right_bottom_pane > span.read-only {
