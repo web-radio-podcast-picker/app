@@ -74,11 +74,14 @@ class Popups {
     }
 
     updatePopupPosition(controlId, $popup, align) {
-        const bounds = $popup[0].getBoundingClientRect()
-        const w = bounds.width
-        const h = bounds.height
+        var bounds = $popup[0].getBoundingClientRect()
+        var z = Number($popup.css('zoom'))
+        if (z === undefined || z == null) z = 1
+        const w = bounds.width / z
+        const h = bounds.height / z
         var left = 0;
         var top = 0;
+        const vs = ui.viewSize()
 
         if (controlId != null) {
             // left align
@@ -89,25 +92,41 @@ class Popups {
             left = pos.left;
             top = pos.top;
         } else {
-            const vs = ui.viewSize()
-            if (align == 'center-middle-top') {
+            if (align == Align_Center_Middle_Top) {
                 left = (vs.width - w) / 2.0;
                 top = (vs.height - h) / 4.0;
             }
             else {
-                if (align == 'center-top') {
+                if (align == Align_Center_Top) {
                     left = (vs.width - w) / 2.0;
                     top = 12;
                 }
                 else {
                     // center
-                    left = (vs.width - w) / 2.0;
-                    top = (vs.height - h) / 2.0;
+                    left = (vs.width - w) / 2.0
+                    top = (vs.height - h) / 2.0
                 }
             }
         }
-        $popup.css('left', left);
-        $popup.css('top', top);
+        // repos if out
+        if (left < 0) left = 0
+        if (top < 0) top = 0
+        // resize if outfit
+        const rx = vs.width / (/*left +*/ w)
+        const ry = vs.height / (/*top +*/ h)
+        if (rx < 1 || ry < 1) {
+            if (rx < 1) left = 0
+            if (ry < 1) top = 0
+            const zoom = Math.min(rx, ry)
+            $popup.css('zoom', zoom)
+            // center
+            bounds = $popup[0].getBoundingClientRect()
+            left = (vs.width - bounds.width) / 2.0 / zoom
+        } else {
+            $popup.css('zoom', 1)
+        }
+        $popup.css('left', left + 'px');
+        $popup.css('top', top + 'px');
     }
 
     updatePopupsPosition() {

@@ -69,7 +69,7 @@ class PopupChannelSettings {
         if (channel != curCh) {
             this.editChannel = channel
             this.setupChannelSettingsPane(channel)
-            ui.popups.togglePopup(null, 'channel_settings_pane', true, 'center-top')
+            ui.popups.togglePopup(null, 'channel_settings_pane', true, Align_Center_Top)
         }
     }
 

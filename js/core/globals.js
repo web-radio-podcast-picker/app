@@ -23,6 +23,10 @@ const Kbd_Num = 'num'
 const Kbd_Dot = 'dot'
 const Kbd_Ch = 'ch'
 
+// popups align
+const Align_Center_Middle_Top = 'center-middle-top'
+const Align_Center_Top = 'center-top'
+
 // math ops
 const Math_Ops = {
     '✕': 'x',
