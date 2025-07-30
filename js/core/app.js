@@ -230,21 +230,6 @@ app = {
         this.requestAnimationFrame();
     },
 
-    // @TODO: NOT USED
-    /*togglePower() {
-        if (this.powerOn) {
-            this.deleteAllChannels()
-            ui.oscilloMenu.turnOffMenu()
-            ui.closePopup()
-            ui.inputWidgets.closeInputWidget()
-            this.powerOn = false
-            this.updateDisplay()
-        }
-        else {
-            window.location.reload(false)
-        }
-    },*/
-
     toggleOPause() {
         if (oscilloscope.pause)
             // unpause immediately

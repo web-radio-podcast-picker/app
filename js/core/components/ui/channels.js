@@ -10,7 +10,7 @@ class Channels {
 
     setPauseButtonLabel($e, pause) {
         if (!pause) {
-            $e.text('⏸');
+            $e.text('||');
         } else {
             $e.text('▶');
         }

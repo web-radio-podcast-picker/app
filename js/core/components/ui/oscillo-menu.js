@@ -61,7 +61,7 @@ class OscilloMenu {
     }
 
     reflectOscilloPauseState() {
-        $('#btn_opause').text(oscilloscope.pause ? '▶' : '⏸');
+        $('#btn_opause').text(oscilloscope.pause ? '▶' : '||');
     }
 
     toggleMenu() {
