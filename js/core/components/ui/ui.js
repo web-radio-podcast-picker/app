@@ -92,7 +92,7 @@ ui = {
 
         const $b = $('#buttons_bar')
         const left = w - 118 - 118 + 7
-        const top = h - 42 - 7 * 8
+        const top = h - 42 - 7 * 7
         $b.css('left', left + 'px')
         $b.css('top', top + 'px')
         $b.removeClass('hidden')
