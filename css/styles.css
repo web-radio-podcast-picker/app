@@ -174,11 +174,22 @@ div.channel-pane > span.label {
     display: block;
 }
 
+.pane-gen-vsep {
+    grid-row-start: 1;
+    grid-row-end: 4;
+    margin-right: 1em;
+}
+
 .channel-menu-pane-horiz-separator {
     margin-top: Calc(0.5em + 1px);
     margin-bottom: 0.5em;
     height: 1px;
     border-top: #0077FFDD solid 1px;
+}
+
+.channel-menu-pane-vert-separator {
+    width: 1px;
+    border-right: #0077FFDD solid 1px;
 }
 
 .channel-submenu-pane {
