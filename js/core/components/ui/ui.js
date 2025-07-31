@@ -56,7 +56,6 @@ ui = {
         const $c = $('#err_txt')
         $c.on('click', () => {
             $c.text('')
-            x + 3
         })
 
         // menus & popups
