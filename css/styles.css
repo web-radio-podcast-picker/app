@@ -881,3 +881,12 @@ div.channel-submenu-pane span.on-off-label {
     border: darkblue solid 1px !important;
     margin-right: 0em !important;
 }
+
+#opt_os_sys_agent {
+    width: 19.2em;
+    margin-right: 0em;
+}
+
+#opts_os_sys {
+    grid-auto-rows: unset !important;
+}

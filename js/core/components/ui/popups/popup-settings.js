@@ -14,7 +14,8 @@ class PopupSettings {
                 'btn_os_grid',
                 'btn_os_disp',
                 'btn_os_in',
-                'btn_os_out'])
+                'btn_os_out',
+                'btn_os_sys'])
 
             // display
             .bindings.bind(ui.bindings.binding(
@@ -81,5 +82,24 @@ class PopupSettings {
             .bindings.bind(ui.bindings.binding(
                 'opt_os_vdiv',
                 'settings.oscilloscope.grid.vDivCount'))
+
+            // system
+            .bindings.bind(ui.bindings.binding(
+                'opt_os_sys_appver',
+                'settings.app.version',
+                readOnly))
+            .bindings.bind(ui.bindings.binding(
+                'opt_os_sys_agent',
+                'navigator.userAgent',
+                {
+                    ...readOnly,
+                    ...{
+                        attr: 'text'
+                    }
+                }))
+            .bindings.bind(ui.bindings.binding(
+                'opt_os_sys_reso',
+                'ui.viewSize().width+\'x\'+ui.viewSize().height',
+                readOnly))
     }
 }
