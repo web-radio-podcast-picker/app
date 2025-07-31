@@ -11,7 +11,7 @@ class Trigger {
     isOn            // true if is on
     type            // trigger type (Trigger_Type_...)
     threshold       // treshold default val
-    sensitivity     // delta  +/-volts for ramp check
+    sensitivity     // delta +/-volts for ramp check
     timeThreshold   // actually samples count
     triggeredV      // V when triggered 
 

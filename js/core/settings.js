@@ -62,13 +62,27 @@ window.settings = {
 
     markers: {
         trigger: {
-            yRel: -11,           // rel y to the base widget y of value point
+            yRel: -10,           // rel y to the base widget y of value point
         },
         lines: {
             avgDash: [10, 10],
             avgOpacity: 0.7,
             limDash: [5, 10],
             limOpacity: 0.7,
+
+            trigger: {
+                dash: [5, 10],
+                opacity: 0.7,
+                color: 'rgba(255, 0, 0,1)',
+                width: 1
+            },
+            triggerS: {
+                dash: [5, 10],
+                opacity: 0.7,
+                color: 'rgba(255, 174, 0, 1)',
+                width: 1
+            },
+
             width: 1
         }
     },

@@ -37,6 +37,10 @@ class ChannelSettingsPaneDisp {
                 () => oscilloscope.refreshView(),
                 ui.getCurrentChannelPath('markers.vMax')
             )
+            .toggles.initToggle('opt_ch_disp_trig',
+                () => oscilloscope.refreshView(),
+                ui.getCurrentChannelPath('markers.trigger')
+            )
             .bindings.bind(ui.bindings.binding(
                 'opt_disp_stroke_width',
                 ui.getCurrentChannelPath('lineWidth'),

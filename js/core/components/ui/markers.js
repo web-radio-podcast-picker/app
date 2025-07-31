@@ -12,6 +12,7 @@ class Markers {
     vAvg = false
     vMin = false
     vMax = false
+    trigger = false
 
     init(channel) {
         this.channel = channel
@@ -101,14 +102,33 @@ class Markers {
     }
 
     triggerView(channel, drawContext, props) {
-        if (channel.trigger.isOn
-            && !channel.markers.isDraggingTrigger()
-        ) {
-            // setup the trigger marker
+        if (channel.trigger.isOn) {
             const triggerY = channel.view.voltOffset(
                 channel.trigger.threshold)
-                + settings.markers.trigger.yRel
-            channel.markers.setTriggerControlPos(triggerY)
+            if (!channel.markers.isDraggingTrigger()) {
+                // setup the trigger marker                
+                channel.markers.setTriggerControlPos(triggerY + settings.markers.trigger.yRel)
+            }
+            if (channel.markers.isDraggingTrigger()
+                || this.trigger) {
+                // drag trigger view
+                var o = settings.markers.lines.trigger
+                this.drawAxe(drawContext, triggerY,
+                    o.dash,
+                    setRgbaOpacity(o.color, o.opacity),
+                    o.width,
+                    props
+                )
+                const triggerSY = channel.view.voltOffset(
+                    channel.trigger.threshold + channel.trigger.sensitivity)
+                o = settings.markers.lines.triggerS
+                this.drawAxe(drawContext, triggerSY,
+                    o.dash,
+                    setRgbaOpacity(o.color, o.opacity),
+                    o.width,
+                    props
+                )
+            }
         }
     }
 
