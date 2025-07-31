@@ -6,9 +6,15 @@ window.settings = {
         version: '0.8'
     },
 
+    sys: {
+        platform: '?',
+        platformText: '?',
+        mobile: null
+    },
+
     debug: {
         debug: true,
-        trace: true,
+        trace: false,
         info: true,
         stackTrace: false
     },
