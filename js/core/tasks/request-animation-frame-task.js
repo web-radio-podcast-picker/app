@@ -1,3 +1,9 @@
+/*
+    Sound card Oscilloscope Analyser Generator
+    Copyright(C) 2025  Franck Gaspoz
+    find licence and copyright informations in files /COPYRIGHT and /LICENCE
+*/
+
 // request animation frame task (scan display end)
 
 requestAnimationFrameTask = {

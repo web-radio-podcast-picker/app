@@ -1,4 +1,11 @@
+/*
+    Sound card Oscilloscope Analyser Generator
+    Copyright(C) 2025  Franck Gaspoz
+    find licence and copyright informations in files /COPYRIGHT and /LICENCE
+*/
+
 // signal measures
+
 class SignalMeasures {
 
     value = null               // input value              (-1..1)

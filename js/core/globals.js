@@ -3,6 +3,12 @@
 // sources ids
 const Source_Id_AudioInput = 'Audio Input'
 const Source_Id_Ext = 'Ext'
+/*
+    Sound card Oscilloscope Analyser Generator
+    Copyright(C) 2025  Franck Gaspoz
+    find licence and copyright informations in files /COPYRIGHT and /LICENCE
+*/
+
 const Source_Id_Generator = 'Generator'
 const Source_Id_Math = 'Math'
 const Source_Id_None = 'None'
