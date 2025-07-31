@@ -106,8 +106,8 @@ ui = {
         const h = vs.height
 
         var $b = $('#buttons_bar')
-        const nbButtons = 1
-        var left = w - 118 * nbButtons - 118 + 7
+        const nbButtons = 2
+        var left = w - 42 * nbButtons - 118 - 7 * (nbButtons + 1)
         var top = h - 42 - 7 * 7 + 5 * 7
         $b.css('left', left + 'px')
         $b.css('top', top + 'px')

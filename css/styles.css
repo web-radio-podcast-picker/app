@@ -557,6 +557,10 @@ div.popup-grid > span.menu-item {
     opacity: 0.9;
 }
 
+.menu-item-small {
+    width: 3em !important;
+}
+
 .menu-item-half-height {
     line-height: 1.5em !important;
 }
