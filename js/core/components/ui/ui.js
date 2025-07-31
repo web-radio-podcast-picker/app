@@ -35,17 +35,30 @@ ui = {
     },
 
     init_ui() {
+
         // events
         $(window).resize(() => {
             oscilloscope.refreshView()
         })
+        window.onerror = (messOrEvent, src, line, col, err) => {
+            this.showError(messOrEvent, src, line, col, err)
+        }
+
         // properties
         $('input').attr('autocomplete', 'off');
-        // bindins
+
+        // bindings
         this.bindings.bind(this.bindings.binding(
             'app_ver',
             'settings.app.version',
             { readOnly: true, attr: 'text' }));
+
+        const $c = $('#err_txt')
+        $c.on('click', () => {
+            $c.text('')
+            x + 3
+        })
+
         // menus & popups
         this.oscilloMenu.initMenu();
         this.popups.init_popups();
@@ -109,7 +122,13 @@ ui = {
 
         var $p = $('#bottom-pane')
         $p.css('left', 50 + 'px')
-        const btop = h - 21 - 7 * 6
+        var btop = h - 21 - 7 * 6
+        $p.css('top', btop + 'px')
+        $p.removeClass('hidden')
+
+        var $p = $('#error_pane')
+        $p.css('left', 50 + 'px')
+        btop = h - 21 - 7 * 10
         $p.css('top', btop + 'px')
         $p.removeClass('hidden')
 
@@ -121,6 +140,17 @@ ui = {
         $('#main_menu').removeClass('hidden')
 
         this.popups.updatePopupsPositionAndSize()
+    },
+
+    showError(messOrEvent, src, line, col, err) {
+        window.err = {
+            messOrEvent: messOrEvent,
+            src: src,
+            line: line,
+            col: col,
+            err: err
+        }
+        $('#err_txt').text(messOrEvent)
     },
 
     checkSizeChanged() {

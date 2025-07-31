@@ -14,9 +14,11 @@ function xeval(expr, showError) {
         return { success: true, value: value }
     } catch (err) {
         // ignore or debug
-        if (settings.debug.trace)
+        if (settings.debug.trace) {
             console.log(expr, err.message)
-        window.err = err
+            ui.showError(err.message, null, null, null, err)
+        }
+        window.xeval_err = err
         if (settings.debug.stackTrace)
             console.log(err)
         //console.debug(err)

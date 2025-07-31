@@ -713,8 +713,16 @@ div.popup-grid > span.menu-item {
     padding: 0px;
 }
 
-.top-pane,#bottom-pane {
+.top-pane,#bottom-pane,#error_pane {
     line-height: 1.5em;
+}
+
+#error_pane {
+    color: red !important;
+    position: absolute;
+    z-index:20;
+    white-space: nowrap;
+    cursor: pointer;
 }
 
 .row {
