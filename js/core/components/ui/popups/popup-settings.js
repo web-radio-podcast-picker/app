@@ -103,7 +103,7 @@ class PopupSettings {
                 readOnly))
             .bindings.bind(ui.bindings.binding(
                 'opt_os_sys_plat',
-                'navigatorz.userAgentData.platform',
+                'navigator.userAgentData.platform',
                 readOnly))
     }
 }
