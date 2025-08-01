@@ -149,13 +149,13 @@ ui = {
         $p.removeClass('hidden')
 
         // test
-        /*
-        $p = $('#fft_axe_bottom_pane')
-        $p.css('left', 50 + 'px')
-        btop = h + settings.ui.fftAxeRelY
-        $p.css('top', btop + 'px')
-        $p.removeClass('hidden')
-        */
+        if (false) {
+            $p = $('#fft_axe_bottom_pane')
+            $p.css('left', 50 + 'px')
+            btop = h + settings.ui.fftAxeRelY
+            $p.css('top', btop + 'px')
+            $p.removeClass('hidden')
+        }
 
         $('#main_menu').removeClass('hidden')
 
