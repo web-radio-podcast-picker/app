@@ -52,14 +52,10 @@ class FFTView {
         const maxDb = -30
         var dbRange = Math.abs(maxDb - minDb)
         var reldb = (value - minDb) / dbRange
-
-        //var percent = -value / signalRange;
         var percent = reldb * displayRange
 
-        //percent *= signalRange / displayRange; // adjust to display range
-
         // vertical scale factor (or logarythmic scale?)
-        const vScale = 20
+        const vScale = this.channel.fft.vScale
 
         // height relative to view height        
         var height = canvasHeight * percent;
