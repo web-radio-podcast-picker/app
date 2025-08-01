@@ -142,10 +142,17 @@ ui = {
 
         // information
 
-        var $p = $('#error_pane')
+        $p = $('#error_pane')
         $p.css('left', 50 + 'px')
         var btop2 = h - 21 - 7 * 10
         $p.css('top', btop2 + 'px')
+        $p.removeClass('hidden')
+
+        // test
+        $p = $('#fft_axe_bottom_pane')
+        $p.css('left', 50 + 'px')
+        btop = h - 21 - 7 * 6
+        $p.css('top', btop + 'px')
         $p.removeClass('hidden')
 
         $('#main_menu').removeClass('hidden')

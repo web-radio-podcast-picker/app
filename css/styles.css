@@ -750,6 +750,14 @@ div.popup-grid > span.menu-item {
     cursor: pointer;
 }
 
+#fft_axe_bottom_pane {
+    color: rgb(216, 199, 199) !important;
+    position: absolute;
+    z-index:20;
+    white-space: nowrap;
+    cursor: pointer;
+}
+
 .row {
     line-height: 1em;
 }
