@@ -149,11 +149,13 @@ ui = {
         $p.removeClass('hidden')
 
         // test
+        /*
         $p = $('#fft_axe_bottom_pane')
         $p.css('left', 50 + 'px')
         btop = h + settings.ui.fftAxeRelY
         $p.css('top', btop + 'px')
         $p.removeClass('hidden')
+        */
 
         $('#main_menu').removeClass('hidden')
 
@@ -179,5 +181,10 @@ ui = {
             canvas.width !== htmlWidth
             || canvas.height !== htmlHeight
         return updated
+    },
+
+    isSmallDisplay() {
+        const vs = this.viewSize()
+        return vs.height <= settings.ui.compactDisplayMaxHeight
     }
 }

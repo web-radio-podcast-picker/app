@@ -45,9 +45,14 @@ window.settings = {
             opacity: 0.7,       // grid lines opacity
             hDivCount: 10,
             vDivCount: 10,
-            color: null,
+            color: null,        // initialized from channel color
             lineWidth: 1,
-            dash: [2, 2]
+            dash: [2, 2],
+            markers: {
+                Length: 14,
+                xRel: 0,
+                yRel: 14
+            }
         },
         stroke: {
             lineWidth: 1
