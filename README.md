@@ -1,6 +1,6 @@
 # oscilloscope + signal analyser + generator
 
-A javascript application running an audio sound card oscilloscope,anayzer and generator in the browser, including:
+A javascript application running an audio sound card oscilloscope,anayzer and generator, in the browser (responsive ui, fits desktop, tablet, smartphones), including:
 
 - oscilloscope (trigger, cursor, markers, lissajous, colorisation,...)
 - signal analysis (FFT, frequency, min/max/average, ...)
