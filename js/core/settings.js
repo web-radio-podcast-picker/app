@@ -1,5 +1,5 @@
 /*
-    Sound card Oscilloscope | Signal Analyzer Generator
+    Sound card Oscilloscope | Signal Analyser Generator
     Copyright(C) 2025  Franck Gaspoz
     find licence and copyright informations in files /COPYRIGHT and /LICENCE
 */
@@ -138,7 +138,8 @@ window.settings = {
         clientWidthBorder: 4,   // default border width for client area
         clientHeightBorder: 2,  // default border height for client area
         menuContainerWidth: 42,  // 3 * 1em
-        fullscreen: false
+        fullscreen: false,
+        compactDisplayMaxHeight: 600
     }
 
 };

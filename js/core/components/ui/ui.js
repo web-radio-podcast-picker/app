@@ -1,5 +1,5 @@
 /*
-    Sound card Oscilloscope | Signal Analyzer Generator
+    Sound card Oscilloscope | Signal Analyser Generator
     Copyright(C) 2025  Franck Gaspoz
     find licence and copyright informations in files /COPYRIGHT and /LICENCE
 */
@@ -111,6 +111,8 @@ ui = {
         const w = vs.width
         const h = vs.height
 
+        // buttons bars
+
         var $b = $('#buttons_bar')
         const nbButtons = 2
         var left = w - 42 * nbButtons - 118 - 7 * (nbButtons + 1)
@@ -125,22 +127,26 @@ ui = {
         $b.css('top', top + 'px')
         $b.removeClass('hidden')
 
+        // bottom views
+
         var $p = $('#bottom-pane')
         $p.css('left', 50 + 'px')
-        var btop = h - 21 - 7 * 6
+        var btop = h - 21 - 7
         $p.css('top', btop + 'px')
-        $p.removeClass('hidden')
-
-        var $p = $('#error_pane')
-        $p.css('left', 50 + 'px')
-        var btop2 = h - 21 - 7 * 10
-        $p.css('top', btop2 + 'px')
         $p.removeClass('hidden')
 
         const $p2 = $('#right_bottom_pane')
         $p2.css('left', w - 25 * 7 + 'px')
         $p2.css('top', btop + 'px')
         $p2.removeClass('hidden')
+
+        // information
+
+        var $p = $('#error_pane')
+        $p.css('left', 50 + 'px')
+        var btop2 = h - 21 - 7 * 10
+        $p.css('top', btop2 + 'px')
+        $p.removeClass('hidden')
 
         $('#main_menu').removeClass('hidden')
 
