@@ -1,10 +1,10 @@
 # oscilloscope + signal analyser + generator
 
-A javascript application running an audio sound card oscilloscope,anayser and generator in the browser, including:
+A javascript application running an audio sound card oscilloscope,anayzer and generator in the browser, including:
 
-- oscilloscope (trigger,cursor,markers,lissajous,colorisation,...)
+- oscilloscope (trigger, cursor, markers, lissajous, colorisation,...)
 - signal analysis (FFT, frequency, min/max/average, ...)
-- signal generator (wave,square,sawtooth,triangle)
+- signal generator (wave, square, sawtooth, triangle)
 - apply effects on signals (reverb,echo,filter,...)
 - maths (combinate signal together)
 - multi channels
