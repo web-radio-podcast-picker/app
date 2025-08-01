@@ -15,12 +15,14 @@ class FFTView {
     channel = null;          // channel
     renderers = []          // renderers . on sigview, before signal draw
     pointRenderers = []     // point renderers. on signal point, before signal point
+    fftAxesRenderer = new FFTAxesRenderer()
 
     init(canvas, channel) {
         this.canvas = canvas;
         this.channel = channel;
-        //this.pointRenderers.push(new TempColorRenderer())
-        //this.pointRenderers.push(new BrightRenderer())
+        this.renderers.push((channel, dc, props) => {
+            this.fftAxesRenderer.render(channel, dc, props)
+        })
     }
 
     /*
@@ -95,7 +97,8 @@ class FFTView {
             const baseI = 0
 
             const rprops = {
-                canvasWidth: canvasWidth
+                canvasWidth: canvasWidth,
+                canvasHeight: canvasHeight
             }
 
             this.renderers.forEach(r => {
@@ -119,9 +122,10 @@ class FFTView {
                 drawContext.beginPath()
                 drawContext.moveTo(x, y)
                 drawContext.lineTo(nx, ny)
-                drawContext.setLineDash([]);
+                drawContext.setLineDash([])
                 var col = this.channel.fft.color
                 drawContext.strokeStyle = col
+                drawContext.lineWidth = this.channel.fft.lineWidth
                 const props = {
                     col: col,
                     op: 1,

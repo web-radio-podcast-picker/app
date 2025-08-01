@@ -17,6 +17,7 @@ class FFT {
     displayGrid     /* display fft grid (auto if true) or not (false) */
     color           /* fft main color */
     lineWidth       /* stroke width */
+    grid            /* grid properties */
     isDisplayed     /* true if displayed */
 
     init(channel) {
@@ -28,7 +29,9 @@ class FFT {
         this.vScale = settings.fft.vScale
         this.hScale = settings.fft.hScale
         this.color = channel.color
-        this.lineWidth = 1
+        this.lineWidth = settings.fft.stroke.lineWidth
+        this.grid = { ...settings.fft.grid }
+        this.grid.color = channel.color
         this.isDisplayed = false
     }
 }

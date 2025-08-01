@@ -116,7 +116,7 @@ ui = {
         var $b = $('#buttons_bar')
         const nbButtons = 2
         var left = w - 42 * nbButtons - 118 - 7 * (nbButtons + 1)
-        var top = h - 42 - 7 * 7 + 5 * 7
+        var top = h + settings.ui.buttonBarRelY
         $b.css('left', left + 'px')
         $b.css('top', top + 'px')
         $b.removeClass('hidden')
@@ -131,7 +131,7 @@ ui = {
 
         var $p = $('#bottom-pane')
         $p.css('left', 50 + 'px')
-        var btop = h - 21 - 7
+        var btop = h + settings.ui.infoBarRelY
         $p.css('top', btop + 'px')
         $p.removeClass('hidden')
 
@@ -144,14 +144,14 @@ ui = {
 
         $p = $('#error_pane')
         $p.css('left', 50 + 'px')
-        var btop2 = h - 21 - 7 * 10
+        var btop2 = h + settings.ui.errorBarRelY
         $p.css('top', btop2 + 'px')
         $p.removeClass('hidden')
 
         // test
         $p = $('#fft_axe_bottom_pane')
         $p.css('left', 50 + 'px')
-        btop = h - 21 - 7 * 6
+        btop = h + settings.ui.fftAxeRelY
         $p.css('top', btop + 'px')
         $p.removeClass('hidden')
 

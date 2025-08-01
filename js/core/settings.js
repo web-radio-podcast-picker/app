@@ -40,7 +40,18 @@ window.settings = {
 
     fft: {
         hScale: 1,              // horizontal linear scale (1: full bandwidth)
-        vScale: 20              // vertical linear scale
+        vScale: 20,             // vertical linear scale
+        grid: {
+            opacity: 0.7,       // grid lines opacity
+            hDivCount: 10,
+            vDivCount: 10,
+            color: null,
+            lineWidth: 1,
+            dash: [2, 2]
+        },
+        stroke: {
+            lineWidth: 1
+        }
     },
 
     generator: {
@@ -139,6 +150,10 @@ window.settings = {
         clientHeightBorder: 2,  // default border height for client area
         menuContainerWidth: 42,  // 3 * 1em
         fullscreen: false,
+        fftAxeRelY: - 21 - 7 * 6,
+        errorBarRelY: - 21 - 7 * 10,
+        infoBarRelY: - 21 - 7,
+        buttonBarRelY: - 42 - 7 * 7 + 5 * 7,
         compactDisplayMaxHeight: 600
     }
 
