@@ -23,6 +23,7 @@ class FFTView {
         //this.pointRenderers.push(new BrightRenderer())
     }
 
+    /*
     offsetToVolt(offset) {
         const canvasHeight = this.canvas.height;
         const signalRange = settings.audioInput.vScale;
@@ -36,18 +37,16 @@ class FFTView {
         const value = -percent * signalRange
         return value
     }
+    */
 
     dbOffset(value) {
         const canvasHeight = this.canvas.height;
-        //const signalRange = settings.audioInput.vScale;
         const displayRange = this.getDisplayRange()
 
         // min  .. max
         // -100 .. -30  ref (analyzer.minDecibels,analyzer.maxDecibels)
         //     -65      -> 50% = -65 --100      +35
         //                      / abs(max-min)  +70 == 0.5                        
-
-        // -170 .. -60 
 
         const minDb = -100
         const maxDb = -30
@@ -58,19 +57,22 @@ class FFTView {
         var percent = reldb * displayRange
 
         //percent *= signalRange / displayRange; // adjust to display range
+
+        // vertical scale factor (or logarythmic scale?)
         const vScale = 20
 
+        // height relative to view height        
         var height = canvasHeight * percent;
-        height *= this.channel.yScale;
+        // height relative to the half bottom part of the view
         var offset = canvasHeight / 2 - height / vScale;
         offset += canvasHeight / 4
 
-        //offset += this.channel.yOffset;
         return offset
     }
 
     getDisplayRange() {
-        return settings.oscilloscope.vPerDiv * 5.0
+        // fft vscale currently fixed to view height
+        return 0.5 * 5.0
     }
 
     run() {
@@ -91,12 +93,8 @@ class FFTView {
             var y = -1
             const drawContext = this.canvas.getContext('2d')
 
-            const signalRange = settings.audioInput.vScale
-            const displayRange = this.getDisplayRange()        // base
-
-            const timePerDiv = settings.oscilloscope.tPerDiv;
             // full buffer view : scale 1ms/div
-            const barWidth = canvasWidth / dataArray.length / timePerDiv;
+            const barWidth = canvasWidth / dataArray.length / this.channel.fft.hScale
 
             const baseI = 0
 
@@ -111,7 +109,6 @@ class FFTView {
             for (var i = baseI; i < dataArray.length; i += 1) {
                 var value = dataArray[i];
 
-                //value = valueToVolt(this.channel, value);
                 const offset = this.dbOffset(value)
 
                 var nx = (i - baseI) * barWidth
@@ -122,23 +119,17 @@ class FFTView {
                 }
 
                 const m = this.channel.measures
-                const absMax = Math.max(Math.abs(m.vMax), Math.abs(m.vMin))
-                const absVal = Math.abs(value)
-                const absF = 1.0 - ((absMax - absVal) / absMax)
 
                 drawContext.beginPath()
                 drawContext.moveTo(x, y)
                 drawContext.lineTo(nx, ny)
                 drawContext.setLineDash([]);
-                var col = this.channel.color
+                var col = this.channel.fft.color
                 drawContext.strokeStyle = col
                 const props = {
                     col: col,
                     op: 1,
                     value: value,
-                    absMax: absMax,
-                    absVal: absVal,
-                    absF: absF,
                     offset: offset
                 }
 
@@ -148,7 +139,7 @@ class FFTView {
                         props.col = r.col
                 })
 
-                drawContext.lineWidth = this.channel.lineWidth
+                drawContext.lineWidth = this.channel.fft.lineWidth
                 drawContext.stroke()
 
                 x = nx

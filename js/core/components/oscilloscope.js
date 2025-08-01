@@ -84,7 +84,8 @@ oscilloscope = {
         channel.sourceId = sourceId
         channel.audioContext = new AudioContext()
         channel.gain = channel.audioContext.createGain()
-        channel.analyzer = channel.audioContext.createAnalyser()
+        channel.setAnalyser(
+            channel.audioContext.createAnalyser())
 
         channel.generator.init(
             channel,
@@ -144,7 +145,8 @@ oscilloscope = {
                 console.log("Input media stream ok")
 
             channel.streamSource = channel.audioContext.createMediaStreamSource(channel.stream)
-            channel.analyzer = channel.audioContext.createAnalyser()
+            channel.setAnalyser(
+                channel.audioContext.createAnalyser())
 
             channel.streamSource.connect(channel.gain);
             channel.gain.connect(channel.analyzer);

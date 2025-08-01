@@ -8,21 +8,22 @@
 
 class Channel {
 
-    channelId = null;           // channel id (1, 2,...)
-    isDisplayed = false;        // false if not already displayed
-    pause = false               // true if paused (source,view) - use setPause
+    channelId = null           // channel id (1, 2,...)
+    isDisplayed = false        // false if not already displayed
+    pause = false              // true if paused (source,view) - use setPause
 
     // audioInputDevice/generator/... (@see globals.js)
-    sourceId = null;            // source id of the signal, e.g., 'input', 'file', etc.
+    sourceId = null            // source id of the signal, e.g., 'input', 'file', etc.
 
-    source = null;              // signal source (Source_Id_AudioInput, ...)
-    streamSource = null;        // media stream source
-    stream = null;              // media stream
-    analyzer = null;            // audio analyzer
+    source = null               // signal source (Source_Id_AudioInput, ...)
+    streamSource = null         // media stream source
+    stream = null               // media stream
+    analyzer = null             // audio analyzer
     gain = null                 // audio gain
     gainValue = 1               // gain value
     generator = new Generator() // signal generator
     trigger = new Trigger()     // trigger
+    fft = new FFT()
     markers = null              // channel markers
     audioContext = null         // audio context for processing
     getSamplesTask = null       // samples provider if required
@@ -30,38 +31,43 @@ class Channel {
     outMute = false             // if true out is mute due to pause
     outConnected = false
 
-    view = null;                // signal view (drawer)
-    fftView = null;                // signal view (drawer)
-    measures = null;            // signal measures data
-    measuresView = null;        // signal measures view
+    view = null                // signal view (drawer)
+    fftView = null             // fft view (drawer)
+    measures = null            // signal measures data
+    measuresView = null        // signal measures view
 
-    color = 'cyan';             // color for channel
-    lineWidth = 1;              // line width for channel
+    color = 'cyan'             // color for channel
+    lineWidth = 1              // line width for channel
     tempColor = false
     bright = false
 
-    vScale = 1;                 // volt scale (256 digital value corresponding volts)
-    yScale = 1;                 // multiplier for Y-axis scaling
-    xScale = 1;                 // multiplier for X-axis scaling
-    yOffset = 0;                // Y-axis offset for channel
-    xOffset = 0;                // X-axis offset for channel
+    vScale = 1                 // volt scale (256 digital value corresponding volts)
+    yScale = 1                 // multiplier for Y-axis scaling
+    xScale = 1                 // multiplier for X-axis scaling
+    yOffset = 0                // Y-axis offset for channel
+    xOffset = 0                // X-axis offset for channel
 
-    error = null;               // error message if any
+    error = null               // error message if any
 
-    ui = false;                 // indicates if ui is built for this channel
+    ui = false                 // indicates if ui is built for this channel
 
-    triggerOn = false;          // trigger enabled
-    triggerKind = null;
+    triggerOn = false          // trigger enabled
+    triggerKind = null
 
     constructor(channelId, sourceId) {
-        this.channelId = channelId;
-        this.sourceId = sourceId;
-        this.measures = new SignalMeasures();
-        this.measuresView = new SignalMeasuresView();
-        this.view = new SignalView();
-        this.fftView = new FFTView();
+        this.channelId = channelId
+        this.sourceId = sourceId
+        this.measures = new SignalMeasures()
+        this.measuresView = new SignalMeasuresView()
+        this.view = new SignalView()
+        this.fftView = new FFTView()
         this.markers = new Markers().init(this)
-        this.measuresView.init(this, this.measures);
+        this.measuresView.init(this, this.measures)
+    }
+
+    setAnalyser(analyser) {
+        this.analyzer = analyser
+        this.fft.init(this)
     }
 
     setPause(pause) {

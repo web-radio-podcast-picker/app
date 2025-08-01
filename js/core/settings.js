@@ -38,6 +38,11 @@ window.settings = {
         vScale: 1               // volt scale line out (corresponding to 1 = max sound level)
     },
 
+    fft: {
+        hScale: 1,              // horizontal linear scale (1: full bandwidth)
+        vScale: 20              // vertical linear scale
+    },
+
     generator: {
         defaultFrq: 250,        // initial generator (oscillator) frq
         defaultFn: Gen_Fn_Sin,      // default fn
