@@ -5,6 +5,7 @@
 */
 
 // channel settings pane FFT
+
 class ChannelSettingsPaneFFT {
 
     channelSettings = null
@@ -13,7 +14,8 @@ class ChannelSettingsPaneFFT {
         this.channelSettings = channelSettings
 
         ui.toggles.initToggle('btn_ch_fft_onoff',
-            () => { }
+            () => oscilloscope.refreshView(),
+            ui.getCurrentChannelPath('fftView.visible')
         )
     }
 }

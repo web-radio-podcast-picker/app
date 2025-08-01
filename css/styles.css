@@ -180,6 +180,10 @@ div.channel-pane > span.label {
     margin-right: 1em;
 }
 
+.vsep {
+    margin-right: 1em;
+}
+
 .channel-menu-pane-horiz-separator {
     margin-top: Calc(0.5em + 1px);
     margin-bottom: 0.5em;
@@ -187,7 +191,7 @@ div.channel-pane > span.label {
     border-top: #0077FFDD solid 1px;
 }
 
-.channel-menu-pane-vert-separator {
+.channel-menu-pane-vert-separator,.vsep {
     width: 1px;
     border-right: #0077FFDD solid 1px;
 }

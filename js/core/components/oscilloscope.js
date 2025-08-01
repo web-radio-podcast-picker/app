@@ -48,10 +48,11 @@ oscilloscope = {
 
     addChannel(channel) {
         // add a channel to the oscilloscope
-        channel.view.init(app.canvas, channel);
-        this.channels.push(channel);
+        channel.view.init(app.canvas, channel)
+        channel.fftView.init(app.canvas, channel)
+        this.channels.push(channel)
         // add controls for the Channel
-        ui.channels.addControls(channel);
+        ui.channels.addControls(channel)
     },
 
     async createChannel(sourceId, source) {

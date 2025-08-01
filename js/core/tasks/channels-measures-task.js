@@ -42,7 +42,11 @@ channelsMeasuresTask = {
         var pwdi = null
         var mini = null
         var maxi = null
-        var n = f.length / m.channelCount
+
+        var mindb = Number.MAX_VALUE
+        var maxdb = -Number.MAX_VALUE
+
+        var n = f.length
         if (f != null) {
             for (var i = 0; i < n; i++) {
                 const v = f[i];
@@ -51,6 +55,8 @@ channelsMeasuresTask = {
                     pwdf = v
                     pwdi = i
                 }
+                if (v >= maxdb) maxdb = v
+                if (v <= mindb) mindb = v
             }
             for (var i = 0; i < n; i++) {
                 const v = f[i];
@@ -70,11 +76,10 @@ channelsMeasuresTask = {
 
         const rt = n > 0 ? m.sampleRate / n : 0
         var drt = rt / 2.0
-        var frq = 0
-        frq = drt * (pwdi + 1)
 
-        const minFrq = drt * (mini + 1)
-        const maxFrq = drt * (maxi + 1)
+        const frq = drt * (pwdi + 0)
+        const minFrq = drt * (mini + 0)
+        const maxFrq = drt * (maxi + 0)
 
         if (vMin == Number.MAX_VALUE) vMin = 0
         if (vMax == Number.MIN_VALUE) vMax = 0

@@ -16,8 +16,9 @@ channelsAnimationTask = {
 
     run() {
         this.oscilloscope.channels.forEach(channel => {
-            channel.view.run();
-            channel.measuresView.run();
-        });
+            channel.view.run()
+            channel.fftView.run()
+            channel.measuresView.run()
+        })
     }
 }

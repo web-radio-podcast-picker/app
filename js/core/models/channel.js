@@ -31,6 +31,7 @@ class Channel {
     outConnected = false
 
     view = null;                // signal view (drawer)
+    fftView = null;                // signal view (drawer)
     measures = null;            // signal measures data
     measuresView = null;        // signal measures view
 
@@ -58,6 +59,7 @@ class Channel {
         this.measures = new SignalMeasures();
         this.measuresView = new SignalMeasuresView();
         this.view = new SignalView();
+        this.fftView = new FFTView();
         this.markers = new Markers().init(this)
         this.measuresView.init(this, this.measures);
     }
