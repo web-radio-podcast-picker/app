@@ -48,8 +48,8 @@ class FFTView {
         //     -65      -> 50% = -65 --100      +35
         //                      / abs(max-min)  +70 == 0.5                        
 
-        const minDb = -100
-        const maxDb = -30
+        const minDb = this.channel.fft.minDb
+        const maxDb = this.channel.fft.maxDb
         var dbRange = Math.abs(maxDb - minDb)
         var reldb = (value - minDb) / dbRange
         var percent = reldb * displayRange
