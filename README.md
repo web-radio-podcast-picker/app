@@ -24,8 +24,8 @@ project status: on going
 
 ## screenshots
 
-![screenshot](doc/screenshot-0.8.png)
-*v 0.7 - 'temperature' colors*
+![screenshot](doc/screenshot-0.8b.png)
+*v 0.8 - FFT*
 
 ![screenshot](doc/screenshot-0.7.png)
 *v 0.7 - triggers with graphical markers*
