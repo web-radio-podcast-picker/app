@@ -43,8 +43,10 @@ window.settings = {
         vScale: 20,             // vertical linear scale
         grid: {
             opacity: 0.9,       // grid lines opacity
-            hDivCount: 16,
-            dbPerDiv: 25,
+            hDivCount: 16,      // horizontal divs count
+            hDivCountSD: 10,    // idem for small display
+            dbPerDiv: 25,       // db / div
+            dbPerDivSD: 50,     // idem for small display
             color: null,            // initialized from channel color
             commonColor: 'rgba(160,160,170,1)',     // color if several fft with same scale
             lineWidth: 1,

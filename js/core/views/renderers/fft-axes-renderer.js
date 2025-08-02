@@ -11,6 +11,7 @@ class FFTAxesRenderer {
     render(channel, drawContext, props) {
 
         if (!channel.fftView.visible || !channel.fft.displayGrid) return props
+        if (channel.analyzer.context == null) return
 
         var gridColor = settings.fft.grid.commonColor
         const t = parseRgba(gridColor)
@@ -25,12 +26,15 @@ class FFTAxesRenderer {
 
         this.drawAxe(channel, drawContext, x0, y, x1, y, colr)
 
-        const colSize = props.width / channel.fft.grid.hDivCount
+        const sd = ui.isSmallDisplay()
+        const hDivCount = sd ? channel.fft.grid.hDivCountSD
+            : channel.fft.grid.hDivCount
+        const colSize = props.width / hDivCount
         const frqRange = channel.analyzer.context.sampleRate / 2.0
-        const colDFrq = frqRange / channel.fft.grid.hDivCount
+        const colDFrq = frqRange / hDivCount
 
         var x = 0
-        for (var col = 0; col < channel.fft.grid.hDivCount; col++) {
+        for (var col = 0; col < hDivCount; col++) {
             const frq = col * colDFrq
             const f = frequency(frq)
             const t = f.value + f.unit.toLowerCase()
@@ -40,7 +44,8 @@ class FFTAxesRenderer {
         }
 
         var yDb0 = channel.fftView.dbOffset(0)
-        const rowDDb = channel.fft.grid.dbPerDiv
+        const rowDDb = sd ? channel.fft.grid.dbPerDivSD
+            : channel.fft.grid.dbPerDiv
 
         x = channel.fft.grid.left
         y = yDb0
