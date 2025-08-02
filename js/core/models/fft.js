@@ -49,6 +49,7 @@ class FFT {
     hasSameScaleV(fft) {
         return this.vScale == fft.vScale
             && this.vScaleFactor == fft.vScaleFactor
+            && this.position == fft.position
     }
 
     toScaleHSignature() {

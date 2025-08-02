@@ -46,6 +46,10 @@ const Math_Ops = {
 const Unit_Frequency_Hz = 'Hz'
 const Unit_Frequency_Khz = 'KHz'
 const Unit_Frequency_Mhz = 'MHz'
+const Unit_Kilo = 'K'
+const Unit_Mega = 'M'
+const Unit_Kilobytes = 'Kb'
+const Unit_Megabytes = 'Mb'
 
 // view layouts
 const Half_Bottom = 'half bottom'

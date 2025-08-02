@@ -7,10 +7,37 @@
 // converters functions
 
 function frequency(v) {
-    const k = 1000
-    if (v < k) return { value: v, unit: Unit_Frequency_Hz }
-    if (v < k * k) return { value: v / k, unit: Unit_Frequency_Khz }
-    return { value: v / (k * k), unit: Unit_Frequency_Mhz }
+    return toUnit(v,
+        Unit_Frequency_Hz,
+        Unit_Frequency_Khz,
+        Unit_Frequency_Mhz,
+        1000)
+}
+
+function kilo(v) {
+    return toUnit(v,
+        '',
+        Unit_Kilo,
+        Unit_Mega,
+        1000)
+}
+
+function kilobytes(v) {
+    return toUnit(v,
+        '',
+        Unit_Kilobytes,
+        Unit_Megabytes,
+        1024)
+}
+
+function toUnit(v, u, k, m, c) {
+    var t = null
+    if (v < c) t = { value: v, unit: u }
+    if (v < c * c) t = { value: v / c, unit: k }
+    else t = { value: v / (c * c), unit: m }
+    t.text = t.value + t.unit
+    t.text2 = t.value + ' ' + t.unit
+    return t
 }
 
 function parseRgba(s) {
