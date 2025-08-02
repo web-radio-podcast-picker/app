@@ -55,6 +55,10 @@ function vround2(v) {
     return parseFloat(v.toFixed(2));
 }
 
+function vround3(v) {
+    return parseFloat(v.toFixed(3));
+}
+
 function tround(t) {
     return !Number.isFinite(t) ? null : parseFloat(t.toFixed(3));
 }

@@ -40,7 +40,8 @@ window.settings = {
 
     fft: {
         hScale: 1,              // horizontal linear scale (1: full bandwidth)
-        vScale: 20,             // vertical linear scale
+        vScale: 1,              // vertical linear scale
+        vScaleFactor: 16,       // vScale multiplier
         grid: {
             opacity: 0.9,       // grid lines opacity
             hDivCount: 16,      // horizontal divs count
@@ -52,6 +53,8 @@ window.settings = {
             lineWidth: 1,
             dash: [2, 2],
             left: 48,
+            deltaLeft: 56,
+            deltaTop: 7 * 6,
             markers: {
                 length: 7 * 3,
                 xRel: 6,

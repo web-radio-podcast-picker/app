@@ -43,7 +43,9 @@ const Math_Ops = {
 }
 
 // units
-
 const Unit_Frequency_Hz = 'Hz'
 const Unit_Frequency_Khz = 'KHz'
 const Unit_Frequency_Mhz = 'MHz'
+
+// view layouts
+const Half_Bottom = 'half bottom'

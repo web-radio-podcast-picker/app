@@ -223,7 +223,7 @@
             <div id="opts_os_disp" class="gr1 gc2 opts-pane hidden">
                 <span class="gr1 gc1 opt-label">max refresh rate</span>
                 <span class="gr2 gc1 opt-label">screen right border width</span>
-                <span class="gr3 gc1 opt-label">screen bottom border with</span>
+                <span class="gr3 gc1 opt-label">screen bottom border width</span>
                 <span class="gr4 gc1 opt-label">right menu container width</span>
                 <div class="gr1 gc2">
                     <input id="opt_os_mrr" class="opt-value-edit"></input>
@@ -593,7 +593,15 @@
         <!-- FFT -->
 
         <div id="opts_ch_fft" class="channel-menu-pane hidden">
-            <span id="btn_ch_fft_onoff" class="label channel-label on-off-label off">OFF</span>
+            <div class="row-opt">
+                <span id="btn_ch_fft_onoff" class="no-padding-left label channel-label on-off-label off">OFF</span>
+                <span class="opt-label no-padding-left">Hrz Scale</span>
+                <input id="opt_ch_fft_hscale" class="opt-value-edit long-value no-margin-bottom"></input>
+                <span class="unit">✕</span>
+                <span class="opt-label no-padding-left">Vrt Factor</span>
+                <input id="opt_ch_fft_vscale" class="opt-value-edit long-value no-margin-bottom"></input>
+                <span class="unit">✕</span>
+            </div>
         </div>
 
         <!-- OUT -->

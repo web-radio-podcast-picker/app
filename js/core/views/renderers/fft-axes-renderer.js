@@ -8,58 +8,66 @@
 
 class FFTAxesRenderer {
 
-    render(channel, drawContext, props) {
+    render(channel, dc, props) {
 
-        if (!channel.fftView.visible || !channel.fft.displayGrid) return props
+        const fft = channel.fft
+        if (!channel.fftView.visible || !fft.displayGrid) return props
         if (channel.analyzer.context == null) return
 
-        var gridColor = settings.fft.grid.commonColor
-        const t = parseRgba(gridColor)
-        var r = t.r
-        var g = t.g
-        var b = t.b
-        const colr = toRgba(r, g, b, channel.fft.grid.opacity)
+        const pos = ui.channels.getFFTPos(channel)
+        const posX = pos.x * fft.grid.deltaLeft
+        const posY = -pos.y * fft.grid.deltaTop
+
+        var t = parseRgba(posY == 0 ?
+            settings.fft.grid.commonColor
+            : fft.color)
+        const colorH = toRgba(t.r, t.g, t.b, fft.grid.opacity)
+        t = parseRgba(posX == 0 ?
+            settings.fft.grid.commonColor
+            : fft.color)
+        const colorV = toRgba(t.r, t.g, t.b, fft.grid.opacity)
 
         const x0 = 0
         const x1 = props.width - 1
         var y = props.canvasHeight - 1 + settings.ui.fftAxeRelY
 
-        this.drawAxe(channel, drawContext, x0, y, x1, y, colr)
+        this.drawAxe(channel, dc, x0, y + posY, x1, y + posY, colorH)
 
         const sd = ui.isSmallDisplay()
-        const hDivCount = sd ? channel.fft.grid.hDivCountSD
-            : channel.fft.grid.hDivCount
+        const hDivCount = sd ? fft.grid.hDivCountSD
+            : fft.grid.hDivCount
         const colSize = props.width / hDivCount
         const frqRange = channel.analyzer.context.sampleRate / 2.0
+            * fft.hScale
         const colDFrq = frqRange / hDivCount
 
         var x = 0
         for (var col = 0; col < hDivCount; col++) {
             const frq = col * colDFrq
             const f = frequency(frq)
-            const t = f.value + f.unit.toLowerCase()
-            this.drawUnit(channel, drawContext, x, y, gridColor, t)
-            this.drawVBar(channel, drawContext, x, y, colr)
+            const t = vround3(f.value) + f.unit.toLowerCase()
+            this.drawUnit(channel, dc, x, y + posY, colorH, t)
+            this.drawVBar(channel, dc, x, y + posY, colorH)
             x += colSize
         }
 
         var yDb0 = channel.fftView.dbOffset(0)
-        const rowDDb = sd ? channel.fft.grid.dbPerDivSD
-            : channel.fft.grid.dbPerDiv
+        const rowDDb = sd ? fft.grid.dbPerDivSD
+            : fft.grid.dbPerDiv
 
-        x = channel.fft.grid.left
+        x = fft.grid.left
         y = yDb0
         const y1 = y + props.height - 1
 
-        this.drawAxe(channel, drawContext, x, y, x, y1, colr)
+        this.drawAxe(channel, dc, x + posX, y, x + posX, y1, colorV)
 
         var u = 0
         while (y < props.canvasHeight) {
             y = channel.fftView.dbOffset(u)
             u = vround2(u)
             const unit = u + 'db'
-            this.drawHBar(channel, drawContext, x, y, colr)
-            this.drawUnit(channel, drawContext, x, y, gridColor, unit)
+            this.drawHBar(channel, dc, x + posX, y, colorV)
+            this.drawUnit(channel, dc, x + posX, y, colorV, unit)
             u -= rowDDb
         }
 

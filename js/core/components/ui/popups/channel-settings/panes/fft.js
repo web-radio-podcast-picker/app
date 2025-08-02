@@ -12,10 +12,32 @@ class ChannelSettingsPaneFFT {
 
     init(channelSettings) {
         this.channelSettings = channelSettings
+        const fft = ui.getCurrentChannelPath() + 'fft.'
 
-        ui.toggles.initToggle('btn_ch_fft_onoff',
-            () => oscilloscope.refreshView(),
-            ui.getCurrentChannelPath('fftView.visible')
-        )
+        ui
+            .toggles.initToggle('btn_ch_fft_onoff',
+                () => oscilloscope.refreshView(),
+                ui.getCurrentChannelPath('fftView.visible')
+            )
+            .bindings.bind(ui.bindings.binding(
+                'opt_ch_fft_hscale',
+                fft + 'hScale',
+                {
+                    input: {
+                        delta: 0.1,
+                        min: 0,
+                        max: null
+                    }
+                }))
+            .bindings.bind(ui.bindings.binding(
+                'opt_ch_fft_vscale',
+                fft + 'vScale',
+                {
+                    input: {
+                        delta: 0.1,
+                        min: 1,
+                        max: 2
+                    }
+                }))
     }
 }

@@ -162,13 +162,59 @@ class Channels {
         $('#s_channel_label_' + id).remove()
     }
 
-    // how much fft displayed with same scales
-    sameScaleFFTCount(fft) {
-        var tot = 0
+    getChannelIndex(channel) {
+        var r = 0
+        var idx = 0
         oscilloscope.channels.forEach(c => {
-            tot += c.fftView.visible && c.fft.displayGrid
-                && fft.hasSameScale(c.fft) ? 1 : 0
+            if (c == channel)
+                r = idx
+            idx++
         })
-        return tot
+        return r
+    }
+
+    getFFTIndex(fft) {
+        var r = 0
+        var idx = 0
+        oscilloscope.channels.forEach(c => {
+            if (c.fft == fft)
+                r = idx
+            idx++
+        })
+        return r
+    }
+
+    getFFTViewGroups() {
+        const grps = {}
+        oscilloscope.channels.forEach(c => {
+            if (c.fftView.visible && c.fft.displayGrid) {
+                const k = c.fft.toScaleSignature()
+                if (grps[k] === undefined)
+                    grps[k] = []
+                grps[k].push(c)
+            }
+        })
+        return grps
+    }
+
+    // fft relative pos x,y
+    getFFTPos(channel) {
+        const fft = channel.fft
+        var x = 0
+        var y = 0
+        var cIndex = this.getChannelIndex(channel)
+        var grps = this.getFFTViewGroups()
+
+        for (var k in grps) {
+            const g = grps[k]
+            if (!g.includes(channel) && g.length > 0) {
+                const c = g[0]
+                if (cIndex > this.getChannelIndex(c)) {
+                    y += !fft.hasSameScaleH(c.fft) ? 1 : 0
+                    x += !fft.hasSameScaleV(c.fft) ? 1 : 0
+                }
+            }
+        }
+        return { x: x, y: y }
     }
 }

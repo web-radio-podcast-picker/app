@@ -10,11 +10,11 @@ class FFTView {
 
     canvas = null;           // canvas for visualization
     pause = false;           // pause flag for visualization
-    visible = false;          // visible flag for visualization
+    visible = false;         // visible flag for visualization
     hidden = false;          // hidden for vizualisation
     channel = null;          // channel
-    renderers = []          // renderers . on sigview, before signal draw
-    pointRenderers = []     // point renderers. on signal point, before signal point
+    renderers = []           // renderers . on sigview, before signal draw
+    pointRenderers = []      // point renderers. on signal point, before signal point
     fftAxesRenderer = new FFTAxesRenderer()
 
     init(canvas, channel) {
@@ -25,21 +25,9 @@ class FFTView {
         })
     }
 
-    /*
-    offsetToVolt(offset) {
-        const canvasHeight = this.canvas.height;
-        const signalRange = settings.audioInput.vScale;
-        const displayRange = this.getDisplayRange()
-
-        offset -= this.channel.yOffset
-        var height = offset - canvasHeight / 2.0
-        height /= this.channel.yScale
-        var percent = height * 2.0 / canvasHeight
-        percent /= signalRange / displayRange
-        const value = -percent * signalRange
-        return value
+    getVScale() {
+        return this.channel.fft.vScale * this.channel.fft.vScaleFactor
     }
-    */
 
     dbOffset(value) {
         const canvasHeight = this.canvas.height
@@ -57,7 +45,7 @@ class FFTView {
         var percent = reldb * displayRange
 
         // vertical scale factor (or logarythmic scale?)
-        const vScale = this.channel.fft.vScale
+        const vScale = this.getVScale()
 
         // height relative to view height        
         var height = canvasHeight * percent
@@ -74,7 +62,7 @@ class FFTView {
     offsetToDb(offset) {
         const canvasHeight = this.canvas.height
         const displayRange = this.getDisplayRange()
-        const vScale = this.channel.fft.vScale
+        const vScale = this.getVScale()
         const minDb = this.channel.fft.minDb
         const maxDb = this.channel.fft.maxDb
         var dbRange = Math.abs(maxDb - minDb)
@@ -98,7 +86,7 @@ class FFTView {
         if (sizeUpdated)
             ui.setupUIComponents()
 
-        if (!this.visible) return;
+        if (!this.visible) return
 
         const canvasHeight = this.canvas.height
         const canvasWidth = this.canvas.width
@@ -108,7 +96,7 @@ class FFTView {
 
             var x = -1
             var y = -1
-            const drawContext = this.canvas.getContext('2d')
+            const dc = this.canvas.getContext('2d')
 
             // full buffer view : scale 1ms/div
             const barWidth = canvasWidth / dataArray.length / this.channel.fft.hScale
@@ -120,11 +108,11 @@ class FFTView {
                 canvasHeight: canvasHeight,
                 dbOffsetZero: this.dbOffset(0),
                 width: canvasWidth,
-                height: canvasHeight
+                height: canvasHeight / 2.0
             }
 
             this.renderers.forEach(r => {
-                r(this.channel, drawContext, rprops)
+                r(this.channel, dc, rprops)
             })
 
             for (var i = baseI; i < dataArray.length; i += 1) {
@@ -141,13 +129,13 @@ class FFTView {
 
                 const m = this.channel.measures
 
-                drawContext.beginPath()
-                drawContext.moveTo(x, y)
-                drawContext.lineTo(nx, ny)
-                drawContext.setLineDash([])
+                dc.beginPath()
+                dc.moveTo(x, y)
+                dc.lineTo(nx, ny)
+                dc.setLineDash([])
                 var col = this.channel.fft.color
-                drawContext.strokeStyle = col
-                drawContext.lineWidth = this.channel.fft.lineWidth
+                dc.strokeStyle = col
+                dc.lineWidth = this.channel.fft.lineWidth
                 const props = {
                     col: col,
                     op: 1,
@@ -156,13 +144,13 @@ class FFTView {
                 }
 
                 this.pointRenderers.forEach(o => {
-                    var r = o.render(this.channel, drawContext, props)
+                    var r = o.render(this.channel, dc, props)
                     if (r.col !== undefined)
                         props.col = r.col
                 })
 
-                drawContext.lineWidth = this.channel.fft.lineWidth
-                drawContext.stroke()
+                dc.lineWidth = this.channel.fft.lineWidth
+                dc.stroke()
 
                 x = nx
                 y = ny

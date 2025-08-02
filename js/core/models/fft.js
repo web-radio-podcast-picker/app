@@ -10,6 +10,7 @@ class FFT {
 
     channel
     vScale          /* vertical linear scale */
+    vScaleFactor    /* vertical linear scale factor */
     hScale          /* horizontal linear scale (1: full bandwidth)*/
     minDb           /* min db reference */
     maxDb           /* max db reference */
@@ -20,13 +21,19 @@ class FFT {
     grid            /* grid properties */
     isDisplayed     /* true if displayed */
 
+    constructor() {
+        this.vScale = settings.fft.vScale
+        this.hScale = settings.fft.hScale
+    }
+
     init(channel) {
         this.channel = channel
         this.displayGrid = true
-        this.position = 'half bottom'
+        this.position = Half_Bottom
         this.minDb = channel.analyzer.minDecibels
         this.maxDb = channel.analyzer.maxDecibels
         this.vScale = settings.fft.vScale
+        this.vScaleFactor = settings.fft.vScaleFactor
         this.hScale = settings.fft.hScale
         this.color = channel.color
         this.lineWidth = settings.fft.stroke.lineWidth
@@ -35,8 +42,17 @@ class FFT {
         this.isDisplayed = false
     }
 
-    hasSameScale(fft) {
+    hasSameScaleH(fft) {
+        return this.hScale == fft.hScale
+    }
+
+    hasSameScaleV(fft) {
         return this.vScale == fft.vScale
-            && this.hScale == fft.hScale
+            && this.vScaleFactor == fft.vScaleFactor
+    }
+
+    toScaleSignature() {
+        const sep = '-'
+        return this.hScale + sep + this.vScale + sep + this.vScaleFactor
     }
 }
