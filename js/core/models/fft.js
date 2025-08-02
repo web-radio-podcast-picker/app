@@ -34,4 +34,9 @@ class FFT {
         this.grid.color = channel.color
         this.isDisplayed = false
     }
+
+    hasSameScale(fft) {
+        return this.vScale == fft.vScale
+            && this.hScale == fft.hScale
+    }
 }

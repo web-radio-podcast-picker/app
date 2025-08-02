@@ -6,9 +6,6 @@
 
 // oscilloscope manager
 
-// Start off by initializing a new context.
-windowAudioContext = new (window.AudioContext || window.webkitAudioContext)();
-
 oscilloscope = {
 
     channels: [],             // array of channels

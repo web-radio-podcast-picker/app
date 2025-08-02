@@ -10,15 +10,15 @@ class Channels {
     popupSettings = new PopupChannelSettings()
 
     setPauseButton(id, pause) {
-        const $e = $('#btn_pause_' + id);
+        const $e = $('#btn_pause_' + id)
         this.setPauseButtonLabel($e, pause)
     }
 
     setPauseButtonLabel($e, pause) {
         if (!pause) {
-            $e.text('||');
+            $e.text('||')
         } else {
-            $e.text('▶');
+            $e.text('▶')
         }
     }
 
@@ -28,35 +28,35 @@ class Channels {
         const id = channel.channelId
 
         // id pause buttons
-        const $e = $('#btn_pause_' + id);
+        const $e = $('#btn_pause_' + id)
         const fn = () => {
             this.setPauseButton(id, channel.pause)
         }
-        fn(); // Set initial button text
+        fn() // Set initial button text
         $e.on('click', () => {
             channel.setPause(!channel.pause)
             this.updatePause(channel)
-            fn();
-        });
+            fn()
+        })
 
         // close
         $('#btn_closech_' + id).on('click', () => {
-            app.deleteChannel(id);
-        });
+            app.deleteChannel(id)
+        })
 
         // settings
         $('#btn_chsett_' + id).on('click', () => {
-            this.popupSettings.toggleChannelSettings(channel);
-        });
+            this.popupSettings.toggleChannelSettings(channel)
+        })
 
         // visible
-        const $vb = $('#btn_viewch_' + id);
+        const $vb = $('#btn_viewch_' + id)
         $vb.on('click', () => {
-            $vb.toggleClass('line-through');
-            sigView.visible = !sigView.visible;
+            $vb.toggleClass('line-through')
+            sigView.visible = !sigView.visible
             this.popupSettings.paneDisp.updateVisible()
-            app.requestAnimationFrame();
-        });
+            app.requestAnimationFrame()
+        })
 
         // out
         $('#btn_chout_' + id).on('click', () => {
@@ -78,7 +78,7 @@ class Channels {
                 channel.setPauseOut(pause)
                 this.updatePause(channel)
             }
-        });
+        })
     }
 
     updatePause(channel) {
@@ -88,12 +88,12 @@ class Channels {
     }
 
     updateVisible(channel) {
-        const $vb = $('#btn_viewch_' + channel.channelId);
+        const $vb = $('#btn_viewch_' + channel.channelId)
         if (channel.view.visible)
-            $vb.removeClass('line-through');
+            $vb.removeClass('line-through')
         else
-            $vb.addClass('line-through');
-        app.requestAnimationFrame();
+            $vb.addClass('line-through')
+        app.requestAnimationFrame()
     }
 
     toggleVisible(channel) {
@@ -102,63 +102,73 @@ class Channels {
     }
 
     setupChannelLabel($channelLabel, id, channel) {
-        $channelLabel.text('CH' + id);
-        $channelLabel.css('background-color', channel.color);
+        $channelLabel.text('CH' + id)
+        $channelLabel.css('background-color', channel.color)
     }
 
     addControls(channel) {
-        const $model = $('#channel_pane_').clone();
-        $model.removeClass('hidden');
-        const id = channel.channelId;
-        $model.attr('id', $model.attr('id') + id);
+        const $model = $('#channel_pane_').clone()
+        $model.removeClass('hidden')
+        const id = channel.channelId
+        $model.attr('id', $model.attr('id') + id)
 
-        const colors = settings.oscilloscope.channels.colors;
-        const colLength = colors.length;
-        const colIndex = (id - 1) % colLength;
-        const col = colors[colIndex];
-        $model.css('color', col);
-        channel.color = col;
+        const colors = settings.oscilloscope.channels.colors
+        const colLength = colors.length
+        const colIndex = (id - 1) % colLength
+        const col = colors[colIndex]
+        $model.css('color', col)
+        channel.color = col
 
-        const $channelLabel = $model.find('#channel_label_');
-        $channelLabel.attr('id', $channelLabel.attr('id') + id);
-        this.setupChannelLabel($channelLabel, id, channel);
+        const $channelLabel = $model.find('#channel_label_')
+        $channelLabel.attr('id', $channelLabel.attr('id') + id)
+        this.setupChannelLabel($channelLabel, id, channel)
 
-        const $elems = $model.find('*');
-        const $unit = $model.find('.unit');
-        $unit.css('color', col);
+        const $elems = $model.find('*')
+        const $unit = $model.find('.unit')
+        $unit.css('color', col)
 
         $.each($elems, (i, e) => {
-            var $e = $(e);
-            var eid = $e.attr('id');
+            var $e = $(e)
+            var eid = $e.attr('id')
             if (eid !== undefined && eid.endsWith('_')) {
-                $e.attr('id', eid + id);
+                $e.attr('id', eid + id)
             }
             if ($e.hasClass('channel-label')) {
-                $e.css('background-color', col);
+                $e.css('background-color', col)
             }
-        });
+        })
 
-        $('#channels_infos_deck').append($model);
-        const $channelShortcut = $channelLabel.clone();
-        $channelShortcut.attr('id', 's_' + $channelLabel.attr('id'));
-        $channelShortcut.css('grid-column', id);
+        $('#channels_infos_deck').append($model)
+        const $channelShortcut = $channelLabel.clone()
+        $channelShortcut.attr('id', 's_' + $channelLabel.attr('id'))
+        $channelShortcut.css('grid-column', id)
         const toggleControls = () => {
-            $('#channel_pane_' + id).toggleClass('hidden');
+            $('#channel_pane_' + id).toggleClass('hidden')
         }
         $channelShortcut.on('click', () => {
-            toggleControls();
-        });
+            toggleControls()
+        })
         $channelLabel.on('click', () => {
             this.popupSettings.toggleChannelSettings(channel)
-        });
+        })
 
-        $('#channels_shortcuts_deck').append($channelShortcut);
+        $('#channels_shortcuts_deck').append($channelShortcut)
     }
 
     removeControls(channel) {
         // remove the controls for a channel
-        const id = channel.channelId;
-        $('#channel_pane_' + id).remove();
-        $('#s_channel_label_' + id).remove();
+        const id = channel.channelId
+        $('#channel_pane_' + id).remove()
+        $('#s_channel_label_' + id).remove()
+    }
+
+    // how much fft displayed with same scales
+    sameScaleFFTCount(fft) {
+        var tot = 0
+        oscilloscope.channels.forEach(c => {
+            tot += c.fftView.visible && c.fft.displayGrid
+                && fft.hasSameScale(c.fft) ? 1 : 0
+        })
+        return tot
     }
 }

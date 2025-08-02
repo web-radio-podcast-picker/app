@@ -6,6 +6,13 @@
 
 // converters functions
 
+function frequency(v) {
+    const k = 1000
+    if (v < k) return { value: v, unit: Unit_Frequency_Hz }
+    if (v < k * k) return { value: v / k, unit: Unit_Frequency_Khz }
+    return { value: v / (k * k), unit: Unit_Frequency_Mhz }
+}
+
 function parseRgba(s) {
     var t = s
         .replace('rgba(', '')
@@ -42,6 +49,10 @@ function vround7(v) {
 
 function vround(v) {
     return parseFloat(v.toFixed(5));
+}
+
+function vround2(v) {
+    return parseFloat(v.toFixed(2));
 }
 
 function tround(t) {

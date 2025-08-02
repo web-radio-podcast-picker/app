@@ -42,7 +42,7 @@ class FFTView {
     */
 
     dbOffset(value) {
-        const canvasHeight = this.canvas.height;
+        const canvasHeight = this.canvas.height
         const displayRange = this.getDisplayRange()
 
         // min  .. max
@@ -60,12 +60,31 @@ class FFTView {
         const vScale = this.channel.fft.vScale
 
         // height relative to view height        
-        var height = canvasHeight * percent;
+        var height = canvasHeight * percent
         // height relative to the half bottom part of the view
-        var offset = canvasHeight / 2 - height / vScale;
+        var offset = canvasHeight / 2 - height / vScale
+        // 0: canvasHeight / 2 + (mindb / vscale) + canvasHeight / 4
+        // minDb (-100): canvasHeight /2 + canvasHeight / 4
+        // maxDb (-30) : canvasHeight /2 - canvasHeight + canvasHeight / 4
         offset += canvasHeight / 4
 
         return offset
+    }
+
+    offsetToDb(offset) {
+        const canvasHeight = this.canvas.height
+        const displayRange = this.getDisplayRange()
+        const vScale = this.channel.fft.vScale
+        const minDb = this.channel.fft.minDb
+        const maxDb = this.channel.fft.maxDb
+        var dbRange = Math.abs(maxDb - minDb)
+
+        offset -= canvasHeight / 4
+        const height = -(offset - canvasHeight / 2) * vScale
+        const percent = height / canvasHeight
+        const reldb = percent / displayRange
+        const value = reldb * dbRange + minDb
+        return value
     }
 
     getDisplayRange() {
@@ -81,9 +100,9 @@ class FFTView {
 
         if (!this.visible) return;
 
-        const canvasHeight = this.canvas.height;
-        const canvasWidth = this.canvas.width;
-        const dataArray = this.channel.measures.fftDataArray;
+        const canvasHeight = this.canvas.height
+        const canvasWidth = this.canvas.width
+        const dataArray = this.channel.measures.fftDataArray
 
         if (dataArray != null) {
 
@@ -98,7 +117,10 @@ class FFTView {
 
             const rprops = {
                 canvasWidth: canvasWidth,
-                canvasHeight: canvasHeight
+                canvasHeight: canvasHeight,
+                dbOffsetZero: this.dbOffset(0),
+                width: canvasWidth,
+                height: canvasHeight
             }
 
             this.renderers.forEach(r => {
@@ -145,7 +167,7 @@ class FFTView {
                 x = nx
                 y = ny
             }
-            this.channel.isDisplayed = true;
+            this.channel.fft.isDisplayed = true;
         }
     }
 

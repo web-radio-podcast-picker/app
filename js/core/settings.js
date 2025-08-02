@@ -42,16 +42,19 @@ window.settings = {
         hScale: 1,              // horizontal linear scale (1: full bandwidth)
         vScale: 20,             // vertical linear scale
         grid: {
-            opacity: 0.7,       // grid lines opacity
-            hDivCount: 10,
-            vDivCount: 10,
-            color: null,        // initialized from channel color
+            opacity: 0.9,       // grid lines opacity
+            hDivCount: 16,
+            dbPerDiv: 25,
+            color: null,            // initialized from channel color
+            commonColor: 'rgba(160,160,170,1)',     // color if several fft with same scale
             lineWidth: 1,
             dash: [2, 2],
+            left: 48,
             markers: {
-                Length: 14,
-                xRel: 0,
-                yRel: 14
+                length: 7 * 3,
+                xRel: 6,
+                yRel: 14,
+                dash: [],
             }
         },
         stroke: {

@@ -9,49 +9,93 @@
 class FFTAxesRenderer {
 
     render(channel, drawContext, props) {
-        if (channel.fftView.visible) {
-            const t = parseRgba(channel.fft.grid.color)
-            var r = t.r
-            var g = t.g
-            var b = t.b
-            const colr = toRgba(r, g, b, channel.fft.grid.opacity)
 
-            const x0 = 0
-            const x1 = props.canvasWidth - 1
-            const y = props.canvasHeight - 1 + settings.ui.fftAxeRelY
+        if (!channel.fftView.visible || !channel.fft.displayGrid) return props
 
-            drawContext.beginPath()
-            drawContext.strokeStyle = colr
-            drawContext.setLineDash(channel.fft.grid.dash)
-            drawContext.lineWidth = channel.fft.grid.lineWidth
-            drawContext.moveTo(x0, y)
-            drawContext.lineTo(x1, y)
-            drawContext.stroke()
+        var gridColor = settings.fft.grid.commonColor
+        const t = parseRgba(gridColor)
+        var r = t.r
+        var g = t.g
+        var b = t.b
+        const colr = toRgba(r, g, b, channel.fft.grid.opacity)
 
-            const colSize = props.canvasWidth / channel.fft.grid.hDivCount
-            const frqRange = channel.analyzer.context.sampleRate / 2.0
-            const colDFrq = frqRange / channel.fft.grid.hDivCount
+        const x0 = 0
+        const x1 = props.width - 1
+        var y = props.canvasHeight - 1 + settings.ui.fftAxeRelY
 
-            var x = 0
+        this.drawAxe(channel, drawContext, x0, y, x1, y, colr)
 
-            for (var col = 0; col < channel.fft.grid.hDivCount; col++) {
-                const frq = col * colDFrq
-                this.drawUnit(channel, drawContext, x, y, frq)
-                x += colSize
-            }
+        const colSize = props.width / channel.fft.grid.hDivCount
+        const frqRange = channel.analyzer.context.sampleRate / 2.0
+        const colDFrq = frqRange / channel.fft.grid.hDivCount
 
-            const rowSize = props.canvasHeight / channel.fft.grid.vDivCount
-
-            // for (var row = 0; row < channel.fft.grid.vDivCount; row++) {
-
-            return props
+        var x = 0
+        for (var col = 0; col < channel.fft.grid.hDivCount; col++) {
+            const frq = col * colDFrq
+            const f = frequency(frq)
+            const t = f.value + f.unit.toLowerCase()
+            this.drawUnit(channel, drawContext, x, y, gridColor, t)
+            this.drawVBar(channel, drawContext, x, y, colr)
+            x += colSize
         }
+
+        var yDb0 = channel.fftView.dbOffset(0)
+        const rowDDb = channel.fft.grid.dbPerDiv
+
+        x = channel.fft.grid.left
+        y = yDb0
+        const y1 = y + props.height - 1
+
+        this.drawAxe(channel, drawContext, x, y, x, y1, colr)
+
+        var u = 0
+        while (y < props.canvasHeight) {
+            y = channel.fftView.dbOffset(u)
+            u = vround2(u)
+            const unit = u + 'db'
+            this.drawHBar(channel, drawContext, x, y, colr)
+            this.drawUnit(channel, drawContext, x, y, gridColor, unit)
+            u -= rowDDb
+        }
+
         return props
     }
 
-    drawUnit(channel, dc, x, y, t) {
+    drawAxe(channel, dc, x0, y0, x1, y1, color) {
+        dc.beginPath()
+        dc.strokeStyle = color
+        dc.setLineDash(channel.fft.grid.dash)
+        dc.lineWidth = channel.fft.grid.lineWidth
+        dc.moveTo(x0, y0)
+        dc.lineTo(x1, y1)
+        dc.stroke()
+    }
+
+    drawVBar(channel, dc, x, y, color) {
+        dc.beginPath()
+        dc.strokeStyle = color
+        dc.setLineDash(channel.fft.grid.markers.dash)
+        dc.lineWidth = channel.fft.grid.lineWidth
+        const bh = channel.fft.grid.markers.length / 2.0
+        dc.moveTo(x, y - bh)
+        dc.lineTo(x, y + bh)
+        dc.stroke()
+    }
+
+    drawHBar(channel, dc, x, y, color) {
+        dc.beginPath()
+        dc.strokeStyle = color
+        dc.setLineDash(channel.fft.grid.markers.dash)
+        dc.lineWidth = channel.fft.grid.lineWidth
+        const bh = channel.fft.grid.markers.length / 2.0
+        dc.moveTo(x - bh, y)
+        dc.lineTo(x + bh, y)
+        dc.stroke()
+    }
+
+    drawUnit(channel, dc, x, y, color, t) {
         dc.font = settings.oscilloscope.grid.units.font;
-        dc.fillStyle = channel.fft.grid.color;
+        dc.fillStyle = color;
         const xrel = channel.fft.grid.markers.xRel;
         const yrel = channel.fft.grid.markers.yRel;
         dc.fillText(t, x + xrel, y + yrel);

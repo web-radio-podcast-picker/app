@@ -872,6 +872,7 @@ div.channel-submenu-pane span.on-off-label {
     border: none;
     font-size: 1em;
     padding: 0px;
+    line-height: 1em;
 }
 
 .btn-round {
