@@ -51,11 +51,6 @@ class FFT {
             && this.vScaleFactor == fft.vScaleFactor
     }
 
-    toScaleSignature() {
-        const sep = '-'
-        return this.hScale + sep + this.vScale + sep + this.vScaleFactor
-    }
-
     toScaleHSignature() {
         const sep = '-'
         return this.hScale + sep
