@@ -184,17 +184,31 @@ class Channels {
         return r
     }
 
-    getFFTViewGroups() {
-        const grps = {}
+    getFFTViewGroups(channel) {
+        const grps = { x: {}, y: {} }
+        var grpXIdx = 0
+        var grpYIdx = 0
+        var chGrpXIdx = 0
+        var chGrpYIdx = 0
         oscilloscope.channels.forEach(c => {
             if (c.fftView.visible && c.fft.displayGrid) {
-                const k = c.fft.toScaleSignature()
-                if (grps[k] === undefined)
-                    grps[k] = []
-                grps[k].push(c)
+                const kx = c.fft.toScaleHSignature()
+                if (grps.x[kx] === undefined)
+                    grps.x[kx] = { grpIdx: grpXIdx++, t: [] }
+                if (c == channel) chGrpXIdx = grps.x[kx].grpIdx
+                grps.x[kx].t.push(c)
+                const ky = c.fft.toScaleVSignature()
+                if (grps.y[ky] === undefined)
+                    grps.y[ky] = { grpIdx: grpYIdx++, t: [] }
+                if (c == channel) chGrpYIdx = grps.y[ky].grpIdx
+                grps.y[ky].t.push(c)
             }
         })
-        return grps
+        return {
+            grps: grps,
+            chGrpXIdx: chGrpXIdx,
+            chGrpYIdx: chGrpYIdx
+        }
     }
 
     // fft relative pos x,y
@@ -202,17 +216,27 @@ class Channels {
         const fft = channel.fft
         var x = 0
         var y = 0
-        var cIndex = this.getChannelIndex(channel)
-        var grps = this.getFFTViewGroups()
+        const ogrps = this.getFFTViewGroups(channel)
+        var grps = ogrps.grps
+        var chGrpXIdx = ogrps.chGrpXIdx
+        var chGrpYIdx = ogrps.chGrpYIdx
 
-        for (var k in grps) {
-            const g = grps[k]
-            if (!g.includes(channel) && g.length > 0) {
+        for (var k in grps.x) {
+            const o = grps.x[k]
+            const g = o.t
+            const grpIdx = o.grpIdx
+            if (chGrpXIdx > grpIdx) {
                 const c = g[0]
-                if (cIndex > this.getChannelIndex(c)) {
-                    y += !fft.hasSameScaleH(c.fft) ? 1 : 0
-                    x += !fft.hasSameScaleV(c.fft) ? 1 : 0
-                }
+                y += !fft.hasSameScaleH(c.fft) ? 1 : 0
+            }
+        }
+        for (var k in grps.y) {
+            const o = grps.y[k]
+            const g = o.t
+            const grpIdx = o.grpIdx
+            if (chGrpYIdx > grpIdx) {
+                const c = g[0]
+                x += !fft.hasSameScaleV(c.fft) ? 1 : 0
             }
         }
         return { x: x, y: y }

@@ -55,4 +55,14 @@ class FFT {
         const sep = '-'
         return this.hScale + sep + this.vScale + sep + this.vScaleFactor
     }
+
+    toScaleHSignature() {
+        const sep = '-'
+        return this.hScale + sep
+    }
+
+    toScaleVSignature() {
+        const sep = '-'
+        return this.vScale + sep + this.vScaleFactor
+    }
 }
