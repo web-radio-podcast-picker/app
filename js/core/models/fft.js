@@ -44,21 +44,31 @@ class FFT {
 
     hasSameScaleH(fft) {
         return this.hScale == fft.hScale
+            && this.grid.hDivCount == fft.grid.hDivCount
+            && this.grid.hDivCountSD == fft.grid.hDivCountSD
     }
 
     hasSameScaleV(fft) {
         return this.vScale == fft.vScale
             && this.vScaleFactor == fft.vScaleFactor
             && this.position == fft.position
+            && this.grid.dbPerDiv == fft.grid.dbPerDiv
+            && this.grid.dbPerDivSD == fft.grid.dbPerDivSD
     }
 
     toScaleHSignature() {
         const sep = '-'
-        return this.hScale + sep
+        return this.hScale
+            + sep + this.grid.hDivCount
+            + sep + this.grid.hDivCountSD
     }
 
     toScaleVSignature() {
         const sep = '-'
-        return this.vScale + sep + this.vScaleFactor
+        return this.vScale
+            + sep + this.vScaleFactor
+            + sep + this.position
+            + sep + this.grid.dbPerDiv
+            + sep + this.grid.dbPerDivSD
     }
 }

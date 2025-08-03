@@ -13,6 +13,7 @@ class ChannelSettingsPaneFFT {
     init(channelSettings) {
         this.channelSettings = channelSettings
         const fft = ui.getCurrentChannelPath() + 'fft.'
+        const sd = ui.isSmallDisplay() ? 'SD' : ''
 
         ui
             .toggles.initToggle('btn_ch_fft_onoff',
@@ -39,5 +40,11 @@ class ChannelSettingsPaneFFT {
                         max: 2
                     }
                 }))
+            .bindings.bind(ui.bindings.binding(
+                'opt_ch_fft_hdiv',
+                fft + 'grid.hDivCount' + sd))
+            .bindings.bind(ui.bindings.binding(
+                'opt_ch_fft_vdiv',
+                fft + 'grid.dbPerDiv' + sd))
     }
 }
