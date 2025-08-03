@@ -50,6 +50,9 @@ const Unit_Kilo = 'K'
 const Unit_Mega = 'M'
 const Unit_Kilobytes = 'Kb'
 const Unit_Megabytes = 'Mb'
+const Unit_Volt_Milli = 'mV'
+const Unit_Volt = 'V'
+const Unit_Volt_Kilo = 'kV'
 
 // view layouts
 const Half_Bottom = 'half bottom'

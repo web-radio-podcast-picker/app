@@ -22,7 +22,7 @@ function kilo(v) {
         1000)
 }
 
-function kilobytes(v) {
+function kilobyte(v) {
     return toUnit(v,
         '',
         Unit_Kilobytes,
@@ -30,12 +30,21 @@ function kilobytes(v) {
         1024)
 }
 
+function volt(v) {
+    return toUnit(v,
+        Unit_Volt_Milli,
+        Unit_Volt,
+        Unit_Megabytes,
+        1 / 1000)
+}
+
 function toUnit(v, u, k, m, c) {
     var t = null
+    const cc = c < 1 ? 1 : c
     if (v < c) t = { value: v, unit: u }
     else {
-        if (v < c * c) t = { value: v / c, unit: k }
-        else t = { value: v / (c * c), unit: m }
+        if (v < cc) t = { value: v / c, unit: k }
+        else t = { value: v / cc, unit: m }
     }
     t.text = t.value + t.unit
     t.text2 = t.value + ' ' + t.unit
