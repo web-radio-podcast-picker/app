@@ -34,17 +34,22 @@ function volt(v) {
     return toUnit(v,
         Unit_Volt_Milli,
         Unit_Volt,
-        Unit_Megabytes,
-        1 / 1000)
+        Unit_Volt_Kilo,
+        1 / 1000,
+        true
+    )
 }
 
-function toUnit(v, u, k, m, c) {
+function toUnit(v, u, k, m, c, milli) {
+    if (v == null || v == undefined || isNaN(v))
+        return { value: Number.NaN, unit: '', text: 'NaN', text2: 'NaN' }
+    if (milli === undefined) milli = false
     var t = null
-    const cc = c < 1 ? 1 : c
-    if (v < c) t = { value: v, unit: u }
+    const cc = milli ? 1 / c : c * c
+    if (v < c) t = { value: v * (milli ? 1 / c : 1), unit: u }
     else {
-        if (v < cc) t = { value: v / c, unit: k }
-        else t = { value: v / cc, unit: m }
+        if (v < cc) t = { value: v / (milli ? 1 : c), unit: k }
+        else t = { value: v / (milli ? 1 / c : cc), unit: m }
     }
     t.text = t.value + t.unit
     t.text2 = t.value + ' ' + t.unit

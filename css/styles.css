@@ -108,6 +108,7 @@ div#channels_infos_deck > div > span.value {
 
 .unit {
     color: yellow;
+    width: 2em;
 }
 
 div.channel-pane > span.unit {

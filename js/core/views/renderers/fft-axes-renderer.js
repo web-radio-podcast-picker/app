@@ -12,7 +12,7 @@ class FFTAxesRenderer {
 
         const fft = channel.fft
         if (!channel.fftView.visible || !fft.displayGrid) return props
-        if (channel.analyzer.context == null) return
+        if (channel.analyzer == null || channel.analyzer.context == null) return
 
         const pos = ui.channels.getFFTPos(channel)
         const posX = pos.x * fft.grid.deltaLeft

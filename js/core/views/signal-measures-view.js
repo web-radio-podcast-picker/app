@@ -7,38 +7,46 @@
 // signal measures view
 class SignalMeasuresView {
 
-    channel = null;     // channel
+    channel = null     // channel
 
     init(channel, signalMeasures) {
-        this.signalMeasures = signalMeasures;
-        this.channel = channel;
+        this.signalMeasures = signalMeasures
+        this.channel = channel
     }
 
     run() {
         if (!this.channel.view.visible) return
 
-        const c = this.channel.channelId;
+        const c = this.channel.channelId
 
         // channel gauges
 
-        $('#csid_' + c).text(this.channel.sourceId);
+        $('#csid_' + c).text(this.channel.sourceId)
 
-        $('#iv_' + c).text(voltToText(this.signalMeasures.volts));
-        $('#vmin_' + c).text(voltToText(this.signalMeasures.vMin));
-        $('#vmax_' + c).text(voltToText(this.signalMeasures.vMax));
+        const iv = volt(this.signalMeasures.volts)
+        $('#iv_' + c).text(voltToText(iv.value))
+        $('#iv_u_' + c).text(iv.unit)
 
-        $('#frq_' + c).text(this.signalMeasures.frq);
-        $('#frqpe_' + c).text(tround(this.signalMeasures.frqPe));
-        $('#frqmin_' + c).text(this.signalMeasures.frqMin);
-        $('#frqmax_' + c).text(this.signalMeasures.frqMax);
+        const vmin = volt(this.signalMeasures.vMin)
+        $('#vmin_' + c).text(voltToText(vmin.value))
+        $('#vmin_u_' + c).text(vmin.unit)
+
+        const vmax = volt(this.signalMeasures.vMax)
+        $('#vmax_' + c).text(voltToText(vmax.value))
+        $('#vmax_u_' + c).text(vmax.unit)
+
+        $('#frq_' + c).text(this.signalMeasures.frq)
+        $('#frqpe_' + c).text(tround(this.signalMeasures.frqPe))
+        $('#frqmin_' + c).text(this.signalMeasures.frqMin)
+        $('#frqmax_' + c).text(this.signalMeasures.frqMax)
 
         $('#vavg_' + c).text(
             this.signalMeasures.vAvg == null ?
                 '' :
-                vround7(this.signalMeasures.vAvg));
+                vround7(this.signalMeasures.vAvg))
 
-        $('#yscale_' + c).text(this.channel.yScale);
-        $('#xscale_' + c).text(this.channel.xScale);
+        $('#yscale_' + c).text(this.channel.yScale)
+        $('#xscale_' + c).text(this.channel.xScale)
         $('#gain_' + c).text(vround(this.channel.gainValue))
 
         // channel controls (shortcuts)
