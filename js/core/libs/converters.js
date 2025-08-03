@@ -33,8 +33,10 @@ function kilobytes(v) {
 function toUnit(v, u, k, m, c) {
     var t = null
     if (v < c) t = { value: v, unit: u }
-    if (v < c * c) t = { value: v / c, unit: k }
-    else t = { value: v / (c * c), unit: m }
+    else {
+        if (v < c * c) t = { value: v / c, unit: k }
+        else t = { value: v / (c * c), unit: m }
+    }
     t.text = t.value + t.unit
     t.text2 = t.value + ' ' + t.unit
     return t
