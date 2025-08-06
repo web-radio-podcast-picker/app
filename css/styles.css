@@ -92,6 +92,10 @@ div#channels_infos_deck > div > span.value {
     width: 1.5em !important;
 }
 
+.no-width { 
+    width: unset !important;
+}
+
 .long-value {
     width: 5.5em !important;
 }

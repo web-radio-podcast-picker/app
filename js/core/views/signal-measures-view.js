@@ -35,15 +35,23 @@ class SignalMeasuresView {
         $('#vmax_' + c).text(voltToText(vmax.value))
         $('#vmax_u_' + c).text(vmax.unit)
 
-        $('#frq_' + c).text(this.signalMeasures.frq)
         $('#frqpe_' + c).text(tround(this.signalMeasures.frqPe))
-        $('#frqmin_' + c).text(this.signalMeasures.frqMin)
-        $('#frqmax_' + c).text(this.signalMeasures.frqMax)
 
-        $('#vavg_' + c).text(
-            this.signalMeasures.vAvg == null ?
-                '' :
-                vround7(this.signalMeasures.vAvg))
+        const frq = frequency(this.signalMeasures.frq)
+        $('#frq_u_' + c).text(frq.unit)
+        $('#frq_' + c).text(frq.value)
+
+        const frqMin = frequency(this.signalMeasures.frqMin)
+        $('#frqmin_u_' + c).text(frqMin.unit)
+        $('#frqmin_' + c).text(frqMin.value)
+
+        const frqMax = frequency(this.signalMeasures.frqMax)
+        $('#frqmax_u_' + c).text(frqMax.unit)
+        $('#frqmax_' + c).text(frqMax.value)
+
+        const vAvg = volt(this.signalMeasures.vAvg)
+        $('#vavg_' + c).text(vAvg.value)
+        $('#vavg_u_' + c).text(vAvg.unit)
 
         $('#yscale_' + c).text(this.channel.yScale)
         $('#xscale_' + c).text(this.channel.xScale)

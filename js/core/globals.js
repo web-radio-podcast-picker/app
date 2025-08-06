@@ -43,16 +43,21 @@ const Math_Ops = {
 }
 
 // units
-const Unit_Frequency_Hz = 'Hz'
-const Unit_Frequency_Khz = 'KHz'
-const Unit_Frequency_Mhz = 'MHz'
-const Unit_Kilo = 'K'
-const Unit_Mega = 'M'
-const Unit_Kilobytes = 'Kb'
-const Unit_Megabytes = 'Mb'
-const Unit_Volt_Milli = 'mV'
-const Unit_Volt = 'V'
-const Unit_Volt_Kilo = 'kV'
+const Units_Kilos = [null, null, null, '', 'K', 'M', 'G']
+const Units_Bytes = [null, null, null, 'b', 'Kb', 'Mb', 'Gb']
+const Units_Frequencies = [null, null, null, 'Hz', 'kHz', 'mHz', 'gHz']
+const Units_Volts = ['nV', 'µV', 'mV', 'V', 'kV', 'mgV', 'gV']
+const Units_Volts_Steps = [
+    1 / 1000000000,
+    1 / 1000000,
+    1 / 100,
+    1,
+    1000,
+    1000000,
+    1000000000
+]
 
 // view layouts
 const Half_Bottom = 'half bottom'
+const Half_Top = 'half top'
+const Full = 'full'

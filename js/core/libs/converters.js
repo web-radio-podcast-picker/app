@@ -7,53 +7,59 @@
 // converters functions
 
 function frequency(v) {
-    return toUnit(v,
-        Unit_Frequency_Hz,
-        Unit_Frequency_Khz,
-        Unit_Frequency_Mhz,
-        1000)
+    return toUnit(v, Units_Frequencies, null, vround3)
 }
 
 function kilo(v) {
-    return toUnit(v,
-        '',
-        Unit_Kilo,
-        Unit_Mega,
-        1000)
+    return toUnit(v, Units_Kilos, null, vround2)
 }
 
 function kilobyte(v) {
-    return toUnit(v,
-        '',
-        Unit_Kilobytes,
-        Unit_Megabytes,
-        1024)
+    return toUnit(v, Units_Bytes, 1024, vround2)
 }
 
 function volt(v) {
-    return toUnit(v,
-        Unit_Volt_Milli,
-        Unit_Volt,
-        Unit_Volt_Kilo,
-        1 / 1000,
-        true
-    )
+    return toUnit(v, Units_Volts, 1000, null, Units_Volts_Steps)
 }
 
-function toUnit(v, u, k, m, c, milli) {
+function toUnit(v, units, c, frnd, steps) {
     if (v == null || v == undefined || isNaN(v))
         return { value: Number.NaN, unit: '', text: 'NaN', text2: 'NaN' }
-    if (milli === undefined) milli = false
-    var t = null
-    const cc = milli ? 1 / c : c * c
-    if (v < c) t = { value: v * (milli ? 1 / c : 1), unit: u }
-    else {
-        if (v < cc) t = { value: v / (milli ? 1 : c), unit: k }
-        else t = { value: v / (milli ? 1 / c : cc), unit: m }
+    if (c == null || c === undefined) c = 1000.0
+    if (frnd == null || frnd === undefined) frnd = vround
+
+    var cc = 1.0
+    var n = Math.abs(v)
+    //  1 / 1 000 000 000 .. 1 000 000 000
+    // nano, micro, milli, U, kilo, mega, giga
+    var i = 0
+    var f = 1.0 / (c * c * c)      // nano
+    var r = { value: v, unit: units[3] }
+    for (var i = 0; i < units.length && i < 7; i++) {
+        if (steps !== undefined)
+            f = steps[i]
+        const matchF = (f < 1 && n < f) || (f >= 1 && n >= f)
+        if (matchF && units[i] != null) {
+            r = {
+                value: v / f * cc,
+                unit: units[i],
+                c: c,
+                cc: cc,
+                f: f,
+                i: i,
+                v: v
+            }
+            if (f < 1)
+                break
+        }
+        if (steps === undefined) {
+            f *= c
+        }
     }
-    t.text = t.value + t.unit
-    t.text2 = t.value + ' ' + t.unit
-    return t
+    r.value = frnd(r.value)
+    r.text = r.value + r.unit
+    r.text = r.value + ' ' + r.unit
+    return r
 }
 
 function parseRgba(s) {
@@ -131,12 +137,12 @@ function float32ToVolt(f) {
     return f / 1.5;     // -1.5 .. 1.5 ?
 }
 function voltToText(v) {
-    if (v == null || v == undefined || isNaN(v)) return Number.NaN;
+    if (v == null || v == undefined || isNaN(v)) return Number.NaN
     if (v == Number.MAX_VALUE || v == Number.MIN_VALUE)
         return '?'
 
-    const z = vround(v);
-    return z;
+    const z = vround(v)
+    return z
 }
 
 function valueToVolt(channel, value) {
