@@ -47,7 +47,8 @@ function toUnit(v, units, c, frnd, steps) {
                 cc: cc,
                 f: f,
                 i: i,
-                v: v
+                v: v,
+                u: units
             }
             if (f < 1)
                 break
@@ -58,7 +59,7 @@ function toUnit(v, units, c, frnd, steps) {
     }
     r.value = frnd(r.value)
     r.text = r.value + r.unit
-    r.text = r.value + ' ' + r.unit
+    r.text2 = r.value + ' ' + r.unit
     return r
 }
 
