@@ -18,7 +18,9 @@ A javascript application running an audio sound card oscilloscope,anayzer and ge
 ![css3](https://img.shields.io/static/v1?label=&message=CSS3&color=cdf998&style=plastic&logo=css3&logoColor=black)
 ![GitHub Repo stars](https://img.shields.io/github/stars/franck-gaspoz/soundcard-signal-analyzer-generator?color=3076BB&style=plastic&logo=github)
 
-## ⭐ **run it at: [https://oscilloscope.infy.uk/](https://oscilloscope.infy.uk/)** ⭐
+## ⭐ <b>you can run it freely at one of those urls:
+- [https://franck-gaspoz.github.io/soundcard-signal-analyzer-generator/](https://franck-gaspoz.github.io/soundcard-signal-analyzer-generator/)
+- [https://oscilloscope.infy.uk/](https://oscilloscope.infy.uk/)</b>
 
 project status: on going
 
