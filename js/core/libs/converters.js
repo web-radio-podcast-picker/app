@@ -19,14 +19,14 @@ function kilobyte(v) {
 }
 
 function volt(v) {
-    return toUnit(v, Units_Volts, 1000, null, Units_Volts_Steps)
+    return toUnit(v, Units_Volts, 1000, vround4, Units_Volts_Steps)
 }
 
 function toUnit(v, units, c, frnd, steps) {
     if (v == null || v == undefined || isNaN(v))
         return { value: Number.NaN, unit: '', text: 'NaN', text2: 'NaN' }
     if (c == null || c === undefined) c = 1000.0
-    if (frnd == null || frnd === undefined) frnd = vround
+    if (frnd == null || frnd === undefined) frnd = vround4
 
     var cc = 1.0
     var n = Math.abs(v)
@@ -36,8 +36,15 @@ function toUnit(v, units, c, frnd, steps) {
     var f = 1.0 / (c * c * c)      // nano
     var r = { value: v, unit: units[3] }
     for (var i = 0; i < units.length && i < 7; i++) {
-        if (steps !== undefined)
-            f = steps[i]
+        if (steps !== undefined) {
+            const t = f = steps[i]
+            if (t.__proto__.constructor.name == 'Array') {
+                f = t[0]
+                cc = t[1]
+            }
+            else
+                cc = 1.0
+        }
         const matchF = (f < 1 && n < f) || (f >= 1 && n >= f)
         if (matchF && units[i] != null) {
             r = {
@@ -99,6 +106,10 @@ function vround7(v) {
 
 function vround(v) {
     return parseFloat(v.toFixed(5));
+}
+
+function vround4(v) {
+    return parseFloat(v.toFixed(4));
 }
 
 function vround2(v) {

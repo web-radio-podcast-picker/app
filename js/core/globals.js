@@ -50,7 +50,7 @@ const Units_Volts = ['nV', 'µV', 'mV', 'V', 'kV', 'mgV', 'gV']
 const Units_Volts_Steps = [
     1 / 1000000000,
     1 / 1000000,
-    1 / 100,
+    [1 / 10, 100.0],
     1,
     1000,
     1000000,
