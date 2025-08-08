@@ -1,6 +1,15 @@
-# oscilloscope + signal analyser + generator
+<table>
+<tr>
+<td>
+<img src="https://raw.githubusercontent.com/franck-gaspoz/soundcard-signal-analyzer-generator/refs/heads/main/img/icon.ico">
+</td>
+<td>
+<h1>Sound card Oscilloscope<br>Signal Analyzer Generator</h1>
+</td>
+</tr>
+</table>
 
-A javascript application running an audio sound card oscilloscope,anayzer and generator, in the browser (responsive ui, fits desktop, tablet, smartphones), including:
+A javascript application running an audio sound card oscilloscope,analyzer and generator, in the browser (responsive ui, fits desktop / tablet / smartphone), including:
 
 - oscilloscope (trigger, cursor, markers, lissajous, colorisation,...)
 - signal analysis (FFT, frequency, min/max/average, ...)
@@ -11,7 +20,7 @@ A javascript application running an audio sound card oscilloscope,anayzer and ge
 - audio channel input
 - line out
 
-[![GPLv3 license](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://raw.githubusercontent.com/franck-gaspoz/MovieDbAssistant/refs/heads/main/LICENSE)
+[![GPLv2 license](https://img.shields.io/badge/License-GPLv2-blue.svg)](https://raw.githubusercontent.com/franck-gaspoz/soundcard-signal-analyzer-generator/refs/heads/main/LICENSE)
 ![javascript](https://img.shields.io/static/v1?label=&message=javascript&color=cdf998&style=plastic&logo=javascript&logoColor=darkgreen)
 ![json](https://img.shields.io/static/v1?label=&message=JSON&color=cdf998&style=plastic&logo=javascript&logoColor=darkgreen)
 ![html5](https://img.shields.io/static/v1?label=&message=HTML5&color=cdf998&style=plastic&logo=html5) 
@@ -22,7 +31,8 @@ A javascript application running an audio sound card oscilloscope,anayzer and ge
 - [https://franck-gaspoz.github.io/soundcard-signal-analyzer-generator/](https://franck-gaspoz.github.io/soundcard-signal-analyzer-generator/)
 - [https://oscilloscope.infy.uk/](https://oscilloscope.infy.uk/)</b>
 
-project status: on going
+## 👉 project status: on going 🟩
+___
 
 ## screenshots
 
@@ -44,4 +54,5 @@ project status: on going
 ___
 
 [<img alt="Deployed with FTP Deploy Action" src="https://img.shields.io/badge/Deployed With-FTP DEPLOY ACTION-%3CCOLOR%3E?style=for-the-badge&color=0077b6">](https://github.com/SamKirkland/FTP-Deploy-Action)
+
 continuous deployment provided by *GitHub Action* : **FTP Deploy** at [https://github.com/marketplace/actions/ftp-deploy](https://github.com/marketplace/actions/ftp-deploy)
