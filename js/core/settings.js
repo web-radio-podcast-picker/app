@@ -9,7 +9,7 @@
 window.settings = {
 
     app: {
-        version: '0.8',
+        version: '0.9 Beta',
         verDate: '8/9/2025'
     },
 
