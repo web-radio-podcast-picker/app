@@ -53,7 +53,7 @@ ui = {
         setTimeout(() => {
             const pid = 'intro_popup'
             const $popup = $('#' + pid)
-            //$popup.fadeOut(settings.ui.fadeOutDelay)
+            $popup.fadeOut(settings.ui.fadeOutDelay)
         }, settings.ui.introPopupDelay)
     },
 
