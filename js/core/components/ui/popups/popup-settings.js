@@ -8,6 +8,24 @@
 
 class PopupSettings {
 
+    tabGroupIndex = 1
+
+    grp1_tabs = [
+        'btn_os_grid',
+        'btn_os_disp',
+        'btn_os_in',
+        'btn_os_out',
+    ]
+
+    grp2_tabs = [
+        'btn_os_sys',
+        'btn_os_lice',
+        'btn_os_cpyrg',
+        'btn_os_spc1'
+    ]
+
+    tabChanged = false
+
     init() {
 
         const refresh = () => oscilloscope.refreshView()
@@ -16,12 +34,8 @@ class PopupSettings {
 
         ui
             // groups
-            .tabs.initTabs([
-                'btn_os_grid',
-                'btn_os_disp',
-                'btn_os_in',
-                'btn_os_out',
-                'btn_os_sys'])
+            .tabs.initTabs(this.grp1_tabs)
+            .tabs.initTabs(this.grp2_tabs)
 
             // display
             .bindings.bind(ui.bindings.binding(
@@ -111,5 +125,35 @@ class PopupSettings {
                 'opt_os_sys_plat',
                 'settings.sys.platformText',
                 readOnly))
+
+        // toggle tabs groups
+
+        const $tb = $('#btn_os_tgl')
+        $tb.on('click', () => {
+            const $popup = $('#pop_settings')
+            $popup.find('.grp' + this.tabGroupIndex + '')
+                .addClass('hidden')
+            this.tabGroupIndex++
+            if (this.tabGroupIndex > 2)
+                this.tabGroupIndex = 1
+            $popup.find('.grp' + this.tabGroupIndex + '')
+                .removeClass('hidden')
+
+            ui.tabs.setSelectedTabPaneVisibility(
+                false,
+                this.tabGroupIndex == 2 ? this.grp1_tabs
+                    : this.grp2_tabs)
+
+            if (!this.tabChanged) {
+                ui.tabs.selectTab('btn_os_sys', this.grp2_tabs)
+                this.tabChanged = true
+            }
+
+            ui.tabs.setSelectedTabPaneVisibility(
+                true,
+                this.tabGroupIndex == 1 ? this.grp1_tabs
+                    : this.grp2_tabs)
+        })
+
     }
 }

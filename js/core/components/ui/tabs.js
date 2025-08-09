@@ -30,29 +30,54 @@ class Tabs {
         return ui
     }
 
-    selectTab(selectedTabId, tabs) {
-        const panes = [...tabs];
-        const btIdToPaneId = t => {
-            if (t === undefined || t == null) return null
-            return t.replace('btn_', 'opts_');
-        }
-        panes.forEach((v, i) => {
-            panes[i] = btIdToPaneId(panes[i]);
-        });
-        const selectedPane = btIdToPaneId(selectedTabId);
+    tabIdToPaneId(tabId) {
+        if (tabId === undefined || tabId == null) return null
+        return tabId.replace('btn_', 'opts_')
+    }
+
+    setTabPaneVisibility(tabId, vis) {
+        const pId = this.tabIdToPaneId(tabId)
+        const $p = $('#' + pId)
+        if (!vis)
+            $p.addClass('hidden')
+        else
+            $p.removeClass('hidden')
+    }
+
+    setSelectedTabPaneVisibility(vis, tabs) {
+        const tabId = this.selectedTabId(tabs)
+        this.setTabPaneVisibility(tabId, vis)
+    }
+
+    selectedTabId(tabs) {
+        var r = null
         tabs.forEach(e => {
-            const $t = $('#' + e);
-            const pId = btIdToPaneId(e);
-            const $p = $('#' + pId);
-            if ($t.hasClass('selected')) {
-                $t.removeClass('selected');
-                $p.addClass('hidden');
+            const $t = $('#' + e)
+            const pId = this.tabIdToPaneId(e)
+            const $p = $('#' + pId)
+            if ($t.hasClass('selected') &&
+                !$t.hasClass('disabled')) {
+                r = e
+            }
+        })
+        return r
+    }
+
+    selectTab(selectedTabId, tabs) {
+        tabs.forEach(e => {
+            const $t = $('#' + e)
+            const pId = this.tabIdToPaneId(e)
+            const $p = $('#' + pId)
+            if ($t.hasClass('selected') &&
+                !$t.hasClass('disabled')) {
+                $t.removeClass('selected')
+                $p.addClass('hidden')
             }
             if ($t.attr('id') == selectedTabId) {
-                $t.addClass('selected');
-                $p.removeClass('hidden');
+                $t.addClass('selected')
+                $p.removeClass('hidden')
             }
-        });
-        ui.inputWidgets.closeInputWidget();
+        })
+        ui.inputWidgets.closeInputWidget()
     }
 }

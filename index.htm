@@ -36,6 +36,7 @@
     <meta name="google-site-verification" content="J22kWwAYXIVQS63YGK8waguFeWOag89Gg3-pnY0yfqw" />
 
     <!-- Google tag (gtag.js) -->
+    <!--
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-J4K3X336J5"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
@@ -43,6 +44,7 @@
         gtag('js', new Date());
         gtag('config', 'G-J4K3X336J5');
     </script>
+    -->
 
     <link rel="icon" type="image/ico" href="./img/icon.ico">
 
@@ -151,7 +153,7 @@
     </div>
 
     <!-- intro popup -->
-    <div id="intro_popup" class="popup popup-pane">
+    <div id="intro_popup" class="popup popup-pane hidden">
         <table>
             <tr>
                 <td>
@@ -187,11 +189,18 @@
 
             <!-- options groups -->
             <div class="gr1 gc1 opts-list">
-                <span id="btn_os_in" class="gr1 gc1 menu-item menu-item-darkblue selected">Input</span>
-                <span id="btn_os_out" class="gr2 gc1 menu-item menu-item-darkblue">Output</span>
-                <span id="btn_os_grid" class="gr3 gc1 menu-item menu-item-darkblue">Grid</span>
-                <span id="btn_os_disp" class="gr4 gc1 menu-item menu-item-darkblue">Display</span>
-                <span id="btn_os_sys" class="gr5 gc1 menu-item menu-item-darkblue">System</span>
+                <span id="btn_os_in" class="gr1 gc1 grp1 menu-item menu-item-darkblue selected">Input</span>
+                <span id="btn_os_out" class="gr2 gc1 grp1 menu-item menu-item-darkblue">Output</span>
+                <span id="btn_os_grid" class="gr3 gc1 grp1 menu-item menu-item-darkblue">Grid</span>
+                <span id="btn_os_disp" class="gr4 gc1 grp1 menu-item menu-item-darkblue">Display</span>
+
+                <span id="btn_os_tgl" class="gr5 gc1 grpt menu-item menu-item-darkblue">▼</span>
+
+                <span id="btn_os_sys" class="gr1 gc1 grp2 menu-item menu-item-darkblue hidden">System</span>
+                <span id="btn_os_lice" class="gr2 gc1 grp2 menu-item menu-item-darkblue hidden">Licence</span>
+                <span id="btn_os_cpyrg" class="gr3 gc1 grp2 menu-item menu-item-darkblue hidden">Copyright</span>
+                <span id="btn_os_spc1"
+                    class="gr4 gc1 grp2 menu-item menu-item-darkblue hidden selected disabled">&nbsp;</span>
             </div>
 
             <!-- input -->
@@ -272,6 +281,14 @@
                 <span id="opt_os_sys_agent" class="gr2 gc2 opt-value-edit"></span>
                 <input id="opt_os_sys_plat" class="gr3 gc2 opt-value-edit"></input>
                 <input id="opt_os_sys_reso" class="gr4 gc2 opt-value-edit"></input>
+            </div>
+
+            <!-- licence -->
+            <div id="opts_os_lice" class="gr1 gc2 opts-pane hidden">
+            </div>
+
+            <!-- copyright -->
+            <div id="opts_os_cpyrg" class="gr1 gc2 opts-pane hidden">
             </div>
 
         </div>
