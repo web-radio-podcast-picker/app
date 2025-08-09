@@ -169,7 +169,7 @@ window.settings = {
         infoBarRelY: - 21 - 7,
         buttonBarRelY: - 42 - 7 * 7 + 5 * 7,
         compactDisplayMaxHeight: 600,
-        introPopupDelay: 2000,      // ms
+        introPopupDelay: 4000,      // ms
         fadeOutDelay: 1000
     }
 
