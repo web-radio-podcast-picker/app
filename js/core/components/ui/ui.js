@@ -48,16 +48,20 @@ ui = {
         $('#app_ver_date').text(settings.app.verDate)
         this.popups.updatePopupPositionAndSize(null, $popup, null)
         $popup.on('click', () => {
-            $popup.fadeOut(settings.ui.fadeOutDelay)
+            this.hide_intro_popup()
         })
     },
 
     hide_intro() {
         setTimeout(() => {
-            const pid = 'intro_popup'
-            const $popup = $('#' + pid)
-            $popup.fadeOut(settings.ui.fadeOutDelay)
+            this.hide_intro_popup()
         }, settings.ui.introPopupDelay)
+    },
+
+    hide_intro_popup() {
+        const pid = 'intro_popup'
+        const $popup = $('#' + pid)
+        $popup.fadeOut(settings.ui.fadeOutDelay)
     },
 
     init_ui() {
