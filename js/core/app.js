@@ -44,6 +44,8 @@ app = {
 
     async run() {
 
+        await this.checkAudio()
+
         this.oscilloscope = oscilloscope
         this.oscilloscopeView = new OscilloscopeView()
         this.gridView = new GridView()
@@ -57,6 +59,24 @@ app = {
 
         if (this.audioInputChannel != null &&
             this.audioInputChannel.error == null) this.start()
+    },
+
+    async checkAudio() {
+        if (!navigator.mediaDevices?.enumerateDevices) {
+            throw new Error("enumerateDevices() not supported.")
+        } else {
+            // List cameras and microphones.
+            navigator.mediaDevices
+                .enumerateDevices()
+                .then((devices) => {
+                    devices.forEach((device) => {
+                        console.log(`${device.kind}: ${device.label} id = ${device.deviceId}`)
+                    })
+                })
+                .catch((err) => {
+                    console.error(`${err.name}: ${err.message}`)
+                })
+        }
     },
 
     initSettings() {
