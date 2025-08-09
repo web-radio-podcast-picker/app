@@ -11,11 +11,19 @@
 
 A javascript application running an audio sound card oscilloscope,analyzer and generator, in the browser (responsive ui, fits desktop / tablet / smartphone), including:
 
-- oscilloscope (trigger, cursor, markers, lissajous, colorisation,...)
-- signal analysis (FFT, frequency, min/max/average, ...)
-- signal generator (wave, square, sawtooth, triangle)
-- apply effects on signals (reverb,echo,filter,...)
-- maths (combinate signal together)
+- oscilloscope
+  - time and frequency view
+  - trigger
+  - cursor/markers,
+  - colorisations
+  - lissajous ![css3](https://img.shields.io/static/v1?label=&message=planned&color=cd4900&style=plastic&logoColor=black)
+- signal analyzis 
+  - FFT, frequency, min/max/average V/Hz
+- signal generator
+  - sinus, square, sawtooth
+- apply effects on signals 
+  - reverb,echo,filter,... ![css3](https://img.shields.io/static/v1?label=&message=planned&color=cd4900&style=plastic&logoColor=black)
+- maths (combinate signal together) ![css3](https://img.shields.io/static/v1?label=&message=planned&color=cd4900&style=plastic&logoColor=black)
 - multi channels
 - audio channel input
 - line out
