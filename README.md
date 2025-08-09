@@ -34,7 +34,7 @@ A javascript application running an audio sound card oscilloscope,analyzer and g
 ## 👉 project status: on going 🟩
 ___
 
-## screenshots
+## Screenshots
 
 ![screenshot](doc/screenshot-0.8b.png)
 *v 0.8 - FFT*
@@ -56,3 +56,25 @@ ___
 [<img alt="Deployed with FTP Deploy Action" src="https://img.shields.io/badge/Deployed With-FTP DEPLOY ACTION-%3CCOLOR%3E?style=for-the-badge&color=0077b6">](https://github.com/SamKirkland/FTP-Deploy-Action)
 
 continuous deployment provided by *GitHub Action* : **FTP Deploy** at [https://github.com/marketplace/actions/ftp-deploy](https://github.com/marketplace/actions/ftp-deploy)
+
+___
+
+## Licence
+
+    Sound card Oscilloscope | Signal Analyser Generator
+    Copyright (C) 2025  Franck Gaspoz
+    find licence and copyright informations in files /COPYRIGHT and /LICENCE
+    contact: franck.gaspoz@gmail.com
+
+    This program is free software; you can redistribute it and/or modify
+    it under the terms of the GNU General Public License as published by
+    the Free Software Foundation version 2.
+
+    This program is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    GNU General Public License for more details.
+
+    You should have received a copy of the GNU General Public License along
+    with this program; if not, write to the Free Software Foundation, Inc.,
+    51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
