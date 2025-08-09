@@ -9,7 +9,8 @@
 window.settings = {
 
     app: {
-        version: '0.8'
+        version: '0.8',
+        verDate: '8/9/2025'
     },
 
     sys: {
@@ -69,7 +70,7 @@ window.settings = {
 
     generator: {
         defaultFrq: 250,        // initial generator (oscillator) frq
-        defaultFn: Gen_Fn_Sin,      // default fn
+        defaultFn: Gen_Fn_Sin,  // default fn
         defaultModulation: {
             frqMin: 500,        // frequency modulation min hz
             frqMax: 1500,       // frequency modulation max hz
@@ -158,19 +159,21 @@ window.settings = {
     },
 
     ui: {
-        maxRefreshRate: 250,     // maximum views refresh rate in Fps
-        clientWidthBorder: 4,   // default border width for client area
-        clientHeightBorder: 2,  // default border height for client area
-        menuContainerWidth: 42,  // 3 * 1em
+        maxRefreshRate: 250,        // maximum views refresh rate in Fps
+        clientWidthBorder: 4,       // default border width for client area
+        clientHeightBorder: 2,      // default border height for client area
+        menuContainerWidth: 42,     // 3 * 1em
         fullscreen: false,
         fftAxeRelY: - 21 - 7 * 6,
         errorBarRelY: - 21 - 7 * 10,
         infoBarRelY: - 21 - 7,
         buttonBarRelY: - 42 - 7 * 7 + 5 * 7,
-        compactDisplayMaxHeight: 600
+        compactDisplayMaxHeight: 600,
+        introPopupDelay: 2000,      // ms
+        fadeOutDelay: 1000
     }
 
-};
+}
 
 if (settings.debug.info)
     console.log('Settings initialized:', settings);

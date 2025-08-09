@@ -14,13 +14,16 @@ A javascript application running an audio sound card oscilloscope,analyzer and g
 - oscilloscope
   - time and frequency view
   - trigger
-  - cursor/markers,
+  - cursors ![css3](https://img.shields.io/static/v1?label=&message=planned&color=cd4900&style=plastic&logoColor=black)
+  - markers
   - colorisations
   - lissajous ![css3](https://img.shields.io/static/v1?label=&message=planned&color=cd4900&style=plastic&logoColor=black)
 - signal analyzis 
   - FFT, frequency, min/max/average V/Hz
 - signal generator
   - sinus, square, sawtooth
+  - frequency modulation
+  - amplitude modulation
 - apply effects on signals 
   - reverb,echo,filter,... ![css3](https://img.shields.io/static/v1?label=&message=planned&color=cd4900&style=plastic&logoColor=black)
 - maths (combinate signal together) ![css3](https://img.shields.io/static/v1?label=&message=planned&color=cd4900&style=plastic&logoColor=black)

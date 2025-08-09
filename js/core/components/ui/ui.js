@@ -24,20 +24,37 @@ ui = {
 
     init(oscilloscope) {
 
-        this.oscilloscope = oscilloscope;
+        this.oscilloscope = oscilloscope
 
         this.oscilloscope.channels.forEach(channel => {
             if (!channel.ui) {
-                this.channels.init_channel_btns(channel, channel.view);
-                channel.ui = true;
+                this.channels.init_channel_btns(channel, channel.view)
+                channel.ui = true
             }
         });
 
         if (!this.uiInitialized) {
-            this.init_ui();
-            this.uiInitialized = true;
-            console.log("UI initialized");
+            this.init_ui()
+            this.uiInitialized = true
+            console.log("UI initialized")
+            this.hide_intro()
         }
+    },
+
+    init_intro() {
+        const pid = 'intro_popup'
+        const $popup = $('#' + pid)
+        $('#app_ver').text(settings.app.version)
+        $('#app_ver_date').text(settings.app.verDate)
+        this.popups.updatePopupPositionAndSize(null, $popup, null)
+    },
+
+    hide_intro() {
+        setTimeout(() => {
+            const pid = 'intro_popup'
+            const $popup = $('#' + pid)
+            //$popup.fadeOut(settings.ui.fadeOutDelay)
+        }, settings.ui.introPopupDelay)
     },
 
     init_ui() {
@@ -51,13 +68,18 @@ ui = {
         }
 
         // properties
-        $('input').attr('autocomplete', 'off');
+        $('input').attr('autocomplete', 'off')
 
         // bindings
-        this.bindings.bind(this.bindings.binding(
-            'app_ver',
-            'settings.app.version',
-            { readOnly: true, attr: 'text' }));
+        this
+            .bindings.bind(this.bindings.binding(
+                'app_ver',
+                'settings.app.version',
+                { readOnly: true, attr: 'text' }))
+            .bindings.bind(this.bindings.binding(
+                'app_ver_date',
+                'settings.app.verDate',
+                { readOnly: true, attr: 'text' }))
 
         const $c = $('#err_txt')
         $c.on('click', () => {
@@ -65,8 +87,8 @@ ui = {
         })
 
         // menus & popups
-        this.oscilloMenu.initMenu();
-        this.popups.init_popups();
+        this.oscilloMenu.initMenu()
+        this.popups.init_popups()
         this.popupSettings.init()
         this.channels.popupSettings.init()
     },
@@ -103,7 +125,7 @@ ui = {
             canvas.height = htmlHeight
             updated = true
         }
-        return updated;
+        return updated
     },
 
     setupUIComponents() {

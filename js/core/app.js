@@ -44,6 +44,8 @@ app = {
 
     async run() {
 
+        ui.init_intro()
+
         await this.checkAudio()
 
         this.oscilloscope = oscilloscope

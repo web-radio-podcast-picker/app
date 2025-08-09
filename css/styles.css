@@ -742,6 +742,14 @@ div.popup-grid > span.menu-item {
     min-width: 512px;
 }
 
+#intro_popup {
+    min-width: 512px;;
+}
+
+#intro_popup_title {
+    margin-left: 2em;
+}
+
 #main_menu-body {
     width: 96px;
     padding: 0px;
@@ -949,4 +957,11 @@ div.channel-submenu-pane span.on-off-label {
 
 #opts_os_sys {
     grid-auto-rows: unset !important;
+}
+
+a,a:visited {
+    color: #00CCFF;
+}
+a:hover {
+    color: #00FFAA;
 }
