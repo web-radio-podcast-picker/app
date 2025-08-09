@@ -47,6 +47,9 @@ ui = {
         $('#app_ver').text(settings.app.version)
         $('#app_ver_date').text(settings.app.verDate)
         this.popups.updatePopupPositionAndSize(null, $popup, null)
+        $popup.on('click', () => {
+            $popup.fadeOut(settings.ui.fadeOutDelay)
+        })
     },
 
     hide_intro() {
