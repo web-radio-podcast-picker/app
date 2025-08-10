@@ -819,6 +819,11 @@ body.doc-text {
     height: 100%;
 }
 
+iframe.page {
+    width: 100% !important;
+    height: 100% !important;
+}
+
 .page-text {
     padding-left: 2em !important;
 }
@@ -836,15 +841,22 @@ body.doc-text {
 }
 
 .page-header-title {
-    grid-template-columns: 256px Calc(100% - 256px);
+    grid-template-columns: 17% 83%;
 }
 
 .page-header {
-    background-color: black;
+    /*background-color: black;*/
+}
+
+.header-icon {
+    background-image: url(../img/icon.ico);
+    background-repeat: no-repeat;
+    background-color: black !important;
 }
 
 .app-image-link {
-    width: 800px;
+    max-width: 800px;
+    width: 80%;
 }
 
 .app-link {
