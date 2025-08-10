@@ -46,8 +46,8 @@ ui = {
         const $popup = $('#' + pid)
         $('#app_ver').text(settings.app.version)
         $('#app_ver_date').text(settings.app.verDate)
-        $popup.removeClass('hidden')
         this.popups.updatePopupPositionAndSize(null, $popup, null)
+        $popup.removeClass('ptransparent')
         $popup.on('click', () => {
             this.hide_intro_popup()
         })

@@ -75,6 +75,14 @@ button {
     display: none !important;
 }
 
+.transparent {
+    opacity: 0;
+}
+
+.ptransparent {
+    opacity: 0.1;
+}
+
 .value {
     display: inline-block;
     width: 3em;
