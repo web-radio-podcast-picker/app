@@ -820,6 +820,10 @@ body.page-text {
     font-size: 14px;
 }
 
+.align-left {
+    text-align: left !important;
+}
+
 .page-layout {
     grid-template-rows: 256px Calc(100% - Calc(256px + 4em)) 4em;
     width: 100%;
