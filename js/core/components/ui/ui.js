@@ -44,7 +44,11 @@ ui = {
     init_intro() {
         const pid = 'intro_popup'
         const $popup = $('#' + pid)
-        $('#app_ver').text(settings.app.version)
+        if (this.isSmallDisplay()) {
+            $popup.addClass('hidden')
+            return
+        }
+        $('#sys_app_ver').text(settings.app.version)
         $('#app_ver_date').text(settings.app.verDate)
         this.popups.updatePopupPositionAndSize(null, $popup, null)
         $popup.removeClass('ptransparent')
@@ -54,6 +58,7 @@ ui = {
     },
 
     hide_intro() {
+        if (this.isSmallDisplay()) return
         setTimeout(() => {
             this.hide_intro_popup()
         }, settings.ui.introPopupDelay)

@@ -24,6 +24,25 @@ html.ui,body.ui,#frame {
     overflow: hidden;
 }
 
+body.page {
+    background-color: black;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    /*position: absolute;
+    left: 0px;
+    top: 0px;*/
+    opacity: 1 !important;
+}
+
+html.page {
+    width: 100%;
+    height: 100%;
+}
+
 .no-select {
     -webkit-user-select: none;
     -moz-user-select: none;
@@ -76,11 +95,11 @@ button {
 }
 
 .transparent {
-    opacity: 0;
+    opacity: 0 !important;
 }
 
 .ptransparent {
-    opacity: 0.1;
+    opacity: 0.1 !important;
 }
 
 .value {
@@ -686,6 +705,18 @@ div.popup-grid > span.menu-item {
     padding: 0px !important;
 }
 
+.padding {
+    padding: 1em !important;
+}
+
+.left {
+    float: left !important;
+}
+
+.center {
+    text-align: center !important;
+}
+
 .top-dmargin {
     margin-top: 0.5em !important;
 }
@@ -782,6 +813,44 @@ body.doc-text {
     opacity: 0.9;
 }
 
+.page-layout {
+    grid-template-rows: 256px Calc(100% - Calc(256px + 4em)) 4em;
+    width: 100%;
+    height: 100%;
+}
+
+.page-text {
+    padding-left: 2em !important;
+}
+
+.page-margin {
+    background-color: rgb(0, 0, 40) !important;
+}
+
+.page-content-margin {
+    background-color: rgb(0, 0, 80) !important;
+}
+
+.page-content {
+    background-color: darkblue !important;
+}
+
+.page-header-title {
+    grid-template-columns: 256px Calc(100% - 256px);
+}
+
+.page-header {
+    background-color: black;
+}
+
+.app-image-link {
+    width: 800px;
+}
+
+.app-link {
+    font-size: 1.5em;
+}
+
 iframe {
     border: none;
     width: 408px;
@@ -795,6 +864,10 @@ html,body,div,span {
 h1 {
     margin-top: 0px;
     font-size: 1.5em;
+}
+
+.no-font-size {
+    font-size: revert !important;
 }
 
 #main_menu-body {
