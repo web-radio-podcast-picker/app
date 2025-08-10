@@ -813,6 +813,13 @@ body.doc-text {
     opacity: 0.9;
 }
 
+body.page-text {
+    background-color: darkblue;
+    color: white;
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+}
+
 .page-layout {
     grid-template-rows: 256px Calc(100% - Calc(256px + 4em)) 4em;
     width: 100%;
