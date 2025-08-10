@@ -674,6 +674,10 @@ div.popup-grid > span.menu-item {
     padding-top: 0px !important;
 }
 
+.no-padding {
+    padding: 0px !important;
+}
+
 .top-dmargin {
     margin-top: 0.5em !important;
 }
@@ -758,6 +762,7 @@ div.popup-grid > span.menu-item {
 
 .doc-text {
     text-align: justify;
+    padding: 1em;
 }
 
 body.doc-text {
@@ -777,6 +782,7 @@ iframe {
 
 h1 {
     margin-top: 0px;
+    font-size: 1.5em;
 }
 
 #main_menu-body {

@@ -153,6 +153,8 @@ class PopupSettings {
                 true,
                 this.tabGroupIndex == 1 ? this.grp1_tabs
                     : this.grp2_tabs)
+
+            $('#btn_os_tgl').text(this.tabGroupIndex == 1 ? '▼' : '▲');
         })
 
     }
