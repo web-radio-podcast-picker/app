@@ -4,7 +4,7 @@
     find licence and copyright informations in files /COPYRIGHT and /LICENCE
 */
 
-body {
+body.ui {
     background-color: black;
     width: 100%;
     height: 100%;
@@ -18,7 +18,7 @@ body {
     top: 0px;
 }
 
-html,body,#frame {
+html.ui,body.ui,#frame {
     min-width: 800px;
     min-height: 600px;
     overflow: hidden;
@@ -754,6 +754,25 @@ div.popup-grid > span.menu-item {
 .disclaimer {
     font-style: italic;
     text-align: justify;
+}
+
+.doc-text {
+    text-align: justify;
+}
+
+body.doc-text {
+    text-align: justify;
+    background-color: darkblue;
+    color: white;
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    opacity: 0.9;
+}
+
+iframe {
+    border: none;
+    width: 408px;
+    height: 240px;
 }
 
 h1 {
