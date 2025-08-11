@@ -860,6 +860,9 @@ iframe.page {
 
 .page-index > div {
     margin: 0.5em;
+    margin-left: 0px;
+    margin-right: 0px;
+    width: 100% !important;
 }
 
 .page-header-title {
