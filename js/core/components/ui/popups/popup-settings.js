@@ -119,7 +119,7 @@ class PopupSettings {
                 }))
             .bindings.bind(ui.bindings.binding(
                 'opt_os_sys_reso',
-                'ui.viewSize().width+\'x\'+ui.viewSize().height',
+                'cui.viewSize().width+\'x\'+cui.viewSize().height',
                 readOnly))
             .bindings.bind(ui.bindings.binding(
                 'opt_os_sys_plat',

@@ -13,7 +13,7 @@ class ChannelSettingsPaneFFT {
     init(channelSettings) {
         this.channelSettings = channelSettings
         const fft = ui.getCurrentChannelPath() + 'fft.'
-        const sd = ui.isSmallDisplay() ? 'SD' : ''
+        const sd = cui.isSmallDisplay() ? 'SD' : ''
 
         ui
             .toggles.initToggle('btn_ch_fft_onoff',

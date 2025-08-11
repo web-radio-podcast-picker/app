@@ -33,7 +33,7 @@ class FFTAxesRenderer {
 
         this.drawAxe(channel, dc, x0, y + posY, x1, y + posY, colorH)
 
-        const sd = ui.isSmallDisplay()
+        const sd = cui.isSmallDisplay()
         const hDivCount = sd ? fft.grid.hDivCountSD
             : fft.grid.hDivCount
         const colSize = props.width / hDivCount

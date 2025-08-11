@@ -22,6 +22,18 @@ cui = {
         $('#' + btnId).html(
             fs ? onText : offText
         )
-    }
+    },
 
+    isSmallDisplay() {
+        const vs = this.viewSize()
+        return vs.height <= settings.ui.compactDisplayMaxHeight
+    },
+
+    viewSize() {
+        const html = document.querySelector('html');
+        return {
+            width: html.clientWidth - settings.ui.clientWidthBorder,
+            height: html.clientHeight - settings.ui.clientHeightBorder
+        };
+    }
 }

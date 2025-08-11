@@ -44,7 +44,7 @@ ui = {
     init_intro() {
         const pid = 'intro_popup'
         const $popup = $('#' + pid)
-        if (this.isSmallDisplay()) {
+        if (cui.isSmallDisplay()) {
             $popup.addClass('hidden')
             return
         }
@@ -58,7 +58,7 @@ ui = {
     },
 
     hide_intro() {
-        if (this.isSmallDisplay()) return
+        if (cui.isSmallDisplay()) return
         setTimeout(() => {
             this.hide_intro_popup()
         }, settings.ui.introPopupDelay)
@@ -116,16 +116,8 @@ ui = {
                 '' : subPath)
     },
 
-    viewSize() {
-        const html = document.querySelector('html');
-        return {
-            width: html.clientWidth - settings.ui.clientWidthBorder,
-            height: html.clientHeight - settings.ui.clientHeightBorder
-        };
-    },
-
     setupCanvasSize(canvas) {
-        const vs = this.viewSize()
+        const vs = cui.viewSize()
         const htmlWidth = vs.width
         const htmlHeight = vs.height
         var updated = false
@@ -142,7 +134,7 @@ ui = {
     },
 
     setupUIComponents() {
-        const vs = this.viewSize()
+        const vs = cui.viewSize()
         const w = vs.width
         const h = vs.height
 
@@ -216,10 +208,5 @@ ui = {
             canvas.width !== htmlWidth
             || canvas.height !== htmlHeight
         return updated
-    },
-
-    isSmallDisplay() {
-        const vs = this.viewSize()
-        return vs.height <= settings.ui.compactDisplayMaxHeight
     }
 }

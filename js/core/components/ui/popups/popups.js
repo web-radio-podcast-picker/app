@@ -87,7 +87,7 @@ class Popups {
         const h = bounds.height / z
         var left = 0;
         var top = 0;
-        const vs = ui.viewSize()
+        const vs = cui.viewSize()
 
         if (controlId != null) {
             // left align
