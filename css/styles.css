@@ -853,6 +853,15 @@ iframe.page {
     background-color: darkblue !important;
 }
 
+.page-index {
+    display: grid;
+    align-content: baseline;
+}
+
+.page-index > div {
+    margin: 0.5em;
+}
+
 .page-header-title {
     grid-template-columns: 17% 83%;
 }
