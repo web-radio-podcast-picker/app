@@ -35,5 +35,12 @@ cui = {
             width: html.clientWidth - settings.ui.clientWidthBorder,
             height: html.clientHeight - settings.ui.clientHeightBorder
         };
+    },
+
+    setOrientation(horizontal) {
+        const vs = this.viewSize()
+        const vertical = vs.height >= vs.width
+        if (vertical == !horizontal) return
+
     }
 }
