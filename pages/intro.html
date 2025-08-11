@@ -24,9 +24,9 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Sound card Oscilloscope | Signal Analyzer Generator : Home</title>
+    <title>Sound card Oscilloscope | Signal Analyzer Generator : Manual</title>
     <meta name="description"
-        content="home free online sound card virtual oscilloscope simulator with signal generator and signal analyser fft sine sawtooth triangle electricity volts with sounds effects and signal filters compatible with windows android osx pc smart phone tablet" />
+        content="manual introduction free online sound card virtual oscilloscope simulator with signal generator and signal analyser fft sine sawtooth triangle electricity volts with sounds effects and signal filters compatible with windows android osx pc smart phone tablet" />
     <meta http-equiv="cache-control" content="max-age=0" />
     <meta http-equiv="cache-control" content="no-cache" />
     <meta http-equiv="expires" content="0" />
@@ -34,23 +34,54 @@
     <meta http-equiv="pragma" content="no-cache" />
 
     <!-- Google tag (gtag.js) -->
-    <!--<script async src="https://www.googletagmanager.com/gtag/js?id=G-J4K3X336J5"></script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-J4K3X336J5"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
         function gtag() { dataLayer.push(arguments); }
         gtag('js', new Date());
         gtag('config', 'G-J4K3X336J5');
-    </script>-->
+    </script>
 
     <link rel="icon" type="image/ico" href="../img/icon.ico">
 
     <!-- styles -->
     <link rel="stylesheet" type="text/css" href="../css/styles.css" />
+    <!-- dependencies -->
+    <script src="../js/ext/jquery-3.7.1.min.js"></script>
+    <!-- settings -->
+    <script src="../js/core/globals.js"></script>
+    <script src="../js/core/settings.js"></script>
+    <!-- code -->
+    <script src="../js/core/components/ui/cui.js"></script>
+    <script src="../js/core/components/ui/page.js"></script>
 </head>
 
 <body class="no-select doc-text no-padding align-left">
 
-    <h2>Welcome to the Web browser Sound card <b>Oscilloscope / Generator</b> homepage !</h2>
+    <h2>Sound card <b>Oscilloscope / Generator</b> Manual: Introduction</h2>
+
+    <hr>
+
+    <h3>Index</h3>
+
+    <ul>
+        <li>
+            <h4 id="lnk_intro"><a class="srclink">Introduction</a></h4>
+        </li>
+        <li>
+            <h4 id="lnk_funcs"><a class="srclink">Functions</a></h4>
+        </li>
+        <li>
+            <h4 id="lnk_calibr"><a class="srclink">Calibration</a></h4>
+        </li>
+    </ul>
+
+    <!------------------------>
+    <hr>
+
+    <a name="intro"></a>
+    <h3>Introduction</h3>
+
     <ul>
         <li>This web software utilizes the computer's audio interface to provide a
             real-time oscilloscope, FFT spectrum analyzer, and waveform generator (sine, square, triangle).
@@ -63,46 +94,19 @@
             installation.
         </li>
     </ul>
-    <br>👉 Please click <a href="../oscillo.html" class="app-link" target="new">this link</a> or
-    <a href="../oscillo.html" class="app-link" target="new">the image below</a>
-    to access to the application:
-    <br><br><br>
-    <div class="center">
-        <a href="../oscillo.html" target="new">
-            <img title="oscilloscope application" src="../doc/screenshot-0.8c.png" class="app-image-link">
-        </a>
-    </div>
 
-    <h2>Feature list</h2>
-
+    This software rely on the most modern browser capabilites, including:
     <ul>
-        <li> oscilloscope </li>
-        <ul>
-            <li> time and frequency view</li>
-            <li> trigger</li>
-            <li> cursors</li>
-            <li> markers</li>
-            <li> colorisations</li>
-            <li> lissajous</li>
-        </ul>
-        <li> signal analyzis</li>
-        <ul>
-            <li> FFT, frequency, min/max/average V/Hz</li>
-        </ul>
-        <li> signal generator</li>
-        <ul>
-            <li> sinus, square, sawtooth</li>
-            <li> frequency modulation</li>
-            <li> amplitude modulation</li>
-        </ul>
-        <li> apply effects on signals</li>
-        <ul>
-            <li> reverb,echo,filter,...</li>
-        </ul>
-        <li> maths (combinate signal together)</li>
-        <li> multi channels</li>
-        <li> audio channel input</li>
-        <li> line out</li>
+        <li><b><a href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Audio_API" target="new-ext">Web Audio
+                    API</a></b></li>
+        <li><b><a href="https://developer.mozilla.org/en-US/docs/Web/API/Media_Source_Extensions_API"
+                    target="new-ext">Media
+                    Source API</a></b></li>
+        <li><b><a href="https://developer.mozilla.org/en-US/docs/Web/API/Media_Capture_and_Streams_API"
+                    target="new-ext">Media Capture and Streams API</a></b></li>
+        <li><b><a href="https://developer.mozilla.org/en-US/docs/Web/API/Audio_Output_Devices_API"
+                    target="new-ext">Media
+                    Output Devices API</a></b></li>
     </ul>
 
 </body>

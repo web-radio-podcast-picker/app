@@ -845,6 +845,10 @@ li {
     font-weight: bold;
 }
 
+.srclink {
+    cursor: pointer;
+}
+
 .page-text {
     padding-left: 2em !important;
 }
