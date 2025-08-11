@@ -837,6 +837,10 @@ iframe.page {
     height: 100% !important;
 }
 
+li {
+    line-height: 1.5em;
+}
+
 .page-text {
     padding-left: 2em !important;
 }
