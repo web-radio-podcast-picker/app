@@ -44,26 +44,14 @@ class OscilloMenu {
         });
         $('#btn_fs').on('click', () => {
             settings.ui.fullscreen = !settings.ui.fullscreen
-            this.setFullscreen(settings.ui.fullscreen)
+            cui.setFullscreen(
+                settings.ui.fullscreen,
+                '☐',
+                '⛶',
+                'btn_fs')
         })
 
-        this.setFullscreen(false)
-    }
-
-    setFullscreen(fs) {
-        settings.ui.fullscreen = fs
-        if (fs) {
-            document.querySelector('body').requestFullscreen(
-                { navigationUI: 'hide' }
-            )
-        }
-        else {
-            if (document.fullscreenElement)
-                document.exitFullscreen()
-        }
-        $('#btn_fs').text(
-            fs ? '☐' : '⛶'
-        )
+        cui.setFullscreen(false)
     }
 
     reflectOscilloPauseState() {

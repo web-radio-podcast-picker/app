@@ -841,6 +841,10 @@ li {
     margin-bottom: 0.5em;
 }
 
+.bold {
+    font-weight: bold;
+}
+
 .page-text {
     padding-left: 2em !important;
 }

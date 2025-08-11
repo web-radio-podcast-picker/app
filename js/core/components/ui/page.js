@@ -17,6 +17,14 @@ page = {
     initButtons() {
         $('#bt_home').on('click', () => this.loadPage('pages/home.html'))
         $('#bt_lic').on('click', () => this.loadPage('doc/licence.html'))
+        $('#bt_fs').on('click', () => {
+            settings.ui.fullscreen = !settings.ui.fullscreen
+            cui.setFullscreen(
+                settings.ui.fullscreen,
+                'reduce <b>⤢</b>',
+                'enlarge <b>⤢</b>',
+                'bt_fs')
+        })
     },
 
     loadPage(url) {
