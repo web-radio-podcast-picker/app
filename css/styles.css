@@ -713,8 +713,15 @@ div.popup-grid > span.menu-item {
     float: left !important;
 }
 
+code {
+    background-color: black !important;
+    border: yellow solid 1px;
+    padding: 2px;
+}
+
 .center {
     text-align: center !important;
+    display: block !important;
 }
 
 .top-dmargin {
@@ -911,9 +918,34 @@ html,body,div,span {
     scrollbar-color: #FFFF00AA transparent;
 }
 
+li > b {
+    color: #FFFF00FF;
+}
+
 h1 {
     margin-top: 0px;
+    font-size: 2em;
+}
+
+.button-screenshot {
+    max-height: 2em;
+    vertical-align: middle;
+    text-align: center;
+}
+
+.button-wide-screenshot {
+    vertical-align: middle;
+    max-width: 80%;
+    margin-top: 1em;    
+    margin-bottom: 1em;
+}
+
+.big-font {
     font-size: 1.5em;
+}
+
+.warning {
+    color: orange !important;
 }
 
 .no-font-size {

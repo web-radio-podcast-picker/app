@@ -69,10 +69,10 @@
             <h4 id="lnk_intro"><a class="srclink">Introduction</a></h4>
         </li>
         <li>
-            <h4 id="lnk_funcs"><a class="srclink">Functions</a></h4>
+            <h4 id="lnk_calibr"><a class="srclink">Calibration</a></h4>
         </li>
         <li>
-            <h4 id="lnk_calibr"><a class="srclink">Calibration</a></h4>
+            <h4 id="lnk_funcs"><a class="srclink">Functions</a></h4>
         </li>
     </ul>
 
@@ -81,5 +81,71 @@
     <hr>
     <a name="calibr"></a>
     <h3>Calibration</h3>
+
+    The built-in microphone of a PC (often located near the webcam) has specific electrical and acoustic properties
+    related to its general use.
+
+    <br>Here are the main characteristics:
+    <ul>
+        <li><b>Type of transducer</b>: Most PC microphones are of the
+            <b>electret</b> type (permanently polarized condenser), powered by a polarization voltage
+            <br><b><u class="big-font warning">typically
+                    between 2
+                    and
+                    5 V</u></b>
+            <br>supplied by the sound card via the jack or USB input.
+        </li>
+        <li> <b>Input impedance</b>: Typically between <b>1 kΩ and 10 kΩ</b>, which
+            is suitable for a standard audio interface. This allows for good matching with the input circuits of sound
+            cards.
+        </li>
+        <li><b>Sensitivity and bandwidth</b>:
+            <ul>
+                <li>Sensitivity: around
+                    <b>–40 to –60 dBV/Pa</b>, which means they pick up
+                    close sounds well
+                    but are limited for weak or distant signals.
+                </li>
+                <li>Bandwidth: usually <b>100 Hz to 10 kHz</b>,
+                    sufficient for voice but limited
+                    for high-fidelity audio applications or precise measurements.
+                    </b>
+                </li>
+            </ul>
+        </li>
+    </ul>
+
+    <p class="warning">
+        👉 <b class="big-font">Thus</b> you <u>must</u> setup the software with the <b>actual</b> peak volts
+        values your sound card is
+        setted up for, in order to read the <b>actual</b> Volt values on the oscilloscope.
+        <br><br>
+        That means to know wich is the Voltage value for the maximum and minimum digital value, according to the bit
+        sample resolution
+    </p>
+
+    <br>
+
+    <h3>How to calibrate the intput peak Volt values</h3>
+
+    <p>
+        Click on the button <code>Settings</code> in the right menu (<i>oscilloscope menu</i>), then on the tab
+        <code>Input</code>:
+        <br>
+    <div class="center">
+        <img title="oscillo settings: input" src="../img/pages/popup-menu-settings-input.png"
+            class="button-wide-screenshot">
+    </div>
+    </p>
+    <p>
+        ℹ️<i><b>information:</b></i> If the right menu is not visible, click on the upper top right button
+        <img title="toggle oscillo menu" src="../img/pages/button-unfold-oscillo-menu.png" class="button-screenshot"> to
+        expand it.
+    </p>
+
+    <p>
+        Click the field <code>Signal Range</code> and then setup the value using the input widget. This is the polarized
+        pick value, meaning a range of -value .. +value
+    </p>
 
 </body>
