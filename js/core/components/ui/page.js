@@ -21,8 +21,8 @@ page = {
             settings.ui.fullscreen = !settings.ui.fullscreen
             cui.setFullscreen(
                 settings.ui.fullscreen,
-                'reduce <b>⤢</b>',
-                'enlarge <b>⤢</b>',
+                '☐',
+                '⛶',
                 'bt_fs')
         })
     },
