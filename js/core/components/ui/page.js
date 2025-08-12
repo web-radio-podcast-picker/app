@@ -1,7 +1,7 @@
 /*
     Sound card Oscilloscope | Signal Analyser Generator
     Copyright(C) 2025  Franck Gaspoz
-    find licence and copyright informations in files /COPYRIGHT and /LICENCE
+    find license and copyright informations in files /COPYRIGHT and /LICENCE
 */
 
 // page ui
@@ -16,7 +16,7 @@ page = {
 
     initButtons() {
         $('#bt_home').on('click', () => this.loadPage('pages/home.html'))
-        $('#bt_lic').on('click', () => this.loadPage('doc/licence.html'))
+        $('#bt_lic').on('click', () => this.loadPage('doc/license.html'))
         $('#bt_man').on('click', () => this.loadPage('pages/manual.html'))
 
         $('#lnk_intro').on('click', () => this.loadPage('pages/intro.html'))

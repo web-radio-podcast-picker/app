@@ -70,11 +70,11 @@ continuous deployment provided by *GitHub Action* : **FTP Deploy** at [https://g
 
 ___
 
-## Licence
+## License
 
     Sound card Oscilloscope | Signal Analyser Generator
     Copyright (C) 2025  Franck Gaspoz
-    find licence and copyright informations in files /COPYRIGHT and /LICENCE
+    find license and copyright informations in files /COPYRIGHT and /LICENCE
     contact: franck.gaspoz@gmail.com
 
     This program is free software; you can redistribute it and/or modify

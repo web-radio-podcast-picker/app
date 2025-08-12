@@ -1,7 +1,7 @@
 /*
     Sound card Oscilloscope | Signal Analyser Generator
     Copyright(C) 2025  Franck Gaspoz
-    find licence and copyright informations in files /COPYRIGHT and /LICENCE
+    find license and copyright informations in files /COPYRIGHT and /LICENCE
 */
 
 // signal measures
