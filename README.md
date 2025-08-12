@@ -72,7 +72,7 @@ ___
 
 ## License
 
-    Sound card Oscilloscope | Signal Analyser Generator
+    Sound card Oscilloscope | Spectrum Analyzer | Signal Generator
     Copyright (C) 2025  Franck Gaspoz
     find license and copyright informations in files /COPYRIGHT and /LICENCE
     contact: franck.gaspoz@gmail.com

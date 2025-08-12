@@ -1,5 +1,5 @@
 /*
-    Sound card Oscilloscope | Signal Analyser Generator
+    Sound card Oscilloscope | Spectrum Analyzer | Signal Generator
     Copyright(C) 2025  Franck Gaspoz
     find license and copyright informations in files /COPYRIGHT and /LICENCE
 */
@@ -951,6 +951,10 @@ h1 {
 
 .big-font {
     font-size: 1.3em;
+}
+
+footer > hr {
+    margin-top: 2em;
 }
 
 .warning {
