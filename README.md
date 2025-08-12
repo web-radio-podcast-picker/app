@@ -4,7 +4,7 @@
 <img src="https://raw.githubusercontent.com/franck-gaspoz/soundcard-signal-analyzer-generator/refs/heads/main/img/icon.ico">
 </td>
 <td>
-<h1>Sound card Oscilloscope<br>Signal Analyzer Generator</h1>
+<h1>Sound card Oscilloscope<br>Spectrum Analyzer<br>Signal Generator</h1>
 </td>
 </tr>
 </table>

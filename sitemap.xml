@@ -4,47 +4,47 @@
   <!--  created with Free Online Sitemap Generator www.xml-sitemaps.com  -->
   <url>
     <loc>https://franck-gaspoz.github.io/soundcard-signal-analyzer-generator/</loc>
-    <lastmod>2025-08-12T14:56:17+00:00</lastmod>
+    <lastmod>2025-08-12T21:01:00+00:00</lastmod>
     <priority>1.00</priority>
   </url>
   <url>
-    <loc>https://franck-gaspoz.github.io/soundcard-signal-analyzer-generator/pages/home.html</loc>
-    <lastmod>2025-08-12T14:56:17+00:00</lastmod>
+    <loc>https://franck-gaspoz.github.io/soundcard-signal-analyzer-generator/pages/calibration.html</loc>
+    <lastmod>2025-08-12T21:01:00+00:00</lastmod>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://franck-gaspoz.github.io/soundcard-signal-analyzer-generator/pages/functions.html</loc>
+    <lastmod>2025-08-12T21:01:00+00:00</lastmod>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://franck-gaspoz.github.io/soundcard-signal-analyzer-generator/pages/intro.html</loc>
+    <lastmod>2025-08-12T21:01:00+00:00</lastmod>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://franck-gaspoz.github.io/soundcard-signal-analyzer-generator/pages/manual.html</loc>
+    <lastmod>2025-08-12T21:01:00+00:00</lastmod>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://franck-gaspoz.github.io/soundcard-signal-analyzer-generator/doc/license.html</loc>
+    <lastmod>2025-08-12T21:01:00+00:00</lastmod>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://franck-gaspoz.github.io/soundcard-signal-analyzer-generator/doc/copyright.html</loc>
+    <lastmod>2025-08-12T21:01:00+00:00</lastmod>
     <priority>0.80</priority>
   </url>
   <url>
     <loc>https://franck-gaspoz.github.io/soundcard-signal-analyzer-generator/oscillo.html</loc>
-    <lastmod>2025-08-12T14:56:17+00:00</lastmod>
-    <priority>0.64</priority>
+    <lastmod>2025-08-12T21:01:00+00:00</lastmod>
+    <priority>0.80</priority>
   </url>
   <url>
-    <loc>https://franck-gaspoz.github.io/soundcard-signal-analyzer-generator/pages/calibration.html</loc>
-    <lastmod>2025-08-12T14:56:17+00:00</lastmod>
-    <priority>0.64</priority>
-  </url>
-  <url>
-    <loc>https://franck-gaspoz.github.io/soundcard-signal-analyzer-generator/pages/functions.html</loc>
-    <lastmod>2025-08-12T14:56:17+00:00</lastmod>
-    <priority>0.64</priority>
-  </url>
-  <url>
-    <loc>https://franck-gaspoz.github.io/soundcard-signal-analyzer-generator/pages/intro.html</loc>
-    <lastmod>2025-08-12T14:56:17+00:00</lastmod>
-    <priority>0.64</priority>
-  </url>
-  <url>
-    <loc>https://franck-gaspoz.github.io/soundcard-signal-analyzer-generator/pages/manual.html</loc>
-    <lastmod>2025-08-12T14:56:17+00:00</lastmod>
-    <priority>0.64</priority>
-  </url>
-  <url>
-    <loc>https://franck-gaspoz.github.io/soundcard-signal-analyzer-generator/doc/copyright.html</loc>
-    <lastmod>2025-08-12T14:56:17+00:00</lastmod>
-    <priority>0.51</priority>
-  </url>
-  <url>
-    <loc>https://franck-gaspoz.github.io/soundcard-signal-analyzer-generator/doc/licence.html</loc>
-    <lastmod>2025-08-12T14:56:17+00:00</lastmod>
-    <priority>0.51</priority>
+    <loc>https://franck-gaspoz.github.io/soundcard-signal-analyzer-generator/pages/home.html</loc>
+    <lastmod>2025-08-12T21:01:00+00:00</lastmod>
+    <priority>0.80</priority>
   </url>
 </urlset>

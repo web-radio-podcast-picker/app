@@ -18,6 +18,7 @@ page = {
         $('#bt_home').on('click', () => this.loadPage('pages/home.html'))
         $('#bt_lic').on('click', () => this.loadPage('doc/license.html'))
         $('#bt_man').on('click', () => this.loadPage('pages/manual.html'))
+        $('#bt_app').on('click', () => this.loadPage('oscillo.html', true))
 
         $('#lnk_intro').on('click', () => this.loadPage('pages/intro.html'))
         $('#lnk_funcs').on('click', () => this.loadPage('pages/functions.html'))
@@ -33,7 +34,7 @@ page = {
         })
     },
 
-    loadPage(url) {
+    loadPage(url, wnd) {
         var p = $('#page')[0]
         var s = null
         if (p === undefined)
@@ -45,10 +46,11 @@ page = {
         t[t.length - 1] = ''
         t = t.slice(0, t.length - 1)
         const u = t.join('/')
-        if (p != null)
+        if (p != null && !wnd)
             p.src = u
-        else
+        else {
             window.location = u
+        }
     }
 }
 
