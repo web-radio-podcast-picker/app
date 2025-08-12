@@ -892,6 +892,12 @@ li {
     /*background-color: black;*/
 }
 
+.no-size {
+    width: 0px;
+    height: 0px;
+    overflow: hidden;
+}
+
 .header-icon {
     background-image: url(../img/icon.ico);
     background-repeat: no-repeat;
