@@ -17,9 +17,9 @@ audioInputDevice = {
             this.stream = await navigator
                 .mediaDevices
                 .getUserMedia({
-                    /*audio: true,
+                    audio: true,
                     video: false,
-                    sampleSize: 16384,
+                    /*sampleSize: 16384,
                     sampleRate: 96000,
                     channelCount: 1,*/
                 });

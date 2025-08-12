@@ -35,6 +35,10 @@ window.settings = {
         channelsCount: 1,       // number of audio input channels
     },
 
+    input: {
+        bufferSize: 16384 / 2,  // buffer size (fftSize = bufferSize*2)     
+    },
+
     output: {
         vScale: 1               // volt scale line out (corresponding to 1 = max sound level)
     },

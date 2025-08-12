@@ -145,6 +145,8 @@ oscilloscope = {
             channel.setAnalyser(
                 channel.audioContext.createAnalyser())
 
+            channel.analyzer.fftSize = settings.input.bufferSize * 2
+
             channel.streamSource.connect(channel.gain);
             channel.gain.connect(channel.analyzer);
 
