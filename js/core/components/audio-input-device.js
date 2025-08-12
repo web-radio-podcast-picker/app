@@ -8,17 +8,28 @@
 
 audioInputDevice = {
 
+    stream: null,
+
+    label: null,
+
     getMediaStream: async function () {
         try {
-            stream = await navigator
+            this.stream = await navigator
                 .mediaDevices
                 .getUserMedia({
                     audio: true,
-                    video: false
+                    video: false,
+                    sampleSize: 16384,
+                    channelCount: 1,
                 });
+            const tracks = this.stream.getTracks()
+            if (tracks.length > 0) {
+                this.label = tracks[0].label
+            }
+
             if (settings.debug.info)
-                console.log('Media stream obtained:', stream);
-            return stream;
+                console.log('Media stream obtained:', this.stream);
+            return this.stream;
         } catch (err) {
             console.error('Error accessing media devices.', err);
         }

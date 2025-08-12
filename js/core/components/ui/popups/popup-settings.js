@@ -73,15 +73,21 @@ class PopupSettings {
             .bindings.bind(ui.bindings.binding(
                 'opt_os_inputVscale',
                 'settings.audioInput.vScale'))
+            .bindings.bind(ui.bindings.binding(
+                'opt_os_audio_source',
+                'audioInputDevice.label',
+                {
+                    attr: 'text'
+                }))
 
             // output
             .bindings.bind(ui.bindings.binding(
                 'opt_os_outputChannelsCount',
-                'windowAudioContext.destination.maxChannelCount',
+                'app.audioInputChannel.analyzer.context.destination.maxChannelCount',
                 readOnly))
             .bindings.bind(ui.bindings.binding(
                 'opt_os_channelInterpretation',
-                'windowAudioContext.destination.channelInterpretation',
+                'app.audioInputChannel.analyzer.context.destination.channelInterpretation',
                 readOnly))
             .bindings.bind(ui.bindings.binding(
                 'opt_os_outputVscale',
