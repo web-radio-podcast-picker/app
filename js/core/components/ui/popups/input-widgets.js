@@ -223,7 +223,7 @@ class InputWidgets {
             (opts != null && opts.targetControlId != null) ?
                 $('#' + opts.targetControlId) : $c;
         var pos = $controlTarget.offset();
-        var vs = ui.viewSize()
+        var vs = cui.viewSize()
 
         const setPos = (pos) => {
             $w.css('left', pos.left);
