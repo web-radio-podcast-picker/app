@@ -17,10 +17,11 @@ audioInputDevice = {
             this.stream = await navigator
                 .mediaDevices
                 .getUserMedia({
-                    audio: true,
+                    /*audio: true,
                     video: false,
                     sampleSize: 16384,
-                    channelCount: 1,
+                    sampleRate: 96000,
+                    channelCount: 1,*/
                 });
             const tracks = this.stream.getTracks()
             if (tracks.length > 0) {
