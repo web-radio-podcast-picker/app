@@ -203,16 +203,16 @@ app = {
         if (channel.sourceId == sourceId) return
         switch (sourceId) {
             case Source_Id_AudioInput:
-                this.setChannelSourceAudioInput(channel)
+                await this.setChannelSourceAudioInput(channel)
                 break
             case Source_Id_Ext:
-                this.setChannelSourceExt(channel)
+                await this.setChannelSourceExt(channel)
                 break
             case Source_Id_Generator:
-                this.setChannelSourceGenerator(channel)
+                await this.setChannelSourceGenerator(channel)
                 break
             case Source_Id_Math:
-                this.setChannelSourceMath(channel)
+                await this.setChannelSourceMath(channel)
                 break
         }
     },

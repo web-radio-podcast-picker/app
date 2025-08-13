@@ -11,10 +11,12 @@ class OscilloscopeView {
     run() {
         $('#stime').text(pround(app.frameAvgPeriod * 1000))
         $('#sfrq').text(fround(app.frameAvgFPS))
-        $('#buffsz').text(kilobyte(app.getInputChannel().analyzer.frequencyBinCount).text)
-        $('#echps').text(kilo(app.getInputChannel().analyzer.context.sampleRate).text)
         $('#vdiv').text(vround(settings.oscilloscope.vPerDiv) + 'V')
         $('#tdiv').text(tround(settings.oscilloscope.tPerDiv) + 'ms')
+        const inChannel = app.getInputChannel()
+        if (inChannel == null || inChannel.analyzer == null) return
+        $('#buffsz').text(kilobyte(inChannel.analyzer.frequencyBinCount).text)
+        $('#echps').text(kilo(inChannel.analyzer.context.sampleRate).text)
     }
 
 }
