@@ -16,28 +16,16 @@ publishBuffersTasks = {
             if ((!channel.pause
                 && !oscilloscope.pause)
                 || !channel.isDisplayed) {
-                if (channel.sourceId == Source_Id_AudioInput) {
+                if (channel.getSamplesTask != null) {
+                    channel.getSamplesTask.run()
                     channel.measures.setData(
-                        [...getSamplesTask.dataArray],
-                        [...getSamplesTask.fftDataArray],
-                        getSamplesTask.sampleRate,
-                        getSamplesTask.channelCount,
-                        getSamplesTask.minDb,
-                        getSamplesTask.maxDb
+                        channel.getSamplesTask.dataArray,
+                        channel.getSamplesTask.fftDataArray,
+                        channel.getSamplesTask.sampleRate,
+                        channel.getSamplesTask.channelCount,
+                        channel.getSamplesTask.minDb,
+                        channel.getSamplesTask.maxDb
                     )
-                }
-                else {
-                    if (channel.getSamplesTask != null) {
-                        channel.getSamplesTask.run()
-                        channel.measures.setData(
-                            [...channel.getSamplesTask.dataArray],
-                            [...channel.getSamplesTask.fftDataArray],
-                            channel.getSamplesTask.sampleRate,
-                            channel.getSamplesTask.channelCount,
-                            channel.getSamplesTask.minDb,
-                            channel.getSamplesTask.maxDb
-                        )
-                    }
                 }
             }
         })

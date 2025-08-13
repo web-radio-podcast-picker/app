@@ -96,7 +96,7 @@ oscilloscope = {
         channel.vScale = settings.output.vScale
         channel.generator.start()
         channel.getSamplesTask = new GetSamplesTask()
-            .init(channel.analyzer)
+            .init(channel)
     },
 
     setOut(channel, on) {
@@ -151,6 +151,8 @@ oscilloscope = {
 
             channel.streamSource.connect(channel.gain);
             channel.gain.connect(channel.analyzer);
+            channel.getSamplesTask = new GetSamplesTask()
+                .init(channel)
 
             if (settings.debug.info)
                 console.log("Input stream set", channel.analyzer)

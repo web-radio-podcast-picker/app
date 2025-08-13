@@ -124,7 +124,6 @@ app = {
 
     start() {
         // setup the tasks
-        getSamplesTask.init()
         channelsAnimationTask.init(this.oscilloscope)
         startViewTask.init(this.canvas)
 
@@ -135,8 +134,8 @@ app = {
             oscilloscope.frameStartCallback()
         })
 
-        // grab data
-        this.tasks.push(this.task(getSamplesTask))
+        // grab & publish data
+        this.tasks.push(this.task(getAnalyzersDataTasks))
         this.tasks.push(this.task(publishBuffersTasks))
         this.tasks.push(this.task(channelsMeasuresTask))
 
@@ -223,7 +222,6 @@ app = {
             Source_Id_AudioInput,
             audioInputDevice)
         this.audioInputChannel = channel
-        getSamplesTask.init()
     },
 
     getInputChannel() {

@@ -26,7 +26,7 @@ class Channel {
     fft = new FFT()
     markers = null              // channel markers
     audioContext = null         // audio context for processing
-    getSamplesTask = null       // samples provider if required
+    getSamplesTask = null       // samples provider if required (if has a source)
     out = false                 // true if channel is binded to audio output
     outMute = false             // if true out is mute due to pause
     outConnected = false

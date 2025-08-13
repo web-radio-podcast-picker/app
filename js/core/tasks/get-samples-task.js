@@ -22,8 +22,11 @@ class GetSamplesTask {
     minDb = null        // input min db
     maxDb = null        // input max db
 
-    init() {
-        this.analyzer = app.getInputChannel().analyzer
+    channel = null      // relative channel
+
+    init(channel) {
+        this.channel = channel
+        this.analyzer = channel.analyzer
         this.bufferLength = this.analyzer.frequencyBinCount
         this.dataArray = new Float32Array(this.bufferLength)
         this.channelCount = this.analyzer.channelCount
@@ -45,5 +48,3 @@ class GetSamplesTask {
         }
     }
 }
-
-const getSamplesTask = new GetSamplesTask()
