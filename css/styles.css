@@ -833,7 +833,7 @@ body.page-text {
 
 .page-layout {
     /*grid-template-rows: 11.5em Calc(93% - Calc(11.5em + 3em)) 3em;*/
-    grid-template-rows: 200px Calc(100% - Calc(200px + 6em)) 3em;
+    grid-template-rows: 200px Calc(100% - Calc(200px + 4em)) 4em;
     /*grid-template-rows: min-content 100% min-content;*/
     width: 100%;
     height: 100%;
