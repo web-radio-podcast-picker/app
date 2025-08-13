@@ -257,6 +257,7 @@ app = {
         if (channel == null)
             console.error('channel not found', channelId)
         else {
+            channel.deleteSource()
             ui.channels.removeControls(channel)
             oscilloscope.removeChannel(channel)
             this.requestAnimationFrame()
