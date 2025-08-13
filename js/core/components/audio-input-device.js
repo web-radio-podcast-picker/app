@@ -19,7 +19,8 @@ audioInputDevice = {
                 .getUserMedia({
                     audio: true,
                     video: false,
-                    /*sampleSize: 16384,
+                    /*sampleRate: 24000,
+                    sampleSize: 16384,
                     sampleRate: 96000,
                     channelCount: 1,*/
                 });
@@ -29,10 +30,10 @@ audioInputDevice = {
             }
 
             if (settings.debug.info)
-                console.log('Media stream obtained:', this.stream);
-            return this.stream;
+                console.log('Media stream obtained:', this.stream)
+            return this.stream
         } catch (err) {
-            console.error('Error accessing media devices.', err);
+            console.error('Error accessing media devices.', err)
         }
     }
 }

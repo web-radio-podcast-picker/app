@@ -45,7 +45,7 @@ page = {
         t[t.length - 2] = url
         t[t.length - 1] = ''
         t = t.slice(0, t.length - 1)
-        const u = t.join('/')
+        const u = t.join('/') + '?embed=true'
         if (p != null && !wnd)
             p.src = u
         else {
