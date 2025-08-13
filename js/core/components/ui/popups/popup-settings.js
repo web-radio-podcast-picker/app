@@ -172,7 +172,7 @@ class PopupSettings {
 
     setPopupTransparency() {
         const cl = 'max-opacity'
-        const $p = $('.popup-pane')
+        const $p = $('.popup')
         if (settings.ui.popupTransparency)
             $p.removeClass(cl)
         else
