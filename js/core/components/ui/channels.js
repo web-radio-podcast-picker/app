@@ -160,6 +160,9 @@ class Channels {
         const id = channel.channelId
         $('#channel_pane_' + id).remove()
         $('#s_channel_label_' + id).remove()
+        // remove trigger marker
+        if (channel.trigger.isOn)
+            channel.markers.removeTriggerControl()
     }
 
     getChannelIndex(channel) {
