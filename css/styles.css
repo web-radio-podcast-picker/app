@@ -937,6 +937,14 @@ h1 {
     font-size: 2em;
 }
 
+body.ipage h1 {
+    font-size: 1.5em;
+}
+
+body.ipage h2 {
+    font-size: 1.17em;
+}
+
 .button-screenshot {
     max-height: 2em;
     vertical-align: middle;
