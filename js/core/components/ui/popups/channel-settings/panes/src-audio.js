@@ -62,7 +62,7 @@ class ChannelSettingsPaneSrcAudio {
                 {
                     onPostChanged: (v) => this.setGain(v),
                     input: {
-                        delta: 0.1,
+                        delta: 10,
                         min: 0,
                         max: null
                     }
