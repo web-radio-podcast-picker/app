@@ -7,32 +7,25 @@
 class InputWidgets {
 
     $inputWidget = null           // input widget if any
-    $inputWidgetLabel = null      // input widget label of edited control if any
     inputWidgetControlId = null   // input widget binded edited control id if any
 
     closeInputWidget() {
         if (this.$inputWidget != null) {
             this.close(
                 this.$inputWidget,
-                this.inputWidgetControlId,
-                this.$inputWidgetLabel)
+                this.inputWidgetControlId)
         }
     }
 
     close(
         $inputWidget,
-        inputWidgetControlId,
-        $inputWidgetLabel) {
+        inputWidgetControlId) {
         // must bkp inputs props
         const binding = ui.bindings.getBinding(inputWidgetControlId)
         binding.props_bkp = deepClone(binding.props)
         // remove & destroy controls
         $inputWidget.remove()
-        $inputWidget = null
-        if ($inputWidgetLabel != null) {
-            $inputWidgetLabel.toggleClass('opt-label-selected')
-            $inputWidgetLabel = null
-        }
+        this.$inputWidget = this.inputWidgetControlId = null
     }
 
     openInputWidget(controlId, opts) {
@@ -57,31 +50,10 @@ class InputWidgets {
         var nxCol = 2
 
         const $p = $c.parent()
-        var tc = $i.attr('class').split(' ')
-        var isRow = false
-        var row = -1
-        tc.forEach(c => {
-            if (c.startsWith('gr')) {
-                isRow = true
-                row = parseInt(c.substring(2))
-            }
-        })
-        const $optPane = isRow ? $p : $p.parent()
-        if (!isRow) {
-            tc = $p.attr('class').split(' ')
-            tc.forEach(c => {
-                if (c.startsWith('gr'))
-                    row = parseInt(c.substring(2))
-            })
-        }
-        const $label = $optPane.find('.gr' + row + '.gc1')
-        $label.toggleClass('opt-label-selected')
-        this.$inputWidgetLabel = $label
-
         const pid = $p.attr('id')
         const hasUnit = pid == null || !pid.startsWith('opts_')
         if (hasUnit) {
-            const $u = $c.parent().find('.unit').clone()
+            const $u = $p.find('.unit').clone()
             $u.addClass('unit-big')
             $u.css('grid-column', nxCol)
             $u.css('grid-row', 1)
