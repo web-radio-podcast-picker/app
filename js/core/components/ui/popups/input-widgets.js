@@ -27,222 +27,222 @@ class InputWidgets {
         const binding = ui.bindings.getBinding(inputWidgetControlId)
         binding.props_bkp = deepClone(binding.props)
         // remove & destroy controls
-        $inputWidget.remove();
-        $inputWidget = null;
+        $inputWidget.remove()
+        $inputWidget = null
         if ($inputWidgetLabel != null) {
-            $inputWidgetLabel.toggleClass('opt-label-selected');
-            $inputWidgetLabel = null;
+            $inputWidgetLabel.toggleClass('opt-label-selected')
+            $inputWidgetLabel = null
         }
     }
 
     openInputWidget(controlId, opts) {
-        const t = this;
-        this.closeInputWidget();
-        const $c = $('#' + controlId);
-        const $w = $('#input_widget').clone();
-        const $cnt = $w.find('#iw_vpane');
+        const t = this
+        this.closeInputWidget()
+        const $c = $('#' + controlId)
+        const $w = $('#input_widget').clone()
+        const $cnt = $w.find('#iw_vpane')
         this.inputWidgetControlId = controlId
         const binding = ui.bindings.getBinding(controlId)
-        const props = binding.props;
+        const props = binding.props
         binding.props_bkp = deepClone(binding.props)
-        props.input.iniDelta = props.input.delta;
+        props.input.iniDelta = props.input.delta
 
         // input,unit,label
 
-        const $i = $c.clone();
-        $i.attr('id', null);
-        $i.css('width', props.digits / 1.5 + 'em');
-        $i.css('grid-column', 1);
-        $i.css('grid-row', 1);
-        var nxCol = 2;
+        const $i = $c.clone()
+        $i.attr('id', null)
+        $i.css('width', props.digits / 1.5 + 'em')
+        $i.css('grid-column', 1)
+        $i.css('grid-row', 1)
+        var nxCol = 2
 
-        const $p = $c.parent();
-        var tc = $i.attr('class').split(' ');
-        var isRow = false;
-        var row = -1;
+        const $p = $c.parent()
+        var tc = $i.attr('class').split(' ')
+        var isRow = false
+        var row = -1
         tc.forEach(c => {
             if (c.startsWith('gr')) {
-                isRow = true;
-                row = parseInt(c.substring(2));
+                isRow = true
+                row = parseInt(c.substring(2))
             }
-        });
-        const $optPane = isRow ? $p : $p.parent();
+        })
+        const $optPane = isRow ? $p : $p.parent()
         if (!isRow) {
-            tc = $p.attr('class').split(' ');
+            tc = $p.attr('class').split(' ')
             tc.forEach(c => {
                 if (c.startsWith('gr'))
-                    row = parseInt(c.substring(2));
-            });
+                    row = parseInt(c.substring(2))
+            })
         }
-        const $label = $optPane.find('.gr' + row + '.gc1');
-        $label.toggleClass('opt-label-selected');
-        this.$inputWidgetLabel = $label;
+        const $label = $optPane.find('.gr' + row + '.gc1')
+        $label.toggleClass('opt-label-selected')
+        this.$inputWidgetLabel = $label
 
-        const pid = $p.attr('id');
-        const hasUnit = pid == null || !pid.startsWith('opts_');
+        const pid = $p.attr('id')
+        const hasUnit = pid == null || !pid.startsWith('opts_')
         if (hasUnit) {
-            const $u = $c.parent().find('.unit').clone();
-            $u.addClass('unit-big');
-            $u.css('grid-column', nxCol);
-            $u.css('grid-row', 1);
-            nxCol++;
-            $u.attr('id', null);
-            $cnt.prepend($u);
+            const $u = $c.parent().find('.unit').clone()
+            $u.addClass('unit-big')
+            $u.css('grid-column', nxCol)
+            $u.css('grid-row', 1)
+            nxCol++
+            $u.attr('id', null)
+            $cnt.prepend($u)
         }
-        $cnt.prepend($i);
+        $cnt.prepend($i)
 
         // buttons ok,cancel
 
         const validate = (close) => {
-            const val = $i.val();
-            ui.bindings.updateBindingSourceAndTarget(controlId, val);
-            binding.props.input.value = val;
+            const val = $i.val()
+            ui.bindings.updateBindingSourceAndTarget(controlId, val)
+            binding.props.input.value = val
             if (close == null || close == true)
-                t.closeInputWidget();
-        };
+                t.closeInputWidget()
+        }
 
-        const $butOk = $w.find('#btn_valid_ok');
-        const $butCancel = $w.find('#btn_valid_cancel');
+        const $butOk = $w.find('#btn_valid_ok')
+        const $butCancel = $w.find('#btn_valid_cancel')
         $butOk.on('click', () => {
-            validate();
+            validate()
             binding.props.input.value = $i.val()
-        });
+        })
         $butCancel.on('click', () => {
             binding.props = deepClone(binding.props_bkp)
             $i.val(binding.props.input.value)
             $inDel.val(binding.props.input.delta)
-            validate(false);
-            t.closeInputWidget();
-        });
-        $butOk.attr('id', null);
-        $butCancel.attr('id', null);
+            validate(false)
+            t.closeInputWidget()
+        })
+        $butOk.attr('id', null)
+        $butCancel.attr('id', null)
 
         // buttons +,-
 
         const checkRange = (nv) => {
             return (props.input.min == null || nv > props.input.min)
-                && (props.input.max == null || nv < props.input.max);
+                && (props.input.max == null || nv < props.input.max)
         }
 
         const getInpVal = () => {
-            const $val = $i.val();
-            var v = parseFloat($val);
-            v = vround(v);
-            return v;
+            const $val = $i.val()
+            var v = parseFloat($val)
+            v = vround(v)
+            return v
         }
 
         const incDecValue = (sign) => {
-            var v = getInpVal();
+            var v = getInpVal()
 
-            var nv = v + sign * props.input.delta;
-            nv = vround(nv);
-            nv = parseFloat(nv);
+            var nv = v + sign * props.input.delta
+            nv = vround(nv)
+            nv = parseFloat(nv)
 
             if (checkRange(nv)) {
-                $i.val(nv);
-                validate(false);
+                $i.val(nv)
+                validate(false)
             }
         }
 
-        const $butPlus = $w.find('#btn_input_plus');
-        const $butMinus = $w.find('#btn_input_minus');
+        const $butPlus = $w.find('#btn_input_plus')
+        const $butMinus = $w.find('#btn_input_minus')
         $butPlus.on('click', () => {
-            incDecValue(1);
-        });
+            incDecValue(1)
+        })
         $butMinus.on('click', () => {
-            incDecValue(-1);
-        });
+            incDecValue(-1)
+        })
 
         // input
 
         const validateOrRestore = () => {
-            const v = getInpVal();
-            const chk = !checkRange(v);
+            const v = getInpVal()
+            const chk = !checkRange(v)
             if (chk) {
-                const iv = $i.attr('data-inival');
-                $i.val(iv);
-                $i.attr(props.attr, iv);
+                const iv = $i.attr('data-inival')
+                $i.val(iv)
+                $i.attr(props.attr, iv)
             }
-            return chk;
+            return chk
         }
 
         $i.on('change', () => {
-            validateOrRestore();
-            validate(false);
-        });
+            validateOrRestore()
+            validate(false)
+        })
         $i.on('keydown', (e) => {
             if (e.key === 'Enter') {
-                e.preventDefault();
-                const chk = validateOrRestore();
+                e.preventDefault()
+                const chk = validateOrRestore()
                 if (!chk)
-                    validate();
+                    validate()
             }
-        });
+        })
 
         // delta input: buttons +,-,*,/
 
-        const $inDel = $w.find('#iw_delta');
+        const $inDel = $w.find('#iw_delta')
 
         const dIncDecMulDivValue = (sign, factor) => {
-            const $val = $inDel.val();
-            var nv = parseFloat($val);
-            nv += sign * props.input.iniDelta;
-            nv *= factor;
-            nv = vround(nv);
-            nv = parseFloat(nv);
+            const $val = $inDel.val()
+            var nv = parseFloat($val)
+            nv += sign * props.input.iniDelta
+            nv *= factor
+            nv = vround(nv)
+            nv = parseFloat(nv)
             if (nv > 0) {
-                $inDel.val(nv);
-                props.input.delta = nv;
-                validate(false);
+                $inDel.val(nv)
+                props.input.delta = nv
+                validate(false)
             }
         }
 
-        $inDel.val(props.input.delta);
-        const $butDPlus = $w.find('#btn_iw_delta_plus');
-        const $butDMinus = $w.find('#btn_iw_delta_minus');
-        const $butDMul = $w.find('#btn_iw_delta_mul');
-        const $butDDiv = $w.find('#btn_iw_delta_div');
+        $inDel.val(props.input.delta)
+        const $butDPlus = $w.find('#btn_iw_delta_plus')
+        const $butDMinus = $w.find('#btn_iw_delta_minus')
+        const $butDMul = $w.find('#btn_iw_delta_mul')
+        const $butDDiv = $w.find('#btn_iw_delta_div')
 
         $butDPlus.on('click', () => {
-            dIncDecMulDivValue(1, 1);
-        });
+            dIncDecMulDivValue(1, 1)
+        })
         $butDMinus.on('click', () => {
-            dIncDecMulDivValue(-1, 1);
-        });
+            dIncDecMulDivValue(-1, 1)
+        })
         $butDMul.on('click', () => {
-            dIncDecMulDivValue(0, 10);
-        });
+            dIncDecMulDivValue(0, 10)
+        })
         $butDDiv.on('click', () => {
-            dIncDecMulDivValue(0, 0.1);
-        });
+            dIncDecMulDivValue(0, 0.1)
+        })
 
         // add to dom and place
 
-        $('body').append($w);
+        $('body').append($w)
         const $controlTarget =
             (opts != null && opts.targetControlId != null) ?
-                $('#' + opts.targetControlId) : $c;
-        var pos = $controlTarget.offset();
+                $('#' + opts.targetControlId) : $c
+        var pos = $controlTarget.offset()
         var vs = cui.viewSize()
 
         const setPos = (pos) => {
-            $w.css('left', pos.left);
-            $w.css('top', pos.top);
+            $w.css('left', pos.left)
+            $w.css('top', pos.top)
         }
-        setPos(pos);
-        $w.removeClass('hidden');
+        setPos(pos)
+        $w.removeClass('hidden')
 
         const ww = $w.width()
         const wh = $w.height()
         if (ww + pos.left >= vs.width)
-            pos.left = vs.width - ww - settings.ui.menuContainerWidth;
+            pos.left = vs.width - ww - settings.ui.menuContainerWidth
         if (wh + pos.top >= vs.height)
-            pos.top = vs.height - wh;
-        setPos(pos);
+            pos.top = vs.height - wh
+        setPos(pos)
 
-        $i.focus();
-        $i.select();
+        $i.focus()
+        $i.select()
 
-        this.$inputWidget = $w;
+        this.$inputWidget = $w
     }
 }

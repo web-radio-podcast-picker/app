@@ -14,8 +14,8 @@ class Bindings {
         // Initialize bindings for UI controls
         this.bindings.forEach(b => {
             if (b.init != null)
-                b.init();
-        });
+                b.init()
+        })
         app.updateDisplay()
     }
 
@@ -36,64 +36,64 @@ class Bindings {
                 min: 0,
                 max: null
             }
-        };
-        const res = t = null ? r : { ...r, ...t };
+        }
+        const res = t = null ? r : { ...r, ...t }
         if (res.input.min == null)
-            res.input.min = 0;
-        return res;
+            res.input.min = 0
+        return res
     }
 
     bind(binding) {
-        const { controlId, valuePath, sym, onChanged, onPostChanged, onInit, readOnly, unit, attr, digits } = binding;
+        const { controlId, valuePath, sym, onChanged, onPostChanged, onInit, readOnly, unit, attr, digits } = binding
         if (readOnly == null)
-            readOnly = false;
-        const $c = $('#' + controlId);
+            readOnly = false
+        const $c = $('#' + controlId)
 
         if (readOnly) {
-            $c.addClass('read-only');
-            $c.attr('readonly', '');
+            $c.addClass('read-only')
+            $c.attr('readonly', '')
         } else {
             // input widget
             $c.on('click', () => {
-                ui.inputWidgets.openInputWidget(controlId);
+                ui.inputWidgets.openInputWidget(controlId)
             })
         }
 
-        const t = this;
+        const t = this
         const init = ($ctrl) => {
-            const $o = $c;
-            if ($ctrl == null) $ctrl = $o;
+            const $o = $c
+            if ($ctrl == null) $ctrl = $o
             // initial value
             if (onInit == null) {
 
-                const tv = xeval(valuePath);
+                const tv = xeval(valuePath)
                 if (tv.success) {
                     const v = tv.value + unit
                     if (attr == 'text')
                         $ctrl.text(v)
                     else
-                        $ctrl.attr(attr, v);
-                    $ctrl.val(v);
-                    $ctrl.attr('data-inival', v);
+                        $ctrl.attr(attr, v)
+                    $ctrl.val(v)
+                    $ctrl.attr('data-inival', v)
                     binding.input.value = v
                 }
             }
             else
-                onInit();
+                onInit()
         }
         app.addOnStartUI(() => {
-            init($c);
+            init($c)
         })
 
         var onChange = () => {
-            const v = $c.val();
+            const v = $c.val()
             const s = (sym == null)
-                ? '' : sym;
+                ? '' : sym
             if (onChanged != null)
-                onChanged();
+                onChanged()
             else {
                 try {
-                    eval(valuePath + '=' + s + v + s);
+                    eval(valuePath + '=' + s + v + s)
                     if (onPostChanged != null)
                         onPostChanged(v)
                 } catch (err) {
@@ -102,38 +102,38 @@ class Bindings {
                         console.log(err)
                 }
             }
-            app.updateDisplay();
+            app.updateDisplay()
         }
 
         this.initBindedControls()
 
         if (!readOnly) {
             $c.on('change', () => {
-                onChange();
-            });
+                onChange()
+            })
         }
 
-        this.bindings.push({ init: init, onChange: onChange, props: binding });
+        this.bindings.push({ init: init, onChange: onChange, props: binding })
         return ui
     }
 
     getBinding(controlId) {
-        var r = null;
+        var r = null
         this.bindings.forEach(b => {
             if (b.props.controlId == controlId) {
-                r = b;
+                r = b
             }
-        });
-        return r;
+        })
+        return r
     }
 
     updateBindingSourceAndTarget(controlId, value) {
-        const binding = this.getBinding(controlId);
-        const $c = $('#' + controlId);
-        $c.attr('value', value);
-        $c.attr('data-inival', value);
-        $c.val(value);
-        binding.onChange();
+        const binding = this.getBinding(controlId)
+        const $c = $('#' + controlId)
+        $c.attr('value', value)
+        $c.attr('data-inival', value)
+        $c.val(value)
+        binding.onChange()
         return this
     }
 
