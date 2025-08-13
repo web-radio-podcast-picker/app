@@ -661,6 +661,10 @@ div.popup-grid > span.menu-item {
     background-color: #00008BAA !important;
 }
 
+.max-opacity {
+    opacity: 1 !important;
+}
+
 .no-pointer {
     cursor: default;
 }
@@ -915,7 +919,15 @@ li {
 }
 
 .app-link {
-    font-size: 1.5em;
+    font-size: 1.5em !important;
+}
+
+.onoff-line-height {
+    line-height: 3em !important;
+}
+
+.onoff-small-height {
+    line-height: 2em !important;
 }
 
 iframe {

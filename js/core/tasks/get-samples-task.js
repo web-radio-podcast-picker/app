@@ -40,8 +40,12 @@ class GetSamplesTask {
 
     run() {
         if (this.analyzer != null) {
-            this.analyzer.getFloatTimeDomainData(this.dataArray)
-            this.analyzer.getFloatFrequencyData(this.fftDataArray)
+            if ((!this.channel.pause
+                && !oscilloscope.pause)
+                || !this.channel.isDisplayed) {
+                this.analyzer.getFloatTimeDomainData(this.dataArray)
+                this.analyzer.getFloatFrequencyData(this.fftDataArray)
+            }
         } else {
             console.error("Analyzer not initialized")
             return;

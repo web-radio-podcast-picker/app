@@ -174,7 +174,8 @@ window.settings = {
         buttonBarRelY: - 42 - 7 * 7 + 5 * 7,
         compactDisplayMaxHeight: 600,
         introPopupDelay: 4000,      // ms
-        fadeOutDelay: 1000
+        fadeOutDelay: 1000,
+        popupTransparency: true
     }
 
 }

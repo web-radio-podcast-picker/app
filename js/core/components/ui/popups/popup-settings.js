@@ -56,6 +56,9 @@ class PopupSettings {
                 'opt_os_menuContainerWidth',
                 'settings.ui.menuContainerWidth',
                 refreshOnUpdate))
+            .toggles.initToggle('opt_os_ppTrans',
+                () => this.setPopupTransparency(),
+                'settings.ui.popupTransparency')
 
             // input
             .bindings.bind(ui.bindings.binding(
@@ -77,7 +80,8 @@ class PopupSettings {
                 'opt_os_audio_source',
                 'audioInputDevice.label',
                 {
-                    attr: 'text'
+                    attr: 'text',
+                    ...readOnly
                 }))
 
             // output
@@ -163,5 +167,15 @@ class PopupSettings {
             $('#btn_os_tgl').text(this.tabGroupIndex == 1 ? '▼' : '▲');
         })
 
+        this.setPopupTransparency()
+    }
+
+    setPopupTransparency() {
+        const cl = 'max-opacity'
+        const $p = $('.popup-pane')
+        if (settings.ui.popupTransparency)
+            $p.removeClass(cl)
+        else
+            $p.addClass(cl)
     }
 }

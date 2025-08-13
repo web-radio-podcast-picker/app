@@ -82,6 +82,7 @@ class Toggles {
             if (onChange != undefined && onChange != null) onChange($c)
         })
         this.toggles.push(controlId)
+        this.updateToggle(controlId)
         return ui
     }
 }
