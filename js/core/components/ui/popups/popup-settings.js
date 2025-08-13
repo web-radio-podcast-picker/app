@@ -60,7 +60,7 @@ class PopupSettings {
             // input
             .bindings.bind(ui.bindings.binding(
                 'opt_os_smpfrqcy',
-                'app.audioInputChannel.streamSource.context.sampleRate',
+                'app.getInputChannel().streamSource.context.sampleRate',
                 readOnly))
             .bindings.bind(ui.bindings.binding(
                 'opt_os_inputChannelsCount',
@@ -68,7 +68,7 @@ class PopupSettings {
                 readOnly))
             .bindings.bind(ui.bindings.binding(
                 'opt_os_frequencyBinCount',
-                'app.audioInputChannel.analyzer.frequencyBinCount',
+                'app.getInputChannel().analyzer.frequencyBinCount',
                 readOnly))
             .bindings.bind(ui.bindings.binding(
                 'opt_os_inputVscale',
@@ -83,11 +83,11 @@ class PopupSettings {
             // output
             .bindings.bind(ui.bindings.binding(
                 'opt_os_outputChannelsCount',
-                'app.audioInputChannel.analyzer.context.destination.maxChannelCount',
+                'app.getInputChannel().analyzer.context.destination.maxChannelCount',
                 readOnly))
             .bindings.bind(ui.bindings.binding(
                 'opt_os_channelInterpretation',
-                'app.audioInputChannel.analyzer.context.destination.channelInterpretation',
+                'app.getInputChannel().analyzer.context.destination.channelInterpretation',
                 readOnly))
             .bindings.bind(ui.bindings.binding(
                 'opt_os_outputVscale',

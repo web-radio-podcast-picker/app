@@ -42,11 +42,11 @@ class ChannelSettingsPaneSrcAudio {
             )
             .bindings.bind(ui.bindings.binding(
                 'opt_ch_os_smpfrqcy',
-                'app.audioInputChannel.streamSource.context.sampleRate',
+                'app.getInputChannel().streamSource.context.sampleRate',
                 readOnly))
             .bindings.bind(ui.bindings.binding(
                 'opt_ch_os_frequencyBinCount',
-                'app.audioInputChannel.analyzer.frequencyBinCount',
+                'app.getInputChannel().analyzer.frequencyBinCount',
                 readOnly))
             .bindings.bind(ui.bindings.binding(
                 'opt_ch_os_inputChannelsCount',

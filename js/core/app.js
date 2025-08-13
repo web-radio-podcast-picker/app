@@ -124,7 +124,7 @@ app = {
 
     start() {
         // setup the tasks
-        getSamplesTask.init(this.audioInputChannel.analyzer)
+        getSamplesTask.init()
         channelsAnimationTask.init(this.oscilloscope)
         startViewTask.init(this.canvas)
 
@@ -222,6 +222,10 @@ app = {
             channel,
             Source_Id_AudioInput,
             audioInputDevice)
+    },
+
+    getInputChannel() {
+        return this.audioInputChannel
     },
 
     async setChannelSourceExt(channel) {

@@ -22,9 +22,9 @@ class GetSamplesTask {
     minDb = null        // input min db
     maxDb = null        // input max db
 
-    init(analyzer) {
-        this.analyzer = analyzer;
-        this.bufferLength = this.analyzer.frequencyBinCount;
+    init() {
+        this.analyzer = app.getInputChannel().analyzer
+        this.bufferLength = this.analyzer.frequencyBinCount
         this.dataArray = new Float32Array(this.bufferLength)
         this.channelCount = this.analyzer.channelCount
         this.fftLength = this.analyzer.fftSize / this.channelCount
@@ -37,10 +37,10 @@ class GetSamplesTask {
 
     run() {
         if (this.analyzer != null) {
-            this.analyzer.getFloatTimeDomainData(this.dataArray);
-            this.analyzer.getFloatFrequencyData(this.fftDataArray);
+            this.analyzer.getFloatTimeDomainData(this.dataArray)
+            this.analyzer.getFloatFrequencyData(this.fftDataArray)
         } else {
-            console.error("Analyzer not initialized");
+            console.error("Analyzer not initialized")
             return;
         }
     }

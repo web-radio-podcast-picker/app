@@ -11,8 +11,8 @@ class OscilloscopeView {
     run() {
         $('#stime').text(pround(app.frameAvgPeriod * 1000))
         $('#sfrq').text(fround(app.frameAvgFPS))
-        $('#buffsz').text(kilobyte(app.audioInputChannel.analyzer.frequencyBinCount).text)
-        $('#echps').text(kilo(app.audioInputChannel.analyzer.context.sampleRate).text)
+        $('#buffsz').text(kilobyte(app.getInputChannel().analyzer.frequencyBinCount).text)
+        $('#echps').text(kilo(app.getInputChannel().analyzer.context.sampleRate).text)
         $('#vdiv').text(vround(settings.oscilloscope.vPerDiv) + 'V')
         $('#tdiv').text(tround(settings.oscilloscope.tPerDiv) + 'ms')
     }
