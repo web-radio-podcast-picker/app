@@ -163,6 +163,8 @@ class Channels {
         // remove trigger marker
         if (channel.trigger.isOn)
             channel.markers.removeTriggerControl()
+        // hide settings panel if opened
+        this.popupSettings.hideChannelSettings(channel)
     }
 
     getChannelIndex(channel) {
