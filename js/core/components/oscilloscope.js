@@ -127,10 +127,12 @@ oscilloscope = {
 
     async initChannelForSource(channel, sourceId, source) {
         channel.deleteSource()
-        channel.sourceId = sourceId
         channel.source = source
+
         if (channel.source != null)
             channel.stream = await channel.source.getMediaStream()
+
+        channel.sourceId = sourceId
         if (sourceId == Source_Id_AudioInput)
             channel.vScale = settings.audioInput.vScale
 

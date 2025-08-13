@@ -222,6 +222,8 @@ app = {
             channel,
             Source_Id_AudioInput,
             audioInputDevice)
+        this.audioInputChannel = channel
+        getSamplesTask.init()
     },
 
     getInputChannel() {
