@@ -91,6 +91,7 @@
     <script src="./js/core/components/ui/popups/channel-settings/panes/src-audio.js"></script>
     <script src="./js/core/components/ui/popups/channel-settings/panes/src-ext.js"></script>
     <script src="./js/core/components/ui/popups/channel-settings/panes/src-gen.js"></script>
+    <script src="./js/core/components/ui/popups/channel-settings/panes/src-media.js"></script>
     <script src="./js/core/components/ui/popups/channel-settings/panes/src-math.js"></script>
     <script src="./js/core/components/ui/popups/channel-settings/panes/disp.js"></script>
     <script src="./js/core/components/ui/popups/channel-settings/panes/trig.js"></script>
@@ -443,6 +444,7 @@
             <span id="btn_ch_src_audio" class="menu-item menu-item-blue">Audio Input</span>
             <span id="btn_ch_src_ext" class="menu-item menu-item-blue menu-item-disabled">Ext</span>
             <span id="btn_ch_src_gen" class="menu-item menu-item-blue">Generator</span>
+            <span id="btn_ch_src_media" class="menu-item menu-item-blue">Media</span>
             <span id="btn_ch_src_math" class="menu-item menu-item-blue">Math</span>
 
             <div class="channel-menu-pane-horiz-separator bottom-dpadding"></div>
@@ -536,6 +538,15 @@
                     <div class="gr4 gc5">
 
                     </div>
+                </div>
+            </div>
+
+            <!-- src media -->
+            <div id="opts_ch_src_media" class="channel-opts-pane hidden">
+                <div class="row opt">
+                    <span id="btn_ch_src_media_onoff" class="label channel-label on-off-label off">OFF</span>
+                    <span class="opt-label no-padding-left">URL</span>
+                    <input id="opt_ch_media_url" class="opt-value-edit math-expr no-margin"></input>
                 </div>
             </div>
 

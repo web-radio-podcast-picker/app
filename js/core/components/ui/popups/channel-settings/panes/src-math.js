@@ -5,6 +5,7 @@
 */
 
 // channel settings pane SRC MATH
+
 class ChannelSettingsPaneSrcMath {
 
     me = new MathExpr().init()

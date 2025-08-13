@@ -5,6 +5,7 @@
 */
 
 // channel settings pane SRC AUDIO
+
 class ChannelSettingsPaneSrcAudio {
 
     channelSettings = null
@@ -14,6 +15,7 @@ class ChannelSettingsPaneSrcAudio {
         [Source_Id_AudioInput, 'btn_ch_src_audio'],
         [Source_Id_Ext, 'btn_ch_src_ext'],
         [Source_Id_Generator, 'btn_ch_src_gen'],
+        [Source_Id_Media, 'btn_ch_src_media'],
         [Source_Id_Math, 'btn_ch_src_math'],
     ]
 

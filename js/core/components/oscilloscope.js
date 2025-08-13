@@ -120,6 +120,11 @@ oscilloscope = {
         channel.sourceId = sourceId
     },
 
+    initChannelForMedia(channel, sourceId) {
+        channel.deleteSource()
+        channel.sourceId = sourceId
+    },
+
     initChannelForNone(channel) {
         channel.deleteSource()
         channel.sourceId = Source_Id_None

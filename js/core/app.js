@@ -210,6 +210,9 @@ app = {
             case Source_Id_Generator:
                 await this.setChannelSourceGenerator(channel)
                 break
+            case Source_Id_Media:
+                await this.setChannelSourceMedia(channel)
+                break
             case Source_Id_Math:
                 await this.setChannelSourceMath(channel)
                 break
@@ -237,11 +240,17 @@ app = {
             Source_Id_Generator)
     },
 
+    async setChannelSourceMedia(channel) {
+        await oscilloscope.initChannelForMedia(
+            channel,
+            Source_Id_Media,
+            null)
+    },
+
     async setChannelSourceMath(channel) {
         await oscilloscope.initChannelForMath(
             channel,
-            Source_Id_Math,
-            null)
+            Source_Id_Math)
     },
 
     async addChannel() {

@@ -13,6 +13,7 @@ class PopupChannelSettings {
     paneSrcAudio = new ChannelSettingsPaneSrcAudio()
     paneSrcExt = new ChannelSettingsPaneSrcExt()
     paneSrcGen = new ChannelSettingsPaneSrcGen()
+    paneSrcMedia = new ChannelSettingsPaneSrcMedia()
     paneSrcMath = new ChannelSettingsPaneSrcMath()
     paneDisp = new ChannelSettingsPaneDisp()
     paneTrig = new ChannelSettingsPaneTrig()
@@ -46,6 +47,7 @@ class PopupChannelSettings {
         this.paneSrcAudio.init(this)
         this.paneSrcExt.init(this)
         this.paneSrcGen.init(this)
+        this.paneSrcMedia.init(this)
         this.paneSrcMath.init(this)
         this.paneDisp.init(this)
         this.paneTrig.init(this)
@@ -64,6 +66,7 @@ class PopupChannelSettings {
 
         this.paneSrcAudio.setup(channel)
         this.paneSrcGen.setup(channel)
+        this.paneSrcMedia.setup(channel)
         this.paneTrig.setup(channel)
 
         ui.toggles.updateToggles()
@@ -94,6 +97,7 @@ class PopupChannelSettings {
     updatePause(channel) {
         this.paneSrcAudio.updatePause()
         this.paneSrcGen.updatePause()
+        this.paneSrcMedia.updatePause()
         this.paneSrcMath.updatePause()
         this.paneOut.updateOn()
     }

@@ -176,6 +176,12 @@ window.settings = {
         introPopupDelay: 4000,      // ms
         fadeOutDelay: 1000,
         popupTransparency: true
+    },
+
+    media: {
+        demo: {
+            StereoAudioMediaURL: ''
+        }
     }
 
 }
