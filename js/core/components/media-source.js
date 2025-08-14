@@ -23,6 +23,9 @@ class MediaSource {
     createAudioSource(audioContext, url) {
         this.deleteSource()
         this.audio = new Audio()
+        this.audio.addEventListener('loadedmetadata', () => {
+            console.log('Metadata loaded:', this.audio.src)
+        });
         this.audio.crossOrigin = "anonymous"
         this.source = audioContext.createMediaElementSource(this.audio)
         this.audio.src = url
