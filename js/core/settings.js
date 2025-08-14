@@ -185,12 +185,19 @@ window.settings = {
                 'https://knkx-live-a.edge.audiocdn.com/6285_128k',
                 // rock
                 'https://corus.leanstream.co/CJKRFM-MP3',
-                // reggea
+                // reggae
                 'http://hestia2.cdnstream.com/1301_128',
                 // mixed styles
                 'https://mixed-choize.stream.laut.fm/mixed-choize',
                 // 70
-                'http://stream.dbmedia.se/gk70talMP3'
+                'http://stream.dbmedia.se/gk70talMP3',
+                // pop
+                'http://ice.stream.frequence3.net/frequence3ac-128.mp3',
+                // Turk
+                'https://live.radyositesihazir.com:10997/stream?type=http&nocache=99881',
+                // Chinese
+                'http://lhttp.qingting.fm/live/5022521/64k.mp3',
+                'http://lhttp.qingting.fm/live/15318194/64k.mp3'
             ],
             stereoAudioMediaURL: 'https://knkx-live-a.edge.audiocdn.com/6285_128k'
             // tests
@@ -198,8 +205,12 @@ window.settings = {
             //stereoAudioMediaURL: 'https://www.youtube.com/watch?v=5cPdog1ZB48&ab_channel=EWUBodycam'   NOPE: unaceppted CORS (null) from YT
             //stereoAudioMediaURL: './audio/chrono.mp3'     NOPE: CORS fail -null) coz no cors unapplyable to file://
         }
-    }
+    },
 
+    // modules settings by modules ids
+    modules: {
+
+    }
 }
 
 if (settings.debug.info)
