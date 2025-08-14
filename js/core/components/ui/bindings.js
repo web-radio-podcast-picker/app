@@ -35,7 +35,8 @@ class Bindings {
                 delta: 1,
                 min: 0,
                 max: null
-            }
+            },
+            disableInputWidget: false
         }
         const res = t = null ? r : { ...r, ...t }
         if (res.input.min == null)
@@ -44,7 +45,7 @@ class Bindings {
     }
 
     bind(binding) {
-        const { controlId, valuePath, sym, onChanged, onPostChanged, onInit, readOnly, unit, attr, digits } = binding
+        const { controlId, valuePath, sym, onChanged, onPostChanged, onInit, readOnly, unit, attr, digits, disableInputWidget } = binding
         if (readOnly == null)
             readOnly = false
         const $c = $('#' + controlId)
@@ -55,7 +56,8 @@ class Bindings {
         } else {
             // input widget
             $c.on('click', () => {
-                ui.inputWidgets.openInputWidget(controlId)
+                if (!disableInputWidget)
+                    ui.inputWidgets.openInputWidget(controlId)
             })
         }
 
@@ -99,7 +101,7 @@ class Bindings {
                 } catch (err) {
                     // ignore or debug
                     if (settings.debug.debug)
-                        console.log(err)
+                        console.log(err, binding)
                 }
             }
             app.updateDisplay()

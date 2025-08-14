@@ -180,7 +180,19 @@ window.settings = {
 
     media: {
         demo: {
-            StereoAudioMediaURL: ''
+            radiosUrls: [
+                // jazz
+                'https://knkx-live-a.edge.audiocdn.com/6285_128k',
+                // rock
+                'https://corus.leanstream.co/CJKRFM-MP3',
+                // reggea
+                'http://hestia2.cdnstream.com/1301_128'
+            ],
+            stereoAudioMediaURL: 'https://knkx-live-a.edge.audiocdn.com/6285_128k'
+            // tests
+            //stereoAudioMediaURL: 'https://webaudioapi.com/samples/audio-tag/chrono.mp3'
+            //stereoAudioMediaURL: 'https://www.youtube.com/watch?v=5cPdog1ZB48&ab_channel=EWUBodycam'   NOPE: unaceppted CORS (null) from YT
+            //stereoAudioMediaURL: './audio/chrono.mp3'     NOPE: CORS fail -null) coz no cors unapplyable to file://
         }
     }
 

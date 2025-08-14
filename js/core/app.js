@@ -247,6 +247,26 @@ app = {
             null)
     },
 
+    playChannelMedia(channel) {
+        if (channel.pause || oscilloscope.pause) return
+        oscilloscope.setOut(channel, true)
+        channel.mediaSource.play()
+            .catch(err => {
+                ui.showError(err)
+            })
+    },
+
+    updateChannelMedia(channel, url) {
+        if (channel.pause || oscilloscope.pause) return
+        //oscilloscope.setOut(channel, false)
+        try {
+            channel.mediaSource.audio.src = url
+            this.playChannelMedia(channel)
+        } catch (err) {
+            ui.error(err)
+        }
+    },
+
     async setChannelSourceMath(channel) {
         await oscilloscope.initChannelForMath(
             channel,

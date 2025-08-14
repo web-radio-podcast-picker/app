@@ -16,6 +16,7 @@ class Channel {
     sourceId = null            // source id of the signal, e.g., 'input', 'file', etc.
 
     source = null               // signal source (Source_Id_AudioInput, ...)
+    mediaSource = null          // media multi element source
     streamSource = null         // media stream source
     stream = null               // media stream
     analyzer = null             // audio analyzer
@@ -63,6 +64,7 @@ class Channel {
         this.fftView = new FFTView()
         this.markers = new Markers().init(this)
         this.measuresView.init(this, this.measures)
+        this.mediaSource = new MediaSource()
     }
 
     setAnalyser(analyser) {
@@ -96,6 +98,7 @@ class Channel {
 
     // unset channel source
     deleteSource() {
+        this.mediaSource.deleteSource()
         if (this.generator != null)
             this.generator.stop()
         if (this.out || this.outMute)

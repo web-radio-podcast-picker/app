@@ -123,6 +123,11 @@ div#channels_infos_deck > div > span.value {
     width: unset !important;
 }
 
+.edit-url {
+    width: Calc(80% - 42px) !important;
+    text-align: left !important;
+}
+
 .long-value {
     width: 5.5em !important;
 }

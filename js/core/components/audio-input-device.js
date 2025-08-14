@@ -35,5 +35,9 @@ audioInputDevice = {
         } catch (err) {
             console.error('Error accessing media devices.', err)
         }
+    },
+
+    createMediaStreamSource(channel) {
+        return channel.audioContext.createMediaStreamSource(channel.stream)
     }
 }

@@ -120,9 +120,15 @@ oscilloscope = {
         channel.sourceId = sourceId
     },
 
-    initChannelForMedia(channel, sourceId) {
+    async initChannelForMedia(channel, sourceId) {
         channel.deleteSource()
-        channel.sourceId = sourceId
+        channel.audioContext = new AudioContext() // not before getMediaStream
+        channel.source = channel.mediaSource
+        channel.mediaSource.createAudioSource(
+            channel.audioContext,
+            channel.mediaSource.url
+        )
+        await this.initChannelForSource(channel, sourceId, channel.mediaSource, true)
     },
 
     initChannelForNone(channel) {
@@ -130,25 +136,32 @@ oscilloscope = {
         channel.sourceId = Source_Id_None
     },
 
-    async initChannelForSource(channel, sourceId, source) {
-        channel.deleteSource()
-        channel.source = source
+    async initChannelForSource(channel, sourceId, source, channelSourceInitialized) {
+
+        if (channelSourceInitialized != true) {
+            channel.deleteSource()
+            channel.source = source
+        }
 
         if (channel.source != null)
             channel.stream = await channel.source.getMediaStream()
 
         channel.sourceId = sourceId
         if (sourceId == Source_Id_AudioInput)
+            // setup audio input range
             channel.vScale = settings.audioInput.vScale
 
-        channel.audioContext = new AudioContext() // not before getMediaStream
+        if (channel.audioContext == null)
+            channel.audioContext = new AudioContext() // not before getMediaStream
+
         channel.gain = channel.audioContext.createGain()
 
         if (channel.stream != undefined) {
             if (settings.debug.info)
                 console.log("Input media stream ok")
 
-            channel.streamSource = channel.audioContext.createMediaStreamSource(channel.stream)
+            //channel.streamSource = channel.audioContext.createMediaStreamSource(channel.stream)
+            channel.streamSource = channel.source.createMediaStreamSource(channel)
             channel.setAnalyser(
                 channel.audioContext.createAnalyser())
 

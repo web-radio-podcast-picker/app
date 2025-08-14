@@ -18,6 +18,17 @@ class ChannelSettingsPaneSrcMedia {
                 () => ui.channels.updatePause(this.channelSettings.editChannel),
                 ui.getCurrentChannelPath('pause'),
                 true)
+            .bindings.bind(ui.bindings.binding(
+                'opt_ch_media_url',
+                'app.getInputChannel().mediaSource.url',
+                { disableInputWidget: true, sym: "'" }))
+
+        $('#bt_ch_src_play').on('click', () => {
+            app.updateChannelMedia(
+                this.channelSettings.editChannel,
+                $('#opt_ch_media_url')[0].value
+            )
+        })
 
         return this
     }
