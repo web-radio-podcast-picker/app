@@ -29,8 +29,8 @@ A javascript application running an audio sound card oscilloscope,analyzer and g
 - maths (combinate signal together) ![css3](https://img.shields.io/static/v1?label=&message=planned&color=cd4900&style=plastic&logoColor=black)
 - multi channels
 - input from audio microphone
-- input from web media file url
-- input from web media stream url (eg. web radio)
+- input from web media file url  ![css3](https://img.shields.io/static/v1?label=&message=⭐&nbsp;NEW&nbsp;⭐&color=44aa00&style=plastic&logoColor=white)
+- input from web media stream url (eg. web radio) ![css3](https://img.shields.io/static/v1?label=&message=⭐&nbsp;NEW&nbsp;⭐&color=44aa00&style=plastic&logoColor=white)
 - audio mixer out
 
 [![GPLv2 license](https://img.shields.io/badge/License-GPLv2-blue.svg)](https://raw.githubusercontent.com/franck-gaspoz/soundcard-signal-analyzer-generator/refs/heads/main/LICENSE)
