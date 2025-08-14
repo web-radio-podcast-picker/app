@@ -28,8 +28,10 @@ A javascript application running an audio sound card oscilloscope,analyzer and g
   - reverb,echo,filter,... ![css3](https://img.shields.io/static/v1?label=&message=planned&color=cd4900&style=plastic&logoColor=black)
 - maths (combinate signal together) ![css3](https://img.shields.io/static/v1?label=&message=planned&color=cd4900&style=plastic&logoColor=black)
 - multi channels
-- audio channel input
-- line out
+- input from audio microphone
+- input from web media file url
+- input from web media stream url (eg. web radio)
+- audio mixer out
 
 [![GPLv2 license](https://img.shields.io/badge/License-GPLv2-blue.svg)](https://raw.githubusercontent.com/franck-gaspoz/soundcard-signal-analyzer-generator/refs/heads/main/LICENSE)
 ![javascript](https://img.shields.io/static/v1?label=&message=javascript&color=cdf998&style=plastic&logo=javascript&logoColor=darkgreen)

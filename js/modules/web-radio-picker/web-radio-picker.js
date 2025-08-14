@@ -9,11 +9,12 @@
 class WebRadioPicker {
 
     // module spec
-    id = 'web_radio_picker'
-    author = 'franck gaspoz'
+    id = 'web_radio_picker'         // unique id
+    author = 'franck gaspoz'        // author
+    cert = null                     // certification if any
 
-    views = ['./view.html']
-    settings = ['./settings.js']
+    views = ['./view.html']         // module views
+    settings = ['./settings.js']    // module settings
 
     init() {
         const mset = settings.modules.web_radio_picker
