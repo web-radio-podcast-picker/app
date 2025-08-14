@@ -186,7 +186,11 @@ window.settings = {
                 // rock
                 'https://corus.leanstream.co/CJKRFM-MP3',
                 // reggea
-                'http://hestia2.cdnstream.com/1301_128'
+                'http://hestia2.cdnstream.com/1301_128',
+                // mixed styles
+                'https://mixed-choize.stream.laut.fm/mixed-choize',
+                // 70
+                'http://stream.dbmedia.se/gk70talMP3'
             ],
             stereoAudioMediaURL: 'https://knkx-live-a.edge.audiocdn.com/6285_128k'
             // tests
