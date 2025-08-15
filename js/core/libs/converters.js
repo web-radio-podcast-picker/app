@@ -172,3 +172,12 @@ function valueToVolt(channel, value) {
     }
     return 0
 }
+
+function toCamelCase(str) {
+    return str
+        .replace(/[-_]+/g, ' ') // Replace dashes/underscores with spaces
+        .replace(/(?:^\w|[A-Z]|\b\w)/g, (word, index) =>
+            index === 0 ? word.toLowerCase() : word.toUpperCase()
+        )
+        .replace(/\s+/g, ''); // Remove spaces
+}

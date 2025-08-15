@@ -30,6 +30,15 @@ class ChannelSettingsPaneSrcMedia {
             )
         })
 
+        $('#bt_ch_src_media_url_paste').on('click', async () => {
+            const $i = $('#opt_ch_media_url')
+            $i[0].value = ''
+            $i.focus()
+            $i.select()
+            const text = await navigator.clipboard.readText();
+            $i[0].value = text
+        })
+
         return this
     }
 

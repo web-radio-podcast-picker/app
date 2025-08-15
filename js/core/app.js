@@ -23,13 +23,15 @@ app = {
     onStartUI: null,            // ui started callback
     lastFrameStartTime: null,
     frameStartTime: null,
-    endFramePermanentOperations: [], // end frame operations (always)
-    endFrameOneShotOperations: [],   // end frame operations (single shot)
-    startFramePermanentOperations: [], // start frame operations (always)
-    startFrameOneShotOperations: [],     // start frame operations (single shot)
+    endFramePermanentOperations: [],    // end frame operations (always)
+    endFrameOneShotOperations: [],      // end frame operations (single shot)
+    startFramePermanentOperations: [],  // start frame operations (always)
+    startFrameOneShotOperations: [],    // start frame operations (single shot)
 
     frameAvgFPS: 0,
     frameAvgPeriod: 0,
+
+    moduleLoader: new ModuleLoader(),
 
     // operations
 
@@ -317,8 +319,12 @@ app = {
         ui.channels.pauseAllOuts(oscilloscope.pause)
         ui.oscilloMenu.reflectOscilloPauseState()
         app.requestAnimationFrame()
-    }
+    },
 
+    openModule(url) {
+        if (!this.moduleLoader.isLoaded(url))
+            this.moduleLoader.load(url)
+    }
 }
 
 document.addEventListener('DOMContentLoaded', function () {

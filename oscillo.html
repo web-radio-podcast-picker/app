@@ -67,6 +67,7 @@
     <script src="./js/core/views/fft-view.js"></script>
     <script src="./js/core/views/signal-measures-view.js"></script>
     <script src="./js/core/models/fft.js"></script>
+    <script src="./js/core/components/module-loader.js"></script>
     <script src="./js/core/components/media-source.js"></script>
     <script src="./js/core/models/channel.js"></script>
     <script src="./js/core/components/oscilloscope.js"></script>
@@ -545,11 +546,19 @@
             <!-- src media -->
             <div id="opts_ch_src_media" class="channel-opts-pane hidden">
                 <div class="row opt">
-                    <span id="btn_ch_src_media_onoff" class="label channel-label on-off-label off">OFF</span>
-                    <span class="opt-label no-padding-left">URL</span>
-                    <input id="opt_ch_media_url" class="opt-value-edit edit-url no-margin"></input>
-                    <span id="bt_ch_src_play"
-                        class="label channel-label on-off-label on onoff-small-height margin-left">Play</span>
+                    <div class="src-media-grid">
+                        <span id="btn_ch_src_media_onoff"
+                            class="gr1 gc1 label channel-label on-off-label off">OFF</span>
+                        <span class="gr1 gc2 opt-label no-padding-left">URL</span>
+                        <input id="opt_ch_media_url" class="gr1 gc3 opt-value-edit edit-url no-margin"></input>
+                        <span id="bt_ch_src_media_url_paste"
+                            class="gr1 gc4 menu-item menu-item-blue onoff-small-height no-width margin-left">Paste</span>
+                        <span id="bt_ch_src_play"
+                            class="gr1 gc5 label channel-label on-off-label on onoff-small-height no-margin-left">Play</span>
+                    </div>
+                    <span id="bt_ch_src_media_pwr"
+                        class="gr1 gc1 no-width menu-item menu-item-blue onoff-small-height">Pick a
+                        web radio</span>
                 </div>
             </div>
 

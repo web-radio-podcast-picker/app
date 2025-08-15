@@ -10,7 +10,7 @@ window.settings = {
 
     app: {
         version: '0.9 Beta',
-        verDate: '8/9/2025'
+        verDate: '8/15/2025'
     },
 
     sys: {
@@ -199,7 +199,9 @@ window.settings = {
                 'http://lhttp.qingting.fm/live/5022521/64k.mp3',
                 'http://lhttp.qingting.fm/live/15318194/64k.mp3'
             ],
-            stereoAudioMediaURL: 'https://knkx-live-a.edge.audiocdn.com/6285_128k'
+            //stereoAudioMediaURL: 'https://knkx-live-a.edge.audiocdn.com/6285_128k'
+            //stereoAudioMediaURL: 'https://mixed-choize.stream.laut.fm/mixed-choize'
+            stereoAudioMediaURL: 'http://ice.stream.frequence3.net/frequence3ac-128.mp3'
             // tests
             //stereoAudioMediaURL: 'https://webaudioapi.com/samples/audio-tag/chrono.mp3'
             //stereoAudioMediaURL: 'https://www.youtube.com/watch?v=5cPdog1ZB48&ab_channel=EWUBodycam'   NOPE: unaceppted CORS (null) from YT

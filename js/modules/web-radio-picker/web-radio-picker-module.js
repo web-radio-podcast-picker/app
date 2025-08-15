@@ -6,7 +6,7 @@
 
 // module: web radio picker
 
-class WebRadioPicker {
+class WebRadioPickerModule {
 
     // module spec
     id = 'web_radio_picker'         // unique id

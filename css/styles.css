@@ -38,8 +38,6 @@ body.page {
     opacity: 1 !important;
 }
 
-
-
 html.page {
     width: 100%;
     height: 100%;
@@ -126,8 +124,12 @@ div#channels_infos_deck > div > span.value {
 }
 
 .edit-url {
-    width: Calc(80% - 42px) !important;
+    /*width: Calc(80% - 42px) !important;*/
     text-align: left !important;
+}
+
+#bt_ch_src_media_pwr {
+    margin-left: 4em;
 }
 
 .long-value {
@@ -1204,6 +1206,13 @@ div.channel-submenu-pane span.on-off-label {
 a,a:visited {
     color: #00CCFF;
 }
+
 a:hover {
     color: #00FFAA;
+}
+
+.src-media-grid {
+    display: grid;
+    grid-template-columns: min-content min-content auto min-content min-content;
+    align-items: baseline;
 }
