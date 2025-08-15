@@ -197,7 +197,11 @@ ui = {
             col: col,
             err: err
         }
-        $('#err_txt').text(messOrEvent)
+        const $e = $('#err_txt')
+        $e.text(messOrEvent)
+        setTimeout(() => {
+            $e.text('')
+        }, settings.ui.errDisplayTime)
     },
 
     checkSizeChanged() {

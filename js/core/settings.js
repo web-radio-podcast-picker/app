@@ -175,7 +175,8 @@ window.settings = {
         compactDisplayMaxHeight: 600,
         introPopupDelay: 4000,      // ms
         fadeOutDelay: 1000,
-        popupTransparency: true
+        popupTransparency: true,
+        errDisplayTime: 4000        // error display time ms
     },
 
     media: {
