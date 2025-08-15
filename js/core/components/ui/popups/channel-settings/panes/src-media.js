@@ -43,7 +43,6 @@ class ChannelSettingsPaneSrcMedia {
             )
         })
 
-
         return this
     }
 
