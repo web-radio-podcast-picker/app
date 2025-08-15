@@ -6,6 +6,6 @@
 
 // module: web radio picker : settings
 
-return {
+{
   data: "../rsc/web-radio/all_stations.m3u"
 }

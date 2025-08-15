@@ -35,15 +35,19 @@ class Popups {
             const $popup = $(e)
             const popupId = $popup.attr('id')
             const popup = this.popup(popupId, null)
-            this.popups[popupId] = popup
-            $popup
-                .find('.popup-close')
-                .on('click', (c) => {
-                    popup.visible = false
-                    this.togglePopup(null, popupId, false)
-                    ui.inputWidgets.closeInputWidget()
-                })
+            this.initPopup(popup, $popup, popupId)
         })
+    }
+
+    initPopup(popup, $popup, popupId) {
+        this.popups[popupId] = popup
+        $popup
+            .find('.popup-close')
+            .on('click', (c) => {
+                popup.visible = false
+                this.togglePopup(null, popupId, false)
+                ui.inputWidgets.closeInputWidget()
+            })
     }
 
     togglePopup(controlId, popupId, showState, align) {

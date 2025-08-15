@@ -26,8 +26,8 @@ class OscilloMenu {
         });
         $('#btn_oset').on('click', () => {
             if (app.powerOn) {
-                ui.popups.togglePopup(null, 'pop_settings');
-                ui.inputWidgets.closeInputWidget();
+                ui.popups.togglePopup(null, 'pop_settings')
+                ui.inputWidgets.closeInputWidget()
             }
         });
         $('#vdiv').on('click', () => {

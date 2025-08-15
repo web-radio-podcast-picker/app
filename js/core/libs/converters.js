@@ -181,3 +181,11 @@ function toCamelCase(str) {
         )
         .replace(/\s+/g, ''); // Remove spaces
 }
+
+function toClassname(str) {
+    if (str == null || str === undefined) return
+    var s = toCamelCase(str)
+    if (s.length > 0)
+        s = s[0].toUpperCase() + s.slice(1)
+    return s
+}

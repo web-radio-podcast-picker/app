@@ -56,6 +56,7 @@
     <!-- code loader -->
     <script src="./js/core/libs/converters.js"></script>
     <script src="./js/core/libs/data.js"></script>
+    <script src="./js/core/components/module-base.js"></script>
     <script src="./js/core/components/math-expr.js"></script>
     <script src="./js/core/components/audio-input-device.js"></script>
     <script src="./js/core/views/oscilloscope-view.js"></script>
@@ -556,7 +557,7 @@
                         <span id="bt_ch_src_play"
                             class="gr1 gc5 label channel-label on-off-label on onoff-small-height no-margin-left">Play</span>
                     </div>
-                    <span id="bt_ch_src_media_pwr"
+                    <span id="bt_ch_src_media_peekwr"
                         class="gr1 gc1 no-width menu-item menu-item-blue onoff-small-height">Pick a
                         web radio</span>
                 </div>
@@ -706,9 +707,7 @@
         <span class="trigger-plot-back-symbol">▶</span>
     </div>
 
-    <!-- modules holder -->
-
-    <div id="modules" class="hidden"></div>
+    <!-- modules after -->
 
 </body>
 

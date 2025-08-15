@@ -36,11 +36,9 @@ class ChannelSettingsPaneSrcMedia {
             $i[0].value = text
         })
 
-        $('#bt_ch_src_play').on('click', () => {
-            app.updateChannelMedia(
-                this.channelSettings.editChannel,
-                $('#opt_ch_media_url')[0].value
-            )
+        $('#bt_ch_src_media_peekwr').on('click', () => {
+            // open module: web-radio-picker
+            app.openModule('web-radio-picker')
         })
 
         return this

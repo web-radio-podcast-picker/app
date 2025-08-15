@@ -128,7 +128,7 @@ div#channels_infos_deck > div > span.value {
     text-align: left !important;
 }
 
-#bt_ch_src_media_pwr {
+#bt_ch_src_media_peekwr {
     margin-left: 4em;
 }
 
@@ -1215,4 +1215,9 @@ a:hover {
     display: grid;
     grid-template-columns: min-content min-content auto min-content min-content;
     align-items: baseline;
+}
+
+.module-pane {
+    min-width: 600px;
+    min-height: 400px;
 }
