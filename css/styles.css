@@ -609,6 +609,28 @@ div.popup-grid > span.menu-item {
     grid-row: 16;
 }
 
+.cols2-grid {
+    display: grid;
+    grid-template-columns: 50% 50%;
+}
+
+.rows-min-max-grid {
+    display: grid;
+    grid-template-rows: max-content;
+}
+
+.cols2 {
+    grid-column: span 2;
+}
+
+.test-border {
+    border: red solid 1px;
+}
+
+.border-light {
+    border:#00CCFF solid 1px;
+}
+
 .menu-item {
     display: inline-block;
     line-height: 3em;
@@ -690,6 +712,10 @@ div.popup-grid > span.menu-item {
     margin-bottom: 0.5em;
 }
 
+.margin-right {
+    margin-right: 0.5em;
+}
+
 .no-border {
     border: none !important;
 }
@@ -720,6 +746,10 @@ div.popup-grid > span.menu-item {
 
 .padding {
     padding: 1em !important;
+}
+
+.padding-top {
+    padding-top: 1em !important;
 }
 
 .left {
@@ -1221,3 +1251,4 @@ a:hover {
     min-width: 600px;
     min-height: 400px;
 }
+

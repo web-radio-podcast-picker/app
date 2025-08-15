@@ -6,6 +6,38 @@ find license and copyright informations in files /COPYRIGHT and /LICENCE
 
 <!-- web radio picker: view (html fragment) -->
 
-<div>
+<style>
+    .wrp-pane {
+        margin-top: 0.5em;
+        min-height: 380px;
+    }
 
+    .wrp-image-pane {}
+
+    .wrp-image-pane>img {
+        width: 100%;
+    }
+</style>
+
+<div class="wrp-pane cols2-grid">
+
+    <!-- left col -->
+    <div class="gr1 gc1 wrp-image-pane margin-right">
+        <img id="wrp_img" title="radio image" src="./img/icon.ico">
+    </div>
+
+    <!-- right col -->
+    <div class="gr1 gc2 rows-min-max-grid">
+        <div class="gr1 gc1 padding border-light">
+            filters
+        </div>
+        <div class="gr2 gc1 padding border-light margin-top">
+            list
+        </div>
+    </div>
+
+    <!-- footer -->
+    <div class="gr2 gc1 cols2 margin-top padding border-light">
+        url
+    </div>
 </div>
