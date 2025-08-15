@@ -65,7 +65,7 @@ class ModuleLoader {
         o.validate()
         if (this.modules[o.id] !== undefined)
             throw new Error('module already plugged: ' + o.id)
-        o.id = o.id + '_module'
+        o.id = o.id + '_module' // //?
 
         const cnt = {
             viewsCnt: o.views.length,
@@ -167,8 +167,15 @@ class ModuleLoader {
         const but_close = div('popup-close btn-red', '✕')
         const icon = div('popup-icon', o.icon || '⚙')
         const title = div('popup-title', o.title || o.id)
+
         c.appendChild(but_close)
         c.appendChild(icon)
         c.appendChild(title)
+
+        if (c.childNodes.length > 0) {
+            c.insertBefore(title, c.childNodes[0])
+            c.insertBefore(icon, c.childNodes[0])
+            c.insertBefore(but_close, c.childNodes[0])
+        }
     }
 }
