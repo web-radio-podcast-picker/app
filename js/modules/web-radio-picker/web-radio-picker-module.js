@@ -34,7 +34,37 @@ class WebRadioPickerModule extends ModuleBase {
     }
 
     initView(viewId) {
+        const $tag = $('#wrp_tag_list')
+        const $rad = $('#wrp_radio_list')
+        const keys = Object.keys(this.items)
+        var i = 0
+        keys.forEach(k => {
+            var item = document.createElement('div')
+            var $item = $(item)
+            $item.addClass('wrp-list-item')
+            if (i & 1)
+                $item.addClass('wrp-list-item-a')
+            else
+                $item.addClass('wrp-list-item-b')
+            i++
+            $item.text(k)
+            $tag[0].appendChild(item)
 
+            const t = this.items[k]
+            var j = 0
+            t.forEach(n => {
+                var item = document.createElement('div')
+                var $item = $(item)
+                $item.addClass('wrp-list-item')
+                $item.text(n.name)
+                if (j & 1)
+                    $item.addClass('wrp-list-item-a')
+                else
+                    $item.addClass('wrp-list-item-b')
+                j++
+                $rad[0].appendChild(item)
+            })
+        })
     }
 
     setData(dataId, text) {
@@ -79,10 +109,9 @@ class WebRadioPickerModule extends ModuleBase {
             }
 
             var grps = groupTitle.split(',')
-            grps.forEach(g => {
-                if (g == '"')
-                    g = '*'
-                const grp = '"' + g + '"'
+            grps.forEach(grp => {
+                if (grp == '"')
+                    grp = '*'
                 if (this.items[grp] === undefined)
                     this.items[grp] = []
                 if (grp != null && grp != '') {
