@@ -7,7 +7,7 @@
 // module: web radio picker : settings
 
 {
-  data: "../rsc/web-radio/all_stations.m3u",
+  data: '../rsc/web-radio/all_stations.m3u',
     favorites: [
 
     ]

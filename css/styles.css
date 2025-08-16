@@ -683,6 +683,11 @@ div.popup-grid > span.menu-item {
     color: white;
 }
 
+.item-selected {
+    background-color: #44AAffAA !important;
+    color: white !important; 
+}
+
 .selected {
     background-color: darkblue !important;
     cursor: default;

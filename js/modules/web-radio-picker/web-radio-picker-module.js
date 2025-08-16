@@ -65,7 +65,7 @@ class WebRadioPickerModule extends ModuleBase {
                     $item.addClass('wrp-list-item-b')
                 j++
                 $rad[0].appendChild(item)
-                this.initTagRad($item, n)
+                this.initTagRad($rad, $item, n)
             })
         })
         $('#wrp_img').on('click', () => {
@@ -93,8 +93,11 @@ class WebRadioPickerModule extends ModuleBase {
         })
     }
 
-    initTagRad($item, o) {
+    initTagRad($rad, $item, o) {
         $item.on('click', () => {
+            $rad.find('.item-selected')
+                .removeClass('item-selected')
+            $item.addClass('item-selected')
             $('#wrp_radio_url').text(o.url)
             if (o.logo != null && o.logo !== undefined && o.logo != '') {
                 this.hideImage()

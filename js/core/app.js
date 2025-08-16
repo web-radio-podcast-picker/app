@@ -265,7 +265,7 @@ app = {
             channel.mediaSource.audio.src = url
             this.playChannelMedia(channel)
         } catch (err) {
-            ui.error(err)
+            ui.showError(err)
         }
     },
 
