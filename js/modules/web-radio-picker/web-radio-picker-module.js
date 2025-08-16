@@ -71,6 +71,20 @@ class WebRadioPickerModule extends ModuleBase {
         $('#wrp_img').on('click', () => {
             $('#wrp_img_holder').addClass('hidden')
         })
+        $('#wrp_img').on('error', () => {
+            this.hideImage()
+        })
+        $('#wrp_img').on('load', () => {
+            this.showImage()
+        })
+    }
+
+    hideImage() {
+        $('#wrp_img_holder').addClass('hidden')
+    }
+
+    showImage() {
+        $('#wrp_img_holder').removeClass('hidden')
     }
 
     initTagBtn($item, text) {
@@ -83,11 +97,18 @@ class WebRadioPickerModule extends ModuleBase {
         $item.on('click', () => {
             $('#wrp_radio_url').text(o.url)
             if (o.logo != null && o.logo !== undefined && o.logo != '') {
-                console.log(o.logo)
+                this.hideImage()
                 $('#wrp_img').attr('src', o.logo)
-                $('#wrp_img_holder').removeClass('hidden')
+                const channel = ui.getCurrentChannel()
+                if (channel != null && channel !== undefined) {
+                    this.loading = o
+                    app.updateChannelMedia(
+                        ui.getCurrentChannel(),
+                        o.url
+                    )
+                }
             } else {
-                $('#wrp_img_holder').addClass('hidden')
+                this.hideImage()
             }
         })
     }

@@ -49,6 +49,9 @@ ___
 
 ## Screenshots
 
+![screenshot](doc/screenshot-0.9c.png)
+*v 0.9 - Web stream input : **module Web Radio Picker***
+
 ![screenshot](doc/screenshot-0.8b.png)
 *v 0.8 - FFT*
 
