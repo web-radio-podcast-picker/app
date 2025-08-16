@@ -130,6 +130,7 @@ class ModuleLoader {
 
                     this.initView(c, viewId, o)
                     $('body')[0].appendChild(c)
+                    o.initView(viewId)
 
                     this.modules[o.uri] = o
 
