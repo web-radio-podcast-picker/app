@@ -189,3 +189,7 @@ function toClassname(str) {
         s = s[0].toUpperCase() + s.slice(1)
     return s
 }
+
+function unquote(s) {
+    return s.slice(1, -1)
+}

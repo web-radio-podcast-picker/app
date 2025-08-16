@@ -49,11 +49,28 @@ find license and copyright informations in files /COPYRIGHT and /LICENCE
         /*background-color: rgb(20, 40, 192);*/
     }
 
+    .wrp-img-holder {
+        align-content: center;
+        text-align: center;
+        background-color: #00000055;
+    }
 
     .wrp-image-pane {}
 
-    .wrp-image-pane>img {
+    .wrp-img-holder>img {
+        /*width: 100%;*/
+        /*max-width: 124px;*/
         width: 100%;
+        max-width: 300px;
+        text-align: center;
+        margin-top: 0.5em;
+        cursor: pointer;
+    }
+
+    #wrp_radio_url {
+        word-wrap: break-word;
+        /* max-width: Calc(248px * 2); */
+        contain: inline-size;
     }
 </style>
 
@@ -65,10 +82,12 @@ find license and copyright informations in files /COPYRIGHT and /LICENCE
             tags
         </div>
         <div class="gr2 gc1 padding border-light margin-top">
-            <img id="wrp_img" class="hidden" title="radio image" src="./img/icon.ico">
             <div id="wrp_tag_list" class="wrp-scroll-pane">
 
             </div>
+        </div>
+        <div id="wrp_img_holder" class="gr2 gc1 border-light margin-top wrp-img-holder hidden">
+            <img id="wrp_img" title="radio image" src="./img/icon.ico">
         </div>
     </div>
 
@@ -85,7 +104,7 @@ find license and copyright informations in files /COPYRIGHT and /LICENCE
     </div>
 
     <!-- footer -->
-    <div class="gr2 gc1 cols2 margin-top padding border-light">
+    <div id="wrp_radio_url" class="gr2 gc1 cols2 margin-top padding border-light">
         url
     </div>
 </div>

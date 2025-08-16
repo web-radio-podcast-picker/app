@@ -26,6 +26,7 @@ class WebRadioPickerModule extends ModuleBase {
     // <----- end module spec -----
 
     items = []
+    itemsByName = []
     listCount = 0
 
     init() {
@@ -47,8 +48,9 @@ class WebRadioPickerModule extends ModuleBase {
             else
                 $item.addClass('wrp-list-item-b')
             i++
-            $item.text(k)
+            $item.text(unquote(k))
             $tag[0].appendChild(item)
+            this.initTagBtn($item, k)
 
             const t = this.items[k]
             var j = 0
@@ -63,7 +65,30 @@ class WebRadioPickerModule extends ModuleBase {
                     $item.addClass('wrp-list-item-b')
                 j++
                 $rad[0].appendChild(item)
+                this.initTagRad($item, n)
             })
+        })
+        $('#wrp_img').on('click', () => {
+            $('#wrp_img_holder').addClass('hidden')
+        })
+    }
+
+    initTagBtn($item, text) {
+        $item.on('click', () => {
+
+        })
+    }
+
+    initTagRad($item, o) {
+        $item.on('click', () => {
+            $('#wrp_radio_url').text(o.url)
+            if (o.logo != null && o.logo !== undefined && o.logo != '') {
+                console.log(o.logo)
+                $('#wrp_img').attr('src', o.logo)
+                $('#wrp_img_holder').removeClass('hidden')
+            } else {
+                $('#wrp_img_holder').addClass('hidden')
+            }
         })
     }
 
@@ -89,7 +114,7 @@ class WebRadioPickerModule extends ModuleBase {
 
             extinf = extinf.substr(0, i - 1)
             i = extinf.indexOf('tvg-logo="')
-            const logo = extinf.substr(i + 13).slice(0, -1)
+            const logo = extinf.substr(i + 10).slice(0, -1)
 
             const url = t[j + 1]
             if (groupTitle.endsWith(','))
@@ -108,21 +133,25 @@ class WebRadioPickerModule extends ModuleBase {
                 logo: logo
             }
 
+            this.itemsByName['"' + name + '"'] = item
+
             var grps = groupTitle.split(',')
             grps.forEach(grp => {
-                if (grp == '"')
-                    grp = '*'
-                if (this.items[grp] === undefined)
-                    this.items[grp] = []
-                if (grp != null && grp != '') {
+                var g = grp
+                if (g == '"')
+                    g = '*'
+                g = '"' + g + '"'
+                if (g != null && g != '') {
+                    if (this.items[g] === undefined)
+                        this.items[g] = []
                     try {
-                        this.items[grp].push(item)
+                        this.items[g].push(item)
                     } catch (err) {
                         console.log(err)
                     }
                 }
                 else {
-                    console.log(grp)
+                    console.log(g)
                 }
             });
 
@@ -130,8 +159,5 @@ class WebRadioPickerModule extends ModuleBase {
 
             j += 2
         }
-    }
-
-    parseM3U() {
     }
 }
