@@ -17,7 +17,7 @@ class WebRadioPickerModule extends ModuleBase {
     cert = null                     // certification if any
 
     views = ['view.html']           // module views
-    settings = ['settings.js']      // module settings
+    settings = ['settings.json']    // module settings
     datas = [WebRadioPickerDataId]  // module data files
 
     title = 'Web Radio Picker'

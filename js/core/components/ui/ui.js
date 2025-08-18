@@ -199,6 +199,7 @@ ui = {
         }
         const $e = $('#err_txt')
         $e.text(messOrEvent)
+        console.error(messOrEvent)
         setTimeout(() => {
             $e.text('')
         }, settings.ui.errDisplayTime)

@@ -85,14 +85,17 @@ class ModuleLoader {
             const sc = baseUrl + st
             $d.load(sc, (response, status, xhr) => {
                 if (status === "success") {
-
-                    const cd = $d.text()
-                    eval('settings.modules["' + o.id + '"] = ' + cd)
-                    cnt.settingsCnt--
-                    if (cnt.settingsCnt == 0) then()
-
+                    try {
+                        const cd = JSON.parse($d.text())
+                        settings.modules[o.id] = cd
+                        cnt.settingsCnt--
+                        if (cnt.settingsCnt == 0) then()
+                    }
+                    catch (err) {
+                        ui.showError('load settings "' + sc + '" failed: ' + err)
+                    }
                 } else {
-                    ui.showError('load view settings "' + sc + '" failed: ' + xhr.status + ' ' + xhr.statusText)
+                    ui.showError('load settings "' + sc + '" failed: ' + xhr.status + ' ' + xhr.statusText)
                 }
             })
         })

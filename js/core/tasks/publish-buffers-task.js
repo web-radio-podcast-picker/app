@@ -15,7 +15,7 @@ publishBuffersTasks = {
             // use the get samples task from any analyser associated with the channel
             if ((!channel.pause
                 && !oscilloscope.pause)
-                || !channel.isDisplayed) {
+                || !channel.isDisplayed) {  // allows on demand updates
                 if (channel.getSamplesTask != null) {
                     channel.getSamplesTask.run()
                     channel.measures.setData(
