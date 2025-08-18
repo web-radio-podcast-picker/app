@@ -9,6 +9,7 @@
 class ModuleLoader {
 
     modules = []
+    baseMess = 'loading module: '
 
     iuri(uri) {
         return uri + '-module'
@@ -18,11 +19,30 @@ class ModuleLoader {
         return this.modules[uri] !== undefined
     }
 
+    showError(opts, err) {
+        $('#' + opts.errId).text(err)
+        ui.showError(err)
+        setTimeout(() => {
+            $('#' + opts.errId).text('')
+        }, settings.ui.introPopupDelay)
+    }
+
+    showInf(opts, inf, inf2) {
+        inf2 = (inf2 === undefined || inf2 == null) ? '' : ('...' + inf2)
+        $('#' + opts.infId).text(inf + inf2)
+        setTimeout(() => {
+            $('#' + opts.infId).text('')
+        }, settings.ui.introPopupDelay)
+    }
+
     // eg. ./modules/web-radio-picker
-    load(uri, srcUrl, then) {
+    load(uri, opts, then) {
+
+        var srcUrl = opts?.srcUrl
+        opts.uri = uri
 
         if (uri == null) {
-            ui.showError('load module failed: uri is not defined')
+            this.showError(opts, 'load module failed: uri is not defined')
             return
         }
 
@@ -30,6 +50,7 @@ class ModuleLoader {
             then(this.modules[uri])
             return
         }
+        this.showInf(opts, this.baseMess + uri)
 
         srcUrl = (srcUrl === undefined || srcUrl == null) ?
             './js/modules/' : ''
@@ -46,14 +67,14 @@ class ModuleLoader {
                 // instiantiate & setup module
                 const o = eval('new ' + cl + '()')
                 o.uri = uri
-                this.setup(o, baseUrl, then)
+                this.setup(o, baseUrl, opts, then)
 
             } catch (err_inst) {
-                ui.showError('error instantiate module ' + uri + ' (' + err_inst + ')')
+                this.showError(opts, 'error instantiate module ' + uri + ' (' + err_inst + ')')
             }
         }
         script.onerror = e => {
-            ui.showError('load module ' + uri + ' failed')
+            this.showError(opts, 'load module ' + uri + ' failed')
             console.log(url)
         }
         script.src = url
@@ -61,7 +82,7 @@ class ModuleLoader {
         o.appendChild(script)
     }
 
-    setup(o, baseUrl, then) {
+    setup(o, baseUrl, opts, then) {
         o.validate()
         if (this.modules[o.id] !== undefined)
             throw new Error('module already plugged: ' + o.id)
@@ -72,14 +93,17 @@ class ModuleLoader {
             settingsCnt: o.settings.length,
             datasCnt: o.settings.length
         }
-        this.loadSettings(o, cnt, baseUrl, () =>
-            this.loadDatas(o, cnt, baseUrl, () =>
-                this.loadViews(o, cnt, baseUrl, then)
+        this.loadSettings(o, opts, cnt, baseUrl, () =>
+            this.loadDatas(o, opts, cnt, baseUrl, () =>
+                this.loadViews(o, opts, cnt, baseUrl, then)
             ))
     }
 
-    loadSettings(o, cnt, baseUrl, then) {
+    loadSettings(o, opts, cnt, baseUrl, then) {
         o.settings.forEach(st => {
+
+            this.showInf(opts, this.baseMess + opts.uri, 'settings')
+
             const d = document.createElement('div')
             const $d = $(d)
             const sc = baseUrl + st
@@ -92,17 +116,20 @@ class ModuleLoader {
                         if (cnt.settingsCnt == 0) then()
                     }
                     catch (err) {
-                        ui.showError('load settings "' + sc + '" failed: ' + err)
+                        this.showError(opts, 'load settings "' + sc + '" failed: ' + err)
                     }
                 } else {
-                    ui.showError('load settings "' + sc + '" failed: ' + xhr.status + ' ' + xhr.statusText)
+                    this.showError(opts, 'load settings "' + sc + '" failed: ' + xhr.status + ' ' + xhr.statusText)
                 }
             })
         })
     }
 
-    loadDatas(o, cnt, baseUrl, then) {
+    loadDatas(o, opts, cnt, baseUrl, then) {
         o.datas.forEach(st => {
+
+            this.showInf(opts, this.baseMess + opts.uri, 'data')
+
             const d = document.createElement('div')
             const $d = $(d)
             const sc = baseUrl + st
@@ -115,13 +142,13 @@ class ModuleLoader {
                     if (cnt.datasCnt == 0) then()
 
                 } else {
-                    ui.showError('load view datas "' + sc + '" failed: ' + xhr.status + ' ' + xhr.statusText)
+                    this.showError(opts, 'load view datas "' + sc + '" failed: ' + xhr.status + ' ' + xhr.statusText)
                 }
             })
         })
     }
 
-    loadViews(o, cnt, baseUrl, then) {
+    loadViews(o, opts, cnt, baseUrl, then) {
         // load views
         o.views.forEach(t => {
 
@@ -134,10 +161,14 @@ class ModuleLoader {
             const s = document.createElement('div')
             const $s = $(s)
 
+            this.showInf(opts, this.baseMess + opts.uri, 'view')
+
             $c.load(sc, (response, status, xhr) => {
                 if (status === "success") {
 
                     const addModule = (c, viewId, o, css) => {
+
+                        this.showInf(opts, 'plug module: ' + opts.uri)
 
                         this.initView(c, viewId, o, css)
                         $('body')[0].appendChild(c)
@@ -151,8 +182,9 @@ class ModuleLoader {
                             o.id)
 
                         cnt.viewsCnt--
-                        if (cnt.viewsCnt == 0)
+                        if (cnt.viewsCnt == 0) {
                             then(o, viewId)
+                        }
                     }
 
                     if (styleId != null)
@@ -163,14 +195,14 @@ class ModuleLoader {
                                 addModule(c, viewId, o, css)
 
                             } else {
-                                ui.showError('load style "' + st + '" failed: ' + xhr.status + ' ' + xhr.statusText)
+                                this.showError(opts, 'load style "' + st + '" failed: ' + xhr.status + ' ' + xhr.statusText)
                             }
                         })
-                    else
+                    else {
                         addModule(c, viewId, o, null)
-
+                    }
                 } else {
-                    ui.showError('load view "' + sc + '" failed: ' + xhr.status + ' ' + xhr.statusText)
+                    this.showError(opts, 'load view "' + sc + '" failed: ' + xhr.status + ' ' + xhr.statusText)
                 }
             })
         })
@@ -210,6 +242,14 @@ class ModuleLoader {
             c.insertBefore(icon, c.childNodes[0])
             c.insertBefore(but_close, c.childNodes[0])
             c.insertBefore(style, c.childNodes[0])
+        }
+    }
+
+    opts(infId, errId, srcUrl) {
+        return {
+            infId: infId,
+            errId: errId,
+            srcUrl: srcUrl
         }
     }
 }

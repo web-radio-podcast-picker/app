@@ -38,7 +38,12 @@ class ChannelSettingsPaneSrcMedia {
 
         $('#bt_ch_src_media_peekwr').on('click', () => {
             // open module: web-radio-picker
-            app.openModule('web-radio-picker')
+            app.openModule('web-radio-picker',
+                app.moduleLoader.opts(
+                    'wrp_mod_inf_txt',
+                    'wrp_mod_err_txt'
+                )
+            )
         })
 
         return this

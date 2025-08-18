@@ -10,7 +10,7 @@ window.settings = {
 
     app: {
         version: '0.9 Beta',
-        verDate: '8/15/2025'
+        verDate: '8/19/2025'
     },
 
     sys: {
@@ -176,7 +176,9 @@ window.settings = {
         introPopupDelay: 4000,      // ms
         fadeOutDelay: 1000,
         popupTransparency: true,
-        errDisplayTime: 4000        // error display time ms
+        errDisplayTime: 4000,        // error display time ms
+        longInfoDisplayTime: 6000,        // error display time ms
+        longErrDisplayTime: 6000        // error display time ms
     },
 
     media: {

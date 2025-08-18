@@ -1257,3 +1257,12 @@ a:hover {
     min-height: 400px;
 }
 
+#wrp_mod_inf_txt,
+#wrp_mod_err_txt {
+    min-height:1em;
+    max-height:1em;
+}
+
+#wrp_mod_inf_txt {
+    margin-top: 0.5em;
+}

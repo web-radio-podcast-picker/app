@@ -321,8 +321,8 @@ app = {
         app.requestAnimationFrame()
     },
 
-    openModule(uri, srcUrl) {
-        this.moduleLoader.load(uri, srcUrl, (o, v) => {
+    openModule(uri, opts) {
+        this.moduleLoader.load(uri, opts, (o, v) => {
             ui.popups.togglePopup(null, o.id)
         })
     }
