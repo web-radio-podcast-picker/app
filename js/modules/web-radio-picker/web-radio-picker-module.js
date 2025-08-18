@@ -16,7 +16,12 @@ class WebRadioPickerModule extends ModuleBase {
     author = 'franck gaspoz'        // author
     cert = null                     // certification if any
 
-    views = ['view.html']           // module views
+    views = [                       // module views & styles
+        [
+            'view.html',
+            'styles.css'
+        ]
+    ]
     settings = ['settings.json']    // module settings
     datas = [WebRadioPickerDataId]  // module data files
 

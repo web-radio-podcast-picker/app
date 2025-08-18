@@ -123,28 +123,51 @@ class ModuleLoader {
 
     loadViews(o, cnt, baseUrl, then) {
         // load views
-        o.views.forEach(viewId => {
+        o.views.forEach(t => {
+
+            const viewId = t[0]
+            const styleId = t.length > 1 ? t[1] : null
             const sc = baseUrl + viewId
+            const st = baseUrl + styleId
             const c = document.createElement('div')
             const $c = $(c)
+            const s = document.createElement('div')
+            const $s = $(s)
 
             $c.load(sc, (response, status, xhr) => {
                 if (status === "success") {
 
-                    this.initView(c, viewId, o)
-                    $('body')[0].appendChild(c)
-                    o.initView(viewId)
+                    const addModule = (c, viewId, o, css) => {
 
-                    this.modules[o.uri] = o
+                        this.initView(c, viewId, o, css)
+                        $('body')[0].appendChild(c)
+                        o.initView(viewId)
 
-                    ui.popups.initPopup(
-                        ui.popups.popup(o.id, null),
-                        $c,
-                        o.id)
+                        this.modules[o.uri] = o
 
-                    cnt.viewsCnt--
-                    if (cnt.viewsCnt == 0)
-                        then(o, viewId)
+                        ui.popups.initPopup(
+                            ui.popups.popup(o.id, null),
+                            $c,
+                            o.id)
+
+                        cnt.viewsCnt--
+                        if (cnt.viewsCnt == 0)
+                            then(o, viewId)
+                    }
+
+                    if (styleId != null)
+                        $s.load(st, (response, status, xhr) => {
+                            if (status === "success") {
+
+                                const css = response
+                                addModule(c, viewId, o, css)
+
+                            } else {
+                                ui.showError('load style "' + st + '" failed: ' + xhr.status + ' ' + xhr.statusText)
+                            }
+                        })
+                    else
+                        addModule(c, viewId, o, null)
 
                 } else {
                     ui.showError('load view "' + sc + '" failed: ' + xhr.status + ' ' + xhr.statusText)
@@ -153,9 +176,12 @@ class ModuleLoader {
         })
     }
 
-    initView(c, viewId, o) {
-        const div = (cl, txt) => {
-            const e = document.createElement('div')
+    initView(c, viewId, o, css) {
+
+        const div = (cl, txt) => tag('div', cl, txt)
+
+        const tag = (tagname, cl, txt) => {
+            const e = document.createElement(tagname)
             const $e = $(e)
             $e.addClass(cl)
             $e.text(txt)
@@ -171,15 +197,19 @@ class ModuleLoader {
         const but_close = div('popup-close btn-red', '✕')
         const icon = div('popup-icon', o.icon || '⚙')
         const title = div('popup-title', o.title || o.id)
+        const style = css != null ? tag('style', null, css) : null
 
         c.appendChild(but_close)
         c.appendChild(icon)
         c.appendChild(title)
+        if (style != null)
+            c.appendChild(style)
 
         if (c.childNodes.length > 0) {
             c.insertBefore(title, c.childNodes[0])
             c.insertBefore(icon, c.childNodes[0])
             c.insertBefore(but_close, c.childNodes[0])
+            c.insertBefore(style, c.childNodes[0])
         }
     }
 }
