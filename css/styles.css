@@ -1263,6 +1263,10 @@ a:hover {
     max-height:1em;
 }
 
+#wrp_mod_err_txt {
+    color: red;
+}
+
 #wrp_mod_inf_txt {
     margin-top: 0.5em;
 }

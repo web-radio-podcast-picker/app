@@ -40,6 +40,7 @@ class ModuleLoader {
 
         var srcUrl = opts?.srcUrl
         opts.uri = uri
+        opts.id = uri
 
         if (uri == null) {
             this.showError(opts, 'load module failed: uri is not defined')
@@ -50,7 +51,7 @@ class ModuleLoader {
             then(this.modules[uri])
             return
         }
-        this.showInf(opts, this.baseMess + uri)
+        this.showInf(opts, this.baseMess + opts.id)
 
         srcUrl = (srcUrl === undefined || srcUrl == null) ?
             './js/modules/' : ''
@@ -70,11 +71,11 @@ class ModuleLoader {
                 this.setup(o, baseUrl, opts, then)
 
             } catch (err_inst) {
-                this.showError(opts, 'error instantiate module ' + uri + ' (' + err_inst + ')')
+                this.showError(opts, 'error instantiate module ' + opts.id + ' (' + err_inst + ')')
             }
         }
         script.onerror = e => {
-            this.showError(opts, 'load module ' + uri + ' failed')
+            this.showError(opts, 'load module ' + opts.id + ' failed')
             console.log(url)
         }
         script.src = url
@@ -102,7 +103,7 @@ class ModuleLoader {
     loadSettings(o, opts, cnt, baseUrl, then) {
         o.settings.forEach(st => {
 
-            this.showInf(opts, this.baseMess + opts.uri, 'settings')
+            this.showInf(opts, this.baseMess + opts.id, 'settings')
 
             const d = document.createElement('div')
             const $d = $(d)
@@ -128,7 +129,7 @@ class ModuleLoader {
     loadDatas(o, opts, cnt, baseUrl, then) {
         o.datas.forEach(st => {
 
-            this.showInf(opts, this.baseMess + opts.uri, 'data')
+            this.showInf(opts, this.baseMess + opts.id, 'data')
 
             const d = document.createElement('div')
             const $d = $(d)
@@ -161,29 +162,33 @@ class ModuleLoader {
             const s = document.createElement('div')
             const $s = $(s)
 
-            this.showInf(opts, this.baseMess + opts.uri, 'view')
+            this.showInf(opts, this.baseMess + opts.id, 'view')
 
             $c.load(sc, (response, status, xhr) => {
                 if (status === "success") {
 
                     const addModule = (c, viewId, o, css) => {
 
-                        this.showInf(opts, 'plug module: ' + opts.uri)
+                        try {
+                            this.showInf(opts, 'plug module: ' + opts.id)
 
-                        this.initView(c, viewId, o, css)
-                        $('body')[0].appendChild(c)
-                        o.initView(viewId)
+                            this.initView(c, viewId, o, css)
+                            $('body')[0].appendChild(c)
+                            o.initView(viewId)
 
-                        this.modules[o.uri] = o
+                            this.modules[o.uri] = o
 
-                        ui.popups.initPopup(
-                            ui.popups.popup(o.id, null),
-                            $c,
-                            o.id)
+                            ui.popups.initPopup(
+                                ui.popups.popup(o.id, null),
+                                $c,
+                                o.id)
 
-                        cnt.viewsCnt--
-                        if (cnt.viewsCnt == 0) {
-                            then(o, viewId)
+                            cnt.viewsCnt--
+                            if (cnt.viewsCnt == 0) {
+                                then(o, viewId)
+                            }
+                        } catch (err) {
+                            this.showError(opts, 'plug module:' + opts.id + '" failed: ' + err)
                         }
                     }
 
