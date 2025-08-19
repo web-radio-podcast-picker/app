@@ -73,3 +73,18 @@ find license and copyright informations in files /COPYRIGHT and /LICENCE
     word-wrap: break-word;
     contain: inline-size;
 }
+
+.wrp-list-item-container {
+}
+
+.wrp-list-item-box {
+    width: 64px;
+    height: 1em;
+    text-align: right;
+    top: 0em;
+    float: right;
+    font-size: 0.7em;
+    margin-top: -0.25em;
+    margin-right: -0.25em;
+    color: #FFFF00E0;
+}

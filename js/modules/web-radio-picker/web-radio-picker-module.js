@@ -94,9 +94,13 @@ class WebRadioPickerModule extends ModuleBase {
         const keys = Object.keys(this.items)
         var i = 0
         keys.forEach(k => {
-            const { item, $item } = this.buildListItem(unquote(k), i)
+            const { item, $item } = this.buildListItem(
+                unquote(k),
+                i,
+                { count: this.items[k].length }
+            )
             i++
-            $tag[0].appendChild(item)
+            $tag.append($item)
             this.initTagBtn($tag, $item, k)
         })
         return this
@@ -115,7 +119,7 @@ class WebRadioPickerModule extends ModuleBase {
                 if (this.isArtistRadio(n)) {
                     const { item, $item } = this.buildListItem(n.name, j)
                     j++
-                    $art[0].appendChild(item)
+                    $art.append($item)
                     if (this.itemsByArtists[n.name] === undefined)
                         this.itemsByArtists[n.name] = []
                     this.itemsByArtists[n.name].push(n)
@@ -144,20 +148,34 @@ class WebRadioPickerModule extends ModuleBase {
         items.forEach(n => {
             const { item, $item } = this.buildListItem(n.name, j)
             j++
-            $rad[0].appendChild(item)
+            $rad.append($item)
             this.initTagRad($rad, $item, n)
         })
     }
 
-    buildListItem(text, j) {
-        var item = document.createElement('div')
-        var $item = $(item)
+    buildListItem(text, j, opts) {
+        if (opts === undefined) opts = null
+
+        const item = document.createElement('div')
+        const $item = $(item)
+
         $item.addClass('wrp-list-item')
-        $item.text(text)
+        $item.removeClass('hidden')
         if (j & 1)
             $item.addClass('wrp-list-item-a')
         else
             $item.addClass('wrp-list-item-b')
+
+        $item.text(text)
+
+        if (opts != null) {
+            const n2 = document.createElement('div')
+            const $n2 = $(n2)
+            $n2.addClass('gr1 gc1 wrp-list-item-box')
+            $n2.text(opts.count)
+            item.appendChild(n2)
+        }
+
         return { item: item, $item: $item }
     }
 
