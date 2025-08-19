@@ -300,6 +300,8 @@ class WebRadioPickerModule extends ModuleBase {
             }
 
             this.itemsByName['"' + name + '"'] = item
+            this.itemsAll.push(item)
+            this.listCount++
 
             var grps = groupTitle.split(',')
             grps.forEach(grp => {
@@ -312,8 +314,6 @@ class WebRadioPickerModule extends ModuleBase {
                         this.items[g] = []
                     try {
                         this.items[g].push(item)
-                        this.itemsAll.push(item)
-                        this.listCount++
                     } catch (err) {
                         console.log(err)
                     }
