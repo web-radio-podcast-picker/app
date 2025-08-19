@@ -15,6 +15,7 @@ find license and copyright informations in files /COPYRIGHT and /LICENCE
     overflow-y: scroll;
     overflow-x: scroll;
     max-height: 300px;
+    min-height: 300px;
 }
 
 .wrp-list-item {
@@ -30,10 +31,6 @@ find license and copyright informations in files /COPYRIGHT and /LICENCE
     border: #FFFF00AA solid 1px !important;
 }
 
-.wrp-list-item-a:hover {
-    /*background-color: #444455;*/
-}
-
 .wrp-list-item-a {
     background-color: #202095;
     border: #202095 solid 1px;
@@ -42,13 +39,6 @@ find license and copyright informations in files /COPYRIGHT and /LICENCE
 .wrp-list-item-b {
     background-color: rgb(0, 0, 156);
     border: rgb(0, 0, 156) solid 1px;
-}
-
-.wrp-list-item-b:hover {
-    /*background-color: rgb(20, 40, 192);*/
-}
-
-#opts_wrp_logo {
 }
 
 #wrp_radio_list_btn_bar {
@@ -80,6 +70,5 @@ find license and copyright informations in files /COPYRIGHT and /LICENCE
 
 #wrp_radio_url {
     word-wrap: break-word;
-    /* max-width: Calc(248px * 2); */
     contain: inline-size;
 }

@@ -34,6 +34,7 @@ class WebRadioPickerModule extends ModuleBase {
     itemsByArtists = []     // item with artist by artist name
     itemsByName = []        // all items by name
     listCount = 0
+    filteredListCount = 0
     grpLisdtIndex = 0
     tabs = ['btn_wrp_tag_list',
         'btn_wrp_art_list',
@@ -65,14 +66,22 @@ class WebRadioPickerModule extends ModuleBase {
             this.showImage()
         })
 
+        const thisPath = 'app.moduleLoader.getModuleById("' + this.id + '").'
+        const listCountPath = thisPath + 'listCount'
+        const filteredListCountPath = thisPath + 'filteredListCount'
+
         ui
             .bindings.bind(ui.bindings.binding(
                 'wrp_list_count',
-                'app.moduleLoader.getModuleById("' + this.id + '").listCount',
+                listCountPath + '==' + filteredListCountPath + '?' + listCountPath + ' :  (' + filteredListCountPath + '+" / "+' + listCountPath + ')',
                 readOnly))
 
-            // modules are late binded. have the responsability to init bindings
-            .bindings.updateBindingTarget('wrp_list_count')
+        // modules are late binded. have the responsability to init bindings
+        this.updateBindings()
+    }
+
+    updateBindings() {
+        ui.bindings.updateBindingTarget('wrp_list_count')
     }
 
     buildTagItems() {
@@ -83,8 +92,7 @@ class WebRadioPickerModule extends ModuleBase {
             const { item, $item } = this.buildListItem(unquote(k), i)
             i++
             $tag[0].appendChild(item)
-            this.initTagBtn($item, k)
-            //const t = this.items[k]
+            this.initTagBtn($tag, $item, k)
         })
         return this
     }
@@ -98,10 +106,16 @@ class WebRadioPickerModule extends ModuleBase {
             const t = this.items[k]
             var j = 0
             t.forEach(n => {
-                const { item, $item } = this.buildListItem(n.name, j)
-                j++
-                $art[0].appendChild(item)
-                //this.initTagBtn($item, k)
+
+                if (this.isArtistRadio(n)) {
+                    const { item, $item } = this.buildListItem(n.name, j)
+                    j++
+                    $art[0].appendChild(item)
+                    if (this.itemsByArtists[n.name] === undefined)
+                        this.itemsByArtists[n.name] = []
+                    this.itemsByArtists[n.name].push(n)
+                    this.initArtBtn($art, $item, n.name)
+                }
             })
         })
         return this
@@ -114,15 +128,20 @@ class WebRadioPickerModule extends ModuleBase {
         keys.forEach(k => {
             i++
             const t = this.items[k]
-            var j = 0
-            t.forEach(n => {
-                const { item, $item } = this.buildListItem(n.name, j)
-                j++
-                $rad[0].appendChild(item)
-                this.initTagRad($rad, $item, n)
-            })
+            this.buildRadListItems(t)
         })
         return this
+    }
+
+    buildRadListItems(items) {
+        const $rad = $('#wrp_radio_list')
+        var j = 0
+        items.forEach(n => {
+            const { item, $item } = this.buildListItem(n.name, j)
+            j++
+            $rad[0].appendChild(item)
+            this.initTagRad($rad, $item, n)
+        })
     }
 
     buildListItem(text, j) {
@@ -135,6 +154,27 @@ class WebRadioPickerModule extends ModuleBase {
         else
             $item.addClass('wrp-list-item-b')
         return { item: item, $item: $item }
+    }
+
+    updateRadList(lst) {
+        const $rad = $('#wrp_radio_list')
+        $rad.find('*').remove()
+        this.buildRadListItems(lst)
+        this.filteredListCount = lst.length
+        this.updateBindings()
+    }
+
+    isArtistRadio(r) {
+        if (r == null || r.url == null) return false
+        const st = this.getSettings()
+        var res = false
+        st.aristUrlFilters.forEach(x => {
+            if (r.url != null && r.url.startsWith(x)) {
+                res = true
+                return
+            }
+        })
+        return res
     }
 
     noImage() {
@@ -152,9 +192,21 @@ class WebRadioPickerModule extends ModuleBase {
         ui.tabs.selectTab('btn_wrp_logo', this.tabs)
     }
 
-    initTagBtn($item, text) {
+    initTagBtn($tag, $item, grpName) {
         $item.on('click', () => {
+            $tag.find('.item-selected')
+                .removeClass('item-selected')
+            $item.addClass('item-selected')
+            this.updateRadList(this.items[grpName])
+        })
+    }
 
+    initArtBtn($art, $item, artName) {
+        $item.on('click', () => {
+            $art.find('.item-selected')
+                .removeClass('item-selected')
+            $item.addClass('item-selected')
+            this.updateRadList(this.itemsByArtists[artName])
         })
     }
 
@@ -248,5 +300,6 @@ class WebRadioPickerModule extends ModuleBase {
 
             j += 2
         }
+        this.filteredListCount = this.listCount
     }
 }

@@ -1,5 +1,5 @@
 {
   "data": "../rsc/web-radio/all_stations.m3u",
-  "aristUrlFilters": [["https://streaming.exclusive.radio/er/", "folder"]],
+  "aristUrlFilters": ["https://streaming.exclusive.radio/er/"],
   "favorites": []
 }
