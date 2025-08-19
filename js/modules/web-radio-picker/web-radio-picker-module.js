@@ -52,7 +52,9 @@ class WebRadioPickerModule extends ModuleBase {
     initView(viewId) {
 
         this.initTabs()
-        this.buildItems()
+        this.buildTagItems()
+            .buildArtItems()
+            .buildRadItems()
 
         const readOnly = { readOnly: true, attr: 'text' };
 
@@ -65,50 +67,74 @@ class WebRadioPickerModule extends ModuleBase {
 
         ui
             .bindings.bind(ui.bindings.binding(
-                'wpr_list_count',
+                'wrp_list_count',
                 'app.moduleLoader.getModuleById("' + this.id + '").listCount',
                 readOnly))
 
             // modules are late binded. have the responsability to init bindings
-            .bindings.updateBindingTarget('wpr_list_count')
+            .bindings.updateBindingTarget('wrp_list_count')
     }
 
-    buildItems() {
+    buildTagItems() {
         const $tag = $('#opts_wrp_tag_list')
-        const $art = $('#opts_wrp_art_list')
+        const keys = Object.keys(this.items)
+        var i = 0
+        keys.forEach(k => {
+            const { item, $item } = this.buildListItem(unquote(k), i)
+            i++
+            $tag[0].appendChild(item)
+            this.initTagBtn($item, k)
+            //const t = this.items[k]
+        })
+        return this
+    }
 
+    buildArtItems() {
+        const $art = $('#opts_wrp_art_list')
+        const keys = Object.keys(this.items)
+        var i = 0
+        keys.forEach(k => {
+            i++
+            const t = this.items[k]
+            var j = 0
+            t.forEach(n => {
+                const { item, $item } = this.buildListItem(n.name, j)
+                j++
+                $art[0].appendChild(item)
+                //this.initTagBtn($item, k)
+            })
+        })
+        return this
+    }
+
+    buildRadItems() {
         const $rad = $('#wrp_radio_list')
         const keys = Object.keys(this.items)
         var i = 0
         keys.forEach(k => {
-            var item = document.createElement('div')
-            var $item = $(item)
-            $item.addClass('wrp-list-item')
-            if (i & 1)
-                $item.addClass('wrp-list-item-a')
-            else
-                $item.addClass('wrp-list-item-b')
             i++
-            $item.text(unquote(k))
-            $tag[0].appendChild(item)
-            this.initTagBtn($item, k)
-
             const t = this.items[k]
             var j = 0
             t.forEach(n => {
-                var item = document.createElement('div')
-                var $item = $(item)
-                $item.addClass('wrp-list-item')
-                $item.text(n.name)
-                if (j & 1)
-                    $item.addClass('wrp-list-item-a')
-                else
-                    $item.addClass('wrp-list-item-b')
+                const { item, $item } = this.buildListItem(n.name, j)
                 j++
                 $rad[0].appendChild(item)
                 this.initTagRad($rad, $item, n)
             })
         })
+        return this
+    }
+
+    buildListItem(text, j) {
+        var item = document.createElement('div')
+        var $item = $(item)
+        $item.addClass('wrp-list-item')
+        $item.text(text)
+        if (j & 1)
+            $item.addClass('wrp-list-item-a')
+        else
+            $item.addClass('wrp-list-item-b')
+        return { item: item, $item: $item }
     }
 
     noImage() {
