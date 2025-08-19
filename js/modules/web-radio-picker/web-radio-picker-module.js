@@ -33,6 +33,7 @@ class WebRadioPickerModule extends ModuleBase {
     items = []              // all items by group name
     itemsByArtists = []     // item with artist by artist name
     itemsByName = []        // all items by name
+    itemsAll = []           // all items
     listCount = 0
     filteredListCount = 0
     grpLisdtIndex = 0
@@ -75,6 +76,10 @@ class WebRadioPickerModule extends ModuleBase {
                 'wrp_list_count',
                 listCountPath + '==' + filteredListCountPath + '?' + listCountPath + ' :  (' + filteredListCountPath + '+" / "+' + listCountPath + ')',
                 readOnly))
+
+        $('#btn_wrp_all_radios').on('click', () => {
+            this.allRadios()
+        })
 
         // modules are late binded. have the responsability to init bindings
         this.updateBindings()
@@ -164,6 +169,28 @@ class WebRadioPickerModule extends ModuleBase {
         this.updateBindings()
     }
 
+    clearArtFilters() {
+        const $art = $('#opts_wrp_art_list')
+        $art.find('.item-selected')
+            .removeClass('item-selected')
+    }
+
+    clearTagFilters() {
+        const $tag = $('#opts_wrp_tag_list')
+        $tag.find('.item-selected')
+            .removeClass('item-selected')
+    }
+
+    clearFilters() {
+        this.clearArtFilters()
+        this.clearTagFilters()
+    }
+
+    allRadios() {
+        this.clearFilters()
+        this.updateRadList(this.itemsAll)
+    }
+
     isArtistRadio(r) {
         if (r == null || r.url == null) return false
         const st = this.getSettings()
@@ -194,8 +221,7 @@ class WebRadioPickerModule extends ModuleBase {
 
     initTagBtn($tag, $item, grpName) {
         $item.on('click', () => {
-            $tag.find('.item-selected')
-                .removeClass('item-selected')
+            this.clearFilters()
             $item.addClass('item-selected')
             this.updateRadList(this.items[grpName])
         })
@@ -203,8 +229,7 @@ class WebRadioPickerModule extends ModuleBase {
 
     initArtBtn($art, $item, artName) {
         $item.on('click', () => {
-            $art.find('.item-selected')
-                .removeClass('item-selected')
+            this.clearFilters()
             $item.addClass('item-selected')
             this.updateRadList(this.itemsByArtists[artName])
         })
@@ -287,6 +312,8 @@ class WebRadioPickerModule extends ModuleBase {
                         this.items[g] = []
                     try {
                         this.items[g].push(item)
+                        this.itemsAll.push(item)
+                        this.listCount++
                     } catch (err) {
                         console.log(err)
                     }
@@ -295,8 +322,6 @@ class WebRadioPickerModule extends ModuleBase {
                     console.log(g)
                 }
             });
-
-            this.listCount++
 
             j += 2
         }
