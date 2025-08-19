@@ -343,6 +343,16 @@ class WebRadioPickerModule extends ModuleBase {
 
             j += 2
         }
+        this.itemsAll.sort((a, b) => a.name.localeCompare(b.name))
+        var keys = Object.keys(this.items)
+        keys.sort((a, b) => a.localeCompare(b))
+        const items = { ...this.items }
+        this.items = []
+        keys.forEach(k => {
+            const t = items[k].sort((a, b) => a.name.localeCompare(b.name))
+            this.items[k] = t
+        })
+
         this.filteredListCount = this.listCount
     }
 }
