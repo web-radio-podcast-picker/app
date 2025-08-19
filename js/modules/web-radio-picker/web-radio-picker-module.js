@@ -52,6 +52,28 @@ class WebRadioPickerModule extends ModuleBase {
     initView(viewId) {
 
         this.initTabs()
+        this.buildItems()
+
+        const readOnly = { readOnly: true, attr: 'text' };
+
+        $('#wrp_img').on('error', () => {
+            this.noImage()
+        })
+        $('#wrp_img').on('load', () => {
+            this.showImage()
+        })
+
+        ui
+            .bindings.bind(ui.bindings.binding(
+                'wpr_list_count',
+                'app.moduleLoader.getModuleById("' + this.id + '").listCount',
+                readOnly))
+
+            // modules are late binded. have the responsability to init bindings
+            .bindings.updateBindingTarget('wpr_list_count')
+    }
+
+    buildItems() {
         const $tag = $('#opts_wrp_tag_list')
         const $art = $('#opts_wrp_art_list')
 
@@ -86,12 +108,6 @@ class WebRadioPickerModule extends ModuleBase {
                 $rad[0].appendChild(item)
                 this.initTagRad($rad, $item, n)
             })
-        })
-        $('#wrp_img').on('error', () => {
-            this.noImage()
-        })
-        $('#wrp_img').on('load', () => {
-            this.showImage()
         })
     }
 

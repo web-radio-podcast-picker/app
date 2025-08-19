@@ -87,7 +87,7 @@ class ModuleLoader {
         o.validate()
         if (this.modules[o.id] !== undefined)
             throw new Error('module already plugged: ' + o.id)
-        o.id = o.id + '_module' // //?
+        //o.id = o.id + '_module' // //?
 
         const cnt = {
             viewsCnt: o.views.length,
@@ -256,5 +256,16 @@ class ModuleLoader {
             errId: errId,
             srcUrl: srcUrl
         }
+    }
+
+    getModuleById(id) {
+        var r = null
+        Object.values(this.modules).forEach(m => {
+            if (m.id == id) {
+                r = m
+                return
+            }
+        })
+        return r
     }
 }

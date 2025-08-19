@@ -26,4 +26,8 @@ class ModuleBase {
         return settings.modules[this.id]
     }
 
+    getSettingsPath() {
+        return 'settings.modules[' + this.id + ']'
+    }
+
 }

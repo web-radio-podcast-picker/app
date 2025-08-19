@@ -51,6 +51,15 @@ find license and copyright informations in files /COPYRIGHT and /LICENCE
 #opts_wrp_logo {
 }
 
+#wrp_radio_list_btn_bar {
+    justify-content: space-between;
+    align-content: center;
+}
+
+#wrp_list_count {
+    align-content: center;
+}
+
 .wrp-img-holder {
     align-content: center;
     text-align: center;    
