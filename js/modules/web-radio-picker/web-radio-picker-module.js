@@ -30,17 +30,31 @@ class WebRadioPickerModule extends ModuleBase {
 
     // <----- end module spec -----
 
-    items = []
-    itemsByName = []
+    items = []              // all items by group name
+    itemsByArtists = []     // item with artist by artist name
+    itemsByName = []        // all items by name
     listCount = 0
+    grpLisdtIndex = 0
+    tabs = ['btn_wrp_tag_list',
+        'btn_wrp_art_list',
+        'btn_wrp_logo']
+    ignoreNextShowImage = false
 
     init() {
         const mset = settings.modules.web_radio_picker
         const dataUrl = mset.dataUrl
     }
 
+    initTabs() {
+        ui.tabs.initTabs(this.tabs)
+    }
+
     initView(viewId) {
-        const $tag = $('#wrp_tag_list')
+
+        this.initTabs()
+        const $tag = $('#opts_wrp_tag_list')
+        const $art = $('#opts_wrp_art_list')
+
         const $rad = $('#wrp_radio_list')
         const keys = Object.keys(this.items)
         var i = 0
@@ -73,23 +87,27 @@ class WebRadioPickerModule extends ModuleBase {
                 this.initTagRad($rad, $item, n)
             })
         })
-        $('#wrp_img').on('click', () => {
-            $('#wrp_img_holder').addClass('hidden')
-        })
         $('#wrp_img').on('error', () => {
-            this.hideImage()
+            this.noImage()
         })
         $('#wrp_img').on('load', () => {
             this.showImage()
         })
     }
 
-    hideImage() {
-        $('#wrp_img_holder').addClass('hidden')
+    noImage() {
+        const $i = $('#wrp_img')
+        $i[0].src = './img/icon.ico'
+        $i.addClass('wrp-img-half')
+        this.ignoreNextShowImage = true
     }
 
     showImage() {
-        $('#wrp_img_holder').removeClass('hidden')
+        const $i = $('#wrp_img')
+        if (!this.ignoreNextShowImage)
+            $i.removeClass('wrp-img-half')
+        this.ignoreNextShowImage = false
+        ui.tabs.selectTab('btn_wrp_logo', this.tabs)
     }
 
     initTagBtn($item, text) {
@@ -105,7 +123,6 @@ class WebRadioPickerModule extends ModuleBase {
             $item.addClass('item-selected')
             $('#wrp_radio_url').text(o.url)
             if (o.logo != null && o.logo !== undefined && o.logo != '') {
-                this.hideImage()
                 $('#wrp_img').attr('src', o.logo)
                 const channel = ui.getCurrentChannel()
                 if (channel != null && channel !== undefined) {
@@ -116,7 +133,7 @@ class WebRadioPickerModule extends ModuleBase {
                     )
                 }
             } else {
-                this.hideImage()
+                this.noImage()
             }
         })
     }
@@ -159,7 +176,8 @@ class WebRadioPickerModule extends ModuleBase {
                 name: name,
                 groupTitle: groupTitle,
                 url: url,
-                logo: logo
+                logo: logo,
+                artist: null
             }
 
             this.itemsByName['"' + name + '"'] = item

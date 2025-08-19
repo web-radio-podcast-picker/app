@@ -4,7 +4,7 @@
     find license and copyright informations in files /COPYRIGHT and /LICENCE
 */
 
-//channel settings pane SRC MEDIA
+// channel settings pane SRC MEDIA
 
 class ChannelSettingsPaneSrcMedia {
 

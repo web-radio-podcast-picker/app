@@ -332,5 +332,12 @@ document.addEventListener('DOMContentLoaded', function () {
     if (settings.debug.trace)
         console.log('DOM fully loaded and parsed')
     app.run()
-    //app.openModule('web-radio-picker')
+
+    /*app.openModule('web-radio-picker',
+        app.moduleLoader.opts(
+            'wrp_mod_inf_txt',
+            'wrp_mod_err_txt'
+        )
+    )*/
+
 }, false)

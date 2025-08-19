@@ -753,6 +753,10 @@ div.popup-grid > span.menu-item {
     padding: 1em !important;
 }
 
+.padding-small {
+    padding: 0.5em !important;
+}
+
 .padding-top {
     padding-top: 1em !important;
 }

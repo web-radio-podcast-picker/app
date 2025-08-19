@@ -48,21 +48,24 @@ find license and copyright informations in files /COPYRIGHT and /LICENCE
     /*background-color: rgb(20, 40, 192);*/
 }
 
-.wrp-img-holder {
-    align-content: center;
-    text-align: center;
-    background-color: #000000AA;
+#opts_wrp_logo {
 }
 
-.wrp-image-pane {}
+.wrp-img-holder {
+    align-content: center;
+    text-align: center;    
+    height: 100%;
+    background-color: black;
+}
+
+.wrp-img-half {
+    width: 50% !important;
+}
 
 .wrp-img-holder>img {
-    /*width: 100%;*/
-    /*max-width: 124px;*/
-    width: 100%;
     max-width: 300px;
+    width: 100%;
     text-align: center;
-    margin-top: 0.5em;
     cursor: pointer;
 }
 
