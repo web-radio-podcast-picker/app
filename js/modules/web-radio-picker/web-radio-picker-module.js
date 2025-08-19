@@ -110,6 +110,9 @@ class WebRadioPickerModule extends ModuleBase {
         const $art = $('#opts_wrp_art_list')
         const keys = Object.keys(this.items)
         var i = 0
+        const artId = (name) => 'wrp_' + name
+        const artBtns = []
+
         keys.forEach(k => {
             i++
             const t = this.items[k]
@@ -117,17 +120,51 @@ class WebRadioPickerModule extends ModuleBase {
             t.forEach(n => {
 
                 if (this.isArtistRadio(n)) {
-                    const { item, $item } = this.buildListItem(n.name, j)
+                    const { item, $item } = this.buildListItem(
+                        n.name,
+                        j,
+                        {
+                            count: ''
+                        })
                     j++
                     $art.append($item)
+
                     if (this.itemsByArtists[n.name] === undefined)
                         this.itemsByArtists[n.name] = []
                     this.itemsByArtists[n.name].push(n)
+
+                    artBtns[n.name] = $item
+
                     this.initArtBtn($art, $item, n.name)
                 }
             })
         })
+
+        const arts = Object.keys(this.itemsByArtists)
+        arts.forEach(artName => {
+            const cnt = this.itemsByArtists[artName].length
+            this.setupItemOptions(
+                artBtns[artName],
+                {
+                    count: cnt
+                }
+            )
+        })
+
         return this
+    }
+
+    isArtistRadio(r) {
+        if (r == null || r.url == null) return false
+        const st = this.getSettings()
+        var res = false
+        st.artistUrlFilters.forEach(x => {
+            if (r.url != null && r.url.startsWith(x)) {
+                res = true
+                return
+            }
+        })
+        return res
     }
 
     buildRadItems() {
@@ -171,12 +208,17 @@ class WebRadioPickerModule extends ModuleBase {
         if (opts != null) {
             const n2 = document.createElement('div')
             const $n2 = $(n2)
-            $n2.addClass('gr1 gc1 wrp-list-item-box')
+            $n2.addClass('wrp-list-item-box')
             $n2.text(opts.count)
             item.appendChild(n2)
         }
 
         return { item: item, $item: $item }
+    }
+
+    setupItemOptions($artBut, opts) {
+        const $n = $artBut.find('.wrp-list-item-box')
+        $n.text(opts.count)
     }
 
     updateRadList(lst) {
@@ -207,19 +249,6 @@ class WebRadioPickerModule extends ModuleBase {
     allRadios() {
         this.clearFilters()
         this.updateRadList(this.itemsAll)
-    }
-
-    isArtistRadio(r) {
-        if (r == null || r.url == null) return false
-        const st = this.getSettings()
-        var res = false
-        st.aristUrlFilters.forEach(x => {
-            if (r.url != null && r.url.startsWith(x)) {
-                res = true
-                return
-            }
-        })
-        return res
     }
 
     noImage() {
@@ -255,9 +284,11 @@ class WebRadioPickerModule extends ModuleBase {
 
     initTagRad($rad, $item, o) {
         $item.on('click', () => {
+
             $rad.find('.item-selected')
                 .removeClass('item-selected')
             $item.addClass('item-selected')
+
             $('#wrp_radio_url').text(o.url)
             if (o.logo != null && o.logo !== undefined && o.logo != '') {
                 $('#wrp_img').attr('src', o.logo)
@@ -273,6 +304,21 @@ class WebRadioPickerModule extends ModuleBase {
                 this.noImage()
             }
         })
+    }
+
+    radioItem(name, groupName, url, logo) {
+        return {
+            name: name,
+            groupTitle: groupName,
+            url: url,
+            logo: logo,
+            artist: null,
+            country: null,
+            lang: null,
+            bitRate: null,
+            channels: null,
+            encode: null
+        }
     }
 
     setData(dataId, text) {
@@ -309,13 +355,7 @@ class WebRadioPickerModule extends ModuleBase {
                 || groupTitle == ',')
                 groupTitle = "*"
 
-            const item = {
-                name: name,
-                groupTitle: groupTitle,
-                url: url,
-                logo: logo,
-                artist: null
-            }
+            const item = this.radioItem(name, groupTitle, url, logo)
 
             this.itemsByName['"' + name + '"'] = item
             this.itemsAll.push(item)
@@ -326,20 +366,25 @@ class WebRadioPickerModule extends ModuleBase {
                 var g = grp
                 if (g == '"')
                     g = '*'
-                g = '"' + g + '"'
-                if (g != null && g != '') {
-                    if (this.items[g] === undefined)
-                        this.items[g] = []
-                    try {
-                        this.items[g].push(item)
-                    } catch (err) {
-                        console.log(err)
+
+                if (g != '*' || grps.length == 1) {
+                    // don't put in '*' group if in another group
+
+                    g = '"' + g + '"'
+                    if (g != null && g != '') {
+                        if (this.items[g] === undefined)
+                            this.items[g] = []
+                        try {
+                            this.items[g].push(item)
+                        } catch (err) {
+                            console.log(err)
+                        }
+                    }
+                    else {
+                        console.log(g)
                     }
                 }
-                else {
-                    console.log(g)
-                }
-            });
+            })
 
             j += 2
         }
