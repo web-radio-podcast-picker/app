@@ -186,7 +186,7 @@ class WebRadioPickerModule extends ModuleBase {
             const { item, $item } = this.buildListItem(n.name, j)
             j++
             $rad.append($item)
-            this.initTagRad($rad, $item, n)
+            this.initItemRad($rad, $item, n)
         })
     }
 
@@ -282,7 +282,7 @@ class WebRadioPickerModule extends ModuleBase {
         })
     }
 
-    initTagRad($rad, $item, o) {
+    initItemRad($rad, $item, o) {
         $item.on('click', () => {
 
             $rad.find('.item-selected')
@@ -290,6 +290,10 @@ class WebRadioPickerModule extends ModuleBase {
             $item.addClass('item-selected')
 
             $('#wrp_radio_url').text(o.url)
+            $('#wrp_radio_name').text(o.name)
+            const groups = o.groupTitle?.split(',')
+            $('#wrp_radio_box').text(groups.join(' '))
+
             if (o.logo != null && o.logo !== undefined && o.logo != '') {
                 $('#wrp_img').attr('src', o.logo)
                 const channel = ui.getCurrentChannel()

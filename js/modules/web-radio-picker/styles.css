@@ -69,9 +69,32 @@ find license and copyright informations in files /COPYRIGHT and /LICENCE
     cursor: pointer;
 }
 
+#wrp_footer {
+    height: 2.8em;
+    max-height: 2.8em;
+    overflow: hidden;
+}
+
 #wrp_radio_url {
     word-wrap: break-word;
     contain: inline-size;
+}
+
+#wrp_radio_name {
+    font-size: 1.3em;
+    color: #FFFF00AA;
+}
+
+#btn_wrp_all_radios {
+    padding-left: 0.25em;
+    padding-right: 0.25em;
+    font-size: 0.9em;
+    margin-top: 0.25em;
+}
+
+#wrp_radio_box {
+    text-align: right;
+    color: #44AAffEE;
 }
 
 .wrp-list-item-container {
