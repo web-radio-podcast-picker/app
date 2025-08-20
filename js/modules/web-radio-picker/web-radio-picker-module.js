@@ -5,6 +5,8 @@
 */
 
 const WebRadioPickerDataId = 'all_stations.m3u'
+const WRP_Unknown_Group_Label = 'unclassified'
+const WRP_Artists_Group_Label = 'artists'
 
 // module: web radio picker
 
@@ -13,6 +15,8 @@ class WebRadioPickerModule extends ModuleBase {
     // ----- module spec ----->
 
     id = 'web_radio_picker'         // unique id
+    version = '1.0'
+    versionDate = '08/20/2025'
     author = 'franck gaspoz'        // author
     cert = null                     // certification if any
 
@@ -33,6 +37,7 @@ class WebRadioPickerModule extends ModuleBase {
     items = []              // all items by group name
     itemsByArtists = []     // item with artist by artist name
     itemsByName = []        // all items by name
+    itemsByLang = []        // items by lang (those having one)
     itemsAll = []           // all items
     listCount = 0
     filteredListCount = 0
@@ -108,40 +113,28 @@ class WebRadioPickerModule extends ModuleBase {
 
     buildArtItems() {
         const $art = $('#opts_wrp_art_list')
-        const keys = Object.keys(this.items)
         var i = 0
         const artId = (name) => 'wrp_' + name
         const artBtns = []
+        const t = this.itemsByArtists
+        const keys = Object.keys(t)
+        var j = 0
+        keys.forEach(name => {
+            const { item, $item } = this.buildListItem(
+                name,
+                j,
+                {
+                    count: ''
+                })
+            j++
+            $art.append($item)
 
-        keys.forEach(k => {
-            i++
-            const t = this.items[k]
-            var j = 0
-            t.forEach(n => {
+            artBtns[name] = $item
 
-                if (this.isArtistRadio(n)) {
-                    const { item, $item } = this.buildListItem(
-                        n.name,
-                        j,
-                        {
-                            count: ''
-                        })
-                    j++
-                    $art.append($item)
-
-                    if (this.itemsByArtists[n.name] === undefined)
-                        this.itemsByArtists[n.name] = []
-                    this.itemsByArtists[n.name].push(n)
-
-                    artBtns[n.name] = $item
-
-                    this.initArtBtn($art, $item, n.name)
-                }
-            })
+            this.initArtBtn($art, $item, name)
         })
 
-        const arts = Object.keys(this.itemsByArtists)
-        arts.forEach(artName => {
+        keys.forEach(artName => {
             const cnt = this.itemsByArtists[artName].length
             this.setupItemOptions(
                 artBtns[artName],
@@ -291,8 +284,7 @@ class WebRadioPickerModule extends ModuleBase {
 
             $('#wrp_radio_url').text(o.url)
             $('#wrp_radio_name').text(o.name)
-            const groups = o.groupTitle?.split(',')
-            $('#wrp_radio_box').text(groups.join(' '))
+            $('#wrp_radio_box').text(o.groups.join(' '))
 
             if (o.logo != null && o.logo !== undefined && o.logo != '') {
                 $('#wrp_img').attr('src', o.logo)
@@ -313,7 +305,9 @@ class WebRadioPickerModule extends ModuleBase {
     radioItem(name, groupName, url, logo) {
         return {
             name: name,
+            description: null,
             groupTitle: groupName,
+            groups: [],
             url: url,
             logo: logo,
             artist: null,
@@ -357,7 +351,7 @@ class WebRadioPickerModule extends ModuleBase {
                 || groupTitle == ''
                 || groupTitle == '"'
                 || groupTitle == ',')
-                groupTitle = "*"
+                groupTitle = WRP_Unknown_Group_Label
 
             const item = this.radioItem(name, groupTitle, url, logo)
 
@@ -365,14 +359,28 @@ class WebRadioPickerModule extends ModuleBase {
             this.itemsAll.push(item)
             this.listCount++
 
-            var grps = groupTitle.split(',')
-            grps.forEach(grp => {
-                var g = grp
-                if (g == '"')
-                    g = '*'
+            if (this.isArtistRadio(item)) {
+                if (this.itemsByArtists[name] === undefined)
+                    this.itemsByArtists[name] = []
+                item.artist = name
+                item.groupTitle = groupTitle = WRP_Artists_Group_Label
+                this.itemsByArtists[name].push(item)
+            }
 
-                if (g != '*' || grps.length == 1) {
-                    // don't put in '*' group if in another group
+            const grps = groupTitle.split(',')
+            var trgrps = []
+            grps.forEach(g => {
+                g = this.normalizeGroupName(g, item)
+                if (g != null)
+                    trgrps.push(g)
+            })
+
+            trgrps.forEach(grp => {
+                var g = grp
+
+                if (g != WRP_Unknown_Group_Label || grps.length == 1) {
+                    // don't put in WRP_Unknown_Group_Label group if in another group
+                    item.groups.push(g)
 
                     g = '"' + g + '"'
                     if (g != null && g != '') {
@@ -389,19 +397,82 @@ class WebRadioPickerModule extends ModuleBase {
                     }
                 }
             })
+            item.groups.sort((a, b) => a.localeCompare(b))
 
             j += 2
         }
+
+        // sorts
+
         this.itemsAll.sort((a, b) => a.name.localeCompare(b.name))
-        var keys = Object.keys(this.items)
-        keys.sort((a, b) => a.localeCompare(b))
-        const items = { ...this.items }
-        this.items = []
-        keys.forEach(k => {
-            const t = items[k].sort((a, b) => a.name.localeCompare(b.name))
-            this.items[k] = t
-        })
+
+        this.items = this.sortKT(this.items)
+        this.itemsByArtists = this.sortKT(this.itemsByArtists)
 
         this.filteredListCount = this.listCount
+    }
+
+    sortKT(ar) {
+        var keys = Object.keys(ar)
+        keys.sort((a, b) => a.localeCompare(b))
+        const res = []
+        keys.forEach(k => {
+            const t = ar[k].sort((a, b) => a.name.localeCompare(b.name))
+            res[k] = t
+        })
+        return res
+    }
+
+    normalizeGroupName(g, radioItem) {
+        if (g == null || g == '' || g == '*' || g == '"') g = WRP_Unknown_Group_Label
+
+        // case
+        g = g.toLowerCase()
+
+        // special
+        if (g.startsWith('http://')
+            || g.startsWith('https://')) g = WRP_Unknown_Group_Label
+
+        // substitutions
+        const st = this.getSettings()
+        st.tagSimilarities.some(t => {
+            if (t.includes(g)) {
+                g = t[0]
+                return true
+            }
+            else
+                return false
+        })
+
+        // to lang
+        if (st.tagToLang.includes(g)) {
+            if (this.itemsByLang[g] === undefined)
+                this.itemsByLang[g] = []
+            this.itemsByLang.push(radioItem)
+            // remove tag
+            return null
+        }
+
+        // to artist
+        if (st.tagToArtist.includes(g)) {
+            g = g.replace(/(?:^\w|[A-Z]|\b\w)/g, (word, index) => word.toUpperCase())
+            if (this.itemsByArtists[g] === undefined)
+                this.itemsByArtists[g] = []
+            radioItem.artist = g
+            radioItem.groupTitle += ',' + WRP_Artists_Group_Label
+            this.itemsByArtists[g].push(radioItem)
+            // tag Artists
+            g = WRP_Artists_Group_Label
+            g = g.replace(/(?:^\w|[A-Z]|\b\w)/g, (word, index) => word.toUpperCase())
+            return g
+        }
+
+        // deletions
+        if (st.removeTags.includes(g))
+            // remove tag
+            return null
+
+        g = g.replace(/(?:^\w|[A-Z]|\b\w)/g, (word, index) => word.toUpperCase())
+        return g
     }
 }
