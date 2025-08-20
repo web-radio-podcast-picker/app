@@ -13,7 +13,7 @@ find license and copyright informations in files /COPYRIGHT and /LICENCE
 
 .wrp-scroll-pane {
     overflow-y: scroll;
-    overflow-x: scroll;
+    overflow-x: hidden;
     max-height: 300px;
     min-height: 300px;
 }
