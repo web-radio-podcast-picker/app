@@ -16,7 +16,14 @@
     ["culture", "cultural", "cultura"],
     ["variety", "variedad", "variedas"],
     ["urban", "urban contemporary"],
-    ["university", "universidad", "universidade", "universitária", "college"],
+    [
+      "university",
+      "universidad",
+      "universidade",
+      "universitária",
+      "college",
+      "universitaria"
+    ],
     ["world", "wrld"],
     ["hits", "shlager", "avante-garde"],
     ["romantic", "românticas", "romântica"],
@@ -74,7 +81,8 @@
       "educativa"
     ],
     ["dub", "dubstep"],
-    ["lounge", "downtempo"]
+    ["lounge", "downtempo"],
+    ["youth", "children"]
   ],
   "tagToLang": [
     "russian",
@@ -84,6 +92,7 @@
     "german",
     "japanese",
     "vietnamise",
+    "vietnamese",
     "swahili",
     "swedish",
     "spanish",
@@ -109,11 +118,13 @@
     "bangla",
     "bengla",
     "armenian",
-    "brazilian"
+    "brazilian",
+    "yazidi"
   ],
   "tagToArtist": ["pink floyd"],
   "tagToTowns": [],
   "removeTags": [
+    "wax radio (indianapoli",
     "reading service",
     "public",
     "psychobilly",
