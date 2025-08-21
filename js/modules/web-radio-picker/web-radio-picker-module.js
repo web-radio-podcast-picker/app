@@ -433,6 +433,17 @@ class WebRadioPickerModule extends ModuleBase {
         item.groups.push(tag)
     }
 
+    unclassifiedToLang(lang, item) {
+        lang = toUpperCaseWorldsFirstLetters(lang)
+        this.addByKey(lang, this.itemsByLang, item)
+        item.lang = lang
+        const nogrp = toUpperCaseWorldsFirstLetters(WRP_Unknown_Group_Label)
+        const g = quote(nogrp)
+        this.removeByKey(g, this.items, item)
+        remove(item.groups, nogrp)
+        item.groups.push(lang)
+    }
+
     groupUnclassified() {
         const g = quote(toUpperCaseWorldsFirstLetters(WRP_Unknown_Group_Label))
         const t = [...this.items[g]]
@@ -445,17 +456,23 @@ class WebRadioPickerModule extends ModuleBase {
         var i = 0
         t.forEach(item => {
 
-            var t = item.name.toLowerCase().split(' ')
-            t.forEach(word => {
+            const tw = item.name.toLowerCase().split(' ')
+            tw.forEach(word => {
 
-                // extra tags for unclassified
-
+                // eventuallly build new tags
                 if (st.wordToTag.includes(word))
                     this.unclassifiedToTag(word, item)
 
                 // existing tags
                 if (tags.includes(word))
                     this.unclassifiedToTag(word, item)
+
+                // existing langs
+                st.tagToLang.forEach(tl => {
+                    if (tl.includes(word))
+                        this.unclassifiedToLang(tl[0], item)
+                })
+
             })
             i++
         })
@@ -494,14 +511,21 @@ class WebRadioPickerModule extends ModuleBase {
         })
 
         // to lang
-        if (st.tagToLang.includes(g)) {
-            g = toUpperCaseWorldsFirstLetters(g)
-            if (this.itemsByLang[g] === undefined)
-                this.itemsByLang[g] = []
-            this.itemsByLang[g].push(radioItem)
-            // remove tag
-            return null
-        }
+        st.tagToLang.some(tl => {
+            if (tl.includes(g)) {
+                g = toUpperCaseWorldsFirstLetters(tl[0])
+                if (this.itemsByLang[g] === undefined)
+                    this.itemsByLang[g] = []
+                this.itemsByLang[g].push(radioItem)
+                radioItem.groups.push(g)
+                radioItem.lang = g
+                // remove tag
+                g = null
+                return true
+            }
+            else return false
+        })
+        if (g == null) return null
 
         // to artist
         if (st.tagToArtist.includes(g)) {
