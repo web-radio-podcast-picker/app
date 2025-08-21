@@ -437,14 +437,27 @@ class WebRadioPickerModule extends ModuleBase {
         const g = quote(toUpperCaseWorldsFirstLetters(WRP_Unknown_Group_Label))
         const t = [...this.items[g]]
         const st = this.getSettings()
+        const tags = Object.keys(this.items)
+            .map(x => unquote(x.toLowerCase()))
+
+        // new tags from settings
+
+        var i = 0
         t.forEach(item => {
 
             var t = item.name.toLowerCase().split(' ')
             t.forEach(word => {
+
                 // extra tags for unclassified
+
                 if (st.wordToTag.includes(word))
                     this.unclassifiedToTag(word, item)
+
+                // existing tags
+                if (tags.includes(word))
+                    this.unclassifiedToTag(word, item)
             })
+            i++
         })
     }
 
