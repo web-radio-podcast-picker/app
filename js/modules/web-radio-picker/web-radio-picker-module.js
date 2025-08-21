@@ -45,6 +45,7 @@ class WebRadioPickerModule extends ModuleBase {
     tabs = ['btn_wrp_tag_list',
         'btn_wrp_lang_list',
         'btn_wrp_art_list',
+        'btn_wrp_play_list',
         'btn_wrp_logo']
     ignoreNextShowImage = false
 
