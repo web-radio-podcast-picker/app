@@ -193,3 +193,7 @@ function toClassname(str) {
 function unquote(s) {
     return s.slice(1, -1)
 }
+
+function toUpperCaseWorldsFirstLetters(g) {
+    return g.replace(/(?:^\w|[A-Z]|\b\w)/g, (word, index) => word.toUpperCase())
+}

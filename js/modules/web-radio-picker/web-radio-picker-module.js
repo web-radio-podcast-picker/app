@@ -43,6 +43,7 @@ class WebRadioPickerModule extends ModuleBase {
     filteredListCount = 0
     grpLisdtIndex = 0
     tabs = ['btn_wrp_tag_list',
+        'btn_wrp_lang_list',
         'btn_wrp_art_list',
         'btn_wrp_logo']
     ignoreNextShowImage = false
@@ -61,6 +62,7 @@ class WebRadioPickerModule extends ModuleBase {
         this.initTabs()
         this.buildTagItems()
             .buildArtItems()
+            .buildLangItems()
             .buildRadItems()
 
         const readOnly = { readOnly: true, attr: 'text' };
@@ -106,18 +108,16 @@ class WebRadioPickerModule extends ModuleBase {
             )
             i++
             $tag.append($item)
-            this.initTagBtn($tag, $item, k)
+            this.initBtn($tag, $item, this.items[k])
         })
         return this
     }
 
-    buildArtItems() {
-        const $art = $('#opts_wrp_art_list')
+    buildNamesItems(containerId, itemsByName) {
+        const $container = $('#' + containerId)
         var i = 0
-        const artId = (name) => 'wrp_' + name
-        const artBtns = []
-        const t = this.itemsByArtists
-        const keys = Object.keys(t)
+        const btns = []
+        const keys = Object.keys(itemsByName)
         var j = 0
         keys.forEach(name => {
             const { item, $item } = this.buildListItem(
@@ -127,23 +127,31 @@ class WebRadioPickerModule extends ModuleBase {
                     count: ''
                 })
             j++
-            $art.append($item)
-
-            artBtns[name] = $item
-
-            this.initArtBtn($art, $item, name)
+            $container.append($item)
+            btns[name] = $item
+            this.initBtn($container, $item, itemsByName[name])
         })
 
-        keys.forEach(artName => {
-            const cnt = this.itemsByArtists[artName].length
+        keys.forEach(name => {
+            const cnt = itemsByName[name].length
             this.setupItemOptions(
-                artBtns[artName],
+                btns[name],
                 {
                     count: cnt
                 }
             )
         })
 
+        return this
+    }
+
+    buildLangItems() {
+        this.buildNamesItems('opts_wrp_lang_list', this.itemsByLang)
+        return this
+    }
+
+    buildArtItems() {
+        this.buildNamesItems('opts_wrp_art_list', this.itemsByArtists)
         return this
     }
 
@@ -161,7 +169,6 @@ class WebRadioPickerModule extends ModuleBase {
     }
 
     buildRadItems() {
-        const $rad = $('#wrp_radio_list')
         const keys = Object.keys(this.items)
         var i = 0
         keys.forEach(k => {
@@ -222,21 +229,16 @@ class WebRadioPickerModule extends ModuleBase {
         this.updateBindings()
     }
 
-    clearArtFilters() {
-        const $art = $('#opts_wrp_art_list')
-        $art.find('.item-selected')
-            .removeClass('item-selected')
-    }
-
-    clearTagFilters() {
-        const $tag = $('#opts_wrp_tag_list')
-        $tag.find('.item-selected')
-            .removeClass('item-selected')
-    }
-
     clearFilters() {
-        this.clearArtFilters()
-        this.clearTagFilters()
+        this.clearContainerSelection('opts_wrp_art_list')
+        this.clearContainerSelection('opts_wrp_tag_list')
+        this.clearContainerSelection('opts_wrp_lang_list')
+    }
+
+    clearContainerSelection(containerId) {
+        const $container = $('#' + containerId)
+        $container.find('.item-selected')
+            .removeClass('item-selected')
     }
 
     allRadios() {
@@ -259,19 +261,11 @@ class WebRadioPickerModule extends ModuleBase {
         ui.tabs.selectTab('btn_wrp_logo', this.tabs)
     }
 
-    initTagBtn($tag, $item, grpName) {
+    initBtn($container, $item, t) {
         $item.on('click', () => {
             this.clearFilters()
             $item.addClass('item-selected')
-            this.updateRadList(this.items[grpName])
-        })
-    }
-
-    initArtBtn($art, $item, artName) {
-        $item.on('click', () => {
-            this.clearFilters()
-            $item.addClass('item-selected')
-            this.updateRadList(this.itemsByArtists[artName])
+            this.updateRadList(t)
         })
     }
 
@@ -402,14 +396,56 @@ class WebRadioPickerModule extends ModuleBase {
             j += 2
         }
 
+        // arrange 'unclassified' group
+        this.groupUnclassified()
+
         // sorts
 
         this.itemsAll.sort((a, b) => a.name.localeCompare(b.name))
 
         this.items = this.sortKT(this.items)
         this.itemsByArtists = this.sortKT(this.itemsByArtists)
+        this.itemsByLang = this.sortKT(this.itemsByLang)
 
         this.filteredListCount = this.listCount
+    }
+
+    addByKey(k, t, e) {
+        if (t[k] === undefined)
+            t[k] = []
+        t[k].push(e)
+    }
+
+    removeByKey(k, t, e) {
+        if (t[k] === undefined) return
+        const tt = t[k]
+        remove(tt, e)
+    }
+
+    unclassifiedToTag(tag, item) {
+        tag = toUpperCaseWorldsFirstLetters(tag)
+        const gtag = quote(tag)
+        this.addByKey(gtag, this.items, item)
+        const nogrp = toUpperCaseWorldsFirstLetters(WRP_Unknown_Group_Label)
+        const g = quote(nogrp)
+        this.removeByKey(g, this.items, item)
+        remove(item.groups, nogrp)
+        item.groups.push(tag)
+    }
+
+    groupUnclassified() {
+        const g = quote(toUpperCaseWorldsFirstLetters(WRP_Unknown_Group_Label))
+        const t = [...this.items[g]]
+        const st = this.getSettings()
+        t.forEach(item => {
+
+            var t = item.name.toLowerCase().split(' ')
+            t.forEach(word => {
+                // extra tags for unclassified
+                if (st.wordToTag.includes(word))
+                    this.unclassifiedToTag(word, item)
+            })
+        })
     }
 
     sortKT(ar) {
@@ -446,16 +482,17 @@ class WebRadioPickerModule extends ModuleBase {
 
         // to lang
         if (st.tagToLang.includes(g)) {
+            g = toUpperCaseWorldsFirstLetters(g)
             if (this.itemsByLang[g] === undefined)
                 this.itemsByLang[g] = []
-            this.itemsByLang.push(radioItem)
+            this.itemsByLang[g].push(radioItem)
             // remove tag
             return null
         }
 
         // to artist
         if (st.tagToArtist.includes(g)) {
-            g = g.replace(/(?:^\w|[A-Z]|\b\w)/g, (word, index) => word.toUpperCase())
+            g = toUpperCaseWorldsFirstLetters(g)
             if (this.itemsByArtists[g] === undefined)
                 this.itemsByArtists[g] = []
             radioItem.artist = g
@@ -463,7 +500,7 @@ class WebRadioPickerModule extends ModuleBase {
             this.itemsByArtists[g].push(radioItem)
             // tag Artists
             g = WRP_Artists_Group_Label
-            g = g.replace(/(?:^\w|[A-Z]|\b\w)/g, (word, index) => word.toUpperCase())
+            g = toUpperCaseWorldsFirstLetters(g)
             return g
         }
 
@@ -472,7 +509,27 @@ class WebRadioPickerModule extends ModuleBase {
             // remove tag
             return null
 
-        g = g.replace(/(?:^\w|[A-Z]|\b\w)/g, (word, index) => word.toUpperCase())
+        g = toUpperCaseWorldsFirstLetters(g)
         return g
     }
+}
+
+function toUpperCaseWorldsFirstLetters(g) {
+    return g.replace(/(?:^\w|[A-Z]|\b\w)/g, (word, index) => word.toUpperCase())
+}
+
+function remove(t, e) {
+    const i = index(t, e)
+    if (i == -1) return
+    t.splice(i, 1)
+}
+
+function index(t, e) {
+    for (var i = 0; i < t.length; i++)
+        if (t[i] == e) return i
+    return -1
+}
+
+function quote(s) {
+    return '"' + s + '"'
 }

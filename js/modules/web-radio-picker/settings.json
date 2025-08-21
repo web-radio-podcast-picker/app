@@ -2,6 +2,7 @@
   "data": "../rsc/web-radio/all_stations.m3u",
   "artistUrlFilters": ["https://streaming.exclusive.radio/"],
   "favorites": [],
+  "wordToTag": ["radio"],
   "tagSimilarities": [
     ["country", "new country"],
     ["oldies", "nostalgia", "oldschool", "retro"],
