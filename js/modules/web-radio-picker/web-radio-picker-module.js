@@ -424,23 +424,31 @@ class WebRadioPickerModule extends ModuleBase {
 
     unclassifiedToTag(tag, item) {
         tag = toUpperCaseWorldsFirstLetters(tag)
+        if (item.groups.includes(tag)) return
+
         const gtag = quote(tag)
         this.addByKey(gtag, this.items, item)
+
         const nogrp = toUpperCaseWorldsFirstLetters(WRP_Unknown_Group_Label)
         const g = quote(nogrp)
         this.removeByKey(g, this.items, item)
         remove(item.groups, nogrp)
+
         item.groups.push(tag)
     }
 
     unclassifiedToLang(lang, item) {
         lang = toUpperCaseWorldsFirstLetters(lang)
+        if (item.groups.includes(lang)) return
+
         this.addByKey(lang, this.itemsByLang, item)
         item.lang = lang
+
         const nogrp = toUpperCaseWorldsFirstLetters(WRP_Unknown_Group_Label)
         const g = quote(nogrp)
         this.removeByKey(g, this.items, item)
         remove(item.groups, nogrp)
+
         item.groups.push(lang)
     }
 
@@ -473,6 +481,11 @@ class WebRadioPickerModule extends ModuleBase {
                         this.unclassifiedToLang(tl[0], item)
                 })
 
+                // word similarities
+                st.tagSimilarities.forEach(sm => {
+                    if (sm.includes(word))
+                        this.unclassifiedToTag(sm[0], item)
+                })
             })
             i++
         })

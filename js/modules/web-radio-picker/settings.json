@@ -1,9 +1,16 @@
 {
   "data": "../rsc/web-radio/all_stations.m3u",
-  "artistUrlFilters": ["https://streaming.exclusive.radio/"],
+  "artistUrlFilters": [
+    "https://streaming.exclusive.radio/",
+    "http://streaming.exclusive.radio/",
+    "https://drive.uber.radio/"
+  ],
   "favorites": [],
   "wordToTag": ["radio"],
   "tagSimilarities": [
+    ["arabic", "al"],
+    ["radio", "@fm", "fm"],
+    ["traffic", "107.7"],
     ["country", "new country"],
     ["oldies", "nostalgia", "oldschool", "retro"],
     ["computer", "amiga", "synthwave"],
@@ -25,7 +32,7 @@
       "universitaria"
     ],
     ["world", "wrld"],
-    ["hits", "shlager", "avante-garde"],
+    ["hits", "hit", "shlager", "avante-garde"],
     ["romantic", "românticas", "romântica"],
     ["politics", "politica", "political"],
     ["instrumental", "orquesta"],
@@ -85,10 +92,20 @@
     ["youth", "children"]
   ],
   "tagToLang": [
+    ["africa", "afrik", "afriradio"],
     ["russian", "russia²"],
     ["deutsch", "deutch", "dutch", "german"],
     ["english"],
-    ["french", "france"],
+    [
+      "french",
+      "france",
+      "fip",
+      "100%radio",
+      "rcf",
+      "allzic",
+      "alpes",
+      "d'azur"
+    ],
     ["japanese"],
     ["vietnamise"],
     ["vietnamese"],
