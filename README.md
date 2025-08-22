@@ -50,7 +50,7 @@ ___
 
 ## Screenshots
 
-[![Watch in video](doc/screenshot-0.9f.png)](https://github.com/franck-gaspoz/soundcard-signal-analyzer-generator/blob/main/vid-oscillo-wrp.mp4)
+[![Watch in video](doc/screenshot-0.9f.png)](https://github.com/franck-gaspoz/soundcard-signal-analyzer-generator/blob/main/doc/vid-oscillo-wrp.mp4)
 
 *v 0.9 - Web stream input : **module Web Radio Picker***
 
