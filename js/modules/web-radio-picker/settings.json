@@ -1,6 +1,6 @@
 {
   "data": "../rsc/web-radio/all_stations.m3u",
-  "addToHistoryDelay": 3000,
+  "addToHistoryDelay": 10000,
   "artistUrlFilters": [
     "https://streaming.exclusive.radio/",
     "http://streaming.exclusive.radio/",

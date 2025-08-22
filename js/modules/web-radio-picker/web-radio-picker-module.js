@@ -49,6 +49,7 @@ class WebRadioPickerModule extends ModuleBase {
         'btn_wrp_play_list',
         'btn_wrp_logo']
     ignoreNextShowImage = false
+    addToHistoryTimer = null
 
     init() {
         const mset = settings.modules.web_radio_picker
@@ -292,9 +293,12 @@ class WebRadioPickerModule extends ModuleBase {
                         ui.getCurrentChannel(),
                         o.url
                     )
-                    setTimeout(() => this.addToHistory(o),
+                    const tid = setTimeout(() => this.addToHistory(o),
                         this.getSettings().addToHistoryDelay
                     )
+                    if (this.addToHistoryTimer != null)
+                        clearTimeout(this.addToHistoryTimer)
+                    this.addToHistoryTimer = tid
                 }
             } else {
                 this.noImage()
@@ -303,15 +307,18 @@ class WebRadioPickerModule extends ModuleBase {
     }
 
     addToHistory(o) {
+        o.listenDate = Date.now
         if (this.history.includes(o)) return
         const $pl = $('#opts_wrp_play_list')
-        this.history.push(o)
+
+        this.history.unshift(o)
+
         const { item, $item } = this.buildListItem(
             o.name,
-            o.length,
+            this.history.length - 1,
             { data: o }
         )
-        $pl.append($item)
+        $pl.prepend($item)
         this.initBtn($pl, $item, [o])
     }
 
@@ -328,7 +335,8 @@ class WebRadioPickerModule extends ModuleBase {
             lang: null,
             bitRate: null,
             channels: null,
-            encode: null
+            encode: null,
+            listenDate: null
         }
     }
 
