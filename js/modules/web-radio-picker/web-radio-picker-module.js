@@ -39,6 +39,7 @@ class WebRadioPickerModule extends ModuleBase {
     itemsByName = []        // all items by name
     itemsByLang = []        // items by lang (those having one)
     itemsAll = []           // all items
+    history = []            // historic (auto play list)
     listCount = 0
     filteredListCount = 0
     grpLisdtIndex = 0
@@ -232,6 +233,7 @@ class WebRadioPickerModule extends ModuleBase {
 
     clearFilters() {
         this.clearContainerSelection('opts_wrp_art_list')
+        this.clearContainerSelection('opts_wrp_play_list')
         this.clearContainerSelection('opts_wrp_tag_list')
         this.clearContainerSelection('opts_wrp_lang_list')
     }
@@ -290,11 +292,27 @@ class WebRadioPickerModule extends ModuleBase {
                         ui.getCurrentChannel(),
                         o.url
                     )
+                    setTimeout(() => this.addToHistory(o),
+                        this.getSettings().addToHistoryDelay
+                    )
                 }
             } else {
                 this.noImage()
             }
         })
+    }
+
+    addToHistory(o) {
+        if (this.history.includes(o)) return
+        const $pl = $('#opts_wrp_play_list')
+        this.history.push(o)
+        const { item, $item } = this.buildListItem(
+            o.name,
+            o.length,
+            { data: o }
+        )
+        $pl.append($item)
+        this.initBtn($pl, $item, [o])
     }
 
     radioItem(name, groupName, url, logo) {
