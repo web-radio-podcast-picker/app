@@ -51,7 +51,7 @@ ___
 ## Screenshots
 
 [![Watch in video](doc/screenshot-0.9f.png)](https://github.com/franck-gaspoz/soundcard-signal-analyzer-generator/blob/main/doc/vid-oscillo-wrp.mp4)
-
+click on the image to watch in video
 *v 0.9 - Web stream input : **module Web Radio Picker***
 
 ![screenshot](doc/screenshot-0.8b.png)
