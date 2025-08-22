@@ -50,7 +50,7 @@ ___
 
 ## Screenshots
 
-![screenshot](doc/screenshot-0.9c.png)
+<video src='./doc/vid-oscillo-wrp.mp4'>
 *v 0.9 - Web stream input : **module Web Radio Picker***
 
 ![screenshot](doc/screenshot-0.8b.png)
