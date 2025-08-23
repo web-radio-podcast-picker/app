@@ -842,6 +842,7 @@ code {
 
 #pop_settings {
     min-width: 512px;
+    z-index: 100;
 }
 
 #intro_popup {
