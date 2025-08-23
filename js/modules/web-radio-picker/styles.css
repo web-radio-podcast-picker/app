@@ -56,6 +56,7 @@ find license and copyright informations in files /COPYRIGHT and /LICENCE
     height: 100%;
     background-color: black;
     display: grid;
+    justify-items: center;
 }
 
 .wrp-img-half {
