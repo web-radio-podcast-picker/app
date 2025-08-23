@@ -130,7 +130,9 @@ class Popups {
             const zoom = Math.min(rx, ry)
             $popup.css('zoom', zoom)
             // center
-            bounds = $popup[0].getBoundingClientRect()
+            // bounding client rect not updated by zoom factor on chromium
+            //bounds = $popup[0].getBoundingClientRect()
+            bounds = { width: w * zoom, height: h * zoom }
             switch (align) {
                 case Align_Center_Middle_Top:
                     left = (vs.width - bounds.width) / 2.0 / zoom;
