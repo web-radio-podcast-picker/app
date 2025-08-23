@@ -20,7 +20,7 @@ class ChannelSettingsPaneSrcMedia {
                 true)
             .bindings.bind(ui.bindings.binding(
                 'opt_ch_media_url',
-                'app.getInputChannel().mediaSource.url',
+                ui.getCurrentChannelPath('mediaSource.url'),
                 { disableInputWidget: true, sym: "'" }))
 
         $('#bt_ch_src_play').on('click', () => {
