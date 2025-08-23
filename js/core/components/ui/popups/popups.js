@@ -84,14 +84,7 @@ class Popups {
     }
 
     updatePopupPositionAndSize(controlId, $popup, align) {
-        //var bounds = $popup[0].getBoundingClientRect()
-        // jq w,h: less padding + border + margin , but zoom independent
-        //var bounds = { width: $popup.width(), height: $popup.height() }
         var bounds = { width: $popup.outerWidth(), height: $popup.outerHeight() }
-        /*var z = Number($popup.css('zoom'))
-        if (z === undefined || z == null) z = 1
-        const w = bounds.width / z
-        const h = bounds.height / z*/
         const w = bounds.width
         const h = bounds.height
         var left = 0;
