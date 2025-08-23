@@ -36,6 +36,11 @@ class ChannelSettingsPaneSrcMedia {
             $i[0].value = text
         })
 
+        $('#bt_ch_src_media_url_copy').on('click', () => {
+            const text = $('#opt_ch_media_url')[0].value
+            navigator.clipboard.writeText(text)
+        })
+
         $('#bt_ch_src_media_peekwr').on('click', () => {
             // open module: web-radio-picker
             app.openModule('web-radio-picker',
@@ -51,6 +56,18 @@ class ChannelSettingsPaneSrcMedia {
 
     setup(channel) {
 
+    }
+
+    updateURL(url) {
+        const channel = this.channelSettings.editChannel
+        if (channel == null) return
+        channel.mediaSource.audio.src = url
+        channel.mediaSource.url = url
+        ui.channels.popupSettings.paneSrcMedia.updateBindings()
+    }
+
+    updateBindings() {
+        ui.bindings.updateBindingTarget('opt_ch_media_url')
     }
 
     updatePause(channel) {

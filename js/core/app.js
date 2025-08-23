@@ -262,7 +262,7 @@ app = {
         if (channel.pause || oscilloscope.pause) return
         //oscilloscope.setOut(channel, false)
         try {
-            channel.mediaSource.audio.src = url
+            ui.channels.popupSettings.paneSrcMedia.updateURL(url)
             this.playChannelMedia(channel)
         } catch (err) {
             ui.showError(err)

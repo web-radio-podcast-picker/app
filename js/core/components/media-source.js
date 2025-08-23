@@ -37,7 +37,8 @@ class MediaSource {
         this.audio.pause()
         this.audio.src = ''
         this.audio = null
-        this.init()
+        //this.init()
+        //this.updateBindings()
     }
 
     getMediaStream() {
