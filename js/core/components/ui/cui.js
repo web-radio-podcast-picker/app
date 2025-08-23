@@ -32,8 +32,8 @@ cui = {
     viewSize() {
         const html = document.querySelector('html');
         return {
-            width: html.clientWidth - settings.ui.clientWidthBorder,
-            height: html.clientHeight - settings.ui.clientHeightBorder
+            width: html.clientWidth /*- settings.ui.clientWidthBorder*/,
+            height: html.clientHeight /*- settings.ui.clientHeightBorder*/
         };
     },
 
