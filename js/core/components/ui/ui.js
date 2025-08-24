@@ -149,7 +149,7 @@ ui = {
         $b.removeClass('hidden')
 
         $b = $('#buttons_bar2')
-        left = w - 118 + 7 + 5
+        left = w - 118 + 7 + 5 - 4
         $b.css('left', left + 'px')
         $b.css('top', top + 'px')
         $b.removeClass('hidden')

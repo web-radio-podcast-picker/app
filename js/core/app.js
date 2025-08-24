@@ -323,7 +323,7 @@ app = {
 
     openModule(uri, opts) {
         this.moduleLoader.load(uri, opts, (o, v) => {
-            ui.popups.togglePopup(null, o.id)
+            ui.popups.showPopup(null, o.id)
         })
     }
 }
@@ -332,12 +332,5 @@ document.addEventListener('DOMContentLoaded', function () {
     if (settings.debug.trace)
         console.log('DOM fully loaded and parsed')
     app.run()
-
-    /*app.openModule('web-radio-picker',
-        app.moduleLoader.opts(
-            'wrp_mod_inf_txt',
-            'wrp_mod_err_txt'
-        )
-    )*/
 
 }, false)

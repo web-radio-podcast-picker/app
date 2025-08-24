@@ -50,6 +50,10 @@ class Popups {
             })
     }
 
+    showPopup(controlId, popupId, align) {
+        this.togglePopup(controlId, popupId, true, align)
+    }
+
     togglePopup(controlId, popupId, showState, align) {
 
         const $popup = $('#' + popupId);
