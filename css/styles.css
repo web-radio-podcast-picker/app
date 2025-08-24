@@ -315,11 +315,19 @@ div.input-widget-value-vpane > input {
     padding: 0.5em;
 }
 
-.input-widget-buttons-vpane {
+.input-widget-buttons-vpane, .input-widget-buttons-vpane-left {
     font-size: 18px !important;
     display: grid;
     grid-template-rows: auto;
     align-items: center;
+}
+
+.input-widget-buttons-vpane-left {
+    justify-content: start;
+}
+
+div.input-widget-buttons-vpane-left > button.btn-bluegreen {
+    margin-left: 0.5em;
 }
 
 .input-widget-value-vpane {
