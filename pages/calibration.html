@@ -90,7 +90,7 @@
     <ul>
         <li><b>Type of transducer</b>: Most PC microphones are of the
             <b>electret</b> type (permanently polarized condenser), powered by a polarization voltage
-            <br><b><u class="big-font warning">typically
+            <b><u class="warning">typically
                     between 2
                     and
                     5 V</u></b>
@@ -117,12 +117,18 @@
     </ul>
 
     <p class="warning">
-        👉 <b class="big-font">Thus</b> you <u>must</u> setup the software with the <b>actual</b> peak volts
+        👉 Thus you should setup the software with the <b>actual</b> peak volts
         values your sound card is
         setted up for, in order to read the <b>actual</b> Volt values on the oscilloscope.
-        <br><br>
+    </p>
+    <p>
         That means to know wich is the Voltage value for the maximum and minimum digital value, according to the bit
-        sample resolution (0..2^n-1)
+        sample resolution, from 0 to 2^n-1 where n is the number of bits given by the ADC
+    </p>
+    <p>
+        👉 You can get more information about polarized electret microphones here :
+        <a href="https://www.epanorama.net/circuits/microphone_powering.html#soundcard" rel="noopener"
+            target="_blank">https://www.epanorama.net/circuits/microphone_powering.html#soundcard</a>
     </p>
 
     <br>
@@ -149,7 +155,8 @@
     </p>
 
     <p>
-        Click the field <code>Signal Range</code> and then setup the value using the input widget. This is the polarized
+        Click the field <code>Signal Range</code> and then setup the value using the input widget. This is the
+        polarized
         pick value, meaning a range of -value .. +value
     </p>
 
