@@ -158,7 +158,7 @@ class ChannelSettingsPaneSrcGen {
     setFrequency(v) {
         const channel = ui.getCurrentChannel()
         if (channel == null) return
-        const valst = xeval(v)
+        const valst = xevalValue(v)
         if (valst.success) {
             channel.generator.frequency = eval(v)
         }
