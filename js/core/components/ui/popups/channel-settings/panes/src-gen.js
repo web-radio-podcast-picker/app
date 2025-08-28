@@ -160,7 +160,7 @@ class ChannelSettingsPaneSrcGen {
         if (channel == null) return
         const valst = xevalValue(v)
         if (valst.success) {
-            channel.generator.frequency = eval(v)
+            channel.generator.frequency = valst.value
         }
         const binding = ui.bindings.getBinding('opt_ch_gen_frq')
         binding.init()

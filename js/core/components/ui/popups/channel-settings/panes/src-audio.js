@@ -80,7 +80,7 @@ class ChannelSettingsPaneSrcAudio {
         if (channel == null) return
         const valst = xevalValue(v)
         if (valst.success) {
-            channel.setGain(eval(valst.value))
+            channel.setGain(valst.value)
         }
         const binding = ui.bindings.getBinding('opt_ch_src_gain')
         binding.init()
