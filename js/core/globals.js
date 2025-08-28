@@ -15,6 +15,15 @@ const Source_Id_Media = 'Media'
 const Source_Id_Math = 'Math'
 const Source_Id_None = 'None'
 
+// devices ids
+const Device_Id_Default = 'default'
+const Device_Id_Communications = 'communications'
+
+// devices kinds ids
+const Device_Kind_Id_Audio_Input = 'audioinput'
+const Device_Kind_Id_Video_Input = 'videoinput'
+const Device_Kind_Id_Audio_Output = 'audiooutput'
+
 // generator functions
 const Gen_Fn_Sin = 'Sine'
 const Gen_Fn_Square = 'Square'

@@ -10,6 +10,8 @@ app = {
 
     // properties
 
+    audioInputDevice: null,     // current audio input device
+    audioOutputDevice: null,    // current audio output device
     audioInputChannel: null,    // audio input channel (shared)
     oscilloscope: null,         // oscilloscope channels manager
     oscilloscopeView: null,     // oscilloscope view
@@ -69,12 +71,22 @@ app = {
         if (!navigator.mediaDevices?.enumerateDevices) {
             throw new Error("enumerateDevices() not supported.")
         } else {
-            // List cameras and microphones.
+            // list input & output devices
             navigator.mediaDevices
                 .enumerateDevices()
                 .then((devices) => {
                     devices.forEach((device) => {
                         console.log(`${device.kind}: ${device.label} id = ${device.deviceId}`)
+
+                        if (device.kind == Device_Kind_Id_Audio_Input &&
+                            device.deviceId == Device_Id_Default
+                        )
+                            this.audioInputDevice = device
+
+                        if (device.kind == Device_Kind_Id_Audio_Output &&
+                            device.deviceId == Device_Id_Default
+                        )
+                            this.audioOutputDevice = device
                     })
                 })
                 .catch((err) => {
@@ -331,6 +343,21 @@ app = {
         app.endFrameOneShotOperations.push(
             () => fn()
         )
+    },
+
+    /** Device
+    * deviceId
+    * groupId
+    * kind
+    * label
+    **/
+
+    getInputDevice() {
+        return this.audioInputDevice
+    },
+
+    getOutputDevice() {
+        return this.audioOutputDevice
     }
 }
 

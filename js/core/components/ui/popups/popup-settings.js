@@ -78,7 +78,8 @@ class PopupSettings {
                 'settings.audioInput.vScale'))
             .bindings.bind(ui.bindings.binding(
                 'opt_os_audio_source',
-                'audioInputDevice.label',
+                //'audioInputDevice.label',
+                'app.getInputDevice().label',
                 {
                     attr: 'text',
                     ...readOnly
