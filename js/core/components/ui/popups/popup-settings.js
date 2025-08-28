@@ -77,7 +77,7 @@ class PopupSettings {
                 'opt_os_inputVscale',
                 'settings.audioInput.vScale'))
             .bindings.bind(ui.bindings.binding(
-                'opt_os_audio_source',
+                'opt_os_input_device',
                 //'audioInputDevice.label',
                 'app.getInputDevice().label',
                 {
@@ -97,6 +97,13 @@ class PopupSettings {
             .bindings.bind(ui.bindings.binding(
                 'opt_os_outputVscale',
                 'settings.output.vScale'))
+            .bindings.bind(ui.bindings.binding(
+                'opt_os_output_device',
+                'app.getOutputDevice().label',
+                {
+                    attr: 'text',
+                    ...readOnly
+                }))
 
             // grid
             .bindings.bind(ui.bindings.binding(

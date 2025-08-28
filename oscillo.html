@@ -209,12 +209,13 @@
 
             <!-- input -->
             <div id="opts_os_in" class="gr1 gc2 opts-pane">
-                <span class="gr1 gc1 opt-label">source</span>
+                <span class="gr1 gc1 opt-label">device</span>
                 <span class="gr2 gc1 opt-label">sample rate</span>
                 <span class="gr3 gc1 opt-label">channels count</span>
                 <span class="gr4 gc1 opt-label">sample size</span>
                 <span class="gr5 gc1 opt-label">signal range</span>
-                <span class="gr1 gc2 opt-value-edit read-only" id="opt_os_audio_source" readonly>
+
+                <span class="gr1 gc2 opt-value-edit read-only" id="opt_os_input_device" readonly>
                 </span>
                 <div class="gr2 gc2">
                     <input id="opt_os_smpfrqcy" class="opt-value-edit"></input>
@@ -230,12 +231,16 @@
 
             <!-- output -->
             <div id="opts_os_out" class="gr1 gc2 opts-pane hidden">
-                <span class="gr1 gc1 opt-label">channels count</span>
-                <span class="gr2 gc1 opt-label">channel interpretation</span>
-                <span class="gr3 gc1 opt-label">signal range</span>
-                <input id="opt_os_outputChannelsCount" class="gr1 gc2 opt-value-edit"></input>
-                <input id="opt_os_channelInterpretation" class="gr2 gc2 opt-value-edit"></input>
-                <div class="gr3 gc2">
+                <span class="gr1 gc1 opt-label">device</span>
+                <span class="gr2 gc1 opt-label">channels count</span>
+                <span class="gr3 gc1 opt-label">channel interpretation</span>
+                <span class="gr4 gc1 opt-label">input range</span>
+
+                <span class="gr1 gc2 opt-value-edit read-only" id="opt_os_output_device" readonly>
+                </span>
+                <input id="opt_os_outputChannelsCount" class="gr2 gc2 opt-value-edit"></input>
+                <input id="opt_os_channelInterpretation" class="gr3 gc2 opt-value-edit"></input>
+                <div class="gr4 gc2">
                     <input id="opt_os_outputVscale" class="opt-value-edit"></input>
                     <span class="unit">V</span>
                 </div>
