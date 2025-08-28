@@ -15,7 +15,7 @@ class OscilloscopeView {
         $('#tdiv').text(tround(settings.oscilloscope.tPerDiv) + 'ms')
         const inChannel = app.getInputChannel()
         if (inChannel == null || inChannel.analyzer == null) return
-        $('#buffsz').text(kilobyte(inChannel.analyzer.frequencyBinCount).text)
+        $('#buffsz').text(kilo3(inChannel.analyzer.frequencyBinCount).text)
         $('#echps').text(kilo(inChannel.analyzer.context.sampleRate).text)
     }
 

@@ -14,6 +14,10 @@ function kilo(v) {
     return toUnit(v, Units_Kilos, null, vround2)
 }
 
+function kilo3(v) {
+    return toUnit(v, Units_Kilos, null, vround3)
+}
+
 function kilobyte(v) {
     return toUnit(v, Units_Bytes, 1024, vround2)
 }
