@@ -95,6 +95,7 @@ class ChannelSettingsPaneSrcAudio {
 
     updatePause(channel) {
         ui.toggles.updateToggle('btn_ch_src_audio_onoff')
+        ui.bindings.initBindedControls()
     }
 
     async tabChanged($c) {
@@ -103,6 +104,11 @@ class ChannelSettingsPaneSrcAudio {
         await app.setChannelSource(channel, channelSourceId)
         ui.channels.updatePause(channel)
         this.channelSettings.setupChannelSettingsPane(channel)
+        app.onEndOfFrameDo(
+            () => {
+                ui.bindings.initBindedControls()
+            }
+        )
     }
 
     tabPostChanged($c) {

@@ -325,6 +325,12 @@ app = {
         this.moduleLoader.load(uri, opts, (o, v) => {
             ui.popups.showPopup(null, o.id)
         })
+    },
+
+    onEndOfFrameDo(fn) {
+        app.endFrameOneShotOperations.push(
+            () => fn()
+        )
     }
 }
 

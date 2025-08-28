@@ -95,7 +95,6 @@ class Bindings {
                 onChanged()
             else {
                 try {
-                    //eval(valuePath + '=' + s + v + s)
                     xevalAssign(valuePath, s + v + s)
                     if (onPostChanged != null)
                         onPostChanged(v)
@@ -143,5 +142,6 @@ class Bindings {
     updateBindingTarget(controlId) {
         const binding = this.getBinding(controlId)
         binding.init()
+        return this
     }
 }
