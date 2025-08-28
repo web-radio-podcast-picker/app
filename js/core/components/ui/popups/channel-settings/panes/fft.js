@@ -15,6 +15,7 @@ class ChannelSettingsPaneFFT {
         const fft = ui.getCurrentChannelPath() + 'fft.'
         const sd = cui.isSmallDisplay() ? 'SD' : ''
         const readOnly = { attr: 'text', readOnly: true };
+        const ch = 'ui.getCurrentChannel().'
 
         ui
             .toggles.initToggle('btn_ch_fft_onoff',
@@ -49,17 +50,17 @@ class ChannelSettingsPaneFFT {
                 fft + 'grid.dbPerDiv' + sd))
             .bindings.bind(ui.bindings.binding(
                 'opt_ch_fft_size',
-                `app.getInputChannel().analyzer.fftSize`,
+                ch + `measures.fftDataArray.length`,
                 readOnly
             ))
             .bindings.bind(ui.bindings.binding(
                 'opt_ch_mindb',
-                `app.getInputChannel().analyzer.minDecibels`,
+                ch + `analyzer.minDecibels`,
                 readOnly
             ))
             .bindings.bind(ui.bindings.binding(
                 'opt_ch_maxdb',
-                `app.getInputChannel().analyzer.maxDecibels`,
+                ch + `analyzer.maxDecibels`,
                 readOnly
             ))
     }
