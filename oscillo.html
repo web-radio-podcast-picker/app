@@ -444,11 +444,11 @@
 
         <div id="opts_ch_src" class="channel-submenu-pane">
             <!-- tabs -->
-            <span id="btn_ch_src_audio" class="menu-item menu-item-blue">Audio Input</span>
-            <span id="btn_ch_src_ext" class="menu-item menu-item-blue menu-item-disabled">Ext</span>
-            <span id="btn_ch_src_gen" class="menu-item menu-item-blue">Generator</span>
-            <span id="btn_ch_src_media" class="menu-item menu-item-blue">Media</span>
-            <span id="btn_ch_src_math" class="menu-item menu-item-blue">Math</span>
+            <span id="btn_ch_src_audio" data-id="Audio Input" class="menu-item menu-item-blue">Audio Input</span>
+            <span id="btn_ch_src_ext" data-id="Ext" class="menu-item menu-item-blue menu-item-disabled">Ext</span>
+            <span id="btn_ch_src_gen" data-id="Generator" class="menu-item menu-item-blue">Generator</span>
+            <span id="btn_ch_src_media" data-id="Media" class="menu-item menu-item-blue">Media</span>
+            <span id="btn_ch_src_math" data-id="Math" class="menu-item menu-item-blue">Math</span>
 
             <div class="channel-menu-pane-horiz-separator bottom-dpadding"></div>
 
@@ -669,10 +669,11 @@
 
         <!-- FFT -->
 
-        <div id="opts_ch_fft" class="channel-menu-pane hidden">
-            <div class="row-opt">
-                <span id="btn_ch_fft_onoff" class="no-padding-left label channel-label on-off-label off">OFF</span>
-                <span class="opt-label no-padding-left">Hrz Scale</span>
+        <div id="opts_ch_fft" class="channel-menu-pane channel-menu-pane-grid hidden">
+            <div class="gr1 gc1 row-opt">
+                <span id="btn_ch_fft_onoff"
+                    class="no-padding-left label channel-label on-off-label off no-margin">OFF</span>
+                <span class="opt-label no-padding-left margin-left">Hrz Scale</span>
                 <input id="opt_ch_fft_hscale" class="opt-value-edit long-value no-margin-bottom"></input>
                 <span class="unit">✕</span>
                 <span class="opt-label no-padding-left">Vrt Factor</span>
@@ -682,6 +683,17 @@
                 <input id="opt_ch_fft_hdiv" class="opt-value-edit short-value no-margin-bottom"></input>
                 <span class="opt-label margin-left">Db/div</span>
                 <input id="opt_ch_fft_vdiv" class="opt-value-edit short-value no-margin-bottom"></input>
+            </div>
+            <div class="gr2 gc1 row-opt">
+                <span class="opt-label no-margin">Size</span>
+                <span id="opt_ch_fft_size" class="no-margin opt-value-edit opt-value-with-unit read-only"></span>
+                <span class="opt-label">Spl</span>
+                <span class="opt-label no-margin">Min Db</span>
+                <span id="opt_ch_mindb" class="no-margin opt-value-edit opt-value-with-unit read-only"></span>
+                <span class="opt-label">Db</span>
+                <span class="opt-label no-margin">Max Db</span>
+                <span id="opt_ch_maxdb" class="no-margin opt-value-edit opt-value-with-unit read-only"></span>
+                <span class="opt-label">Db</span>
             </div>
         </div>
 

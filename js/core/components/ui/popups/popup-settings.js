@@ -63,7 +63,7 @@ class PopupSettings {
             // input
             .bindings.bind(ui.bindings.binding(
                 'opt_os_smpfrqcy',
-                'app.getInputChannel().streamSource.context.sampleRate',
+                'app.getInputChannel().analyzer.context.sampleRate',
                 readOnly))
             .bindings.bind(ui.bindings.binding(
                 'opt_os_inputChannelsCount',

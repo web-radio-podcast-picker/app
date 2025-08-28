@@ -29,7 +29,7 @@ class Toggles {
         $c.text(vstate ? 'ON' : 'OFF')
 
         if (hasPath) {
-            xeval(path + '=' + state)
+            xevalAssign(path, state)
             return this
         }
     }

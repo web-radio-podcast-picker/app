@@ -95,7 +95,8 @@ class Bindings {
                 onChanged()
             else {
                 try {
-                    eval(valuePath + '=' + s + v + s)
+                    //eval(valuePath + '=' + s + v + s)
+                    xevalAssign(valuePath, s + v + s)
                     if (onPostChanged != null)
                         onPostChanged(v)
                 } catch (err) {

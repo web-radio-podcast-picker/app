@@ -12,24 +12,64 @@ function remove(t, e) {
         t.splice(index, 1)
 }
 
-// eval expr. handle error. returns success: true and value: value if ok otherwize success: false. eventually log
-function xeval(expr, showError) {
+function arrangeXEvalExpr(expr) {
+    if (expr == null || expr === undefined) return null
+    if (typeof expr != 'string')
+        expr += ''
+    return expr.replaceAll('.', '?.').replaceAll('??.', '?.')
+}
 
+function xevalAssign(path, value, showError) {
+
+    const p = arrangeXEvalExpr(path)
     try {
-        const value = eval(expr)
-        return { success: true, value: value }
-    } catch (err) {
-        // ignore or debug
-        if (settings.debug.trace) {
-            console.log(expr, err.message)
-            ui.showError(err.message, null, null, null, err)
-        }
-        window.xeval_err = err
-        if (settings.debug.stackTrace)
-            console.log(err)
-        //console.debug(err)
-        return { success: false }
+        const pathExists = xeval(p, false) != null
+        if (!pathExists)
+            throw new Error('path is not valid: ' + path)
+        return xeval(path, showError, value)
     }
+    catch (err) {
+        return handleXEvalError(p + '=' + value, err, showError)
+    }
+}
+
+function xevalValue(value, showError) {
+    return xeval(null, showError, value)
+}
+
+// eval expr. handle error. returns success: true and value: value if ok otherwize success: false. eventually log
+function xeval(expr, showError, assignValue) {
+
+    var p = expr
+    try {
+        if (assignValue !== undefined) {
+            if (expr == null)
+                p = assignValue
+            else
+                p += '=' + assignValue
+        }
+        else
+            p = arrangeXEvalExpr(p)
+
+        const value = eval(p)
+
+        return { success: true, value: value, expr: p }
+    } catch (err) {
+        return handleXEvalError(p, err, showError)
+    }
+}
+
+function handleXEvalError(expr, err, showError) {
+    // ignore or debug
+    if (settings.debug.trace) {
+        console.log(expr, err.message)
+        ui.showError(err.message, null, null, null, err)
+    }
+    window.xeval_err = err
+    if (settings.debug.stackTrace)
+        console.log(err)
+    //console.debug(err)
+    return { success: false }
 }
 
 function deepClone(obj) {

@@ -250,6 +250,12 @@ div.channel-opts-pane span.opt-value-edit {
     margin-left: 0px !important;
 }
 
+div.channel-menu-pane span.opt-value-edit.read-only,
+div.channel-opts-pane span.opt-value-edit.read-only
+ {
+    border: none !important;
+}
+
 div.channel-opts-pane span.opt-value-with-unit {
     margin-right: 0px !important;
 }
@@ -726,7 +732,7 @@ div.popup-grid > span.menu-item {
 }
 
 .margin-right {
-    margin-right: 0.5em;
+    margin-right: 0.5em !important;
 }
 
 .no-border {
