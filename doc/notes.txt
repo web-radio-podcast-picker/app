@@ -5,4 +5,5 @@
 //stereoAudioMediaURL: 'https://www.youtube.com/watch?v=5cPdog1ZB48&ab_channel=EWUBodycam'   NOPE: unaceppted CORS (null) from YT
 //stereoAudioMediaURL: './audio/chrono.mp3'     NOPE: CORS fail -null) coz no cors unapplyable to file://
 
-MPI3508: 480x320
+MPI3508: 480x320        r = 1.5     = 3/2
+actual wrp: 600x448     r = 1.33    = 4/3
