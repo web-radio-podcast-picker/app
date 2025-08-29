@@ -1,0 +1,3 @@
+User-agent: *
+Allow: *
+Sitemap: https://franck-gaspoz.github.io/soundcard-signal-analyzer-generator/sitemap.xml

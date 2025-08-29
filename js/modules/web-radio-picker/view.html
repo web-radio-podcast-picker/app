@@ -1,0 +1,60 @@
+<!--
+Sound card Oscilloscope | Spectrum Analyzer | Signal Generator
+Copyright(C) 2025 Franck Gaspoz
+find license and copyright informations in files /COPYRIGHT and /LICENCE
+->
+
+<!-- web radio picker: view (html fragment) -->
+
+<div class="wrp-pane cols2-grid">
+
+    <!-- left col -->
+    <div class="gr1 gc1 rows-min-max-grid margin-right">
+        <div class="gr1 gc1 padding-small border-light">
+            <div class="channel-menu-pane">
+                <span id="btn_wrp_tag_list"
+                    class="menu-item menu-item-blue onoff-small-height no-width selected">Tags</span>
+                <span id="btn_wrp_lang_list" class="menu-item menu-item-blue onoff-small-height no-width">Lang</span>
+                <span id="btn_wrp_art_list" class="menu-item menu-item-blue onoff-small-height no-width">Artists</span>
+                <span id="btn_wrp_play_list" class="menu-item menu-item-blue onoff-small-height no-width">Play
+                    list</span>
+                <span id="btn_wrp_logo" class="menu-item menu-item-blue onoff-small-height no-width">Logo</span>
+            </div>
+        </div>
+        <div class="gr2 gc1 border-light margin-top">
+            <div id="opts_wrp_tag_list" class="wrp-scroll-pane">
+            </div>
+            <div id="opts_wrp_art_list" class="wrp-scroll-pane hidden">
+            </div>
+            <div id="opts_wrp_lang_list" class="wrp-scroll-pane hidden">
+            </div>
+            <div id="opts_wrp_play_list" class="wrp-scroll-pane hidden">
+            </div>
+            <div id="opts_wrp_logo" class="wrp-img-holder hidden">
+                <img id="wrp_img" title="radio image" src="">
+            </div>
+        </div>
+    </div>
+
+    <!-- right col -->
+    <div class="gr1 gc2 rows-min-max-grid">
+        <div id="wrp_radio_list_btn_bar" class="gr1 gc1 padding-small border-light grid">
+            <span id="btn_wrp_radios"
+                class="gr1 gc1 menu-item menu-item-blue onoff-small-height no-width selected">Streams</span>
+            <span id="btn_wrp_all_radios" class="gr1 gc2 menu-item menu-item-blue onoff-small-height no-width">Clear
+                filters</span>
+            <span id="wrp_list_count" class="gr1 gc3"></span>
+        </div>
+        <div class="gr2 gc1 border-light margin-top">
+            <div id="wrp_radio_list" class="wrp-scroll-pane">
+            </div>
+        </div>
+    </div>
+
+    <!-- footer -->
+    <div id="wrp_footer" class="gr2 gc1 grid cols2 margin-top padding-small border-light">
+        <div id="wrp_radio_name" class="gr1 gc1"></div>
+        <div id="wrp_radio_url" class="gr2 gc1"></div>
+        <div id="wrp_radio_box" class="gr1 gc1"></div>
+    </div>
+</div>

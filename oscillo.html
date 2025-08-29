@@ -1,0 +1,735 @@
+<!DOCTYPE html>
+<html lang="en" class="ui">
+
+<!--
+    Sound card Oscilloscope | Spectrum Analyzer | Signal Generator
+    Copyright (C) 2025  Franck Gaspoz
+    find license and copyright informations in files /COPYRIGHT and /LICENCE
+    contact: franck.gaspoz@gmail.com
+
+    This program is free software; you can redistribute it and/or modify
+    it under the terms of the GNU General Public License as published by
+    the Free Software Foundation version 2.
+
+    This program is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    GNU General Public License for more details.
+
+    You should have received a copy of the GNU General Public License along
+    with this program; if not, write to the Free Software Foundation, Inc.,
+    51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
+-->
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sound card Oscilloscope | Spectrum Analyzer | Signal Generator</title>
+    <meta name="description"
+        content="free online sound card virtual oscilloscope simulator with signal generator and signal analyser fft sine sawtooth triangle electricity volts with sounds effects and signal filters compatible with windows android osx pc smart phone tablet" />
+
+    <meta http-equiv="cache-control" content="max-age=0" />
+    <meta http-equiv="cache-control" content="no-cache" />
+    <meta http-equiv="expires" content="0" />
+    <meta http-equiv="expires" content="Tue, 01 Jan 1980 1:00:00 GMT" />
+    <meta http-equiv="pragma" content="no-cache" />
+    <meta name="google-site-verification" content="J22kWwAYXIVQS63YGK8waguFeWOag89Gg3-pnY0yfqw" />
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-J4K3X336J5"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'G-J4K3X336J5');
+    </script>
+
+    <link rel="icon" type="image/ico" href="./img/icon.ico">
+
+    <!-- styles -->
+    <link rel="stylesheet" type="text/css" href="./css/styles.css" />
+    <!-- dependencies -->
+    <script src="./js/ext/jquery-3.7.1.min.js"></script>
+    <!-- settings -->
+    <script src="./js/core/globals.js"></script>
+    <script src="./js/core/settings.js"></script>
+    <!-- code loader -->
+    <script src="./js/core/libs/converters.js"></script>
+    <script src="./js/core/libs/data.js"></script>
+    <script src="./js/core/components/module-base.js"></script>
+    <script src="./js/core/components/math-expr.js"></script>
+    <script src="./js/core/components/audio-input-device.js"></script>
+    <script src="./js/core/views/oscilloscope-view.js"></script>
+    <script src="./js/core/views/grid-view.js"></script>
+    <script src="./js/core/views/renderers/fft-axes-renderer.js"></script>
+    <script src="./js/core/views/renderers/bright-renderer.js"></script>
+    <script src="./js/core/views/renderers/temp-color-renderer.js"></script>
+    <script src="./js/core/views/signal-view.js"></script>
+    <script src="./js/core/views/fft-view.js"></script>
+    <script src="./js/core/views/signal-measures-view.js"></script>
+    <script src="./js/core/models/fft.js"></script>
+    <script src="./js/core/components/module-loader.js"></script>
+    <script src="./js/core/components/media-source.js"></script>
+    <script src="./js/core/models/channel.js"></script>
+    <script src="./js/core/components/oscilloscope.js"></script>
+    <script src="./js/core/components/generator.js"></script>
+    <script src="./js/core/components/trigger.js"></script>
+    <script src="./js/core/models/signal-measures.js"></script>
+    <script src="./js/core/tasks/channels-animation-task.js"></script>
+    <script src="./js/core/tasks/get-samples-task.js"></script>
+    <script src="./js/core/tasks/start-frame-task.js"></script>
+    <script src="./js/core/tasks/start-view-task.js"></script>
+    <script src="./js/core/tasks/request-animation-frame-task.js"></script>
+    <script src="./js/core/tasks/get-analyzers-data-tasks.js"></script>
+    <script src="./js/core/tasks/publish-buffers-task.js"></script>
+    <script src="./js/core/tasks/channels-measures-task.js"></script>
+    <script src="./js/core/components/ui/cui.js"></script>
+    <script src="./js/core/components/ui/drag.js"></script>
+    <script src="./js/core/components/ui/markers.js"></script>
+    <script src="./js/core/components/ui/tabs.js"></script>
+    <script src="./js/core/components/ui/toggles.js"></script>
+    <script src="./js/core/components/ui/bindings.js"></script>
+    <script src="./js/core/components/ui/popups/popups.js"></script>
+    <script src="./js/core/components/ui/popups/input-widgets.js"></script>
+    <script src="./js/core/components/ui/popups/channel-settings/panes/src-audio.js"></script>
+    <script src="./js/core/components/ui/popups/channel-settings/panes/src-ext.js"></script>
+    <script src="./js/core/components/ui/popups/channel-settings/panes/src-gen.js"></script>
+    <script src="./js/core/components/ui/popups/channel-settings/panes/src-media.js"></script>
+    <script src="./js/core/components/ui/popups/channel-settings/panes/src-math.js"></script>
+    <script src="./js/core/components/ui/popups/channel-settings/panes/disp.js"></script>
+    <script src="./js/core/components/ui/popups/channel-settings/panes/trig.js"></script>
+    <script src="./js/core/components/ui/popups/channel-settings/panes/fft.js"></script>
+    <script src="./js/core/components/ui/popups/channel-settings/panes/out.js"></script>
+    <script src="./js/core/components/ui/popups/channel-settings/panes/filt.js"></script>
+    <script src="./js/core/components/ui/popups/channel-settings/panes/eff.js"></script>
+    <script src="./js/core/components/ui/popups/channel-settings/popup-channel-settings.js"></script>
+    <script src="./js/core/components/ui/popups/popup-settings.js"></script>
+    <script src="./js/core/components/ui/channels.js"></script>
+    <script src="./js/core/components/ui/oscillo-menu.js"></script>
+    <script src="./js/core/components/ui/ui.js"></script>
+    <script src="./js/core/app.js"></script>
+
+    <!-- should have http header Permissions-policy: audio -->
+</head>
+
+<body class="ui no-select">
+
+    <!-- drawings -->
+
+    <canvas id="cnv_grid"></canvas>
+
+    <canvas id="cnv_oscillo" class="canvas-uninitialized"></canvas>
+
+    <canvas id="cnv_markers" class="canvas-uninitialized"></canvas>
+
+    <!-- channels deck -->
+
+    <div id="channels-deck">
+        <div id="channels_shortcuts_deck">
+        </div>
+        <div id="channels_infos_deck">
+        </div>
+    </div>
+
+    <!-- main menu -->
+
+    <div id="main_menu" class="hidden">
+        <span id="btn_menu" class="menu-item menu-item-blue ">▲</span>
+        <div id="main_menu-body">
+            <span id="btn_add_ch" class="menu-item menu-item-blue">+ CH</span>
+            <span id="btn_units" class="menu-item menu-item-darkblue no-pointer">
+                V/d<span id="vdiv" class="btn-sub btn-sub-blue value"></span><br>
+                t/d<span id="tdiv" class="btn-sub btn-sub-blue value"></span>
+            </span>
+            <span id="btn_oset" class="menu-item menu-item-blue">⚙</span>
+            <span id="btn_opause" class="menu-item menu-item-bluegreen">||</span>
+        </div>
+    </div>
+
+    <!-- main menu / button bar -->
+
+    <div id="buttons_bar" class="hidden">
+        <span id="btn_keylk" class="menu-item menu-item-small menu-item-bluegreen">⚿</span>
+        <span id="btn_fs" class="menu-item menu-item-small menu-item-blue">⛶</span>
+    </div>
+    <div id="buttons_bar2" class="hidden">
+        <span id="btn_restart" class="menu-item menu-item-red">⟲</span>
+    </div>
+
+    <!-- intro popup -->
+    <div id="intro_popup" class="popup popup-pane ptransparent">
+        <table>
+            <tr>
+                <td>
+                    <img title="intro popup" alt="introduction popup" src="./img/icon.ico" width="256" height="256">
+                </td>
+                <td valign="middle">
+                    <div id="intro_popup_title">
+                        <h1>Sound card Oscilloscope<br>Signal Analyzer Generator</h1>
+                        <h3><i>version <span id="sys_app_ver"></span> - <span id="app_ver_date"></i></h3>
+                        <h4>github project page: <a rel="noopener"
+                                href="https://github.com/franck-gaspoz/soundcard-signal-analyzer-generator/blob/main/README.md"
+                                target="_blank">README.md</a>
+                        </h4>
+                        <div class="disclaimer">
+                            Copyright (C) Franck Gaspoz 2005
+                            This software comes with ABSOLUTELY NO WARRANTY;
+                            This is free software, and you are welcome to redistribute it
+                            under certain conditions; click settings &gt; License for details.
+                        </div>
+                    </div>
+                </td>
+            </tr>
+        </table>
+    </div>
+
+    <!-- menu popups -->
+
+    <div id="pop_settings" class="popup popup-pane hidden">
+        <div class="popup-close btn-red">✕</div>
+        <div class="popup-icon">⚙</div>
+        <div class="popup-title">Oscilloscope settings</div>
+        <div class="opts-grid">
+
+            <!-- options groups -->
+            <div class="gr1 gc1 opts-list">
+                <span id="btn_os_in" class="gr1 gc1 grp1 menu-item menu-item-darkblue selected">Input</span>
+                <span id="btn_os_out" class="gr2 gc1 grp1 menu-item menu-item-darkblue">Output</span>
+                <span id="btn_os_grid" class="gr3 gc1 grp1 menu-item menu-item-darkblue">Grid</span>
+                <span id="btn_os_disp" class="gr4 gc1 grp1 menu-item menu-item-darkblue">Display</span>
+
+                <span id="btn_os_tgl" class="gr5 gc1 grpt menu-item menu-item-darkblue">▼</span>
+
+                <span id="btn_os_sys" class="gr1 gc1 grp2 menu-item menu-item-darkblue hidden">System</span>
+                <span id="btn_os_cpyrg" class="gr2 gc1 grp2 menu-item menu-item-darkblue hidden">Copyright</span>
+                <span id="btn_os_lice" class="gr3 gc1 grp2 menu-item menu-item-darkblue hidden">License</span>
+                <span id="btn_os_spc1"
+                    class="gr4 gc1 grp2 menu-item menu-item-darkblue hidden selected disabled">&nbsp;</span>
+            </div>
+
+            <!-- input -->
+            <div id="opts_os_in" class="gr1 gc2 opts-pane">
+                <span class="gr1 gc1 opt-label">device</span>
+                <span class="gr2 gc1 opt-label">sample rate</span>
+                <span class="gr3 gc1 opt-label">channels count</span>
+                <span class="gr4 gc1 opt-label">sample size</span>
+                <span class="gr5 gc1 opt-label">signal range</span>
+
+                <span class="gr1 gc2 opt-value-edit read-only" id="opt_os_input_device" readonly>
+                </span>
+                <div class="gr2 gc2">
+                    <input id="opt_os_smpfrqcy" class="opt-value-edit"></input>
+                    <span class="unit">Hz</span>
+                </div>
+                <input id="opt_os_inputChannelsCount" class="gr3 gc2 opt-value-edit"></input>
+                <input id="opt_os_frequencyBinCount" class="gr4 gc2 opt-value-edit"></input>
+                <div class="gr5 gc2">
+                    <input id="opt_os_inputVscale" class="opt-value-edit"></input>
+                    <span class="unit">V</span>
+                </div>
+            </div>
+
+            <!-- output -->
+            <div id="opts_os_out" class="gr1 gc2 opts-pane hidden">
+                <span class="gr1 gc1 opt-label">device</span>
+                <span class="gr2 gc1 opt-label">channels count</span>
+                <span class="gr3 gc1 opt-label">channel interpretation</span>
+                <span class="gr4 gc1 opt-label">input range</span>
+
+                <span class="gr1 gc2 opt-value-edit read-only" id="opt_os_output_device" readonly>
+                </span>
+                <input id="opt_os_outputChannelsCount" class="gr2 gc2 opt-value-edit"></input>
+                <input id="opt_os_channelInterpretation" class="gr3 gc2 opt-value-edit"></input>
+                <div class="gr4 gc2">
+                    <input id="opt_os_outputVscale" class="opt-value-edit"></input>
+                    <span class="unit">V</span>
+                </div>
+            </div>
+
+            <!-- grid -->
+            <div id="opts_os_grid" class="gr1 gc2 opts-pane hidden">
+                <span class="gr1 gc1 opt-label">V/div</span>
+                <span class="gr2 gc1 opt-label">t/div</span>
+                <span class="gr3 gc1 opt-label">horizontal divs count</span>
+                <span class="gr4 gc1 opt-label">vertical divs count</span>
+                <div class="gr1 gc2">
+                    <input id="opt_os_dv" class="opt-value-edit"></input>
+                    <span class="unit">V</span>
+                </div>
+                <div class="gr2 gc2">
+                    <input id="opt_os_dt" class="opt-value-edit"></input>
+                    <span class="unit">ms</span>
+                </div>
+                <input id="opt_os_hdiv" class="gr3 gc2 opt-value-edit"></input>
+                <input id="opt_os_vdiv" class="gr4 gc2 opt-value-edit"></input>
+            </div>
+
+            <!-- display -->
+            <div id="opts_os_disp" class="gr1 gc2 opts-pane hidden">
+                <span class="gr1 gc1 opt-label">max refresh rate</span>
+                <span class="gr2 gc1 opt-label">screen right border width</span>
+                <span class="gr3 gc1 opt-label">screen bottom border width</span>
+                <span class="gr4 gc1 opt-label">right menu container width</span>
+                <span class="gr5 gc1 opt-label onoff-line-height">popups transparency</span>
+                <div class="gr1 gc2">
+                    <input id="opt_os_mrr" class="opt-value-edit"></input>
+                    <span class="unit">Fps</span>
+                </div>
+                <input id="opt_os_clientWidthBorder" class="gr2 gc2 opt-value-edit"></input>
+                <input id="opt_os_clientHeightBorder" class="gr3 gc2 opt-value-edit"></input>
+                <input id="opt_os_menuContainerWidth" class="gr4 gc2 opt-value-edit"></input>
+                <span id="opt_os_ppTrans"
+                    class="gr5 gc2 label channel-label on-off-label off onoff-small-height margin-left">OFF</span>
+            </div>
+
+            <!-- system -->
+            <div id="opts_os_sys" class="gr1 gc2 opts-pane hidden">
+                <span class="gr1 gc1 opt-label">app ver</span>
+                <span class="gr2 gc1 opt-label">user agent</span>
+                <span class="gr3 gc1 opt-label">platform</span>
+                <span class="gr4 gc1 opt-label">view size</span>
+                <input id="opt_os_sys_appver" class="gr1 gc2 opt-value-edit"></input>
+                <span id="opt_os_sys_agent" class="gr2 gc2 opt-value-edit"></span>
+                <input id="opt_os_sys_plat" class="gr3 gc2 opt-value-edit"></input>
+                <input id="opt_os_sys_reso" class="gr4 gc2 opt-value-edit"></input>
+            </div>
+
+            <!-- copyright -->
+            <div id="opts_os_cpyrg" class="gr1 gc2 opts-pane no-padding-top hidden">
+                <iframe title="copyright" src="./doc/copyright.html"></iframe>
+            </div>
+
+            <!-- license -->
+            <div id="opts_os_lice" class="gr1 gc2 opts-pane no-padding-top hidden">
+                <iframe title="license" src="./doc/license.html"></iframe>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- oscilloscope datas -->
+
+    <div id="bottom-pane" class="row-pane hidden">
+        <span class="label">Frm time</span>
+        <span id="stime" class="value medium-value"></span>
+        <span class="value">ms</span>
+
+        <span class="label">Frm rt</span>
+        <span id="sfrq" class="value"></span>
+        <span class="value">Fps</span>
+
+        <span class="label">sp/s</span>
+        <span id="echps" class="value"></span>
+
+        <span class="label">buffer size</span>
+        <span id="buffsz" class="value no-width"></span>
+    </div>
+
+    <div id="error_pane" class="row-pane hidden">
+        <span id="err_txt" class="value err"></span>
+    </div>
+
+    <div id="right_bottom_pane" class="row-pane hidden">
+        <span class="label">version </span>
+        <span id="app_ver" class="small-value"></span>
+    </div>
+
+    <div id="fft_axe_bottom_pane" class="row-pane hidden">
+        <span class="label">--- FFT axe ---</span>
+    </div>
+
+    <!-- html models -->
+
+    <!-- input widgets -->
+
+    <div id="input_widget" class="input-widget hidden">
+        <div id="iw_vpane" class="gr1 gc1 input-widget-value-vpane">
+            <div class="gr2 gc1 input-widget-buttons-vpane-left">
+                <button id="btn_valid_cancel" class="gr1 gc1 btn-ch btn-valid btn-red">✕</button>
+                <button id="btn_valid_ok" class="gr1 gc2 btn-ch btn-valid btn-bluegreen">✔</button>
+            </div>
+        </div>
+        <div class="gr1 gc2 dleft-margin input-widget-buttons-vpane">
+            <button id="btn_input_plus" class="gr1 gc1 btn-ch btn-darkblue">+</button>
+            <button id="btn_input_minus" class="gr2 gc1 btn-ch btn-darkblue">-</button>
+        </div>
+        <div class="gr1 gc3 dleft-margin input-widget-value-vpane">
+            <input id="iw_delta" class="gr1 gc1 opt-value-edit"></input>
+            <div id="iw_delta_pane" class="gr2 gc1 input-widget-buttons-vpane">
+                <button id="btn_iw_delta_plus" class="gr1 gc1 btn-ch btn-darkblue">+</button>
+                <button id="btn_iw_delta_minus" class="gr1 gc2 btn-ch btn-darkblue">-</button>
+                <button id="btn_iw_delta_mul" class="gr1 gc3 btn-ch btn-darkblue">*</button>
+                <button id="btn_iw_delta_div" class="gr1 gc4 btn-ch btn-darkblue">/</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- channels controls -->
+
+    <div id="channel_pane_" class="channel-pane top-pane row-pane hidden">
+        <span id="channel_label_" class="gr1 gc1 label channel-label">CH1</span>
+
+        <span class="gr1 gc2 label">src</span>
+        <span id="csid_" class="gr1 gc3 value long-value align-left"></span>
+
+        <span class="gr2 gc2 label">✕t</span>
+        <span id="xscale_" class="gr2 gc3 value short-value"></span>
+
+        <span class="gr3 gc2 label">✕V</span>
+        <span id="yscale_" class="gr3 gc3 value short-value"></span>
+
+        <span class="gr4 gc2 label">✕Gain</span>
+        <span id="gain_" class="gr4 gc3 value short-value"></span>
+
+        <span class="gr1 gc8 label">Vins</span>
+        <span id="iv_" class="gr1 gc9 value long-value"></span>
+        <span id="iv_u_" class="gr1 gc10 unit">V</span>
+
+        <span class="gr2 gc8 label">Vmax</span>
+        <span id="vmax_" class="gr2 gc9 value long-value"></span>
+        <span id="vmax_u_" class="gr2 gc10 unit">V</span>
+
+        <span class="gr3 gc8 label">Vmin</span>
+        <span id="vmin_" class="gr3 gc9 value long-value"></span>
+        <span id="vmin_u_" class="gr3 gc10 unit">V</span>
+
+        <span class="gr4 gc8 label">Vavg</span>
+        <span id="vavg_" class="gr4 gc9 value long-value"></span>
+        <span id="vavg_u_" class="gr4 gc10 unit">V</span>
+
+        <span class="gr1 gc11 label">Frq</span>
+        <span id="frq_" class="gr1 gc12 value long-value"></span>
+        <span id="frq_u_" class="gr1 gc13 unit">Hz</span>
+
+        <span class="gr2 gc11 label">Pe</span>
+        <span id="frqpe_" class="gr2 gc12 value long-value"></span>
+        <span id="frqpe_u_" class="gr2 gc13 unit">ms</span>
+
+        <span class="gr3 gc11 label">FrqMin</span>
+        <span id="frqmin_" class="gr3 gc12 value long-value"></span>
+        <span id="frqmin_u_" class="gr3 gc13 unit">Hz</span>
+
+        <span class="gr4 gc11 label">FrqMax</span>
+        <span id="frqmax_" class="gr4 gc12 value long-value"></span>
+        <span id="frqmax_u_" class="gr4 gc13 unit">Hz</span>
+
+        <div class="gr1 gc14 flex">
+            <button type="button" class="btn-ch btn-bluegreen left-margin" id="btn_pause_">▶</button>
+            <button type="button" class="btn-ch btn-bluegreen dleft-margin" id="btn_viewch_">⌾</button>
+            <button type="button" class="btn-ch btn-blue dleft-margin" id="btn_chsett_">⚙</button>
+        </div>
+
+        <button type="button" class="gr1 gc16 btn-ch btn-red dleft-margin" id="btn_closech_">✕</button>
+
+        <div class="gr2 gc14 margin-top">
+            <button type="button" class="btn-ch btn-round btn-bluegreen left-margin btn-blue-green-off"
+                id="btn_chout_">OUT</button>
+        </div>
+
+    </div>
+
+    <!-- channel settings pane -->
+
+    <div id="channel_settings_pane" class="popup hidden">
+        <!-- tabs -->
+        <div class="channel-menu-pane">
+            <span id="channel_settings_label" class="label channel-label">CH1</span>
+            <span id="btn_ch_src" class="menu-item menu-item-blue selected">SRC</span>
+            <span id="btn_ch_trig" class="menu-item menu-item-blue">TRIG</span>
+            <span id="btn_ch_fft" class="menu-item menu-item-blue">FFT</span>
+            <span id="btn_ch_out" class="menu-item menu-item-blue">OUT</span>
+            <span id="btn_ch_filt" class="menu-item menu-item-blue menu-item-disabled">FILT</span>
+            <span id="btn_ch_eff" class="menu-item menu-item-blue menu-item-disabled">EFF</span>
+            <span id="btn_ch_disp" class="menu-item menu-item-blue">DISP</span>
+        </div>
+
+        <div class="channel-menu-pane-horiz-separator"></div>
+
+        <!-- SRC -->
+
+        <div id="opts_ch_src" class="channel-submenu-pane">
+            <!-- tabs -->
+            <span id="btn_ch_src_audio" data-id="Audio Input" class="menu-item menu-item-blue">Audio Input</span>
+            <span id="btn_ch_src_ext" data-id="Ext" class="menu-item menu-item-blue menu-item-disabled">Ext</span>
+            <span id="btn_ch_src_gen" data-id="Generator" class="menu-item menu-item-blue">Generator</span>
+            <span id="btn_ch_src_media" data-id="Media" class="menu-item menu-item-blue">Media</span>
+            <span id="btn_ch_src_math" data-id="Math" class="menu-item menu-item-blue">Math</span>
+
+            <div class="channel-menu-pane-horiz-separator bottom-dpadding"></div>
+
+            <!-- src audio -->
+            <div id="opts_ch_src_audio" class="channel-opts-pane hidden">
+                <span id="btn_ch_src_audio_onoff" class="label channel-label on-off-label off">OFF</span>
+                <span class="opt-label">sample rate</span>
+                <span id="opt_ch_os_smpfrqcy" class="opt-value-edit opt-value-with-unit read-only"></span>
+                <span class="unit">Hz</span>
+                <span class="opt-label">buffer size</span>
+                <span id="opt_ch_os_frequencyBinCount" class="opt-value-edit opt-value-with-unit read-only"></span>
+                <span class="unit">Spl</span>
+                <span class="opt-label">channels</span>
+                <span id="opt_ch_os_inputChannelsCount" class="opt-value-edit read-only"></span>
+                <span class="opt-label">range</span>
+                <span id="opt_ch_os_inputVscale" class="opt-value-edit opt-value-with-unit read-only"></span>
+                <span class="unit">V</span>
+            </div>
+
+            <!-- src ext -->
+            <div id="opts_ch_src_ext" class="channel-opts-pane hidden">
+            </div>
+
+            <!-- src gen -->
+            <div id="opts_ch_src_gen" class="channel-opts-pane hidden">
+                <div class="row-pane no-padding-top">
+                    <span id="btn_ch_src_gen_onoff" class="label channel-label on-off-label off">OFF</span>
+                    <span id="btn_ch_gen_sine" class="menu-item menu-item-blue">Sine</span>
+                    <span id="btn_ch_gen_square" class="menu-item menu-item-blue">Square</span>
+                    <span id="btn_ch_gen_sawt" class="menu-item menu-item-blue">Sawtooth</span>
+                    <span id="btn_ch_gen_triang" class="menu-item menu-item-blue">Triangle</span>
+                </div>
+
+                <div class="row-pane margin-top grid g3c auto-columns">
+
+                    <!-- frequency -->
+                    <div class="gr1 gc1 margin-bottom">
+                        <span id="btn_ch_gen_frq_onoff" class="label channel-label on-off-label off">OFF</span>
+                        <span class="opt-label no-padding-left no-margin-left">Frequency</span>
+                    </div>
+                    <div class="gr2 gc1 no-border">
+                        <input id="opt_ch_gen_frq"
+                            class="opt-value-edit long-value no-margin-bottom no-margin-left"></input>
+                        <span class="unit">Hz</span>
+                    </div>
+
+                    <div class="gc2 channel-menu-pane-vert-separator pane-gen-vsep"></div>
+
+                    <!-- frequency modulation -->
+                    <div class="gr1 gc3">
+                        <span id="btn_ch_gen_mod_frq_onoff" class="label channel-label on-off-label off">OFF</span>
+                        <span class="gr1 gc2 opt-label no-padding-left no-margin-left">Frequency modulation</span>
+                    </div>
+                    <div class="gr2 gc3">
+                        <span class="opt-label no-padding-left no-margin-left inline-block short-value">Min</span>
+                        <input id="opt_ch_gen_mod_frq_min" class="opt-value-edit long-value no-margin-bottom"></input>
+                        <span class="unit">Hz</span>
+                        <span class="opt-label no-padding-left no-margin-left inline-block short-value">Max</span>
+                        <input id="opt_ch_gen_mod_frq_max" class="opt-value-edit long-value no-margin-bottom"></input>
+                        <span class="unit">Hz</span>
+                    </div>
+                    <div class="gr3 gc3">
+                        <span class="opt-label no-padding-left no-margin-left inline-block short-value">Rate</span>
+                        <input id="opt_ch_gen_mod_frq_rate" class="opt-value-edit long-value no-margin-bottom"></input>
+                        <span class="unit">Hz</span>
+                    </div>
+                    <div class="gr4 gc3">
+                    </div>
+
+                    <div class="gc4 channel-menu-pane-vert-separator pane-gen-vsep"></div>
+
+                    <!-- amplitude modulation -->
+                    <div class="gr1 gc5">
+                        <span id="btn_ch_gen_mod_amp_onoff" class="label channel-label on-off-label off">OFF</span>
+                        <span class="opt-label no-padding-left no-margin-left">Gain modulation</span>
+                    </div>
+                    <div class="gr2 gc5">
+                        <span class="opt-label no-padding-left no-margin-left inline-block short-value">Min</span>
+                        <input id="opt_ch_gen_mod_amp_min" class="opt-value-edit long-value no-margin-bottom"></input>
+                        <span class="unit">✕</span>
+                        <span class="opt-label no-padding-left no-margin-left inline-block short-value">Max</span>
+                        <input id="opt_ch_gen_mod_amp_max" class="opt-value-edit long-value no-margin-bottom"></input>
+                        <span class="unit">✕</span>
+                    </div>
+                    <div class="gr3 gc5">
+                        <span class="opt-label no-padding-left no-margin-left inline-block short-value">Rate</span>
+                        <input id="opt_ch_gen_mod_amp_rate" class="opt-value-edit long-value no-margin-bottom"></input>
+                        <span class="unit">Hz</span>
+                    </div>
+                    <div class="gr4 gc5">
+
+                    </div>
+                </div>
+            </div>
+
+            <!-- src media -->
+            <div id="opts_ch_src_media" class="channel-opts-pane hidden">
+                <div class="row opt">
+                    <div class="src-media-grid">
+                        <span id="btn_ch_src_media_onoff"
+                            class="gr1 gc1 label channel-label on-off-label off">OFF</span>
+                        <span class="gr1 gc2 opt-label no-padding-left">URL</span>
+                        <input id="opt_ch_media_url" class="gr1 gc3 opt-value-edit edit-url no-margin"></input>
+                        <span id="bt_ch_src_media_url_copy"
+                            class="gr1 gc4 menu-item menu-item-blue onoff-small-height no-width margin-left">Copy</span>
+                        <span id="bt_ch_src_media_url_paste"
+                            class="gr1 gc5 menu-item menu-item-blue onoff-small-height no-width no-margin-left">Paste</span>
+                        <span id="bt_ch_src_play"
+                            class="gr1 gc6 label channel-label on-off-label on onoff-small-height no-margin-left">Play</span>
+                    </div>
+                    <span id="bt_ch_src_media_peekwr"
+                        class="gr1 gc1 no-width menu-item menu-item-blue onoff-small-height">Pick a
+                        web radio</span>
+                    <div id="wrp_mod_inf_txt" class="gr2 gc1"></div>
+                    <div id="wrp_mod_err_txt" class="gr3 gc1"></div>
+                </div>
+            </div>
+
+            <!-- src math -->
+            <div id="opts_ch_src_math" class="channel-opts-pane hidden">
+                <div class="row opt">
+                    <span id="btn_ch_src_math_onoff" class="label channel-label on-off-label off">OFF</span>
+                    <span class="opt-label no-padding-left">expression</span>
+                    <input id="opt_ch_math_expr" class="opt-value-edit math-expr no-margin"></input>
+                </div>
+                <div id="kbd_me" class="row-opt margin-top">
+                    <span id="btn_ch_math_k_add" tag="op" class="kbd menu-item menu-item-blue">+</span>
+                    <span id="btn_ch_math_k_min" tag="op" class="kbd menu-item menu-item-blue">-</span>
+                    <span id="btn_ch_math_k_mul" tag="op" class="kbd menu-item menu-item-blue">✕</span>
+                    <span id="btn_ch_math_k_div" tag="op" class="kbd menu-item menu-item-blue">/</span>
+                    <span id="btn_ch_math_k_dot" tag="dot" data-tag="dot" class="kbd menu-item menu-item-blue">.</span>
+                    <span id="btn_ch_math_k_0" tag="num" class="kbd menu-item menu-item-blue">0</span>
+                    <span id="btn_ch_math_k_1" tag="num" class="kbd menu-item menu-item-blue">1</span>
+                    <span id="btn_ch_math_k_2" tag="num" class="kbd menu-item menu-item-blue">2</span>
+                    <span id="btn_ch_math_k_3" tag="num" class="kbd menu-item menu-item-blue">3</span>
+                    <span id="btn_ch_math_k_4" tag="num" class="kbd menu-item menu-item-blue">4</span>
+                    <span id="btn_ch_math_k_5" tag="num" class="kbd menu-item menu-item-blue">5</span>
+                    <span id="btn_ch_math_k_6" tag="num" class="kbd menu-item menu-item-blue">6</span>
+                    <span id="btn_ch_math_k_7" tag="num" class="kbd menu-item menu-item-blue">7</span>
+                    <span id="btn_ch_math_k_8" tag="num" class="kbd menu-item menu-item-blue">8</span>
+                    <span id="btn_ch_math_k_9" tag="num" class="kbd menu-item menu-item-blue">9</span>
+                </div>
+            </div>
+
+            <div class="channel-menu-pane-horiz-separator bottom-dpadding"></div>
+
+            <!-- common -->
+
+            <div id="opts_ch_src_common" class="channel-opts-pane">
+                <span class="opt-label no-padding-left no-margin-left">Gain</span>
+                <input id="opt_ch_src_gain" class="opt-value-edit no-margin-bottom"></input>
+                <span class="unit">✕</span>
+            </div>
+        </div>
+
+        <!-- DISP -->
+
+        <div id="opts_ch_disp" class="channel-menu-pane channel-menu-pane-grid hidden">
+            <div class="gr1 row-opt">
+                <span id="btn_ch_disp_onoff"
+                    class="label channel-label on-off-label on no-padding-left no-margin-left">ON</span>
+                <span id="opt_ch_disp_tempcol_onoff" class="label channel-label on-off-label off">OFF</span>
+                <span class="opt-label no-padding-left margin-left">Gradient color</span>
+                <span id="opt_ch_disp_htempcol_onoff" class="label channel-label on-off-label off">OFF</span>
+                <span class="opt-label no-padding-left margin-left">Bright</span>
+                <span class="opt-label no-padding-left no-margin-left">Stroke width</span>
+                <input id="opt_disp_stroke_width" class="opt-value-edit short-value no-margin-bottom"></input>
+                <span class="unit">px</span>
+            </div>
+            <div class="gr2 row-opt margin-top">
+                <span class="opt-label no-padding-left no-margin-left">Axes</span>
+                <span id="opt_ch_disp_vavg"
+                    class="label channel-label on-off-label off no-padding-left no-margin-left">OFF</span>
+                <span class="opt-label no-padding-left no-margin-left">Vavg</span>
+                <span id="opt_ch_disp_vmin" class="label channel-label on-off-label off">OFF</span>
+                <span class="opt-label no-padding-left no-margin-left">Vmin</span>
+                <span id="opt_ch_disp_vmax" class="label channel-label on-off-label off">OFF</span>
+                <span class="opt-label no-padding-left no-margin-left">Vmax</span>
+                <span id="opt_ch_disp_trig" class="label channel-label on-off-label off">OFF</span>
+                <span class="opt-label no-padding-left no-margin-left">Trigger</span>
+            </div>
+        </div>
+
+        <!-- TRIG -->
+
+        <div id="opts_ch_trig" class="channel-menu-pane channel-menu-pane-grid hidden">
+            <div>
+                <span id="btn_ch_trg_onoff" class="no-margin-left label channel-label on-off-label off">OFF</span>
+                <span id="btn_ch_trg_up" class="menu-item menu-item-blue">Up</span>
+                <span id="btn_ch_trg_down" class="menu-item menu-item-blue">Down</span>
+            </div>
+            <div class="gr2">
+                <div class="row-opt">
+                    <span class="opt-label no-padding-left">Threshold</span>
+                    <input id="opt_ch_trig_tre" class="opt-value-edit long-value no-margin-bottom"></input>
+                    <span class="unit">V</span>
+                </div>
+                <div class="row-opt">
+                    <span class="opt-label no-padding-left">Sensitivity</span>
+                    <input id="opt_ch_trig_sen" class="opt-value-edit long-value no-margin-bottom"></input>
+                    <span class="unit">V</span>
+                </div>
+                <div class="row-opt">
+                    <span class="opt-label no-padding-left">Time threshold</span>
+                    <input id="opt_ch_trig_tsen" class="opt-value-edit long-value no-margin-bottom"></input>
+                    <span class="unit">Spls</span>
+                </div>
+            </div>
+            <div class="gr3">
+                <div class="row-opt">
+                    <span class="opt-label no-padding-left">Triggered value</span>
+                    <span id="opt_ch_trig_tv"
+                        class="row opt-value-edit inline-block long-value no-margin-bottom"></span>
+                    <span class="unit">V</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- FFT -->
+
+        <div id="opts_ch_fft" class="channel-menu-pane channel-menu-pane-grid hidden">
+            <div class="gr1 gc1 row-opt">
+                <span id="btn_ch_fft_onoff"
+                    class="no-padding-left label channel-label on-off-label off no-margin">OFF</span>
+                <span class="opt-label no-padding-left margin-left">Hrz Scale</span>
+                <input id="opt_ch_fft_hscale" class="opt-value-edit long-value no-margin-bottom"></input>
+                <span class="unit">✕</span>
+                <span class="opt-label no-padding-left">Vrt Factor</span>
+                <input id="opt_ch_fft_vscale" class="opt-value-edit long-value no-margin-bottom"></input>
+                <span class="unit">✕</span>
+                <span class="opt-label no-padding-left">Hrz Divs count</span>
+                <input id="opt_ch_fft_hdiv" class="opt-value-edit short-value no-margin-bottom"></input>
+                <span class="opt-label margin-left">Db/div</span>
+                <input id="opt_ch_fft_vdiv" class="opt-value-edit short-value no-margin-bottom"></input>
+            </div>
+            <div class="gr2 gc1 row-opt">
+                <span class="opt-label no-margin">Size</span>
+                <span id="opt_ch_fft_size" class="no-margin opt-value-edit opt-value-with-unit read-only"></span>
+                <span class="opt-label">Spl</span>
+                <span class="opt-label no-margin">Range</span>
+                <span id="opt_ch_mindb" class="no-margin opt-value-edit opt-value-with-unit read-only"></span>
+                <span class="opt-label no-margin">Db</span>
+                <span class="opt-label no-margin">...</span>
+                <span id="opt_ch_maxdb" class="no-margin opt-value-edit opt-value-with-unit read-only"></span>
+                <span class="opt-label">Db</span>
+            </div>
+        </div>
+
+        <!-- OUT -->
+
+        <div id="opts_ch_out" class="channel-menu-pane hidden">
+            <span id="btn_ch_out_onoff" class="label channel-label on-off-label off">OFF</span>
+        </div>
+
+        <!-- FILT -->
+
+        <div id="opts_ch_filt" class="channel-menu-pane hidden">
+            <span id="btn_ch_filt_onoff" class="label channel-label on-off-label off">OFF</span>
+        </div>
+
+        <!-- EFF -->
+
+        <div id="opts_ch_eff" class="channel-menu-pane hidden">
+            <span id="btn_ch_eff_onoff" class="label channel-label on-off-label off">OFF</span>
+        </div>
+
+    </div>
+
+    <!-- trigger plot -->
+
+    <div id="trigger_plot_" class="trigger-plot hidden">
+        <span class="trigger-plot-back-symbol">▶</span>
+    </div>
+
+    <!-- modules after -->
+
+</body>
+
+</html>
