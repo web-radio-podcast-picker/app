@@ -87,8 +87,10 @@ app = {
     async setupWebRadioChannel() {
         const channel = await oscilloscope.createChannel(Source_Id_Media)
         await oscilloscope.initChannelForMedia(channel, Source_Id_Media)
+
         this.channel = channel
         ui.getCurrentChannel = () => this.channel
+
         this.oscilloscope.addChannel(channel, false)
     },
 

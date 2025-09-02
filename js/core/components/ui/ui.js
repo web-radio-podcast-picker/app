@@ -37,17 +37,17 @@ ui = {
             this.init_ui()
             this.uiInitialized = true
             console.log("UI initialized")
-            this.hide_intro()
+            //this.hide_intro()
         }
     },
 
     init_intro() {
         const pid = 'intro_popup'
         const $popup = $('#' + pid)
-        if (cui.isSmallDisplay()) {
+        /*if (cui.isSmallDisplay()) {
             $popup.addClass('hidden')
             return
-        }
+        }*/
         $('#sys_app_ver').text(settings.app.version)
         $('#app_ver_date').text(settings.app.verDate)
         this.popups.updatePopupPositionAndSize(null, $popup, null)

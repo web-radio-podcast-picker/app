@@ -286,28 +286,30 @@ class WebRadioPickerModule extends ModuleBase {
 
             if (o.logo != null && o.logo !== undefined && o.logo != '') {
                 $('#wrp_img').attr('src', o.logo)
-                const channel = ui.getCurrentChannel()
-                if (channel != null && channel !== undefined) {
-                    this.loading = o
-
-                    $('#err_txt')
-                        .text('')
-                    $('#err_holder')
-                        .addClass('hidden')
-                    app.updateChannelMedia(
-                        ui.getCurrentChannel(),
-                        o.url
-                    )
-                    const tid = setTimeout(() => this.addToHistory(o),
-                        this.getSettings().addToHistoryDelay
-                    )
-                    if (this.addToHistoryTimer != null)
-                        clearTimeout(this.addToHistoryTimer)
-                    this.addToHistoryTimer = tid
-                }
             } else {
                 this.noImage()
             }
+
+            const channel = ui.getCurrentChannel()
+            if (channel != null && channel !== undefined) {
+                this.loading = o
+
+                $('#err_txt')
+                    .text('')
+                $('#err_holder')
+                    .addClass('hidden')
+                app.updateChannelMedia(
+                    ui.getCurrentChannel(),
+                    o.url
+                )
+                const tid = setTimeout(() => this.addToHistory(o),
+                    this.getSettings().addToHistoryDelay
+                )
+                if (this.addToHistoryTimer != null)
+                    clearTimeout(this.addToHistoryTimer)
+                this.addToHistoryTimer = tid
+            }
+
         })
     }
 
