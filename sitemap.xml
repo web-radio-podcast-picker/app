@@ -3,48 +3,38 @@
   xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
   <!--  created with Free Online Sitemap Generator www.xml-sitemaps.com  -->
   <url>
-    <loc>https://franck-gaspoz.github.io/soundcard-signal-analyzer-generator/</loc>
+    <loc>https://franck-gaspoz.github.io/web-radio-podcast/</loc>
     <lastmod>2025-08-12T21:01:00+00:00</lastmod>
     <priority>1.00</priority>
   </url>
   <url>
-    <loc>https://franck-gaspoz.github.io/soundcard-signal-analyzer-generator/pages/calibration.html</loc>
+    <loc>https://franck-gaspoz.github.io/web-radio-podcast/index.html</loc>
     <lastmod>2025-08-12T21:01:00+00:00</lastmod>
-    <priority>0.80</priority>
+    <priority>1.00</priority>
   </url>
   <url>
-    <loc>https://franck-gaspoz.github.io/soundcard-signal-analyzer-generator/pages/functions.html</loc>
+    <loc>https://franck-gaspoz.github.io/web-radio-podcast/COPYRIGHT</loc>
     <lastmod>2025-08-12T21:01:00+00:00</lastmod>
-    <priority>0.80</priority>
+    <priority>1.00</priority>
   </url>
   <url>
-    <loc>https://franck-gaspoz.github.io/soundcard-signal-analyzer-generator/pages/intro.html</loc>
+    <loc>https://franck-gaspoz.github.io/web-radio-podcast/README.md</loc>
     <lastmod>2025-08-12T21:01:00+00:00</lastmod>
-    <priority>0.80</priority>
+    <priority>1.00</priority>
   </url>
   <url>
-    <loc>https://franck-gaspoz.github.io/soundcard-signal-analyzer-generator/pages/manual.html</loc>
+    <loc>https://franck-gaspoz.github.io/web-radio-podcast/LICENSE</loc>
     <lastmod>2025-08-12T21:01:00+00:00</lastmod>
-    <priority>0.80</priority>
+    <priority>1.00</priority>
   </url>
   <url>
-    <loc>https://franck-gaspoz.github.io/soundcard-signal-analyzer-generator/doc/license.html</loc>
+    <loc>https://franck-gaspoz.github.io/web-radio-podcast/doc/copyright.html</loc>
     <lastmod>2025-08-12T21:01:00+00:00</lastmod>
-    <priority>0.80</priority>
+    <priority>1.00</priority>
   </url>
   <url>
-    <loc>https://franck-gaspoz.github.io/soundcard-signal-analyzer-generator/doc/copyright.html</loc>
+    <loc>https://franck-gaspoz.github.io/web-radio-podcast/doc/license.html</loc>
     <lastmod>2025-08-12T21:01:00+00:00</lastmod>
-    <priority>0.80</priority>
-  </url>
-  <url>
-    <loc>https://franck-gaspoz.github.io/soundcard-signal-analyzer-generator/oscillo.html</loc>
-    <lastmod>2025-08-12T21:01:00+00:00</lastmod>
-    <priority>0.80</priority>
-  </url>
-  <url>
-    <loc>https://franck-gaspoz.github.io/soundcard-signal-analyzer-generator/pages/home.html</loc>
-    <lastmod>2025-08-12T21:01:00+00:00</lastmod>
-    <priority>0.80</priority>
+    <priority>1.00</priority>
   </url>
 </urlset>

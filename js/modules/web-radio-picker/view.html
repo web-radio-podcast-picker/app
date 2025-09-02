@@ -1,5 +1,5 @@
 <!--
-Sound card Oscilloscope | Spectrum Analyzer | Signal Generator
+Web Radio | Podcast
 Copyright(C) 2025 Franck Gaspoz
 find license and copyright informations in files /COPYRIGHT and /LICENCE
 ->
@@ -10,7 +10,9 @@ find license and copyright informations in files /COPYRIGHT and /LICENCE
 
     <!-- left col -->
     <div class="gr1 gc1 rows-min-max-grid margin-right">
+
         <div class="gr1 gc1 padding-small border-light">
+            <!-- top tags -->
             <div class="channel-menu-pane">
                 <span id="btn_wrp_tag_list"
                     class="menu-item menu-item-blue onoff-small-height no-width selected">Tags</span>
@@ -21,6 +23,8 @@ find license and copyright informations in files /COPYRIGHT and /LICENCE
                 <span id="btn_wrp_logo" class="menu-item menu-item-blue onoff-small-height no-width">Logo</span>
             </div>
         </div>
+
+        <!-- left pane content -->
         <div class="gr2 gc1 border-light margin-top">
             <div id="opts_wrp_tag_list" class="wrp-scroll-pane">
             </div>
@@ -31,7 +35,10 @@ find license and copyright informations in files /COPYRIGHT and /LICENCE
             <div id="opts_wrp_play_list" class="wrp-scroll-pane hidden">
             </div>
             <div id="opts_wrp_logo" class="wrp-img-holder hidden">
-                <img id="wrp_img" title="radio image" src="">
+                <img id="wrp_img" title="radio image" src="" class="gr1 gc1">
+                <div id="err_holder" class="gr1 gc1">
+                    <span id="err_txt"></span>
+                </div>
             </div>
         </div>
     </div>

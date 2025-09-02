@@ -1,5 +1,5 @@
 /*
-    Sound card Oscilloscope | Spectrum Analyzer | Signal Generator
+    Web Radio | Podcast
     Copyright(C) 2025  Franck Gaspoz
     find license and copyright informations in files /COPYRIGHT and /LICENCE
 */
@@ -59,7 +59,8 @@ class ChannelSettingsPaneSrcMedia {
     }
 
     updateURL(url) {
-        const channel = this.channelSettings.editChannel
+        var channel = this.channelSettings.editChannel
+        if (channel == null) channel = app.channel
         if (channel == null) return
         channel.mediaSource.audio.src = url
         channel.mediaSource.url = url

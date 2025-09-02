@@ -1,5 +1,5 @@
 /*
-    Sound card Oscilloscope | Spectrum Analyzer | Signal Generator
+    Web Radio | Podcast
     Copyright(C) 2025  Franck Gaspoz
     find license and copyright informations in files /COPYRIGHT and /LICENCE
 */
@@ -35,6 +35,8 @@ app = {
 
     moduleLoader: new ModuleLoader(),
 
+    channel: null,                      // the web radio channel
+
     // operations
 
     addOnStartUI(fn) {
@@ -58,13 +60,42 @@ app = {
         this.canvas = $('#cnv_oscillo')[0]
         this.canvas_mk = $('#cnv_markers')[0]
         this.gridView.init($('#cnv_grid')[0])
-        this.audioInputChannel = await this.initDefaultAudioInput()
-        this.oscilloscope.addChannel(this.audioInputChannel)
+
+        ///this.audioInputChannel = await this.initDefaultAudioInput()
+        ///this.oscilloscope.addChannel(this.audioInputChannel)
+        await this.setupWebRadioChannel()
+
         this.initSettings()
         this.initUI()
 
-        if (this.audioInputChannel != null &&
-            this.audioInputChannel.error == null) this.start()
+        ///if (this.audioInputChannel != null &&
+        ///    this.audioInputChannel.error == null) this.start()
+        if (this.channel != null &&
+            this.channel.error == null) {
+            this.start()
+            // open module: web-radio-picker
+            app.openModule('web-radio-picker',
+                app.moduleLoader.opts(
+                    'wrp_mod_inf_txt_inview',
+                    'wrp_mod_err_txt_inview'
+                )
+            )
+            //this.playWebRadio()
+        }
+    },
+
+    async setupWebRadioChannel() {
+        const channel = await oscilloscope.createChannel(Source_Id_Media)
+        await oscilloscope.initChannelForMedia(channel, Source_Id_Media)
+        this.channel = channel
+        ui.getCurrentChannel = () => this.channel
+        this.oscilloscope.addChannel(channel, false)
+    },
+
+    async playWebRadio(url) {
+        this.updateChannelMedia(
+            this.channel,
+            settings.media.demo.stereoAudioMediaURL)
     },
 
     async checkAudio() {
@@ -149,16 +180,16 @@ app = {
         })
 
         // grab & publish data
-        this.tasks.push(this.task(getAnalyzersDataTasks))
-        this.tasks.push(this.task(publishBuffersTasks))
-        this.tasks.push(this.task(channelsMeasuresTask))
+        ///this.tasks.push(this.task(getAnalyzersDataTasks))
+        ///this.tasks.push(this.task(publishBuffersTasks))
+        ///this.tasks.push(this.task(channelsMeasuresTask))
 
         // views tasks
-        this.tasks.push(this.task(startFrameTask, this.mrr))            // frame start
-        this.tasks.push(this.task(startViewTask, this.mrr))
-        this.tasks.push(this.task(this.gridView, this.mrr))
-        this.tasks.push(this.task(channelsAnimationTask, this.mrr))
-        this.tasks.push(this.task(this.oscilloscopeView, this.mrr))
+        ///this.tasks.push(this.task(startFrameTask, this.mrr))            // frame start
+        ///this.tasks.push(this.task(startViewTask, this.mrr))
+        ///this.tasks.push(this.task(this.gridView, this.mrr))
+        ///this.tasks.push(this.task(channelsAnimationTask, this.mrr))
+        ///this.tasks.push(this.task(this.oscilloscopeView, this.mrr))
 
         // end of frame
         this.tasks.push(this.task(requestAnimationFrameTask))      // frame end

@@ -1,5 +1,5 @@
 /*
-    Sound card Oscilloscope | Spectrum Analyzer | Signal Generator
+    Web Radio | Podcast
     Copyright(C) 2025  Franck Gaspoz
     find license and copyright informations in files /COPYRIGHT and /LICENCE
 */
@@ -74,7 +74,8 @@ ui = {
 
         // events
         $(window).resize(() => {
-            oscilloscope.refreshView()
+            //oscilloscope.refreshView()
+            this.popups.updatePopupsPositionAndSize()
         })
         window.onerror = (messOrEvent, src, line, col, err) => {
             this.showError(messOrEvent, src, line, col, err)
@@ -197,12 +198,15 @@ ui = {
             col: col,
             err: err
         }
+        $('#err_holder')
+            .removeClass('hidden')
         const $e = $('#err_txt')
         $e.text(messOrEvent)
+        $e.removeClass('hidden')
         console.error(messOrEvent)
-        setTimeout(() => {
+        /*setTimeout(() => {
             $e.text('')
-        }, settings.ui.errDisplayTime)
+        }, settings.ui.errDisplayTime)*/
     },
 
     checkSizeChanged() {

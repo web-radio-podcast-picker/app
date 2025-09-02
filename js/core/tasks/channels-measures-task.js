@@ -1,5 +1,5 @@
 /*
-    Sound card Oscilloscope | Spectrum Analyzer | Signal Generator
+    Web Radio | Podcast
     Copyright(C) 2025  Franck Gaspoz
     find license and copyright informations in files /COPYRIGHT and /LICENCE
 */

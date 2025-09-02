@@ -1,5 +1,5 @@
 /*
-    Sound card Oscilloscope | Spectrum Analyzer | Signal Generator
+    Web Radio | Podcast
     Copyright(C) 2025  Franck Gaspoz
     find license and copyright informations in files /COPYRIGHT and /LICENCE
 */
@@ -43,13 +43,15 @@ oscilloscope = {
             console.error('channel not found', channel);
     },
 
-    addChannel(channel) {
+    addChannel(channel, addControls) {
+        if (addControls === undefined) addControls = true
         // add a channel to the oscilloscope
         channel.view.init(app.canvas, channel)
         channel.fftView.init(app.canvas, channel)
         this.channels.push(channel)
         // add controls for the Channel
-        ui.channels.addControls(channel)
+        if (addControls)
+            ui.channels.addControls(channel)
     },
 
     async createChannel(sourceId, source) {

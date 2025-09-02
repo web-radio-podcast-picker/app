@@ -1,5 +1,5 @@
 /*
-    Sound card Oscilloscope | Spectrum Analyzer | Signal Generator
+    Web Radio | Podcast
     Copyright(C) 2025  Franck Gaspoz
     find license and copyright informations in files /COPYRIGHT and /LICENCE
 */
@@ -16,7 +16,7 @@ class WebRadioPickerModule extends ModuleBase {
 
     id = 'web_radio_picker'         // unique id
     version = '1.0'
-    versionDate = '08/20/2025'
+    versionDate = '09/02/2025'
     author = 'franck gaspoz'        // author
     cert = null                     // certification if any
 
@@ -289,6 +289,11 @@ class WebRadioPickerModule extends ModuleBase {
                 const channel = ui.getCurrentChannel()
                 if (channel != null && channel !== undefined) {
                     this.loading = o
+
+                    $('#err_txt')
+                        .text('')
+                    $('#err_holder')
+                        .addClass('hidden')
                     app.updateChannelMedia(
                         ui.getCurrentChannel(),
                         o.url
@@ -590,6 +595,8 @@ class WebRadioPickerModule extends ModuleBase {
         return g
     }
 }
+
+// utils
 
 function toUpperCaseWorldsFirstLetters(g) {
     return g.replace(/(?:^\w|[A-Z]|\b\w)/g, (word, index) => word.toUpperCase())

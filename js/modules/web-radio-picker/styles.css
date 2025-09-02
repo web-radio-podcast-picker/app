@@ -1,10 +1,33 @@
 /*
-Sound card Oscilloscope | Spectrum Analyzer | Signal Generator
+Web Radio | Podcast
 Copyright(C) 2025 Franck Gaspoz
 find license and copyright informations in files /COPYRIGHT and /LICENCE
 */
 
-/* web radio picker: view styles*/
+/* web radio picker: view styles */
+
+#err_holder {
+    text-align: -webkit-center;
+    align-content: center;
+}
+
+#err_txt {
+    color: red !important;
+    cursor: pointer;
+    max-width: 300px;
+    max-height: 300px;
+    display: block;
+    box-sizing: border-box;
+    padding: 1em;
+    text-align: center;
+    background-color: #000000AA;
+    width: 70%;
+    align-content: center;
+}
+
+#wrp_img {
+    align-self: center;
+}
 
 .wrp-pane {
     margin-top: 0.5em;
