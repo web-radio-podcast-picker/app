@@ -52,13 +52,23 @@ ui = {
         $('#app_ver_date').text(settings.app.verDate)
         this.popups.updatePopupPositionAndSize(null, $popup, null)
         $popup.removeClass('ptransparent')
+
         $popup.on('click', () => {
+
+            cui.setFullscreen(true)
+
+            app.openModule('web-radio-picker',
+                app.moduleLoader.opts(
+                    'wrp_mod_inf_txt_inview',
+                    'wrp_mod_err_txt_inview'
+                )
+            )
             this.hide_intro_popup()
         })
     },
 
     hide_intro() {
-        if (cui.isSmallDisplay()) return
+        //if (cui.isSmallDisplay()) return
         setTimeout(() => {
             this.hide_intro_popup()
         }, settings.ui.introPopupDelay)

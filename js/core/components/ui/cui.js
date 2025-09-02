@@ -19,9 +19,10 @@ cui = {
             if (document.fullscreenElement)
                 document.exitFullscreen()
         }
-        $('#' + btnId).html(
-            fs ? onText : offText
-        )
+        if (btnId !== undefined)
+            $('#' + btnId).html(
+                fs ? onText : offText
+            )
     },
 
     isSmallDisplay() {
