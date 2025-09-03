@@ -159,31 +159,43 @@
 
     <!-- intro popup -->
     <div id="intro_popup" class="popup popup-pane">
-        <table class="intro-content">
-            <tr>
-                <td>
-                    <img title="intro popup" alt="introduction popup" src="./img/icon.ico" width="256" height="256">
-                </td>
-                <td valign="middle">
-                    <div id="intro_popup_title">
-                        <h1>Web Radio Picker</h1>
-                        <h4><i>version <span id="wrp_app_ver"></span> - <span id="wrp_app_ver_date"></i></h3>
-                            <h4 class="padding-bottom"><i>kernel version <span id="sys_app_ver"></span> - <span
-                                        id="sys_app_ver_date"></i></h4>
-                            <h4 class="padding-bottom">github project page: <a rel=" noopener"
-                                    href="https://github.com/franck-gaspoz/web-radio-podcast/blob/main/README.md"
-                                    target="_blank">README.md</a>
-                            </h4>
-                            <div class="disclaimer">
-                                Copyright (C) Franck Gaspoz 2005
-                                This software comes with ABSOLUTELY NO WARRANTY;
-                                This is free software, and you are welcome to redistribute it
-                                under certain conditions; click settings &gt; License for details.
-                            </div>
+        <div class="intro-content">
+
+            <img title="intro popup" class="gr1 gc1" alt="introduction popup" src="./img/icon.ico" width="256"
+                height="256">
+
+            <div id="intro_popup_title" class="gr1 gc2">
+
+                <div class="gr1 gc1">
+                    <h1>Web Radio Picker</h1>
+                    <div class="intro-content-but grid cols2-grid">
+                        <span class="gr1 gc1 med-font align-right intro-content-click-txt">Click to open</span>
+                        <div class="gr1 gc2 align-left">
+                            <img crossorigin="anonymous" title="power button" class="power-button"
+                                src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/48/Simpleicons_Interface_power-symbol-1.svg/langfr-800px-Simpleicons_Interface_power-symbol-1.svg.png"
+                                class="svg mw-mmv-dialog-is-open">
+                        </div>
                     </div>
-                </td>
-            </tr>
-        </table>
+                </div>
+
+                <div class="gr2 gc1 padding-bottom">
+                    <h3 class="col-gold">version <span id="wrp_app_ver"></span> - <span id="wrp_app_ver_date"></h3>
+                    <br>
+                    <h4><i>kernel version <span id="sys_app_ver"></span> - <span id="sys_app_ver_date"></i></h4>
+                    <h4>github project page: <a rel=" noopener"
+                            href="https://github.com/franck-gaspoz/web-radio-podcast/blob/main/README.md"
+                            target="_blank">README.md</a>
+                    </h4>
+                </div>
+                <div class="disclaimer gr3 gc1 small-font padding-bottom">
+                    Copyright (C) Franck Gaspoz 2005
+                    This software comes with ABSOLUTELY NO WARRANTY;
+                    This is free software, and you are welcome to redistribute it
+                    under certain conditions; click settings &gt; License for details.
+                </div>
+            </div>
+        </div>
+
     </div>
 
     <!-- menu popups -->

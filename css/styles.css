@@ -864,8 +864,6 @@ code {
 }
 
 #intro_popup {
-    /* min-width: 512px; */
-    /* max-width: 660px; */
     width: 100% !important;
     height: 100% !important;
     left: 0px !important;
@@ -873,7 +871,6 @@ code {
     position: absolute;
     display: grid;
     align-content: center;
-    /* border: red solid 1px; */
     background-color: #000000FF;
     cursor: pointer;
     padding: 0px;
@@ -884,10 +881,52 @@ code {
  {
     font-weight: normal !important;
     margin: 0px;
+    display: inline-block;
 }
 
 #intro_popup_title {
     margin-left: 2em;
+    display: grid;
+    grid-template-rows: auto min-content min-content;
+    max-width: 100%;
+}
+
+.intro-content-click-txt {
+    padding-right:0.5em;
+    color: #FFFF00EE;
+}
+
+.col-gold {
+    color: #FFFF00EE;
+}
+
+.intro-content {
+    max-width: 700px;
+    max-height: 400px;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: darkblue;
+    padding: 0.5em;
+    display: grid;
+    grid-template-columns: auto auto;
+}
+
+.power-button {
+    width: 96px;
+    padding-left: 0.5em;
+    filter: invert();
+}
+
+.intro-content-but {
+    align-items: center;    
+}
+
+.small-font {
+    font-size: 0.8em;
+}
+
+.med-font {
+    font-size: 1.2em;
 }
 
 .disclaimer {
@@ -918,6 +957,14 @@ body.page-text {
 
 .align-left {
     text-align: left !important;
+}
+
+.align-right {
+    text-align: right !important;
+}
+
+.align-center {
+    text-align: center !important;
 }
 
 .page-layout {
@@ -1322,15 +1369,4 @@ a:hover {
 .gridh100p {
     display: grid;
     height: 100%;
-}
-
-.intro-content {
-    max-width: 800px;
-    max-height: 400px;
-    /* display: block; */
-    /* border: red solid 1px; */
-    margin-left: auto;
-    margin-right: auto;
-    background-color: darkblue;
-    padding: 0.5em;
 }
