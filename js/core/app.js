@@ -71,7 +71,7 @@ app = {
         this.canvas_mk = $('#cnv_markers')[0]
         ///this.gridView.init($('#cnv_grid')[0])
 
-        ///this.audioInputChannel = await this.initDefaultAudioInput()
+        this.audioInputChannel = await this.initDefaultAudioInput()
         ///this.oscilloscope.addChannel(this.audioInputChannel)
         await this.setupWebRadioChannel()
 
