@@ -48,6 +48,7 @@
 
     <!-- styles -->
     <link rel="stylesheet" type="text/css" href="./css/styles.css" />
+    <link rel="stylesheet" type="text/css" href="./js/modules/web-radio-picker/styles.css" />
     <!-- dependencies -->
     <script src="./js/ext/jquery-3.7.1.min.js"></script>
     <!-- settings -->
@@ -116,11 +117,11 @@
 
     <!-- drawings -->
 
-    <canvas id="cnv_grid"></canvas>
+    <canvas id="cnv_grid hidden"></canvas>
 
-    <canvas id="cnv_oscillo" class="canvas-uninitialized"></canvas>
+    <canvas id="cnv_oscillo hidden" class="canvas-uninitialized"></canvas>
 
-    <canvas id="cnv_markers" class="canvas-uninitialized"></canvas>
+    <canvas id="cnv_markers hidden" class="canvas-uninitialized"></canvas>
 
     <!-- channels deck -->
 
@@ -730,6 +731,79 @@
     </div>
 
     <!-- modules after -->
+
+    <!-- web radio picker: view (html fragment) -->
+
+    <div id="wrp-pane" class="module-full-pane">
+
+        <div class="main-icon">☄</div>
+        <div class="main-title">Web Radio Picker</div>
+
+        <div class="wrp-pane cols2-grid">
+
+            <!-- left col -->
+            <div class="gr1 gc1 rows-min-max-grid margin-right gridh100p">
+
+                <div class="gr1 gc1 padding-small border-light">
+                    <!-- top tags -->
+                    <div class="channel-menu-pane">
+                        <span id="btn_wrp_tag_list"
+                            class="menu-item menu-item-blue onoff-small-height no-width selected">Tags</span>
+                        <span id="btn_wrp_lang_list"
+                            class="menu-item menu-item-blue onoff-small-height no-width">Lang</span>
+                        <span id="btn_wrp_art_list"
+                            class="menu-item menu-item-blue onoff-small-height no-width">Artists</span>
+                        <span id="btn_wrp_play_list" class="menu-item menu-item-blue onoff-small-height no-width">Play
+                            list</span>
+                        <span id="btn_wrp_logo" class="menu-item menu-item-blue onoff-small-height no-width">Logo</span>
+                    </div>
+                </div>
+
+                <!-- left pane content -->
+                <div class="gr2 gc1 border-light margin-top gridh100p lim-height">
+                    <div id="opts_wrp_tag_list" class="wrp-scroll-pane">
+                    </div>
+                    <div id="opts_wrp_art_list" class="wrp-scroll-pane hidden">
+                    </div>
+                    <div id="opts_wrp_lang_list" class="wrp-scroll-pane hidden">
+                    </div>
+                    <div id="opts_wrp_play_list" class="wrp-scroll-pane hidden">
+                    </div>
+                    <div id="opts_wrp_logo" class="wrp-img-holder hidden">
+                        <img id="wrp_img" title="radio image" src="" class="gr1 gc1">
+                        <div id="err_holder" class="gr1 gc1">
+                            <span id="err_txt"></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- right col -->
+            <div class="gr1 gc2 rows-min-max-grid gridh100p">
+
+                <div id="wrp_radio_list_btn_bar" class="gr1 gc1 padding-small border-light grid">
+                    <span id="btn_wrp_radios"
+                        class="gr1 gc1 menu-item menu-item-blue onoff-small-height no-width selected">Streams</span>
+                    <span id="btn_wrp_all_radios"
+                        class="gr1 gc2 menu-item menu-item-blue onoff-small-height no-width">Clear
+                        filters</span>
+                    <span id="wrp_list_count" class="gr1 gc3"></span>
+                </div>
+                <div class="gr2 gc1 border-light margin-top gridh100p lim-height">
+                    <div id="wrp_radio_list" class="wrp-scroll-pane">
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- footer -->
+            <div id="wrp_footer" class="gr2 gc1 grid cols2 margin-top padding-small border-light">
+                <div id="wrp_radio_name" class="gr1 gc1"></div>
+                <div id="wrp_radio_url" class="gr2 gc1"></div>
+                <div id="wrp_radio_box" class="gr1 gc1"></div>
+            </div>
+        </div>
+    </div>
 
 </body>
 

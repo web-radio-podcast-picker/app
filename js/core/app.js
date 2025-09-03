@@ -52,6 +52,16 @@ app = {
 
         ui.init_intro()
 
+        const opts = app.moduleLoader.opts(
+            'wrp_mod_inf_txt_inview',
+            'wrp_mod_err_txt_inview'
+        )
+        opts.skipLoadViews = true
+        opts.viewContainerId = 'wrp-pane'
+        opts.noPopup = true
+
+        app.openModule('web-radio-picker', opts)
+
         await this.checkAudio()
 
         this.oscilloscope = oscilloscope
@@ -59,7 +69,7 @@ app = {
         this.gridView = new GridView()
         this.canvas = $('#cnv_oscillo')[0]
         this.canvas_mk = $('#cnv_markers')[0]
-        this.gridView.init($('#cnv_grid')[0])
+        ///this.gridView.init($('#cnv_grid')[0])
 
         ///this.audioInputChannel = await this.initDefaultAudioInput()
         ///this.oscilloscope.addChannel(this.audioInputChannel)
@@ -368,7 +378,8 @@ app = {
 
     openModule(uri, opts) {
         this.moduleLoader.load(uri, opts, (o, v) => {
-            ui.popups.showPopup(null, o.id)
+            if (!opts.noPopup)
+                ui.popups.showPopup(null, o.id)
         })
     },
 

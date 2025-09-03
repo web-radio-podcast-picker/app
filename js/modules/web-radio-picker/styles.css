@@ -6,6 +6,30 @@ find license and copyright informations in files /COPYRIGHT and /LICENCE
 
 /* web radio picker: view styles */
 
+
+.lim-height {
+    height: Calc(100% - 4.5em);
+}
+
+.main-icon {
+    position: relative;
+    top: -0.27em;
+    font-size: 2em;
+    left: 0em;
+    margin-bottom: -0.75em;
+    opacity: 0.9;
+    width: 20%;
+}
+
+.main-title {
+    position: relative;
+    top: -0.8em;
+    margin-bottom: -1em;
+    opacity: 0.9;
+    left: 2em;
+    width: 70%;
+}
+
 #err_holder {
     text-align: -webkit-center;
     align-content: center;
@@ -31,19 +55,23 @@ find license and copyright informations in files /COPYRIGHT and /LICENCE
 
 .wrp-pane {
     margin-top: 0.5em;
-    min-height: 380px;
+    height: 100%;
+    /*min-height: 380px;*/
+    grid-template-rows: Calc(100% - 6.5em) 6.5em;
 }
 
 .wrp-scroll-pane {
     overflow-y: scroll;
     overflow-x: hidden;
-    max-height: 300px;
-    min-height: 300px;
+    /* max-height: 300px; */
+    /* min-height: 300px; */
+    /* height: 100%; */
+    /*height: Calc(100% - 4em);*/
 }
 
 .wrp-list-item {
     min-height: 1.5em;
-    max-width: 256px;
+    /* max-width: 256px; */
     word-wrap: break-word;
     padding: 0.5em;
     font-size: 1.2em;
@@ -75,11 +103,12 @@ find license and copyright informations in files /COPYRIGHT and /LICENCE
 
 .wrp-img-holder {
     align-content: center;
-    text-align: center;    
+    text-align: center;
     height: 100%;
     background-color: black;
     display: grid;
     justify-items: center;
+    overflow-y: hidden;
 }
 
 .wrp-img-half {
@@ -98,6 +127,7 @@ find license and copyright informations in files /COPYRIGHT and /LICENCE
     height: 2.8em;
     max-height: 2.8em;
     overflow: hidden;
+    /* background-color: darkblue; */
 }
 
 #wrp_radio_url {

@@ -29,7 +29,9 @@ class ModuleLoader {
 
     showInf(opts, inf, inf2) {
         inf2 = (inf2 === undefined || inf2 == null) ? '' : ('...' + inf2)
-        $('#' + opts.infId).text(inf + inf2)
+        const txt = inf + inf2
+        $('#' + opts.infId).text(txt)
+        console.log(txt)
         setTimeout(() => {
             $('#' + opts.infId).text('')
         }, settings.ui.introPopupDelay)
@@ -87,7 +89,6 @@ class ModuleLoader {
         o.validate()
         if (this.modules[o.id] !== undefined)
             throw new Error('module already plugged: ' + o.id)
-        //o.id = o.id + '_module' // //?
 
         const cnt = {
             viewsCnt: o.views.length,
@@ -157,63 +158,74 @@ class ModuleLoader {
             const styleId = t.length > 1 ? t[1] : null
             const sc = baseUrl + viewId
             const st = baseUrl + styleId
-            const c = document.createElement('div')
+            var c = opts.viewContainerId == null ?
+                document.createElement('div')
+                : $('#' + opts.viewContainerId)[0]
             const $c = $(c)
-            const s = document.createElement('div')
+            var s = document.createElement('div')
             const $s = $(s)
 
             this.showInf(opts, this.baseMess + opts.id, 'view')
 
-            $c.load(sc, (response, status, xhr) => {
-                if (status === "success") {
+            const setupView = () => {
+                const addModule = (c, viewId, o, css) => {
 
-                    const addModule = (c, viewId, o, css) => {
+                    try {
+                        this.showInf(opts, 'plug module: ' + opts.id)
 
-                        try {
-                            this.showInf(opts, 'plug module: ' + opts.id)
-
-                            this.initView(c, viewId, o, css)
+                        this.initView(c, viewId, o, css, opts)
+                        if (!opts.noPopup)
                             $('body')[0].appendChild(c)
-                            o.initView(viewId)
 
-                            this.modules[o.uri] = o
+                        this.modules[o.uri] = o
 
+                        o.initView(viewId)
+
+                        if (!opts.noPopup)
                             ui.popups.initPopup(
                                 ui.popups.popup(o.id, null),
                                 $c,
                                 o.id)
 
-                            cnt.viewsCnt--
-                            if (cnt.viewsCnt == 0) {
-                                then(o, viewId)
-                            }
-                        } catch (err) {
-                            this.showError(opts, 'plug module:' + opts.id + '" failed: ' + err)
+                        cnt.viewsCnt--
+                        if (cnt.viewsCnt == 0) {
+                            then(o, viewId)
                         }
+                    } catch (err) {
+                        this.showError(opts, 'plug module:' + opts.id + ' failed: ' + err)
                     }
-
-                    if (styleId != null)
-                        $s.load(st, (response, status, xhr) => {
-                            if (status === "success") {
-
-                                const css = response
-                                addModule(c, viewId, o, css)
-
-                            } else {
-                                this.showError(opts, 'load style "' + st + '" failed: ' + xhr.status + ' ' + xhr.statusText)
-                            }
-                        })
-                    else {
-                        addModule(c, viewId, o, null)
-                    }
-                } else {
-                    this.showError(opts, 'load view "' + sc + '" failed: ' + xhr.status + ' ' + xhr.statusText)
                 }
-            })
+
+                if (styleId != null && !opts.skipLoadViews)
+                    $s.load(st, (response, status, xhr) => {
+                        if (status === "success") {
+
+                            const css = response
+                            addModule(c, viewId, o, css)
+
+                        } else {
+                            this.showError(opts, 'load style "' + st + '" failed: ' + xhr.status + ' ' + xhr.statusText)
+                        }
+                    })
+                else {
+                    addModule(c, viewId, o, null)
+                }
+            }
+
+            if (!opts.skipLoadViews)
+                $c.load(sc, (response, status, xhr) => {
+                    if (status === "success") {
+                        setupView()
+                    } else {
+                        this.showError(opts, 'load view "' + sc + '" failed: ' + xhr.status + ' ' + xhr.statusText)
+                    }
+                })
+            else
+                setupView()
         })
     }
 
-    initView(c, viewId, o, css) {
+    initView(c, viewId, o, css, opts) {
 
         const div = (cl, txt) => tag('div', cl, txt)
 
@@ -229,24 +241,30 @@ class ModuleLoader {
         $c.attr('id', o.id)
         $c.attr('data-author', o.author)
         $c.attr('data-cert', o.cert)
-        $c.addClass('popup popup-pane module-pane hidden')
+        if (!opts.noPopup)
+            $c.addClass('popup popup-pane module-pane hidden')
+        else
+            $c.addClass('module-full-pane')
 
-        const but_close = div('popup-close btn-red', '✕')
-        const icon = div('popup-icon', o.icon || '⚙')
-        const title = div('popup-title', o.title || o.id)
-        const style = css != null ? tag('style', null, css) : null
+        if (!opts.noPopup) {
+            const but_close = div('popup-close btn-red', '✕')
+            const icon = div('popup-icon', o.icon || '⚙')
+            const title = div('popup-title', o.title || o.id)
+            const style = css != null ? tag('style', null, css) : null
 
-        c.appendChild(but_close)
-        c.appendChild(icon)
-        c.appendChild(title)
-        if (style != null)
-            c.appendChild(style)
+            c.appendChild(but_close)
+            c.appendChild(icon)
+            c.appendChild(title)
+            if (style != null)
+                c.appendChild(style)
 
-        if (c.childNodes.length > 0) {
-            c.insertBefore(title, c.childNodes[0])
-            c.insertBefore(icon, c.childNodes[0])
-            c.insertBefore(but_close, c.childNodes[0])
-            c.insertBefore(style, c.childNodes[0])
+            if (c.childNodes.length > 0) {
+                c.insertBefore(title, c.childNodes[0])
+                c.insertBefore(icon, c.childNodes[0])
+                c.insertBefore(but_close, c.childNodes[0])
+                if (style != null)
+                    c.insertBefore(style, c.childNodes[0])
+            }
         }
     }
 

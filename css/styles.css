@@ -630,7 +630,7 @@ div.popup-grid > span.menu-item {
 
 .rows-min-max-grid {
     display: grid;
-    grid-template-rows: max-content;
+    grid-template-rows: min-content 100%;
 }
 
 .cols2 {
@@ -1276,6 +1276,13 @@ a:hover {
     min-height: 400px;
 }
 
+.module-full-pane {
+    color: white;
+    background-color: rgba(0,0,139,0.9);
+    height: 100%;
+    /* max-height: 100%; */
+}
+
 #wrp_mod_inf_txt,
 #wrp_mod_err_txt {
     min-height:1em;
@@ -1288,4 +1295,9 @@ a:hover {
 
 #wrp_mod_inf_txt {
     margin-top: 0.5em;
+}
+
+.gridh100p {
+    display: grid;
+    height: 100%;
 }

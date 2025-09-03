@@ -57,12 +57,13 @@ ui = {
 
             cui.setFullscreen(true)
 
-            app.openModule('web-radio-picker',
+            /*app.openModule('web-radio-picker',
                 app.moduleLoader.opts(
                     'wrp_mod_inf_txt_inview',
                     'wrp_mod_err_txt_inview'
                 )
-            )
+            )*/
+
             this.hide_intro_popup()
         })
     },
