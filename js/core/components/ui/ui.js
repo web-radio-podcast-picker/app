@@ -48,22 +48,17 @@ ui = {
             $popup.addClass('hidden')
             return
         }*/
-        $('#sys_app_ver').text(settings.app.version)
-        $('#app_ver_date').text(settings.app.verDate)
+        $('#sys_app_ver').text(settings.app.kernel.version)
+        $('#sys_app_ver_date').text(settings.app.kernel.verDate)
+        $('#wrp_app_ver').text(settings.app.wrp.version)
+        $('#wrp_app_ver_date').text(settings.app.wrp.verDate)
+
         this.popups.updatePopupPositionAndSize(null, $popup, null)
         $popup.removeClass('ptransparent')
 
         $popup.on('click', () => {
 
             cui.setFullscreen(true)
-
-            /*app.openModule('web-radio-picker',
-                app.moduleLoader.opts(
-                    'wrp_mod_inf_txt_inview',
-                    'wrp_mod_err_txt_inview'
-                )
-            )*/
-
             this.hide_intro_popup()
         })
     },

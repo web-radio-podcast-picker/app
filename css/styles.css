@@ -775,6 +775,10 @@ div.popup-grid > span.menu-item {
     padding-top: 1em !important;
 }
 
+.padding-bottom {
+    padding-bottom: 1em !important;
+}
+
 .left {
     float: left !important;
 }
@@ -860,8 +864,25 @@ code {
 }
 
 #intro_popup {
-    min-width: 512px;
-    max-width: 660px;
+    /* min-width: 512px; */
+    /* max-width: 660px; */
+    width: 100% !important;
+    height: 100% !important;
+    left: 0px !important;
+    top: 0px !important;
+    position: absolute;
+    display: grid;
+    align-content: center;
+    /* border: red solid 1px; */
+    background-color: #000000FF;
+    cursor: pointer;
+}
+
+#intro_popup h3,
+#intro_popup h4
+ {
+    font-weight: normal !important;
+    margin: 0px;
 }
 
 #intro_popup_title {
@@ -1300,4 +1321,15 @@ a:hover {
 .gridh100p {
     display: grid;
     height: 100%;
+}
+
+.intro-content {
+    max-width: 800px;
+    max-height: 400px;
+    /* display: block; */
+    /* border: red solid 1px; */
+    margin-left: auto;
+    margin-right: auto;
+    background-color: darkblue;
+    padding: 0.5em;
 }

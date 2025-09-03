@@ -9,8 +9,14 @@
 window.settings = {
 
     app: {
-        version: '0.9 Beta',
-        verDate: '8/23/2025'
+        kernel: {
+            version: '0.9 Beta',
+            verDate: '8/23/2025'
+        },
+        wrp: {
+            version: '1.0',
+            verDate: '9/3/2025'
+        }
     },
 
     sys: {
