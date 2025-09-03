@@ -21,6 +21,7 @@ ui = {
     popupSettings: new PopupSettings(),
     inputWidgets: new InputWidgets(),
     tabs: new Tabs(),
+    errExcludes: ['AbortError'],
 
     init(oscilloscope) {
 
@@ -44,10 +45,7 @@ ui = {
     init_intro() {
         const pid = 'intro_popup'
         const $popup = $('#' + pid)
-        /*if (cui.isSmallDisplay()) {
-            $popup.addClass('hidden')
-            return
-        }*/
+
         $('#sys_app_ver').text(settings.app.kernel.version)
         $('#sys_app_ver_date').text(settings.app.kernel.verDate)
         $('#wrp_app_ver').text(settings.app.wrp.version)
@@ -57,14 +55,12 @@ ui = {
         $popup.removeClass('ptransparent')
 
         $popup.on('click', () => {
-
             cui.setFullscreen(true)
             this.hide_intro_popup()
         })
     },
 
     hide_intro() {
-        //if (cui.isSmallDisplay()) return
         setTimeout(() => {
             this.hide_intro_popup()
         }, settings.ui.introPopupDelay)
@@ -182,15 +178,6 @@ ui = {
         $p.css('top', btop2 + 'px')
         $p.removeClass('hidden')
 
-        // test
-        if (false) {
-            $p = $('#fft_axe_bottom_pane')
-            $p.css('left', 50 + 'px')
-            btop = h + settings.ui.fftAxeRelY
-            $p.css('top', btop + 'px')
-            $p.removeClass('hidden')
-        }
-
         $('#main_menu').removeClass('hidden')
 
         this.popups.updatePopupsPositionAndSize()
@@ -204,13 +191,24 @@ ui = {
             col: col,
             err: err
         }
-        $('#err_holder')
-            .removeClass('hidden')
-        const $e = $('#err_txt')
-        $e.text(messOrEvent)
-        $e.removeClass('hidden')
+        var novis = false
+        this.errExcludes.forEach(e => {
+            try {
+                const m = messOrEvent.toString()
+                novis |= m.startsWith(e)
+            } catch (err) { }
+        })
+        if (!novis) {
+            $('#err_holder')
+                .removeClass('hidden')
+            const $e = $('#err_txt')
+            $e.text(messOrEvent)
+            $e.removeClass('hidden')
+        }
         console.error(messOrEvent)
-        /*setTimeout(() => {
+
+        /*  // auto hide timer
+            setTimeout(() => {
             $e.text('')
         }, settings.ui.errDisplayTime)*/
     },
