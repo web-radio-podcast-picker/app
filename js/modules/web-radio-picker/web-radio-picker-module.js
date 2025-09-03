@@ -259,8 +259,9 @@ class WebRadioPickerModule extends ModuleBase {
 
     showImage() {
         const $i = $('#wrp_img')
-        $i.attr('width', null)
-        $i.attr('height', null)
+        if (!this.ignoreNextShowImage)
+            $i.removeClass('wrp-img-half')
+        $i.removeClass('ptransparent')
         var iw = $i[0].width
         var ih = $i[0].height
         var r = iw / ih
@@ -286,8 +287,6 @@ class WebRadioPickerModule extends ModuleBase {
         $i.attr('width', iw + 'px')
         $i.attr('height', ih + 'px')
 
-        if (!this.ignoreNextShowImage)
-            $i.removeClass('wrp-img-half')
         this.ignoreNextShowImage = false
         ui.tabs.selectTab('btn_wrp_logo', this.tabs)
     }
@@ -313,8 +312,14 @@ class WebRadioPickerModule extends ModuleBase {
 
             if (o.logo != null && o.logo !== undefined && o.logo != '') {
                 const $i = $('#wrp_img')
+                $i.addClass('ptransparent')
+                $i.attr('width', null)
+                $i.attr('height', null)
                 $i.attr('src', o.logo)
             } else {
+                i.addClass('ptransparent')
+                $i.attr('width', null)
+                $i.attr('height', null)
                 this.noImage()
             }
 
