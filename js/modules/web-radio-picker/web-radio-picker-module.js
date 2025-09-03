@@ -66,7 +66,7 @@ class WebRadioPickerModule extends ModuleBase {
         this.buildTagItems()
             .buildArtItems()
             .buildLangItems()
-            .buildRadItems()
+        //.buildRadItems()
 
         const readOnly = { readOnly: true, attr: 'text' };
 
