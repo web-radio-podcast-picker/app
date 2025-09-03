@@ -19,8 +19,8 @@ body.ui {
 }
 
 html.ui,body.ui,#frame {
-    min-width: 800px;
-    min-height: 600px;
+    /* min-width: 800px; */
+    /* min-height: 600px; */
     overflow: hidden;
 }
 
