@@ -12,3 +12,12 @@ OOO     OOOO
 OOO     OOOO
         0000
 
+rsc:
+
+- power button
+Par SimpleIcon http://www.simpleicon.com/ — http://www.flaticon.com/packs/simpleicon-interface, Domaine public, https://commons.wikimedia.org/w/index.php?curid=47382056
+https://upload.wikimedia.org/wikipedia/commons/thumb/4/48/Simpleicons_Interface_power-symbol-1.svg/langfr-800px-Simpleicons_Interface_power-symbol-1.svg.png
+
+- connect anim
+par Icons8
+

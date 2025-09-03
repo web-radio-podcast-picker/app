@@ -1370,3 +1370,7 @@ a:hover {
     display: grid;
     height: 100%;
 }
+
+.invert {
+    filter: invert();
+}
