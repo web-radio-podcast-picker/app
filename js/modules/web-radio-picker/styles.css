@@ -116,9 +116,11 @@ find license and copyright informations in files /COPYRIGHT and /LICENCE
 }
 
 .wrp-img-holder>img {
-    min-width: 50%;
+    /* min-width: 50%; */
     text-align: center;
     cursor: pointer;
+    max-width: 100%;
+    /* max-height: 100%; */
 }
 
 #wrp_footer {

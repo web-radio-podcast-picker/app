@@ -259,6 +259,33 @@ class WebRadioPickerModule extends ModuleBase {
 
     showImage() {
         const $i = $('#wrp_img')
+        $i.attr('width', null)
+        $i.attr('height', null)
+        var iw = $i[0].width
+        var ih = $i[0].height
+        var r = iw / ih
+        const $c = $('#left-pane')
+        const cw = $c.width()
+        const ch = $c.height()
+
+        if (iw >= ih) {
+            // square or landscape
+            if (iw > cw) iw = cw
+            if (ih > ch) {
+                ih = ch
+                iw = r * ih
+            }
+        } else {
+            // portrait
+            if (ih > ch) ih = ch
+            if (iw > cw) {
+                iw = cw
+                ih = iw / r
+            }
+        }
+        $i.attr('width', iw + 'px')
+        $i.attr('height', ih + 'px')
+
         if (!this.ignoreNextShowImage)
             $i.removeClass('wrp-img-half')
         this.ignoreNextShowImage = false
@@ -285,7 +312,8 @@ class WebRadioPickerModule extends ModuleBase {
             $('#wrp_radio_box').text(o.groups.join(' '))
 
             if (o.logo != null && o.logo !== undefined && o.logo != '') {
-                $('#wrp_img').attr('src', o.logo)
+                const $i = $('#wrp_img')
+                $i.attr('src', o.logo)
             } else {
                 this.noImage()
             }
