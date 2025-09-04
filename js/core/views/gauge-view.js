@@ -39,7 +39,6 @@ class GaugeView {
         v = Math.min(v, this.plots)
         this.wplots(v, this.$leftGauge)
         this.wplots(v, this.$rightGauge)
-
     }
 
     wplots(v, t) {
