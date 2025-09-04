@@ -11,7 +11,9 @@ class GetSamplesTask {
     analyzer = null     // analyzer for getting samples
 
     bufferLength = 0    // length of the buffer
-    dataArray = null    // array for storing samples
+    dataArray = null        // array for storing samples (mixed channels)
+    leftDataArray = null    // left channel samples
+    rightDataArray = null   // right channel samples
 
     fftLength = 0       // length of the fft buffer
     fftDataArray = null // array for storing fft data
@@ -29,6 +31,8 @@ class GetSamplesTask {
         this.analyzer = channel.analyzer
         this.bufferLength = this.analyzer.frequencyBinCount
         this.dataArray = new Float32Array(this.bufferLength)
+        this.leftDataArray = new Float32Array(this.bufferLength)
+        this.rightDataArray = new Float32Array(this.bufferLength)
         this.channelCount = this.analyzer.channelCount
         this.fftLength = this.analyzer.fftSize / this.channelCount
         this.fftDataArray = new Float32Array(this.fftLength)
@@ -39,12 +43,19 @@ class GetSamplesTask {
     }
 
     run() {
-        if (this.analyzer != null) {
+        if (this.analyzer != null
+            && this.channel.analyzerLeft != null
+            && this.channel.analyzerRight != null
+        ) {
             if ((!this.channel.pause
                 && !oscilloscope.pause)
                 || !this.channel.isDisplayed) {
+
                 this.analyzer.getFloatTimeDomainData(this.dataArray)
                 this.analyzer.getFloatFrequencyData(this.fftDataArray)
+
+                this.channel.analyzerLeft.getFloatTimeDomainData(this.leftDataArray)
+                this.channel.analyzerRight.getFloatTimeDomainData(this.rightDataArray)
             }
         } else {
             console.error("Analyzer not initialized")

@@ -158,6 +158,12 @@ oscilloscope = {
 
         channel.gain = channel.audioContext.createGain()
         channel.splitter = channel.audioContext.createChannelSplitter(2)
+        // Create an AnalyserNode for each channel
+        channel.analyzerLeft = channel.audioContext.createAnalyser()
+        channel.analyzerRight = channel.audioContext.createAnalyser()
+        // Connect each channel to its respective AnalyserNode
+        channel.splitter.connect(channel.analyzerLeft, 0); // Left channel
+        channel.splitter.connect(channel.analyzerRight, 1); // Right channel
 
         if (channel.stream != undefined) {
             if (settings.debug.info)
@@ -165,10 +171,10 @@ oscilloscope = {
 
             //channel.streamSource = channel.audioContext.createMediaStreamSource(channel.stream)
             channel.streamSource = channel.source.createMediaStreamSource(channel)
+            channel.streamSource.connect(channel.splitter);
+
             channel.setAnalyser(
                 channel.audioContext.createAnalyser())      // mono analyzer
-
-            //channel.analyzerLeft =  
 
             channel.analyzer.fftSize = settings.input.bufferSize * 2
 
