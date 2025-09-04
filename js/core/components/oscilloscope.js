@@ -173,7 +173,7 @@ oscilloscope = {
             channel.streamSource.connect(channel.splitter);
 
             channel.setAnalyser(
-                channel.audioContext.createAnalyser())      // mono analyzer
+                channel.audioContext.createAnalyser())      // mixed channels analyzer
 
             channel.analyzer.fftSize = settings.input.bufferSize * 2
 
