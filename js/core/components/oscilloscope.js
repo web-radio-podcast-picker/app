@@ -169,7 +169,6 @@ oscilloscope = {
             if (settings.debug.info)
                 console.log("Input media stream ok")
 
-            //channel.streamSource = channel.audioContext.createMediaStreamSource(channel.stream)
             channel.streamSource = channel.source.createMediaStreamSource(channel)
             channel.streamSource.connect(channel.splitter);
 
