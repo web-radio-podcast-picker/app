@@ -20,6 +20,11 @@ class Channel {
     streamSource = null         // media stream source
     stream = null               // media stream
     analyzer = null             // audio analyzer
+
+    splitter = null             // left-right channel splitter
+    analyzerLeft = null         // left channel analyzer
+    analyzerRight = null        // right channel analyzer
+
     gain = null                 // audio gain
     gainValue = 1               // gain value
     generator = new Generator() // signal generator
@@ -110,7 +115,10 @@ class Channel {
             this.analyzer =
             this.gain =
             this.getSamplesTask =
-            this.audioContext = null
+            this.audioContext =
+            this.splitter =
+            this.analyzerLeft =
+            this.analyzerRight = null
         this.measures.reset()
         this.out =
             this.outConnected =

@@ -23,10 +23,10 @@ class GaugeView {
         const fc = 0.5
 
         //this.fftToLevels(this.channel?.getSamplesTask?.fftDataArray, minDb, fc)
-        this.waveToLevels(this.channel?.getSamplesTask?.dataArray, minDb, fc)
+        this.waveToLevels(this.channel?.getSamplesTask?.dataArray)
     }
 
-    waveToLevels(dataArray, minDb, fc) {
+    waveToLevels(dataArray) {
         if (dataArray == null) return
 
         var sum = 0
@@ -34,7 +34,8 @@ class GaugeView {
         for (var i = 0; i < dataArray.length; i += 1) {
             sum += Math.abs(dataArray[i])
         }
-        var v = sum / dataArray.length      // 0..1
+        // should take into account input range. -1..1 or -0.5 .. 0.5
+        var v = sum / dataArray.length * 0.1      // 0..1
         v *= this.plots
         v = Math.min(v, this.plots)
         this.wplots(v, this.$leftGauge)

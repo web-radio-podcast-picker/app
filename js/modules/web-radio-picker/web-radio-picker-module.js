@@ -261,6 +261,7 @@ class WebRadioPickerModule extends ModuleBase {
         const $i = $('#wrp_img')
         if (!this.ignoreNextShowImage)
             $i.removeClass('wrp-img-half')
+        const noimg = $i.hasClass('wrp-img-half')
         $i.removeClass('ptransparent')
         var iw = $i[0].width
         var ih = $i[0].height
@@ -268,17 +269,32 @@ class WebRadioPickerModule extends ModuleBase {
         const $c = $('#left-pane')
         const cw = $c.width()
         const ch = $c.height()
+        var rw = iw / cw
+        var rh = ih / ch
 
+        // auto zoom
+        if (!noimg) {
+            iw *= 2
+            ih *= 2
+        }
+
+        // limit bounds
         if (iw >= ih) {
             // square or landscape
-            if (iw > cw) iw = cw
+            if (iw > cw) {
+                iw = cw
+                ih = iw / r
+            }
             if (ih > ch) {
                 ih = ch
                 iw = r * ih
             }
         } else {
             // portrait
-            if (ih > ch) ih = ch
+            if (ih > ch) {
+                ih = ch
+                iw = r * ih
+            }
             if (iw > cw) {
                 iw = cw
                 ih = iw / r
