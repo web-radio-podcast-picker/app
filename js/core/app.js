@@ -15,6 +15,7 @@ app = {
     audioInputChannel: null,    // audio input channel (shared)
     oscilloscope: null,         // oscilloscope channels manager
     oscilloscopeView: null,     // oscilloscope view
+    gaugeView: null,            // gauge view
     gridView: null,             // grid view
     tasks: [],                  // tasks,
     canvas: null,               // canvas for visualization
@@ -67,6 +68,7 @@ app = {
         this.oscilloscope = oscilloscope
         this.oscilloscopeView = new OscilloscopeView()
         this.gridView = new GridView()
+        this.gaugeView = new GaugeView()
         this.canvas = $('#cnv_oscillo')[0]
         this.canvas_mk = $('#cnv_markers')[0]
         ///this.gridView.init($('#cnv_grid')[0])
@@ -74,6 +76,7 @@ app = {
         this.audioInputChannel = await this.initDefaultAudioInput()
         ///this.oscilloscope.addChannel(this.audioInputChannel)
         await this.setupWebRadioChannel()
+        this.gaugeView.init(this.channel)
 
         this.initSettings()
         this.initUI()
@@ -151,7 +154,7 @@ app = {
     },
 
     startUI() {
-        $(this.canvas).removeClass('canvas-uninitialized')
+        ///$(this.canvas).removeClass('canvas-uninitialized')
         // ui started event
         if (this.onStartUI != null) {
             const f = this.onStartUI
@@ -192,13 +195,14 @@ app = {
         })
 
         // grab & publish data
-        ///this.tasks.push(this.task(getAnalyzersDataTasks))
+        this.tasks.push(this.task(getAnalyzersDataTasks))
         ///this.tasks.push(this.task(publishBuffersTasks))
         ///this.tasks.push(this.task(channelsMeasuresTask))
 
         // views tasks
-        ///this.tasks.push(this.task(startFrameTask, this.mrr))            // frame start
+        this.tasks.push(this.task(startFrameTask, this.mrr))            // frame start
         ///this.tasks.push(this.task(startViewTask, this.mrr))
+        this.tasks.push(this.task(this.gaugeView, this.mrr))
         ///this.tasks.push(this.task(this.gridView, this.mrr))
         ///this.tasks.push(this.task(channelsAnimationTask, this.mrr))
         ///this.tasks.push(this.task(this.oscilloscopeView, this.mrr))
@@ -409,5 +413,4 @@ document.addEventListener('DOMContentLoaded', function () {
     if (settings.debug.trace)
         console.log('DOM fully loaded and parsed')
     app.run()
-
 }, false)

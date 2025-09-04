@@ -42,7 +42,7 @@ window.settings = {
     },
 
     input: {
-        bufferSize: 16384 / 2,  // buffer size (fftSize = bufferSize*2)     
+        bufferSize: /*16384*/2048 / 2,  // buffer size (fftSize = bufferSize*2)     
     },
 
     output: {
