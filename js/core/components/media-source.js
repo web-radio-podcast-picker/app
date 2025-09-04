@@ -12,6 +12,9 @@ class MediaSource {
     source = null       // media source
     url = null          // media url
 
+    onLoadError = null      // on load error handler
+    onLoadSuccess = null    // on load success handler
+
     constructor() {
         this.init()
     }
@@ -23,13 +26,38 @@ class MediaSource {
     createAudioSource(audioContext, url) {
         this.deleteSource()
         this.audio = new Audio()
-        this.audio.addEventListener('loadedmetadata', () => {
-            console.log('Metadata loaded:', this.audio.src)
-        });
+
+        this.audio.addEventListener('loadedmetadata', (ev) => {
+            // equivalent to a load success event
+            if (settings.debug.trace)
+                console.log('Metadata loaded:', this.audio.src)
+
+            if (this.onLoadSuccess != null)
+                this.onLoadSuccess(this.audio)
+        })
+
+        this.audio.addEventListener('error', () => {
+            const err = this.getAudioSourceError()
+            if (settings.debug.trace)
+                console.log(err)
+
+            if (err.code != MediaError.MEDIA_ERR_ABORTED
+                && this.onLoadError != null) this.onLoadError(err, this.audio)
+        })
+
         this.audio.crossOrigin = "anonymous"
         this.source = audioContext.createMediaElementSource(this.audio)
         this.audio.src = url
         return this.source
+    }
+
+    getAudioSourceError() {
+        if (this.audio == null || this.audio.error == null) return null
+        const err = this.audio.error
+        return {
+            'code': err.code,
+            'message': err.message
+        }
     }
 
     deleteSource() {

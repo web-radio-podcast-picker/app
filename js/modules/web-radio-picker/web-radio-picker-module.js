@@ -95,6 +95,30 @@ class WebRadioPickerModule extends ModuleBase {
         this.updateBindings()
     }
 
+    initAudioSourceHandlers() {
+        app.channel.mediaSource.onLoadError = (err, audio) => this.onLoadError(err, audio)
+        app.channel.mediaSource.onLoadSuccess = (audio) => this.onLoadSuccess(audio)
+    }
+
+    onLoading(item) {
+        $('#wrp_connected_icon').addClass('hidden')
+        $('#wrp_connect_error_icon').addClass('hidden')
+        $('#wrp_connect_icon').removeClass('hidden')
+    }
+
+    onLoadError(err, audio) {
+        $('#wrp_connected_icon').addClass('hidden')
+        $('#wrp_connect_icon').addClass('hidden')
+        $('#wrp_connect_error_icon').removeClass('hidden')
+    }
+
+    onLoadSuccess(audio) {
+        // metatadata: audio.duration
+        $('#wrp_connect_icon').addClass('hidden')
+        $('#wrp_connect_error_icon').addClass('hidden')
+        $('#wrp_connected_icon').removeClass('hidden')
+    }
+
     updateBindings() {
         ui.bindings.updateBindingTarget('wrp_list_count')
     }
@@ -347,6 +371,9 @@ class WebRadioPickerModule extends ModuleBase {
                     .text('')
                 $('#err_holder')
                     .addClass('hidden')
+
+                this.initAudioSourceHandlers()
+                this.onLoading(o)
                 app.updateChannelMedia(
                     ui.getCurrentChannel(),
                     o.url

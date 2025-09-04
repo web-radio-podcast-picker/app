@@ -319,7 +319,6 @@ app = {
 
     updateChannelMedia(channel, url) {
         if (channel.pause || oscilloscope.pause) return
-        //oscilloscope.setOut(channel, false)
         try {
             ui.channels.popupSettings.paneSrcMedia.updateURL(url)
             this.playChannelMedia(channel)

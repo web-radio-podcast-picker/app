@@ -14,21 +14,21 @@ class ChannelSettingsPaneSrcMedia {
         this.channelSettings = channelSettings
 
         ui
-            .toggles.initToggle('btn_ch_src_media_onoff',
+            /*.toggles.initToggle('btn_ch_src_media_onoff',
                 () => ui.channels.updatePause(this.channelSettings.editChannel),
                 ui.getCurrentChannelPath('pause'),
-                true)
+                true)*/
             .bindings.bind(ui.bindings.binding(
                 'opt_ch_media_url',
                 ui.getCurrentChannelPath('mediaSource.url'),
                 { disableInputWidget: true, sym: "'" }))
 
-        $('#bt_ch_src_play').on('click', () => {
+        /*$('#bt_ch_src_play').on('click', () => {
             app.updateChannelMedia(
                 this.channelSettings.editChannel,
                 $('#opt_ch_media_url')[0].value
             )
-        })
+        })*/
 
         $('#bt_ch_src_media_url_paste').on('click', async () => {
             const $i = $('#opt_ch_media_url')
@@ -41,7 +41,7 @@ class ChannelSettingsPaneSrcMedia {
             navigator.clipboard.writeText(text)
         })
 
-        $('#bt_ch_src_media_peekwr').on('click', () => {
+        /*$('#bt_ch_src_media_peekwr').on('click', () => {
             // open module: web-radio-picker
             app.openModule('web-radio-picker',
                 app.moduleLoader.opts(
@@ -49,7 +49,7 @@ class ChannelSettingsPaneSrcMedia {
                     'wrp_mod_err_txt'
                 )
             )
-        })
+        })*/
 
         return this
     }
