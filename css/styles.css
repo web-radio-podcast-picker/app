@@ -637,6 +637,18 @@ div.popup-grid > span.menu-item {
     grid-column: span 2;
 }
 
+.cols3 {
+    grid-column: span 3;
+}
+
+.cols4 {
+    grid-column: span 4;
+}
+
+.cols5 {
+    grid-column: span 5;
+}
+
 .test-border {
     border: red solid 1px;
 }
@@ -802,6 +814,10 @@ code {
     padding-bottom: 0.5em !important;
 }
 
+.top-dpadding {
+    padding-top: 0.5em !important;
+}
+
 .btn-sub {
     cursor: pointer;
 }
@@ -900,6 +916,11 @@ code {
     color: #FFFF00EE;
 }
 
+.connect-icon {
+    width: 30px;
+    height: 30px;
+}
+
 .intro-content {
     max-width: 700px;
     max-height: 400px;
@@ -913,6 +934,7 @@ code {
 
 .power-button {
     width: 96px;
+    height: 96px;
     padding-left: 0.5em;
     filter: invert();
 }

@@ -53,6 +53,17 @@ find license and copyright informations in files /COPYRIGHT and /LICENCE
     align-self: center;
 }
 
+.wrp-but-col {
+    display: grid;
+    grid-row: 1;
+    margin-bottom: 2px;
+}
+
+.wrp-layout {
+    grid-template-columns: Calc(50% - 3.5em) 1.5em 4em 1.5em Calc(50% - 3.5em);
+    display: grid;
+}
+
 .wrp-pane {
     margin-top: 0.5em;
     height: 100%;
@@ -164,4 +175,42 @@ find license and copyright informations in files /COPYRIGHT and /LICENCE
     margin-top: -0.25em;
     margin-right: -0.25em;
     color: #FFFF00E0;
+}
+
+.gauge {
+    background-color: black;
+    margin-right: 0.5em;
+    display: grid;    
+}
+
+.gauge-plot {
+    background-color: #444444;
+    /*width: 1em;*/
+    /*height: 2em;*/
+    margin-left: 0.25em;
+    margin-right: 0.25em;
+    margin-top: 0.25em;
+    margin-bottom: 0.25em;
+    border-radius: 2px;
+    opacity: 0.2;
+}
+
+.gauge-plot-on {
+    opacity: 1 !important;
+}
+
+.gauge-plot-red {
+    background-color: red !important;
+}
+
+.gauge-plot-yellow {
+    background-color: yellow !important;
+}
+
+.gauge-plot-orange {
+    background-color: orange !important;
+}
+
+.gauge-plot-green {
+    background-color: #00FF00 !important;
 }

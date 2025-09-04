@@ -117,7 +117,7 @@
 
     <!-- drawings -->
 
-    <canvas id="cnv_grid hidden"></canvas>
+    <canvas id="cnv_grid hidden" class="canvas-uninitialized"></canvas>
 
     <canvas id="cnv_oscillo hidden" class="canvas-uninitialized"></canvas>
 
@@ -169,13 +169,13 @@
 
                 <div class="gr1 gc1">
                     <h1>Web Radio Picker <img title="no connection logo" src="./img/no-connection-trsp.gif"
-                            class="invert chroma-key">
+                            class="invert connect-icon">
                     </h1>
                     <div class="intro-content-but grid cols2-grid">
                         <span class="gr1 gc1 med-font align-right intro-content-click-txt">Click to open</span>
                         <div class="gr1 gc2 align-left">
                             <img crossorigin="anonymous" title="power button" class="power-button"
-                                src="./img/power-button.svg" class="svg mw-mmv-dialog-is-open">
+                                src="./img/power-button.svg">
                         </div>
                     </div>
                 </div>
@@ -755,7 +755,7 @@
         <div class="main-icon">☄</div>
         <div class="main-title">Web Radio Picker</div>
 
-        <div class="wrp-pane cols2-grid">
+        <div class="wrp-pane wrp-layout">
 
             <!-- left col -->
             <div class="gr1 gc1 rows-min-max-grid margin-right gridh100p">
@@ -794,8 +794,74 @@
                 </div>
             </div>
 
+            <!-- left gauge -->
+
+            <div class="gr1 gc2 gauge">
+                <div class="gauge-plot gauge-plot-red"></div>
+                <div class="gauge-plot gauge-plot-red"></div>
+                <div class="gauge-plot gauge-plot-red"></div>
+                <div class="gauge-plot gauge-plot-red"></div>
+                <div class="gauge-plot gauge-plot-red"></div>
+                <div class="gauge-plot gauge-plot-orange"></div>
+                <div class="gauge-plot gauge-plot-orange"></div>
+                <div class="gauge-plot gauge-plot-orange"></div>
+                <div class="gauge-plot gauge-plot-orange"></div>
+                <div class="gauge-plot gauge-plot-orange"></div>
+                <div class="gauge-plot gauge-plot-yellow"></div>
+                <div class="gauge-plot gauge-plot-yellow"></div>
+                <div class="gauge-plot gauge-plot-yellow"></div>
+                <div class="gauge-plot gauge-plot-yellow"></div>
+                <div class="gauge-plot gauge-plot-yellow"></div>
+                <div class="gauge-plot gauge-plot-yellow"></div>
+                <div class="gauge-plot gauge-plot-green"></div>
+                <div class="gauge-plot gauge-plot-green"></div>
+                <div class="gauge-plot gauge-plot-green"></div>
+                <div class="gauge-plot gauge-plot-green"></div>
+                <div class="gauge-plot gauge-plot-green"></div>
+                <div class="gauge-plot gauge-plot-green"></div>
+                <div class="gauge-plot gauge-plot-green"></div>
+                <div class="gauge-plot gauge-plot-green"></div>
+            </div>
+
+            <!-- mid col -->
+            <div class="gr1 gc3 wrp-but-col border-light margin-right align-center">
+                <div class="gr1 gc1 top-dpadding">
+                    <img id="wrp_connect_icon" src="./img/no-connection-trsp.gif" title="connecting icon"
+                        class="invert connect-icon">
+                </div>
+            </div>
+
+            <!-- right gauge -->
+
+            <div class="gr1 gc4 gauge">
+                <div class="gauge-plot gauge-plot-red"></div>
+                <div class="gauge-plot gauge-plot-red"></div>
+                <div class="gauge-plot gauge-plot-red"></div>
+                <div class="gauge-plot gauge-plot-red"></div>
+                <div class="gauge-plot gauge-plot-red"></div>
+                <div class="gauge-plot gauge-plot-orange"></div>
+                <div class="gauge-plot gauge-plot-orange"></div>
+                <div class="gauge-plot gauge-plot-orange"></div>
+                <div class="gauge-plot gauge-plot-orange"></div>
+                <div class="gauge-plot gauge-plot-orange"></div>
+                <div class="gauge-plot gauge-plot-yellow"></div>
+                <div class="gauge-plot gauge-plot-yellow"></div>
+                <div class="gauge-plot gauge-plot-yellow"></div>
+                <div class="gauge-plot gauge-plot-yellow"></div>
+                <div class="gauge-plot gauge-plot-yellow"></div>
+                <div class="gauge-plot gauge-plot-yellow"></div>
+                <div class="gauge-plot gauge-plot-green"></div>
+                <div class="gauge-plot gauge-plot-green"></div>
+                <div class="gauge-plot gauge-plot-green"></div>
+                <div class="gauge-plot gauge-plot-green"></div>
+                <div class="gauge-plot gauge-plot-green"></div>
+                <div class="gauge-plot gauge-plot-green"></div>
+                <div class="gauge-plot gauge-plot-green"></div>
+                <div class="gauge-plot gauge-plot-green"></div>
+            </div>
+
             <!-- right col -->
-            <div class="gr1 gc2 rows-min-max-grid gridh100p">
+            <div class="gr1 gc5 rows-min-max-grid gridh100p">
 
                 <div id="wrp_radio_list_btn_bar" class="gr1 gc1 padding-small border-light grid">
                     <span id="btn_wrp_radios"
@@ -813,7 +879,7 @@
             </div>
 
             <!-- footer -->
-            <div id="wrp_footer" class="gr2 gc1 grid cols2 margin-top padding-small border-light">
+            <div id="wrp_footer" class="gr2 gc1 grid cols5 margin-top padding-small border-light">
                 <div id="wrp_radio_name" class="gr1 gc1"></div>
                 <div id="wrp_radio_url" class="gr2 gc1"></div>
                 <div id="wrp_radio_box" class="gr1 gc1"></div>
