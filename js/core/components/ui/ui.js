@@ -55,8 +55,8 @@ ui = {
         $popup.removeClass('ptransparent')
 
         $popup.on('click', () => {
-            cui.setFullscreen(true)
             this.hide_intro_popup()
+            cui.setFullscreen(true)
         })
     },
 

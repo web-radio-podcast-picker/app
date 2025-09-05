@@ -887,9 +887,10 @@ code {
     position: absolute;
     display: grid;
     align-content: center;
-    background-color: #000000FF;
+    background-color: #000033;
     cursor: pointer;
     padding: 0px;
+    opacity: 1 !important;
 }
 
 #intro_popup h3,
