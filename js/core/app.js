@@ -14,9 +14,7 @@ app = {
     audioOutputDevice: null,    // current audio output device
     audioInputChannel: null,    // audio input channel (shared)
     oscilloscope: null,         // oscilloscope channels manager
-    oscilloscopeView: null,     // oscilloscope view
     gaugeView: null,            // gauge view
-    gridView: null,             // grid view
     tasks: [],                  // tasks,
     canvas: null,               // canvas for visualization
     canvas_mk: null,            // canvas for markers
@@ -171,7 +169,7 @@ app = {
         // update non paused signals (data and view)
         // update paused signals (view only)
         this.startFrameOneShotOperations.push(() => {
-            this.gridView.enableViewUpdate()
+            ///this.gridView.enableViewUpdate()
         })
         oscilloscope.refreshView()
     },
