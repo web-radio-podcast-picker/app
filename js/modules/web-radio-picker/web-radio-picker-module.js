@@ -99,6 +99,18 @@ class WebRadioPickerModule extends ModuleBase {
             ui.setFullscreen(false)
         })
 
+        $('#wrp_btn_pause_on').on('click', () => {
+            app.toggleOPause();
+            $('#wrp_btn_pause_on').addClass('hidden')
+            $('#wrp_btn_pause_off').removeClass('hidden')
+        })
+
+        $('#wrp_btn_pause_off').on('click', () => {
+            app.toggleOPause();
+            $('#wrp_btn_pause_off').addClass('hidden')
+            $('#wrp_btn_pause_on').removeClass('hidden')
+        })
+
         // modules are late binded. have the responsability to init bindings
         this.updateBindings()
     }

@@ -57,7 +57,7 @@ find license and copyright informations in files /COPYRIGHT and /LICENCE
     display: grid;
     grid-row: 1;
     margin-bottom: 2px;
-    grid-template-rows: 48px;
+    grid-template-rows: 48px 48px 48px;
 }
 
 .wrp-layout {

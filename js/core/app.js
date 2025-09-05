@@ -80,6 +80,8 @@ app = {
         this.initSettings()
         this.initUI()
 
+        ui.channels.popupSettings.editChannel = app.channel
+
         ///if (this.audioInputChannel != null &&
         ///    this.audioInputChannel.error == null) this.start()
         if (this.channel != null &&
