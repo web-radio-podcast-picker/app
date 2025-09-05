@@ -65,7 +65,7 @@ cui = {
         const vertical = vs.height >= vs.width
         if (!vertical) return
         var $b = $('body')
-        $b.setAttr('rotate', '-90deg')
+        $b.css('rotate', '-90deg')
     },
 
 }
