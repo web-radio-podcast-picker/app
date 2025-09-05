@@ -529,6 +529,9 @@ class WebRadioPickerModule extends ModuleBase {
         // arrange 'unclassified' group
         this.groupUnclassified()
 
+        // add tag lang
+        this.groupByLang()
+
         // sorts
 
         this.itemsAll.sort((a, b) => a.name.localeCompare(b.name))
@@ -580,6 +583,24 @@ class WebRadioPickerModule extends ModuleBase {
         remove(item.groups, nogrp)
 
         item.groups.push(lang)
+    }
+
+    addTagLang(lang, item) {
+        this.unclassifiedToLang(lang, item)
+    }
+
+    groupByLang() {
+        const st = this.getSettings()
+        this.itemsAll.forEach(item => {
+            const tw = item.name.toLowerCase().split(' ')
+            tw.forEach(word => {
+                // existing langs
+                st.tagToLang.forEach(tl => {
+                    if (tl.includes(word))
+                        this.addTagLang(tl[0], item)
+                })
+            })
+        })
     }
 
     groupUnclassified() {
