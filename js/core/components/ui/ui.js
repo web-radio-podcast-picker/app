@@ -38,7 +38,6 @@ ui = {
             this.init_ui()
             this.uiInitialized = true
             console.log("UI initialized")
-            //this.hide_intro()
         }
     },
 
@@ -50,9 +49,6 @@ ui = {
     initRotateYourDevicePopup() {
         const pid = 'ryd_popup'
         const $popup = $('#' + pid)
-        /*$popup.on('click', () => {
-            $popup.addClass('hidden')
-        })*/
     },
 
     showRotateYourDevicePopup() {
