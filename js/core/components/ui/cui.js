@@ -43,5 +43,6 @@ cui = {
         const vertical = vs.height >= vs.width
         if (vertical == !horizontal) return
 
-    }
+    },
+
 }

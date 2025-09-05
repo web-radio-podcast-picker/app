@@ -52,7 +52,8 @@ ui = {
         $('#wrp_app_ver_date').text(settings.app.wrp.verDate)
 
         this.popups.updatePopupPositionAndSize(null, $popup, null)
-        $popup.removeClass('ptransparent')
+        $popup.addClass('opaque')
+        $popup.removeClass('transparent')
 
         $popup.on('click', () => {
             this.hide_intro_popup()
@@ -69,7 +70,8 @@ ui = {
     hide_intro_popup() {
         const pid = 'intro_popup'
         const $popup = $('#' + pid)
-        $popup.fadeOut(settings.ui.fadeOutDelay)
+        //$popup.fadeOut(settings.ui.fadeOutDelay)
+        $popup.addClass("hidden")
     },
 
     init_ui() {

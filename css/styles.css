@@ -94,6 +94,10 @@ button {
     display: none !important;
 }
 
+.opaque {
+    opacity: 1 !important;
+}
+
 .transparent {
     opacity: 0 !important;
 }
@@ -890,7 +894,7 @@ code {
     background-color: #000033;
     cursor: pointer;
     padding: 0px;
-    opacity: 1 !important;
+    /*opacity: 1 !important;*/
 }
 
 #intro_popup h3,

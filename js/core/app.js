@@ -66,8 +66,8 @@ app = {
         await this.checkAudio()
 
         this.oscilloscope = oscilloscope
-        this.oscilloscopeView = new OscilloscopeView()
-        this.gridView = new GridView()
+        ///this.oscilloscopeView = new OscilloscopeView()
+        ///this.gridView = new GridView()
         this.gaugeView = new GaugeView()
         this.canvas = $('#cnv_oscillo')[0]
         this.canvas_mk = $('#cnv_markers')[0]
