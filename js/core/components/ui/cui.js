@@ -42,7 +42,7 @@ cui = {
         const vs = this.viewSize()
         const vertical = vs.height >= vs.width
         if (!vertical) return
-        var $b = ('body')
+        var $b = $('body')
         $b.setAttr('rotate', '-90deg')
     },
 
