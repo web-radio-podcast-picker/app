@@ -61,6 +61,12 @@ ui = {
         $popup.removeClass('hidden')
     },
 
+    hideRotateYourDevicePopup() {
+        const pid = 'ryd_popup'
+        const $popup = $('#' + pid)
+        $popup.addClass('hidden')
+    },
+
     init_intro() {
         this.setupScreen()
         this.popups.init_popups()
@@ -260,6 +266,8 @@ ui = {
         const or = this.getOrientation()
         if (or != Screen_Orientation_Landscape)
             this.showRotateYourDevicePopup()
+        else
+            this.hideRotateYourDevicePopup()
     },
 
     getOrientation() {
