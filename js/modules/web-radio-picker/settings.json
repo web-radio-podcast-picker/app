@@ -4,7 +4,9 @@
   "artistUrlFilters": [
     "https://streaming.exclusive.radio/",
     "http://streaming.exclusive.radio/",
-    "https://drive.uber.radio/"
+    "https://drive.uber.radio/",
+    "http://icy.unitedradio.it/",
+    "http://edge.radiomontecarlo.net/"
   ],
   "favorites": [],
   "wordToTag": ["radio"],
