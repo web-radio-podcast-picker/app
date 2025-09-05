@@ -42,8 +42,34 @@ ui = {
         }
     },
 
+    setupScreen() {
+        this.getOrientation()
+        screen.orientation.addEventListener('change', this.updateOrientation)
+        if (screen.lockOrientation) screen.lockOrientation(Screen_Orientation_Landscape)
+    },
+
+    initRotateYourDevicePopup() {
+        const pid = 'ryd_popup'
+        const $popup = $('#' + pid)
+        $popup.on('click', () => {
+            $popup.addClass('hidden')
+        })
+    },
+
+    showRotateYourDevicePopup() {
+        const pid = 'ryd_popup'
+        const $popup = $('#' + pid)
+        $popup.removeClass('hidden')
+    },
+
     init_intro() {
+        this.setupScreen()
         this.popups.init_popups()
+        this.initRotateYourDevicePopup()
+
+        var or = this.getOrientation()
+        //if (or != Screen_Orientation_Landscape)
+        this.showRotateYourDevicePopup()
 
         const pid = 'intro_popup'
         const $popup = $('#' + pid)
@@ -90,7 +116,6 @@ ui = {
             //oscilloscope.refreshView()
             this.popups.updatePopupsPositionAndSize()
         })
-        screen.orientation.addEventListener('change', this.updateOrientation)
         window.onerror = (messOrEvent, src, line, col, err) => {
             this.showError(messOrEvent, src, line, col, err)
         }
@@ -247,6 +272,5 @@ ui = {
         } else if (orientation.includes('landscape')) {
             ori = Screen_Orientation_Landscape
         }
-        console.log(ori)
     }
 }

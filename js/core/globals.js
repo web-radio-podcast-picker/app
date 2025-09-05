@@ -74,5 +74,5 @@ const Half_Top = 'half top'
 const Full = 'full'
 
 // screen
-const Screen_Orientation_Portrait = 'orientation: portrait'
-const Screen_Orientation_Landscape = 'orientation: landscape'
+const Screen_Orientation_Portrait = 'portrait'
+const Screen_Orientation_Landscape = 'landscape'

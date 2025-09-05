@@ -883,7 +883,7 @@ code {
     z-index: 100;
 }
 
-#intro_popup {
+#intro_popup, #ryd_popup {
     width: 100% !important;
     height: 100% !important;
     left: 0px !important;
@@ -897,6 +897,11 @@ code {
     /*opacity: 1 !important;*/
 }
 
+#ryd_popup {
+    z-index: 100 !important;
+    opacity: 1 !important;
+}
+
 #intro_popup h3,
 #intro_popup h4
  {
@@ -905,11 +910,16 @@ code {
     display: inline-block;
 }
 
-#intro_popup_title {
+#intro_popup_title, #ryd_popup_title {
     margin-left: 2em;
     display: grid;
     grid-template-rows: auto min-content min-content;
     max-width: 100%;
+}
+
+#ryd_popup_title {
+    margin-right: 2em;
+    margin-bottom: 1em;
 }
 
 .intro-content-click-txt {
