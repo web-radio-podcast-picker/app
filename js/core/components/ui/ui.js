@@ -67,9 +67,10 @@ ui = {
         this.popups.init_popups()
         this.initRotateYourDevicePopup()
 
-        var or = this.getOrientation()
+        //var or = this.getOrientation()
         //if (or != Screen_Orientation_Landscape)
-        this.showRotateYourDevicePopup()
+        //this.showRotateYourDevicePopup()
+        this.updateOrientation()
 
         const pid = 'intro_popup'
         const $popup = $('#' + pid)
@@ -261,7 +262,9 @@ ui = {
     },
 
     updateOrientation() {
-        this.getOrientation()
+        const or = this.getOrientation()
+        if (or != Screen_Orientation_Landscape)
+            this.showRotateYourDevicePopup()
     },
 
     getOrientation() {
@@ -272,5 +275,6 @@ ui = {
         } else if (orientation.includes('landscape')) {
             ori = Screen_Orientation_Landscape
         }
+        return ori
     }
 }

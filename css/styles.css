@@ -918,6 +918,7 @@ code {
 }
 
 #ryd_popup_title {
+    margin-top: 1em;
     margin-right: 2em;
     margin-bottom: 1em;
 }
@@ -985,6 +986,10 @@ body.page-text {
     color: white;
     font-family: Arial, sans-serif;
     font-size: 14px;
+}
+
+.text-top {
+    vertical-align: text-top;
 }
 
 .align-left {
