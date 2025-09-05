@@ -38,11 +38,12 @@ cui = {
         };
     },
 
-    setOrientation(horizontal) {
+    setOrientationLandscape() {
         const vs = this.viewSize()
         const vertical = vs.height >= vs.width
-        if (vertical == !horizontal) return
-
+        if (!vertical) return
+        var $b = ('body')
+        $b.setAttr('rotate', '-90deg')
     },
 
 }
