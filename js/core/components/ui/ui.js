@@ -43,8 +43,7 @@ ui = {
     },
 
     setupScreen() {
-        this.getOrientation()
-        screen.orientation.addEventListener('change', this.updateOrientation)
+        screen.orientation.addEventListener('change', () => this.updateOrientation())
         if (screen.lockOrientation) screen.lockOrientation(Screen_Orientation_Landscape)
     },
 
@@ -66,10 +65,6 @@ ui = {
         this.setupScreen()
         this.popups.init_popups()
         this.initRotateYourDevicePopup()
-
-        //var or = this.getOrientation()
-        //if (or != Screen_Orientation_Landscape)
-        //this.showRotateYourDevicePopup()
         this.updateOrientation()
 
         const pid = 'intro_popup'
