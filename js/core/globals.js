@@ -72,3 +72,7 @@ const Units_Volts_Steps = [
 const Half_Bottom = 'half bottom'
 const Half_Top = 'half top'
 const Full = 'full'
+
+// screen
+const Screen_Orientation_Portrait = 'orientation: portrait'
+const Screen_Orientation_Landscape = 'orientation: landscape'

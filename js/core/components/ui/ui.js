@@ -43,6 +43,8 @@ ui = {
     },
 
     init_intro() {
+        this.popups.init_popups()
+
         const pid = 'intro_popup'
         const $popup = $('#' + pid)
 
@@ -88,6 +90,7 @@ ui = {
             //oscilloscope.refreshView()
             this.popups.updatePopupsPositionAndSize()
         })
+        screen.orientation.addEventListener('change', this.updateOrientation)
         window.onerror = (messOrEvent, src, line, col, err) => {
             this.showError(messOrEvent, src, line, col, err)
         }
@@ -113,7 +116,7 @@ ui = {
 
         // menus & popups
         this.oscilloMenu.initMenu()
-        this.popups.init_popups()
+        ///this.popups.init_popups()
         this.popupSettings.init()
         this.channels.popupSettings.init()
     },
@@ -230,5 +233,20 @@ ui = {
             canvas.width !== htmlWidth
             || canvas.height !== htmlHeight
         return updated
+    },
+
+    updateOrientation() {
+        this.getOrientation()
+    },
+
+    getOrientation() {
+        const orientation = screen.orientation.type;
+        var ori = ''
+        if (orientation.includes('portrait')) {
+            ori = Screen_Orientation_Portrait
+        } else if (orientation.includes('landscape')) {
+            ori = Screen_Orientation_Landscape
+        }
+        console.log(ori)
     }
 }

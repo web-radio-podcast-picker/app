@@ -153,14 +153,13 @@ app = {
     },
 
     startUI() {
-        ///$(this.canvas).removeClass('canvas-uninitialized')
         // ui started event
         if (this.onStartUI != null) {
             const f = this.onStartUI
             this.onStartUI = null
             f()
         }
-        // Setup a timer to visualize some stuff.
+        // Setup the visualization timer
         this.requestAnimationFrame()
     },
 
