@@ -98,7 +98,17 @@
     ["youth", "children"]
   ],
   "tagToLang": [
-    ["turk", "turkish"],
+    [
+      "turk",
+      "turkish",
+      "a haber",
+      "a para",
+      "sevi",
+      "trt",
+      "trt-haber",
+      "turkiye",
+      "turkuvaz"
+    ],
     ["africa", "afrik", "afriradio"],
     ["russian", "russia²"],
     ["deutsch", "deutch", "dutch", "german", "bayern", "dublin"],
@@ -127,7 +137,16 @@
       "181.fm reggae roots",
       "allzic",
       "nova reggae",
-      "arrow classic rock"
+      "arrow classic rock",
+      "agora",
+      "alternantes",
+      "rmc",
+      "rtl",
+      "rts",
+      "skyrock",
+      "tendance",
+      "totem",
+      "polynesie"
     ],
     ["japanese"],
     ["vietnamise"],
