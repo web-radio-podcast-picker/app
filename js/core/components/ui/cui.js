@@ -9,7 +9,9 @@
 cui = {
 
     setFullscreen(fs, onText, offText, btnId) {
+
         settings.ui.fullscreen = fs
+
         if (fs) {
             document.querySelector('body').requestFullscreen(
                 { navigationUI: 'hide' }
@@ -23,6 +25,26 @@ cui = {
             $('#' + btnId).html(
                 fs ? onText : offText
             )
+    },
+
+    setFullscreenToggleVis(fs, onIconId, offIconId) {
+
+        settings.ui.fullscreen = fs
+
+        if (fs) {
+            document.querySelector('body').requestFullscreen(
+                { navigationUI: 'hide' }
+            )
+            $('#' + onIconId).removeClass('hidden')
+            $('#' + offIconId).addClass('hidden')
+        }
+        else {
+            if (document.fullscreenElement) {
+                document.exitFullscreen()
+                $('#' + offIconId).removeClass('hidden')
+                $('#' + onIconId).addClass('hidden')
+            }
+        }
     },
 
     isSmallDisplay() {

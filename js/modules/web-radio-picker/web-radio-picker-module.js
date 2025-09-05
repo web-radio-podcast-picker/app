@@ -66,7 +66,7 @@ class WebRadioPickerModule extends ModuleBase {
         this.buildTagItems()
             .buildArtItems()
             .buildLangItems()
-        //.buildRadItems()
+        //.buildRadItems()  // no initial full list
 
         const readOnly = { readOnly: true, attr: 'text' };
 
@@ -91,6 +91,14 @@ class WebRadioPickerModule extends ModuleBase {
             this.allRadios()
         })
 
+        $('#wrp_fullscreen_on').on('click', () => {
+            ui.setFullscreen(true)
+        })
+
+        $('#wrp_fullscreen_off').on('click', () => {
+            ui.setFullscreen(false)
+        })
+
         // modules are late binded. have the responsability to init bindings
         this.updateBindings()
     }
@@ -113,7 +121,7 @@ class WebRadioPickerModule extends ModuleBase {
     }
 
     onLoadSuccess(audio) {
-        // metatadata: audio.duration
+        // metatadata available: audio.duration
         $('#wrp_connect_icon').addClass('hidden')
         $('#wrp_connect_error_icon').addClass('hidden')
         $('#wrp_connected_icon').removeClass('hidden')

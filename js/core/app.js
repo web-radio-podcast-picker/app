@@ -52,7 +52,6 @@ app = {
     async run() {
 
         cui.setOrientationLandscape()
-
         ui.init_intro()
 
         const opts = app.moduleLoader.opts(

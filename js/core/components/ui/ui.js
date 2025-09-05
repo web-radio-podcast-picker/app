@@ -57,8 +57,15 @@ ui = {
 
         $popup.on('click', () => {
             this.hide_intro_popup()
-            cui.setFullscreen(true)
+            this.setFullscreen(true)
         })
+    },
+
+    setFullscreen(on) {
+        cui.setFullscreenToggleVis(
+            on,
+            'wrp_fullscreen_off',
+            'wrp_fullscreen_on')
     },
 
     hide_intro() {
