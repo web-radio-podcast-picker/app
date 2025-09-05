@@ -50,9 +50,9 @@ ui = {
     initRotateYourDevicePopup() {
         const pid = 'ryd_popup'
         const $popup = $('#' + pid)
-        $popup.on('click', () => {
+        /*$popup.on('click', () => {
             $popup.addClass('hidden')
-        })
+        })*/
     },
 
     showRotateYourDevicePopup() {
