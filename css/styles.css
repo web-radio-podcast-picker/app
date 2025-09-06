@@ -270,8 +270,8 @@ div.channel-opts-pane span.unit {
 }
 
 .channel-menu-pane {
-    display: flex;
-    grid-column: span 16 !important;
+    display: grid;
+    grid-auto-columns: min-content min-content min-content min-content min-content auto;
 }
 
 .channel-menu-pane-grid {
@@ -626,6 +626,10 @@ div.popup-grid > span.menu-item {
 }
 .gr16 {
     grid-row: 16;
+}
+
+.content-center {
+    align-content: center;
 }
 
 .cols2-grid {
@@ -1411,4 +1415,8 @@ a:hover {
 
 .invert {
     filter: invert();
+}
+
+.nowrap {
+    white-space: nowrap;
 }

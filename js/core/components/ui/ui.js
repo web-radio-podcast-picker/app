@@ -22,6 +22,7 @@ ui = {
     inputWidgets: new InputWidgets(),
     tabs: new Tabs(),
     errExcludes: ['AbortError'],
+    errReplaces: [['NotSupportedError', 'no connection']],
 
     init(oscilloscope) {
 
@@ -246,6 +247,15 @@ ui = {
             } catch (err) { }
         })
         if (!novis) {
+
+            this.errReplaces.forEach(t => {
+                try {
+                    const m = messOrEvent.toString()
+                    if (m.startsWith(t[0]))
+                        messOrEvent = t[1]
+                } catch (err) { }
+            })
+
             $('#err_holder')
                 .removeClass('hidden')
             const $e = $('#err_txt')
