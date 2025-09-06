@@ -92,11 +92,11 @@ class WebRadioPickerModule extends ModuleBase {
         })
 
         $('#wrp_fullscreen_on').on('click', () => {
-            ui.setFullscreen(true)
+            cui.setFullscreen(true)
         })
 
         $('#wrp_fullscreen_off').on('click', () => {
-            ui.setFullscreen(false)
+            cui.setFullscreen(false)
         })
 
         $('#wrp_btn_pause_on').on('click', () => {
