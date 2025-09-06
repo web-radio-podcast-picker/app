@@ -7,7 +7,7 @@
 // channels ui
 class Channels {
 
-    popupSettings = new PopupChannelSettings()
+    ///popupSettings = new PopupChannelSettings()
 
     setPauseButton(id, pause) {
         const $e = $('#btn_pause_' + id)
@@ -84,7 +84,7 @@ class Channels {
     updatePause(channel) {
         channel.setPause(channel.pause)// apply after binding the proprer method call
         this.setPauseButton(channel.channelId, channel.pause)
-        this.popupSettings.updatePause(channel)
+        ///this.popupSettings.updatePause(channel)
     }
 
     updateVisible(channel) {

@@ -80,7 +80,7 @@ app = {
         this.initSettings()
         this.initUI()
 
-        ui.channels.popupSettings.editChannel = app.channel
+        //ui.channels.popupSettings.editChannel = app.channel
 
         ///if (this.audioInputChannel != null &&
         ///    this.audioInputChannel.error == null) this.start()
@@ -320,7 +320,9 @@ app = {
     updateChannelMedia(channel, url) {
         if (channel.pause || oscilloscope.pause) return
         try {
-            ui.channels.popupSettings.paneSrcMedia.updateURL(url)
+            channel.mediaSource.audio.src = url
+            channel.mediaSource.url = url
+            ///ui.channels.popupSettings.paneSrcMedia.updateURL(url)
             this.playChannelMedia(channel)
         } catch (err) {
             ui.showError(err)

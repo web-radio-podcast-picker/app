@@ -27,8 +27,8 @@ class Channel {
 
     gain = null                 // audio gain
     gainValue = 1               // gain value
-    generator = new Generator() // signal generator
-    trigger = new Trigger()     // trigger
+    ///generator = new Generator() // signal generator
+    ///trigger = new Trigger()     // trigger
     fft = new FFT()
     markers = null              // channel markers
     audioContext = null         // audio context for processing
@@ -63,12 +63,12 @@ class Channel {
     constructor(channelId, sourceId) {
         this.channelId = channelId
         this.sourceId = sourceId
-        this.measures = new SignalMeasures()
-        this.measuresView = new SignalMeasuresView()
-        this.view = new SignalView()
-        this.fftView = new FFTView()
-        this.markers = new Markers().init(this)
-        this.measuresView.init(this, this.measures)
+        ///this.measures = new SignalMeasures()
+        ///this.measuresView = new SignalMeasuresView()
+        ///this.view = new SignalView()
+        ///this.fftView = new FFTView()
+        ///this.markers = new Markers().init(this)
+        ///this.measuresView.init(this, this.measures)
         this.mediaSource = new MediaSource()
     }
 
@@ -80,7 +80,7 @@ class Channel {
     setPause(pause) {
         this.pause = pause
         this.setPauseOut(pause)
-        this.generator.setPause(pause)
+        ///this.generator.setPause(pause)
     }
 
     setPauseOut(pause) {
@@ -111,7 +111,7 @@ class Channel {
 
         this.sourceId = Source_Id_None
         this.streamSource =
-            this.generator.oscillator =
+            ///this.generator.oscillator =
             this.analyzer =
             this.gain =
             this.getSamplesTask =
@@ -119,7 +119,7 @@ class Channel {
             this.splitter =
             this.analyzerLeft =
             this.analyzerRight = null
-        this.measures.reset()
+        ///this.measures.reset()
         this.out =
             this.outConnected =
             this.outMute = false

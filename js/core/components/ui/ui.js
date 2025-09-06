@@ -18,7 +18,7 @@ ui = {
     popups: new Popups(),
     oscilloMenu: new OscilloMenu(),
     channels: new Channels(),
-    popupSettings: new PopupSettings(),
+    ///popupSettings: new PopupSettings(),
     inputWidgets: new InputWidgets(),
     tabs: new Tabs(),
     errExcludes: ['AbortError'],
@@ -151,18 +151,19 @@ ui = {
         })
 
         // menus & popups
-        this.oscilloMenu.initMenu()
+        ///this.oscilloMenu.initMenu()
         ///this.popups.init_popups()
-        this.popupSettings.init()
-        this.channels.popupSettings.init()
+        ///this.popupSettings.init()
+        ///this.channels.popupSettings.init()
     },
 
     getCurrentChannel() {
-        return this.channels.popupSettings.editChannel
+        ///return this.channels.popupSettings.editChannel
+        return app.channel
     },
 
     getCurrentChannelPath(subPath) {
-        return 'ui.channels.popupSettings.editChannel.'
+        return 'app.channel.'
             + ((subPath == null || subPath === undefined) ?
                 '' : subPath)
     },
