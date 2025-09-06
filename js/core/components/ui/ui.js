@@ -46,7 +46,20 @@ ui = {
         if (screen.lockOrientation) screen.lockOrientation(Screen_Orientation_Landscape)
         document.addEventListener('contextmenu', function (event) {
             event.preventDefault();
-        });
+        })
+        const offIconId = 'wrp_fullscreen_off'
+        const onIconId = 'wrp_fullscreen_on'
+        document.addEventListener('fullscreenchange', () => {
+            if (settings.debug.trace)
+                console.log('fullscreen changed')
+            if (document.fullscreenElement) {
+                $('#' + offIconId).removeClass('hidden')
+                $('#' + onIconId).addClass('hidden')
+            } else {
+                $('#' + onIconId).removeClass('hidden')
+                $('#' + offIconId).addClass('hidden')
+            }
+        })
     },
 
     initRotateYourDevicePopup() {
@@ -86,18 +99,11 @@ ui = {
 
         $popup.on('click', () => {
             this.hide_intro_popup()
-            this.setFullscreen(true)
+            cui.setFullscreen(true)
             setTimeout(() => {
                 $('.module-full-pane').removeClass('transparent')
             }, 200)
         })
-    },
-
-    setFullscreen(on) {
-        cui.setFullscreenToggleVis(
-            on,
-            'wrp_fullscreen_off',
-            'wrp_fullscreen_on')
     },
 
     hide_intro() {

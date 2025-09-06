@@ -8,7 +8,7 @@
 
 cui = {
 
-    setFullscreen(fs, onText, offText, btnId) {
+    setFullscreenToggleText(fs, onText, offText, btnId) {
 
         settings.ui.fullscreen = fs
 
@@ -25,6 +25,22 @@ cui = {
             $('#' + btnId).html(
                 fs ? onText : offText
             )
+    },
+
+    setFullscreen(fs) {
+
+        settings.ui.fullscreen = fs
+
+        if (fs) {
+            document.querySelector('body').requestFullscreen(
+                { navigationUI: 'hide' }
+            )
+        }
+        else {
+            if (document.fullscreenElement) {
+                document.exitFullscreen()
+            }
+        }
     },
 
     setFullscreenToggleVis(fs, onIconId, offIconId) {
