@@ -44,6 +44,9 @@ ui = {
     setupScreen() {
         screen.orientation.addEventListener('change', () => this.updateOrientation())
         if (screen.lockOrientation) screen.lockOrientation(Screen_Orientation_Landscape)
+        document.addEventListener('contextmenu', function (event) {
+            event.preventDefault();
+        });
     },
 
     initRotateYourDevicePopup() {
