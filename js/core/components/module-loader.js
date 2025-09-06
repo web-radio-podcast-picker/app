@@ -20,7 +20,7 @@ class ModuleLoader {
     }
 
     getHash() {
-        // make cash-busting url
+        // make cache-busting url
         const hash = Math.floor((Math.random() + 1.5) * 1024)
         return '?hash=' + hash
     }
