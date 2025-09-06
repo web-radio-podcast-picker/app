@@ -592,12 +592,17 @@ class WebRadioPickerModule extends ModuleBase {
     groupByLang() {
         const st = this.getSettings()
         this.itemsAll.forEach(item => {
-            const tw = item.name.toLowerCase().split(' ')
+            const stw = item.name.toLowerCase()
+            const tw = stw.split(' ')
             tw.forEach(word => {
                 // existing langs
                 st.tagToLang.forEach(tl => {
                     if (tl.includes(word))
                         this.addTagLang(tl[0], item)
+                    tl.forEach(tgl => {
+                        if (stw == tgl)
+                            this.addTagLang(tl[0], item)
+                    })
                 })
             })
         })
@@ -615,7 +620,9 @@ class WebRadioPickerModule extends ModuleBase {
         var i = 0
         t.forEach(item => {
 
-            const tw = item.name.toLowerCase().split(' ')
+            const stw = item.name.toLowerCase()
+            const tw = stw.split(' ')
+
             tw.forEach(word => {
 
                 // eventuallly build new tags
