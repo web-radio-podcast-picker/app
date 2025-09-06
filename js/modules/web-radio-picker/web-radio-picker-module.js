@@ -100,19 +100,25 @@ class WebRadioPickerModule extends ModuleBase {
         })
 
         $('#wrp_btn_pause_on').on('click', () => {
-            app.toggleOPause();
-            $('#wrp_btn_pause_on').addClass('hidden')
-            $('#wrp_btn_pause_off').removeClass('hidden')
+            app.toggleOPause(() => this.updatePauseView())
         })
 
         $('#wrp_btn_pause_off').on('click', () => {
-            app.toggleOPause();
-            $('#wrp_btn_pause_off').addClass('hidden')
-            $('#wrp_btn_pause_on').removeClass('hidden')
+            app.toggleOPause(() => this.updatePauseView())
         })
 
         // modules are late binded. have the responsability to init bindings
         this.updateBindings()
+    }
+
+    updatePauseView() {
+        if (oscilloscope.pause) {
+            $('#wrp_btn_pause_on').addClass('hidden')
+            $('#wrp_btn_pause_off').removeClass('hidden')
+        } else {
+            $('#wrp_btn_pause_off').addClass('hidden')
+            $('#wrp_btn_pause_on').removeClass('hidden')
+        }
     }
 
     initAudioSourceHandlers() {
@@ -394,16 +400,25 @@ class WebRadioPickerModule extends ModuleBase {
 
                 this.initAudioSourceHandlers()
                 this.onLoading(o)
-                app.updateChannelMedia(
-                    ui.getCurrentChannel(),
-                    o.url
-                )
-                const tid = setTimeout(() => this.addToHistory(o),
-                    this.getSettings().addToHistoryDelay
-                )
-                if (this.addToHistoryTimer != null)
-                    clearTimeout(this.addToHistoryTimer)
-                this.addToHistoryTimer = tid
+
+                const pl = () => {
+                    this.updatePauseView()
+                    app.updateChannelMedia(
+                        ui.getCurrentChannel(),
+                        o.url
+                    )
+                    const tid = setTimeout(() => this.addToHistory(o),
+                        this.getSettings().addToHistoryDelay
+                    )
+                    if (this.addToHistoryTimer != null)
+                        clearTimeout(this.addToHistoryTimer)
+                    this.addToHistoryTimer = tid
+                }
+
+                if (oscilloscope.pause)
+                    app.toggleOPause(() => pl())
+                else
+                    pl()
             }
 
         })

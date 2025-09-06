@@ -361,14 +361,17 @@ app = {
         this.requestAnimationFrame()
     },
 
-    toggleOPause() {
-        if (oscilloscope.pause)
+    toggleOPause(then) {
+        if (oscilloscope.pause) {
             // unpause immediately
             this.performTogglePause()
+            if (then !== undefined) then()
+        }
         else
             this.endFrameOneShotOperations.push(() => {
                 // delay pause until end of frame
                 this.performTogglePause()
+                if (then !== undefined) then()
             })
     },
 
