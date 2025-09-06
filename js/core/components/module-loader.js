@@ -19,6 +19,12 @@ class ModuleLoader {
         return this.modules[uri] !== undefined
     }
 
+    getHash() {
+        // make cash-busting url
+        const hash = Math.floor((Math.random() + 1.5) * 1024)
+        return '?hash=' + hash
+    }
+
     showError(opts, err) {
         $('#' + opts.errId).text(err)
         ui.showError(err)
@@ -59,7 +65,7 @@ class ModuleLoader {
             './js/modules/' : ''
 
         const baseUrl = srcUrl + uri + '/'
-        const url = baseUrl + this.iuri(uri) + '.js'
+        const url = baseUrl + this.iuri(uri) + '.js' + this.getHash()
 
         var o = document.head
         var script = document.createElement('script')
@@ -108,7 +114,7 @@ class ModuleLoader {
 
             const d = document.createElement('div')
             const $d = $(d)
-            const sc = baseUrl + st
+            const sc = baseUrl + st + this.getHash()
             $d.load(sc, (response, status, xhr) => {
                 if (status === "success") {
                     try {
@@ -134,7 +140,7 @@ class ModuleLoader {
 
             const d = document.createElement('div')
             const $d = $(d)
-            const sc = baseUrl + st
+            const sc = baseUrl + st + this.getHash()
             $d.load(sc, (response, status, xhr) => {
                 if (status === "success") {
 
@@ -156,8 +162,8 @@ class ModuleLoader {
 
             const viewId = t[0]
             const styleId = t.length > 1 ? t[1] : null
-            const sc = baseUrl + viewId
-            const st = baseUrl + styleId
+            const sc = baseUrl + viewId + this.getHash()
+            const st = baseUrl + styleId + this.getHash()
             var c = opts.viewContainerId == null ?
                 document.createElement('div')
                 : $('#' + opts.viewContainerId)[0]

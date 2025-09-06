@@ -84,6 +84,9 @@ ui = {
         $popup.on('click', () => {
             this.hide_intro_popup()
             this.setFullscreen(true)
+            setTimeout(() => {
+                $('.module-full-pane').removeClass('transparent')
+            }, 200)
         })
     },
 
