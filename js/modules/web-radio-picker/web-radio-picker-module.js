@@ -140,18 +140,21 @@ class WebRadioPickerModule extends ModuleBase {
     }
 
     onLoading(item) {
+        app.channel.connected = false
         $('#wrp_connected_icon').addClass('hidden')
         $('#wrp_connect_error_icon').addClass('hidden')
         $('#wrp_connect_icon').removeClass('hidden')
     }
 
     onLoadError(err, audio) {
+        app.channel.connected = false
         $('#wrp_connected_icon').addClass('hidden')
         $('#wrp_connect_icon').addClass('hidden')
         $('#wrp_connect_error_icon').removeClass('hidden')
     }
 
     onLoadSuccess(audio) {
+        app.channel.connected = true
         // metatadata available: audio.duration
         $('#wrp_connect_icon').addClass('hidden')
         $('#wrp_connect_error_icon').addClass('hidden')

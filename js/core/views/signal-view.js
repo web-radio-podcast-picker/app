@@ -65,6 +65,7 @@ class SignalView {
 
         if (!this.visible) return
         if (this.canvas == null) return
+        if (this.channel != null && !this.channel.connected) return
 
         const cnvSize = this.canvas.getBoundingClientRect()
         const canvasHeight = cnvSize.height;
@@ -77,8 +78,8 @@ class SignalView {
 
         if (dataArray != null) {
 
-            var x = -1;
-            var y = -1;
+            var x = -1
+            var y = -1
             const drawContext = this.canvas.getContext('2d');
 
             const signalRange = settings.audioInput.vScale
@@ -113,10 +114,32 @@ class SignalView {
                     y = ny
                 }
 
-                /*const m = this.channel.measures
-                const absMax = Math.max(Math.abs(m.vMax), Math.abs(m.vMin))
-                const absVal = Math.abs(value)
-                const absF = 1.0 - ((absMax - absVal) / absMax)*/
+                drawContext.beginPath()
+                drawContext.moveTo(x, y)
+                drawContext.lineTo(nx, ny)
+                drawContext.setLineDash([]);
+                var col = this.channel.color
+                drawContext.strokeStyle = settings.oscilloscope.channels.shadowColor
+                drawContext.lineWidth = this.channel.lineWidth * 4
+                drawContext.stroke()
+                x = nx
+                y = ny
+            }
+
+            x = y = -1
+
+            for (var i = baseI; i < dataArray.length; i += 1) {
+                var value = dataArray[i];
+
+                value = valueToVolt(this.channel, value);
+                const offset = this.voltOffset(value)
+
+                var nx = (i - baseI) * barWidth
+                var ny = offset;
+                if (x == -1 && y == -1) {
+                    x = nx
+                    y = ny
+                }
 
                 drawContext.beginPath()
                 drawContext.moveTo(x, y)
@@ -128,9 +151,6 @@ class SignalView {
                     col: col,
                     op: 1,
                     value: value,
-                    /*absMax: absMax,
-                    absVal: absVal
-                    absF: absF,*/
                     offset: offset
                 }
 
@@ -140,6 +160,7 @@ class SignalView {
                         props.col = r.col
                 })
 
+                drawContext.strokeStyle = col
                 drawContext.lineWidth = this.channel.lineWidth
                 drawContext.stroke()
 

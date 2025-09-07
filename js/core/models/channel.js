@@ -11,6 +11,7 @@ class Channel {
     channelId = null           // channel id (1, 2,...)
     isDisplayed = false        // false if not already displayed
     pause = false              // true if paused (source,view) - use setPause
+    connected = false
 
     // audioInputDevice/generator/... (@see globals.js)
     sourceId = null            // source id of the signal, e.g., 'input', 'file', etc.

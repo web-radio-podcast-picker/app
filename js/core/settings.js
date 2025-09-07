@@ -138,8 +138,9 @@ window.settings = {
         vPerDiv: 0.5,          // volts per division
         tPerDiv: 1,            // time per division in milliseconds
         channels: {
-            defaultColor: 'rgba(255, 255, 255,1)',
+            defaultColor: 'rgba(255, 255, 0,1)',
             defaultLineWidth: 1.5,
+            shadowColor: 'rgba(0, 0, 0, 0.8)',
             // channels colors
             colors: [
                 // mandatory rgba notation
