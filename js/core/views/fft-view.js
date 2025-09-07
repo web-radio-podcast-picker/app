@@ -241,7 +241,7 @@ class FFTView {
                 if (rHeight == -2)
                     nbBars = 1
 
-                var barY = baseY - vrStp
+                var barY = baseY /*- vrStp*/
                 bars.push(nbBars)
                 rh.push(rHeight)
 
