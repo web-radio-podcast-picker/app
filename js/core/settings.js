@@ -51,13 +51,24 @@ window.settings = {
 
     fft: {
         hScale: 1,              // horizontal linear scale (1: full bandwidth)
-        winSize: 32,
         vScale: 1,              // vertical linear scale
         vScaleFactor: 16,       // vScale multiplier
         bars: 32,
         shape: {
             marginLeft: 2,
-            strokeColor: 'black'
+            strokeColor: 'black',
+            vBarSpace: 2,
+            colors: [
+                '#00DFFF',
+                '#00FF00',
+                '#94ED29',
+                '#FFFF00',
+                '#F8B621',
+                '#FA6426',
+                '#FF0000',
+                '#F226A9',
+                '#A820F5'
+            ]
         },
         pos: {
             ratioDx: 2.0,

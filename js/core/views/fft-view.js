@@ -149,15 +149,20 @@ class FFTView {
                 r(this.channel, dc, rprops)
             })
 
-            const winSize = settings.fft.winSize
             const offsetY = settings.fft.pos.ratioDy * canvasHeight
             const baseY = this.dbOffset(settings.fft.clamp.minDb) + offsetY
+            const maxY = this.dbOffset(settings.fft.clamp.maxDb) + offsetY
+            const vrange = baseY - maxY
+            const nvBars = settings.fft.shape.colors.length
+            const vrStp = vrange / nvBars
 
             var freqs = []
             var lfreqs = []
             var idxs = []
             var vls = []
             var ys = []
+            var bars = []
+            var rh = []
 
             const spl = this.channel?.getSamplesTask
             const n = dataArray.length
@@ -173,7 +178,9 @@ class FFTView {
                 fstp: fstp,
                 idxs: idxs,
                 vls: vls,
-                ys: ys
+                ys: ys,
+                bars: bars,
+                rh: rh
             }
             // 0 .. 50hz .. 100hz ... 150hz ... 200hz
             // 0 .. 50 .. 61 .. 
@@ -201,9 +208,9 @@ class FFTView {
 
                 // magnitude
                 var value = 0
-                var mdb = Number.MAX_VALUE
-                //for (var j = i; j < i + stp; j++) {
-                for (var j = i0; j <= i1; j++) {
+                //var mdb = Number.MAX_VALUE
+                //for (var j = i; j < i + stp; j++) {   // linear
+                for (var j = i0; j <= i1; j++) {        // logarythmic
                     var v = dataArray[j]
                     //mdb = Math.min(mdb, v)
                     value += v
@@ -221,13 +228,12 @@ class FFTView {
                     //mdb = Math.min(mdb, settings.fft.clamp.maxDb)
                 }
 
-                // magnitude ?
+                // magnitude normalisée ?
                 //value /= Math.abs(mdb) / 400.0
                 //value *= Math.abs(mdb) / 100.0
                 vls.push(value)
 
-                //const offset = this.dbOffset(value) - canvasHeight / 2
-                const offset = this.dbOffset(value) // - canvasHeight / 2
+                const offset = this.dbOffset(value)
                     + offsetY
                 ys.push(offset)
 
@@ -242,34 +248,71 @@ class FFTView {
                 var rHeight = ny - baseY
                 if (rHeight == 0) rHeight = -2
 
-                const m = this.channel.measures
+                var nbBars = nvBars * (baseY - ny) / vrange
+                nbBars = Math.round(nbBars)
+                const vrSpace = settings.fft.shape.vBarSpace
 
-                dc.beginPath()
-                dc.moveTo(x, ny)
-                //dc.lineTo(nx, ny)
-                var col = this.channel.fft.color
-                dc.strokeStyle = settings.fft.shape.strokeColor
-                dc.fillStyle = this.channel.color
-                dc.fillRect(x, baseY, nx - x, rHeight)
-                dc.rect(x, baseY, nx - x, rHeight)
+                /*if (nbBars < 0 || !isFinite(nbBars)) {
+                    const eubi = 'oui'
+                }*/
 
-                dc.setLineDash([])
-                dc.lineWidth = this.channel.fft.lineWidth
-                const props = {
-                    col: col,
-                    op: 1,
-                    value: value,
-                    offset: offset
+                if (nbBars == 0 || !isFinite(nbBars))
+                    rHeight = -2
+                if (rHeight == -2)
+                    nbBars = 1
+
+                var barY = baseY - vrStp
+                bars.push(nbBars)
+                rh.push(rHeight)
+
+                for (var b = 0; b < nbBars; b++) {
+
+                    dc.beginPath()
+                    //dc.moveTo(x, ny)
+                    dc.moveTo(x, barY)
+
+                    //var col = this.channel.fft.color
+                    var col = settings.fft.shape.colors[b]
+                    dc.strokeStyle = settings.fft.shape.strokeColor
+                    //dc.fillStyle = this.channel.color
+                    dc.fillStyle = col
+
+                    //dc.fillRect(x, baseY, nx - x, rHeight)
+                    //dc.fillRect(x, barY, nx - x, vrStp)   //
+
+                    const y0 = (rHeight == -2) ? (barY + vrStp) : barY
+                    const w = nx - x
+                    const h = rHeight == -2 ? rHeight : vrStp
+
+                    dc.fillRect(
+                        x,
+                        y0,
+                        w,
+                        h)
+
+                    dc.rect(
+                        x - 1,
+                        y0 - 1,
+                        w + 2,
+                        h + 2)
+
+                    dc.setLineDash([])
+                    dc.lineWidth = this.channel.fft.lineWidth
+                    dc.stroke()
+                    barY -= vrStp + vrSpace
+
+                    /*const props = {
+                        col: col,
+                        op: 1,
+                        value: value,
+                        offset: offset
+                    }
+                    this.pointRenderers.forEach(o => {
+                        var r = o.render(this.channel, dc, props)
+                        if (r.col !== undefined)
+                            props.col = r.col
+                    })*/
                 }
-
-                this.pointRenderers.forEach(o => {
-                    var r = o.render(this.channel, dc, props)
-                    if (r.col !== undefined)
-                        props.col = r.col
-                })
-
-                dc.lineWidth = this.channel.fft.lineWidth
-                dc.stroke()
 
                 x = nx
                 y = ny

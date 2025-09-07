@@ -5,8 +5,8 @@
     "https://streaming.exclusive.radio/",
     "http://streaming.exclusive.radio/",
     "https://drive.uber.radio/",
-    "http://icy.unitedradio.it/",
-    "http://edge.radiomontecarlo.net/",
+    "NO:http://icy.unitedradio.it/",
+    "NO:http://edge.radiomontecarlo.net/",
     "http://listen1.outpostradio.com/dtracks"
   ],
   "favorites": [],
@@ -261,7 +261,9 @@
       "crooner radio love",
       "ln radio",
       "jazz radio info",
-      "rouge lounge"
+      "rouge lounge",
+      "walf fm 99.0",
+      "bfm business"
     ],
     ["japanese", "japan"],
     ["vietnamise"],
