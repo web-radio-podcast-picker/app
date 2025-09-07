@@ -67,7 +67,7 @@ class Channel {
         ///this.measures = new SignalMeasures()
         ///this.measuresView = new SignalMeasuresView()
         this.view = new SignalView()
-        ///this.fftView = new FFTView()
+        this.fftView = new FFTView()
         ///this.markers = new Markers().init(this)
         ///this.measuresView.init(this, this.measures)
         this.mediaSource = new MediaSource()

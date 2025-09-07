@@ -17,6 +17,7 @@ class GetSamplesTask {
 
     fftLength = 0       // length of the fft buffer
     fftDataArray = null // array for storing fft data
+    fftByteDataArray = null // array for storing fft data
 
     sampleRate = 0      // sample rate
     channelCount = 0    // fft array channel count
@@ -36,6 +37,7 @@ class GetSamplesTask {
         this.channelCount = this.analyzer.channelCount
         this.fftLength = this.analyzer.fftSize / this.channelCount
         this.fftDataArray = new Float32Array(this.fftLength)
+        this.fftByteDataArray = new Uint8Array(this.fftLength)
         this.sampleRate = this.analyzer.context.sampleRate
         this.minDb = this.analyzer.minDecibels
         this.maxDb = this.analyzer.maxDecibels
@@ -52,7 +54,9 @@ class GetSamplesTask {
                 || !this.channel.isDisplayed) {
 
                 this.analyzer.getFloatTimeDomainData(this.dataArray)
+
                 this.analyzer.getFloatFrequencyData(this.fftDataArray)
+                ///this.analyzer.getByteFrequencyData(this.fftByteDataArray)
 
                 this.channel.analyzerLeft.getFloatTimeDomainData(this.leftDataArray)
                 this.channel.analyzerRight.getFloatTimeDomainData(this.rightDataArray)

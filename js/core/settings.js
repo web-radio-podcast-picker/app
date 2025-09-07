@@ -51,8 +51,23 @@ window.settings = {
 
     fft: {
         hScale: 1,              // horizontal linear scale (1: full bandwidth)
+        winSize: 32,
         vScale: 1,              // vertical linear scale
         vScaleFactor: 16,       // vScale multiplier
+        bars: 32,
+        shape: {
+            marginLeft: 2,
+            strokeColor: 'black'
+        },
+        pos: {
+            ratioDx: 2.0,
+            ratioDy: 1 / 5
+        },
+        clamp: {
+            enabled: true,
+            maxDb: 0,
+            minDb: -100
+        },
         grid: {
             opacity: 0.9,       // grid lines opacity
             hDivCount: 16,      // horizontal divs count
@@ -137,6 +152,7 @@ window.settings = {
     oscilloscope: {
         vPerDiv: 0.5,          // volts per division
         tPerDiv: 1,            // time per division in milliseconds
+        defaultFFTViewVisible: true,
         channels: {
             defaultColor: 'rgba(255, 255, 0,1)',
             defaultLineWidth: 1.5,

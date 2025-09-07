@@ -47,7 +47,7 @@ oscilloscope = {
         if (addControls === undefined) addControls = true
         // add a channel to the oscilloscope
         channel.view.init(app.canvas, channel)
-        ///channel.fftView.init(app.canvas, channel)
+        channel.fftView.init(app.canvas, channel)
         this.channels.push(channel)
         // add controls for the Channel
         if (addControls)

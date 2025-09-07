@@ -73,6 +73,7 @@ class SignalView {
         // auto size
         if (this.canvas.width != canvasWidth) this.canvas.width = canvasWidth
         if (this.canvas.height != canvasHeight) this.canvas.height = canvasHeight
+
         ///const dataArray = this.channel.measures.dataArray;
         const dataArray = this.channel?.getSamplesTask?.dataArray
 
