@@ -65,7 +65,7 @@
     <!--<script src="./js/core/views/renderers/fft-axes-renderer.js?hash=c"></script>-->
     <!--<script src="./js/core/views/renderers/bright-renderer.js?hash=c"></script>-->
     <!--<script src="./js/core/views/renderers/temp-color-renderer.js?hash=c"></script>-->
-    <!--<script src="./js/core/views/signal-view.js?hash=c"></script>-->
+    <script src="./js/core/views/signal-view.js?hash=c"></script>
     <script src="./js/core/views/gauge-view.js?hash=c"></script>
     <!--<script src="./js/core/views/fft-view.js?hash=c"></script>-->
     <!--<script src="./js/core/views/signal-measures-view.js?hash=c"></script>-->
@@ -118,11 +118,11 @@
 
     <!-- drawings -->
 
-    <canvas id="cnv_grid hidden" class="canvas-uninitialized"></canvas>
+    <!--<canvas id="cnv_grid" class="canvas-uninitialized"></canvas>-->
 
-    <canvas id="cnv_oscillo hidden" class="canvas-uninitialized"></canvas>
+    <!--<canvas id="cnv_oscillo" class="hidden canvas-uninitialized"></canvas>-->
 
-    <canvas id="cnv_markers hidden" class="canvas-uninitialized"></canvas>
+    <!--<canvas id="cnv_markers" class="canvas-uninitialized"></canvas>-->
 
     <!-- channels deck -->
 
@@ -815,11 +815,9 @@
                     <div id="opts_wrp_play_list" class="wrp-scroll-pane hidden">
                     </div>
                     <div id="opts_wrp_logo" class="wrp-img-holder hidden">
-                        <img id="wrp_img" title="radio image" src="" class="gr1 gc1">
-                        <!--<div id="err_holder" class="gr1 gc1">
-                            <span id="err_txt"></span>
-                        </div>-->
+                        <img id="wrp_img" title="radio image" src="" class="gr1 gc1 hidden">
                     </div>
+                    <canvas id="cnv_oscillo" class="gr1 gc1 hidden"></canvas>
                 </div>
             </div>
 

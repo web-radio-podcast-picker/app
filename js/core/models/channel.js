@@ -42,8 +42,8 @@ class Channel {
     measures = null            // signal measures data
     measuresView = null        // signal measures view
 
-    color = 'cyan'             // color for channel
-    lineWidth = 1              // line width for channel
+    color = settings.oscilloscope.channels.defaultColor             // color for channel
+    lineWidth = settings.oscilloscope.channels.defaultLineWidth              // line width for channel
     tempColor = false
     bright = false
 
@@ -65,7 +65,7 @@ class Channel {
         this.sourceId = sourceId
         ///this.measures = new SignalMeasures()
         ///this.measuresView = new SignalMeasuresView()
-        ///this.view = new SignalView()
+        this.view = new SignalView()
         ///this.fftView = new FFTView()
         ///this.markers = new Markers().init(this)
         ///this.measuresView.init(this, this.measures)

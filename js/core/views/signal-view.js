@@ -19,8 +19,8 @@ class SignalView {
     init(canvas, channel) {
         this.canvas = canvas;
         this.channel = channel;
-        this.pointRenderers.push(new TempColorRenderer())
-        this.pointRenderers.push(new BrightRenderer())
+        ///this.pointRenderers.push(new TempColorRenderer())
+        ///this.pointRenderers.push(new BrightRenderer())
     }
 
     offsetToVolt(offset) {
@@ -57,17 +57,23 @@ class SignalView {
     }
 
     run() {
-        this.channel.markers.setTriggerControlVisibility(this.visible)
+        ///this.channel.markers.setTriggerControlVisibility(this.visible)
 
-        const sizeUpdated = ui.setupCanvasSize(this.canvas)
-        if (sizeUpdated)
-            ui.setupUIComponents()
+        ///const sizeUpdated = ui.setupCanvasSize(this.canvas)
+        ///if (sizeUpdated)
+        ///   ui.setupUIComponents()
 
-        if (!this.visible) return;
+        if (!this.visible) return
+        if (this.canvas == null) return
 
-        const canvasHeight = this.canvas.height;
-        const canvasWidth = this.canvas.width;
-        const dataArray = this.channel.measures.dataArray;
+        const cnvSize = this.canvas.getBoundingClientRect()
+        const canvasHeight = cnvSize.height;
+        const canvasWidth = cnvSize.width;
+        // auto size
+        if (this.canvas.width != canvasWidth) this.canvas.width = canvasWidth
+        if (this.canvas.height != canvasHeight) this.canvas.height = canvasHeight
+        ///const dataArray = this.channel.measures.dataArray;
+        const dataArray = this.channel?.getSamplesTask?.dataArray
 
         if (dataArray != null) {
 
@@ -82,8 +88,9 @@ class SignalView {
             // full buffer view : scale 1ms/div
             const barWidth = canvasWidth / dataArray.length / timePerDiv;
 
-            const baseI = this.channel.trigger.isOn ?
-                this.channel.trigger.checkTrigger(this.channel, dataArray) : 0
+            ///const baseI = this.channel.trigger.isOn ?
+            ///    this.channel.trigger.checkTrigger(this.channel, dataArray) : 0
+            const baseI = 0
 
             const rprops = {
                 canvasWidth: canvasWidth
@@ -106,10 +113,10 @@ class SignalView {
                     y = ny
                 }
 
-                const m = this.channel.measures
+                /*const m = this.channel.measures
                 const absMax = Math.max(Math.abs(m.vMax), Math.abs(m.vMin))
                 const absVal = Math.abs(value)
-                const absF = 1.0 - ((absMax - absVal) / absMax)
+                const absF = 1.0 - ((absMax - absVal) / absMax)*/
 
                 drawContext.beginPath()
                 drawContext.moveTo(x, y)
@@ -121,9 +128,9 @@ class SignalView {
                     col: col,
                     op: 1,
                     value: value,
-                    absMax: absMax,
-                    absVal: absVal,
-                    absF: absF,
+                    /*absMax: absMax,
+                    absVal: absVal
+                    absF: absF,*/
                     offset: offset
                 }
 
@@ -142,6 +149,4 @@ class SignalView {
             this.channel.isDisplayed = true;
         }
     }
-
-
 }

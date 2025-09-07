@@ -68,7 +68,9 @@ app = {
         ///this.oscilloscopeView = new OscilloscopeView()
         ///this.gridView = new GridView()
         this.gaugeView = new GaugeView()
+
         this.canvas = $('#cnv_oscillo')[0]
+
         this.canvas_mk = $('#cnv_markers')[0]
         ///this.gridView.init($('#cnv_grid')[0])
 
@@ -80,21 +82,11 @@ app = {
         this.initSettings()
         this.initUI()
 
-        //ui.channels.popupSettings.editChannel = app.channel
-
         ///if (this.audioInputChannel != null &&
         ///    this.audioInputChannel.error == null) this.start()
         if (this.channel != null &&
             this.channel.error == null) {
             this.start()
-            // open module: web-radio-picker
-            /*app.openModule('web-radio-picker',
-                app.moduleLoader.opts(
-                    'wrp_mod_inf_txt_inview',
-                    'wrp_mod_err_txt_inview'
-                )
-            )*/
-            //this.playWebRadio()
         }
     },
 
@@ -201,10 +193,10 @@ app = {
 
         // views tasks
         this.tasks.push(this.task(startFrameTask, this.mrr))            // frame start
-        ///this.tasks.push(this.task(startViewTask, this.mrr))
+        this.tasks.push(this.task(startViewTask, this.mrr))
         this.tasks.push(this.task(this.gaugeView, this.mrr))
         ///this.tasks.push(this.task(this.gridView, this.mrr))
-        ///this.tasks.push(this.task(channelsAnimationTask, this.mrr))
+        this.tasks.push(this.task(channelsAnimationTask, this.mrr))
         ///this.tasks.push(this.task(this.oscilloscopeView, this.mrr))
 
         // end of frame

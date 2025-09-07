@@ -79,6 +79,8 @@ find license and copyright informations in files /COPYRIGHT and /LICENCE
     /* min-height: 300px; */
     /* height: 100%; */
     /*height: Calc(100% - 4em);*/
+    grid-row: 1;
+    grid-column: 1;
 }
 
 .wrp-list-item {
@@ -121,6 +123,8 @@ find license and copyright informations in files /COPYRIGHT and /LICENCE
     display: grid;
     justify-items: center;
     overflow-y: hidden;
+    grid-row: 1;
+    grid-column: 1;
 }
 
 .wrp-img-half {
@@ -223,4 +227,19 @@ find license and copyright informations in files /COPYRIGHT and /LICENCE
 
 .but-icon {
     cursor: pointer;
+}
+
+#cnv_oscillo {
+    width: 90%;
+    /* width: 800px; */
+    align-self: center;
+    height: 100%;
+    display: grid;
+    /* position: absolute; */
+    justify-items: center;
+    grid-row: 1;
+    grid-column: 1;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
 }

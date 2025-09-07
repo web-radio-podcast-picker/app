@@ -54,7 +54,7 @@ html.page {
 canvas {
     background-color: transparent;
     border: none;
-    position: absolute;
+    /* position: absolute; */
     /* fix main view real left position on edge */
     /* @TODO: do it programmatially */
     left: 4px;

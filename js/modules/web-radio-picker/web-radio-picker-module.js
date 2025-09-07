@@ -57,7 +57,20 @@ class WebRadioPickerModule extends ModuleBase {
     }
 
     initTabs() {
-        ui.tabs.initTabs(this.tabs)
+        ui.tabs.initTabs(this.tabs, {
+            onChange: ($c) => {
+                this.onTabChanged($c)
+            }
+        })
+    }
+
+    onTabChanged($tab) {
+        const c = $tab[0]
+        const $cnv = $(app.canvas)
+        if (c.id == 'btn_wrp_logo')
+            $cnv.removeClass('hidden')
+        else
+            $cnv.addClass('hidden')
     }
 
     initView(viewId) {
@@ -304,6 +317,7 @@ class WebRadioPickerModule extends ModuleBase {
         const $i = $('#wrp_img')
         $i[0].src = './img/icon.ico'
         $i.addClass('wrp-img-half')
+        $i.removeClass('hidden')
         this.ignoreNextShowImage = true
     }
 
@@ -313,6 +327,7 @@ class WebRadioPickerModule extends ModuleBase {
             $i.removeClass('wrp-img-half')
         const noimg = $i.hasClass('wrp-img-half')
         $i.removeClass('ptransparent')
+        $i.removeClass('hidden')
         var iw = $i[0].width
         var ih = $i[0].height
         var r = iw / ih
@@ -355,6 +370,7 @@ class WebRadioPickerModule extends ModuleBase {
 
         this.ignoreNextShowImage = false
         ui.tabs.selectTab('btn_wrp_logo', this.tabs)
+        this.onTabChanged($('#btn_wrp_logo'))
     }
 
     initBtn($container, $item, t) {

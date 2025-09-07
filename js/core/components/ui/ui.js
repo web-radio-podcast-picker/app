@@ -116,7 +116,6 @@ ui = {
     hide_intro_popup() {
         const pid = 'intro_popup'
         const $popup = $('#' + pid)
-        //$popup.fadeOut(settings.ui.fadeOutDelay)
         $popup.addClass("hidden")
     },
 
@@ -126,6 +125,12 @@ ui = {
         $(window).resize(() => {
             //oscilloscope.refreshView()
             this.popups.updatePopupsPositionAndSize()
+            const $c = $(app.canvas)
+            const vis = !$c.hasClass('hidden')
+            if (vis) {
+                app.canvas.width = 0
+                app.canvas.height = 0
+            }
         })
         window.onerror = (messOrEvent, src, line, col, err) => {
             this.showError(messOrEvent, src, line, col, err)
