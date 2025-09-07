@@ -38,17 +38,17 @@ class SignalView {
     }
 
     voltOffset(value) {
-        const canvasHeight = this.canvas.height;
-        const signalRange = settings.audioInput.vScale;
+        const canvasHeight = this.canvas.height
+        const signalRange = settings.audioInput.vScale
         const displayRange = this.getDisplayRange()
 
         // adjust y position (y multiplier, y position shift, v scale)
-        var percent = -value / signalRange;
-        percent *= signalRange / displayRange; // adjust to display range
-        var height = canvasHeight * percent / 2.0;
-        height *= this.channel.yScale;
-        var offset = canvasHeight / 2 + height;
-        offset += this.channel.yOffset;
+        var percent = -value / signalRange
+        percent *= signalRange / displayRange // adjust to display range
+        var height = canvasHeight * percent / 2.0
+        height *= this.channel.yScale
+        var offset = canvasHeight / 5 + height
+        offset += this.channel.yOffset
         return offset
     }
 
