@@ -13,16 +13,10 @@ class FFTView {
     visible = settings.oscilloscope.defaultFFTViewVisible         // visible flag for visualization
     hidden = false;          // hidden for vizualisation
     channel = null;          // channel
-    renderers = []           // renderers . on sigview, before signal draw
-    pointRenderers = []      // point renderers. on signal point, before signal point
-    ///fftAxesRenderer = new FFTAxesRenderer()
 
     init(canvas, channel) {
         this.canvas = canvas;
         this.channel = channel;
-        /*this.renderers.push((channel, dc, props) => {
-            this.fftAxesRenderer.render(channel, dc, props)
-        })*/
     }
 
     getVScale() {
@@ -112,10 +106,6 @@ class FFTView {
 
     run() {
 
-        ///const sizeUpdated = ui.setupCanvasSize(this.canvas)
-        ///if (sizeUpdated)
-        ///    ui.setupUIComponents()
-
         if (!this.visible) return
         if (this.canvas == null) return
         if (this.channel != null && !this.channel.connected) return
@@ -137,18 +127,6 @@ class FFTView {
 
             const baseI = 0
 
-            const rprops = {
-                canvasWidth: canvasWidth,
-                canvasHeight: canvasHeight,
-                dbOffsetZero: this.dbOffset(0),
-                width: canvasWidth,
-                height: canvasHeight / 2.0
-            }
-
-            this.renderers.forEach(r => {
-                r(this.channel, dc, rprops)
-            })
-
             const offsetY = settings.fft.pos.ratioDy * canvasHeight
             const baseY = this.dbOffset(settings.fft.clamp.minDb) + offsetY
             const maxY = this.dbOffset(settings.fft.clamp.maxDb) + offsetY
@@ -163,6 +141,7 @@ class FFTView {
             var ys = []
             var bars = []
             var rh = []
+            var zs = []
 
             const spl = this.channel?.getSamplesTask
             const n = dataArray.length
@@ -180,13 +159,14 @@ class FFTView {
                 vls: vls,
                 ys: ys,
                 bars: bars,
-                rh: rh
+                rh: rh,
+                zs: zs
             }
             // 0 .. 50hz .. 100hz ... 150hz ... 200hz
             // 0 .. 50 .. 61 .. 
             var band = -1
             const k = 5.0
-            const minBand = 50
+            const minBand = 50 // hz
             const originX = stp * barWidth / settings.fft.pos.ratioDx
             const leftSpc = settings.fft.shape.marginLeft
 
@@ -249,12 +229,12 @@ class FFTView {
                 if (rHeight == 0) rHeight = -2
 
                 var nbBars = nvBars * (baseY - ny) / vrange
+                var rest = nbBars - Math.floor(nbBars)
+                var z = rest * vrStp
+                zs.push(z)
+
                 nbBars = Math.round(nbBars)
                 const vrSpace = settings.fft.shape.vBarSpace
-
-                /*if (nbBars < 0 || !isFinite(nbBars)) {
-                    const eubi = 'oui'
-                }*/
 
                 if (nbBars == 0 || !isFinite(nbBars))
                     rHeight = -2
@@ -267,22 +247,40 @@ class FFTView {
 
                 for (var b = 0; b < nbBars; b++) {
 
-                    dc.beginPath()
-                    //dc.moveTo(x, ny)
-                    dc.moveTo(x, barY)
+                    var h = vrStp
+                    if (b == nbBars - 1 && isFinite(z)) {
+                        // draw the rest
+                        h = z //vrStp / 2.0
+                    }
 
-                    //var col = this.channel.fft.color
+                    dc.beginPath()
+                    //dc.moveTo(x, ny)  // top horizontal bar
+                    dc.moveTo(x, barY)  // bottom left corner
+
                     var col = settings.fft.shape.colors[b]
                     dc.strokeStyle = settings.fft.shape.strokeColor
-                    //dc.fillStyle = this.channel.color
                     dc.fillStyle = col
 
-                    //dc.fillRect(x, baseY, nx - x, rHeight)
-                    //dc.fillRect(x, barY, nx - x, vrStp)   //
+                    //dc.fillRect(x, baseY, nx - x, rHeight)    // histogramme
+                    //dc.fillRect(x, barY, nx - x, vrStp)   // bottom bar
 
-                    const y0 = (rHeight == -2) ? (barY + vrStp) : barY
-                    const w = nx - x
-                    const h = rHeight == -2 ? rHeight : vrStp
+                    var y0 = rHeight == -2 ? (barY + vrStp * 0) : barY
+                    var w = nx - x
+                    //w = Math.abs(w)
+                    h = -Math.abs(rHeight == -2 ? rHeight - 2 : h)
+                    //x = Math.trunc(x)
+                    //y0 = Math.trunc(y0)
+                    //h = Math.trunc(h)
+
+                    dc.fillStyle = 'black'
+
+                    dc.fillRect(
+                        x - 1,
+                        y0 + 1,
+                        w + 2,
+                        h - 2)
+
+                    dc.fillStyle = col
 
                     dc.fillRect(
                         x,
@@ -290,28 +288,10 @@ class FFTView {
                         w,
                         h)
 
-                    dc.rect(
-                        x - 1,
-                        y0 - 1,
-                        w + 2,
-                        h + 2)
-
                     dc.setLineDash([])
-                    dc.lineWidth = this.channel.fft.lineWidth
+                    dc.lineWidth = 1 // this.channel.fft.lineWidth
                     dc.stroke()
                     barY -= vrStp + vrSpace
-
-                    /*const props = {
-                        col: col,
-                        op: 1,
-                        value: value,
-                        offset: offset
-                    }
-                    this.pointRenderers.forEach(o => {
-                        var r = o.render(this.channel, dc, props)
-                        if (r.col !== undefined)
-                            props.col = r.col
-                    })*/
                 }
 
                 x = nx
