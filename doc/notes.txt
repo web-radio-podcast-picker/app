@@ -21,3 +21,18 @@ https://upload.wikimedia.org/wikipedia/commons/thumb/4/48/Simpleicons_Interface_
 - connect anim
 par Icons8
 
+select * from podcasts where language='FR' or language='FR-fr' or language='Fr' or language='French' or language='Fran├ºais' or language='French (' or language='French-f'
+
+.headers on
+.mode csv
+.once podcasts-fr.csv
+query
+
+Select-String -Path output.csv -Pattern 'legend"'
+
+.\sqlite3.exe .\podcastindex_feeds.db 'select count(*) from podcasts' > count.txt
+
+.\sqlite3.exe .\podcastindex_feeds.db 'select distinct language as lng from podcasts order by lng' > languages.txt
+
+.\sqlite3.exe .\podcastindex_feeds.db .schema > schema.txt
+

@@ -3,7 +3,7 @@
   "addToHistoryDelay": 10000,
   "artistUrlFilters": [
     ["https://streaming.exclusive.radio/", "toArtistFromtreamingExclusive"],
-    ["http://streaming.exclusive.radio/", null],
+    ["http://streaming.exclusive.radio/", "toArtistFromtreamingExclusive"],
     ["https://drive.uber.radio/", null],
     ["NO:http://icy.unitedradio.it/", null],
     ["NO:http://edge.radiomontecarlo.net/", null],
