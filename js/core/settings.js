@@ -74,7 +74,7 @@ window.settings = {
             ratioDx: 2.0,
             ratioDy: 1 / 5
         },
-        clamp: {
+        crop: {
             enabled: true,
             maxDb: 0,
             minDb: -100

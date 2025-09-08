@@ -190,6 +190,7 @@
     [
       "french",
       "france",
+      "francais",
       "fip",
       "100%radio",
       "rcf",
@@ -215,7 +216,6 @@
       "agora",
       "alternantes",
       "rmc",
-      "rmf",
       "rtl",
       "rts",
       "skyrock",
@@ -263,7 +263,9 @@
       "jazz radio info",
       "rouge lounge",
       "walf fm 99.0",
-      "bfm business"
+      "bfm business",
+      "jazz radio electro swing",
+      "radio fg"
     ],
     ["japanese", "japan"],
     ["vietnamise"],

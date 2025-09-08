@@ -128,10 +128,10 @@ class FFTView {
             const baseI = 0
 
             const offsetY = settings.fft.pos.ratioDy * canvasHeight
-            const baseY = this.dbOffset(settings.fft.clamp.minDb) + offsetY
-            const maxY = this.dbOffset(settings.fft.clamp.maxDb) + offsetY
+            const baseY = this.dbOffset(settings.fft.crop.minDb) + offsetY
+            const maxY = this.dbOffset(settings.fft.crop.maxDb) + offsetY
             const vrange = baseY - maxY
-            const nvBars = settings.fft.shape.colors.length
+            const nvBars = settings.fft.shape.colors.length + 1
             const vrStp = vrange / nvBars
 
             var freqs = []
@@ -200,12 +200,12 @@ class FFTView {
                 // average
                 value /= bandSize
 
-                // clamp
-                if (settings.fft.clamp.enabled) {
-                    value = Math.max(value, settings.fft.clamp.minDb)
-                    value = Math.min(value, settings.fft.clamp.maxDb)
-                    //mdb = Math.max(mdb, settings.fft.clamp.minDb)
-                    //mdb = Math.min(mdb, settings.fft.clamp.maxDb)
+                // crop
+                if (settings.fft.crop.enabled) {
+                    value = Math.max(value, settings.fft.crop.minDb)
+                    value = Math.min(value, settings.fft.crop.maxDb)
+                    //mdb = Math.max(mdb, settings.fft.crop.minDb)
+                    //mdb = Math.min(mdb, settings.fft.crop.maxDb)
                 }
 
                 // magnitude normalisée ?
@@ -250,14 +250,15 @@ class FFTView {
                     var h = vrStp
                     if (b == nbBars - 1 && isFinite(z)) {
                         // draw the rest
-                        h = z //vrStp / 2.0
+                        h = z
                     }
 
                     dc.beginPath()
                     //dc.moveTo(x, ny)  // top horizontal bar
                     dc.moveTo(x, barY)  // bottom left corner
 
-                    var col = settings.fft.shape.colors[b]
+                    var col = settings.fft.shape.colors[
+                        Math.min(b, settings.fft.shape.colors.length)]
                     dc.strokeStyle = settings.fft.shape.strokeColor
                     dc.fillStyle = col
 
