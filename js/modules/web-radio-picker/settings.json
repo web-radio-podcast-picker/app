@@ -2,12 +2,12 @@
   "data": "../rsc/web-radio/all_stations.m3u",
   "addToHistoryDelay": 10000,
   "artistUrlFilters": [
-    "https://streaming.exclusive.radio/",
-    "http://streaming.exclusive.radio/",
-    "https://drive.uber.radio/",
-    "NO:http://icy.unitedradio.it/",
-    "NO:http://edge.radiomontecarlo.net/",
-    "http://listen1.outpostradio.com/dtracks"
+    ["https://streaming.exclusive.radio/", "toArtistFromtreamingExclusive"],
+    ["http://streaming.exclusive.radio/", null],
+    ["https://drive.uber.radio/", null],
+    ["NO:http://icy.unitedradio.it/", null],
+    ["NO:http://edge.radiomontecarlo.net/", null],
+    ["http://listen1.outpostradio.com/dtracks", null]
   ],
   "favorites": [],
   "wordToTag": ["radio", "love"],

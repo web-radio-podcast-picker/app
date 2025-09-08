@@ -227,14 +227,25 @@ class WebRadioPickerModule extends ModuleBase {
     isArtistRadio(r) {
         if (r == null || r.url == null) return false
         const st = this.getSettings()
-        var res = false
-        st.artistUrlFilters.forEach(x => {
-            if (r.url != null && r.url.startsWith(x)) {
-                res = true
-                return
+        var res = null
+        st.artistUrlFilters.forEach(t => {
+            const url = t[0]
+            const f = t[1]
+            if (r.url != null && r.url.startsWith(url)) {
+                res = {
+                    url: r.url,
+                    item: r,
+                    artist: f == null ? r.name : eval('this.' + f + '(r)')
+                }
+                return res
             }
         })
         return res
+    }
+
+    toArtistFromtreamingExclusive(r) {
+        if (r === undefined || r == null) return null
+        return r.name?.replace('- Hits', '')?.trim()
     }
 
     buildRadItems() {
@@ -517,12 +528,14 @@ class WebRadioPickerModule extends ModuleBase {
             this.itemsAll.push(item)
             this.listCount++
 
-            if (this.isArtistRadio(item)) {
-                if (this.itemsByArtists[name] === undefined)
-                    this.itemsByArtists[name] = []
-                item.artist = name
+            const isArt = this.isArtistRadio(item)
+            if (isArt !== false && isArt !== null) {
+                const artName = isArt.artist
+                if (this.itemsByArtists[artName] === undefined)
+                    this.itemsByArtists[artName] = []
+                item.artist = artName
                 item.groupTitle = groupTitle = WRP_Artists_Group_Label
-                this.itemsByArtists[name].push(item)
+                this.itemsByArtists[artName].push(item)
             }
 
             const grps = groupTitle.split(',')
