@@ -39,3 +39,16 @@ Select-String -Path output.csv -Pattern 'legend"'
 .\sqlite3.exe .\podcastindex_feeds.db 'select concat(''"'',language,''"'',''|'', count(*),'','') from podcasts group by language' > languages2.txt
 
 .\sqlite3.exe .\podcastindex_feeds.db 'select concat(''["'',language,''",'',count(*),''],'') from podcasts group by language' > languages.js
+
+
+ios safari 18.6.2
+Mozilla/5.0 (iPhone; CPU iPhone OS 18_6_2 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/18.6 Mobile/15E148 Safari/604.1
+SON OK
+
+firefox 142.1 (60552)                   ??
+
+chrome
+version 140.0.7339.101                  Audio constructor ok
+
+chromium
+ok sur raspberry

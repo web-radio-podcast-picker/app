@@ -128,7 +128,8 @@ oscilloscope = {
         channel.source = channel.mediaSource
         channel.mediaSource.createAudioSource(
             channel.audioContext,
-            channel.mediaSource.url
+            channel.mediaSource.url,
+            'audio_tag'
         )
         await this.initChannelForSource(channel, sourceId, channel.mediaSource, true)
     },

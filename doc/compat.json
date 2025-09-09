@@ -1,0 +1,43 @@
+COMPAT
+----------------------------------------------
+
+    // ----- new Audio() -----
+
+    {
+        "chrome": {
+              "version_added": "4"
+        },
+        "chrome_android": "mirror",
+        "edge": {
+            "version_added": "12"
+        },
+        "firefox": {
+            "version_added": "3.5"
+        },
+        "firefox_android": "mirror",
+        "ie": {
+            "version_added": "9"
+        },
+        "oculus": "mirror",
+        "opera": {
+            "version_added": "≤12.1"
+        },
+        "opera_android": {
+            "version_added": "≤12.1"
+        },
+        "safari": {
+            "version_added": "3.1"
+        },
+        "safari_ios": {
+            "version_added": "3"
+        },
+        "samsunginternet_android": "mirror",
+        "webview_android": "mirror",
+        "webview_ios": "mirror"
+    }
+
+    IOS:
+    FIREFOX     NO  -------------
+    CHROME      ?
+    SAFARI      OK
+    WEBVIEW     OK

@@ -92,7 +92,7 @@ app = {
 
     async setupWebRadioChannel() {
         const channel = await oscilloscope.createChannel(Source_Id_Media)
-        await oscilloscope.initChannelForMedia(channel, Source_Id_Media)
+        await oscilloscope.initChannelForMedia(channel)
 
         this.channel = channel
         ui.getCurrentChannel = () => this.channel
@@ -294,10 +294,7 @@ app = {
     },
 
     async setChannelSourceMedia(channel) {
-        await oscilloscope.initChannelForMedia(
-            channel,
-            Source_Id_Media,
-            null)
+        await oscilloscope.initChannelForMedia(channel)
     },
 
     playChannelMedia(channel) {

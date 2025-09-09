@@ -23,9 +23,10 @@ class MediaSource {
         this.url = settings.media.demo.stereoAudioMediaURL
     }
 
-    createAudioSource(audioContext, url) {
+    createAudioSource(audioContext, url, tagId) {
         this.deleteSource()
-        this.audio = new Audio()
+        //this.audio = new Audio()
+        this.audio = $('#' + tagId)[0]
 
         this.audio.addEventListener('loadedmetadata', (ev) => {
             // equivalent to a load success event

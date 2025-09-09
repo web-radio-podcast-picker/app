@@ -6,6 +6,8 @@
 
 // app globals
 
+const AudioContext = window.AudioContext || window.webkitAudioContext
+
 // sources ids
 const Source_Id_AudioInput = 'Audio Input'
 const Source_Id_Ext = 'Ext'
