@@ -13,7 +13,8 @@ cui = {
         settings.ui.fullscreen = fs
 
         if (fs) {
-            document.querySelector('body').requestFullscreen(
+            var body = document.querySelector('body')
+            if (body.requestFullscreen !== undefined) body.requestFullscreen(
                 { navigationUI: 'hide' }
             )
         }
@@ -32,7 +33,8 @@ cui = {
         settings.ui.fullscreen = fs
 
         if (fs) {
-            document.querySelector('body').requestFullscreen(
+            var body = document.querySelector('body')
+            if (body.requestFullscreen !== undefined) body.requestFullscreen(
                 { navigationUI: 'hide' }
             )
         }
@@ -48,7 +50,8 @@ cui = {
         settings.ui.fullscreen = fs
 
         if (fs) {
-            document.querySelector('body').requestFullscreen(
+            var body = document.querySelector('body')
+            if (body.requestFullscreen !== undefined) body.requestFullscreen(
                 { navigationUI: 'hide' }
             )
             $('#' + onIconId).removeClass('hidden')
