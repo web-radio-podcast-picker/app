@@ -135,9 +135,9 @@ app = {
     },
 
     initSettings() {
-        settings.sys.mobile = navigator.userAgentData.mobile
+        settings.sys.mobile = navigator?.userAgentData?.mobile
         settings.sys.platform =
-            navigator.userAgentData.platform
+            navigator?.userAgentData?.platform
         settings.sys.platformText = settings.sys.platform
             + (settings.sys.mobile ? ' mobile' : '')
     },
