@@ -143,11 +143,13 @@ find license and copyright informations in files /COPYRIGHT and /LICENCE
     height: 2.8em;
     max-height: 2.8em;
     overflow: hidden;
+    /* grid-template-columns: max-content; */
 }
 
 #wrp_radio_url {
     word-wrap: break-word;
     contain: inline-size;
+    overflow: hidden;
 }
 
 #wrp_radio_name {
