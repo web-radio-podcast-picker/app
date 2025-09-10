@@ -53,6 +53,7 @@ window.settings = {
         hScale: 1,              // horizontal linear scale (1: full bandwidth)
         vScale: 1,              // vertical linear scale
         vScaleFactor: 16,       // vScale multiplier
+        vBaseOffsetFactor: 3.5, // vertical base y gap offset factor (canvas height fraction)
         bars: 32,
         shape: {
             marginLeft: 2,

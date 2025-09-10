@@ -48,7 +48,7 @@ class FFTView {
         // 0: canvasHeight / 2 + (mindb / vscale) + canvasHeight / 4
         // minDb (-100): canvasHeight /2 + canvasHeight / 4
         // maxDb (-30) : canvasHeight /2 - canvasHeight + canvasHeight / 4
-        offset += canvasHeight / 3.3
+        offset += canvasHeight / settings.fft.vBaseOffsetFactor
 
         return offset
     }
