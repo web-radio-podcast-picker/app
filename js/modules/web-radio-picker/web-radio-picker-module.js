@@ -155,6 +155,10 @@ class WebRadioPickerModule extends ModuleBase {
         $('#wrp_connected_icon').addClass('hidden')
         $('#wrp_connect_icon').addClass('hidden')
         $('#wrp_connect_error_icon').removeClass('hidden')
+        $('#err_txt')
+            .text('no connection')
+        $('#err_holder')
+            .removeClass('hidden')
     }
 
     onLoadSuccess(audio) {

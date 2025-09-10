@@ -45,7 +45,8 @@ class WRPPMediaSource {
                 console.log(err)
 
             if (err.code != MediaError.MEDIA_ERR_ABORTED
-                && WRPPMediaSource.onLoadError != null) WRPPMediaSource.onLoadError(err, this.audio)
+                && WRPPMediaSource.onLoadError != null)
+                WRPPMediaSource.onLoadError(err, this.audio)
         })
 
         this.audio.addEventListener('canplay', async (o) => {
