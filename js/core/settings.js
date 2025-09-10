@@ -72,8 +72,8 @@ window.settings = {
             ]
         },
         pos: {
-            ratioDx: 2.0,
-            ratioDy: 1 //1 / 5
+            ratioDx: 1.0,
+            ratioDy: 1 / 5
         },
         crop: {
             enabled: true,
