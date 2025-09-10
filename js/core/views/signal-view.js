@@ -67,7 +67,8 @@ class SignalView {
         if (this.canvas == null) return
         if (this.channel != null && !this.channel.connected) return
 
-        const ch = $('#opts_wrp_logo')[0]
+        const ch = $('#left-pane')[0]
+        //const ch = $('#opts_wrp_logo')[0]
         //const cnvSize = this.canvas.getBoundingClientRect()
         const cnvSize = ch.getBoundingClientRect()
         const canvasHeight = Math.trunc(cnvSize.height)
