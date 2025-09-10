@@ -6,35 +6,37 @@
 
 // media source
 
-class MediaSource {
+class WRPPMediaSource {
 
     audio = null        // audio tag
     source = null       // media source
     url = null          // media url
 
-    onLoadError = null      // on load error handler
-    onLoadSuccess = null    // on load success handler
+    static onLoadError = null      // on load error handler
+    static onLoadSuccess = null    // on load success handler
+
+    static sourceInitialized = false
+    static sourcePlugged = false
 
     constructor() {
         this.init()
     }
 
     init() {
+        const tagId = 'audio_tag'
         this.url = settings.media.demo.stereoAudioMediaURL
-    }
-
-    createAudioSource(audioContext, url, tagId) {
-        this.deleteSource()
-        //this.audio = new Audio()
         this.audio = $('#' + tagId)[0]
+
+        if (WRPPMediaSource.sourceInitialized) return
+        WRPPMediaSource.sourceInitialized = true
 
         this.audio.addEventListener('loadedmetadata', (ev) => {
             // equivalent to a load success event
             if (settings.debug.trace)
                 console.log('Metadata loaded:', this.audio.src)
 
-            if (this.onLoadSuccess != null)
-                this.onLoadSuccess(this.audio)
+            if (WRPPMediaSource.onLoadSuccess != null)
+                WRPPMediaSource.onLoadSuccess(this.audio)
         })
 
         this.audio.addEventListener('error', () => {
@@ -43,12 +45,37 @@ class MediaSource {
                 console.log(err)
 
             if (err.code != MediaError.MEDIA_ERR_ABORTED
-                && this.onLoadError != null) this.onLoadError(err, this.audio)
+                && WRPPMediaSource.onLoadError != null) WRPPMediaSource.onLoadError(err, this.audio)
+        })
+
+        this.audio.addEventListener('canplay', async (o) => {
+            if (settings.debug.trace) {
+                console.log('can play')
+                console.log(o)
+            }
+            if (!WRPPMediaSource.sourcePlugged) {
+                await oscilloscope.initChannelForMedia(app.channel)
+                WRPPMediaSource.sourcePlugged = true
+            }
+            app.playChannelMedia(app.channel)
         })
 
         this.audio.crossOrigin = "anonymous"
+
+    }
+
+    createAudioSource(audioContext, url, tagId) {
+
+        /*if (this.source != null) {
+            this.audio.src = url
+            return
+        }*/
+
+        this.deleteSource()
+        //this.audio = new Audio()
+        //this.audio = $('#' + tagId)[0]
         this.source = audioContext.createMediaElementSource(this.audio)
-        this.audio.src = url
+        //this.audio.src = url
         return this.source
     }
 
@@ -64,8 +91,8 @@ class MediaSource {
     deleteSource() {
         if (this.audio == null) return
         this.audio.pause()
-        this.audio.src = ''
-        this.audio = null
+        //this.audio.src = ''
+        ///this.audio = null
         //this.init()
         //this.updateBindings()
     }

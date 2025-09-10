@@ -171,6 +171,10 @@ oscilloscope = {
                 console.log("Input media stream ok")
 
             channel.streamSource = channel.source.createMediaStreamSource(channel)
+
+            // source -> splitter -> analyzer Left
+            //                    -> analyzer Right
+
             channel.streamSource.connect(channel.splitter);
 
             channel.setAnalyser(
@@ -178,8 +182,10 @@ oscilloscope = {
 
             channel.analyzer.fftSize = settings.input.bufferSize * 2
 
-            channel.streamSource.connect(channel.gain);
-            channel.gain.connect(channel.analyzer);
+            // source -> gain -> analyzer   [ -> channel.audioContext.destination ]
+
+            channel.streamSource.connect(channel.gain)
+            channel.gain.connect(channel.analyzer)
             channel.getSamplesTask = new GetSamplesTask()
                 .init(channel)
 

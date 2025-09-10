@@ -1,6 +1,17 @@
 COMPAT
 ----------------------------------------------
 
+// ----- audioContext.createMediaElementSource(this.audio)      
+//          ou sinon audioContext.createMediaStreamSource ?
+
+// ----- await channel.source.getMediaStream()
+
+// ----- analyser
+
+// ----- gain
+
+// ----- channel splitter
+
 // ----- AudioContext -----
 
 // use: AudioContext = window.AudioContext || window.webkitAudioContext

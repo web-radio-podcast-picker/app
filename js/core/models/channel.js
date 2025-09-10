@@ -70,7 +70,7 @@ class Channel {
         this.fftView = new FFTView()
         ///this.markers = new Markers().init(this)
         ///this.measuresView.init(this, this.measures)
-        this.mediaSource = new MediaSource()
+        this.mediaSource = new WRPPMediaSource()
     }
 
     setAnalyser(analyser) {

@@ -135,8 +135,12 @@ class WebRadioPickerModule extends ModuleBase {
     }
 
     initAudioSourceHandlers() {
+        /*
         app.channel.mediaSource.onLoadError = (err, audio) => this.onLoadError(err, audio)
         app.channel.mediaSource.onLoadSuccess = (audio) => this.onLoadSuccess(audio)
+        */
+        WRPPMediaSource.onLoadError = (err, audio) => this.onLoadError(err, audio)
+        WRPPMediaSource.onLoadSuccess = (audio) => this.onLoadSuccess(audio)
     }
 
     onLoading(item) {
@@ -396,7 +400,7 @@ class WebRadioPickerModule extends ModuleBase {
     }
 
     initItemRad($rad, $item, o) {
-        $item.on('click', () => {
+        $item.on('click', async () => {
 
             $rad.find('.item-selected')
                 .removeClass('item-selected')
@@ -431,9 +435,9 @@ class WebRadioPickerModule extends ModuleBase {
                 this.initAudioSourceHandlers()
                 this.onLoading(o)
 
-                const pl = () => {
+                const pl = async () => {
                     this.updatePauseView()
-                    app.updateChannelMedia(
+                    await app.updateChannelMedia(
                         ui.getCurrentChannel(),
                         o.url
                     )
@@ -446,9 +450,9 @@ class WebRadioPickerModule extends ModuleBase {
                 }
 
                 if (oscilloscope.pause)
-                    app.toggleOPause(() => pl())
+                    app.toggleOPause(async () => await pl())
                 else
-                    pl()
+                    await pl()
             }
 
         })

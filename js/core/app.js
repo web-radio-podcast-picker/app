@@ -64,6 +64,9 @@ app = {
 
         await this.checkAudio()
 
+        if (navigator?.audioSession != null)
+            navigator.audioSession.type = 'playback'    // >= ios 17
+
         this.oscilloscope = oscilloscope
         ///this.oscilloscopeView = new OscilloscopeView()
         ///this.gridView = new GridView()
@@ -92,18 +95,12 @@ app = {
 
     async setupWebRadioChannel() {
         const channel = await oscilloscope.createChannel(Source_Id_Media)
-        await oscilloscope.initChannelForMedia(channel)
+
+        ///await oscilloscope.initChannelForMedia(channel)
 
         this.channel = channel
         ui.getCurrentChannel = () => this.channel
-
         this.oscilloscope.addChannel(channel, false)
-    },
-
-    async playWebRadio(url) {
-        this.updateChannelMedia(
-            this.channel,
-            settings.media.demo.stereoAudioMediaURL)
     },
 
     async checkAudio() {
@@ -138,6 +135,7 @@ app = {
         settings.sys.mobile = navigator?.userAgentData?.mobile
         settings.sys.platform =
             navigator?.userAgentData?.platform
+            || navigator.platform
         settings.sys.platformText = settings.sys.platform
             + (settings.sys.mobile ? ' mobile' : '')
     },
@@ -306,13 +304,14 @@ app = {
             })
     },
 
-    updateChannelMedia(channel, url) {
+    async updateChannelMedia(channel, url) {
         if (channel.pause || oscilloscope.pause) return
         try {
             channel.mediaSource.audio.src = url
             channel.mediaSource.url = url
-            ///ui.channels.popupSettings.paneSrcMedia.updateURL(url)
-            this.playChannelMedia(channel)
+            // --> events Metadata loaded + can play
+            ///await oscilloscope.initChannelForMedia(channel)
+            ///this.playChannelMedia(channel)
         } catch (err) {
             ui.showError(err)
         }
