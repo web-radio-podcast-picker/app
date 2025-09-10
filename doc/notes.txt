@@ -52,3 +52,11 @@ version 140.0.7339.101                  RIEN
 
 chromium                                
 ok sur raspberry
+
+
+pb IOS
+Audio element permet le son
+safari,chrome & firefox ont des 0 sur l'analyser. 
+il ne controle pas la sortie son (bouton pause non fonctionnel)
+
+1. correction event 'canplay' par 'canplaythrough'

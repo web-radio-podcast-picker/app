@@ -49,7 +49,7 @@ class WRPPMediaSource {
                 WRPPMediaSource.onLoadError(err, this.audio)
         })
 
-        this.audio.addEventListener('canplay', async (o) => {
+        this.audio.addEventListener('canplaythrough', async (o) => {
             if (settings.debug.trace) {
                 console.log('can play')
                 console.log(o)
@@ -107,7 +107,7 @@ class WRPPMediaSource {
         // it should have been already created
         if (this.source == null)
             throw new Error('source not initialized')
-        return this.source
+        return this.source      // the Audio tag or class
     }
 
     play() {
