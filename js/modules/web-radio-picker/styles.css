@@ -235,7 +235,7 @@ find license and copyright informations in files /COPYRIGHT and /LICENCE
     width: 90%;
     /* width: 800px; */
     align-self: center;
-    height: 100%;
+    /*height: 100%;*/
     display: grid;
     /* position: absolute; */
     justify-items: center;
