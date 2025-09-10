@@ -68,11 +68,13 @@ class SignalView {
         if (this.channel != null && !this.channel.connected) return
 
         const cnvSize = this.canvas.getBoundingClientRect()
-        const canvasHeight = cnvSize.height;
-        const canvasWidth = cnvSize.width;
+        const canvasHeight = Math.trunc(cnvSize.height)
+        const canvasWidth = Math.trunc(cnvSize.width)
         // auto size
         if (this.canvas.width != canvasWidth) this.canvas.width = canvasWidth
-        if (this.canvas.height != canvasHeight) this.canvas.height = canvasHeight
+        if (this.canvas.height != canvasHeight) {
+            this.canvas.height = canvasHeight
+        }
 
         ///const dataArray = this.channel.measures.dataArray;
         const dataArray = this.channel?.getSamplesTask?.dataArray
