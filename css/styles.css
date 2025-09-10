@@ -1423,6 +1423,7 @@ a:hover {
 .gridh100p {
     display: grid;
     height: 100%;
+    overflow: clip;
 }
 
 .invert {
