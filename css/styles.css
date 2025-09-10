@@ -1114,6 +1114,14 @@ html,body,div,span {
     scrollbar-color: #FFFF00AA transparent;
 }
 
+::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #FFFF00AA;
+}
+
 li > b {
     color: #FFFF00FF;
 }
