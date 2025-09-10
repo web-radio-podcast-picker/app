@@ -1114,6 +1114,10 @@ html,body,div,span {
     scrollbar-color: #FFFF00AA transparent;
 }
 
+::-webkit-scrollbar {
+    width: 0.5em;
+}
+
 ::-webkit-scrollbar-track {
     background: transparent;
 }
