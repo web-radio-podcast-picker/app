@@ -60,3 +60,8 @@ safari,chrome & firefox ont des 0 sur l'analyser.
 il ne controle pas la sortie son (bouton pause non fonctionnel)
 
 1. correction event 'canplay' par 'canplaythrough'
+
+
+display
+
+1. use overflow: clip to avoid overlays (left/right cols) when window size too small
