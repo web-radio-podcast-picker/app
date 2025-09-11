@@ -58,9 +58,9 @@ pb IOS
 Audio element permet le son
 safari,chrome & firefox ont des 0 sur l'analyser. 
 il ne controle pas la sortie son (bouton pause non fonctionnel)
+looks like it works if using xmlhttprequest. can stream it ?
 
 1. correction event 'canplay' par 'canplaythrough'
-
 
 display
 
