@@ -307,6 +307,8 @@ app = {
     async updateChannelMedia(channel, url) {
         if (channel.pause || oscilloscope.pause) return
         try {
+            if (settings.net.enforceHttps)
+                url = url.replace('http://', 'https://')
             channel.mediaSource.audio.src = url
             channel.mediaSource.url = url
             // --> events Metadata loaded + can play

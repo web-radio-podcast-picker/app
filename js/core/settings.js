@@ -243,6 +243,10 @@ window.settings = {
         }
     },
 
+    net: {
+        enforceHttps: true
+    },
+
     // modules settings by modules ids
     modules: {
 

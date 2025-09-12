@@ -125,6 +125,7 @@ oscilloscope = {
     async initChannelForMedia(channel, sourceId) {
         channel.deleteSource()
         channel.audioContext = new AudioContext() // not before getMediaStream
+        channel.audioContext.resume()   // ios
         channel.source = channel.mediaSource
         channel.mediaSource.createAudioSource(
             channel.audioContext,

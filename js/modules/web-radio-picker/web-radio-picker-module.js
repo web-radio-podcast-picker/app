@@ -419,7 +419,10 @@ class WebRadioPickerModule extends ModuleBase {
                 $i.addClass('ptransparent')
                 $i.attr('width', null)
                 $i.attr('height', null)
-                $i.attr('src', o.logo)
+                var url = o.logo
+                if (settings.net.enforceHttps)
+                    url = url.replace('http://', 'https://')
+                $i.attr('src', url)
             } else {
                 i.addClass('ptransparent')
                 $i.attr('width', null)
