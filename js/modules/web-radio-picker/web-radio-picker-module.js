@@ -48,7 +48,7 @@ class WebRadioPickerModule extends ModuleBase {
         'btn_wrp_art_list',
         'btn_wrp_play_list',
         'btn_wrp_logo']
-    ignoreNextShowImage = false
+    //ignoreNextShowImage = false
     addToHistoryTimer = null
     resizeEventInitialized = false
 
@@ -334,21 +334,38 @@ class WebRadioPickerModule extends ModuleBase {
     noImage() {
         const $i = $('#wrp_img')
         $i[0].src = './img/icon.ico'
-        $i.addClass('wrp-img-half')
-        $i.removeClass('hidden')
-        this.ignoreNextShowImage = true
+        //$i.removeClass('hidden')
+        $i.attr('data-noimg', '1')
+        $i.attr('width', null)
+        $i.attr('height', null)
+        //this.ignoreNextShowImage = true
     }
 
     showImage() {
         const $i = $('#wrp_img')
-        if (!this.ignoreNextShowImage)
-            $i.removeClass('wrp-img-half')
-        const noimg = $i.hasClass('wrp-img-half')
+        //if (!this.ignoreNextShowImage)
+        //    $i.removeClass('wrp-img-half')
+        const noimg = $i.attr('data-noimg') != null
+        if (noimg)
+            $i.addClass('wrp-img-half')
+
         $i.removeClass('ptransparent')
         $i.removeClass('hidden')
+
         var iw = $i[0].width
         var ih = $i[0].height
+        const dw = $i.attr('data-w')
+        const dh = $i.attr('data-h')
+        if (dw != null && dh != null) {
+            // case: resize
+            iw = dw
+            ih = dh
+        } else {
+            $i.attr('data-w', iw)
+            $i.attr('data-h', ih)
+        }
         var r = iw / ih
+
         const $c = $('#left-pane')
         const cw = $c.width()
         const ch = $c.height()
@@ -386,7 +403,7 @@ class WebRadioPickerModule extends ModuleBase {
         $i.attr('width', iw + 'px')
         $i.attr('height', ih + 'px')
 
-        this.ignoreNextShowImage = false
+        //this.ignoreNextShowImage = false
 
         if (!this.resizeEventInitialized) {
             ui.onResize.push(() => {
@@ -417,20 +434,25 @@ class WebRadioPickerModule extends ModuleBase {
             $('#wrp_radio_url').text(o.url)
             $('#wrp_radio_name').text(o.name)
             $('#wrp_radio_box').text(o.groups.join(' '))
+            const $i = $('#wrp_img')
+            $i.attr('data-w', null)
+            $i.attr('data-h', null)
 
             if (o.logo != null && o.logo !== undefined && o.logo != '') {
-                const $i = $('#wrp_img')
-                $i.addClass('ptransparent')
+                // get img
+                $i.addClass('hidden')
                 $i.attr('width', null)
                 $i.attr('height', null)
+                $i.attr('data-noimg', null)
+                $i.removeClass('wrp-img-half')
                 var url = o.logo
                 if (settings.net.enforceHttps)
                     url = url.replace('http://', 'https://')
                 $i.attr('src', url)
+
             } else {
-                i.addClass('ptransparent')
-                $i.attr('width', null)
-                $i.attr('height', null)
+                // no img
+                $i.addClass('hidden')
                 this.noImage()
             }
 
