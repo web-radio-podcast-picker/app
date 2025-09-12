@@ -65,3 +65,27 @@ looks like it works if using xmlhttprequest. can stream it ?
 display
 
 1. use overflow: clip to avoid overlays (left/right cols) when window size too small
+
+
+________________________________________________________________
+
+MediaElementAudioSourceNode Restrictions
+If you're using MediaElementAudioSourceNode, note that iOS has limitations when connecting it to an AnalyserNode. 
+Instead, consider using AudioBufferSourceNode:
+
+Load the audio file via fetch or XMLHttpRequest.
+Decode it using audioContext.decodeAudioData.
+Play it through an AudioBufferSourceNode.
+
+fetch('audio-file.mp3')
+  .then(response => response.arrayBuffer())
+  .then(data => audioContext.decodeAudioData(data))
+  .then(buffer => {
+    const source = audioContext.createBufferSource();
+    source.buffer = buffer;
+    const analyser = audioContext.createAnalyser();
+    source.connect(analyser);
+    analyser.connect(audioContext.destination);
+    source.start();
+  });
+
