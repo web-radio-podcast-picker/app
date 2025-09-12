@@ -77,14 +77,6 @@ cui = {
             width: html.clientWidth /*- settings.ui.clientWidthBorder*/,
             height: html.clientHeight /*- settings.ui.clientHeightBorder*/
         };
-    },
-
-    setOrientationLandscape() {
-        const vs = this.viewSize()
-        const vertical = vs.height >= vs.width
-        if (!vertical) return
-        var $b = $('body')
-        //$b.css('rotate', '-90deg')
-    },
+    }
 
 }

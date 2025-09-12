@@ -50,7 +50,7 @@ class WebRadioPickerModule extends ModuleBase {
         'btn_wrp_logo']
     ignoreNextShowImage = false
     addToHistoryTimer = null
-    resizeEventOccured = false
+    resizeEventInitialized = false
 
     initTabs() {
         ui.tabs.initTabs(this.tabs, {
@@ -102,10 +102,14 @@ class WebRadioPickerModule extends ModuleBase {
 
         $('#wrp_fullscreen_on').on('click', () => {
             cui.setFullscreen(true)
+            if (this.resizeEventInitialized)
+                this.showImage()
         })
 
         $('#wrp_fullscreen_off').on('click', () => {
             cui.setFullscreen(false)
+            if (this.resizeEventInitialized)
+                this.showImage()
         })
 
         $('#wrp_btn_pause_on').on('click', () => {
@@ -118,10 +122,6 @@ class WebRadioPickerModule extends ModuleBase {
 
         // modules are late binded. have the responsability to init bindings
         this.updateBindings()
-
-        ui.onResize.push(() => {
-            this.showImage()
-        })
     }
 
     updatePauseView() {
@@ -135,10 +135,6 @@ class WebRadioPickerModule extends ModuleBase {
     }
 
     initAudioSourceHandlers() {
-        /*
-        app.channel.mediaSource.onLoadError = (err, audio) => this.onLoadError(err, audio)
-        app.channel.mediaSource.onLoadSuccess = (audio) => this.onLoadSuccess(audio)
-        */
         WRPPMediaSource.onLoadError = (err, audio) => this.onLoadError(err, audio)
         WRPPMediaSource.onLoadSuccess = (audio) => this.onLoadSuccess(audio)
     }
@@ -344,10 +340,6 @@ class WebRadioPickerModule extends ModuleBase {
     }
 
     showImage() {
-        if (!this.resizeEventOccured) {
-            this.resizeEventOccured = true
-            return
-        }
         const $i = $('#wrp_img')
         if (!this.ignoreNextShowImage)
             $i.removeClass('wrp-img-half')
@@ -395,6 +387,14 @@ class WebRadioPickerModule extends ModuleBase {
         $i.attr('height', ih + 'px')
 
         this.ignoreNextShowImage = false
+
+        if (!this.resizeEventInitialized) {
+            ui.onResize.push(() => {
+                this.showImage()
+            })
+            this.resizeEventInitialized = true
+        }
+
         ui.tabs.selectTab('btn_wrp_logo', this.tabs)
         this.onTabChanged($('#btn_wrp_logo'))
     }

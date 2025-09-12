@@ -49,7 +49,6 @@ app = {
 
     async run() {
 
-        cui.setOrientationLandscape()
         ui.init_intro()
 
         const opts = app.moduleLoader.opts(
@@ -62,23 +61,21 @@ app = {
 
         app.openModule('web-radio-picker', opts)
 
-        await this.checkAudio()
+        //await this.checkAudio()   // unnecessary access to media devices
 
         if (navigator?.audioSession != null)
             navigator.audioSession.type = 'playback'    // >= ios 17
 
         this.oscilloscope = oscilloscope
-        ///this.oscilloscopeView = new OscilloscopeView()
-        ///this.gridView = new GridView()
         this.gaugeView = new GaugeView()
 
         this.canvas = $('#cnv_oscillo')[0]
 
         this.canvas_mk = $('#cnv_markers')[0]
-        ///this.gridView.init($('#cnv_grid')[0])
 
         ///this.audioInputChannel = await this.initDefaultAudioInput()
         ///this.oscilloscope.addChannel(this.audioInputChannel)
+
         await this.setupWebRadioChannel()
         this.gaugeView.init(this.channel)
 
@@ -87,6 +84,7 @@ app = {
 
         ///if (this.audioInputChannel != null &&
         ///    this.audioInputChannel.error == null) this.start()
+
         if (this.channel != null &&
             this.channel.error == null) {
             this.start()
@@ -95,9 +93,6 @@ app = {
 
     async setupWebRadioChannel() {
         const channel = await oscilloscope.createChannel(Source_Id_Media)
-
-        ///await oscilloscope.initChannelForMedia(channel)
-
         this.channel = channel
         ui.getCurrentChannel = () => this.channel
         this.oscilloscope.addChannel(channel, false)
