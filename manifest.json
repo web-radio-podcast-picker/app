@@ -19,6 +19,7 @@
   "display": "fullscreen",
   "scope": "./",
   "theme_color": "black",
+  "orientation": "landscape",
   "shortcuts": [
     {
       "name": "Web Radio Podcast Picker",
