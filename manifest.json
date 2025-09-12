@@ -1,0 +1,46 @@
+{
+  "short_name": "Web Radio Podcast Picker",
+  "name": "Web Radio Podcast Picker",
+  "icons": [
+    {
+      "src": "/img/icon.ico",
+      "type": "image/ico",
+      "sizes": "256x256"
+    },
+    {
+      "src": "/rsc/icon-snap.png",
+      "type": "image/png",
+      "sizes": "546x546"
+    }
+  ],
+  "id": "/index.html",
+  "start_url": "/index.html",
+  "background_color": "black",
+  "display": "fullscreen",
+  "scope": "/",
+  "theme_color": "black",
+  "shortcuts": [
+    {
+      "name": "Web Radio Podcast Picker",
+      "short_name": "Web Radio Podcast Picker",
+      "description": "Online web radios & podcasts",
+      "url": "/index.html",
+      "icons": [{ "src": "/rsc/icon-snap.png", "sizes": "546x546" }]
+    }
+  ],
+  "screenshots": [
+    {
+      "src": "/img/screenshot.png",
+      "type": "image/png",
+      "sizes": "1920x1080",
+      "form_factor": "narrow"
+    },
+    {
+      "src": "/img/screenshot.png",
+      "type": "image/png",
+      "sizes": "1920x1080",
+      "form_factor": "wide"
+    }
+  ],
+  "description": "Online web radios & podcasts"
+}
