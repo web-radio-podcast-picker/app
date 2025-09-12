@@ -23,6 +23,7 @@ ui = {
     tabs: new Tabs(),
     errExcludes: ['AbortError'],
     errReplaces: [['NotSupportedError', 'no connection']],
+    onResize: [],
 
     init(oscilloscope) {
 
@@ -131,6 +132,9 @@ ui = {
                 app.canvas.width = 0
                 app.canvas.height = 0
             }
+            this.onResize.forEach(f => {
+                f()
+            })
         })
         window.onerror = (messOrEvent, src, line, col, err) => {
             this.showError(messOrEvent, src, line, col, err)
@@ -154,16 +158,9 @@ ui = {
         $c.on('click', () => {
             $c.text('')
         })
-
-        // menus & popups
-        ///this.oscilloMenu.initMenu()
-        ///this.popups.init_popups()
-        ///this.popupSettings.init()
-        ///this.channels.popupSettings.init()
     },
 
     getCurrentChannel() {
-        ///return this.channels.popupSettings.editChannel
         return app.channel
     },
 

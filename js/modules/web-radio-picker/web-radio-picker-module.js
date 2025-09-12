@@ -50,11 +50,7 @@ class WebRadioPickerModule extends ModuleBase {
         'btn_wrp_logo']
     ignoreNextShowImage = false
     addToHistoryTimer = null
-
-    init() {
-        const mset = settings.modules.web_radio_picker
-        const dataUrl = mset.dataUrl
-    }
+    resizeEventOccured = false
 
     initTabs() {
         ui.tabs.initTabs(this.tabs, {
@@ -122,6 +118,10 @@ class WebRadioPickerModule extends ModuleBase {
 
         // modules are late binded. have the responsability to init bindings
         this.updateBindings()
+
+        ui.onResize.push(() => {
+            this.showImage()
+        })
     }
 
     updatePauseView() {
@@ -344,6 +344,10 @@ class WebRadioPickerModule extends ModuleBase {
     }
 
     showImage() {
+        if (!this.resizeEventOccured) {
+            this.resizeEventOccured = true
+            return
+        }
         const $i = $('#wrp_img')
         if (!this.ignoreNextShowImage)
             $i.removeClass('wrp-img-half')
