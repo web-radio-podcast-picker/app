@@ -364,6 +364,14 @@ app = {
 
     performTogglePause() {
         oscilloscope.pause = !oscilloscope.pause
+        // case Analyzer not controlling sound throught destination (ios createMediaElementSource fails)
+        if (oscilloscope.pause) {
+            app.channel.mediaSource.pause()
+        }
+        else {
+            app.channel.mediaSource.play()
+        }
+        // <--
         ui.channels.pauseAllOuts(oscilloscope.pause)
         ui.oscilloMenu.reflectOscilloPauseState()
         app.requestAnimationFrame()

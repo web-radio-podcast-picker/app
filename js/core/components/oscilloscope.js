@@ -124,8 +124,10 @@ oscilloscope = {
 
     async initChannelForMedia(channel, sourceId) {
         channel.deleteSource()
-        channel.audioContext = new AudioContext() // not before getMediaStream
-        channel.audioContext.resume()   // ios
+        if (channel.audioContext == null) {
+            channel.audioContext = new AudioContext() // not before getMediaStream
+            await channel.audioContext.resume()   // ios/android (old fix, usefull?)
+        }
         channel.source = channel.mediaSource
         channel.mediaSource.createAudioSource(
             channel.audioContext,
@@ -148,15 +150,17 @@ oscilloscope = {
         }
 
         if (channel.source != null)
-            channel.stream = await channel.source.getMediaStream()
+            channel.stream = await channel.source.getMediaStream(channel.audioContext)
 
         channel.sourceId = sourceId
         if (sourceId == Source_Id_AudioInput)
             // setup audio input range
             channel.vScale = settings.audioInput.vScale
 
-        if (channel.audioContext == null)
+        if (channel.audioContext == null) {
             channel.audioContext = new AudioContext() // not before getMediaStream
+            await channel.audioContext.resume()
+        }
 
         channel.gain = channel.audioContext.createGain()
         channel.splitter = channel.audioContext.createChannelSplitter(2)

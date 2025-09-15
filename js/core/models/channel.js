@@ -71,6 +71,7 @@ class Channel {
         ///this.markers = new Markers().init(this)
         ///this.measuresView.init(this, this.measures)
         this.mediaSource = new WRPPMediaSource()
+        //this.mediaSourceWS = new WRPPWSMediaSource()
     }
 
     setAnalyser(analyser) {

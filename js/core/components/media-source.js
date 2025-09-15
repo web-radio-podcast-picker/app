@@ -18,13 +18,15 @@ class WRPPMediaSource {
     static sourceInitialized = false
     static sourcePlugged = false
 
+    static captureStream = false
+
     constructor() {
         this.init()
     }
 
     init() {
         const tagId = 'audio_tag'
-        this.url = settings.media.demo.stereoAudioMediaURL
+        //this.url = settings.media.demo.stereoAudioMediaURL
         this.audio = $('#' + tagId)[0]
 
         if (WRPPMediaSource.sourceInitialized) return
@@ -54,7 +56,7 @@ class WRPPMediaSource {
                 console.log('can play')
                 console.log(o)
             }
-            if (!WRPPMediaSource.sourcePlugged) {
+            if (WRPPMediaSource.captureStream || !WRPPMediaSource.sourcePlugged) {
                 await oscilloscope.initChannelForMedia(app.channel)
                 WRPPMediaSource.sourcePlugged = true
             }
@@ -66,17 +68,16 @@ class WRPPMediaSource {
     }
 
     createAudioSource(audioContext, url, tagId) {
-
-        /*if (this.source != null) {
-            this.audio.src = url
-            return
-        }*/
-
         this.deleteSource()
-        //this.audio = new Audio()
-        //this.audio = $('#' + tagId)[0]
-        this.source = audioContext.createMediaElementSource(this.audio)
-        //this.audio.src = url
+        // this one not working on ios : safari/chrome/firefox
+        if (!WRPPMediaSource.captureStream)
+            this.source = audioContext.createMediaElementSource(this.audio)
+
+        //if (this.source != null) return this.source
+
+        if (WRPPMediaSource.captureStream)
+            this.source = this.stream = this.audio.captureStream()
+
         return this.source
     }
 
@@ -92,25 +93,34 @@ class WRPPMediaSource {
     deleteSource() {
         if (this.audio == null) return
         this.audio.pause()
-        //this.audio.src = ''
-        ///this.audio = null
-        //this.init()
-        //this.updateBindings()
     }
 
-    getMediaStream() {
-        // let tell it is a stream
-        return this
+    async getMediaStream(audioContext) {
+        //this.msadn = audioContext.createMediaStreamDestination()
+        //this.stream = this.msadn.stream
+        //return this.stream
+        return this.source
     }
 
     createMediaStreamSource(channel) {
         // it should have been already created
         if (this.source == null)
             throw new Error('source not initialized')
-        return this.source      // the Audio tag or class
+
+        //if (this.mss != null) return this.mss
+        if (WRPPMediaSource.captureStream) {
+            this.mss = channel.audioContext.createMediaStreamSource(this.stream)
+            return this.mss
+        }
+        else
+            return this.source
     }
 
     play() {
         return this.audio.play()
+    }
+
+    pause() {
+        return this.audio.pause()
     }
 }
