@@ -165,16 +165,10 @@ function valueToVolt(channel, value) {
     switch (channel.sourceId) {
         case Source_Id_AudioInput:
             return float32ToVolt(value) * settings.audioInput.vScale;
-        case Source_Id_Generator:
-            // range -1..1 where 1 is sound max on output
-            return value * settings.output.vScale
-        case Source_Id_Math:
-            // range -1..1 where 1 is sound max on output
-            return value * settings.output.vScale
         default:
+            // currently Media source
             return value
     }
-    return 0
 }
 
 function toCamelCase(str) {

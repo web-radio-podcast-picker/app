@@ -31,7 +31,7 @@ class WebRadioPickerModule extends ModuleBase {
     views = [                       // module views & styles
         [
             'view.html',
-            'styles.css'
+            null
         ]
     ]
     settings = [

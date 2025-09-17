@@ -77,30 +77,6 @@ oscilloscope = {
         return channel;
     },
 
-    initChannelForGenerator(channel, sourceId) {
-        //windowAudioContext
-        channel.deleteSource()
-        channel.sourceId = sourceId
-        channel.audioContext = new AudioContext()
-        channel.gain = channel.audioContext.createGain()
-        channel.setAnalyser(
-            channel.audioContext.createAnalyser())
-
-        channel.generator.init(
-            channel,
-            channel.audioContext.createOscillator()
-        )
-
-        channel.generator.oscillator.connect(channel.gain)
-        channel.gain.connect(channel.analyzer)
-        channel.gain.gain.value = 1       // gain 1
-
-        channel.vScale = settings.output.vScale
-        channel.generator.start()
-        channel.getSamplesTask = new GetSamplesTask()
-            .init(channel)
-    },
-
     setOut(channel, on) {
         try {
             if (channel != null && channel.analyzer != null) {
@@ -115,11 +91,6 @@ oscilloscope = {
                 console.log(err)
         }
         channel.out = on
-    },
-
-    initChannelForMath(channel, sourceId) {
-        channel.deleteSource()
-        channel.sourceId = sourceId
     },
 
     async initChannelForMedia(channel, sourceId) {
@@ -172,10 +143,10 @@ oscilloscope = {
         channel.splitter.connect(channel.analyzerRight, 1); // Right channel
 
         if (channel.stream != undefined) {
-            if (settings.debug.info)
-                console.log("Input media stream ok")
 
             channel.streamSource = channel.source.createMediaStreamSource(channel)
+            if (settings.debug.info)
+                console.log("Input media stream ok")
 
             // source -> splitter -> analyzer Left
             //                    -> analyzer Right

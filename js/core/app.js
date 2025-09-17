@@ -17,7 +17,6 @@ app = {
     gaugeView: null,            // gauge view
     tasks: [],                  // tasks,
     canvas: null,               // canvas for visualization
-    canvas_mk: null,            // canvas for markers
     ui: null,                   // UI component
     powerOn: true,              // indicates if turned on or off
 
@@ -71,19 +70,11 @@ app = {
 
         this.canvas = $('#cnv_oscillo')[0]
 
-        this.canvas_mk = $('#cnv_markers')[0]
-
-        ///this.audioInputChannel = await this.initDefaultAudioInput()
-        ///this.oscilloscope.addChannel(this.audioInputChannel)
-
         await this.setupWebRadioChannel()
         this.gaugeView.init(this.channel)
 
         this.initSettings()
         this.initUI()
-
-        ///if (this.audioInputChannel != null &&
-        ///    this.audioInputChannel.error == null) this.start()
 
         if (this.channel != null &&
             this.channel.error == null) {
@@ -154,9 +145,8 @@ app = {
         // update grid view
         // update non paused signals (data and view)
         // update paused signals (view only)
-        this.startFrameOneShotOperations.push(() => {
-            ///this.gridView.enableViewUpdate()
-        })
+        /*this.startFrameOneShotOperations.push(() => {
+        })*/
         oscilloscope.refreshView()
     },
 
@@ -181,16 +171,12 @@ app = {
 
         // grab & publish data
         this.tasks.push(this.task(getAnalyzersDataTasks))
-        ///this.tasks.push(this.task(publishBuffersTasks))
-        ///this.tasks.push(this.task(channelsMeasuresTask))
 
         // views tasks
         this.tasks.push(this.task(startFrameTask, this.mrr))            // frame start
         this.tasks.push(this.task(startViewTask, this.mrr))
         this.tasks.push(this.task(this.gaugeView, this.mrr))
-        ///this.tasks.push(this.task(this.gridView, this.mrr))
         this.tasks.push(this.task(channelsAnimationTask, this.mrr))
-        ///this.tasks.push(this.task(this.oscilloscopeView, this.mrr))
 
         // end of frame
         this.tasks.push(this.task(requestAnimationFrameTask))      // frame end
@@ -250,17 +236,8 @@ app = {
             case Source_Id_AudioInput:
                 await this.setChannelSourceAudioInput(channel)
                 break
-            case Source_Id_Ext:
-                await this.setChannelSourceExt(channel)
-                break
-            case Source_Id_Generator:
-                await this.setChannelSourceGenerator(channel)
-                break
             case Source_Id_Media:
                 await this.setChannelSourceMedia(channel)
-                break
-            case Source_Id_Math:
-                await this.setChannelSourceMath(channel)
                 break
         }
     },
@@ -275,15 +252,6 @@ app = {
 
     getInputChannel() {
         return this.audioInputChannel
-    },
-
-    async setChannelSourceExt(channel) {
-    },
-
-    async setChannelSourceGenerator(channel) {
-        await oscilloscope.initChannelForGenerator(
-            channel,
-            Source_Id_Generator)
     },
 
     async setChannelSourceMedia(channel) {
@@ -314,12 +282,6 @@ app = {
         }
     },
 
-    async setChannelSourceMath(channel) {
-        await oscilloscope.initChannelForMath(
-            channel,
-            Source_Id_Math)
-    },
-
     async addChannel() {
         const channel = await oscilloscope.createChannel(
             Source_Id_None, null)
@@ -347,7 +309,6 @@ app = {
         })
         this.requestAnimationFrame()
     },
-
     toggleOPause(then) {
         if (oscilloscope.pause) {
             // unpause immediately
@@ -373,7 +334,6 @@ app = {
         }
         // <--
         ui.channels.pauseAllOuts(oscilloscope.pause)
-        ui.oscilloMenu.reflectOscilloPauseState()
         app.requestAnimationFrame()
     },
 
