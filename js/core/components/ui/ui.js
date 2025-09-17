@@ -16,9 +16,7 @@ ui = {
     bindings: new Bindings(),
     toggles: new Toggles(),
     popups: new Popups(),
-    oscilloMenu: new OscilloMenu(),
     channels: new Channels(),
-    ///popupSettings: new PopupSettings(),
     inputWidgets: new InputWidgets(),
     tabs: new Tabs(),
     errExcludes: ['AbortError'],
@@ -31,7 +29,6 @@ ui = {
 
         this.oscilloscope.channels.forEach(channel => {
             if (!channel.ui) {
-                this.channels.init_channel_btns(channel, channel.view)
                 channel.ui = true
             }
         });
