@@ -4,9 +4,17 @@
     find license and copyright informations in files /COPYRIGHT and /LICENCE
 */
 
-const WebRadioPickerDataId = 'all_stations.m3u'
+const WRP_Radio_List = 'all_stations.m3u'
+const WRP_Json_Radio_List = 'radios.txt'
 const WRP_Unknown_Group_Label = 'unclassified'
 const WRP_Artists_Group_Label = 'artists'
+
+const Sep = '|'
+const List_Sep = ','
+const Line_Sep = '\n'
+const Bloc_Sep = '---------- ----------'
+
+const Build_Json_Radio_List = false
 
 // module: web radio picker
 
@@ -26,8 +34,10 @@ class WebRadioPickerModule extends ModuleBase {
             'styles.css'
         ]
     ]
-    settings = ['settings.json']    // module settings
-    datas = [WebRadioPickerDataId]  // module data files
+    settings = [
+        'settings.json'             // module settings
+    ]
+    datas = null                    // module data files
 
     title = 'Web Radio Picker'
     icon = '☄'
@@ -42,15 +52,25 @@ class WebRadioPickerModule extends ModuleBase {
     history = []            // historic (auto play list)
     listCount = 0
     filteredListCount = 0
-    grpLisdtIndex = 0
     tabs = ['btn_wrp_tag_list',
         'btn_wrp_lang_list',
         'btn_wrp_art_list',
         'btn_wrp_play_list',
         'btn_wrp_logo']
-    //ignoreNextShowImage = false
     addToHistoryTimer = null
     resizeEventInitialized = false
+    // pre-processed data
+    groupsById = {}
+    itemsById = {}
+
+    constructor() {
+        super()
+        this.datas = [
+            // radios
+            Build_Json_Radio_List ?
+                WRP_Radio_List
+                : WRP_Json_Radio_List]
+    }
 
     initTabs() {
         ui.tabs.initTabs(this.tabs, {
@@ -175,7 +195,7 @@ class WebRadioPickerModule extends ModuleBase {
         var i = 0
         keys.forEach(k => {
             const { item, $item } = this.buildListItem(
-                unquote(k),
+                this.ifQuoteUnQuote(k),//unquote(k),
                 i,
                 { count: this.items[k].length }
             )
@@ -184,6 +204,11 @@ class WebRadioPickerModule extends ModuleBase {
             this.initBtn($tag, $item, this.items[k])
         })
         return this
+    }
+
+    ifQuoteUnQuote(s) {
+        if (!s.startsWith('"')) return s
+        return unquote(s)
     }
 
     buildNamesItems(containerId, itemsByName) {
@@ -334,17 +359,13 @@ class WebRadioPickerModule extends ModuleBase {
     noImage() {
         const $i = $('#wrp_img')
         $i[0].src = './img/icon.ico'
-        //$i.removeClass('hidden')
         $i.attr('data-noimg', '1')
         $i.attr('width', null)
         $i.attr('height', null)
-        //this.ignoreNextShowImage = true
     }
 
     showImage() {
         const $i = $('#wrp_img')
-        //if (!this.ignoreNextShowImage)
-        //    $i.removeClass('wrp-img-half')
         const noimg = $i.attr('data-noimg') != null
         if (noimg)
             $i.addClass('wrp-img-half')
@@ -507,8 +528,9 @@ class WebRadioPickerModule extends ModuleBase {
         this.initBtn($pl, $item, [o])
     }
 
-    radioItem(name, groupName, url, logo) {
+    radioItem(id, name, groupName, url, logo) {
         return {
+            id: id,
             name: name,
             description: null,
             groupTitle: groupName,
@@ -518,18 +540,194 @@ class WebRadioPickerModule extends ModuleBase {
             artist: null,
             country: null,
             lang: null,
-            bitRate: null,
-            channels: null,
-            encode: null,
-            listenDate: null
+            channels: null
         }
     }
 
+    encodeRadioItem(item) {
+        const n = s => s == null ? '' : s
+        return item.id + Sep +          // 0
+            item.name + Sep +           // 1
+            item.groupsCodes.join(List_Sep) + Sep + // 2
+            n(item.lang) + Sep +        // 3
+            n(item.country) + Sep +     // 4
+            n(item.artist) + Sep +      // 5
+            n(item.logo) + Sep +        // 6
+            item.url                    // 7
+            ;
+    }
+
+    encodeArtistGroup(artName) {
+        const artLst = this.itemsByArtists[artName]
+        var items = artLst.map((value, index, array) => value.id)
+        return items.join(List_Sep)
+    }
+
+    exportProcessedData() {
+        // groups
+        const groups = this.encodeGroups()
+        var i = 0
+        groups.sort((a, b) => a.localeCompare(b))
+        const exp = { groups: groups.join(Line_Sep) }
+        // radio items (all)
+        const its = []
+        this.itemsAll.forEach(item => {
+            its.push(this.encodeRadioItem(item))
+        })
+        exp.radioList = its.join(Line_Sep)
+        // artists
+        const arts = []
+        var artId = -1
+        for (const artName in this.itemsByArtists) {
+            artId++
+            arts.push(
+                artId
+                + Sep
+                + this.encodeArtistGroup(artName))
+        }
+        exp.artists = arts.join(Line_Sep)
+
+        window.export_obj = exp
+        window.export_txt =
+            [exp.groups, exp.artists, exp.radioList]
+                .join(Bloc_Sep)
+    }
+
+    encodeGroup(grp, groupId, item) {
+        return grp
+            + Sep + groupId + Sep
+            + ((Object.getOwnPropertyNames(this.itemsByLang).includes(grp)) ? 'X' : '')
+    }
+
+    encodeGroups() {
+        var groupId = 0
+        const groups = []
+        const grps = []
+        this.itemsAll.forEach(item => {
+            item.groupsCodes = []
+            item.groups.forEach(grp => {
+                if (!grps.includes(grp)) {
+                    grps.push(grp)
+                    groups.push(this.encodeGroup(grp, groupId, item))
+                    item.groupsCodes.push(groupId++)
+                } else {
+                    item.groupsCodes.push(grps.indexOf(grp))
+                }
+            })
+        })
+        return groups
+    }
+
+    // set data from .m3u and export to json
     setData(dataId, text) {
-        if (dataId != WebRadioPickerDataId) return
+        if (dataId == WRP_Radio_List) this.setDataRadioListM3U(text)
+        if (dataId == WRP_Json_Radio_List) this.setDataRadioListJson(text)
+    }
+
+    setDataRadioListJson(text) {
+        const t = text.split(Bloc_Sep)
+        this.parseGroups(t[0])
+        this.parseRadios(t[2])
+        this.parseArts(t[1])
+    }
+
+    parseGroups(txt) {
+        const t = this.getExpLinesArray(txt)
+        t.forEach(s => {
+            const g = s.split(Sep)
+            const grpName = g[0]
+            const grpId = g[1]
+            const grpIsLang = g[2] == 'X'
+            this.groupsById[grpId] = grpName
+            if (!grpIsLang) {
+                this.items[grpName] = []
+            }
+            else {
+                this.itemsByLang[grpName] = []
+            }
+        })
+    }
+
+    parseRadios(txt) {
+        const t = this.getExpLinesArray(txt)
+        this.listCount = 0
+        t.forEach(s => {
+            const item = this.parseRadio(s)
+            this.itemsAll.push(item)
+            this.itemsById[item.id] = item
+            this.itemsByName['"' + item.name + '"'] = item
+            if (item.lang != null) {
+                try {
+                    this.itemsByLang[item.lang].push(item)
+                } catch (e) {
+                    console.log(item)
+                }
+            }
+
+            item.groups.forEach(grp => {
+                try {
+                    if (this.items[grp])
+                        this.items[grp].push(item)
+                } catch (e) {
+                    console.log(item)
+                }
+            })
+
+            this.listCount++
+        })
+    }
+
+    parseRadio(s) {
+        const t = s.split(Sep)
+        const n = s => s == '' ? null : s
+        const item = this.radioItem(
+            t[0],
+            t[1],
+            null,
+            n(t[7]),
+            n(t[6])
+        )
+        item.lang = n(t[3])
+        item.country = n(t[4])
+        item.artist = n(t[5])
+        t[2].split(List_Sep).forEach(grpCode => {
+            item.groups.push(
+                this.groupsById[grpCode]
+            )
+        })
+        return item
+    }
+
+    getExpLinesArray(txt) { return txt.replaceAll("\\n", "\n").split(Line_Sep) }
+
+    parseArts(txt) {
+        const t = this.getExpLinesArray(txt)
+        t.forEach(s => {
+            const item = this.parseArtist(s)
+        })
+    }
+
+    parseArtist(s) {
+        const t = s.split(Sep)
+        const n = s => s == '' ? null : s
+        const itemsIds = t[1].split(List_Sep)
+        const items = itemsIds.map((value, index, array) =>
+            this.itemsById[value]
+        )
+
+        const k = items[0].artist
+        if (!this.itemsByArtists[k])
+            this.itemsByArtists[k] = []
+        const its = this.itemsByArtists[k]
+        items.forEach(it => this.itemsByArtists[k].push(it))
+    }
+
+    setDataRadioListM3U(text) {
         var t = text.split('\n')
         var j = 1
         var n = t.length
+        var itemId = 0
+
         while (j < n) {
             /*
             #EXTINF:-1 tvg-logo="https://kuasark.com/files/stations-logos/aordreamer.png" group-title="(.*),(.*),",AORDreamer
@@ -539,7 +737,7 @@ class WebRadioPickerModule extends ModuleBase {
             */
             var extinf = t[j]
             var i = extinf.lastIndexOf(',')
-            const name = extinf.substr(i + 1)
+            const name = extinf.substr(i + 1)?.trim()
 
             extinf = extinf.substr(0, i - 1)
             i = extinf.indexOf('group-title="')
@@ -559,7 +757,7 @@ class WebRadioPickerModule extends ModuleBase {
                 || groupTitle == ',')
                 groupTitle = WRP_Unknown_Group_Label
 
-            const item = this.radioItem(name, groupTitle, url, logo)
+            const item = this.radioItem(itemId++, name, groupTitle, url, logo)
 
             this.itemsByName['"' + name + '"'] = item
             this.itemsAll.push(item)
@@ -625,6 +823,8 @@ class WebRadioPickerModule extends ModuleBase {
         this.itemsByLang = this.sortKT(this.itemsByLang)
 
         this.filteredListCount = this.listCount
+
+        this.exportProcessedData()
     }
 
     addByKey(k, t, e) {
