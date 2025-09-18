@@ -43,5 +43,10 @@
       "form_factor": "wide"
     }
   ],
-  "description": "Online web radios & podcasts"
+  "description": "Online web radios & podcasts",
+  "related_applications": [{
+    "platform": "webapp",
+    "url": "/manifest.json",
+    "id": "./index.html"
+  }]
 }
