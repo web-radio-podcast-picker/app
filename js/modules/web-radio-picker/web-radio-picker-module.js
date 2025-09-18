@@ -189,7 +189,7 @@ class WebRadioPickerModule extends ModuleBase {
             val(v)
         }
         w('user agent', navigator.userAgent)
-        w('screen size', cui.viewSize().width + ' x ' + cui.viewSize().height)
+        w('window size', cui.viewSize().width + ' x ' + cui.viewSize().height)
         w('platform', settings.sys.platformText)
         const appinf = await this.getRelatedApps()
         w('app', appinf)
