@@ -152,8 +152,66 @@ class WebRadioPickerModule extends ModuleBase {
             app.toggleOPause(() => this.updatePauseView())
         })
 
+        $('#btn_wrp_inf').on('click', async () => {
+            await this.toggleInfos()
+        })
+
         // modules are late binded. have the responsability to init bindings
         this.updateBindings()
+    }
+
+    async getRelatedApps() {
+        const installedRelatedApps = await navigator.getInstalledRelatedApps?.()
+        if (!installedRelatedApps || installedRelatedApps.length == 0) return '?'
+        const s = ''
+        for (var o in installedRelatedApps)
+            s += o.platform + ',' + o.id + ',' + o.url
+        return s
+    }
+
+    async initInfoPane() {
+        const $pane = $('#wrp_inf')
+        const txt = (s, cl) => {
+            const isjq = typeof s == 'object'
+            const txt = !isjq ? s : ''
+            const $n = $('<div class="' + cl + '">' + txt + '</div>')
+            if (isjq) $n.append(s)
+            $pane.append($n)
+        }
+        const name = s => {
+            txt(s, 'wrp-inf-name')
+        }
+        const val = s => {
+            txt(s, 'wrp-inf-val')
+        }
+        const w = (k, v) => {
+            name(k)
+            val(v)
+        }
+        w('user agent', navigator.userAgent)
+        w('screen size', cui.viewSize().width + ' x ' + cui.viewSize().height)
+        w('platform', settings.sys.platformText)
+        const appinf = await this.getRelatedApps()
+        w('app', appinf)
+        w('project readme',
+            $('<a href="https://github.com/franck-gaspoz/web-radio-podcast-picker/blob/main/README.md" target="blank">https://github.com/franck-gaspoz/web-radio-podcast-picker/blob/main/README.md</a>'))
+    }
+
+    async toggleInfos() {
+        const $but = $('#btn_wrp_inf')
+        const $pane = $('#wrp_inf_pane')
+        $but.toggleClass('selected')
+        $pane.toggleClass('hidden')
+        if (!$pane.hasClass('hidden')) {
+            $('#wrp_inf').empty()
+            await this.initInfoPane()
+        }
+    }
+
+    async hideInfoPane() {
+        const $pane = $('#wrp_inf_pane')
+        if (!$pane.hasClass('hidden'))
+            await this.toggleInfos()
     }
 
     updatePauseView() {
@@ -431,7 +489,8 @@ class WebRadioPickerModule extends ModuleBase {
     }
 
     initBtn($container, $item, t) {
-        $item.on('click', () => {
+        $item.on('click', async () => {
+            await this.hideInfoPane()
             this.clearFilters()
             $item.addClass('item-selected')
             this.updateRadList(t)

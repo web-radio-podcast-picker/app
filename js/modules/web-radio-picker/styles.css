@@ -166,6 +166,15 @@ find license and copyright informations in files /COPYRIGHT and /LICENCE
     margin-top: 0.25em;
 }
 
+.wrp-inf-pane {
+    background-color: rgba(0,0,129,1); /* cf. .module-full-pane */
+    padding: 1em;
+}
+
+#btn_wrp_inf.selected {
+    cursor: pointer;
+}
+
 #wrp_radio_box {
     text-align: right;
     color: #44AAffFF;
@@ -246,4 +255,10 @@ find license and copyright informations in files /COPYRIGHT and /LICENCE
     text-align: center;
     margin-left: auto;
     margin-right: auto;
+}
+
+.wrp-inf-name {color: yellow;}
+
+.wrp-inf-val {
+    margin-bottom: 0.5em;
 }
