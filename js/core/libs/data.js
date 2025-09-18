@@ -102,3 +102,23 @@ function deepClone(obj) {
 
     throw new Error("Unable to copy obj! Its type isn't supported.");
 }
+
+function toUpperCaseWorldsFirstLetters(g) {
+    return g.replace(/(?:^\w|[A-Z]|\b\w)/g, (word, index) => word.toUpperCase())
+}
+
+function remove(t, e) {
+    const i = index(t, e)
+    if (i == -1) return
+    t.splice(i, 1)
+}
+
+function index(t, e) {
+    for (var i = 0; i < t.length; i++)
+        if (t[i] == e) return i
+    return -1
+}
+
+function quote(s) {
+    return '"' + s + '"'
+}

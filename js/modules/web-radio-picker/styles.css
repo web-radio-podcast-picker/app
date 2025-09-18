@@ -158,7 +158,8 @@ find license and copyright informations in files /COPYRIGHT and /LICENCE
     color: #FFFF00AA;
 }
 
-#btn_wrp_all_radios {
+#btn_wrp_all_radios,
+#btn_wrp_inf {
     padding-left: 0.25em;
     padding-right: 0.25em;
     font-size: 0.9em;

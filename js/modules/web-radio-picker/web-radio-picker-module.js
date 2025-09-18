@@ -30,8 +30,9 @@ class WebRadioPickerModule extends ModuleBase {
 
     views = [                       // module views & styles
         [
-            'view.html',
-            null
+            'view.html',            // empty view (real is preloaded in index.html)
+            // (any view is necessary to comply to the module loader)
+            null                    // idem for the style
         ]
     ]
     settings = [
@@ -63,13 +64,24 @@ class WebRadioPickerModule extends ModuleBase {
     groupsById = {}
     itemsById = {}
 
+    // components
+
+    m3uDataBuilder = null
+    radioDataParser = null
+
     constructor() {
         super()
+        this.version = settings.app.wrp.version
+        this.versionDate = settings.app.wrp.verDate
         this.datas = [
             // radios
             Build_Json_Radio_List ?
                 WRP_Radio_List
                 : WRP_Json_Radio_List]
+        if (Build_Json_Radio_List)
+            this.m3uDataBuilder = new M3UDataBuilder().init(this)
+        else
+            this.radioDataParser = new RadioDataParser().init(this)
     }
 
     initTabs() {
@@ -251,25 +263,6 @@ class WebRadioPickerModule extends ModuleBase {
     buildArtItems() {
         this.buildNamesItems('opts_wrp_art_list', this.itemsByArtists)
         return this
-    }
-
-    isArtistRadio(r) {
-        if (r == null || r.url == null) return false
-        const st = this.getSettings()
-        var res = null
-        st.artistUrlFilters.forEach(t => {
-            const url = t[0]
-            const f = t[1]
-            if (r.url != null && r.url.startsWith(url)) {
-                res = {
-                    url: r.url,
-                    item: r,
-                    artist: f == null ? r.name : eval('this.' + f + '(r)')
-                }
-                return res
-            }
-        })
-        return res
     }
 
     toArtistFromtreamingExclusive(r) {
@@ -544,465 +537,12 @@ class WebRadioPickerModule extends ModuleBase {
         }
     }
 
-    encodeRadioItem(item) {
-        const n = s => s == null ? '' : s
-        return item.id + Sep +          // 0
-            item.name + Sep +           // 1
-            item.groupsCodes.join(List_Sep) + Sep + // 2
-            n(item.lang) + Sep +        // 3
-            n(item.country) + Sep +     // 4
-            n(item.artist) + Sep +      // 5
-            n(item.logo) + Sep +        // 6
-            item.url                    // 7
-            ;
-    }
-
-    encodeArtistGroup(artName) {
-        const artLst = this.itemsByArtists[artName]
-        var items = artLst.map((value, index, array) => value.id)
-        return items.join(List_Sep)
-    }
-
-    exportProcessedData() {
-        // groups
-        const groups = this.encodeGroups()
-        var i = 0
-        groups.sort((a, b) => a.localeCompare(b))
-        const exp = { groups: groups.join(Line_Sep) }
-        // radio items (all)
-        const its = []
-        this.itemsAll.forEach(item => {
-            its.push(this.encodeRadioItem(item))
-        })
-        exp.radioList = its.join(Line_Sep)
-        // artists
-        const arts = []
-        var artId = -1
-        for (const artName in this.itemsByArtists) {
-            artId++
-            arts.push(
-                artId
-                + Sep
-                + this.encodeArtistGroup(artName))
-        }
-        exp.artists = arts.join(Line_Sep)
-
-        window.export_obj = exp
-        window.export_txt =
-            [exp.groups, exp.artists, exp.radioList]
-                .join(Bloc_Sep)
-    }
-
-    encodeGroup(grp, groupId, item) {
-        return grp
-            + Sep + groupId + Sep
-            + ((Object.getOwnPropertyNames(this.itemsByLang).includes(grp)) ? 'X' : '')
-    }
-
-    encodeGroups() {
-        var groupId = 0
-        const groups = []
-        const grps = []
-        this.itemsAll.forEach(item => {
-            item.groupsCodes = []
-            item.groups.forEach(grp => {
-                if (!grps.includes(grp)) {
-                    grps.push(grp)
-                    groups.push(this.encodeGroup(grp, groupId, item))
-                    item.groupsCodes.push(groupId++)
-                } else {
-                    item.groupsCodes.push(grps.indexOf(grp))
-                }
-            })
-        })
-        return groups
-    }
-
     // set data from .m3u and export to json
     setData(dataId, text) {
-        if (dataId == WRP_Radio_List) this.setDataRadioListM3U(text)
-        if (dataId == WRP_Json_Radio_List) this.setDataRadioListJson(text)
-    }
-
-    setDataRadioListJson(text) {
-        const t = text.split(Bloc_Sep)
-        this.parseGroups(t[0])
-        this.parseRadios(t[2])
-        this.parseArts(t[1])
-    }
-
-    parseGroups(txt) {
-        const t = this.getExpLinesArray(txt)
-        t.forEach(s => {
-            const g = s.split(Sep)
-            const grpName = g[0]
-            const grpId = g[1]
-            const grpIsLang = g[2] == 'X'
-            this.groupsById[grpId] = grpName
-            if (!grpIsLang) {
-                this.items[grpName] = []
-            }
-            else {
-                this.itemsByLang[grpName] = []
-            }
-        })
-    }
-
-    parseRadios(txt) {
-        const t = this.getExpLinesArray(txt)
-        this.listCount = 0
-        t.forEach(s => {
-            const item = this.parseRadio(s)
-            this.itemsAll.push(item)
-            this.itemsById[item.id] = item
-            this.itemsByName['"' + item.name + '"'] = item
-            if (item.lang != null) {
-                try {
-                    this.itemsByLang[item.lang].push(item)
-                } catch (e) {
-                    console.log(item)
-                }
-            }
-
-            item.groups.forEach(grp => {
-                try {
-                    if (this.items[grp])
-                        this.items[grp].push(item)
-                } catch (e) {
-                    console.log(item)
-                }
-            })
-
-            this.listCount++
-        })
-    }
-
-    parseRadio(s) {
-        const t = s.split(Sep)
-        const n = s => s == '' ? null : s
-        const item = this.radioItem(
-            t[0],
-            t[1],
-            null,
-            n(t[7]),
-            n(t[6])
-        )
-        item.lang = n(t[3])
-        item.country = n(t[4])
-        item.artist = n(t[5])
-        t[2].split(List_Sep).forEach(grpCode => {
-            item.groups.push(
-                this.groupsById[grpCode]
-            )
-        })
-        return item
-    }
-
-    getExpLinesArray(txt) { return txt.replaceAll("\\n", "\n").split(Line_Sep) }
-
-    parseArts(txt) {
-        const t = this.getExpLinesArray(txt)
-        t.forEach(s => {
-            const item = this.parseArtist(s)
-        })
-    }
-
-    parseArtist(s) {
-        const t = s.split(Sep)
-        const n = s => s == '' ? null : s
-        const itemsIds = t[1].split(List_Sep)
-        const items = itemsIds.map((value, index, array) =>
-            this.itemsById[value]
-        )
-
-        const k = items[0].artist
-        if (!this.itemsByArtists[k])
-            this.itemsByArtists[k] = []
-        const its = this.itemsByArtists[k]
-        items.forEach(it => this.itemsByArtists[k].push(it))
-    }
-
-    setDataRadioListM3U(text) {
-        var t = text.split('\n')
-        var j = 1
-        var n = t.length
-        var itemId = 0
-
-        while (j < n) {
-            /*
-            #EXTINF:-1 tvg-logo="https://kuasark.com/files/stations-logos/aordreamer.png" group-title="(.*),(.*),",AORDreamer
-            http://178.33.33.176:8060/stream1
-            #EXTINF:-1 tvg-logo="http://hdmais.com.br/universitariafm/wp-content/themes/theme48301/favicon.ico" group-title="Educacao,Universidade",UFC Rádio Universitária 107.9
-            http://200.129.35.230:8081/;?type=http&nocache=2705
-            */
-            var extinf = t[j]
-            var i = extinf.lastIndexOf(',')
-            const name = extinf.substr(i + 1)?.trim()
-
-            extinf = extinf.substr(0, i - 1)
-            i = extinf.indexOf('group-title="')
-            var groupTitle = extinf.substr(i + 13)
-
-            extinf = extinf.substr(0, i - 1)
-            i = extinf.indexOf('tvg-logo="')
-            const logo = extinf.substr(i + 10).slice(0, -1)
-
-            const url = t[j + 1]
-            if (groupTitle.endsWith(','))
-                groupTitle = groupTitle.slice(0, -1)
-
-            if (groupTitle.startsWith('(.*)')
-                || groupTitle == ''
-                || groupTitle == '"'
-                || groupTitle == ',')
-                groupTitle = WRP_Unknown_Group_Label
-
-            const item = this.radioItem(itemId++, name, groupTitle, url, logo)
-
-            this.itemsByName['"' + name + '"'] = item
-            this.itemsAll.push(item)
-            this.listCount++
-
-            const isArt = this.isArtistRadio(item)
-            if (isArt !== false && isArt !== null) {
-                const artName = isArt.artist
-                if (this.itemsByArtists[artName] === undefined)
-                    this.itemsByArtists[artName] = []
-                item.artist = artName
-                item.groupTitle = groupTitle = WRP_Artists_Group_Label
-                this.itemsByArtists[artName].push(item)
-            }
-
-            const grps = groupTitle.split(',')
-            var trgrps = []
-            grps.forEach(g => {
-                g = this.normalizeGroupName(g, item)
-                if (g != null)
-                    trgrps.push(g)
-            })
-
-            trgrps.forEach(grp => {
-                var g = grp
-
-                if (g != WRP_Unknown_Group_Label || grps.length == 1) {
-                    // don't put in WRP_Unknown_Group_Label group if in another group
-                    item.groups.push(g)
-
-                    g = '"' + g + '"'
-                    if (g != null && g != '') {
-                        if (this.items[g] === undefined)
-                            this.items[g] = []
-                        try {
-                            this.items[g].push(item)
-                        } catch (err) {
-                            console.log(err)
-                        }
-                    }
-                    else {
-                        console.log(g)
-                    }
-                }
-            })
-            item.groups.sort((a, b) => a.localeCompare(b))
-
-            j += 2
-        }
-
-        // arrange 'unclassified' group
-        this.groupUnclassified()
-
-        // add tag lang
-        this.groupByLang()
-
-        // sorts
-
-        this.itemsAll.sort((a, b) => a.name.localeCompare(b.name))
-
-        this.items = this.sortKT(this.items)
-        this.itemsByArtists = this.sortKT(this.itemsByArtists)
-        this.itemsByLang = this.sortKT(this.itemsByLang)
-
-        this.filteredListCount = this.listCount
-
-        this.exportProcessedData()
-    }
-
-    addByKey(k, t, e) {
-        if (t[k] === undefined)
-            t[k] = []
-        t[k].push(e)
-    }
-
-    removeByKey(k, t, e) {
-        if (t[k] === undefined) return
-        const tt = t[k]
-        remove(tt, e)
-    }
-
-    unclassifiedToTag(tag, item) {
-        tag = toUpperCaseWorldsFirstLetters(tag)
-        if (item.groups.includes(tag)) return
-
-        const gtag = quote(tag)
-        this.addByKey(gtag, this.items, item)
-
-        const nogrp = toUpperCaseWorldsFirstLetters(WRP_Unknown_Group_Label)
-        const g = quote(nogrp)
-        this.removeByKey(g, this.items, item)
-        remove(item.groups, nogrp)
-
-        item.groups.push(tag)
-    }
-
-    unclassifiedToLang(lang, item) {
-        lang = toUpperCaseWorldsFirstLetters(lang)
-        if (item.groups.includes(lang)) return
-
-        this.addByKey(lang, this.itemsByLang, item)
-        item.lang = lang
-
-        const nogrp = toUpperCaseWorldsFirstLetters(WRP_Unknown_Group_Label)
-        const g = quote(nogrp)
-        this.removeByKey(g, this.items, item)
-        remove(item.groups, nogrp)
-
-        item.groups.push(lang)
-    }
-
-    addTagLang(lang, item) {
-        this.unclassifiedToLang(lang, item)
-    }
-
-    groupByLang() {
-        const st = this.getSettings()
-        this.itemsAll.forEach(item => {
-            const stw = item.name.toLowerCase()
-            const tw = stw.split(' ')
-            tw.forEach(word => {
-                // existing langs
-                st.tagToLang.forEach(tl => {
-                    if (tl.includes(word))
-                        this.addTagLang(tl[0], item)
-                    tl.forEach(tgl => {
-                        if (stw == tgl)
-                            this.addTagLang(tl[0], item)
-                    })
-                })
-            })
-        })
-    }
-
-    groupUnclassified() {
-        const g = quote(toUpperCaseWorldsFirstLetters(WRP_Unknown_Group_Label))
-        const t = [...this.items[g]]
-        const st = this.getSettings()
-        const tags = Object.keys(this.items)
-            .map(x => unquote(x.toLowerCase()))
-
-        // new tags from settings
-
-        var i = 0
-        t.forEach(item => {
-
-            const stw = item.name.toLowerCase()
-            const tw = stw.split(' ')
-
-            tw.forEach(word => {
-
-                // eventuallly build new tags
-                if (st.wordToTag.includes(word))
-                    this.unclassifiedToTag(word, item)
-
-                // existing tags
-                if (tags.includes(word))
-                    this.unclassifiedToTag(word, item)
-
-                // existing langs
-                st.tagToLang.forEach(tl => {
-                    if (tl.includes(word))
-                        this.unclassifiedToLang(tl[0], item)
-                })
-
-                // word similarities
-                st.tagSimilarities.forEach(sm => {
-                    if (sm.includes(word))
-                        this.unclassifiedToTag(sm[0], item)
-                })
-            })
-            i++
-        })
-    }
-
-    sortKT(ar) {
-        var keys = Object.keys(ar)
-        keys.sort((a, b) => a.localeCompare(b))
-        const res = []
-        keys.forEach(k => {
-            const t = ar[k].sort((a, b) => a.name.localeCompare(b.name))
-            res[k] = t
-        })
-        return res
-    }
-
-    normalizeGroupName(g, radioItem) {
-        if (g == null || g == '' || g == '*' || g == '"') g = WRP_Unknown_Group_Label
-
-        // case
-        g = g.toLowerCase()
-
-        // special
-        if (g.startsWith('http://')
-            || g.startsWith('https://')) g = WRP_Unknown_Group_Label
-
-        // substitutions
-        const st = this.getSettings()
-        st.tagSimilarities.some(t => {
-            if (t.includes(g)) {
-                g = t[0]
-                return true
-            }
-            else
-                return false
-        })
-
-        // to lang
-        st.tagToLang.some(tl => {
-            if (tl.includes(g)) {
-                g = toUpperCaseWorldsFirstLetters(tl[0])
-                if (this.itemsByLang[g] === undefined)
-                    this.itemsByLang[g] = []
-                this.itemsByLang[g].push(radioItem)
-                radioItem.groups.push(g)
-                radioItem.lang = g
-                // remove tag
-                g = null
-                return true
-            }
-            else return false
-        })
-        if (g == null) return null
-
-        // to artist
-        if (st.tagToArtist.includes(g)) {
-            g = toUpperCaseWorldsFirstLetters(g)
-            if (this.itemsByArtists[g] === undefined)
-                this.itemsByArtists[g] = []
-            radioItem.artist = g
-            radioItem.groupTitle += ',' + WRP_Artists_Group_Label
-            this.itemsByArtists[g].push(radioItem)
-            // tag Artists
-            g = WRP_Artists_Group_Label
-            g = toUpperCaseWorldsFirstLetters(g)
-            return g
-        }
-
-        // deletions
-        if (st.removeTags.includes(g))
-            // remove tag
-            return null
-
-        g = toUpperCaseWorldsFirstLetters(g)
-        return g
+        if (dataId == WRP_Radio_List)
+            this.m3uDataBuilder.setDataRadioListM3U(text)
+        if (dataId == WRP_Json_Radio_List)
+            this.radioDataParser.setDataRadioList(text)
     }
 }
 
