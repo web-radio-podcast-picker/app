@@ -44,6 +44,11 @@ html.page {
     height: 100%;
 }
 
+img {
+    -webkit-user-drag: none;
+    user-drag: none;
+}
+
 .no-select {
     -webkit-user-select: none;
     -moz-user-select: none;
