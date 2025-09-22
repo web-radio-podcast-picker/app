@@ -53,16 +53,39 @@ find license and copyright informations in files /COPYRIGHT and /LICENCE
     align-self: center;
 }
 
+.bt-bar-img-but {
+    vertical-align: baseline;
+    margin-top: 0.7em;
+}
+
+.bt-bar-but-cnt {
+    height: 48px;
+}
+
+#wrp_btn_pause_onoff {
+    cursor: pointer;
+}
+
 .wrp-but-col {
     display: grid;
     grid-row: 1;
     margin-bottom: 2px;
-    grid-template-rows: 48px 48px 48px;
+    grid-template-rows: 48px 48px 48px 48px;
     overflow: clip;
+    align-items: center;
+}
+
+.btn-wrp-text {
+    display: inline-block;
+    width: 1.4em !important;
+    font-size: 2em;
+    padding: 0px;
+    margin: 0px;
+    line-height: 1.6em !important;
 }
 
 .wrp-but-col-no-fsbut {
-    grid-template-rows: 48px 0px 48px !important;
+    grid-template-rows: 48px 0px 48px 48px !important;
 }
 
 .wrp-layout {

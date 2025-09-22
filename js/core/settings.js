@@ -14,7 +14,7 @@ window.settings = {
             verDate: '8/23/2025'
         },
         wrp: {
-            version: '1.2.4',
+            version: '1.2.5',
             verDate: '9/22/2025'
         }
     },
