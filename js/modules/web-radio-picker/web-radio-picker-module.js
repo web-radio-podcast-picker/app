@@ -370,9 +370,11 @@ class WebRadioPickerModule extends ModuleBase {
         items.forEach(n => {
             const { item, $item } = this.buildListItem(n.name, j)
             j++
-            $rad.append($item)
             this.initItemRad($rad, $item, n)
+            $rad.append($item)
         })
+        $rad.scrollTop(0)
+        ui.scrollers.update('wrp_radio_list')
     }
 
     buildListItem(text, j, opts) {
