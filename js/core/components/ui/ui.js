@@ -18,6 +18,7 @@ ui = {
     popups: new Popups(),
     channels: new Channels(),
     inputWidgets: new InputWidgets(),
+    scrollers: new Scrollers(),
     tabs: new Tabs(),
     errExcludes: ['AbortError'],
     errReplaces: [['NotSupportedError', 'no connection']],
