@@ -11,14 +11,39 @@ class Scrollers {
     scrollers = []           // array of bindings for controls
 
     new(scroller) {
-        const $sp = $('#' + scroller.scrollPaneId)
+        const $scrollPanes =
+            scroller.scrollPaneIds.map(value => $('#' + value))
+
+        const $activeScrollPane = $scrollPanes.reduce((acc, $sp) =>
+            $sp.hasClass('hidden') ? acc : $sp)
+
+        scroller.$scrollPanes = $scrollPanes
+        scroller.$activeScrollPane = $activeScrollPane
         const $btup = $('#' + scroller.upButtonId)
-        const $btdo = $('#' + scroller.downpButtonId)
+        const $btdo = $('#' + scroller.downButtonId)
+
+        const click = (e, isUp) => this.clickUpDown(scroller, $(e.target), isUp)
+        $btup.on('mousedown', e => click(e, true))
+        $btdo.on('mousedown', e => click(e, false))
+        const target = e => this.unclick(scroller, $(e.target))
+        $btup.on('mouseup', e => target(e))
+        $btdo.on('mouseup', e => target(e))
+
+        return this
     }
 
-    scroller(scrollPaneId, upButtonId, downButtonId) {
+    clickUpDown(scroller, $but, isUp) {
+        $but.addClass('selected')
+        console.log(scroller.$activeScrollPane)
+    }
+
+    unclick(scroller, $but) {
+        $but.removeClass('selected')
+    }
+
+    scroller(scrollPaneIds, upButtonId, downButtonId) {
         return {
-            scrollPaneId: scrollPaneId,
+            scrollPaneIds: scrollPaneIds,
             upButtonId: upButtonId,
             downButtonId: downButtonId
         }

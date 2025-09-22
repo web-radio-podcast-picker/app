@@ -320,6 +320,10 @@ find license and copyright informations in files /COPYRIGHT and /LICENCE
     background-color: rgba(0,0,0,0.3);
 }
 
+.arrow-up:hover,.arrow-down:hover {
+background-color: #44AAffAA !important
+}
+
 .arrow-up {
     rotate: 90deg;
 }

@@ -161,6 +161,13 @@ class WebRadioPickerModule extends ModuleBase {
             $("#rdl_btm").removeClass('hidden')
         }
 
+        ui.scrollers
+            .new(ui.scrollers.scroller(
+                ['wrp_radio_list', 'wrp_inf'],
+                'rdl_top',
+                'rdl_btm'
+            ))
+
         // modules are late binded. have the responsability to init bindings
         this.updateBindings()
     }
