@@ -328,12 +328,12 @@ find license and copyright informations in files /COPYRIGHT and /LICENCE
 
 .top-arrow {
     position: relative;
-    left: 50%;
+    left: Calc(50% - 1em);
     top: 0px;
 }
 
 .btm-arrow {
     position: relative;
-    left: 50%;
+    left: Calc(50% - 1em);
     top: Calc(100% - 100px);
 }
