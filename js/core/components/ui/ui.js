@@ -78,11 +78,16 @@ ui = {
         $popup.addClass('hidden')
     },
 
-    init_intro() {
+    init_pre_intro() {
         this.setupScreen()
         this.popups.init_popups()
-        this.initRotateYourDevicePopup()
-        this.updateOrientation()
+        //this.initRotateYourDevicePopup()
+        //this.updateOrientation()
+        $('#title_ver').text(' ' + settings.app.wrp.version
+            /*+ ' ' + settings.app.wrp.verDate*/)
+    },
+
+    init_intro() {
 
         const pid = 'intro_popup'
         const $popup = $('#' + pid)
@@ -109,6 +114,18 @@ ui = {
         setTimeout(() => {
             this.hide_intro_popup()
         }, settings.ui.introPopupDelay)
+    },
+
+    init_kiosk() {
+        ui.hide_intro()
+        //cui.setFullscreen(true)
+        $('.module-full-pane').removeClass('transparent')
+        this.hideFullscreenButton()
+    },
+
+    hideFullscreenButton() {
+        $('#fullscreen_button').addClass("hidden")
+        $('#bt_bar').addClass('wrp-but-col-no-fsbut')
     },
 
     hide_intro_popup() {

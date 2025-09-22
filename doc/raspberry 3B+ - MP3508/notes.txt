@@ -93,3 +93,52 @@
    93  history
    94  more ./MPI3508-show
    95  history
+
+---------------------------------------------------------
+
+sudo apt-get install evtest
+sudo evtest
+
+xmin=200,xmax=3900,ymin=200,ymax=3900
+
+---------------------------------------------------------
+
+/etc/lightdm/lightdm.conf       -> disable power saving
+/usr/share/dispsetup.sh
+
+scp 192.168.1.43:/usr/share/plymouth/themes/pix/splash.png .
+C:\Users\franc\source\repos\web-radio\img> scp ./splash.png 192.168.1.43:/home/franc 
+# not the good theme ?
+
+sudo plymouth-set-default-theme --rebuild-initrd pix
+
+---------------------------------------------------------
+
+uname -a
+Linux raspberrypi 6.12.25+rpt-rpi-v8 #1 SMP PREEMPT Debian 1:6.12.25-1+rpt1 (2025-04-30) aarch64 GNU/Linux
+
+-------------------------------------------------------
+
+xrandr
+kmsprint -l 
+xrandr -s 640x480
+
+xrandr --newmode $(gtf 480 320 75 | sed -ne 's/"//g;s/ Modeline //p')
+xrandr --addmode HDMI-1 480x320_75.00
+xrandr --output HDMI-1 --mode 480x320_75.00
+
+-------------------------------------------------------
+
+sudo apt purge wolfram-engine scratch scratch2 nuscratch sonic-pi idle3 -y
+sudo apt purge smartsim java-common minecraft-pi libreoffice* -y
+sudo apt clean
+sudo apt autoremove -y
+sudo apt update
+sudo apt upgrade
+
+    ---------------------------------------------------
+
+sudo nano /lib/systemd/system/kiosk.service
+sudo nano ~/kiosk.sh
+
+-------------------------------------------------------

@@ -46,9 +46,25 @@ app = {
         }
     },
 
+    initFlags() {
+        const flags = settings.flags
+        const urlParams = new URLSearchParams(window.location.search)
+        const qflags = urlParams.get('flags')
+        const t = qflags?.split('-')
+        flags.raspberry = t?.includes(Flag_Raspberry) || false
+        flags.kiosk = t?.includes(Flag_Kiosk) || false
+    },
+
     async run() {
 
-        ui.init_intro()
+        this.initFlags()
+        ui.init_pre_intro()
+
+        if (settings.flags.kiosk) {
+            ui.init_kiosk()
+        }
+        else
+            ui.init_intro()
 
         const opts = app.moduleLoader.opts(
             'wrp_mod_inf_txt_inview',

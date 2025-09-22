@@ -14,9 +14,14 @@ window.settings = {
             verDate: '8/23/2025'
         },
         wrp: {
-            version: '1.2.3',
-            verDate: '9/21/2025'
+            version: '1.2.4',
+            verDate: '9/22/2025'
         }
+    },
+
+    flags: {
+        raspberry: null,
+        kiosk: null
     },
 
     sys: {
@@ -249,7 +254,6 @@ window.settings = {
 
     // modules settings by modules ids
     modules: {
-
     }
 }
 

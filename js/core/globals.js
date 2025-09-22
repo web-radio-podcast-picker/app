@@ -6,6 +6,9 @@
 
 // app globals
 
+const Flag_Raspberry = 'raspberry'
+const Flag_Kiosk = 'kiosk'
+
 const AudioContext = window.AudioContext || window.webkitAudioContext
 window.requestAnimationFrame = (function () {
     return window.requestAnimationFrame ||

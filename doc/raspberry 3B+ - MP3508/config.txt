@@ -56,11 +56,13 @@ config_hdmi_boost=7
 hdmi_drive=2
 hdmi_force_hotplug=1
 hdmi_group=2
-hdmi_mode=1
+#hdmi_mode=1         #??
 hdmi_mode=87
-hdmi_cvt 480 320 60 6 0 0 0
+hdmi_cvt=480 320 60 6 0 0 0
 dtoverlay=ads7846,cs=1,penirq=25,penirq_pull=2,speed=50000,keep_vref_on=0
-dtparam=swapxy=0,pmax=255,xohms=150,xmin=200,xmax=3900,ymin=200,ymax=3900
+dtparam=swapxy=0,pmax=255,xohms=150,xmin=0,xmax=4000,ymin=0,ymax=4000
+framebuffer_width=480
+framebuffer_height=320
 
 [all]
 dtoverlay=w1-gpio

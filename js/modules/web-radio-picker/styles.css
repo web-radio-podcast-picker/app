@@ -61,6 +61,10 @@ find license and copyright informations in files /COPYRIGHT and /LICENCE
     overflow: clip;
 }
 
+.wrp-but-col-no-fsbut {
+    grid-template-rows: 48px 0px 48px !important;
+}
+
 .wrp-layout {
     grid-template-columns: Calc(50% - 3.5em) 1.5em 4em 1.5em Calc(50% - 3.5em);
     display: grid;
