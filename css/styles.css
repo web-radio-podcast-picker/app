@@ -275,8 +275,8 @@ div.channel-opts-pane span.unit {
 }
 
 .channel-menu-pane {
-    display: flex;
-    grid-auto-columns: min-content min-content min-content min-content min-content min-content auto;
+    display: flow;
+    /* grid-auto-columns: min-content min-content min-content min-content min-content min-content auto; */
 }
 
 .channel-menu-pane-grid {
@@ -286,8 +286,8 @@ div.channel-opts-pane span.unit {
 div.channel-menu-pane > span.menu-item,
 div.channel-menu-pane > span.label
 {
-    margin-right: 0.5em;
-    margin-left: 0em;
+    /* margin-right: 0.5em; */
+    /* margin-left: 0em; */
 }
 
 #channel_settings_label {
@@ -1117,6 +1117,10 @@ iframe {
 
 html,body,div,span {
     scrollbar-color: #FFFF00AA transparent;
+}
+
+.spc-left {
+    margin-left: 0.1em;
 }
 
 ::-webkit-scrollbar {

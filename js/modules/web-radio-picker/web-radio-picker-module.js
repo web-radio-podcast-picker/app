@@ -144,19 +144,11 @@ class WebRadioPickerModule extends ModuleBase {
                 this.showImage()
         })
 
-        /*$('#wrp_btn_pause_on').on('click', () => {
-            app.toggleOPause(() => this.updatePauseView())
-        })
-
-        $('#wrp_btn_pause_off').on('click', () => {
-            app.toggleOPause(() => this.updatePauseView())
-        })*/
-
         $('#wrp_btn_pause_onoff').on('click', () => {
             app.toggleOPause(() => this.updatePauseView())
         })
 
-        $('#btn_wrp_inf').on('click', async () => {
+        $('#btn_wrp_info').on('click', async () => {
             await this.toggleInfos()
         })
 

@@ -58,8 +58,17 @@ find license and copyright informations in files /COPYRIGHT and /LICENCE
     margin-top: 0.7em;
 }
 
+.bt-bar-img-small-but {
+    width: 32px;
+    height: 32px;
+}
+
 .bt-bar-but-cnt {
     height: 48px;
+}
+
+.bt-bar-but-cnt.clickable {
+    cursor: pointer;
 }
 
 #wrp_btn_pause_onoff {
@@ -70,7 +79,7 @@ find license and copyright informations in files /COPYRIGHT and /LICENCE
     display: grid;
     grid-row: 1;
     margin-bottom: 2px;
-    grid-template-rows: 48px 48px 48px 48px;
+    grid-template-rows: 48px 48px 48px 48px 48px;
     overflow: clip;
     align-items: center;
 }
@@ -100,7 +109,7 @@ find license and copyright informations in files /COPYRIGHT and /LICENCE
 }
 
 .wrp-but-col-no-fsbut {
-    grid-template-rows: 48px 0px 48px 48px !important;
+    grid-template-rows: 48px 0px 48px 48px 48px !important;
 }
 
 .wrp-layout {
