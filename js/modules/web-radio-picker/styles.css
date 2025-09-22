@@ -84,6 +84,21 @@ find license and copyright informations in files /COPYRIGHT and /LICENCE
     line-height: 1.6em !important;
 }
 
+.bt-bar-text-but {
+    width: 36px;
+    height: 36px;
+    margin-top: 0.1em;
+}
+
+.btn-wrp-text-img {
+    display: inline-block;
+    width: 1.4em !important;
+    font-size: 2em;
+    padding: 0px;
+    margin: 0px;
+    line-height: 1em !important;
+}
+
 .wrp-but-col-no-fsbut {
     grid-template-rows: 48px 0px 48px 48px !important;
 }
