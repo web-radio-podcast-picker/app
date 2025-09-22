@@ -335,5 +335,5 @@ find license and copyright informations in files /COPYRIGHT and /LICENCE
 .btm-arrow {
     position: relative;
     left: 50%;
-    top: 0px;
+    top: Calc(100% - 100px);
 }
