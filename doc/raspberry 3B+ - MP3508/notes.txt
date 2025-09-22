@@ -141,4 +141,20 @@ sudo apt upgrade
 sudo nano /lib/systemd/system/kiosk.service
 sudo nano ~/kiosk.sh
 
+sudo systemctl list-units --type target
+systemctl list-units --type target --all
+sudo systemctl stop kiosk.service
+sudo systemctl start kiosk.service
+systemctl get-default
+sudo systemctl disable kiosk.service
+systemctl daemon-reload
+
+kill /usr/sbin/lightdm ?
+/etc/X11/xorg.conf.d
+/usr/share/X11/xorg.conf.d
+$HOME/.config/openbox/autostart
+sudo usermod -aG tty,video <username>
+sudo chmod 666 /dev/tty0
+sudo chmod 0744 /dev/fb0
+
 -------------------------------------------------------

@@ -313,3 +313,27 @@ find license and copyright informations in files /COPYRIGHT and /LICENCE
 .wrp-inf-val {
     margin-bottom: 0.5em;
 }
+
+.arrow-up,.arrow-down {
+    cursor: pointer;
+}
+
+.arrow-up {
+    rotate: 90deg;
+}
+
+.arrow-down {
+    rotate: -90deg;
+}
+
+.top-arrow {
+    position: relative;
+    left: 50%;
+    top: 0px;
+}
+
+.btm-arrow {
+    position: relative;
+    left: 50%;
+    top: 0px;
+}

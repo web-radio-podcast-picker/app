@@ -152,6 +152,15 @@ class WebRadioPickerModule extends ModuleBase {
             await this.toggleInfos()
         })
 
+        ui.onResize.push(async () => {
+            await this.updateInfoPane()
+        })
+
+        if (settings.flags.noSwype) {
+            $("#rdl_top").removeClass('hidden')
+            $("#rdl_btm").removeClass('hidden')
+        }
+
         // modules are late binded. have the responsability to init bindings
         this.updateBindings()
     }
@@ -163,6 +172,14 @@ class WebRadioPickerModule extends ModuleBase {
         for (var o in installedRelatedApps)
             s += o.platform + ',' + o.id + ',' + o.url
         return s
+    }
+
+    async updateInfoPane() {
+        $('#ifp_window_size').text(this.getWindowSizeText())
+    }
+
+    getWindowSizeText() {
+        return cui.viewSize().width + ' x ' + cui.viewSize().height
     }
 
     async initInfoPane() {
@@ -177,18 +194,23 @@ class WebRadioPickerModule extends ModuleBase {
         const name = s => {
             txt(s, 'wrp-inf-name')
         }
-        const val = s => {
+        const val = (s, id) => {
+            if (typeof s != 'object')
+                s = $('<span id="' + id + '">' + s + '</span>')
             txt(s, 'wrp-inf-val')
         }
         const w = (k, v) => {
             name(k)
-            val(v)
+            val(v, 'ifp_' + k.replaceAll(' ', '_'))
         }
         w('user agent', navigator.userAgent)
-        w('window size', cui.viewSize().width + ' x ' + cui.viewSize().height)
+        w('window size', this.getWindowSizeText())
         w('platform', settings.sys.platformText)
         const appinf = await this.getRelatedApps()
-        w('app', appinf)
+        w('app', settings.app.wrp.version + ' ' + settings.app.wrp.verDate)
+        if (appinf != '?')
+            val(appinf)
+        w('parameters', window.location.search)
         w('project readme',
             $('<a href="https://github.com/franck-gaspoz/web-radio-podcast-picker/blob/main/README.md" target="blank">https://github.com/franck-gaspoz/web-radio-podcast-picker/blob/main/README.md</a>'))
     }
