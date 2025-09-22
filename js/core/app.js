@@ -53,6 +53,7 @@ app = {
         const t = qflags?.split('-')
         flags.raspberry = t?.includes(Flag_Raspberry) || false
         flags.kiosk = t?.includes(Flag_Kiosk) || false
+        flags.noSwype = t?.includes(Flag_NoSwype) || false
     },
 
     async run() {

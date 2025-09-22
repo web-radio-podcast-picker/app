@@ -8,6 +8,7 @@
 
 const Flag_Raspberry = 'raspberry'
 const Flag_Kiosk = 'kiosk'
+const Flag_NoSwype = 'noswype'
 
 const AudioContext = window.AudioContext || window.webkitAudioContext
 window.requestAnimationFrame = (function () {

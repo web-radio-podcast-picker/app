@@ -21,7 +21,8 @@ window.settings = {
 
     flags: {
         raspberry: null,
-        kiosk: null
+        kiosk: null,
+        noSwype: null
     },
 
     sys: {
