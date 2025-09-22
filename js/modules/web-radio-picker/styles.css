@@ -316,6 +316,8 @@ find license and copyright informations in files /COPYRIGHT and /LICENCE
 
 .arrow-up,.arrow-down {
     cursor: pointer;
+    width: 42px;
+    background-color: rgba(0,0,0,0.3);
 }
 
 .arrow-up {
