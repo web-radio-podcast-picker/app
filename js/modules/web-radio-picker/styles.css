@@ -331,11 +331,11 @@ find license and copyright informations in files /COPYRIGHT and /LICENCE
 .top-arrow {
     position: relative;
     left: Calc(50% - 1em);
-    top: 0px;
+    top: 1.5em;
 }
 
 .btm-arrow {
     position: relative;
     left: Calc(50% - 1em);
-    top: Calc(100% - 100px);
+    top: Calc(Calc(100% - 100px) - 0.5em);
 }
