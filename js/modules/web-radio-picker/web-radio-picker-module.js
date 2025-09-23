@@ -256,16 +256,26 @@ class WebRadioPickerModule extends ModuleBase {
         $but.toggleClass('selected')
         $pane.toggleClass('hidden')
         var scPane = null
+        var rd = null
         if (!$pane.hasClass('hidden')) {
             $('#wrp_inf').empty()
             await this.initInfoPane()
             scPane = 'wrp_inf'
+            rd = this.RDList(RadioList_Info, null)
         }
         else {
             scPane = 'wrp_radio_list'
+            rd = this.currentRDList_Back
         }
         if (settings.features.swype.enableArrowsButtonsOverScrollPanes)
             ui.scrollers.update(scPane)
+        this.setCurrentRDList(rd)
+    }
+
+    setCurrentRDList(currentRDList) {
+        this.currentRDList_Back = this.currentRDList
+        this.currentRDList = currentRDList
+        console.log('currentRDList=' + JSON.stringify(this.currentRDList))
     }
 
     async hideInfoPane() {
@@ -499,7 +509,7 @@ class WebRadioPickerModule extends ModuleBase {
     allRadios() {
         this.clearFilters()
         this.updateRadList(this.itemsAll, RadioList_All)
-        this.currentRDList = RadioList_All
+        this.setCurrentRDList(this.RDList(RadioList_All, null))
     }
 
     noImage() {
@@ -585,12 +595,11 @@ class WebRadioPickerModule extends ModuleBase {
 
     initBtn($container, $item, t, currentRDList) {
         $item.on('click', async () => {
-            console.log('currentRDList=' + JSON.stringify(currentRDList))
             await this.hideInfoPane()
             this.clearFilters()
             $item.addClass('item-selected')
             this.updateRadList(t, currentRDList.listId)
-            this.currentRDList = currentRDList
+            this.setCurrentRDList(currentRDList)
         })
     }
 
