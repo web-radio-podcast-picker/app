@@ -24,7 +24,15 @@ window.requestAnimationFrame = (function () {
 })();
 
 // radios lists
+
+// in 'lists' pane
 const RadioList_History = 'History'
+// out of 'lists' pane
+const RadioList_List = 'List'
+const RadioList_All = 'All'
+const RadioList_Art = 'Art'
+const RadioList_Lang = 'Lang'
+const RadioList_Tag = 'Tag'
 
 // sources ids
 const Source_Id_AudioInput = 'Audio Input'

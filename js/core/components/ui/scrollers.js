@@ -85,7 +85,7 @@ class Scrollers {
         $but.addClass('selected')
         const $sp = scroller.$activeScrollPane()
         var y = $sp.scrollTop()
-        var maxy = $sp[0].scrollHeight - $sp[0].clientHeight
+        //var maxy = $sp[0].scrollHeight - $sp[0].clientHeight
         var $items = $sp.find('div')
         if ($items.length == 0) return
 
@@ -96,7 +96,6 @@ class Scrollers {
         scroller.speed *= scroller.acceleration
 
         $sp.scrollTop(y)
-        //this.setUpArrowsVis(scroller)
 
         scroller.pressedTimer = setTimeout(
             () => this.clickUpDown(scroller, $but, isUp),
@@ -108,7 +107,6 @@ class Scrollers {
         $but.removeClass('selected')
         clearTimeout(scroller.pressedTimer)
         scroller.speed = 1
-        console.log('scrollend')
     }
 
     unclick(scroller, $but) {
