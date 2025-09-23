@@ -23,6 +23,9 @@ window.requestAnimationFrame = (function () {
         };
 })();
 
+// radios lists
+const RadioList_History = 'History'
+
 // sources ids
 const Source_Id_AudioInput = 'Audio Input'
 const Source_Id_Media = 'Media'

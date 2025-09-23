@@ -50,7 +50,7 @@ class WebRadioPickerModule extends ModuleBase {
     itemsByName = []        // all items by name
     itemsByLang = []        // items by lang (those having one)
     itemsAll = []           // all items
-    history = []            // historic (auto play list)
+    history = null          // history (radiosList)
     listCount = 0
     filteredListCount = 0
     tabs = ['btn_wrp_tag_list',
@@ -68,6 +68,7 @@ class WebRadioPickerModule extends ModuleBase {
 
     m3uDataBuilder = null
     radioDataParser = null
+    radiosLists = new RadiosLists()
 
     constructor() {
         super()
@@ -82,6 +83,10 @@ class WebRadioPickerModule extends ModuleBase {
             this.m3uDataBuilder = new M3UDataBuilder().init(this)
         else
             this.radioDataParser = new RadioDataParser().init(this)
+        this.radiosLists.init()
+        this.radiosLists.addList(RadioList_History)
+        this.history = this.radiosLists.getList(RadioList_History).items
+        window.wrpp = this
     }
 
     initTabs() {
@@ -111,6 +116,7 @@ class WebRadioPickerModule extends ModuleBase {
         this.buildTagItems()
             .buildArtItems()
             .buildLangItems()
+            .buildListsItems()
         //.buildRadItems()  // no initial full list
 
         const readOnly = { readOnly: true, attr: 'text' };
@@ -136,17 +142,19 @@ class WebRadioPickerModule extends ModuleBase {
             this.allRadios()
         })
 
-        $('#wrp_fullscreen_on').on('click', () => {
-            cui.setFullscreen(true)
-            if (this.resizeEventInitialized)
-                this.showImage()
-        })
+        if (!settings.features.constraints.noFullscreenToggling) {
+            $('#wrp_fullscreen_on').on('click', () => {
+                cui.setFullscreen(true)
+                if (this.resizeEventInitialized)
+                    this.showImage()
+            })
 
-        $('#wrp_fullscreen_off').on('click', () => {
-            cui.setFullscreen(false)
-            if (this.resizeEventInitialized)
-                this.showImage()
-        })
+            $('#wrp_fullscreen_off').on('click', () => {
+                cui.setFullscreen(false)
+                if (this.resizeEventInitialized)
+                    this.showImage()
+            })
+        }
 
         $('#wrp_btn_pause_onoff').on('click', () => {
             app.toggleOPause(() => this.updatePauseView())
@@ -164,17 +172,17 @@ class WebRadioPickerModule extends ModuleBase {
             this.updateInfoPaneOnEndOfFrame()
         })
 
-        if (settings.flags.noSwype) {
+        if (settings.features.swype.enableArrowsButtonsOverScrollPanes) {
             $("#rdl_top").removeClass('hidden')
             $("#rdl_btm").removeClass('hidden')
-        }
 
-        ui.scrollers
-            .new(ui.scrollers.scroller(
-                ['wrp_radio_list', 'wrp_inf'],
-                'rdl_top',
-                'rdl_btm'
-            ))
+            ui.scrollers
+                .new(ui.scrollers.scroller(
+                    ['wrp_radio_list', 'wrp_inf'],
+                    'rdl_top',
+                    'rdl_btm'
+                ))
+        }
 
         // modules are late binded. have the responsability to init bindings
         this.updateBindings()
@@ -246,13 +254,17 @@ class WebRadioPickerModule extends ModuleBase {
         const $pane = $('#wrp_inf_pane')
         $but.toggleClass('selected')
         $pane.toggleClass('hidden')
+        var scPane = null
         if (!$pane.hasClass('hidden')) {
-            ui.scrollers.update('wrp_inf')
             $('#wrp_inf').empty()
             await this.initInfoPane()
+            scPane = 'wrp_inf'
         }
-        else
-            ui.scrollers.update('wrp_radio_list')
+        else {
+            scPane = 'wrp_radio_list'
+        }
+        if (settings.features.swype.enableArrowsButtonsOverScrollPanes)
+            ui.scrollers.update(scPane)
     }
 
     async hideInfoPane() {
@@ -304,6 +316,31 @@ class WebRadioPickerModule extends ModuleBase {
 
     updateBindings() {
         ui.bindings.updateBindingTarget('wrp_list_count')
+    }
+
+    buildListsItems() {
+        const $pl = $('#opts_wrp_play_list')
+        const t = this.radiosLists.lists
+        const names = Object.keys(t)
+        names.sort((a, b) => a.localeCompare(b))
+        var i = 0
+        names.forEach(name => {
+            const lst = t[name].items
+            const { item, $item } = this.buildListItem(
+                name,
+                i,
+                { count: lst.length }
+            )
+            i++
+            this.initBtn($pl, $item, lst)
+            $pl.append($item)
+        })
+    }
+
+    updateListsItems() {
+        const $pl = $('#opts_wrp_play_list')
+        $pl.find('*').remove()
+        this.buildListsItems()
     }
 
     buildTagItems() {
@@ -615,20 +652,18 @@ class WebRadioPickerModule extends ModuleBase {
 
     addToHistory(o) {
         o.listenDate = Date.now
-        if (this.history.includes(o)) return
-        const $pl = $('#opts_wrp_play_list')
+        if (this.history.includes(o))
+            // TODO: move to first position instead
+            return
+        const paneId = 'opts_wrp_play_list'
+        const $pl = $('#' + paneId)
 
         this.history.unshift(o)
-
-        const { item, $item } = this.buildListItem(
-            o.name,
-            this.history.length - 1,
-            { data: o }
-        )
-        $pl.prepend($item)
-        this.initBtn($pl, $item, [o])
+        this.updateListsItems()
+        const listItem = this.radiosLists.findListItem(RadioList_History, paneId)
     }
 
+    // radio item model
     radioItem(id, name, groupName, url, logo) {
         return {
             id: id,
@@ -636,6 +671,7 @@ class WebRadioPickerModule extends ModuleBase {
             description: null,
             groupTitle: groupName,
             groups: [],
+            favLists: [],
             url: url,
             logo: logo,
             artist: null,

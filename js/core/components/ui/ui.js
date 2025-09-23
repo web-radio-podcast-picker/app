@@ -83,10 +83,11 @@ ui = {
     init_pre_intro() {
         this.setupScreen()
         this.popups.init_popups()
-        //this.initRotateYourDevicePopup()
-        //this.updateOrientation()
-        $('#title_ver').text(' ' + settings.app.wrp.version
-            /*+ ' ' + settings.app.wrp.verDate*/)
+        if (!settings.features.constraints.enableRotateYourDevicePopup) {
+            this.initRotateYourDevicePopup()
+            this.updateOrientation()
+        }
+        $('#title_ver').text(' ' + settings.app.wrp.version)
     },
 
     init_intro() {
@@ -105,9 +106,10 @@ ui = {
 
         $popup.on('click', () => {
             this.hide_intro_popup()
+            this.init_post_intro()
             cui.setFullscreen(true)
             setTimeout(() => {
-                $('.module-full-pane').removeClass('transparent')
+                this.showUI()
             }, 200)
         })
     },
@@ -118,11 +120,12 @@ ui = {
         }, settings.ui.introPopupDelay)
     },
 
+    // flag:kiosk
     init_kiosk() {
-        ui.hide_intro()
+        this.hide_intro_popup()
         //cui.setFullscreen(true)
-        $('.module-full-pane').removeClass('transparent')
-        this.hideFullscreenButton()
+        this.showUI()
+        this.init_post_intro()
     },
 
     hideFullscreenButton() {
@@ -134,6 +137,15 @@ ui = {
         const pid = 'intro_popup'
         const $popup = $('#' + pid)
         $popup.addClass("hidden")
+    },
+
+    showUI() {
+        $('.module-full-pane').removeClass('transparent')
+    },
+
+    init_post_intro() {
+        if (settings.features.constraints.noFullscreenToggling)
+            this.hideFullscreenButton()
     },
 
     init_ui() {

@@ -1,5 +1,5 @@
 {
-  "addToHistoryDelay": 10000,
+  "addToHistoryDelay": 1000,
   "artistUrlFilters": [
     ["https://streaming.exclusive.radio/", "toArtistFromtreamingExclusive"],
     ["http://streaming.exclusive.radio/", "toArtistFromtreamingExclusive"],

@@ -14,7 +14,7 @@ window.settings = {
             verDate: '8/23/2025'
         },
         wrp: {
-            version: '1.2.11',
+            version: '1.2.12',
             verDate: '9/23/2025'
         }
     },
@@ -28,13 +28,14 @@ window.settings = {
 
     features: {
         swype: {
-            noSwype: null,
+            enableArrowsButtonsOverScrollPanes: null,
             speed: 1,
             acceleration: 1.14,
             repeatDelay: 50
         },
         constraints: {
-            noFullscreenToggling: null
+            noFullscreenToggling: null,
+            enableRotateYourDevicePopup: null
         },
         smallDisp: {
             increaseSmallText: null

@@ -55,6 +55,19 @@ app = {
         flags.kiosk = t?.includes(Flag_Kiosk) || false
         flags.noSwype = t?.includes(Flag_NoSwype) || false
         flags.smallDisp = t?.includes(Flag_SmallDisp) || false
+        this.initFeatures()
+    },
+
+    initFeatures() {
+        const flags = settings.flags
+        const feats = settings.features
+        // support for noswype
+        feats.swype.enableArrowsButtonsOverScrollPanes = flags.noSwype
+        // constraints
+        feats.constraints.noFullscreenToggling = flags.kiosk
+        feats.constraints.enableRotateYourDevicePopup = flags.kiosk
+        // small display
+        feats.smallDisp.increaseSmallText = flags.smallDisp
     },
 
     async run() {
