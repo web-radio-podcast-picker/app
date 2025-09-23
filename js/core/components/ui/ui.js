@@ -23,6 +23,7 @@ ui = {
     errExcludes: ['AbortError'],
     errReplaces: [['NotSupportedError', 'no connection']],
     onResize: [],
+    vizTabActivated: false,
 
     init(oscilloscope) {
 

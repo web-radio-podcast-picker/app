@@ -95,10 +95,14 @@ class WebRadioPickerModule extends ModuleBase {
     onTabChanged($tab) {
         const c = $tab[0]
         const $cnv = $(app.canvas)
-        if (c.id == 'btn_wrp_logo')
+        if (c.id == 'btn_wrp_logo') {
             $cnv.removeClass('hidden')
-        else
+            ui.vizTabActivated = true
+        }
+        else {
             $cnv.addClass('hidden')
+            ui.vizTabActivated = false
+        }
     }
 
     initView(viewId) {
@@ -153,7 +157,11 @@ class WebRadioPickerModule extends ModuleBase {
         })
 
         ui.onResize.push(async () => {
-            await this.updateInfoPane()
+            await this.updateInfoPaneOnResize()
+        })
+
+        app.startFramePermanentOperations.push(() => {
+            this.updateInfoPaneOnEndOfFrame()
         })
 
         if (settings.flags.noSwype) {
@@ -181,12 +189,20 @@ class WebRadioPickerModule extends ModuleBase {
         return s
     }
 
-    async updateInfoPane() {
+    async updateInfoPaneOnResize() {
         $('#ifp_window_size').text(this.getWindowSizeText())
+    }
+
+    updateInfoPaneOnEndOfFrame() {
+        $('#ifp_FPS').text(this.getFPS())
     }
 
     getWindowSizeText() {
         return cui.viewSize().width + ' x ' + cui.viewSize().height
+    }
+
+    getFPS() {
+        return 'lim=' + settings.ui.maxRefreshRate + ' cur=' + vround2(app.frameAvgFPS)
     }
 
     async initInfoPane() {
@@ -217,7 +233,10 @@ class WebRadioPickerModule extends ModuleBase {
         w('app', settings.app.wrp.version + ' ' + settings.app.wrp.verDate)
         if (appinf != '?')
             val(appinf)
-        w('parameters', window.location.search)
+        var ps = window.location.search
+        if (ps == null || ps === undefined || ps == '') ps = '-'
+        w('parameters', ps)
+        w('FPS', this.getFPS())
         w('project readme',
             $('<a href="https://github.com/franck-gaspoz/web-radio-podcast-picker/blob/main/README.md" target="blank">https://github.com/franck-gaspoz/web-radio-podcast-picker/blob/main/README.md</a>'))
     }
@@ -228,9 +247,12 @@ class WebRadioPickerModule extends ModuleBase {
         $but.toggleClass('selected')
         $pane.toggleClass('hidden')
         if (!$pane.hasClass('hidden')) {
+            ui.scrollers.update('wrp_inf')
             $('#wrp_inf').empty()
             await this.initInfoPane()
         }
+        else
+            ui.scrollers.update('wrp_radio_list')
     }
 
     async hideInfoPane() {
@@ -295,8 +317,8 @@ class WebRadioPickerModule extends ModuleBase {
                 { count: this.items[k].length }
             )
             i++
-            $tag.append($item)
             this.initBtn($tag, $item, this.items[k])
+            $tag.append($item)
         })
         return this
     }
@@ -320,9 +342,9 @@ class WebRadioPickerModule extends ModuleBase {
                     count: ''
                 })
             j++
-            $container.append($item)
             btns[name] = $item
             this.initBtn($container, $item, itemsByName[name])
+            $container.append($item)
         })
 
         keys.forEach(name => {

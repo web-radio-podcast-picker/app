@@ -106,6 +106,7 @@ class FFTView {
 
     run() {
 
+        if (!ui.vizTabActivated) return
         if (!this.visible) return
         if (this.canvas == null) return
         if (this.channel != null && !this.channel.connected) return

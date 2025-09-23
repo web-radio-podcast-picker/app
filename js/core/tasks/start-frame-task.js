@@ -19,7 +19,6 @@ startFrameTask = {
         this.frameStartTime = Date.now()
         if (lst != null) {
             this.frameDuration = this.frameStartTime - lst
-            //console.log(this.frameDuration)
             const fps = 1000.0 / this.frameDuration;
             this.frameFPS = fps;
         }

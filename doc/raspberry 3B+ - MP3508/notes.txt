@@ -139,7 +139,7 @@ sudo apt upgrade
     ---------------------------------------------------
 
 sudo nano /lib/systemd/system/kiosk.service
-sudo nano ~/kiosk.sh
+nano ~/kiosk.sh
 
 sudo systemctl list-units --type target
 systemctl list-units --type target --all
