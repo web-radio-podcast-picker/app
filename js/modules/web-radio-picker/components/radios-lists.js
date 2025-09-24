@@ -13,9 +13,9 @@ class RadiosLists {
 
     }
 
-    addList(name) {
+    addList(listId, name) {
         if (!this.lists[name])
-            this.lists[name] = this.radioList(name)
+            this.lists[name] = this.radioList(listId, name)
     }
 
     getList(name) {
@@ -35,19 +35,21 @@ class RadiosLists {
     }
 
     // radio list model
-    radioList(name) {
+    radioList(listId, name) {
         return {
+            listId: listId,
             name: name,
             items: []
         }
     }
 
     // radio reference model - locate a radio in a list
-    radioRef() {
+    radioRef(item, $item) {
         return {
             listName: null,
             category: null,
-            item: null
+            item: item,
+            $item: $item
         }
     }
 

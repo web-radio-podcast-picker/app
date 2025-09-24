@@ -69,7 +69,7 @@ class WebRadioPickerModule extends ModuleBase {
     m3uDataBuilder = null
     radioDataParser = null
     radiosLists = new RadiosLists()
-    currentRDList = null
+    uiState = new UIState().init(this)
 
     constructor() {
         super()
@@ -85,7 +85,7 @@ class WebRadioPickerModule extends ModuleBase {
         else
             this.radioDataParser = new RadioDataParser().init(this)
         this.radiosLists.init()
-        this.radiosLists.addList(RadioList_History)
+        this.radiosLists.addList(RadioList_List, RadioList_History)
         this.history = this.radiosLists.getList(RadioList_History).items
         window.wrpp = this
     }
@@ -261,11 +261,11 @@ class WebRadioPickerModule extends ModuleBase {
             $('#wrp_inf').empty()
             await this.initInfoPane()
             scPane = 'wrp_inf'
-            rd = this.RDList(RadioList_Info, null)
+            rd = this.uiState.RDList(RadioList_Info, null, null)
         }
         else {
             scPane = 'wrp_radio_list'
-            rd = this.currentRDList_Back
+            rd = this.uiState.currentRDList_Back
         }
         if (settings.features.swype.enableArrowsButtonsOverScrollPanes)
             ui.scrollers.update(scPane)
@@ -273,9 +273,7 @@ class WebRadioPickerModule extends ModuleBase {
     }
 
     setCurrentRDList(currentRDList) {
-        this.currentRDList_Back = this.currentRDList
-        this.currentRDList = currentRDList
-        console.log('currentRDList=' + JSON.stringify(this.currentRDList))
+        this.uiState.updateCurrentRDList(currentRDList)
     }
 
     async hideInfoPane() {
@@ -344,13 +342,11 @@ class WebRadioPickerModule extends ModuleBase {
             )
             i++
             this.initBtn($pl, $item, lst,
-                this.RDList(RadioList_List, name)
+                this.uiState.RDList(RadioList_List, name, $item)
             )
             $pl.append($item)
         })
     }
-
-    RDList(listId, name) { return { listId: listId, name: name } }
 
     updateListsItems() {
         const $pl = $('#opts_wrp_play_list')
@@ -370,7 +366,7 @@ class WebRadioPickerModule extends ModuleBase {
             )
             i++
             this.initBtn($tag, $item, this.items[k],
-                this.RDList(RadioList_Tag, k))
+                this.uiState.RDList(RadioList_Tag, k, $item))
             $tag.append($item)
         })
         return this
@@ -397,7 +393,7 @@ class WebRadioPickerModule extends ModuleBase {
             j++
             btns[name] = $item
             this.initBtn($container, $item, itemsByName[name],
-                this.RDList(listId, name))
+                this.uiState.RDList(listId, name, $item))
             $container.append($item)
         })
 
@@ -509,7 +505,7 @@ class WebRadioPickerModule extends ModuleBase {
     allRadios() {
         this.clearFilters()
         this.updateRadList(this.itemsAll, RadioList_All)
-        this.setCurrentRDList(this.RDList(RadioList_All, null))
+        this.setCurrentRDList(this.uiState.RDList(RadioList_All, null, null))
     }
 
     noImage() {
