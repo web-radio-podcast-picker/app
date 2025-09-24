@@ -49,11 +49,13 @@ class UIState {
         console.log('currentRDList=' + JSON.stringify(this.currentRDList))
     }
 
-    // a playable item (not a group)
-    updateCurrentRDItem(rdItem) {
-        const rdItemRef = this.wrpp.radiosLists.radioRef(
+    // a playable item (not a group) : radioItem
+    // build an RD
+    updateCurrentRDItem(radioItem) {
+        /*const rdItemRef = this.wrpp.radiosLists.radioRef(
 
-        )
+        )*/
+        console.log('currentRDItem=' + JSON.stringify(radioItem))
     }
 
     // build a RDList struct

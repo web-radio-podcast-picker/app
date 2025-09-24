@@ -106,7 +106,6 @@ class WebRadioPickerModule extends ModuleBase {
             ui.vizTabActivated = true
         }
         else {
-
             $cnv.addClass('hidden')
             ui.vizTabActivated = false
         }
@@ -457,6 +456,7 @@ class WebRadioPickerModule extends ModuleBase {
         ui.scrollers.update('wrp_radio_list')
     }
 
+    // build a playable item
     buildListItem(text, j, opts) {
         if (opts === undefined) opts = null
 
@@ -607,6 +607,7 @@ class WebRadioPickerModule extends ModuleBase {
         })
     }
 
+    // init a playable item
     initItemRad($rad, $item, o) {
         $item.on('click', async () => {
 
@@ -652,11 +653,20 @@ class WebRadioPickerModule extends ModuleBase {
                 this.onLoading(o)
 
                 const pl = async () => {
+
+                    // turn on channel
                     this.updatePauseView()
+
+                    // setup channel media
                     await app.updateChannelMedia(
                         ui.getCurrentChannel(),
                         o.url
                     )
+
+                    // update ui state
+                    this.uiState.updateCurrentRDItem(o)
+
+                    // add to history
                     const tid = setTimeout(() => this.addToHistory(o),
                         this.getSettings().addToHistoryDelay
                     )
