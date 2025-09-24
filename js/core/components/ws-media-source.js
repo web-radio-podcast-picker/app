@@ -27,7 +27,7 @@ class WRPPWSMediaSource {
         this.audio.addEventListener('loadedmetadata', (ev) => {
             // equivalent to a load success event
             if (settings.debug.trace)
-                console.log('Metadata loaded:', this.audio.src)
+                logger.log('Metadata loaded:', this.audio.src)
 
             if (WRPPMediaSource.onLoadSuccess != null)
                 WRPPMediaSource.onLoadSuccess(this.audio)
@@ -36,7 +36,7 @@ class WRPPWSMediaSource {
         this.audio.addEventListener('error', () => {
             const err = this.getAudioSourceError()
             if (settings.debug.trace)
-                console.log(err)
+                logger.log(err)
 
             if (err.code != MediaError.MEDIA_ERR_ABORTED
                 && WRPPMediaSource.onLoadError != null)
@@ -45,8 +45,8 @@ class WRPPWSMediaSource {
 
         this.audio.addEventListener('canplaythrough', async (o) => {
             if (settings.debug.trace) {
-                console.log('can play through')
-                console.log(o)
+                logger.log('can play through')
+                logger.log(o)
             }
             if (!WRPPMediaSource.sourcePlugged) {
                 //await oscilloscope.initChannelForMedia(app.channel)
@@ -77,7 +77,7 @@ class WRPPWSMediaSource {
                 //this.withWaveHeader(data, 2, 44100)
             )
         } catch (e) {
-            console.log(e)
+            logger.log(e)
         }
     }
 
@@ -91,24 +91,24 @@ class WRPPWSMediaSource {
         })
             .then((response) => {
                 const reader = response.body.getReader()
-                console.log('reader getted')
+                logger.log('reader getted')
 
                 reader.read().then(async function pump({ done, value }) {
                     if (done) {
                         // Do something with last chunk of data then exit reader
-                        console.log('stream end')
+                        logger.log('stream end')
                         return
                     }
                     // Otherwise do something here to process current chunk
                     await t.handleAudioChunk(audioContext, value)
-                    console.log('chunk received: ' + value.byteLength)
+                    logger.log('chunk received: ' + value.byteLength)
 
                     // Read some more, and call this function again
                     return reader.read().then(pump)
                 })
 
             })
-            .catch((err) => console.error(err))
+            .catch((err) => logger.error(err))
     }
 
     async loadFile2(url, audioContext, anaylser) {
@@ -129,7 +129,7 @@ class WRPPWSMediaSource {
 
                 const audioStream = parseIcyResponse(response, metadata => {
                     for (const [key, value] of metadata.entries()) {
-                        console.log(`Rx ICY Metadata: ${key}: ${value}`)
+                        logger.log(`Rx ICY Metadata: ${key}: ${value}`)
                     }
                     const title = metadata.get('StreamTitle')
                     if (title) {
@@ -155,7 +155,7 @@ class WRPPWSMediaSource {
 
                 mediaSource.endOfStream()
             } catch (err) {
-                console.error('Error streaming audio:', err.message)
+                logger.error('Error streaming audio:', err.message)
                 //trackDisplay.textContent = 'Failed to load stream'
             }
         })

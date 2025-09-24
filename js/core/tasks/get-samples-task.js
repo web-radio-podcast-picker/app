@@ -62,7 +62,7 @@ class GetSamplesTask {
                 this.channel.analyzerRight.getFloatTimeDomainData(this.rightDataArray)
             }
         } else {
-            console.error("Analyzer not initialized")
+            logger.error("Analyzer not initialized")
             return;
         }
     }

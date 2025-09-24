@@ -85,11 +85,11 @@ class M3UDataBuilder {
                         try {
                             this.wrp.items[g].push(item)
                         } catch (err) {
-                            console.log(err)
+                            logger.log(err)
                         }
                     }
                     else {
-                        console.log(g)
+                        logger.log(g)
                     }
                 }
             })

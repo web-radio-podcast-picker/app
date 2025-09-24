@@ -25,10 +25,20 @@ class Scrollers {
         const $scrollPanes =
             scroller.scrollPaneIds.map(id => $('#' + id))
 
-        const $activeScrollPane = () => $scrollPanes.reduce((acc, $sp) =>
+        const $activeScrollPane = /*() => $scrollPanes.reduce((acc, $sp) =>
             $sp.parent().hasClass('hidden') ?
                 (acc == null ? $sp : acc)
-                : $sp)
+                : $sp)*/
+            () => {
+                var res = null
+                $scrollPanes.forEach(($sp, i) => {
+                    if (res == null
+                        && !$sp.parent().hasClass('hidden')
+                        && !$sp.hasClass('hidden'))
+                        res = $sp
+                })
+                return res
+            }
 
         const $btup = $('#' + scroller.upButtonId)
         const $btdo = $('#' + scroller.downButtonId)

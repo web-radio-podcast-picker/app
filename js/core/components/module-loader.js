@@ -37,7 +37,7 @@ class ModuleLoader {
         inf2 = (inf2 === undefined || inf2 == null) ? '' : ('...' + inf2)
         const txt = inf + inf2
         $('#' + opts.infId).text(txt)
-        console.log(txt)
+        logger.log(txt)
         setTimeout(() => {
             $('#' + opts.infId).text('')
         }, settings.ui.introPopupDelay)
@@ -84,7 +84,7 @@ class ModuleLoader {
         }
         script.onerror = e => {
             this.showError(opts, 'load module ' + opts.id + ' failed')
-            console.log(url)
+            logger.log(url)
         }
         script.src = url
 

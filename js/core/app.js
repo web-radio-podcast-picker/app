@@ -70,8 +70,13 @@ app = {
         feats.smallDisp.increaseSmallText = flags.smallDisp
     },
 
+    initLogger() {
+        window.logger = new Logger('opts_log_pane')
+    },
+
     async run() {
 
+        this.initLogger()
         this.initFlags()
         ui.init_pre_intro()
 
@@ -129,7 +134,7 @@ app = {
                 .enumerateDevices()
                 .then((devices) => {
                     devices.forEach((device) => {
-                        console.log(`${device.kind}: ${device.label} id = ${device.deviceId}`)
+                        logger.log(`${device.kind}: ${device.label} id = ${device.deviceId}`)
 
                         if (device.kind == Device_Kind_Id_Audio_Input &&
                             device.deviceId == Device_Id_Default
@@ -143,7 +148,7 @@ app = {
                     })
                 })
                 .catch((err) => {
-                    console.error(`${err.name}: ${err.message}`)
+                    logger.error(`${err.name}: ${err.message}`)
                 })
         }
     },
@@ -324,7 +329,7 @@ app = {
     deleteChannel(channelId) {
         const channel = oscilloscope.getChannel(channelId)
         if (channel == null)
-            console.error('channel not found', channelId)
+            logger.error('channel not found', channelId)
         else {
             channel.deleteSource()
             ui.channels.removeControls(channel)
@@ -398,7 +403,7 @@ app = {
 }
 
 document.addEventListener('DOMContentLoaded', function () {
-    if (settings.debug.trace)
-        console.log('DOM fully loaded and parsed')
+    if (settings.debug.info)
+        console.log('start app')
     app.run()
 }, false)

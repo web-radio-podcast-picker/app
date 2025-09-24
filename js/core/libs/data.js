@@ -62,13 +62,13 @@ function xeval(expr, showError, assignValue) {
 function handleXEvalError(expr, err, showError) {
     // ignore or debug
     if (settings.debug.trace) {
-        console.log(expr, err.message)
+        logger.log(expr, err.message)
         ui.showError(err.message, null, null, null, err)
     }
     window.xeval_err = err
     if (settings.debug.stackTrace)
-        console.log(err)
-    //console.debug(err)
+        logger.log(err)
+    //logger.debug(err)
     return { success: false }
 }
 

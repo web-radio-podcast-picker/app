@@ -53,7 +53,7 @@ class Toggles {
             } catch (err) {
                 // ignore or debug
                 if (settings.debug.debug)
-                    console.log(err)
+                    logger.log(err)
             }
         }
     }

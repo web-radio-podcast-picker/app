@@ -222,6 +222,23 @@ find license and copyright informations in files /COPYRIGHT and /LICENCE
     padding: 1em;
 }
 
+#wrp_info_but_bar {
+    grid-template-columns: min-content;
+    background-color: darkblue;
+}
+
+#wrp_inf_pane {
+    grid-template-rows: min-content;
+}
+
+#opts_wrp_inf {
+    grid-row: 2 !important;
+}
+
+#opts_log_pane {
+    grid-row: 2 !important;
+}
+
 #btn_wrp_inf.selected {
     cursor: pointer;
 }
@@ -342,4 +359,13 @@ background-color: #44AAffAA !important
     position: relative;
     left: Calc(50% - 1em);
     top: Calc(Calc(100% - 100px) - 1em);
+}
+
+.log-item {
+    display: block;
+    line-height: 1.5em;
+}
+
+.log-item-error {
+    color: red;
 }

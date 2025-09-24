@@ -77,6 +77,14 @@ cui = {
             width: html.clientWidth /*- settings.ui.clientWidthBorder*/,
             height: html.clientHeight /*- settings.ui.clientHeightBorder*/
         };
+    },
+
+    // use html width*height
+    getOrientation() {
+        const vs = this.viewSize()
+        if (vs.width >= vs.height)
+            return Screen_Orientation_Landscape
+        return Screen_Orientation_Portrait
     }
 
 }

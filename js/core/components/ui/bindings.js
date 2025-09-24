@@ -101,7 +101,7 @@ class Bindings {
                 } catch (err) {
                     // ignore or debug
                     if (settings.debug.debug)
-                        console.log(err, binding)
+                        logger.log(err, binding)
                 }
             }
             app.updateDisplay()

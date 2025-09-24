@@ -38,7 +38,7 @@ ui = {
         if (!this.uiInitialized) {
             this.init_ui()
             this.uiInitialized = true
-            console.log("UI initialized")
+            logger.log("UI initialized")
         }
     },
 
@@ -54,7 +54,7 @@ ui = {
         const onIconId = 'wrp_fullscreen_on'
         document.addEventListener('fullscreenchange', () => {
             if (settings.debug.trace)
-                console.log('fullscreen changed')
+                logger.log('fullscreen changed')
             if (document.fullscreenElement) {
                 $('#' + offIconId).removeClass('hidden')
                 $('#' + onIconId).addClass('hidden')
@@ -290,7 +290,7 @@ ui = {
             $e.text(messOrEvent)
             $e.removeClass('hidden')
         }
-        console.error(messOrEvent)
+        logger.error(messOrEvent)
 
         /*  // auto hide timer
             setTimeout(() => {
@@ -310,13 +310,22 @@ ui = {
 
     updateOrientation() {
         const or = this.getOrientation()
-        if (or != Screen_Orientation_Landscape)
+        if (or != Screen_Orientation_Landscape) {
             this.showRotateYourDevicePopup()
-        else
+            logger.log('show rotate your device popup')
+        }
+        else {
             this.hideRotateYourDevicePopup()
+            logger.log('hide rotate your device popup')
+        }
     },
 
     getOrientation() {
+        return cui.getOrientation()
+    },
+
+    // use navigator property
+    getOrientationNavProp() {
         const orientation = screen.orientation.type;
         var ori = ''
         if (orientation.includes('portrait')) {
@@ -324,6 +333,7 @@ ui = {
         } else if (orientation.includes('landscape')) {
             ori = Screen_Orientation_Landscape
         }
+        logger.log('getOrientation = ' + ori)
         return ori
     }
 }

@@ -30,10 +30,10 @@ audioInputDevice = {
             }
 
             if (settings.debug.info)
-                console.log('Media stream obtained:', this.stream)
+                logger.log('Media stream obtained:', this.stream)
             return this.stream
         } catch (err) {
-            console.error('Error accessing media devices.', err)
+            logger.error('Error accessing media devices.', err)
         }
     },
 

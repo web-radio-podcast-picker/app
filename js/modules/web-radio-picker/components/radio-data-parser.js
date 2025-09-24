@@ -47,7 +47,7 @@ class RadioDataParser {
                 try {
                     this.wrp.itemsByLang[item.lang].push(item)
                 } catch (e) {
-                    console.log(item)
+                    logger.log(item)
                 }
             }
 
@@ -56,7 +56,7 @@ class RadioDataParser {
                     if (this.wrp.items[grp])
                         this.wrp.items[grp].push(item)
                 } catch (e) {
-                    console.log(item)
+                    logger.log(item)
                 }
             })
 

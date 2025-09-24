@@ -14,7 +14,7 @@ window.settings = {
             verDate: '8/23/2025'
         },
         wrp: {
-            version: '1.2.13',
+            version: '1.2.14',
             verDate: '9/23/2025'
         }
     },
@@ -170,4 +170,4 @@ window.settings = {
 settings.dataStore = new DataStore()
 
 if (settings.debug.info)
-    console.log('Settings initialized:', settings);
+    console.log('Settings initialized:', settings)

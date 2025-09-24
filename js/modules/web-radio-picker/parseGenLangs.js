@@ -7,7 +7,7 @@ lang = {
     langKeys: [],
 
     run: function () {
-        console.log('run')
+        logger.log('run')
 
         // lang keys translations
 
@@ -29,7 +29,7 @@ lang = {
 
             var n = tn[0]
             const q = tn[1]
-            //console.log(n)
+            //logger.log(n)
 
             const lst = n.split(',')
             lst.forEach(x => {
@@ -103,13 +103,13 @@ lang = {
         }
         this.gl = gl2
 
-        console.log(Object.getOwnPropertyNames(u).length)
-        console.log(u)
+        logger.log(Object.getOwnPropertyNames(u).length)
+        logger.log(u)
 
-        console.log('')
+        logger.log('')
 
-        console.log(Object.getOwnPropertyNames(this.gl).length)
-        console.log(this.gl)
+        logger.log(Object.getOwnPropertyNames(this.gl).length)
+        logger.log(this.gl)
     },
 
     findLang(n) {

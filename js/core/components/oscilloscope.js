@@ -40,7 +40,7 @@ oscilloscope = {
             this.channels.splice(idx, 1);
         }
         else
-            console.error('channel not found', channel);
+            logger.error('channel not found', channel);
     },
 
     addChannel(channel, addControls) {
@@ -88,7 +88,7 @@ oscilloscope = {
             }
         } catch (err) {
             if (settings.debug.debug)
-                console.log(err)
+                logger.log(err)
         }
         channel.out = on
     },
@@ -146,7 +146,7 @@ oscilloscope = {
 
             channel.streamSource = channel.source.createMediaStreamSource(channel)
             if (settings.debug.info)
-                console.log("Input media stream ok")
+                logger.log("Input media stream ok")
 
             // source -> splitter -> analyzer Left
             //                    -> analyzer Right
@@ -166,11 +166,11 @@ oscilloscope = {
                 .init(channel)
 
             if (settings.debug.info)
-                console.log("Input stream set", channel.analyzer)
+                logger.log("Input stream set", channel.analyzer)
         }
         else {
             channel.error = "No input media stream"
-            console.error(channel.error)
+            logger.error(channel.error)
         }
     },
 

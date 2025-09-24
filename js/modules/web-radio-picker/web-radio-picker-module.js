@@ -57,6 +57,7 @@ class WebRadioPickerModule extends ModuleBase {
         'btn_wrp_art_list',
         'btn_wrp_play_list',
         'btn_wrp_logo']
+    infTabs = ['btn_wrp_inf', 'btn_log_pane']
     addToHistoryTimer = null
     resizeEventInitialized = false
     // pre-processed data
@@ -94,6 +95,16 @@ class WebRadioPickerModule extends ModuleBase {
                 this.onTabChanged($c)
             }
         })
+        ui.tabs.initTabs(this.infTabs, {
+            onPostChange: ($c) => {
+                this.onInfTabChanged($c)
+            }
+        })
+    }
+
+    onInfTabChanged($tab) {
+        if (settings.features.swype.enableArrowsButtonsOverScrollPanes)
+            ui.scrollers.update($tab.attr('id').replace('btn_', 'opts_'))
     }
 
     onTabChanged($tab) {
@@ -162,7 +173,7 @@ class WebRadioPickerModule extends ModuleBase {
             app.toggleOPause(() => this.updatePauseView())
         })
 
-        $('#btn_wrp_info').on('click', async () => {
+        $('#btn_wrp_infos').on('click', async () => {
             await this.toggleInfos()
         })
 
@@ -180,7 +191,7 @@ class WebRadioPickerModule extends ModuleBase {
 
             ui.scrollers
                 .new(ui.scrollers.scroller(
-                    ['wrp_radio_list', 'wrp_inf'],
+                    ['wrp_radio_list', 'opts_wrp_inf', 'opts_log_pane'],
                     'rdl_top',
                     'rdl_btm'
                 ))
@@ -216,7 +227,7 @@ class WebRadioPickerModule extends ModuleBase {
     }
 
     async initInfoPane() {
-        const $pane = $('#wrp_inf')
+        const $pane = $('#opts_wrp_inf')
         const txt = (s, cl) => {
             const isjq = typeof s == 'object'
             const txt = !isjq ? s : ''
@@ -247,7 +258,7 @@ class WebRadioPickerModule extends ModuleBase {
         if (ps == null || ps === undefined || ps == '') ps = '-'
         w('parameters', ps)
         w('FPS', this.getFPS())
-        w('Sampling', settings.input.bufferSize + ' bytes, '
+        w('sampling', settings.input.bufferSize + ' bytes, '
             + frequency(app.channel?.audioContext?.sampleRate).text2
         )
         w('FFT', settings.input.bufferSize * 2 + ' bytes, '
@@ -258,16 +269,18 @@ class WebRadioPickerModule extends ModuleBase {
     }
 
     async toggleInfos() {
-        const $but = $('#btn_wrp_inf')
+        const $but = $('#btn_wrp_infos')
         const $pane = $('#wrp_inf_pane')
+        const $radPane = $('#wrp_radio_list')
         $but.toggleClass('selected')
         $pane.toggleClass('hidden')
+        $radPane.toggleClass('hidden')
         var scPane = null
         var rd = null
         if (!$pane.hasClass('hidden')) {
-            $('#wrp_inf').empty()
+            $('#opts_wrp_inf').empty()
             await this.initInfoPane()
-            scPane = 'wrp_inf'
+            scPane = 'opts_wrp_inf'
             rd = this.uiState.RDList(RadioList_Info, null, null)
         }
         else {
@@ -494,7 +507,7 @@ class WebRadioPickerModule extends ModuleBase {
         this.buildRadListItems(lst, listId)
         this.filteredListCount = lst.length
         this.updateBindings()
-        console.log('update rad list')
+        logger.log('update rad list')
     }
 
     clearFilters() {

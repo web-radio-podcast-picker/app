@@ -64,6 +64,7 @@
     <script src=" ./js/core/globals.js?hash=o"></script>
     <script src="./js/core/settings.js?hash=o"></script>
     <!-- code loader -->
+    <script src="./js/core/components/logger.js?hash=o"></script>
     <script src="./js/core/libs/converters.js?hash=o"></script>
     <script src="./js/core/libs/data.js?hash=o"></script>
     <script src="./js/core/components/module-base.js?hash=o"></script>
@@ -308,7 +309,7 @@
                         <img class="bt-bar-text-but" src="./img/wave-42.png" alt="display">
                     </span>
                 </div>
-                <div class="gr5 gc1 bt-bar-but-cnt clickable" id="btn_wrp_info">
+                <div class="gr5 gc1 bt-bar-but-cnt clickable" id="btn_wrp_infos">
                     <img class="bt-bar-img-but bt-bar-img-small-but" src="./img/settings-42.png" alt="settings">
                 </div>
             </div>
@@ -352,13 +353,13 @@
                     <div class="gr1 gc2">
                         <span id="btn_wrp_all_radios" class="menu-item menu-item-blue 
                             onoff-small-height no-width">Clear filter</span>
-                        <!--<span id="btn_wrp_inf" class="menu-item menu-item-blue 
-                            onoff-small-height no-width">ℹ️</span>-->
                     </div>
                     <span id="wrp_list_count" class="gr1 gc3"></span>
 
                 </div>
+
                 <!-- radio list -->
+
                 <div class="gr2 gc1 border-light margin-top gridh100p lim-height">
                     <div id="wrp_radio_list" class="wrp-scroll-pane">
                     </div>
@@ -368,12 +369,27 @@
                 <img id="rdl_btm" alt="radio list down" src="./img/arrow-50.png"
                     class="hidden gr2 gc1 btm-arrow arrow-down">
 
-                <!--<div class="gr2 gc1 align-center">
-                    <img alt="radio list up" src="./img/arrow-50.png" class="arrow-up">
-                </div>-->
                 <!-- infos pane -->
+
                 <div id="wrp_inf_pane" class="hidden gr2 gc1 border-light margin-top gridh100p lim-height">
-                    <div id="wrp_inf" class="wrp-scroll-pane wrp-inf-pane">
+                    <div id="wrp_info_but_bar" class="gr1 gc1 padding-small border-light grid">
+
+                        <div class="gr1 gc1 margin-right">
+                            <span id="btn_wrp_inf" class="menu-item menu-item-blue 
+                                onoff-small-height no-width selected">Info</span>
+                        </div>
+
+                        <div class="gr1 gc2">
+                            <span id="btn_log_pane" class="menu-item menu-item-blue 
+                                onoff-small-height no-width">Log</span>
+                        </div>
+
+                    </div>
+
+                    <div id="opts_wrp_inf" class="wrp-scroll-pane wrp-inf-pane">
+                    </div>
+
+                    <div id="opts_log_pane" class="wrp-scroll-pane wrp-inf-pane hidden">
                     </div>
                 </div>
 

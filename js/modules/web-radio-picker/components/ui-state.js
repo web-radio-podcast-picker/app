@@ -37,20 +37,20 @@ class UIState {
             .map(x => { return { 'listId': x, 'tabId': wrpp.uiState.listIdToTabId[x] } })
             .filter(x => x.tabId == tabId)
         this.currentTab = t.length > 0 ? t[0] : null
-        console.log('currentTab=' + JSON.stringify(t))
+        logger.log('currentTab=' + JSON.stringify(t))
     }
 
     updateCurrentRDList(newList) {
         this.currentRDList_Back = this.currentRDList
         this.currentRDList = newList
-        console.log('currentRDList=' + JSON.stringify(this.currentRDList))
+        logger.log('currentRDList=' + JSON.stringify(this.currentRDList))
     }
 
     // a playable item (not a group) : radioItem
     // build an RD
     updateCurrentRDItem(radioItem) {
         radioItem.ref = this.radioRef()
-        console.log('currentRDItem=' + JSON.stringify(radioItem))
+        logger.log('currentRDItem=' + JSON.stringify(radioItem))
     }
 
     // build a RDList struct
