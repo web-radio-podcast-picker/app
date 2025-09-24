@@ -26,7 +26,6 @@ class WRPPMediaSource {
 
     init() {
         const tagId = 'audio_tag'
-        //this.url = settings.media.demo.stereoAudioMediaURL
         this.audio = $('#' + tagId)[0]
 
         if (WRPPMediaSource.sourceInitialized) return

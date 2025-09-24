@@ -246,6 +246,12 @@ class WebRadioPickerModule extends ModuleBase {
         if (ps == null || ps === undefined || ps == '') ps = '-'
         w('parameters', ps)
         w('FPS', this.getFPS())
+        w('Sampling', settings.input.bufferSize + ' bytes, '
+            + frequency(app.channel?.audioContext?.sampleRate).text2
+        )
+        w('FFT', settings.input.bufferSize * 2 + ' bytes, '
+            + settings.fft.bars + ' bars'
+        )
         w('project readme',
             $('<a href="https://github.com/franck-gaspoz/web-radio-podcast-picker/blob/main/README.md" target="blank">https://github.com/franck-gaspoz/web-radio-podcast-picker/blob/main/README.md</a>'))
     }

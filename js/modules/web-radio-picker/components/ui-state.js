@@ -35,7 +35,7 @@ class UIState {
     updateCurrentRDList(newList) {
         this.currentRDList_Back = this.currentRDList
         this.currentRDList = newList
-        console.log('currentRDList=' + JSON.stringify(this.uiState.currentRDList))
+        console.log('currentRDList=' + JSON.stringify(this.currentRDList))
     }
 
     // a playable item (not a group)
