@@ -167,5 +167,7 @@ window.settings = {
     }
 }
 
+settings.dataStore = new DataStore()
+
 if (settings.debug.info)
     console.log('Settings initialized:', settings);
