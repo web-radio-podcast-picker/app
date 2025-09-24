@@ -7,7 +7,7 @@
 class RadiosLists {
 
     // radio lists
-    lists = []
+    lists = {}
 
     init() {
 
@@ -43,14 +43,11 @@ class RadiosLists {
         }
     }
 
-    // radio reference model - locate a radio in a list
-    radioRef(item, $item) {
-        return {
-            listName: null,
-            category: null,
-            item: item,
-            $item: $item
-        }
+    toJSON() {
+        return JSON.stringify(this.lists)
     }
 
+    fromJSON(str) {
+        this.lists = JSON.parse(str)
+    }
 }

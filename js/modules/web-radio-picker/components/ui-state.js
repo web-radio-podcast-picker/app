@@ -14,8 +14,6 @@ class UIState {
     currentRDItemRef = null
     // history of current items refs
     RDItemsRefsHistory = []
-    // the tab that opens the list (listId -> tabId)
-    listTabId = null
     // list id -> tab id
     listIdToTabId = {
         'RadioList_List': 'btn_wrp_play_list',
@@ -27,7 +25,6 @@ class UIState {
     }
     // current group tab
     currentTab = null
-
     wrpp = null
 
     init(wrpp) {
@@ -52,9 +49,7 @@ class UIState {
     // a playable item (not a group) : radioItem
     // build an RD
     updateCurrentRDItem(radioItem) {
-        /*const rdItemRef = this.wrpp.radiosLists.radioRef(
-
-        )*/
+        radioItem.ref = this.radioRef()
         console.log('currentRDItem=' + JSON.stringify(radioItem))
     }
 
@@ -64,6 +59,14 @@ class UIState {
             listId: listId,
             name: name,
             $item: $item
+        }
+    }
+
+    // radio reference model - locate a radio in a list
+    radioRef() {
+        return {
+            currentRDList: this.currentRDList,
+            currentTab: this.currentTab
         }
     }
 }

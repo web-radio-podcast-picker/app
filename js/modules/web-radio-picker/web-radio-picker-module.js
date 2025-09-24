@@ -50,7 +50,6 @@ class WebRadioPickerModule extends ModuleBase {
     itemsByName = []        // all items by name
     itemsByLang = []        // items by lang (those having one)
     itemsAll = []           // all items
-    history = null          // history (radiosList)
     listCount = 0
     filteredListCount = 0
     tabs = ['btn_wrp_tag_list',
@@ -86,7 +85,6 @@ class WebRadioPickerModule extends ModuleBase {
             this.radioDataParser = new RadioDataParser().init(this)
         this.radiosLists.init()
         this.radiosLists.addList(RadioList_List, RadioList_History)
-        this.history = this.radiosLists.getList(RadioList_History).items
         window.wrpp = this
     }
 
@@ -113,6 +111,8 @@ class WebRadioPickerModule extends ModuleBase {
     }
 
     initView(viewId) {
+
+        settings.dataStore.loadRadiosLists()
 
         this.initTabs()
         this.buildTagItems()
@@ -686,15 +686,18 @@ class WebRadioPickerModule extends ModuleBase {
 
     addToHistory(o) {
         o.listenDate = Date.now
-        if (this.history.includes(o))
+        const history = this.radiosLists.getList(RadioList_History).items
+        if (history.includes(o))
             // TODO: move to first position instead
             return
         const paneId = 'opts_wrp_play_list'
-        const $pl = $('#' + paneId)
+        //const $pl = $('#' + paneId)
 
-        this.history.unshift(o)
+        history.unshift(o)
         this.updateListsItems()
-        const listItem = this.radiosLists.findListItem(RadioList_History, paneId)
+        //const listItem = this.radiosLists.findListItem(RadioList_History, paneId)
+
+        settings.dataStore.saveRadiosLists()
     }
 
     // radio item model
