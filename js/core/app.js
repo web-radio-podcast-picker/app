@@ -65,7 +65,7 @@ app = {
         feats.swype.enableArrowsButtonsOverScrollPanes = flags.noSwype
         // constraints
         feats.constraints.noFullscreenToggling = flags.kiosk
-        feats.constraints.enableRotateYourDevicePopup = flags.kiosk
+        feats.constraints.enableRotateYourDevicePopup = !flags.kiosk
         // small display
         feats.smallDisp.increaseSmallText = flags.smallDisp
     },

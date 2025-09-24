@@ -44,6 +44,7 @@ ui = {
 
     setupScreen() {
         if (settings.features.constraints.enableRotateYourDevicePopup)
+            // not kiosk
             screen.orientation.addEventListener('change', () => this.updateOrientation())
         if (screen.lockOrientation) screen.lockOrientation(Screen_Orientation_Landscape)
         document.addEventListener('contextmenu', function (event) {
@@ -64,11 +65,6 @@ ui = {
         })
     },
 
-    initRotateYourDevicePopup() {
-        const pid = 'ryd_popup'
-        const $popup = $('#' + pid)
-    },
-
     showRotateYourDevicePopup() {
         const pid = 'ryd_popup'
         const $popup = $('#' + pid)
@@ -84,9 +80,9 @@ ui = {
     init_pre_intro() {
         this.setupScreen()
         this.popups.init_popups()
-        if (!settings.features.constraints.enableRotateYourDevicePopup) {
-            //this.initRotateYourDevicePopup()    // does nothing
-            //this.updateOrientation()
+        if (settings.features.constraints.enableRotateYourDevicePopup) {
+            // not kiosk
+            this.updateOrientation()        // mobile web
         }
         $('#title_ver').text(' ' + settings.app.wrp.version)
     },
