@@ -43,7 +43,8 @@ ui = {
     },
 
     setupScreen() {
-        screen.orientation.addEventListener('change', () => this.updateOrientation())
+        if (settings.features.constraints.enableRotateYourDevicePopup)
+            screen.orientation.addEventListener('change', () => this.updateOrientation())
         if (screen.lockOrientation) screen.lockOrientation(Screen_Orientation_Landscape)
         document.addEventListener('contextmenu', function (event) {
             event.preventDefault();
@@ -84,8 +85,8 @@ ui = {
         this.setupScreen()
         this.popups.init_popups()
         if (!settings.features.constraints.enableRotateYourDevicePopup) {
-            this.initRotateYourDevicePopup()
-            this.updateOrientation()
+            //this.initRotateYourDevicePopup()    // does nothing
+            //this.updateOrientation()
         }
         $('#title_ver').text(' ' + settings.app.wrp.version)
     },
