@@ -34,6 +34,7 @@ const RadioList_Art = 'Art'
 const RadioList_Lang = 'Lang'
 const RadioList_Tag = 'Tag'
 const RadioList_Info = 'Info'
+const RadioList_Viz = 'Viz'
 
 // sources ids
 const Source_Id_AudioInput = 'Audio Input'

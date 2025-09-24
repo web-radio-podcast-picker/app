@@ -106,9 +106,11 @@ class WebRadioPickerModule extends ModuleBase {
             ui.vizTabActivated = true
         }
         else {
+
             $cnv.addClass('hidden')
             ui.vizTabActivated = false
         }
+        this.uiState.updateCurrentTab(c.id)
     }
 
     initView(viewId) {

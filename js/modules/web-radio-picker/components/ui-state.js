@@ -22,14 +22,25 @@ class UIState {
         'RadioList_All': 'btn_wrp_all_radios',  // not a tab
         'RadioList_Art': 'btn_wrp_art_list',
         'RadioList_Lang': 'btn_wrp_lang_list',
-        'RadioList_Tag': 'btn_wrp_tag_list'
+        'RadioList_Tag': 'btn_wrp_tag_list',
+        'RadioList_Viz': 'btn_wrp_logo'
     }
+    // current group tab
+    currentTab = null
 
     wrpp = null
 
     init(wrpp) {
         this.wrpp = wrpp
         return this
+    }
+
+    updateCurrentTab(tabId) {
+        const t = Object.keys(wrpp.uiState.listIdToTabId)
+            .map(x => { return { 'listId': x, 'tabId': wrpp.uiState.listIdToTabId[x] } })
+            .filter(x => x.tabId == tabId)
+        this.currentTab = t.length > 0 ? t[0] : null
+        console.log('currentTab=' + JSON.stringify(t))
     }
 
     updateCurrentRDList(newList) {
@@ -39,7 +50,7 @@ class UIState {
     }
 
     // a playable item (not a group)
-    updateCurrentItem(rdItem) {
+    updateCurrentRDItem(rdItem) {
         const rdItemRef = this.wrpp.radiosLists.radioRef(
 
         )
