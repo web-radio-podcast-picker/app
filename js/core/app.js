@@ -54,7 +54,7 @@ app = {
         flags.raspberry = t?.includes(Flag_Raspberry) || false
         flags.kiosk = t?.includes(Flag_Kiosk) || false
         flags.noSwype = t?.includes(Flag_NoSwype) || false
-        flags.smallDisp = t?.includes(Flag_SmallDisp) || false
+        flags.app = t?.includes(Flag_App) || false
         this.initFeatures()
     },
 

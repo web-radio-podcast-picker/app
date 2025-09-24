@@ -14,8 +14,8 @@ window.settings = {
             verDate: '8/23/2025'
         },
         wrp: {
-            version: '1.2.14',
-            verDate: '9/23/2025'
+            version: '1.2.15',
+            verDate: '9/25/2025'
         }
     },
 
@@ -23,7 +23,8 @@ window.settings = {
         raspberry: null,
         kiosk: null,
         noSwype: null,
-        smallDisp: null
+        smallDisp: null,
+        app: null
     },
 
     features: {

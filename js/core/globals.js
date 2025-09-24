@@ -10,6 +10,7 @@ const Flag_Raspberry = 'raspberry'
 const Flag_Kiosk = 'kiosk'
 const Flag_NoSwype = 'noswype'
 const Flag_SmallDisp = 'smldisp'
+const Flag_App = 'app'
 
 const AudioContext = window.AudioContext || window.webkitAudioContext
 window.requestAnimationFrame = (function () {
