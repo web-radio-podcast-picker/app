@@ -330,7 +330,7 @@ ui = {
     },
 
     getOrientation() {
-        if (settings.features.constraints.isIPhone) return getOrientationNavProp()
+        if (settings.features.constraints.isIPhone) return this.getOrientationNavProp()
         const or = cui.getOrientation()
         return or
     },
