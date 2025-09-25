@@ -112,6 +112,12 @@ ui = {
         })
     },
 
+    skip_intro() {
+        this.hide_intro_popup()
+        this.init_post_intro()
+        this.showUI()
+    },
+
     hide_intro() {
         setTimeout(() => {
             this.hide_intro_popup()
