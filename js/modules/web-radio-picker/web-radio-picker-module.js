@@ -23,8 +23,6 @@ class WebRadioPickerModule extends ModuleBase {
     // ----- module spec ----->
 
     id = 'web_radio_picker'         // unique id
-    version = '1.0'
-    versionDate = '09/02/2025'
     author = 'franck gaspoz'        // author
     cert = null                     // certification if any
 
@@ -87,6 +85,31 @@ class WebRadioPickerModule extends ModuleBase {
         this.radiosLists.init()
         this.radiosLists.addList(RadioList_List, RadioList_History)
         window.wrpp = this
+    }
+
+    getListItem(rdList) {
+        if (rdList == null || rdList.listId == null)
+            return null
+        var res = null
+        switch (rdList.listId) {
+            case RadioList_All:
+                // ...
+                break
+            case RadioList_Viz: // pas d'item
+                break
+            default:
+                const butId = this.uiState.listIdToTabId[rdList.listId]
+                if (butId !== undefined) {
+                    const paneId = butId.replace('btn_', 'opts_')
+                    res = this.radiosLists.findListItemByName(rdList.name, paneId)
+                }
+                break
+        }
+        return res
+    }
+
+    getRadListItem(item) {
+        return this.radiosLists.findListItemById(item.id, 'wrp_radio_list')
     }
 
     initTabs() {
@@ -174,7 +197,7 @@ class WebRadioPickerModule extends ModuleBase {
         })
 
         $('#btn_wrp_infos').on('click', async () => {
-            await this.toggleInfos()
+            /*await*/ this.toggleInfos()
         })
 
         ui.onResize.push(async () => {
@@ -199,6 +222,23 @@ class WebRadioPickerModule extends ModuleBase {
 
         // modules are late binded. have the responsability to init bindings
         this.updateBindings()
+
+        // ui state
+        const firstInit = settings.dataStore.initUIStateStorage(
+            () => {
+                // first launch init
+                const us = this.uiState
+                us.updateCurrentTab('btn_wrp_tag_list')
+                us.updateCurrentRDList(us.RDList(
+                    RadioList_Tag,
+                    null,
+                    $('#btn_wrp_tag_list')
+                ))
+            }
+        )
+
+        if (!firstInit)
+            settings.dataStore.loadUIState()
     }
 
     async getRelatedApps() {
@@ -226,7 +266,7 @@ class WebRadioPickerModule extends ModuleBase {
         return 'lim=' + settings.ui.maxRefreshRate + ' cur=' + vround2(app.frameAvgFPS)
     }
 
-    async initInfoPane() {
+    /*async*/ initInfoPane() {
         const $pane = $('#opts_wrp_inf')
         const txt = (s, cl) => {
             const isjq = typeof s == 'object'
@@ -250,7 +290,7 @@ class WebRadioPickerModule extends ModuleBase {
         w('user agent', navigator.userAgent)
         w('window size', this.getWindowSizeText())
         w('platform', settings.sys.platformText)
-        const appinf = await this.getRelatedApps()
+        const appinf = '?'//await this.getRelatedApps()
         w('app', settings.app.wrp.version + ' ' + settings.app.wrp.verDate)
         if (appinf != '?')
             val(appinf)
@@ -268,7 +308,7 @@ class WebRadioPickerModule extends ModuleBase {
             $('<a href="https://github.com/franck-gaspoz/web-radio-podcast-picker/blob/main/README.md" target="blank">https://github.com/franck-gaspoz/web-radio-podcast-picker/blob/main/README.md</a>'))
     }
 
-    async toggleInfos() {
+    /*async*/ toggleInfos() {
         const $but = $('#btn_wrp_infos')
         const $pane = $('#wrp_inf_pane')
         const $radPane = $('#wrp_radio_list')
@@ -279,7 +319,7 @@ class WebRadioPickerModule extends ModuleBase {
         var rd = null
         if (!$pane.hasClass('hidden')) {
             $('#opts_wrp_inf').empty()
-            await this.initInfoPane()
+            /*await*/ this.initInfoPane()
             scPane = 'opts_wrp_inf'
             rd = this.uiState.RDList(RadioList_Info, null, null)
         }
@@ -296,10 +336,10 @@ class WebRadioPickerModule extends ModuleBase {
         this.uiState.updateCurrentRDList(currentRDList)
     }
 
-    async hideInfoPane() {
+    /*async*/ hideInfoPane() {
         const $pane = $('#wrp_inf_pane')
         if (!$pane.hasClass('hidden'))
-            await this.toggleInfos()
+            /*await*/ this.toggleInfos()
     }
 
     updatePauseView() {
@@ -357,6 +397,7 @@ class WebRadioPickerModule extends ModuleBase {
             const lst = t[name].items
             const { item, $item } = this.buildListItem(
                 name,
+                null,
                 i,
                 { count: lst.length }
             )
@@ -381,6 +422,7 @@ class WebRadioPickerModule extends ModuleBase {
         keys.forEach(k => {
             const { item, $item } = this.buildListItem(
                 this.ifQuoteUnQuote(k),//unquote(k),
+                null,
                 i,
                 { count: this.items[k].length }
             )
@@ -406,6 +448,7 @@ class WebRadioPickerModule extends ModuleBase {
         keys.forEach(name => {
             const { item, $item } = this.buildListItem(
                 name,
+                null,
                 j,
                 {
                     count: ''
@@ -460,7 +503,7 @@ class WebRadioPickerModule extends ModuleBase {
         const $rad = $('#wrp_radio_list')
         var j = 0
         items.forEach(n => {
-            const { item, $item } = this.buildListItem(n.name, j)
+            const { item, $item } = this.buildListItem(n.name, n.id, j)
             j++
             this.initItemRad($rad, $item, n)
             $rad.append($item)
@@ -470,12 +513,13 @@ class WebRadioPickerModule extends ModuleBase {
     }
 
     // build a playable item
-    buildListItem(text, j, opts) {
+    buildListItem(text, id, j, opts) {
         if (opts === undefined) opts = null
 
         const item = document.createElement('div')
         const $item = $(item)
 
+        $item.attr('data-id', id)
         $item.addClass('wrp-list-item')
         $item.removeClass('hidden')
         if (j & 1)
@@ -611,8 +655,8 @@ class WebRadioPickerModule extends ModuleBase {
     }
 
     initBtn($container, $item, t, currentRDList) {
-        $item.on('click', async () => {
-            await this.hideInfoPane()
+        $item.on('click', /*async*/() => {
+            /*await*/ this.hideInfoPane()
             this.clearFilters()
             $item.addClass('item-selected')
             this.updateRadList(t, currentRDList.listId)
@@ -729,6 +773,19 @@ class WebRadioPickerModule extends ModuleBase {
             lang: null,
             channels: null
         }
+    }
+
+    findRadItem(item) {
+        var res = null
+        this.itemsAll.some(o => {
+            if (item.name == o.name
+                && item.url == o.url) {
+                res = o
+                return true
+            }
+            return false
+        })
+        return res
     }
 
     // set data from .m3u and export to json

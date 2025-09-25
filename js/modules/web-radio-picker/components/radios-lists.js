@@ -22,7 +22,7 @@ class RadiosLists {
         return this.lists[name]
     }
 
-    findListItem(name, containerId) {
+    findListItemByName(name, containerId) {
         const $items = $('#' + containerId).find('.wrp-list-item')
         const t = $items.map((i, e) => {
             return {
@@ -31,6 +31,18 @@ class RadiosLists {
             }
         })
         const r = t.filter((i, x) => x.name == name)
+        return (r.length == 0) ? null : r[0]
+    }
+
+    findListItemById(id, containerId) {
+        const $items = $('#' + containerId).find('.wrp-list-item')
+        const t = $items.map((i, e) => {
+            return {
+                item: e,
+                id: e.attributes['data-id'].value
+            }
+        })
+        const r = t.filter((i, x) => x.id == id)
         return (r.length == 0) ? null : r[0]
     }
 

@@ -5,6 +5,7 @@
 */
 
 const ST_RadiosLists = 'RadiosLists'
+const ST_UIState = 'UIState'
 
 class DataStore {
 
@@ -26,5 +27,29 @@ class DataStore {
         if (localStorage === undefined) return
         const str = wrpp.radiosLists.toJSON()
         localStorage.setItem(ST_RadiosLists, str)
+    }
+
+    initUIStateStorage(initFunc) {
+        if (localStorage === undefined) return
+        const str = localStorage.getItem(ST_UIState)
+        if (str != null) return false // storage exists. do nothing
+        initFunc()
+        return true
+    }
+
+    loadUIState() {
+        if (localStorage === undefined) return
+        const str = localStorage.getItem(ST_UIState)
+        if (str == null) {
+            this.saveUIState()
+            return
+        }
+        wrpp.uiState.fromJSON(str)
+    }
+
+    saveUIState() {
+        if (localStorage === undefined) return
+        const str = wrpp.uiState.toJSON()
+        localStorage.setItem(ST_UIState, str)
     }
 }
