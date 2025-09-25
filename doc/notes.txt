@@ -112,3 +112,5 @@ iphone: pas pause on start , play must be on the block
 plateform==iphone (minus) -> mobile
 ..
 pour le web : si iphone inverser le test 'rotate your screen'
+
+iphone: restore UI with raditem : no pause button, show play. but play button that launch the connection
