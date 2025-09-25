@@ -24,7 +24,8 @@ window.settings = {
         kiosk: null,
         noSwype: null,
         smallDisp: null,
-        app: null
+        app: null,
+        novis: null
     },
 
     features: {
@@ -36,7 +37,8 @@ window.settings = {
         },
         constraints: {
             noFullscreenToggling: null,
-            enableRotateYourDevicePopup: null
+            enableRotateYourDevicePopup: null,
+            noVisualizers: null
         },
         smallDisp: {
             increaseSmallText: null
