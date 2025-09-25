@@ -26,7 +26,7 @@ class WRPPWSMediaSource {
 
         this.audio.addEventListener('loadedmetadata', (ev) => {
             // equivalent to a load success event
-            if (settings.debug.trace)
+            if (settings.debug.debug)
                 logger.log('Metadata loaded:', this.audio.src)
 
             if (WRPPMediaSource.onLoadSuccess != null)
@@ -35,7 +35,7 @@ class WRPPWSMediaSource {
 
         this.audio.addEventListener('error', () => {
             const err = this.getAudioSourceError()
-            if (settings.debug.trace)
+            if (settings.debug.debug)
                 logger.log(err)
 
             if (err.code != MediaError.MEDIA_ERR_ABORTED
@@ -44,9 +44,10 @@ class WRPPWSMediaSource {
         })
 
         this.audio.addEventListener('canplaythrough', async (o) => {
-            if (settings.debug.trace) {
+            if (settings.debug.debug) {
                 logger.log('can play through')
-                logger.log(o)
+                if (settings.debug.trace)
+                    logger.log(o)
             }
             if (!WRPPMediaSource.sourcePlugged) {
                 //await oscilloscope.initChannelForMedia(app.channel)

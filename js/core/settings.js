@@ -14,7 +14,7 @@ window.settings = {
             verDate: '8/23/2025'
         },
         wrp: {
-            version: '1.2.15.3',
+            version: '1.2.15.4',
             verDate: '9/25/2025'
         }
     },
@@ -25,7 +25,7 @@ window.settings = {
         noSwype: null,
         smallDisp: null,
         app: null,
-        novis: null
+        noviz: null
     },
 
     features: {
@@ -37,6 +37,7 @@ window.settings = {
         },
         constraints: {
             noFullscreenToggling: null,
+            noIntroPopup: null,
             enableRotateYourDevicePopup: null,
             noVisualizers: null
         },
@@ -53,7 +54,7 @@ window.settings = {
 
     debug: {
         debug: true,
-        trace: true,
+        trace: false,
         info: true,
         stackTrace: false
     },

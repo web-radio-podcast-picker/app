@@ -291,13 +291,14 @@ class WebRadioPickerModule extends ModuleBase {
             name(k)
             val(v, 'ifp_' + k.replaceAll(' ', '_'))
         }
-        w('user agent', navigator.userAgent)
-        w('window size', this.getWindowSizeText())
-        w('platform', settings.sys.platformText)
         const appinf = '?'//await this.getRelatedApps()
         w('app', settings.app.wrp.version + ' ' + settings.app.wrp.verDate)
         if (appinf != '?')
             val(appinf)
+        w('user agent', navigator.userAgent)
+        w('window size', this.getWindowSizeText())
+        w('platform', settings.sys.platformText)
+        w('mobile', settings.sys.mobile ? 'true' : 'false')
         var ps = window.location.search
         if (ps == null || ps === undefined || ps == '') ps = '-'
         w('parameters', ps)

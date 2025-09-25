@@ -55,18 +55,30 @@ app = {
         flags.kiosk = t?.includes(Flag_Kiosk) || false
         flags.noSwype = t?.includes(Flag_NoSwype) || false
         flags.app = t?.includes(Flag_App) || false
-        this.initFeatures()
+        flags.noviz = t?.includes(Flag_NoViz) || false
     },
 
     initFeatures() {
         const flags = settings.flags
         const feats = settings.features
+
         // support for noswype
+
         feats.swype.enableArrowsButtonsOverScrollPanes = flags.noSwype
+
         // constraints
-        feats.constraints.noFullscreenToggling = flags.kiosk
+
+        feats.constraints.noFullscreenToggling =
+            flags.kiosk
+            || (flags.app && settings.sys.mobile)
+
         feats.constraints.enableRotateYourDevicePopup = !flags.kiosk
+            && !(flags.app && settings.sys.mobile)
+
+        feats.constraints.noIntroPopup = flags.kiosk || flags.app
+
         // small display
+
         feats.smallDisp.increaseSmallText = flags.smallDisp
     },
 
@@ -77,14 +89,21 @@ app = {
     async run() {
 
         this.initLogger()
+        this.initSettings()
         this.initFlags()
+        this.initFeatures()
+
         ui.init_pre_intro()
 
         if (settings.flags.kiosk) {
             ui.init_kiosk()
         }
-        else
-            ui.init_intro()
+        else {
+            if (feats.constraints.noIntroPopup)
+                ui.hide_intro_popup()
+            else
+                ui.init_intro()
+        }
 
         const opts = app.moduleLoader.opts(
             'wrp_mod_inf_txt_inview',
@@ -109,7 +128,6 @@ app = {
         await this.setupWebRadioChannel()
         this.gaugeView.init(this.channel)
 
-        this.initSettings()
         this.initUI()
 
         if (this.channel != null &&

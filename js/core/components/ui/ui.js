@@ -44,16 +44,18 @@ ui = {
 
     setupScreen() {
         if (settings.features.constraints.enableRotateYourDevicePopup)
-            // not kiosk
             screen.orientation.addEventListener('change', () => this.updateOrientation())
+
         if (screen.lockOrientation) screen.lockOrientation(Screen_Orientation_Landscape)
+
         document.addEventListener('contextmenu', function (event) {
             event.preventDefault();
         })
+
         const offIconId = 'wrp_fullscreen_off'
         const onIconId = 'wrp_fullscreen_on'
         document.addEventListener('fullscreenchange', () => {
-            if (settings.debug.trace)
+            if (settings.debug.debug)
                 logger.log('fullscreen changed')
             if (document.fullscreenElement) {
                 $('#' + offIconId).removeClass('hidden')
@@ -81,7 +83,6 @@ ui = {
         this.setupScreen()
         this.popups.init_popups()
         if (settings.features.constraints.enableRotateYourDevicePopup) {
-            // not kiosk
             this.updateOrientation()        // mobile web
         }
         $('#title_ver').text(' ' + settings.app.wrp.version)
@@ -312,11 +313,13 @@ ui = {
         const or = this.getOrientation()
         if (or != Screen_Orientation_Landscape) {
             this.showRotateYourDevicePopup()
-            logger.log('show rotate your device popup')
+            if (settings.debug.debug)
+                logger.log('show rotate your device popup')
         }
         else {
             this.hideRotateYourDevicePopup()
-            logger.log('hide rotate your device popup')
+            if (settings.debug.debug)
+                logger.log('hide rotate your device popup')
         }
     },
 

@@ -48,7 +48,7 @@ class UIState {
         this.currentTab = t.length > 0 ? t[0] : null
         if (skipSave !== true && !this.disableSave)
             settings.dataStore.saveUIState()
-        if (settings.debug.debug)
+        if (settings.debug.trace)
             logger.log('currentTab=' + JSON.stringify(t))
     }
 
@@ -76,7 +76,7 @@ class UIState {
         this.currentRDList = newList
         if (skipSave !== true && !this.disableSave)
             settings.dataStore.saveUIState()
-        if (settings.debug.debug)
+        if (settings.debug.trace)
             logger.log('currentRDList=' + JSON.stringify(this.currentRDList))
     }
 
@@ -94,7 +94,7 @@ class UIState {
         this.currentRDItem = radioItem
         if (skipSave !== true && !this.disableSave)
             settings.dataStore.saveUIState()
-        if (settings.debug.debug)
+        if (settings.debug.trace)
             logger.log('currentRDItem=' + JSON.stringify(radioItem))
     }
 

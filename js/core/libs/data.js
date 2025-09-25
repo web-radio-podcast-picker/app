@@ -61,7 +61,7 @@ function xeval(expr, showError, assignValue) {
 
 function handleXEvalError(expr, err, showError) {
     // ignore or debug
-    if (settings.debug.trace) {
+    if (settings.debug.debug) {
         logger.log(expr, err.message)
         ui.showError(err.message, null, null, null, err)
     }
