@@ -298,9 +298,10 @@ class WebRadioPickerModule extends ModuleBase {
         w('user agent', navigator.userAgent)
         const brand = navigator.userAgentData?.brands.map(x => x?.brand)?.join(' ')
         w('brand', brand)
+        w('iphone', settings.features.constraints.isIPhone ? 'yes' : 'no')
         w('window size', this.getWindowSizeText())
         w('platform', settings.sys.platformText)
-        w('mobile', settings.sys.mobile ? 'true' : 'false')
+        w('mobile', settings.sys.mobile ? 'yes' : 'no')
         var ps = window.location.search
         if (ps == null || ps === undefined || ps == '') ps = '-'
         w('parameters', ps)

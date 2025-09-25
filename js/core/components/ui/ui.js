@@ -330,11 +330,9 @@ ui = {
     },
 
     getOrientation() {
+        if (settings.features.constraints.isIPhone) return getOrientationNavProp()
         const or = cui.getOrientation()
-        if (!settings.features.constraints.isIPhone) return or
-        if (or == Screen_Orientation_Landscape)
-            return Screen_Orientation_Portrait
-        return Screen_Orientation_Landscape
+        return or
     },
 
     // use navigator property
