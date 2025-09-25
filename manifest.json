@@ -14,7 +14,7 @@
     }
   ],
   "id": "./index.html",
-  "start_url": "./index.html",
+  "start_url": "./index.html?flags=app",
   "background_color": "black",
   "display": "fullscreen",
   "scope": "./",
