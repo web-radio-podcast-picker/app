@@ -187,7 +187,7 @@ app = {
     fixFlags() {
         const lp = settings.sys.platform?.toLowerCase()
         if (lp.indexOf('iphone') != -1) {
-            settings.flags.mobile =
+            settings.sys.mobile =
                 settings.features.constraints.isIPhone
             settings.features.constraints.noVisualizers = true
             settings.sys.platformText = settings.sys.platformText + ' (mobile)'
