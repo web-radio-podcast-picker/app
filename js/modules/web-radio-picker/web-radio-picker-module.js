@@ -556,7 +556,8 @@ class WebRadioPickerModule extends ModuleBase {
         this.buildRadListItems(lst, listId)
         this.filteredListCount = lst.length
         this.updateBindings()
-        logger.log('update rad list')
+        if (settings.debug.trace)
+            logger.log('update rad list')
     }
 
     clearFilters() {

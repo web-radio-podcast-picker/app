@@ -99,8 +99,11 @@ app = {
             ui.init_kiosk()
         }
         else {
-            if (feats.constraints.noIntroPopup)
+            if (settings.features.constraints.noIntroPopup) {
                 ui.hide_intro_popup()
+                ui.init_post_intro()
+                ui.showUI()
+            }
             else
                 ui.init_intro()
         }

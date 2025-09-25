@@ -94,3 +94,12 @@ fetch('audio-file.mp3')
 createMediaElementSource
 
 MediaElementAudioSourceNode         ## pb here on ios
+
+----------------------------------------------------------
+
+webapp:
+-------
+
+first install & first launch on windows : url not set to startUrl
+  ==> flag 'app' is missing 
+
