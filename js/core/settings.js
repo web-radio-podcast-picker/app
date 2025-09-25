@@ -14,7 +14,7 @@ window.settings = {
             verDate: '8/23/2025'
         },
         wrp: {
-            version: '1.2.15.10',
+            version: '1.2.15.11',
             verDate: '9/25/2025'
         }
     },
@@ -40,7 +40,7 @@ window.settings = {
             noIntroPopup: null,
             enableRotateYourDevicePopup: null,
             noVisualizers: null,
-            isIPhone: null,
+            isIPhone: null
         },
         smallDisp: {
             increaseSmallText: null
