@@ -68,6 +68,8 @@ class WebRadioPickerModule extends ModuleBase {
     radioDataParser = null
     radiosLists = new RadiosLists()
     uiState = new UIState().init(this)
+    // ask to not change current tab automatically (eg. case restore ui state)
+    preserveCurrentTab = false
 
     constructor() {
         super()
@@ -92,10 +94,13 @@ class WebRadioPickerModule extends ModuleBase {
             return null
         var res = null
         switch (rdList.listId) {
-            case RadioList_All:
-                // ...
+            case RadioList_Info:
+                // must bi ignored to preserve list init
                 break
-            case RadioList_Viz: // pas d'item
+            case RadioList_All:
+                res = { item: $('#btn_wrp_all_radios')[0], name: null }
+                break
+            case RadioList_Viz: // no list. will switch to tab
                 break
             default:
                 const butId = this.uiState.listIdToTabId[rdList.listId]
@@ -650,8 +655,12 @@ class WebRadioPickerModule extends ModuleBase {
             this.resizeEventInitialized = true
         }
 
-        ui.tabs.selectTab('btn_wrp_logo', this.tabs)
-        this.onTabChanged($('#btn_wrp_logo'))
+        if (!this.preserveCurrentTab) {
+            ui.tabs.selectTab('btn_wrp_logo', this.tabs)
+            this.onTabChanged($('#btn_wrp_logo'))
+        }
+        else
+            this.preserveCurrentTab = false
     }
 
     initBtn($container, $item, t, currentRDList) {
@@ -724,6 +733,7 @@ class WebRadioPickerModule extends ModuleBase {
                     this.uiState.updateCurrentRDItem(o)
 
                     // add to history
+                    // TODO: do after canplay event
                     const tid = setTimeout(() => this.addToHistory(o),
                         this.getSettings().addToHistoryDelay
                     )

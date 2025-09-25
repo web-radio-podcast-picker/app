@@ -53,8 +53,19 @@ class UIState {
     }
 
     #setRDList(rdList) {
+        const acceptNoName = [
+            RadioList_All
+            /*RadioList_Info*/
+        ]
+        const skipInit = [
+            RadioList_Info
+        ]
+        if (skipInit.includes(rdList.listId)) return
+
         this.updateCurrentRDList(rdList, true)
-        if ((rdList?.name || null) == null) return
+        if (((rdList?.name || null) == null)
+            && !acceptNoName.includes(rdList.listId))
+            return
         const itemRef = this.wrpp.getListItem(rdList)
         if (itemRef == null) return
         const r = itemRef.item.click()
@@ -72,9 +83,8 @@ class UIState {
     #setRDItem(rdItem) {
         var radItem = this.wrpp.findRadItem(rdItem)
         if (radItem == null) return
-        //this.updateCurrentRDItem(radItem, true)
         var item = this.wrpp.getRadListItem(radItem)
-        if (item!=null) $(item.item).click()
+        if (item != null) $(item.item).click()
     }
 
     // a playable item (not a group) : radioItem
@@ -121,11 +131,12 @@ class UIState {
             this.#setRDList(state.currentRDList_Back)
         if (state.currentRDList != null)
             this.#setRDList(state.currentRDList)
+        if (state.currentTab != null)
+            this.#setTab(state.currentTab.listId)
+        this.wrpp.preserveCurrentTab = true
         // ---
         if (state.currentRDItem != null)
             this.#setRDItem(state.currentRDItem)
-        if (state.currentTab != null)
-            this.#setTab(state.currentTab.listId)
         this.disableSave = false
     }
 
