@@ -66,7 +66,7 @@ class WebRadioPickerModule extends ModuleBase {
 
     m3uDataBuilder = null
     radioDataParser = null
-    radiosLists = new RadiosLists()
+    radiosLists = new RadiosLists().init(this)
     uiState = new UIState().init(this)
     // ask to not change current tab automatically (eg. case restore ui state)
     preserveCurrentTab = false
@@ -84,7 +84,6 @@ class WebRadioPickerModule extends ModuleBase {
             this.m3uDataBuilder = new M3UDataBuilder().init(this)
         else
             this.radioDataParser = new RadioDataParser().init(this)
-        this.radiosLists.init()
         this.radiosLists.addList(RadioList_List, RadioList_History)
         window.wrpp = this
     }
@@ -754,14 +753,17 @@ class WebRadioPickerModule extends ModuleBase {
     addToHistory(o) {
         o.listenDate = Date.now
         const history = this.radiosLists.getList(RadioList_History).items
-        if (history.includes(o))
+        const itemInList = this.findRadItemInList(o, history)
+        if (itemInList != null)
             // TODO: move to first position instead
             return
-        const paneId = 'opts_wrp_play_list'
+        //const paneId = 'opts_wrp_play_list'
         //const $pl = $('#' + paneId)
 
         history.unshift(o)
         this.updateListsItems()
+
+        // TODO: update history list if visible
         //const listItem = this.radiosLists.findListItem(RadioList_History, paneId)
 
         settings.dataStore.saveRadiosLists()
@@ -786,8 +788,12 @@ class WebRadioPickerModule extends ModuleBase {
     }
 
     findRadItem(item) {
+        return this.findRadItemInList(item, this.itemsAll)
+    }
+
+    findRadItemInList(item, lst) {
         var res = null
-        this.itemsAll.some(o => {
+        lst.some(o => {
             if (item.name == o.name
                 && item.url == o.url) {
                 res = o

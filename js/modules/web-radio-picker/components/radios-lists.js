@@ -9,8 +9,11 @@ class RadiosLists {
     // radio lists
     lists = {}
 
-    init() {
+    wrpp = null
 
+    init(wrpp) {
+        this.wrpp = wrpp
+        return this
     }
 
     addList(listId, name) {
@@ -60,6 +63,19 @@ class RadiosLists {
     }
 
     fromJSON(str) {
-        this.lists = JSON.parse(str)
+        const t = {}
+        const lists = JSON.parse(str)
+        const names = Object.keys(lists)
+        names.forEach(name => {
+            const srcList = lists[name]
+            t[name] = srcList
+            const substItems = []
+            srcList.items.forEach(item => {
+                const newItem = this.wrpp.findRadItem(item)
+                substItems.push(item)
+            })
+            srcList.items = substItems
+        })
+        this.lists = t
     }
 }
