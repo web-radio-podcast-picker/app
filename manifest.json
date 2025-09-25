@@ -25,7 +25,7 @@
       "name": "Web Radio Podcast Picker",
       "short_name": "Web Radio Podcast Picker",
       "description": "Online web radios & podcasts",
-      "url": "./index.html",
+      "url": "./index.html?flags=app",
       "icons": [{ "src": "./rsc/icon-snap.png", "sizes": "546x546" }]
     }
   ],
