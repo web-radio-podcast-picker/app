@@ -103,3 +103,12 @@ webapp:
 first install & first launch on windows : url not set to startUrl
   ==> flag 'app' is missing 
 
+sur iphone: autoplay: false. should invert pause button on restore UI with RDItem != null
+
+sur iphone: plateform == iPhone
+mobile: false
+
+iphone: pas pause on start , play must be on the block
+plateform==iphone (minus) -> mobile
+..
+pour le web : si iphone inverser le test 'rotate your screen'

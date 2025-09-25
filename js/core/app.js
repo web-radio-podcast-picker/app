@@ -91,6 +91,7 @@ app = {
         this.initLogger()
         this.initSettings()
         this.initFlags()
+        this.fixFlags()
         this.initFeatures()
 
         ui.init_pre_intro()
@@ -180,7 +181,17 @@ app = {
             navigator?.userAgentData?.platform
             || navigator.platform
         settings.sys.platformText = settings.sys.platform
-            + (settings.sys.mobile ? ' mobile' : '')
+            + (settings.sys.mobile ? ' (mobile)' : '')
+    },
+
+    fixFlags() {
+        const lp = settings.sys.platform?.toLowerCase()
+        if (lp.indexOf('iphone') != -1) {
+            settings.flags.mobile =
+                settings.constraints.isIPhone
+            settings.constraints.noVisualizers = true
+            settings.sys.platformText = settings.sys.platformText + ' (mobile)'
+        }
     },
 
     initUI() {
