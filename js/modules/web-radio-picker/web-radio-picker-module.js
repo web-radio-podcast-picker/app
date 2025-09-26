@@ -70,6 +70,9 @@ class WebRadioPickerModule extends ModuleBase {
     uiState = new UIState().init(this)
     // ask to not change current tab automatically (eg. case restore ui state)
     preserveCurrentTab = false
+    // current loading item if any
+    loadingRDItem = null
+    $loadingRDItem = null
 
     constructor() {
         super()
@@ -393,9 +396,12 @@ You should have received a copy of the GNU General Public License along with thi
     }
 
     onLoading(item) {
+        const st = 'connecting...'
         if (settings.debug.debug) {
-            logger.log('connecting...')
+            logger.log(st)
         }
+        this.updateLoadingRadItem(st)
+
         app.channel.connected = false
         $('#wrp_connected_icon').addClass('hidden')
         $('#wrp_connect_error_icon').addClass('hidden')
@@ -403,30 +409,39 @@ You should have received a copy of the GNU General Public License along with thi
     }
 
     onLoadError(err, audio) {
+        const st = 'no connection'
         if (settings.debug.debug) {
-            logger.log('no connection')
+            logger.log(st)
         }
+        this.updateLoadingRadItem(st)
+
         app.channel.connected = false
         $('#wrp_connected_icon').addClass('hidden')
         $('#wrp_connect_icon').addClass('hidden')
         $('#wrp_connect_error_icon').removeClass('hidden')
         $('#err_txt')
-            .text('no connection')
+            .text(st)
         $('#err_holder')
             .removeClass('hidden')
     }
 
     onLoadSuccess(audio) {
+        const st = 'connected'
         app.channel.connected = true
+        this.updateLoadingRadItem(st)
+
         // metatadata available: audio.duration
+
         if (settings.debug.debug) {
-            logger.log('connected')
+            logger.log(st)
             logger.log('duration:' + audio.duration)
         }
         $('#wrp_connect_icon').addClass('hidden')
         $('#wrp_connect_error_icon').addClass('hidden')
         $('#wrp_connected_icon').removeClass('hidden')
+
         // enable save to history list
+
         const o = this.uiState.currentRDItem
         if (o != null) {
             const tid = setTimeout(() => this.addToHistory(o),
@@ -454,7 +469,8 @@ You should have received a copy of the GNU General Public License along with thi
                 name,
                 null,
                 i,
-                { count: lst.length }
+                { count: lst.length },
+                null
             )
             i++
             this.initBtn($pl, $item, lst,
@@ -476,10 +492,11 @@ You should have received a copy of the GNU General Public License along with thi
         var i = 0
         keys.forEach(k => {
             const { item, $item } = this.buildListItem(
-                this.ifQuoteUnQuote(k),//unquote(k),
+                this.ifQuoteUnQuote(k),
                 null,
                 i,
-                { count: this.items[k].length }
+                { count: this.items[k].length },
+                null
             )
             i++
             this.initBtn($tag, $item, this.items[k],
@@ -507,7 +524,8 @@ You should have received a copy of the GNU General Public License along with thi
                 j,
                 {
                     count: ''
-                })
+                },
+                null)
             j++
             btns[name] = $item
             this.initBtn($container, $item, itemsByName[name],
@@ -558,7 +576,12 @@ You should have received a copy of the GNU General Public License along with thi
         const $rad = $('#wrp_radio_list')
         var j = 0
         items.forEach(n => {
-            const { item, $item } = this.buildListItem(n.name, n.id, j)
+            const { item, $item } = this.buildListItem(
+                n.name,
+                n.id,
+                j,
+                null,
+                n)
             j++
             this.initItemRad($rad, $item, n)
             $rad.append($item)
@@ -568,7 +591,7 @@ You should have received a copy of the GNU General Public License along with thi
     }
 
     // build a playable item
-    buildListItem(text, id, j, opts) {
+    buildListItem(text, id, j, opts, rdItem) {
         if (opts === undefined) opts = null
 
         const item = document.createElement('div')
@@ -585,14 +608,111 @@ You should have received a copy of the GNU General Public License along with thi
         $item.text(text)
 
         if (opts != null) {
-            const n2 = document.createElement('div')
-            const $n2 = $(n2)
-            $n2.addClass('wrp-list-item-box')
-            $n2.text(opts.count)
-            item.appendChild(n2)
+
+            if (opts.count !== undefined) {
+
+                const n2 = document.createElement('div')
+                const $n2 = $(n2)
+                $n2.addClass('wrp-list-item-box')
+
+                $n2.text(opts.count)
+                item.appendChild(n2)
+            }
+        }
+
+        if (rdItem != null) {
+            $item.addClass('wrp-list-item-2h')
+            const $subit = $('<div class="wrp-list-item-sub hidden"><span class="wrp-item-info-text"></span></div>')
+            $item.append($subit)
         }
 
         return { item: item, $item: $item }
+    }
+
+    // init a playable item
+    initItemRad($rad, $item, o) {
+        $item.on('click', async () => {
+
+            $rad.find('.item-selected')
+                .removeClass('item-selected')
+            this.foldLoadingRadItem()
+            $item.addClass('item-selected')
+
+            $('#wrp_radio_url').text(o.url)
+            $('#wrp_radio_name').text(o.name)
+            $('#wrp_radio_box').text(o.groups.join(' '))
+            const $i = $('#wrp_img')
+            $i.attr('data-w', null)
+            $i.attr('data-h', null)
+
+            // setup up media image
+            if (o.logo != null && o.logo !== undefined && o.logo != '') {
+                // get img
+                $i.addClass('hidden')
+                $i.attr('width', null)
+                $i.attr('height', null)
+                $i.attr('data-noimg', null)
+                $i.removeClass('wrp-img-half')
+                var url = o.logo
+                if (settings.net.enforceHttps)
+                    url = url.replace('http://', 'https://')
+                $i.attr('src', url)
+
+            } else {
+                // no img
+                $i.addClass('hidden')
+                this.noImage()
+            }
+
+            const channel = ui.getCurrentChannel()
+            if (channel != null && channel !== undefined) {
+                this.loadingRDItem = o
+                this.$loadingRDItem = $item
+
+                $('#err_txt')
+                    .text('')
+                $('#err_holder')
+                    .addClass('hidden')
+
+                this.initAudioSourceHandlers()
+                this.onLoading(o)
+
+                const pl = async () => {
+
+                    // turn on channel
+                    this.updatePauseView()
+
+                    // setup channel media
+                    await app.updateChannelMedia(
+                        ui.getCurrentChannel(),
+                        o.url
+                    )
+
+                    // update ui state
+                    this.uiState.updateCurrentRDItem(o)
+                }
+
+                if (oscilloscope.pause)
+                    app.toggleOPause(async () => await pl())
+                else
+                    await pl()
+            }
+
+        })
+    }
+
+    updateLoadingRadItem(statusText) {
+        if (this.$loadingRDItem == null && this.loadingRDItem == null) return
+        const $subit = this.$loadingRDItem.find('.wrp-list-item-sub')
+        const $statusText = this.$loadingRDItem.find('.wrp-item-info-text')
+        $statusText.text(statusText)
+        $subit.removeClass('hidden')
+    }
+
+    foldLoadingRadItem() {
+        if (this.$loadingRDItem == null && this.loadingRDItem == null) return
+        const $subit = this.$loadingRDItem.find('.wrp-list-item-sub')
+        $subit.addClass('hidden')
     }
 
     setupItemOptions($artBut, opts) {
@@ -721,75 +841,6 @@ You should have received a copy of the GNU General Public License along with thi
             $item.addClass('item-selected')
             this.updateRadList(t, currentRDList.listId)
             this.setCurrentRDList(currentRDList)
-        })
-    }
-
-    // init a playable item
-    initItemRad($rad, $item, o) {
-        $item.on('click', async () => {
-
-            $rad.find('.item-selected')
-                .removeClass('item-selected')
-            $item.addClass('item-selected')
-
-            $('#wrp_radio_url').text(o.url)
-            $('#wrp_radio_name').text(o.name)
-            $('#wrp_radio_box').text(o.groups.join(' '))
-            const $i = $('#wrp_img')
-            $i.attr('data-w', null)
-            $i.attr('data-h', null)
-
-            if (o.logo != null && o.logo !== undefined && o.logo != '') {
-                // get img
-                $i.addClass('hidden')
-                $i.attr('width', null)
-                $i.attr('height', null)
-                $i.attr('data-noimg', null)
-                $i.removeClass('wrp-img-half')
-                var url = o.logo
-                if (settings.net.enforceHttps)
-                    url = url.replace('http://', 'https://')
-                $i.attr('src', url)
-
-            } else {
-                // no img
-                $i.addClass('hidden')
-                this.noImage()
-            }
-
-            const channel = ui.getCurrentChannel()
-            if (channel != null && channel !== undefined) {
-                this.loading = o
-
-                $('#err_txt')
-                    .text('')
-                $('#err_holder')
-                    .addClass('hidden')
-
-                this.initAudioSourceHandlers()
-                this.onLoading(o)
-
-                const pl = async () => {
-
-                    // turn on channel
-                    this.updatePauseView()
-
-                    // setup channel media
-                    await app.updateChannelMedia(
-                        ui.getCurrentChannel(),
-                        o.url
-                    )
-
-                    // update ui state
-                    this.uiState.updateCurrentRDItem(o)
-                }
-
-                if (oscilloscope.pause)
-                    app.toggleOPause(async () => await pl())
-                else
-                    await pl()
-            }
-
         })
     }
 

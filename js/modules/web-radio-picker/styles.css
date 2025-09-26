@@ -144,6 +144,32 @@ find license and copyright informations in files /COPYRIGHT and /LICENCE
     cursor: pointer;
 }
 
+.wrp-list-item.selected {
+    border: #FFFF00AA solid 1px !important;
+}
+
+.wrp-list-item-2h {    
+}
+
+.wrp-list-item-sub {
+    /* min-height: 1.5em; */
+    word-wrap: break-word;
+    font-size: 1.2em;
+    display: grid;
+    background-color: #00003333;
+    margin-left: Calc(-0.5em + 2px);
+    margin-right: Calc(-0.5em + 2px);
+    margin-bottom: Calc(-0.5em + 2px);
+    padding: 0.5em;
+}
+
+.wrp-item-info-text {
+    grid-column: 1;
+    grid-row: 1;
+    color: #FFFFAACC;
+    font-size: 1em;
+}
+
 .wrp-list-item:hover {
     border: #FFFF00AA solid 1px !important;
 }
