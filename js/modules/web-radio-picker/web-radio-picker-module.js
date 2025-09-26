@@ -314,15 +314,39 @@ class WebRadioPickerModule extends ModuleBase {
         w('FFT', settings.input.bufferSize * 2 + ' bytes, '
             + settings.fft.bars + ' bars'
         )
-
-        w($('<br>'), '')
-        w($('<hr>'), '')
-        w($('<br>'), '')
+        const sep = () => {
+            w($('<br>'), '')
+            w($('<hr>'), '')
+            w($('<br>'), '')
+        }
+        sep()
 
         w('credits', 'icons by <a href="https://icons8.com/" target="blank">Icons8</a>')
         val('testing by Gaspard Moyrand', 'ifp_tgp')
         w('project readme',
             $('<a href="https://github.com/franck-gaspoz/web-radio-podcast-picker/blob/main/README.md" target="_blank">https://github.com/franck-gaspoz/web-radio-podcast-picker/blob/main/README.md</a>'))
+
+        sep()
+
+        const cpy =
+            `Web Radio Podcast Picker
+Copyright(C) 2025 Franck Gaspoz
+contact: <a href="mailto:franck.gaspoz@gmail.com">franck.gaspoz@gmail.com</a>
+
+This program is free software; you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation version 2.
+
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU General Public License for more details.
+
+You should have received a copy of the GNU General Public License along
+with this program; if not, write to the Free Software Foundation, Inc.,
+51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
+`
+        txt(cpy.replaceAll('\n', '<br>'), 'wrp-inf-val')
     }
 
     /*async*/ toggleInfos() {
