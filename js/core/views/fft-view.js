@@ -106,6 +106,7 @@ class FFTView {
 
     run() {
 
+        if (settings.features.constraints.noVisualizers) return
         if (!ui.vizTabActivated) return
         if (!this.visible) return
         if (this.canvas == null) return

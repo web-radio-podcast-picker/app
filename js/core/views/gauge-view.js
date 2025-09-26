@@ -18,6 +18,9 @@ class GaugeView {
     }
 
     run() {
+
+        if (settings.features.constraints.noVisualizers) return
+
         const minDb = -130
         const fc = 0.5
 

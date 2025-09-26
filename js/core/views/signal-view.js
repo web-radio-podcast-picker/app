@@ -57,19 +57,13 @@ class SignalView {
     }
 
     run() {
-        ///this.channel.markers.setTriggerControlVisibility(this.visible)
 
-        ///const sizeUpdated = ui.setupCanvasSize(this.canvas)
-        ///if (sizeUpdated)
-        ///   ui.setupUIComponents()
-
+        if (settings.features.constraints.noVisualizers) return
         if (!this.visible) return
         if (this.canvas == null) return
         if (this.channel != null && !this.channel.connected) return
 
         const ch = $('#left-pane')[0]
-        //const ch = $('#opts_wrp_logo')[0]
-        //const cnvSize = this.canvas.getBoundingClientRect()
         const cnvSize = ch.getBoundingClientRect()
         const canvasHeight = Math.trunc(cnvSize.height)
         const canvasWidth = Math.trunc(cnvSize.width)
@@ -81,7 +75,6 @@ class SignalView {
             this.canvas.height = canvasHeight
         }
 
-        ///const dataArray = this.channel.measures.dataArray;
         const dataArray = this.channel?.getSamplesTask?.dataArray
 
         if (dataArray != null) {
@@ -97,8 +90,6 @@ class SignalView {
             // full buffer view : scale 1ms/div
             const barWidth = canvasWidth / dataArray.length / timePerDiv;
 
-            ///const baseI = this.channel.trigger.isOn ?
-            ///    this.channel.trigger.checkTrigger(this.channel, dataArray) : 0
             const baseI = 0
 
             const rprops = {

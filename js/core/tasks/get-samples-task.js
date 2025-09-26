@@ -53,16 +53,21 @@ class GetSamplesTask {
                 && !oscilloscope.pause)
                 || !this.channel.isDisplayed) {
 
-                this.analyzer.getFloatTimeDomainData(this.dataArray)
+                if (!settings.features.constraints.noVisualizers) {
+                    if (ui.vizTabActivated) {
+                        // wave
+                        this.analyzer.getFloatTimeDomainData(this.dataArray)
+                        // fft
+                        this.analyzer.getFloatFrequencyData(this.fftDataArray)
+                    }
 
-                if (ui.vizTabActivated)
-                    this.analyzer.getFloatFrequencyData(this.fftDataArray)
-
-                this.channel.analyzerLeft.getFloatTimeDomainData(this.leftDataArray)
-                this.channel.analyzerRight.getFloatTimeDomainData(this.rightDataArray)
+                    // vu meter left + right
+                    this.channel.analyzerLeft.getFloatTimeDomainData(this.leftDataArray)
+                    this.channel.analyzerRight.getFloatTimeDomainData(this.rightDataArray)
+                }
             }
         } else {
-            logger.error("Analyzer not initialized")
+            logger.error("Analyzer(s) not initialized")
             return;
         }
     }

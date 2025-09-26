@@ -310,6 +310,11 @@ find license and copyright informations in files /COPYRIGHT and /LICENCE
     cursor: pointer;
 }
 
+.but-icon-disabled {
+    cursor:not-allowed;
+    opacity: 0.4;
+}
+
 #cnv_oscillo {
     width: 95%;
     /* width: 800px; */

@@ -94,7 +94,7 @@ class WebRadioPickerModule extends ModuleBase {
         var res = null
         switch (rdList.listId) {
             case RadioList_Info:
-                // must bi ignored to preserve list init
+                // must be ignored to preserve list init
                 break
             case RadioList_All:
                 res = { item: $('#btn_wrp_all_radios')[0], name: null }
@@ -197,6 +197,8 @@ class WebRadioPickerModule extends ModuleBase {
         }
 
         $('#wrp_btn_pause_onoff').on('click', () => {
+            if ($('#wrp_btn_pause_on').hasClass('but-icon-disabled'))
+                return
             app.toggleOPause(() => this.updatePauseView())
         })
 
@@ -312,11 +314,15 @@ class WebRadioPickerModule extends ModuleBase {
         w('FFT', settings.input.bufferSize * 2 + ' bytes, '
             + settings.fft.bars + ' bars'
         )
-        w('project readme',
-            $('<a href="https://github.com/franck-gaspoz/web-radio-podcast-picker/blob/main/README.md" target="_blank">https://github.com/franck-gaspoz/web-radio-podcast-picker/blob/main/README.md</a>'))
+
+        w($('<br>'), '')
+        w($('<hr>'), '')
+        w($('<br>'), '')
 
         w('credits', 'icons by <a href="https://icons8.com/" target="blank">Icons8</a>')
         val('testing by Gaspard Moyrand', 'ifp_tgp')
+        w('project readme',
+            $('<a href="https://github.com/franck-gaspoz/web-radio-podcast-picker/blob/main/README.md" target="_blank">https://github.com/franck-gaspoz/web-radio-podcast-picker/blob/main/README.md</a>'))
     }
 
     /*async*/ toggleInfos() {
@@ -354,12 +360,13 @@ class WebRadioPickerModule extends ModuleBase {
     }
 
     updatePauseView() {
+        const c = 'but-icon-disabled'
         if (oscilloscope.pause) {
-            $('#wrp_btn_pause_on').addClass('hidden')
-            $('#wrp_btn_pause_off').removeClass('hidden')
+            $('#wrp_btn_pause_on').addClass('hidden').removeClass(c)
+            $('#wrp_btn_pause_off').removeClass('hidden').removeClass(c)
         } else {
-            $('#wrp_btn_pause_off').addClass('hidden')
-            $('#wrp_btn_pause_on').removeClass('hidden')
+            $('#wrp_btn_pause_off').addClass('hidden').removeClass(c)
+            $('#wrp_btn_pause_on').removeClass('hidden').removeClass(c)
         }
     }
 
@@ -369,6 +376,9 @@ class WebRadioPickerModule extends ModuleBase {
     }
 
     onLoading(item) {
+        if (settings.debug.debug) {
+            logger.log('connecting...')
+        }
         app.channel.connected = false
         $('#wrp_connected_icon').addClass('hidden')
         $('#wrp_connect_error_icon').addClass('hidden')
@@ -376,6 +386,9 @@ class WebRadioPickerModule extends ModuleBase {
     }
 
     onLoadError(err, audio) {
+        if (settings.debug.debug) {
+            logger.log('no connection')
+        }
         app.channel.connected = false
         $('#wrp_connected_icon').addClass('hidden')
         $('#wrp_connect_icon').addClass('hidden')
@@ -389,9 +402,23 @@ class WebRadioPickerModule extends ModuleBase {
     onLoadSuccess(audio) {
         app.channel.connected = true
         // metatadata available: audio.duration
+        if (settings.debug.debug) {
+            logger.log('connected')
+            logger.log('duration:' + audio.duration)
+        }
         $('#wrp_connect_icon').addClass('hidden')
         $('#wrp_connect_error_icon').addClass('hidden')
         $('#wrp_connected_icon').removeClass('hidden')
+        // enable save to history list
+        const o = this.uiState.currentRDItem
+        if (o != null) {
+            const tid = setTimeout(() => this.addToHistory(o),
+                this.getSettings().addToHistoryDelay
+            )
+            if (this.addToHistoryTimer != null)
+                clearTimeout(this.addToHistoryTimer)
+            this.addToHistoryTimer = tid
+        }
     }
 
     updateBindings() {
@@ -738,15 +765,6 @@ class WebRadioPickerModule extends ModuleBase {
 
                     // update ui state
                     this.uiState.updateCurrentRDItem(o)
-
-                    // add to history
-                    // TODO: do after canplay event
-                    const tid = setTimeout(() => this.addToHistory(o),
-                        this.getSettings().addToHistoryDelay
-                    )
-                    if (this.addToHistoryTimer != null)
-                        clearTimeout(this.addToHistoryTimer)
-                    this.addToHistoryTimer = tid
                 }
 
                 if (oscilloscope.pause)
@@ -759,12 +777,16 @@ class WebRadioPickerModule extends ModuleBase {
     }
 
     addToHistory(o) {
+        if (settings.debug.debug)
+            logger.log('add to history:' + o?.name)
         o.listenDate = Date.now
-        const history = this.radiosLists.getList(RadioList_History).items
+        var history = this.radiosLists.getList(RadioList_History).items
         const itemInList = this.findRadItemInList(o, history)
-        if (itemInList != null)
-            // TODO: move to first position instead
-            return
+        if (itemInList != null) {
+            // move to first position
+            history = history.filter(x => x != itemInList)
+            this.radiosLists.getList(RadioList_History).items = history
+        }
         //const paneId = 'opts_wrp_play_list'
         //const $pl = $('#' + paneId)
 
