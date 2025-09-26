@@ -296,7 +296,7 @@ class WebRadioPickerModule extends ModuleBase {
         if (appinf != '?')
             val(appinf)
         w('user agent', navigator.userAgent)
-        const brand = navigator.userAgentData?.brands.map(x => x?.brand)?.join(' ')
+        const brand = navigator.userAgentData?.brands.map(x => x?.brand)?.join(' | ')
         w('brand', brand)
         w('iphone', settings.features.constraints.isIPhone ? 'yes' : 'no')
         w('window size', this.getWindowSizeText())
@@ -313,7 +313,10 @@ class WebRadioPickerModule extends ModuleBase {
             + settings.fft.bars + ' bars'
         )
         w('project readme',
-            $('<a href="https://github.com/franck-gaspoz/web-radio-podcast-picker/blob/main/README.md" target="blank">https://github.com/franck-gaspoz/web-radio-podcast-picker/blob/main/README.md</a>'))
+            $('<a href="https://github.com/franck-gaspoz/web-radio-podcast-picker/blob/main/README.md" target="_blank">https://github.com/franck-gaspoz/web-radio-podcast-picker/blob/main/README.md</a>'))
+
+        w('credits', 'icons by <a href="https://icons8.com/" target="blank">Icons8</a>')
+        val('testing by Gaspard Moyrand', 'ifp_tgp')
     }
 
     /*async*/ toggleInfos() {

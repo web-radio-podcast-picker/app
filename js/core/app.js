@@ -46,6 +46,15 @@ app = {
         }
     },
 
+    initSettings() {
+        settings.sys.mobile = navigator?.userAgentData?.mobile
+        settings.sys.platform =
+            navigator?.userAgentData?.platform
+            || navigator.platform
+        settings.sys.platformText = settings.sys.platform
+            + (settings.sys.mobile ? ' (mobile)' : '')
+    },
+
     initFlags() {
         const flags = settings.flags
         const urlParams = new URLSearchParams(window.location.search)
@@ -56,6 +65,16 @@ app = {
         flags.noSwype = t?.includes(Flag_NoSwype) || false
         flags.app = t?.includes(Flag_App) || false
         flags.noviz = t?.includes(Flag_NoViz) || false
+        flags.ipho = t?.includes(Flag_IPhone) || false
+    },
+
+    fixFlags() {
+        const lp = settings.sys.platform?.toLowerCase()
+        if (lp.indexOf('iphone') != -1) {
+            settings.sys.mobile =
+                settings.features.constraints.isIPhone = true
+            settings.sys.platformText = settings.sys.platformText + ' (mobile)'
+        }
     },
 
     initFeatures() {
@@ -68,6 +87,8 @@ app = {
 
         // constraints
 
+        feats.constraints.isIPhone |= flags.ipho
+
         feats.constraints.noFullscreenToggling =
             flags.kiosk
             || (flags.app && settings.sys.mobile)
@@ -76,6 +97,10 @@ app = {
             && !(flags.app && settings.sys.mobile && !settings.features.constraints.isIPhone)
 
         feats.constraints.noIntroPopup = flags.kiosk || flags.app
+
+        feats.constraints.useNavigatorOrientationProperty =
+            feats.constraints.noVisualizers = feats.constraints.isIPhone
+            || flags.noviz
 
         // small display
 
@@ -172,25 +197,6 @@ app = {
                 .catch((err) => {
                     logger.error(`${err.name}: ${err.message}`)
                 })
-        }
-    },
-
-    initSettings() {
-        settings.sys.mobile = navigator?.userAgentData?.mobile
-        settings.sys.platform =
-            navigator?.userAgentData?.platform
-            || navigator.platform
-        settings.sys.platformText = settings.sys.platform
-            + (settings.sys.mobile ? ' (mobile)' : '')
-    },
-
-    fixFlags() {
-        const lp = settings.sys.platform?.toLowerCase()
-        if (lp.indexOf('iphone') != -1) {
-            settings.sys.mobile =
-                settings.features.constraints.isIPhone =
-                settings.features.constraints.noVisualizers = true
-            settings.sys.platformText = settings.sys.platformText + ' (mobile)'
         }
     },
 

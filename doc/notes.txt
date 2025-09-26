@@ -111,9 +111,9 @@ mobile: false
 iphone: pas pause on start , play must be on the block
 plateform==iphone (minus) -> mobile
 ..
-pour le web : si iphone inverser le test 'rotate your screen'
+-done-pour le web : si iphone inverser le test 'rotate your screen'
 
 iphone: restore UI with raditem : no pause button, show play. but play button that launch the connection
 
-iphone: please rotate your device doit être activé tt le temps, mais a l'endroit
+-done- iphone: please rotate your device doit être activé tt le temps, mais a l'endroit
 mode landscape demandé marche pas. donc autoriser le rotate (mais à l'envers)

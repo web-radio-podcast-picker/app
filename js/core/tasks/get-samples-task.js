@@ -55,8 +55,8 @@ class GetSamplesTask {
 
                 this.analyzer.getFloatTimeDomainData(this.dataArray)
 
-                this.analyzer.getFloatFrequencyData(this.fftDataArray)
-                ///this.analyzer.getByteFrequencyData(this.fftByteDataArray)
+                if (ui.vizTabActivated)
+                    this.analyzer.getFloatFrequencyData(this.fftDataArray)
 
                 this.channel.analyzerLeft.getFloatTimeDomainData(this.leftDataArray)
                 this.channel.analyzerRight.getFloatTimeDomainData(this.rightDataArray)

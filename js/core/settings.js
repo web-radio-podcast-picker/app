@@ -14,7 +14,7 @@ window.settings = {
             verDate: '8/23/2025'
         },
         wrp: {
-            version: '1.2.15.13 yeahhhhh',
+            version: '1.2.15.14 great gaspard! 😉',
             verDate: '9/25/2025'
         }
     },
@@ -25,7 +25,8 @@ window.settings = {
         noSwype: null,
         smallDisp: null,
         app: null,
-        noviz: null
+        noviz: null,
+        ipho: null
     },
 
     features: {
@@ -40,7 +41,8 @@ window.settings = {
             noIntroPopup: null,
             enableRotateYourDevicePopup: null,
             noVisualizers: null,
-            isIPhone: null
+            isIPhone: null,
+            useNavigatorOrientationProperty: null
         },
         smallDisp: {
             increaseSmallText: null

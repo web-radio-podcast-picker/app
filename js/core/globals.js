@@ -12,6 +12,7 @@ const Flag_NoSwype = 'noswype'
 const Flag_SmallDisp = 'smldisp'
 const Flag_App = 'app'
 const Flag_NoViz = 'noviz'
+const Flag_IPhone = 'ipho'
 
 const AudioContext = window.AudioContext || window.webkitAudioContext
 window.requestAnimationFrame = (function () {
