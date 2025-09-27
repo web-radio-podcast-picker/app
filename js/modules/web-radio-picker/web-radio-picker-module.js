@@ -832,8 +832,7 @@ ${butRemove}${butHeartOn}${butHeartOff}
                 this.loadingRDItem = o
                 this.$loadingRDItem = $item
 
-                $('#err_txt').text('')
-                $('#err_holder').addClass('hidden')
+                this.clearAppStatus()
 
                 this.initAudioSourceHandlers()
                 this.onLoading(o)
@@ -862,6 +861,18 @@ ${butRemove}${butHeartOn}${butHeartOff}
                     await pl()
             }
         })
+    }
+
+    clearCurrentRadioView() {
+        this.clearAppStatus()
+        $('#wrp_radio_url').text('')
+        $('#wrp_radio_name').text('')
+        $('#wrp_radio_box').text('')
+    }
+
+    clearAppStatus() {
+        $('#err_txt').text('')
+        $('#err_holder').addClass('hidden')
     }
 
     addFavorite(item, $item, listId, listName, $butOn, $butOff) {
@@ -1106,6 +1117,7 @@ ${butRemove}${butHeartOn}${butHeartOff}
 
         // clear Media view
         this.noImage()
+        this.clearCurrentRadioView()
         setTimeout(() =>
             app.clearMediaView(), 500)
     }
