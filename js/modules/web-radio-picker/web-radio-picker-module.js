@@ -469,6 +469,12 @@ You should have received a copy of the GNU General Public License along with thi
 
         const o = this.uiState.currentRDItem
         if (o != null) {
+
+            window.audio = audio
+            o.metadata = {
+                duration: audio.duration
+            }
+
             const tid = setTimeout(() => this.addToHistory(o),
                 this.getSettings().addToHistoryDelay
             )
@@ -966,6 +972,10 @@ ${butRemove}${butHeartOn}${butHeartOff}
             .removeClass('item-selected')
     }
 
+    findSelectedListItem(containerId) {
+        return $$('#' + containerId).find('.item-selected')
+    }
+
     allRadios() {
         this.clearFilters()
         this.updateRadList(this.itemsAll, RadioList_All)
@@ -1078,6 +1088,7 @@ ${butRemove}${butHeartOn}${butHeartOff}
         if (this.addToHistoryTimer != null)
             clearTimeout(this.addToHistoryTimer)
     }
+
     addToHistory(o) {
         const historyVisible = this.isRDListVisible(RadioList_List, RadioList_History)
         if (this.uiState.favoriteInputState && historyVisible) return
@@ -1149,7 +1160,16 @@ ${butRemove}${butHeartOn}${butHeartOff}
             artist: null,
             country: null,
             lang: null,
-            channels: null
+            channels: null,
+            // dynamic properties
+            metadata: {
+                duration: null,
+                stereo: null,
+                encoding: null,
+                sampleFrq: null,
+                sampleRes: null,
+                country: null
+            }
         }
     }
 

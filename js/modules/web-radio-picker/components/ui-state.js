@@ -189,6 +189,12 @@ class UIState {
             this.memoRDLists()
             const wrpp = this.wrpp
             this.setTab(RadioList_List)
+            $('#opts_add_favorite_action_pane')
+                .removeClass('hidden')
+            $('#left-pane')
+                .addClass('showActionPane')
+            wrpp.clearContainerSelection('opts_wrp_play_list')
+
             const menuItemDisabledCl = 'menu-item-disabled'
             ui.tabs
                 .freezeTabs(wrpp.tabs,
