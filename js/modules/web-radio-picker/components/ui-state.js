@@ -90,7 +90,8 @@ class UIState {
     // a playable item (not a group) : radioItem
     // build an RD
     updateCurrentRDItem(radioItem, skipSave) {
-        radioItem.ref = this.radioRef()
+        if (radioItem != null)
+            radioItem.ref = this.radioRef()
         this.currentRDItem = radioItem
         if (skipSave !== true && !this.disableSave)
             settings.dataStore.saveUIState()

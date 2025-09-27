@@ -91,7 +91,8 @@ class WebRadioPickerModule extends ModuleBase {
         window.wrpp = this
     }
 
-    // return the clickable item // TODO: rename
+    // return the clickable item (a button or a tab or a list item)
+    // returns null || { item, name, listId }
     getListItem(rdList) {
         if (rdList == null || rdList.listId == null)
             return null
@@ -214,7 +215,7 @@ class WebRadioPickerModule extends ModuleBase {
         $('#wrp_btn_pause_onoff').on('click', () => {
             if ($('#wrp_btn_pause_on').hasClass('but-icon-disabled'))
                 return
-            app.toggleOPause(() => this.updatePauseView())
+            app.toggleOPause(() => this.onPauseStateChanged(true))
         })
 
         $('#btn_wrp_infos').on('click', async () => {
@@ -483,6 +484,13 @@ You should have received a copy of the GNU General Public License along with thi
             logger.log(st)
         }
         this.updateLoadingRadItem(st)
+    }
+
+    onPauseStateChanged(updateRadItemStatusText, $item) {
+        if (updateRadItemStatusText)
+            this.updateLoadingRadItem(oscilloscope.pause ?
+                'pause' : 'playing', $item)
+        this.updatePauseView()
     }
 
     updateBindings() {
@@ -822,7 +830,9 @@ ${butRemove}${butHeartOn}${butHeartOff}
                 const pl = async () => {
 
                     // turn on channel
-                    this.updatePauseView()
+
+                    // update pause state
+                    this.onPauseStateChanged()
 
                     // setup channel media
                     await app.updateChannelMedia(
@@ -871,32 +881,12 @@ ${butRemove}${butHeartOn}${butHeartOff}
         }
     }
 
-    // always called from the history list
-    removeFromHistory(item, $item, listId, listName, $butOn, $butOff) {
-        if (settings.debug.debug)
-            logger.log(`remove from history: ${item.name} list=${listId}:${listName}`)
-
-        this.radiosLists.removeFromList(item, listName)
-        if (!oscilloscope.pause)
-            app.toggleOPause(() => this.updatePauseView())
-        this.setPlayPauseButtonFreezeState(true)
-
-        settings.dataStore.saveAll()
-
-        // update views
-        const list = this.updateListsItems()
-
-        // update history list if visible
-
-        if (this.isRDListVisible(RadioList_List, RadioList_History))
-            this.updateCurrentRDList(item)
-    }
-
-    updateLoadingRadItem(statusText) {
-        if (this.$loadingRDItem == null && this.loadingRDItem == null) return
-        const $subit = this.$loadingRDItem.find('.wrp-list-item-sub')
-        const $statusText = this.$loadingRDItem.find('.wrp-item-info-text')
-        this.$loadingRDItem.attr('data-text', statusText)
+    updateLoadingRadItem(statusText, $item) {
+        var $ldgRDItem = $item || this.$loadingRDItem
+        if ($ldgRDItem == null) return
+        const $subit = $ldgRDItem.find('.wrp-list-item-sub')
+        const $statusText = $ldgRDItem.find('.wrp-item-info-text')
+        $ldgRDItem.attr('data-text', statusText)
         $statusText.text(statusText)
         $subit.removeClass('hidden')
     }
@@ -1043,13 +1033,16 @@ ${butRemove}${butHeartOn}${butHeartOff}
             this.setCurrentRDList(currentRDList)
         })
     }
-
     isRDListVisible(listId, listName) {
         const crdl = this.uiState.currentRDList
         if (crdl == null) return null
         return crdl.listId == listId && crdl.name == listName
     }
 
+    clearHistoryTimer() {
+        if (this.addToHistoryTimer != null)
+            clearTimeout(this.addToHistoryTimer)
+    }
     addToHistory(o) {
         if (settings.debug.debug)
             logger.log('add to history:' + o?.name)
@@ -1063,7 +1056,7 @@ ${butRemove}${butHeartOn}${butHeartOff}
         }
 
         history.unshift(o)
-        settings.dataStore.saveRadiosLists()
+        settings.dataStore.saveAll()
 
         // update views
         const list = this.updateListsItems()
@@ -1072,6 +1065,30 @@ ${butRemove}${butHeartOn}${butHeartOff}
 
         if (this.isRDListVisible(RadioList_List, RadioList_History))
             this.updateCurrentRDList(o)
+    }
+
+    // always called from the history list
+    removeFromHistory(item, $item, listId, listName, $butOn, $butOff) {
+        if (settings.debug.debug)
+            logger.log(`remove from history: ${item.name} list=${listId}:${listName}`)
+
+        this.clearHistoryTimer()
+
+        this.radiosLists.removeFromList(item, listName)
+        if (!oscilloscope.pause)
+            app.toggleOPause(() => this.onPauseStateChanged(true, $item))
+        this.setPlayPauseButtonFreezeState(true)
+
+        this.uiState.updateCurrentRDItem(null, true)
+        settings.dataStore.saveAll()
+
+        // update views
+        const list = this.updateListsItems()
+
+        // update history list if visible
+
+        if (this.isRDListVisible(RadioList_List, RadioList_History))
+            this.updateCurrentRDList(item)
     }
 
     // radio item model
