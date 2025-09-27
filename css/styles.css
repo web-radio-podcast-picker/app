@@ -886,8 +886,9 @@ code {
 .menu-item-disabled,.menu-item-disabled:hover  {
     color: lightblue;
     background-color: #444444;
-    border: skyblue solid 1px;    
-    cursor: default;
+    /* border: skyblue solid 1px; */
+    cursor: default !important;
+    opacity: 0.5;
 }
 
 #pop_settings {

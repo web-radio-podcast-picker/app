@@ -28,13 +28,17 @@ class UIState {
     currentTab = null
     wrpp = null
     disableSave = false
+    // rd lists cur & back memo
+    memRDLists = null
+    // ui in favorite input state if true
+    favoriteInputState = false
 
     init(wrpp) {
         this.wrpp = wrpp
         return this
     }
 
-    #setTab(listId) {
+    setTab(listId) {
         if (this.listIdToTabId[listId]) {
             const tabId = this.listIdToTabId[listId]
             $('#' + tabId).click()
@@ -78,6 +82,13 @@ class UIState {
             settings.dataStore.saveUIState()
         if (settings.debug.trace)
             logger.log('currentRDList=' + JSON.stringify(this.currentRDList))
+    }
+
+    getCurrentRDLists() {
+        return {
+            cur: this.uiState.currentRDList,
+            back: this.uiState.currentRDList_Back
+        }
     }
 
     #setRDItem(rdItem) {
@@ -137,7 +148,7 @@ class UIState {
         if (state.currentRDList != null)
             this.#setRDList(state.currentRDList)
         if (state.currentTab != null)
-            this.#setTab(state.currentTab.listId)
+            this.setTab(state.currentTab.listId)
         this.wrpp.preserveCurrentTab = true
         // ---
         if (state.currentRDItem != null)
@@ -161,6 +172,81 @@ class UIState {
     fromJSON(s) {
         const state = JSON.parse(s)
         this.restoreUIState(state)
+    }
+
+    // ----- UI freeze & editing status management -----
+
+    memoRDLists() {
+        this.memRDLists = {
+            cur: this.currentRDList,
+            back: this.currentRDList_Back
+        }
+    }
+
+    setFavoriteInputState(enabled) {
+        if (enabled) {
+
+            this.memoRDLists()
+            const wrpp = this.wrpp
+            this.setTab(RadioList_List)
+            const menuItemDisabledCl = 'menu-item-disabled'
+            ui.tabs
+                .freezeTabs(wrpp.tabs,
+                    'btn_wrp_play_list',
+                    menuItemDisabledCl)
+                .freezeTabs(['btn_wrp_all_radios'], null, menuItemDisabledCl)
+            this.setInfoButtonState(false)
+            this.setCurrentRadItemButtonsState(false)
+            this.setRadItemsListState(false)
+
+        } else {
+
+        }
+        this.favoriteInputState = enabled
+    }
+
+    setInfoButtonState(enabled) {
+        const $cnt = $('#btn_wrp_infos')
+        const $bt = $cnt.find('img')
+        const disabledCl = 'but-icon-disabled'
+        const disabledBtCl = 'menu-item-disabled'
+        if (!enabled) {
+            $cnt.addClass(disabledCl)
+            $bt.addClass(disabledBtCl)
+        }
+        else {
+            $cnt.removeClass(disabledCl)
+            $bt.removeClass(disabledBtCl)
+        }
+    }
+
+    setCurrentRadItemButtonsState(enabled) {
+        const wrpp = this.wrpp
+        const item = this.currentRDItem
+        if (item == null) return
+        const $item = $(wrpp.getRadListItemById(item.id).item)
+        const $buts = $item.find('.wrp-rad-item-icon ')
+        const disabledCl = 'but-icon-disabled'
+        if (!enabled) {
+            $buts.addClass(disabledCl)
+        }
+        else {
+            $buts.removeClass(disabledCl)
+        }
+    }
+
+    setRadItemsListState(enabled) {
+        const disabledCl = 'but-icon-disabled'
+        const $items = $('#wrp_radio_list')
+            .find('.wrp-list-item:not([class~="item-selected"]')
+        if (!enabled)
+            $items.addClass(disabledCl)
+        else
+            $items.removeClass(disabledCl)
+    }
+
+    isRadOpenDisabled() {
+        return this.favoriteInputState
     }
 }
 

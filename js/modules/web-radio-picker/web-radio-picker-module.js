@@ -219,6 +219,7 @@ class WebRadioPickerModule extends ModuleBase {
         })
 
         $('#btn_wrp_infos').on('click', async () => {
+            if (this.uiState.favoriteInputState) return
             /*await*/ this.toggleInfos()
         })
 
@@ -760,10 +761,12 @@ You should have received a copy of the GNU General Public License along with thi
 ${butRemove}${butHeartOn}${butHeartOff}
 </div>
 </div>`)
+            const disabledCl = 'but-icon-disabled'
             const $butOn = $subit.find('img[name="heart_on"]')
             $butOn
                 .on('click', e => {
                     e.preventDefault()
+                    if ($(e.currentTarget).hasClass(disabledCl)) return
                     this.removeFavorite(rdItem, $item, listId, listName, $butOn, $butOff)
                 })
 
@@ -771,6 +774,7 @@ ${butRemove}${butHeartOn}${butHeartOff}
             $butOff
                 .on('click', e => {
                     e.preventDefault()
+                    if ($(e.currentTarget).hasClass(disabledCl)) return
                     this.addFavorite(rdItem, $item, listId, listName, $butOn, $butOff)
                 })
 
@@ -778,6 +782,7 @@ ${butRemove}${butHeartOn}${butHeartOff}
                 $subit.find('img[name="trash"]')
                     .on('click', e => {
                         e.preventDefault()
+                        if ($(e.currentTarget).hasClass(disabledCl)) return
                         this.removeFromHistory(rdItem, $item, listId, listName, $butOn, $butOff)
                     })
 
@@ -795,6 +800,8 @@ ${butRemove}${butHeartOn}${butHeartOff}
     initItemRad($rad, $item, o) {
         const $textContainer = $item.find('.wrp-list-item-text-container')
         $textContainer.on('click', async () => {
+
+            if (this.uiState.isRadOpenDisabled()) return
 
             $rad.find('.item-selected')
                 .removeClass('item-selected')
@@ -829,11 +836,10 @@ ${butRemove}${butHeartOn}${butHeartOff}
 
             const channel = ui.getCurrentChannel()
             if (channel != null && channel !== undefined) {
+
                 this.loadingRDItem = o
                 this.$loadingRDItem = $item
-
                 this.clearAppStatus()
-
                 this.initAudioSourceHandlers()
                 this.onLoading(o)
 
@@ -881,8 +887,12 @@ ${butRemove}${butHeartOn}${butHeartOff}
 
         // must select a fav in lists ui
 
+        this.uiState.setFavoriteInputState(true)
+
+        /*
         $butOn.removeClass('hidden')
         $butOff.addClass('hidden')
+        */
     }
 
     removeFavorite(item, $item, listId, listName, $butOn, $butOff) {
@@ -1069,6 +1079,9 @@ ${butRemove}${butHeartOn}${butHeartOff}
             clearTimeout(this.addToHistoryTimer)
     }
     addToHistory(o) {
+        const historyVisible = this.isRDListVisible(RadioList_List, RadioList_History)
+        if (this.uiState.favoriteInputState && historyVisible) return
+
         if (settings.debug.debug)
             logger.log('add to history:' + o?.name)
         o.listenDate = Date.now
@@ -1088,7 +1101,7 @@ ${butRemove}${butHeartOn}${butHeartOff}
 
         // update history list if visible
 
-        if (this.isRDListVisible(RadioList_List, RadioList_History))
+        if (historyVisible)
             this.updateCurrentRDList(o)
     }
 

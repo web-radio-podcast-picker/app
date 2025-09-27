@@ -30,6 +30,21 @@ class Tabs {
         return ui
     }
 
+    freezeTabs(tabs, exceptTab, disabledClass) {
+        tabs.forEach(tabId => {
+            if (tabId != exceptTab) {
+                this.freezeTab(tabId, disabledClass)
+            }
+        })
+        return this
+    }
+
+    freezeTab(tabId, disabledClass) {
+        const $c = $('#' + tabId)
+        $c.attr('data-freezed', 1)
+        $c.addClass(disabledClass)
+    }
+
     tabIdToPaneId(tabId) {
         if (tabId === undefined || tabId == null) return null
         return tabId.replace('btn_', 'opts_')
