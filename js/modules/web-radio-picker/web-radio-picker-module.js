@@ -546,6 +546,19 @@ You should have received a copy of the GNU General Public License along with thi
         return { $panel: $pl, $selected: $selected, id: id, it: null }
     }
 
+    focusListItem(element, selectIt, unfoldIt) {
+        const $e = $(element)
+        if (selectIt)
+            $e.addClass('item-selected')
+        if (unfoldIt)
+            this.foldUnfoldRadItem($e, false)
+        element.scrollIntoView({
+            behavior: 'instant',
+            block: 'center',
+            inline: 'center'
+        })
+    }
+
     // update the rdList view for the current rdList and the given item
     updateCurrentRDList(item) {
         // find the list item / button
@@ -580,7 +593,6 @@ You should have received a copy of the GNU General Public License along with thi
                 this.$loadingRDItem = $item
                 this.loadingRDItem = item
                 this.updateLoadingRadItem(text)
-                //this.foldUnfoldRadItem($item, false)
             }
             return { $panel: $pl, $selected: $selected, id: id, it: it }
         }
@@ -945,6 +957,8 @@ ${butRemove}${butHeartOn}${butHeartOff}
         $i.attr('data-noimg', '1')
         $i.attr('width', null)
         $i.attr('height', null)
+        $i.attr('data-w', null)
+        $i.attr('data-h', null)
     }
 
     showImage() {
@@ -1089,6 +1103,11 @@ ${butRemove}${butHeartOn}${butHeartOff}
 
         if (this.isRDListVisible(RadioList_List, RadioList_History))
             this.updateCurrentRDList(item)
+
+        // clear Media view
+        this.noImage()
+        setTimeout(() =>
+            app.clearMediaView(), 500)
     }
 
     // radio item model

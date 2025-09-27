@@ -304,6 +304,13 @@ app = {
         })
     },
 
+    clearMediaView() {
+        const drawContext = this.canvas.getContext('2d');
+        const canvasHeight = this.canvas.height;
+        const canvasWidth = this.canvas.width;
+        drawContext.clearRect(0, 0, canvasWidth, canvasHeight);
+    },
+
     async setChannelSource(channel, sourceId) {
         if (channel.sourceId == sourceId) return
         switch (sourceId) {
