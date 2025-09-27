@@ -14,6 +14,7 @@ class WRPPMediaSource {
 
     static onLoadError = null      // on load error handler
     static onLoadSuccess = null    // on load success handler
+    static onCanPlay = null        // on can play handler
 
     static sourceInitialized = false
     static sourcePlugged = false
@@ -60,6 +61,8 @@ class WRPPMediaSource {
                 WRPPMediaSource.sourcePlugged = true
             }
             app.playChannelMedia(app.channel)
+            if (WRPPMediaSource.onCanPlay != null)
+                WRPPMediaSource.onCanPlay(this.audio)
         })
 
         this.audio.crossOrigin = "anonymous"

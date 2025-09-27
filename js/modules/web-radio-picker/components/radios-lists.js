@@ -6,6 +6,16 @@
 
 class RadiosLists {
 
+    // list id to containers ids
+    listIdToPanelId = {
+        'List': 'opts_wrp_play_list',
+        'All': 'wrp_radio_list',
+        'Art': 'opts_wrp_art_list',
+        'Lang': 'opts_wrp_lang_list',
+        'Tag': 'opts_wrp_tag_list',
+        'rad': 'wrp_radio_list'
+    }
+
     // radio lists
     lists = {}
 
@@ -25,11 +35,18 @@ class RadiosLists {
         return this.lists[name]
     }
 
+    removeFromList(item, listName) {
+        const list = this.getList(listName)
+        if (list == null) return
+        list.items = list.items.filter(x => x != item)
+        item.favLists = item.favLists.filter(x => x != listName)
+    }
+
     findListItemByName(name, containerId) {
         const $items = $('#' + containerId).find('.wrp-list-item')
         const t = $items.map((i, e) => {
             return {
-                name: e.childNodes[0].textContent,
+                name: e.attributes['data-text'].value,
                 item: e
             }
         })
@@ -47,6 +64,12 @@ class RadiosLists {
         })
         const r = t.filter((i, x) => x.id == id)
         return (r.length == 0) ? null : r[0]
+    }
+
+    findListItemByIdAndListId(id, listId) {
+        const panelId = this.listIdToPanelId[listId]
+        if (panelId === undefined) return null
+        return this.findListItemById(id, panelId)
     }
 
     // radio list model
@@ -72,6 +95,13 @@ class RadiosLists {
             const substItems = []
             srcList.items.forEach(item => {
                 const newItem = this.wrpp.findRadItem(item)
+
+                // copy dynamic properties from storage
+                if (name == RadioList_History && !item.favLists.includes(RadioList_History))
+                    // missing missing fav list
+                    item.favLists.push(RadioList_History)
+                newItem.favLists = item.favLists
+
                 substItems.push(item)
             })
             srcList.items = substItems

@@ -142,6 +142,8 @@ find license and copyright informations in files /COPYRIGHT and /LICENCE
     padding: 0.5em;
     font-size: 1.2em;
     cursor: pointer;
+    line-height: 2em;
+    display: grid;
 }
 
 .wrp-list-item.selected {
@@ -152,15 +154,39 @@ find license and copyright informations in files /COPYRIGHT and /LICENCE
 }
 
 .wrp-list-item-sub {
-    /* min-height: 1.5em; */
+    min-height: 1.5em;
     word-wrap: break-word;
-    font-size: 1.2em;
+    font-size: 0.8em;
     display: grid;
     background-color: #00003333;
     margin-left: Calc(-0.5em + 2px);
     margin-right: Calc(-0.5em + 2px);
     margin-bottom: Calc(-0.5em + 2px);
     padding: 0.5em;
+    line-height: 1em;
+}
+
+.wrp-rad-item-icon {
+    cursor: pointer;
+    width: 32px;
+    height: 32px;
+}
+
+.wrp-rad-item-icon:hover {
+    background-color: #44AAff;
+}
+
+.wrp-list-item-text-container {
+    grid-row: 1;
+    grid-column: 1;
+}
+
+.wrp-item-controls-container {
+    display: flex;
+    text-align: right;
+    grid-row: 1;
+    grid-column: 1;
+    flex-direction: row-reverse;
 }
 
 .wrp-item-info-text {
@@ -168,6 +194,7 @@ find license and copyright informations in files /COPYRIGHT and /LICENCE
     grid-row: 1;
     color: #FFFFAACC;
     font-size: 1em;
+    align-content: center;
 }
 
 .wrp-list-item:hover {
@@ -278,15 +305,17 @@ find license and copyright informations in files /COPYRIGHT and /LICENCE
 }
 
 .wrp-list-item-box {
-    width: 64px;
+    /* width: 64px; */
     height: 1em;
     text-align: right;
     top: 0em;
-    float: right;
+    /* float: right; */
     font-size: 0.7em;
     margin-top: -0.25em;
     margin-right: -0.25em;
     color: #FFFF00E0;
+    grid-row: 1;
+    grid-column: 1;
 }
 
 .gauge {

@@ -27,6 +27,7 @@ window.requestAnimationFrame = (function () {
 })();
 
 // radios lists
+const RadioList = 'rad'
 
 // in 'lists' pane
 const RadioList_History = 'History'
@@ -36,6 +37,7 @@ const RadioList_All = 'All'
 const RadioList_Art = 'Art'
 const RadioList_Lang = 'Lang'
 const RadioList_Tag = 'Tag'
+// pseudo lists
 const RadioList_Info = 'Info'
 const RadioList_Viz = 'Viz'
 

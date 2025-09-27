@@ -84,7 +84,7 @@ class UIState {
         var radItem = this.wrpp.findRadItem(rdItem)
         if (radItem == null) return
         var item = this.wrpp.getRadListItem(radItem)
-        if (item != null) $(item.item).click()
+        if (item != null) $(item.item).find('.wrp-list-item-text-container').click()
     }
 
     // a playable item (not a group) : radioItem

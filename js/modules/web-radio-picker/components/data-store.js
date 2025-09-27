@@ -13,6 +13,11 @@ class DataStore {
 
     }
 
+    saveAll() {
+        this.saveRadiosLists()
+        this.saveUIState()
+    }
+
     loadRadiosLists() {
         if (localStorage === undefined) return
         const str = localStorage.getItem(ST_RadiosLists)

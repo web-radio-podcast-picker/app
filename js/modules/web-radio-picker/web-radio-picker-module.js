@@ -91,6 +91,7 @@ class WebRadioPickerModule extends ModuleBase {
         window.wrpp = this
     }
 
+    // return the clickable item // TODO: rename
     getListItem(rdList) {
         if (rdList == null || rdList.listId == null)
             return null
@@ -100,7 +101,7 @@ class WebRadioPickerModule extends ModuleBase {
                 // must be ignored to preserve list init
                 break
             case RadioList_All:
-                res = { item: $('#btn_wrp_all_radios')[0], name: null }
+                res = { item: $('#btn_wrp_all_radios')[0], name: null, listId: RadioList_All }
                 break
             case RadioList_Viz: // no list. will switch to tab
                 break
@@ -109,14 +110,26 @@ class WebRadioPickerModule extends ModuleBase {
                 if (butId !== undefined) {
                     const paneId = butId.replace('btn_', 'opts_')
                     res = this.radiosLists.findListItemByName(rdList.name, paneId)
+                    res.listId = rdList.listId
                 }
                 break
         }
         return res
     }
 
+    // { domElement, id }
     getRadListItem(item) {
         return this.radiosLists.findListItemById(item.id, 'wrp_radio_list')
+    }
+
+    // { domElement, id }
+    getRadListItemById(id) {
+        return this.radiosLists.findListItemById(id, 'wrp_radio_list')
+    }
+
+    // { domElement, id }
+    getPlaysListsItemById(id) {
+        return this.radiosLists.findListItemById(id, 'opts_wrp_play_list')
     }
 
     initTabs() {
@@ -160,7 +173,6 @@ class WebRadioPickerModule extends ModuleBase {
             .buildArtItems()
             .buildLangItems()
             .buildListsItems()
-        //.buildRadItems()  // no initial full list
 
         const readOnly = { readOnly: true, attr: 'text' };
 
@@ -380,22 +392,36 @@ You should have received a copy of the GNU General Public License along with thi
     }
 
     updatePauseView() {
-        const c = 'but-icon-disabled'
         if (oscilloscope.pause) {
-            $('#wrp_btn_pause_on').addClass('hidden').removeClass(c)
-            $('#wrp_btn_pause_off').removeClass('hidden').removeClass(c)
+            $('#wrp_btn_pause_on').addClass('hidden')
+            $('#wrp_btn_pause_off').removeClass('hidden')
         } else {
-            $('#wrp_btn_pause_off').addClass('hidden').removeClass(c)
-            $('#wrp_btn_pause_on').removeClass('hidden').removeClass(c)
+            $('#wrp_btn_pause_off').addClass('hidden')
+            $('#wrp_btn_pause_on').removeClass('hidden')
         }
+    }
+
+    setPlayPauseButtonFreezeState(freezed) {
+        const c = 'but-icon-disabled'
+        const setState = (id, freezed) => {
+            const $b = $('#' + id)
+            if (freezed)
+                $b.addClass(c)
+            else
+                $b.removeClass(c)
+        }
+        setState('wrp_btn_pause_on', freezed)
+        setState('wrp_btn_pause_off', freezed)
     }
 
     initAudioSourceHandlers() {
         WRPPMediaSource.onLoadError = (err, audio) => this.onLoadError(err, audio)
         WRPPMediaSource.onLoadSuccess = (audio) => this.onLoadSuccess(audio)
+        WRPPMediaSource.onCanPlay = (audio) => this.onCanPlay(audio)
     }
 
     onLoading(item) {
+        this.setPlayPauseButtonFreezeState(true)
         const st = 'connecting...'
         if (settings.debug.debug) {
             logger.log(st)
@@ -419,12 +445,9 @@ You should have received a copy of the GNU General Public License along with thi
         $('#wrp_connected_icon').addClass('hidden')
         $('#wrp_connect_icon').addClass('hidden')
         $('#wrp_connect_error_icon').removeClass('hidden')
-        $('#err_txt')
-            .text(st)
-        $('#err_holder')
-            .removeClass('hidden')
+        $('#err_txt').text(st)
+        $('#err_holder').removeClass('hidden')
     }
-
     onLoadSuccess(audio) {
         const st = 'connected'
         app.channel.connected = true
@@ -453,6 +476,15 @@ You should have received a copy of the GNU General Public License along with thi
         }
     }
 
+    onCanPlay(audio) {
+        this.setPlayPauseButtonFreezeState(false)
+        const st = 'playing'
+        if (settings.debug.debug) {
+            logger.log(st)
+        }
+        this.updateLoadingRadItem(st)
+    }
+
     updateBindings() {
         ui.bindings.updateBindingTarget('wrp_list_count')
     }
@@ -467,9 +499,11 @@ You should have received a copy of the GNU General Public License along with thi
             const lst = t[name].items
             const { item, $item } = this.buildListItem(
                 name,
-                null,
+                i,
                 i,
                 { count: lst.length },
+                null,
+                null,
                 null
             )
             i++
@@ -482,8 +516,66 @@ You should have received a copy of the GNU General Public License along with thi
 
     updateListsItems() {
         const $pl = $('#opts_wrp_play_list')
+        const $selected = $pl.find('.item-selected')
+        const id = $selected.attr('data-id')
+        const y = $pl.scrollTop()
+
         $pl.find('*').remove()
         this.buildListsItems()
+        $pl.scrollTop(y)
+        if (id !== undefined) {
+            const it = this.getPlaysListsItemById(id)
+            if (it != null) {
+                it.item.scrollIntoView({
+                    behavior: 'instant',
+                    block: 'center',
+                    inline: 'center'
+                })
+                $(it.item).addClass('item-selected')
+            }
+            return { $panel: $pl, $selected: $selected, id: id, it: it }
+        }
+        return { $panel: $pl, $selected: $selected, id: id, it: null }
+    }
+
+    // update the rdList view for the current rdList and the given item
+    updateCurrentRDList(item) {
+        // find the list item / button
+        const rdList = this.uiState.currentRDList
+        if (rdList == null) return
+        const itemRef = this.getListItem(rdList)
+        if (itemRef == null || itemRef.item == null) return
+
+        // get the target items panel props
+        const $pl = $('#wrp_radio_list')
+        const $selected = $pl.find('.item-selected')
+        const id = $selected.attr('data-id')
+        // get dynamic item props
+        const text = $selected.attr('data-text')
+        const y = $pl.scrollTop()
+
+        // open the list
+        const r = itemRef.item.click()
+
+        // restore the position & selection
+        $pl.scrollTop(y)
+        if (id !== undefined) {
+            const it = this.getRadListItemById(id)
+            if (it != null) {
+                it.item.scrollIntoView({
+                    behavior: 'instant',
+                    block: 'center',
+                    inline: 'center'
+                })
+                const $item = $(it.item)
+                $item.addClass('item-selected')
+                this.$loadingRDItem = $item
+                this.loadingRDItem = item
+                this.updateLoadingRadItem(text)
+                //this.foldUnfoldRadItem($item, false)
+            }
+            return { $panel: $pl, $selected: $selected, id: id, it: it }
+        }
     }
 
     buildTagItems() {
@@ -493,9 +585,11 @@ You should have received a copy of the GNU General Public License along with thi
         keys.forEach(k => {
             const { item, $item } = this.buildListItem(
                 this.ifQuoteUnQuote(k),
-                null,
+                i,
                 i,
                 { count: this.items[k].length },
+                null,
+                null,
                 null
             )
             i++
@@ -520,11 +614,13 @@ You should have received a copy of the GNU General Public License along with thi
         keys.forEach(name => {
             const { item, $item } = this.buildListItem(
                 name,
-                null,
+                j,
                 j,
                 {
                     count: ''
                 },
+                null,
+                null,
                 null)
             j++
             btns[name] = $item
@@ -561,18 +657,7 @@ You should have received a copy of the GNU General Public License along with thi
         return r.name?.replace('- Hits', '')?.trim()
     }
 
-    buildRadItems() {
-        const keys = Object.keys(this.items)
-        var i = 0
-        keys.forEach(k => {
-            i++
-            const t = this.items[k]
-            this.buildRadListItems(t)
-        })
-        return this
-    }
-
-    buildRadListItems(items) {
+    buildRadListItems(items, listId, listName) {
         const $rad = $('#wrp_radio_list')
         var j = 0
         items.forEach(n => {
@@ -581,7 +666,10 @@ You should have received a copy of the GNU General Public License along with thi
                 n.id,
                 j,
                 null,
-                n)
+                n,
+                listId,
+                listName
+            )
             j++
             this.initItemRad($rad, $item, n)
             $rad.append($item)
@@ -591,13 +679,14 @@ You should have received a copy of the GNU General Public License along with thi
     }
 
     // build a playable item
-    buildListItem(text, id, j, opts, rdItem) {
+    buildListItem(text, id, j, opts, rdItem, listId, listName) {
         if (opts === undefined) opts = null
 
         const item = document.createElement('div')
         const $item = $(item)
 
         $item.attr('data-id', id)
+        $item.attr('data-text', text)
         $item.addClass('wrp-list-item')
         $item.removeClass('hidden')
         if (j & 1)
@@ -605,7 +694,8 @@ You should have received a copy of the GNU General Public License along with thi
         else
             $item.addClass('wrp-list-item-b')
 
-        $item.text(text)
+        const $textBox = $('<div class="wrp-list-item-text-container">' + text + '</div>')
+        $item.append($textBox)
 
         if (opts != null) {
 
@@ -621,9 +711,61 @@ You should have received a copy of the GNU General Public License along with thi
         }
 
         if (rdItem != null) {
+
+            // rad item : control box
+
+            const isHistoryList = listId == RadioList_List && listName == RadioList_History
+
+            const existsInFavorites =
+                rdItem.favLists.length == 0 ? false :
+                    (rdItem.favLists.length == 1 && rdItem.favLists[0] != RadioList_History)
+                    || rdItem.favLists.length > 1
+
+            const butHeartOnVis = existsInFavorites ? '' : 'hidden'
+            const butHeartOn =
+                `<img name="heart_on" src="./img/icons8-heart-fill-48.png" width="32" height="32" alt="heart" class="wrp-rad-item-icon ${butHeartOnVis}">`
+            const butHeartOffVis = !existsInFavorites ? '' : 'hidden'
+            const butHeartOff =
+                `<img name="heart_off" src="./img/icons8-heart-outline-48.png" width="32" height="32" alt="heart" class="wrp-rad-item-icon ${butHeartOffVis}">`
+
+            const butRemove = isHistoryList ?
+                `<img name="trash" src="./img/trash-32.png" width="32" height="32" alt="heart" class="wrp-rad-item-icon ${butHeartOffVis}">`
+                : ''
+
             $item.addClass('wrp-list-item-2h')
-            const $subit = $('<div class="wrp-list-item-sub hidden"><span class="wrp-item-info-text"></span></div>')
+            const $subit = $(
+                `<div class="wrp-list-item-sub hidden">
+<span class="wrp-item-info-text"></span>
+<div class="wrp-item-controls-container">
+${butRemove}${butHeartOn}${butHeartOff}
+</div>
+</div>`)
+            const $butOn = $subit.find('img[name="heart_on"]')
+            $butOn
+                .on('click', e => {
+                    e.preventDefault()
+                    this.removeFavorite(rdItem, $item, listId, listName, $butOn, $butOff)
+                })
+
+            const $butOff = $subit.find('img[name="heart_off"]')
+            $butOff
+                .on('click', e => {
+                    e.preventDefault()
+                    this.addFavorite(rdItem, $item, listId, listName, $butOn, $butOff)
+                })
+
+            if (isHistoryList)
+                $subit.find('img[name="trash"]')
+                    .on('click', e => {
+                        e.preventDefault()
+                        this.removeFromHistory(rdItem, $item, listId, listName, $butOn, $butOff)
+                    })
+
             $item.append($subit)
+
+            if (opts != null) {
+
+            }
         }
 
         return { item: item, $item: $item }
@@ -631,7 +773,8 @@ You should have received a copy of the GNU General Public License along with thi
 
     // init a playable item
     initItemRad($rad, $item, o) {
-        $item.on('click', async () => {
+        const $textContainer = $item.find('.wrp-list-item-text-container')
+        $textContainer.on('click', async () => {
 
             $rad.find('.item-selected')
                 .removeClass('item-selected')
@@ -669,14 +812,13 @@ You should have received a copy of the GNU General Public License along with thi
                 this.loadingRDItem = o
                 this.$loadingRDItem = $item
 
-                $('#err_txt')
-                    .text('')
-                $('#err_holder')
-                    .addClass('hidden')
+                $('#err_txt').text('')
+                $('#err_holder').addClass('hidden')
 
                 this.initAudioSourceHandlers()
                 this.onLoading(o)
 
+                // plays the item
                 const pl = async () => {
 
                     // turn on channel
@@ -697,14 +839,64 @@ You should have received a copy of the GNU General Public License along with thi
                 else
                     await pl()
             }
-
         })
+    }
+
+    addFavorite(item, $item, listId, listName, $butOn, $butOff) {
+        if (settings.debug.debug)
+            logger.log(`add favorite: ${item.name} list=${listId}:${listName}`)
+
+        // must select a fav in lists ui
+
+        $butOn.removeClass('hidden')
+        $butOff.addClass('hidden')
+    }
+
+    removeFavorite(item, $item, listId, listName, $butOn, $butOff) {
+        if (settings.debug.debug)
+            logger.log(`remove favorite: ${item.name} list=${listId}:${listName}`)
+        const favs = item.favLists.filter(x => x != RadioList_History)
+
+        if (favs.length == 1) {
+            // single one : remove without UI
+        }
+        else {
+            // multiple
+            // needs select in ui
+        }
+
+        if (favs.length == 0) {
+            $butOn.addClass('hidden')
+            $butOff.removeClass('hidden')
+        }
+    }
+
+    // always called from the history list
+    removeFromHistory(item, $item, listId, listName, $butOn, $butOff) {
+        if (settings.debug.debug)
+            logger.log(`remove from history: ${item.name} list=${listId}:${listName}`)
+
+        this.radiosLists.removeFromList(item, listName)
+        if (!oscilloscope.pause)
+            app.toggleOPause(() => this.updatePauseView())
+        this.setPlayPauseButtonFreezeState(true)
+
+        settings.dataStore.saveAll()
+
+        // update views
+        const list = this.updateListsItems()
+
+        // update history list if visible
+
+        if (this.isRDListVisible(RadioList_List, RadioList_History))
+            this.updateCurrentRDList(item)
     }
 
     updateLoadingRadItem(statusText) {
         if (this.$loadingRDItem == null && this.loadingRDItem == null) return
         const $subit = this.$loadingRDItem.find('.wrp-list-item-sub')
         const $statusText = this.$loadingRDItem.find('.wrp-item-info-text')
+        this.$loadingRDItem.attr('data-text', statusText)
         $statusText.text(statusText)
         $subit.removeClass('hidden')
     }
@@ -715,16 +907,24 @@ You should have received a copy of the GNU General Public License along with thi
         $subit.addClass('hidden')
     }
 
+    foldUnfoldRadItem($rdItem, folded) {
+        const $subit = $rdItem.find('.wrp-list-item-sub')
+        if (folded)
+            $subit.addClass('hidden')
+        else
+            $subit.removeClass('hidden')
+    }
+
     setupItemOptions($artBut, opts) {
         const $n = $artBut.find('.wrp-list-item-box')
         $n.text(opts.count)
     }
 
-    updateRadList(lst, listId) {
+    updateRadList(lst, listId, listName) {
         const $rad = $('#wrp_radio_list')
         $rad.find('*').remove()
-        this.buildRadListItems(lst, listId)
-        this.filteredListCount = lst.length
+        this.buildRadListItems(lst, listId, listName),
+            this.filteredListCount = lst.length
         this.updateBindings()
         if (settings.debug.trace)
             logger.log('update rad list')
@@ -839,9 +1039,15 @@ You should have received a copy of the GNU General Public License along with thi
             /*await*/ this.hideInfoPane()
             this.clearFilters()
             $item.addClass('item-selected')
-            this.updateRadList(t, currentRDList.listId)
+            this.updateRadList(t, currentRDList.listId, currentRDList.name)
             this.setCurrentRDList(currentRDList)
         })
+    }
+
+    isRDListVisible(listId, listName) {
+        const crdl = this.uiState.currentRDList
+        if (crdl == null) return null
+        return crdl.listId == listId && crdl.name == listName
     }
 
     addToHistory(o) {
@@ -851,20 +1057,21 @@ You should have received a copy of the GNU General Public License along with thi
         var history = this.radiosLists.getList(RadioList_History).items
         const itemInList = this.findRadItemInList(o, history)
         if (itemInList != null) {
-            // move to first position
+            // move to top: remove -> will be added on top
             history = history.filter(x => x != itemInList)
             this.radiosLists.getList(RadioList_History).items = history
         }
-        //const paneId = 'opts_wrp_play_list'
-        //const $pl = $('#' + paneId)
 
         history.unshift(o)
-        this.updateListsItems()
-
-        // TODO: update history list if visible
-        //const listItem = this.radiosLists.findListItem(RadioList_History, paneId)
-
         settings.dataStore.saveRadiosLists()
+
+        // update views
+        const list = this.updateListsItems()
+
+        // update history list if visible
+
+        if (this.isRDListVisible(RadioList_List, RadioList_History))
+            this.updateCurrentRDList(o)
     }
 
     // radio item model

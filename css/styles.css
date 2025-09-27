@@ -726,7 +726,8 @@ div.popup-grid > span.menu-item {
 .item-selected {
     background-color: #44AAffAA !important;
     color: white !important;
-    border: #FFFF00AA solid 1px !important;
+    border: #144176 solid 1px !important;
+    font-size: 1.5em !important;
 }
 
 .selected {
