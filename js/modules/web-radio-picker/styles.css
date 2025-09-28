@@ -19,15 +19,19 @@ find license and copyright informations in files /COPYRIGHT and /LICENCE
     margin-bottom: -0.75em;
     opacity: 0.9;
     width: 20%;
+    display: hidden;
 }
 
 .main-title {
-    position: relative;
-    top: -0.7em;
-    margin-bottom: -0.7em;
+    /*position: relative;*/
+    /*top: -0.7em;
+    margin-bottom: -0.7em;*/
+    /*top: -0.8em;*/
+    margin-bottom: -1em;
     opacity: 0.9;
     left: 2em;
     width: 70%;
+    display:hidden;
 }
 
 #err_holder {
@@ -118,10 +122,10 @@ find license and copyright informations in files /COPYRIGHT and /LICENCE
 }
 
 .wrp-pane {
-    margin-top: 0.5em;
+    /* margin-top: 0.5em; */
     height: 100%;
     /*min-height: 380px;*/
-    grid-template-rows: Calc(100% - 6.5em) 6.5em;
+    grid-template-rows: Calc(100% - 4.5em) 4.5em;
 }
 
 .wrp-scroll-pane {
