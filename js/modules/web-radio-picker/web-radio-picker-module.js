@@ -53,7 +53,6 @@ class WebRadioPickerModule extends ModuleBase {
     listCount = 0
     filteredListCount = 0
 
-    addToHistoryTimer = null
     resizeEventInitialized = false
     // pre-processed data
     groupsById = {}
@@ -61,6 +60,7 @@ class WebRadioPickerModule extends ModuleBase {
 
     // components
 
+    history = new History().init(this)
     favorites = new Favorites().init(this)
     playEventsHandlers = new PlayEventsHandlers().init(this)
     infosPane = new InfosPane().init(this)
@@ -552,7 +552,7 @@ class WebRadioPickerModule extends ModuleBase {
                 `<img name="heart_off" src="./img/icons8-heart-outline-48.png" width="32" height="32" alt="heart" class="wrp-rad-item-icon ${butHeartOffVis}">`
 
             const butRemove = isHistoryList ?
-                `<img name="trash" src="./img/trash-32.png" width="32" height="32" alt="heart" class="wrp-rad-item-icon ${butHeartOffVis}">`
+                `<img name="trash" src="./img/trash-32.png" width="32" height="32" alt="heart" class="wrp-rad-item-icon">`
                 : ''
 
             $item.addClass('wrp-list-item-2h')
@@ -587,8 +587,7 @@ ${butRemove}${butHeartOn}${butHeartOff}
                     .on('click', e => {
                         e.preventDefault()
                         if ($(e.currentTarget).hasClass(disabledCl)) return
-                        // TODO: change call target
-                        this.removeFromHistory(rdItem, $item, listId, listName, $butOn, $butOff)
+                        this.history.removeFromHistory(rdItem, $item, listId, listName, $butOn, $butOff)
                     })
 
             $item.append($subit)
@@ -874,70 +873,6 @@ ${butRemove}${butHeartOn}${butHeartOff}
         const crdl = this.uiState.currentRDList
         if (crdl == null) return null
         return crdl.listId == listId && crdl.name == listName
-    }
-
-    clearHistoryTimer() {
-        if (this.addToHistoryTimer != null)
-            clearTimeout(this.addToHistoryTimer)
-    }
-
-    addToHistory(o) {
-        if (this.uiState.favoriteInputState) return
-        const historyVisible = this.isRDListVisible(RadioList_List, RadioList_History)
-
-        if (settings.debug.debug)
-            logger.log('add to history:' + o?.name)
-        o.listenDate = Date.now
-        var history = this.radiosLists.getList(RadioList_History).items
-        const itemInList = this.findRadItemInList(o, history)
-        if (itemInList != null) {
-            // move to top: remove -> will be added on top
-            history = history.filter(x => x != itemInList)
-            this.radiosLists.getList(RadioList_History).items = history
-        }
-
-        history.unshift(o)
-        settings.dataStore.saveAll()
-
-        // update views
-        const list = this.updateListsItems()
-
-        // update history list if visible
-
-        if (historyVisible)
-            // TODO: restore scroll pos after that
-            this.updateCurrentRDList(o)
-    }
-
-    // always called from the history list
-    removeFromHistory(item, $item, listId, listName, $butOn, $butOff) {
-        if (settings.debug.debug)
-            logger.log(`remove from history: ${item.name} list=${listId}:${listName}`)
-
-        this.clearHistoryTimer()
-
-        this.radiosLists.removeFromList(item, listName)
-        if (!oscilloscope.pause)
-            app.toggleOPause(() => this.playEventsHandlers
-                .onPauseStateChanged(true, $item))
-        this.setPlayPauseButtonFreezeState(true)
-
-        this.uiState.updateCurrentRDItem(null, true)
-        settings.dataStore.saveAll()
-
-        // update views
-        const list = this.updateListsItems()
-
-        // update history list if visible
-
-        if (this.isRDListVisible(RadioList_List, RadioList_History))
-            this.updateCurrentRDList(item)
-
-        // clear Media view
-        this.noImage()
-        this.clearCurrentRadioView()
-        setTimeout(() =>
-            app.clearMediaView(), 500)
     }
 
     // radio item model

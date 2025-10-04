@@ -121,8 +121,7 @@ class Favorites {
         if (settings.debug.debug)
             logger.log(`remove favorite: ${item.name}`)
 
-        // TODO: change call target
-        this.wrpp.clearHistoryTimer()
+        this.wrpp.history.clearHistoryTimer()
 
         const favs = this.getItemFavoritesFiltered(item)
         var delFav = null

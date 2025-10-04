@@ -76,14 +76,7 @@ class PlayEventsHandlers {
             o.metadata = {
                 duration: audio.duration
             }
-
-            // TODO: change call target
-            const tid = setTimeout(() => this.wrpp.addToHistory(o),
-                this.wrpp.getSettings().addToHistoryDelay
-            )
-            if (this.wrpp.addToHistoryTimer != null)
-                clearTimeout(this.wrpp.addToHistoryTimer)
-            this.wrpp.addToHistoryTimer = tid
+            this.wrpp.history.setupAddToHistoryTimer(o)
         }
     }
 
@@ -103,9 +96,8 @@ class PlayEventsHandlers {
             // TODO: change call target
             this.wrpp.updateLoadingRadItem(oscilloscope.pause ?
                 'pause' : 'playing', $item)
-        // TODO: change call target
         if (oscilloscope.pause)
-            this.wrpp.clearHistoryTimer()
+            this.wrpp.history.clearHistoryTimer()
         // TODO: change call target
         this.wrpp.updatePauseView()
     }
