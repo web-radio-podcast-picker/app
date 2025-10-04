@@ -550,8 +550,10 @@ You should have received a copy of the GNU General Public License along with thi
         const id = $selected.attr('data-id')
         const y = $pl.scrollTop()
 
-        $pl.find('*').remove()
+        if ($pl.length > 0)
+            $pl[0].innerHTML = ''
         this.buildListsItems()
+
         $pl.scrollTop(y)
         if (id !== undefined) {
             const it = this.getPlaysListsItemById(id)
