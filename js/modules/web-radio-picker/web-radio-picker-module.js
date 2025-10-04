@@ -1097,7 +1097,8 @@ ${butRemove}${butHeartOn}${butHeartOff}
 
     updateRadList(lst, listId, listName) {
         const $rad = $('#wrp_radio_list')
-        $rad.find('*').remove()
+        if ($rad.length > 0)
+            $rad[0].innerHTML = ''
         this.buildRadListItems(lst, listId, listName),
             this.filteredListCount = lst.length
         this.updateBindings()
