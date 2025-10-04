@@ -158,7 +158,7 @@ class UIState {
             this.#setRDList(state.currentRDList)
         if (state.currentTab != null)
             this.setTab(state.currentTab.listId)
-        this.wrpp.preserveCurrentTab = true
+        this.wrpp.tabsController.preserveCurrentTab = true
         // ---
         if (state.currentRDItem != null)
             this.#setRDItem(state.currentRDItem)

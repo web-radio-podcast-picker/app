@@ -20,7 +20,7 @@ const Build_Json_Radio_List = false
 
 class WebRadioPickerModule extends ModuleBase {
 
-    // ----- module spec ----->
+    //#region ----- module spec ----->
 
     id = 'web_radio_picker'         // unique id
     author = 'franck gaspoz'        // author
@@ -41,7 +41,9 @@ class WebRadioPickerModule extends ModuleBase {
     title = 'Web Radio Picker'
     icon = '☄'
 
-    // <----- end module spec -----
+    //#endregion
+
+    //#region attributes
 
     items = []              // all items by group name
     itemsByArtists = []     // item with artist by artist name
@@ -50,12 +52,7 @@ class WebRadioPickerModule extends ModuleBase {
     itemsAll = []           // all items
     listCount = 0
     filteredListCount = 0
-    tabs = ['btn_wrp_tag_list',
-        'btn_wrp_lang_list',
-        'btn_wrp_art_list',
-        'btn_wrp_play_list',
-        'btn_wrp_logo']
-    infTabs = ['btn_wrp_inf', 'btn_log_pane']
+
     addToHistoryTimer = null
     resizeEventInitialized = false
     // pre-processed data
@@ -64,6 +61,7 @@ class WebRadioPickerModule extends ModuleBase {
 
     // components
 
+    tabsController = new TabsController().init(this)
     m3uDataBuilder = null
     radioDataParser = null
     radiosLists = new RadiosLists().init(this)
@@ -74,15 +72,18 @@ class WebRadioPickerModule extends ModuleBase {
     loadingRDItem = null
     $loadingRDItem = null
 
+    //#endregion
+
     constructor() {
         super()
         this.version = settings.app.wrp.version
         this.versionDate = settings.app.wrp.verDate
         this.datas = [
             // radios
-            Build_Json_Radio_List ?
+            'data/' + (Build_Json_Radio_List ?
                 WRP_Radio_List
-                : WRP_Json_Radio_List]
+                : WRP_Json_Radio_List
+            )]
         if (Build_Json_Radio_List)
             this.m3uDataBuilder = new M3UDataBuilder().init(this)
         else
@@ -133,43 +134,11 @@ class WebRadioPickerModule extends ModuleBase {
         return this.radiosLists.findListItemById(id, 'opts_wrp_play_list')
     }
 
-    initTabs() {
-        ui.tabs.initTabs(this.tabs, {
-            onChange: ($c) => {
-                this.onTabChanged($c)
-            }
-        })
-        ui.tabs.initTabs(this.infTabs, {
-            onPostChange: ($c) => {
-                this.onInfTabChanged($c)
-            }
-        })
-    }
-
-    onInfTabChanged($tab) {
-        if (settings.features.swype.enableArrowsButtonsOverScrollPanes)
-            ui.scrollers.update($tab.attr('id').replace('btn_', 'opts_'))
-    }
-
-    onTabChanged($tab) {
-        const c = $tab[0]
-        const $cnv = $(app.canvas)
-        if (c.id == 'btn_wrp_logo') {
-            $cnv.removeClass('hidden')
-            ui.vizTabActivated = true
-        }
-        else {
-            $cnv.addClass('hidden')
-            ui.vizTabActivated = false
-        }
-        this.uiState.updateCurrentTab(c.id)
-    }
-
     initView(viewId) {
 
         settings.dataStore.loadRadiosLists()
 
-        this.initTabs()
+        this.tabsController.initTabs()
         this.buildTagItems()
             .buildArtItems()
             .buildLangItems()
@@ -1210,14 +1179,14 @@ ${butRemove}${butHeartOn}${butHeartOff}
             this.resizeEventInitialized = true
         }
 
-        if (!this.preserveCurrentTab
+        if (!this.tabsController.preserveCurrentTab
             && !this.uiState.favoriteInputState
         ) {
-            ui.tabs.selectTab('btn_wrp_logo', this.tabs)
-            this.onTabChanged($('#btn_wrp_logo'))
+            this.tabsController.selectTab('btn_wrp_logo')
+            this.tabsController.onTabChanged($('#btn_wrp_logo'))
         }
         else
-            this.preserveCurrentTab = false
+            this.tabsController.preserveCurrentTab = false
     }
 
     initBtn($container, item, $item, t, currentRDList) {
@@ -1357,9 +1326,9 @@ ${butRemove}${butHeartOn}${butHeartOff}
 
     // set data from .m3u and export to json
     setData(dataId, text) {
-        if (dataId == WRP_Radio_List)
+        if (dataId.includes(WRP_Radio_List))
             this.m3uDataBuilder.setDataRadioListM3U(text)
-        if (dataId == WRP_Json_Radio_List)
+        if (dataId.includes(WRP_Json_Radio_List))
             this.radioDataParser.setDataRadioList(text)
     }
 }

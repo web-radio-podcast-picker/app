@@ -164,7 +164,7 @@ lang = {
     },
 
     async loadJSON() {
-        const r = await fetch('./iso-639-2.json')
+        const r = await fetch('./data/iso-639-2.json')
         this.langRef = await r.json()
     }
 }

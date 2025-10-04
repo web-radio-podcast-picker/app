@@ -114,7 +114,8 @@ class RadiosLists {
                 // copy dynamic properties from storage
                 if (name == RadioList_History && !item.favLists.includes(RadioList_History))
                     item.favLists.push(RadioList_History)
-                newItem.favLists = item.favLists
+                if (newItem!=null)
+                    newItem.favLists = item.favLists
 
                 substItems.push(item)
             })
