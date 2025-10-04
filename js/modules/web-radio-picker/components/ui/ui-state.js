@@ -232,7 +232,7 @@ class UIState {
         const menuItemDisabledCl = 'menu-item-disabled'
 
         ui.tabs
-            .setTabsFreezed(wrpp.tabs,
+            .setTabsFreezed(wrpp.tabsController.tabs,
                 'btn_wrp_play_list',
                 menuItemDisabledCl, enabled)
             .setTabsFreezed(

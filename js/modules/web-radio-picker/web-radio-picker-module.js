@@ -61,6 +61,7 @@ class WebRadioPickerModule extends ModuleBase {
 
     // components
 
+    favorites = new Favorites().init(this)
     playEventsHandlers = new PlayEventsHandlers().init(this)
     infosPane = new InfosPane().init(this)
     tabsController = new TabsController().init(this)
@@ -194,7 +195,7 @@ class WebRadioPickerModule extends ModuleBase {
             const $e = $(e.currentTarget)
             if ($e.hasClass('menu-item-disabled')) return
             if (!this.uiState.favoriteInputState) return
-            this.addNewFavoriteList()
+            this.favorites.addNewFavoriteList()
         })
 
         $('#btn_wrp_infos').on('click', () => {
@@ -568,7 +569,8 @@ ${butRemove}${butHeartOn}${butHeartOff}
                 .on('click', e => {
                     e.preventDefault()
                     if ($(e.currentTarget).hasClass(disabledCl)) return
-                    this.removeFavorite(rdItem, $item, $butOn, $butOff)
+                    // TODO: change call target
+                    this.favorites.removeFavorite(rdItem, $item, $butOn, $butOff)
                 })
 
             const $butOff = $subit.find('img[name="heart_off"]')
@@ -576,7 +578,8 @@ ${butRemove}${butHeartOn}${butHeartOff}
                 .on('click', e => {
                     e.preventDefault()
                     if ($(e.currentTarget).hasClass(disabledCl)) return
-                    this.addFavorite(rdItem, $item, listId, listName, $butOn, $butOff)
+                    // TODO: change call target
+                    this.favorites.addFavorite(rdItem, $item, listId, listName, $butOn, $butOff)
                 })
 
             if (isHistoryList)
@@ -584,6 +587,7 @@ ${butRemove}${butHeartOn}${butHeartOff}
                     .on('click', e => {
                         e.preventDefault()
                         if ($(e.currentTarget).hasClass(disabledCl)) return
+                        // TODO: change call target
                         this.removeFromHistory(rdItem, $item, listId, listName, $butOn, $butOff)
                     })
 
@@ -682,135 +686,6 @@ ${butRemove}${butHeartOn}${butHeartOff}
         $('#err_holder').addClass('hidden')
     }
 
-    addFavorite(item, $item, listId, listName, $butOn, $butOff) {
-        if (settings.debug.debug)
-            logger.log(`add favorite: ${item.name} (from list=${listId}:${listName})`)
-
-        // must select a fav in lists ui
-
-        this.uiState.setFavoriteInputState(
-            true,
-            item,
-            $item,
-            $butOn, $butOff)
-    }
-
-    endAddFavorite($favItem, rdList, isNewFavList) {
-        if (settings.debug.debug)
-            logger.log(`add favorite to: list=${rdList.listId}:${rdList.name}`)
-
-        const {
-            addingFavoriteItem,
-            $addingFavoriteItem,
-            $addingFavoriteItemButOn,
-            $addingFavoriteItemButOff
-        } = this.uiState.getAddingFavoriteItem()
-
-        this.uiState.setFavoriteInputState(
-            false,
-            this.uiState.addingFavoriteItem,
-            this.uiState.$addingFavoriteItem)
-
-        // update fav list
-        if (!addingFavoriteItem.favLists.includes(rdList.name))
-            addingFavoriteItem.favLists.push(rdList.name)
-        this.radiosLists.addToList(rdList.name, addingFavoriteItem)
-
-        this.updateRadItem(
-            addingFavoriteItem,
-            $addingFavoriteItem,
-            $addingFavoriteItemButOn,
-            $addingFavoriteItemButOff)
-
-        // update the fav list
-        this.updateListsItems()
-
-        settings.dataStore.saveAll()
-    }
-
-    addNewFavoriteList() {
-        $('#wrp_but_add_fav').addClass('menu-item-disabled')
-        const t = this.radiosLists.lists
-        const names = this.getSortedNames(t)
-        const i = names.length
-        const listName = "input_list_item"
-        const { domItem, $item } = this.buildListItem(
-            "",
-            i,
-            i,
-            { count: 0 },
-            null,
-            null,
-            null
-        )
-        const $inp = $('<input type="text" id="' + listName + '">')
-        const $container = $item.find('.wrp-list-item-text-container')
-        $container.append($inp)
-
-        const item = this.radiosLists.radioList(RadioList_List, listName)
-
-        $inp.on('keypress', e => {
-            logger.log(e)
-            const $inp = $(e.currentTarget)
-            const text = $inp.length > 0 ? $inp[0].value : null
-            const textValid = text !== undefined && text != null && text != ''
-            // return
-            if (textValid && e.which == 13) {
-                this.endNewFavoriteList(item, $item, false)
-            }
-        })
-
-        this.uiState.setAddNewFavoriteListInputState(item, $item)
-        const listId = 'opts_wrp_play_list'
-        const $pl = $('#' + listId)
-        $pl.find('.wrp-list-item').addClass('but-icon-disabled')
-        this.uiState.setItemsListState(listId, false)
-        $pl.append($item)
-        $inp.focus()
-    }
-
-    endNewFavoriteList(favItem, $favItem, isCancelled) {
-        const listName = "input_list_item"
-        const { item, $item } = this.uiState.getNewFavoriteListInput()
-        const $inp = $item.find('#' + listName)
-        const text = $inp[0].value
-        item.name = text
-        const rdList = this.radiosLists.addList(item.listId, item.name)
-        this.uiState.setAddNewFavoriteListInputState(null, null)
-        this.endAddFavorite($favItem, rdList, true)
-    }
-
-    getItemFavoritesFiltered(item) {
-        const favs = item.favLists.filter(x => x != RadioList_History)
-        return favs
-    }
-
-    removeFavorite(item, $item, $butOn, $butOff) {
-        if (settings.debug.debug)
-            logger.log(`remove favorite: ${item.name}`)
-
-        this.clearHistoryTimer()
-
-        const favs = this.getItemFavoritesFiltered(item)
-        var delFav = null
-
-        if (favs.length == 1) {
-            delFav = favs[0]
-            this.radiosLists.removeFromList(item, delFav)
-        }
-        this.updateRadItem(item, $item, $butOn, $butOff)
-
-        // update the fav list
-        this.updateListsItems()
-
-        // update rad list if current is the fav list
-        const crdl = this.uiState.currentRDList
-        if (crdl.listId == RadioList_List && crdl.name == delFav)
-            this.updateCurrentRDList(item)
-
-        settings.dataStore.saveAll()
-    }
-
     updateLoadingRadItem(statusText, $item) {
         var $ldgRDItem = $item || this.$loadingRDItem
         if ($ldgRDItem == null) return
@@ -822,7 +697,7 @@ ${butRemove}${butHeartOn}${butHeartOff}
     }
 
     updateRadItem(item, $item, $butOn, $butOff) {
-        const favs = this.getItemFavoritesFiltered(item)
+        const favs = this.favorites.getItemFavoritesFiltered(item)
         if (favs.length > 0) {
             $butOn.removeClass('hidden')
             $butOff.addClass('hidden')
@@ -982,7 +857,8 @@ ${butRemove}${butHeartOn}${butHeartOff}
                 && this.uiState.favoriteInputState
             )
                 // favorite select
-                this.endAddFavorite($item, currentRDList, false)
+                // TODO: change call target
+                this.favorites.endAddFavorite($item, currentRDList, false)
             else {
                 // normal select
                 this.infosPane.hideInfoPane()
