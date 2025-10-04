@@ -54,7 +54,7 @@ class Favorites {
             $addingFavoriteItemButOff)
 
         // update the fav list
-        this.wrpp.updateListsItems()
+        this.wrpp.listsBuilder.updateListsItems()
 
         settings.dataStore.saveAll()
     }
@@ -62,11 +62,11 @@ class Favorites {
     addNewFavoriteList() {
         $('#wrp_but_add_fav').addClass('menu-item-disabled')
         const t = this.wrpp.radiosLists.lists
-        const names = this.wrpp.getSortedNames(t)
+        const names = getSortedNames(t)
         const i = names.length
         const listName = "input_list_item"
         // TODO: change call target
-        const { domItem, $item } = this.wrpp.buildListItem(
+        const { domItem, $item } = this.listsBuilder.radListBuilder.buildListItem(
             "",
             i,
             i,
@@ -133,7 +133,7 @@ class Favorites {
         this.wrpp.updateRadItem(item, $item, $butOn, $butOff)
 
         // update the fav list
-        this.wrpp.updateListsItems()
+        this.wrpp.listsBuilder.updateListsItems()
 
         // update rad list if current is the fav list
         const crdl = this.wrpp.uiState.currentRDList

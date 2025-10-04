@@ -14,6 +14,7 @@ class TabsController {
 
     infTabs = ['btn_wrp_inf', 'btn_log_pane']
 
+    // ask to not change current tab automatically (eg. case restore ui state)
     preserveCurrentTab = false
     wrpp = null
 

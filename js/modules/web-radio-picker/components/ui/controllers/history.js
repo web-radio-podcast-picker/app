@@ -47,8 +47,7 @@ class History {
         settings.dataStore.saveAll()
 
         // update views
-        // TODO: change call target
-        const list = this.wrpp.updateListsItems()
+        const list = this.wrpp.listsBuilder.updateListsItems()
 
         // update history list if visible
 
@@ -75,7 +74,7 @@ class History {
         settings.dataStore.saveAll()
 
         // update views
-        const list = this.wrpp.updateListsItems()
+        const list = this.wrpp.listsBuilder.updateListsItems()
 
         // update history list if visible
 
