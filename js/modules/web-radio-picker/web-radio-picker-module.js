@@ -457,6 +457,7 @@ You should have received a copy of the GNU General Public License along with thi
         $('#err_txt').text(st)
         $('#err_holder').removeClass('hidden')
     }
+
     onLoadSuccess(audio) {
         const st = 'connected'
         app.channel.connected = true
@@ -504,6 +505,8 @@ You should have received a copy of the GNU General Public License along with thi
         if (updateRadItemStatusText)
             this.updateLoadingRadItem(oscilloscope.pause ?
                 'pause' : 'playing', $item)
+        if (oscilloscope.pause)
+            this.clearHistoryTimer()
         this.updatePauseView()
     }
 
@@ -992,8 +995,11 @@ ${butRemove}${butHeartOn}${butHeartOff}
 
         $inp.on('keypress', e => {
             logger.log(e)
+            const $inp = $(e.currentTarget)
+            const text = $inp.length > 0 ? $inp[0].value : null
+            const textValid = text !== undefined && text != null && text != ''
             // return
-            if (e.which == 13) {
+            if (textValid && e.which == 13) {
                 this.endNewFavoriteList(item, $item, false)
             }
         })
@@ -1243,8 +1249,8 @@ ${butRemove}${butHeartOn}${butHeartOff}
     }
 
     addToHistory(o) {
+        if (this.uiState.favoriteInputState) return
         const historyVisible = this.isRDListVisible(RadioList_List, RadioList_History)
-        if (this.uiState.favoriteInputState && historyVisible) return
 
         if (settings.debug.debug)
             logger.log('add to history:' + o?.name)
@@ -1266,6 +1272,7 @@ ${butRemove}${butHeartOn}${butHeartOff}
         // update history list if visible
 
         if (historyVisible)
+            // TODO: restore scroll pos after that
             this.updateCurrentRDList(o)
     }
 
