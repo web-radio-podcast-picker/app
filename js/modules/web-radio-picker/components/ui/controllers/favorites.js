@@ -65,8 +65,7 @@ class Favorites {
         const names = getSortedNames(t)
         const i = names.length
         const listName = "input_list_item"
-        // TODO: change call target
-        const { domItem, $item } = this.listsBuilder.radListBuilder.buildListItem(
+        const { domItem, $item } = this.wrpp.listsBuilder.radListBuilder.buildListItem(
             "",
             i,
             i,
