@@ -8,10 +8,11 @@ class ListsBuilder {
 
     addToHistoryTimer = null
     wrpp = null
-    radListBuilder = new RadListBuilder().init(this)
+    radListBuilder = null
 
     init(wrpp) {
         this.wrpp = wrpp
+        this.radListBuilder = new RadListBuilder().init(this.wrpp)
         return this
     }
 
