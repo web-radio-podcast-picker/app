@@ -6,7 +6,6 @@ find license and copyright informations in files /COPYRIGHT and /LICENCE
 
 /* web radio picker: view styles */
 
-
 .lim-height {
     height: Calc(100% - 4.5em);
 }
@@ -469,4 +468,17 @@ background-color: #44AAffAA !important
     width: 32px;
     height: 32px;
     vertical-align: middle;
+}
+
+#input_list_item {
+    background-color:#00000077;
+    border: transparent solid 1px;
+    color: white;
+    font-size: 1.5em;
+    width: calc(100% - 2em);
+    padding: 0.25em;
+}
+
+#input_list_item:focus {
+    outline: #00FFAAC0 solid 1px;
 }

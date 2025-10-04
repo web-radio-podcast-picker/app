@@ -30,19 +30,25 @@ class Tabs {
         return ui
     }
 
-    freezeTabs(tabs, exceptTab, disabledClass) {
+    setTabsFreezed(tabs, exceptTab, disabledClass, freezed) {
         tabs.forEach(tabId => {
             if (tabId != exceptTab) {
-                this.freezeTab(tabId, disabledClass)
+                this.setTabFreezed(tabId, disabledClass, freezed)
             }
         })
         return this
     }
 
-    freezeTab(tabId, disabledClass) {
+    setTabFreezed(tabId, disabledClass, freezed) {
         const $c = $('#' + tabId)
-        $c.attr('data-freezed', 1)
-        $c.addClass(disabledClass)
+        if (freezed) {
+            $c.attr('data-freezed', 1)
+            $c.addClass(disabledClass)
+        }
+        else {
+            $c.attr('data-freezed', null)
+            $c.removeClass(disabledClass)
+        }
     }
 
     tabIdToPaneId(tabId) {

@@ -32,6 +32,12 @@ class UIState {
     memRDLists = null
     // ui in favorite input state if true
     favoriteInputState = false
+    addingFavoriteItem = null
+    $addingFavoriteItem = null
+    $addingFavoriteItemButOn = null
+    $addingFavoriteItemButOff = null
+    addingNewFavoriteListItem = null
+    $addingNewFavoriteListItem = null
 
     init(wrpp) {
         this.wrpp = wrpp
@@ -42,7 +48,10 @@ class UIState {
         if (this.listIdToTabId[listId]) {
             const tabId = this.listIdToTabId[listId]
             $('#' + tabId).click()
+            logger.log('set tab: ' + tabId)
+            return tabId
         }
+        return null
     }
 
     updateCurrentTab(tabId, skipSave) {
@@ -52,7 +61,7 @@ class UIState {
         this.currentTab = t.length > 0 ? t[0] : null
         if (skipSave !== true && !this.disableSave)
             settings.dataStore.saveUIState()
-        if (settings.debug.trace)
+        if (settings.debug.debug)
             logger.log('currentTab=' + JSON.stringify(t))
     }
 
@@ -178,12 +187,62 @@ class UIState {
 
     memoRDLists() {
         this.memRDLists = {
-            cur: this.currentRDList,
-            back: this.currentRDList_Back
+            curList: this.currentRDList,
+            backList: this.currentRDList_Back,
+            curTab: this.currentTab,
+            curRDItem: this.currentRDItem
         }
     }
 
-    setFavoriteInputState(enabled) {
+    restoreRDLists() {
+        const m = this.memRDLists
+        if (m == null) return
+        this.currentRDList = m.curList
+        this.currentRDList_Back = m.backList
+        const listId = m.curTab != null ?
+            m.curTab.listId :
+            m.curList.listId
+        const tabId = this.setTab(listId)
+        this.currentTab = { listId: listId, tabId: tabId }
+        this.memRDLists = null
+    }
+
+    setAddNewFavoriteListInputState(item, $item) {
+        this.addingNewFavoriteListItem = item
+        this.$addingNewFavoriteListItem = $item
+    }
+
+    getNewFavoriteListInput() {
+        return {
+            item: this.addingNewFavoriteListItem,
+            $item: this.$addingNewFavoriteListItem
+        }
+    }
+
+    getAddingFavoriteItem() {
+        return {
+            addingFavoriteItem: this.addingFavoriteItem,
+            $addingFavoriteItem: this.$addingFavoriteItem,
+            $addingFavoriteItemButOn: this.$addingFavoriteItemButOn,
+            $addingFavoriteItemButOff: this.$addingFavoriteItemButOff
+        }
+    }
+
+    setFavoriteInputState(enabled, item, $item, $butOn, $butOff) {
+        const menuItemDisabledCl = 'menu-item-disabled'
+
+        ui.tabs
+            .setTabsFreezed(wrpp.tabs,
+                'btn_wrp_play_list',
+                menuItemDisabledCl, enabled)
+            .setTabsFreezed(
+                ['btn_wrp_all_radios'],
+                null, menuItemDisabledCl, enabled)
+
+        this.setInfoButtonState(!enabled)
+        this.setCurrentRadItemButtonsState(!enabled)
+        this.setRadItemsListState(!enabled)
+
         if (enabled) {
 
             this.memoRDLists()
@@ -193,21 +252,24 @@ class UIState {
                 .removeClass('hidden')
             $('#left-pane')
                 .addClass('showActionPane')
+            // remove selection
             wrpp.clearContainerSelection('opts_wrp_play_list')
 
-            const menuItemDisabledCl = 'menu-item-disabled'
-            ui.tabs
-                .freezeTabs(wrpp.tabs,
-                    'btn_wrp_play_list',
-                    menuItemDisabledCl)
-                .freezeTabs(['btn_wrp_all_radios'], null, menuItemDisabledCl)
-            this.setInfoButtonState(false)
-            this.setCurrentRadItemButtonsState(false)
-            this.setRadItemsListState(false)
+            this.addingFavoriteItem = item
+            this.$addingFavoriteItem = $item
+            this.$addingFavoriteItemButOn = $butOn
+            this.$addingFavoriteItemButOff = $butOff
 
         } else {
 
+            $('#opts_add_favorite_action_pane')
+                .addClass('hidden')
+            $('#left-pane')
+                .removeClass('showActionPane')
+            this.restoreRDLists()
+            $('#wrp_but_add_fav').removeClass('menu-item-disabled')
         }
+
         this.favoriteInputState = enabled
     }
 
@@ -245,6 +307,16 @@ class UIState {
         const disabledCl = 'but-icon-disabled'
         const $items = $('#wrp_radio_list')
             .find('.wrp-list-item:not([class~="item-selected"]')
+        if (!enabled)
+            $items.addClass(disabledCl)
+        else
+            $items.removeClass(disabledCl)
+    }
+
+    setItemsListState(paneId, enabled) {
+        const disabledCl = 'but-icon-disabled'
+        const $items = $('#' + paneId)
+            .find('.wrp-list-item')
         if (!enabled)
             $items.addClass(disabledCl)
         else

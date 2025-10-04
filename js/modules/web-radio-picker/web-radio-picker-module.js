@@ -87,7 +87,7 @@ class WebRadioPickerModule extends ModuleBase {
             this.m3uDataBuilder = new M3UDataBuilder().init(this)
         else
             this.radioDataParser = new RadioDataParser().init(this)
-        this.radiosLists.addList(RadioList_List, RadioList_History)
+        this.radiosLists.addList(RadioList_List, RadioList_History, true)
         window.wrpp = this
     }
 
@@ -218,9 +218,16 @@ class WebRadioPickerModule extends ModuleBase {
             app.toggleOPause(() => this.onPauseStateChanged(true))
         })
 
-        $('#btn_wrp_infos').on('click', async () => {
+        $('#wrp_but_add_fav').on('click', (e) => {
+            const $e = $(e.currentTarget)
+            if ($e.hasClass('menu-item-disabled')) return
+            if (!this.uiState.favoriteInputState) return
+            this.addNewFavoriteList()
+        })
+
+        $('#btn_wrp_infos').on('click', () => {
             if (this.uiState.favoriteInputState) return
-            /*await*/ this.toggleInfos()
+            this.toggleInfos()
         })
 
         ui.onResize.push(async () => {
@@ -289,7 +296,7 @@ class WebRadioPickerModule extends ModuleBase {
         return 'lim=' + settings.ui.maxRefreshRate + ' cur=' + vround2(app.frameAvgFPS)
     }
 
-    /*async*/ initInfoPane() {
+    initInfoPane() {
         const $pane = $('#opts_wrp_inf')
         const txt = (s, cl) => {
             const isjq = typeof s == 'object'
@@ -359,7 +366,7 @@ You should have received a copy of the GNU General Public License along with thi
         txt(cpy.replaceAll('\n', '<br>'), 'wrp-inf-val')
     }
 
-    /*async*/ toggleInfos() {
+    toggleInfos() {
         const $but = $('#btn_wrp_infos')
         const $pane = $('#wrp_inf_pane')
         const $radPane = $('#wrp_radio_list')
@@ -370,7 +377,7 @@ You should have received a copy of the GNU General Public License along with thi
         var rd = null
         if (!$pane.hasClass('hidden')) {
             $('#opts_wrp_inf').empty()
-            /*await*/ this.initInfoPane()
+            this.initInfoPane()
             scPane = 'opts_wrp_inf'
             rd = this.uiState.RDList(RadioList_Info, null, null)
         }
@@ -387,10 +394,10 @@ You should have received a copy of the GNU General Public License along with thi
         this.uiState.updateCurrentRDList(currentRDList)
     }
 
-    /*async*/ hideInfoPane() {
+    hideInfoPane() {
         const $pane = $('#wrp_inf_pane')
         if (!$pane.hasClass('hidden'))
-            /*await*/ this.toggleInfos()
+            this.toggleInfos()
     }
 
     updatePauseView() {
@@ -504,11 +511,16 @@ You should have received a copy of the GNU General Public License along with thi
         ui.bindings.updateBindingTarget('wrp_list_count')
     }
 
+    getSortedNames(t) {
+        const names = Object.keys(t)
+        names.sort((a, b) => a.localeCompare(b))
+        return names
+    }
+
     buildListsItems() {
         const $pl = $('#opts_wrp_play_list')
         const t = this.radiosLists.lists
-        const names = Object.keys(t)
-        names.sort((a, b) => a.localeCompare(b))
+        const names = this.getSortedNames(t)
         var i = 0
         names.forEach(name => {
             const lst = t[name].items
@@ -522,7 +534,7 @@ You should have received a copy of the GNU General Public License along with thi
                 null
             )
             i++
-            this.initBtn($pl, $item, lst,
+            this.initBtn($pl, item, $item, lst,
                 this.uiState.RDList(RadioList_List, name, $item)
             )
             $pl.append($item)
@@ -605,6 +617,29 @@ You should have received a copy of the GNU General Public License along with thi
         }
     }
 
+    getPaneScrollBackup($pane) {
+        return {
+            $pane: $pane,
+            y: $pane.scrollTop(),
+            selectedItemId: $pane.find('.item-selected').attr('data-id')
+        }
+    }
+
+    setPaneScroll(scrollBackup) {
+        const s = scrollBackup
+        if (s.selectedItemId != null && s.selectedItemId != '') {
+            const $item = s.$pane.find('[data-id="' + s.selectedItemId + '"]')
+            if ($item.length > 0) {
+                const domItem = $item[0]
+                domItem.scrollIntoView({
+                    behavior: 'instant',
+                    block: 'center',
+                    inline: 'center'
+                })
+            }
+        }
+    }
+
     buildTagItems() {
         const $tag = $('#opts_wrp_tag_list')
         const keys = Object.keys(this.items)
@@ -620,7 +655,7 @@ You should have received a copy of the GNU General Public License along with thi
                 null
             )
             i++
-            this.initBtn($tag, $item, this.items[k],
+            this.initBtn($tag, item, $item, this.items[k],
                 this.uiState.RDList(RadioList_Tag, k, $item))
             $tag.append($item)
         })
@@ -651,7 +686,7 @@ You should have received a copy of the GNU General Public License along with thi
                 null)
             j++
             btns[name] = $item
-            this.initBtn($container, $item, itemsByName[name],
+            this.initBtn($container, item, $item, itemsByName[name],
                 this.uiState.RDList(listId, name, $item))
             $container.append($item)
         })
@@ -702,7 +737,8 @@ You should have received a copy of the GNU General Public License along with thi
             $rad.append($item)
         })
         $rad.scrollTop(0)
-        ui.scrollers.update('wrp_radio_list')
+        if (settings.features.swype.enableArrowsButtonsOverScrollPanes)
+            ui.scrollers.update('wrp_radio_list')
     }
 
     // build a playable item
@@ -773,7 +809,7 @@ ${butRemove}${butHeartOn}${butHeartOff}
                 .on('click', e => {
                     e.preventDefault()
                     if ($(e.currentTarget).hasClass(disabledCl)) return
-                    this.removeFavorite(rdItem, $item, listId, listName, $butOn, $butOff)
+                    this.removeFavorite(rdItem, $item, $butOn, $butOff)
                 })
 
             const $butOff = $subit.find('img[name="heart_off"]')
@@ -889,35 +925,128 @@ ${butRemove}${butHeartOn}${butHeartOff}
 
     addFavorite(item, $item, listId, listName, $butOn, $butOff) {
         if (settings.debug.debug)
-            logger.log(`add favorite: ${item.name} list=${listId}:${listName}`)
+            logger.log(`add favorite: ${item.name} (from list=${listId}:${listName})`)
 
         // must select a fav in lists ui
 
-        this.uiState.setFavoriteInputState(true)
-
-        /*
-        $butOn.removeClass('hidden')
-        $butOff.addClass('hidden')
-        */
+        this.uiState.setFavoriteInputState(
+            true,
+            item,
+            $item,
+            $butOn, $butOff)
     }
 
-    removeFavorite(item, $item, listId, listName, $butOn, $butOff) {
+    endAddFavorite($favItem, rdList, isNewFavList) {
         if (settings.debug.debug)
-            logger.log(`remove favorite: ${item.name} list=${listId}:${listName}`)
+            logger.log(`add favorite to: list=${rdList.listId}:${rdList.name}`)
+
+        const {
+            addingFavoriteItem,
+            $addingFavoriteItem,
+            $addingFavoriteItemButOn,
+            $addingFavoriteItemButOff
+        } = this.uiState.getAddingFavoriteItem()
+
+        this.uiState.setFavoriteInputState(
+            false,
+            this.uiState.addingFavoriteItem,
+            this.uiState.$addingFavoriteItem)
+
+        // update fav list
+        if (!addingFavoriteItem.favLists.includes(rdList.name))
+            addingFavoriteItem.favLists.push(rdList.name)
+        this.radiosLists.addToList(rdList.name, addingFavoriteItem)
+
+        this.updateRadItem(
+            addingFavoriteItem,
+            $addingFavoriteItem,
+            $addingFavoriteItemButOn,
+            $addingFavoriteItemButOff)
+
+        // update the fav list
+        this.updateListsItems()
+
+        settings.dataStore.saveAll()
+    }
+
+    addNewFavoriteList() {
+        $('#wrp_but_add_fav').addClass('menu-item-disabled')
+        const t = this.radiosLists.lists
+        const names = this.getSortedNames(t)
+        const i = names.length
+        const listName = "input_list_item"
+        const { domItem, $item } = this.buildListItem(
+            "",
+            i,
+            i,
+            { count: 0 },
+            null,
+            null,
+            null
+        )
+        const $inp = $('<input type="text" id="' + listName + '">')
+        const $container = $item.find('.wrp-list-item-text-container')
+        $container.append($inp)
+
+        const item = this.radiosLists.radioList(RadioList_List, listName)
+
+        $inp.on('keypress', e => {
+            logger.log(e)
+            // return
+            if (e.which == 13) {
+                this.endNewFavoriteList(item, $item, false)
+            }
+        })
+
+        this.uiState.setAddNewFavoriteListInputState(item, $item)
+        const listId = 'opts_wrp_play_list'
+        const $pl = $('#' + listId)
+        $pl.find('.wrp-list-item').addClass('but-icon-disabled')
+        this.uiState.setItemsListState(listId, false)
+        $pl.append($item)
+        $inp.focus()
+    }
+
+    endNewFavoriteList(favItem, $favItem, isCancelled) {
+        const listName = "input_list_item"
+        const { item, $item } = this.uiState.getNewFavoriteListInput()
+        const $inp = $item.find('#' + listName)
+        const text = $inp[0].value
+        item.name = text
+        const rdList = this.radiosLists.addList(item.listId, item.name)
+        this.uiState.setAddNewFavoriteListInputState(null, null)
+        this.endAddFavorite($favItem, rdList, true)
+    }
+
+    getItemFavoritesFiltered(item) {
         const favs = item.favLists.filter(x => x != RadioList_History)
+        return favs
+    }
+
+    removeFavorite(item, $item, $butOn, $butOff) {
+        if (settings.debug.debug)
+            logger.log(`remove favorite: ${item.name}`)
+
+        this.clearHistoryTimer()
+
+        const favs = this.getItemFavoritesFiltered(item)
+        var delFav = null
 
         if (favs.length == 1) {
-            // single one : remove without UI
+            delFav = favs[0]
+            this.radiosLists.removeFromList(item, delFav)
         }
-        else {
-            // multiple
-            // needs select in ui
-        }
+        this.updateRadItem(item, $item, $butOn, $butOff)
 
-        if (favs.length == 0) {
-            $butOn.addClass('hidden')
-            $butOff.removeClass('hidden')
-        }
+        // update the fav list
+        this.updateListsItems()
+
+        // update rad list if current is the fav list
+        const crdl = this.uiState.currentRDList
+        if (crdl.listId == RadioList_List && crdl.name == delFav)
+            this.updateCurrentRDList(item)
+
+        settings.dataStore.saveAll()
     }
 
     updateLoadingRadItem(statusText, $item) {
@@ -928,6 +1057,17 @@ ${butRemove}${butHeartOn}${butHeartOff}
         $ldgRDItem.attr('data-text', statusText)
         $statusText.text(statusText)
         $subit.removeClass('hidden')
+    }
+
+    updateRadItem(item, $item, $butOn, $butOff) {
+        const favs = this.getItemFavoritesFiltered(item)
+        if (favs.length > 0) {
+            $butOn.removeClass('hidden')
+            $butOff.addClass('hidden')
+        } else {
+            $butOn.addClass('hidden')
+            $butOff.removeClass('hidden')
+        }
     }
 
     foldLoadingRadItem() {
@@ -959,7 +1099,7 @@ ${butRemove}${butHeartOn}${butHeartOff}
             logger.log('update rad list')
     }
 
-    clearFilters() {
+    clearListsSelection() {
         this.clearContainerSelection('opts_wrp_art_list')
         this.clearContainerSelection('opts_wrp_play_list')
         this.clearContainerSelection('opts_wrp_tag_list')
@@ -977,7 +1117,7 @@ ${butRemove}${butHeartOn}${butHeartOff}
     }
 
     allRadios() {
-        this.clearFilters()
+        this.clearListsSelection()
         this.updateRadList(this.itemsAll, RadioList_All)
         this.setCurrentRDList(this.uiState.RDList(RadioList_All, null, null))
     }
@@ -1061,7 +1201,9 @@ ${butRemove}${butHeartOn}${butHeartOff}
             this.resizeEventInitialized = true
         }
 
-        if (!this.preserveCurrentTab) {
+        if (!this.preserveCurrentTab
+            && !this.uiState.favoriteInputState
+        ) {
             ui.tabs.selectTab('btn_wrp_logo', this.tabs)
             this.onTabChanged($('#btn_wrp_logo'))
         }
@@ -1069,15 +1211,26 @@ ${butRemove}${butHeartOn}${butHeartOff}
             this.preserveCurrentTab = false
     }
 
-    initBtn($container, $item, t, currentRDList) {
-        $item.on('click', /*async*/() => {
-            /*await*/ this.hideInfoPane()
-            this.clearFilters()
-            $item.addClass('item-selected')
-            this.updateRadList(t, currentRDList.listId, currentRDList.name)
-            this.setCurrentRDList(currentRDList)
+    initBtn($container, item, $item, t, currentRDList) {
+        $item.on('click', e => {
+            const $e = $(e.currentTarget)
+            if ($e.hasClass('but-icon-disabled')) return
+            if (currentRDList.listId == RadioList_List
+                && this.uiState.favoriteInputState
+            )
+                // favorite select
+                this.endAddFavorite($item, currentRDList, false)
+            else {
+                // normal select
+                this.hideInfoPane()
+                this.clearListsSelection()
+                $item.addClass('item-selected')
+                this.updateRadList(t, currentRDList.listId, currentRDList.name)
+                this.setCurrentRDList(currentRDList)
+            }
         })
     }
+
     isRDListVisible(listId, listName) {
         const crdl = this.uiState.currentRDList
         if (crdl == null) return null
@@ -1149,18 +1302,20 @@ ${butRemove}${butHeartOn}${butHeartOff}
     // radio item model
     radioItem(id, name, groupName, url, logo) {
         return {
+            // const properties
             id: id,
             name: name,
             description: null,
             groupTitle: groupName,
             groups: [],
-            favLists: [],
             url: url,
             logo: logo,
             artist: null,
-            country: null,
             lang: null,
             channels: null,
+            // static & dynamic properties
+            country: null,
+            favLists: [],
             // dynamic properties
             metadata: {
                 duration: null,

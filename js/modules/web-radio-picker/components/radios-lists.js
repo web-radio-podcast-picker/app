@@ -26,9 +26,19 @@ class RadiosLists {
         return this
     }
 
-    addList(listId, name) {
-        if (!this.lists[name])
-            this.lists[name] = this.radioList(listId, name)
+    addList(listId, name, isSystem) {
+        if (isSystem === undefined) isSystem = false
+        if (!this.lists[name]) {
+            this.lists[name] = this.radioList(listId, name, isSystem)
+        }
+        return this.lists[name]
+    }
+
+    addToList(name, radItem) {
+        const list = this.getList(name)
+        if (list == null) return
+        if (list.items.includes(radItem)) return
+        list.items.push(radItem)
     }
 
     getList(name) {
@@ -73,11 +83,12 @@ class RadiosLists {
     }
 
     // radio list model
-    radioList(listId, name) {
+    radioList(listId, name, isSystem) {
         return {
             listId: listId,
             name: name,
-            items: []
+            items: [],
+            isSystem: false
         }
     }
 
@@ -93,12 +104,15 @@ class RadiosLists {
             const srcList = lists[name]
             t[name] = srcList
             const substItems = []
+            // normalize props
+            if (srcList.isSystem === undefined)
+                srcList.isSystem = srcList.name == RadioList_History
+            // transfers props
             srcList.items.forEach(item => {
                 const newItem = this.wrpp.findRadItem(item)
 
                 // copy dynamic properties from storage
                 if (name == RadioList_History && !item.favLists.includes(RadioList_History))
-                    // missing missing fav list
                     item.favLists.push(RadioList_History)
                 newItem.favLists = item.favLists
 

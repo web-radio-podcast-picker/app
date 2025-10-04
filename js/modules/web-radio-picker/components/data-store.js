@@ -29,7 +29,13 @@ class DataStore {
     }
 
     saveRadiosLists() {
-        if (localStorage === undefined) return
+        if (settings.debug.info)
+            logger.log('save radio lists')
+        if (localStorage === undefined) {
+            if (settings.debug.info)
+                logger.warn('no local storage')
+            return
+        }
         const str = wrpp.radiosLists.toJSON()
         localStorage.setItem(ST_RadiosLists, str)
     }
@@ -53,7 +59,13 @@ class DataStore {
     }
 
     saveUIState() {
-        if (localStorage === undefined) return
+        if (settings.debug.info)
+            logger.log('save UI state')
+        if (localStorage === undefined) {
+            if (settings.debug.info)
+                logger.warn('no local storage')
+            return
+        }
         const str = wrpp.uiState.toJSON()
         localStorage.setItem(ST_UIState, str)
     }
