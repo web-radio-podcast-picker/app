@@ -61,6 +61,8 @@ class WebRadioPickerModule extends ModuleBase {
 
     // components
 
+    playEventsHandlers = new PlayEventsHandlers().init(this)
+    infosPane = new InfosPane().init(this)
     tabsController = new TabsController().init(this)
     m3uDataBuilder = null
     radioDataParser = null
@@ -184,7 +186,8 @@ class WebRadioPickerModule extends ModuleBase {
         $('#wrp_btn_pause_onoff').on('click', () => {
             if ($('#wrp_btn_pause_on').hasClass('but-icon-disabled'))
                 return
-            app.toggleOPause(() => this.onPauseStateChanged(true))
+            app.toggleOPause(() => this.playEventsHandlers
+                .onPauseStateChanged(true))
         })
 
         $('#wrp_but_add_fav').on('click', (e) => {
@@ -196,16 +199,10 @@ class WebRadioPickerModule extends ModuleBase {
 
         $('#btn_wrp_infos').on('click', () => {
             if (this.uiState.favoriteInputState) return
-            this.toggleInfos()
+            this.infosPane.toggleInfos()
         })
 
-        ui.onResize.push(async () => {
-            await this.updateInfoPaneOnResize()
-        })
-
-        app.startFramePermanentOperations.push(() => {
-            this.updateInfoPaneOnEndOfFrame()
-        })
+        this.infosPane.initEventsHandlers()
 
         if (settings.features.swype.enableArrowsButtonsOverScrollPanes) {
             $("#rdl_top").removeClass('hidden')
@@ -240,133 +237,8 @@ class WebRadioPickerModule extends ModuleBase {
             settings.dataStore.loadUIState()
     }
 
-    async getRelatedApps() {
-        const installedRelatedApps = await navigator.getInstalledRelatedApps?.()
-        if (!installedRelatedApps || installedRelatedApps.length == 0) return '?'
-        const s = ''
-        for (var o in installedRelatedApps)
-            s += o.platform + ',' + o.id + ',' + o.url
-        return s
-    }
-
-    async updateInfoPaneOnResize() {
-        $('#ifp_window_size').text(this.getWindowSizeText())
-    }
-
-    updateInfoPaneOnEndOfFrame() {
-        $('#ifp_FPS').text(this.getFPS())
-    }
-
-    getWindowSizeText() {
-        return cui.viewSize().width + ' x ' + cui.viewSize().height
-    }
-
-    getFPS() {
-        return 'lim=' + settings.ui.maxRefreshRate + ' cur=' + vround2(app.frameAvgFPS)
-    }
-
-    initInfoPane() {
-        const $pane = $('#opts_wrp_inf')
-        const txt = (s, cl) => {
-            const isjq = typeof s == 'object'
-            const txt = !isjq ? s : ''
-            const $n = $('<div class="' + cl + '">' + txt + '</div>')
-            if (isjq) $n.append(s)
-            $pane.append($n)
-        }
-        const name = s => {
-            txt(s, 'wrp-inf-name')
-        }
-        const val = (s, id) => {
-            if (typeof s != 'object')
-                s = $('<span id="' + id + '">' + s + '</span>')
-            txt(s, 'wrp-inf-val')
-        }
-        const w = (k, v) => {
-            name(k)
-            val(v, 'ifp_' + k.replaceAll(' ', '_'))
-        }
-        const appinf = '?'//await this.getRelatedApps()
-        w('app', settings.app.wrp.version + ' ' + settings.app.wrp.verDate)
-        if (appinf != '?')
-            val(appinf)
-        w('user agent', navigator.userAgent)
-        const brand = navigator.userAgentData?.brands.map(x => x?.brand)?.join(' | ')
-        w('brand', brand)
-        w('iphone', settings.features.constraints.isIPhone ? 'yes' : 'no')
-        w('window size', this.getWindowSizeText())
-        w('platform', settings.sys.platformText)
-        w('mobile', settings.sys.mobile ? 'yes' : 'no')
-        var ps = window.location.search
-        if (ps == null || ps === undefined || ps == '') ps = '-'
-        w('parameters', ps)
-        w('FPS', this.getFPS())
-        w('sampling', settings.input.bufferSize + ' bytes, '
-            + frequency(app.channel?.audioContext?.sampleRate).text2
-        )
-        w('FFT', settings.input.bufferSize * 2 + ' bytes, '
-            + settings.fft.bars + ' bars'
-        )
-        const sep = () => {
-            w($('<br>'), '')
-            w($('<hr>'), '')
-            w($('<br>'), '')
-        }
-        sep()
-
-        w('credits', 'icons by <a href="https://icons8.com/" target="blank">Icons8</a>')
-        val('testing by Gaspard Moyrand', 'ifp_tgp')
-        w('project readme',
-            $('<a href="https://github.com/franck-gaspoz/web-radio-podcast-picker/blob/main/README.md" target="_blank">https://github.com/franck-gaspoz/web-radio-podcast-picker/blob/main/README.md</a>'))
-
-        sep()
-
-        const cpy =
-            `Web Radio Podcast Picker
-Copyright(C) 2025 Franck Gaspoz
-contact: <a href="mailto:franck.gaspoz@gmail.com">franck.gaspoz@gmail.com</a>
-
-This program is free software; you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation version 2.
-
-This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details.
-
-You should have received a copy of the GNU General Public License along with this program; if not, write to the Free Software Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
-`
-        txt(cpy.replaceAll('\n', '<br>'), 'wrp-inf-val')
-    }
-
-    toggleInfos() {
-        const $but = $('#btn_wrp_infos')
-        const $pane = $('#wrp_inf_pane')
-        const $radPane = $('#wrp_radio_list')
-        $but.toggleClass('selected')
-        $pane.toggleClass('hidden')
-        $radPane.toggleClass('hidden')
-        var scPane = null
-        var rd = null
-        if (!$pane.hasClass('hidden')) {
-            $('#opts_wrp_inf').empty()
-            this.initInfoPane()
-            scPane = 'opts_wrp_inf'
-            rd = this.uiState.RDList(RadioList_Info, null, null)
-        }
-        else {
-            scPane = 'wrp_radio_list'
-            rd = this.uiState.currentRDList_Back
-        }
-        if (settings.features.swype.enableArrowsButtonsOverScrollPanes)
-            ui.scrollers.update(scPane)
-        this.setCurrentRDList(rd)
-    }
-
     setCurrentRDList(currentRDList) {
         this.uiState.updateCurrentRDList(currentRDList)
-    }
-
-    hideInfoPane() {
-        const $pane = $('#wrp_inf_pane')
-        if (!$pane.hasClass('hidden'))
-            this.toggleInfos()
     }
 
     updatePauseView() {
@@ -390,93 +262,6 @@ You should have received a copy of the GNU General Public License along with thi
         }
         setState('wrp_btn_pause_on', freezed)
         setState('wrp_btn_pause_off', freezed)
-    }
-
-    initAudioSourceHandlers() {
-        WRPPMediaSource.onLoadError = (err, audio) => this.onLoadError(err, audio)
-        WRPPMediaSource.onLoadSuccess = (audio) => this.onLoadSuccess(audio)
-        WRPPMediaSource.onCanPlay = (audio) => this.onCanPlay(audio)
-    }
-
-    onLoading(item) {
-        this.setPlayPauseButtonFreezeState(true)
-        const st = 'connecting...'
-        if (settings.debug.debug) {
-            logger.log(st)
-        }
-        this.updateLoadingRadItem(st)
-
-        app.channel.connected = false
-        $('#wrp_connected_icon').addClass('hidden')
-        $('#wrp_connect_error_icon').addClass('hidden')
-        $('#wrp_connect_icon').removeClass('hidden')
-    }
-
-    onLoadError(err, audio) {
-        const st = 'no connection'
-        if (settings.debug.debug) {
-            logger.log(st)
-        }
-        this.updateLoadingRadItem(st)
-
-        app.channel.connected = false
-        $('#wrp_connected_icon').addClass('hidden')
-        $('#wrp_connect_icon').addClass('hidden')
-        $('#wrp_connect_error_icon').removeClass('hidden')
-        $('#err_txt').text(st)
-        $('#err_holder').removeClass('hidden')
-    }
-
-    onLoadSuccess(audio) {
-        const st = 'connected'
-        app.channel.connected = true
-        this.updateLoadingRadItem(st)
-
-        // metatadata available: audio.duration
-
-        if (settings.debug.debug) {
-            logger.log(st)
-            logger.log('duration:' + audio.duration)
-        }
-        $('#wrp_connect_icon').addClass('hidden')
-        $('#wrp_connect_error_icon').addClass('hidden')
-        $('#wrp_connected_icon').removeClass('hidden')
-
-        // enable save to history list
-
-        const o = this.uiState.currentRDItem
-        if (o != null) {
-
-            window.audio = audio
-            o.metadata = {
-                duration: audio.duration
-            }
-
-            const tid = setTimeout(() => this.addToHistory(o),
-                this.getSettings().addToHistoryDelay
-            )
-            if (this.addToHistoryTimer != null)
-                clearTimeout(this.addToHistoryTimer)
-            this.addToHistoryTimer = tid
-        }
-    }
-
-    onCanPlay(audio) {
-        this.setPlayPauseButtonFreezeState(false)
-        const st = 'playing'
-        if (settings.debug.debug) {
-            logger.log(st)
-        }
-        this.updateLoadingRadItem(st)
-    }
-
-    onPauseStateChanged(updateRadItemStatusText, $item) {
-        if (updateRadItemStatusText)
-            this.updateLoadingRadItem(oscilloscope.pause ?
-                'pause' : 'playing', $item)
-        if (oscilloscope.pause)
-            this.clearHistoryTimer()
-        this.updatePauseView()
     }
 
     updateBindings() {
@@ -856,8 +641,8 @@ ${butRemove}${butHeartOn}${butHeartOff}
                 this.loadingRDItem = o
                 this.$loadingRDItem = $item
                 this.clearAppStatus()
-                this.initAudioSourceHandlers()
-                this.onLoading(o)
+                this.playEventsHandlers.initAudioSourceHandlers()
+                this.playEventsHandlers.onLoading(o)
 
                 // plays the item
                 const pl = async () => {
@@ -865,7 +650,7 @@ ${butRemove}${butHeartOn}${butHeartOff}
                     // turn on channel
 
                     // update pause state
-                    this.onPauseStateChanged()
+                    this.playEventsHandlers.onPauseStateChanged()
 
                     // setup channel media
                     await app.updateChannelMedia(
@@ -1200,7 +985,7 @@ ${butRemove}${butHeartOn}${butHeartOff}
                 this.endAddFavorite($item, currentRDList, false)
             else {
                 // normal select
-                this.hideInfoPane()
+                this.infosPane.hideInfoPane()
                 this.clearListsSelection()
                 $item.addClass('item-selected')
                 this.updateRadList(t, currentRDList.listId, currentRDList.name)
@@ -1257,7 +1042,8 @@ ${butRemove}${butHeartOn}${butHeartOff}
 
         this.radiosLists.removeFromList(item, listName)
         if (!oscilloscope.pause)
-            app.toggleOPause(() => this.onPauseStateChanged(true, $item))
+            app.toggleOPause(() => this.playEventsHandlers
+                .onPauseStateChanged(true, $item))
         this.setPlayPauseButtonFreezeState(true)
 
         this.uiState.updateCurrentRDItem(null, true)
@@ -1324,7 +1110,7 @@ ${butRemove}${butHeartOn}${butHeartOff}
         return res
     }
 
-    // set data from .m3u and export to json
+    // set data from .m3u or .txt
     setData(dataId, text) {
         if (dataId.includes(WRP_Radio_List))
             this.m3uDataBuilder.setDataRadioListM3U(text)
