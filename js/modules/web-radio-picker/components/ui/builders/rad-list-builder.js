@@ -258,4 +258,16 @@ ${butRemove}${butHeartOn}${butHeartOff}
             return { $panel: $pl, $selected: $selected, id: id, it: it }
         }
     }
+
+    updateRadList(lst, listId, listName) {
+        const $rad = $('#wrp_radio_list')
+        if ($rad.length > 0)
+            $rad[0].innerHTML = ''
+        this.wrpp.listsBuilder.radListBuilder
+            .buildRadListItems(lst, listId, listName)
+        this.wrpp.filteredListCount = lst.length
+        this.wrpp.updateBindings()
+        if (settings.debug.trace)
+            logger.log('update rad list')
+    }
 }

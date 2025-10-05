@@ -155,7 +155,8 @@ class ListsBuilder {
                 this.wrpp.infosPane.hideInfoPane()
                 this.wrpp.clearListsSelection()
                 $item.addClass('item-selected')
-                this.wrpp.updateRadList(t, currentRDList.listId, currentRDList.name)
+                this.radListBuilder
+                    .updateRadList(t, currentRDList.listId, currentRDList.name)
                 this.wrpp.setCurrentRDList(currentRDList)
             }
         })

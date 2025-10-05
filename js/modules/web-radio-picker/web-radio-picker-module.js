@@ -321,18 +321,6 @@ class WebRadioPickerModule extends ModuleBase {
         $('#err_holder').addClass('hidden')
     }
 
-    updateRadList(lst, listId, listName) {
-        const $rad = $('#wrp_radio_list')
-        if ($rad.length > 0)
-            $rad[0].innerHTML = ''
-        this.listsBuilder.radListBuilder
-            .buildRadListItems(lst, listId, listName)
-        this.filteredListCount = lst.length
-        this.updateBindings()
-        if (settings.debug.trace)
-            logger.log('update rad list')
-    }
-
     clearListsSelection() {
         this.clearContainerSelection('opts_wrp_art_list')
         this.clearContainerSelection('opts_wrp_play_list')
@@ -352,7 +340,8 @@ class WebRadioPickerModule extends ModuleBase {
 
     allRadios() {
         this.clearListsSelection()
-        this.updateRadList(this.itemsAll, RadioList_All)
+        this.listsBuilder.radListBuilder
+            .updateRadList(this.itemsAll, RadioList_All)
         this.setCurrentRDList(this.uiState.RDList(RadioList_All, null, null))
     }
 
