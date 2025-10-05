@@ -147,7 +147,7 @@ class WebRadioPickerModule extends ModuleBase {
 
         wrpp = this
         radsItems = new RadsItems()
-        rdMediaImage = new MediaImage()
+        rdMediaImage = new RdMediaImage()
         listsBuilder = new ListsBuilder()
         radListBuilder = new RadListBuilder()
         playHistory = new PlayHistory()
