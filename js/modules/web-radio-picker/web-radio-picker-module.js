@@ -374,6 +374,9 @@ class WebRadioPickerModule extends ModuleBase {
             .clearContainerSelection('opts_wrp_play_list')
             .clearContainerSelection('opts_wrp_tag_list')
             .clearContainerSelection('opts_wrp_lang_list')
+        // fold any unfolded list item
+        radsItems
+            .unbuildFoldedItems('opts_wrp_play_list')
     }
 
     clearContainerSelection(containerId) {

@@ -19,7 +19,7 @@ class TabsController {
 
     initTabs() {
         ui.tabs.initTabs(this.tabs, {
-            onChange: ($c) => {
+            onPostChange: ($c) => {
                 this.onTabChanged($c)
             }
         })
@@ -30,9 +30,14 @@ class TabsController {
         })
     }
 
+    tabControlToPaneId($tab) {
+        return $tab.attr('id').replace('btn_', 'opts_')
+    }
+
     onInfTabChanged($tab) {
         if (settings.features.swype.enableArrowsButtonsOverScrollPanes)
-            ui.scrollers.update($tab.attr('id').replace('btn_', 'opts_'))
+            ui.scrollers.update(
+                this.tabControlToPaneId($tab))
     }
 
     onTabChanged($tab) {
@@ -47,6 +52,16 @@ class TabsController {
             ui.vizTabActivated = false
         }
         uiState.updateCurrentTab(c.id)
+        //this.focusTabSelectedItem($tab)
+
+        return this
+    }
+
+    focusTabSelectedItem($tab) {
+        const $pane = $('#' + this.tabControlToPaneId($tab))
+        const $selected = $pane.find('.item-selected')
+        if ($selected.length > 0)
+            wrpp.focusListItem($selected[0], false)
         return this
     }
 

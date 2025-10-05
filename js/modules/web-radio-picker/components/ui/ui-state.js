@@ -6,6 +6,8 @@
 
 class UIState {
 
+    //#region attributes
+
     // RDList is the right pane container. can holds an item list or not (eg. info pane)
     // struct RDList { listId, name, $item }
     currentRDList = null
@@ -38,10 +40,16 @@ class UIState {
     addingNewFavoriteListItem = null
     $addingNewFavoriteListItem = null
 
-    setTab(listId) {
+    //#endregion
+
+    #setTab(listId) {
         if (this.listIdToTabId[listId]) {
             const tabId = this.listIdToTabId[listId]
-            $('#' + tabId).click()
+            const $tab = $('#' + tabId)
+            $tab.click()
+
+            tabsController.focusTabSelectedItem($tab)
+
             logger.log('set tab: ' + tabId)
             return tabId
         }
@@ -53,8 +61,15 @@ class UIState {
             .map(x => { return { 'listId': x, 'tabId': uiState.listIdToTabId[x] } })
             .filter(x => x.tabId == tabId)
         this.currentTab = t.length > 0 ? t[0] : null
+
+        if (this.currentTab != null) {
+            const $tab = $('#' + tabId)
+            tabsController.focusTabSelectedItem($tab)
+        }
+
         if (skipSave !== true && !this.disableSave)
             settings.dataStore.saveUIState()
+
         if (settings.debug.debug)
             logger.log('currentTab=' + JSON.stringify(t))
     }
@@ -151,7 +166,7 @@ class UIState {
         if (state.currentRDList != null)
             this.#setRDList(state.currentRDList)
         if (state.currentTab != null)
-            this.setTab(state.currentTab.listId)
+            this.#setTab(state.currentTab.listId)
         tabsController.preserveCurrentTab = true
         // ---
         if (state.currentRDItem != null)
@@ -222,7 +237,7 @@ class UIState {
         const listId = m.curTab != null ?
             m.curTab.listId :
             m.curList.listId
-        const tabId = this.setTab(listId)
+        const tabId = this.#setTab(listId)
         this.currentTab = { listId: listId, tabId: tabId }
         this.memRDLists = null
     }
@@ -266,7 +281,7 @@ class UIState {
         if (enabled) {
 
             this.memoRDLists()
-            this.setTab(RadioList_List)
+            this.#setTab(RadioList_List)
             $('#opts_add_favorite_action_pane')
                 .removeClass('hidden')
             $('#left-pane')

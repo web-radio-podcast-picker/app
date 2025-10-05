@@ -206,7 +206,7 @@ class RadListBuilder {
         const text = $selected.attr('data-text')
         const y = $pl.scrollTop()
 
-        // open the list
+        // open the list (will auto restore any unfolded item)
         const r = itemRef.item.click()
 
         // restore the position & selection
@@ -217,16 +217,6 @@ class RadListBuilder {
                 it.item.scrollIntoView(ScrollIntoViewProps)
                 const $item = $(it.item)
                 $item.addClass('item-selected')
-
-                // restore item in unfolded state
-                radsItems.buildFoldableItem(
-                    item,
-                    $item,
-                    rdList.listId,
-                    rdList.name,
-                    {},
-                    true
-                )
 
                 radsItems.setLoadingItem(item, $item)
                 radsItems.updateLoadingRadItem(text, item, $item)

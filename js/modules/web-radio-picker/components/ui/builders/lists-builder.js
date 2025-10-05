@@ -21,7 +21,7 @@ class ListsBuilder {
                 null
             )
             i++
-            this.initBtn($tag, item, $item, wrpp.items[k],
+            this.initListItem($tag, item, $item, wrpp.items[k],
                 uiState.RDList(RadioList_Tag, k, $item))
             $tag.append($item)
         })
@@ -38,6 +38,10 @@ class ListsBuilder {
         return this
     }
 
+    favoriteListItemOpts(lst) {
+        return { count: lst.length }
+    }
+
     buildListsItems() {
         const $pl = $('#opts_wrp_play_list')
         const t = radiosLists.lists
@@ -49,13 +53,13 @@ class ListsBuilder {
                 name,
                 i,
                 i,
-                { count: lst.length },
+                this.favoriteListItemOpts(lst),
                 null,
                 null,
                 null
             )
             i++
-            this.initBtn($pl, item, $item, lst,
+            this.initListItem($pl, item, $item, lst,
                 uiState.RDList(RadioList_List, name, $item)
             )
             $pl.append($item)
@@ -75,10 +79,24 @@ class ListsBuilder {
 
         $pl.scrollTop(y)
         if (id !== undefined) {
+            // restore selection
             const it = wrpp.getPlaysListsItemById(id)
             if (it != null) {
                 it.item.scrollIntoView(ScrollIntoViewProps)
-                $(it.item).addClass('item-selected')
+                const $item = $(it.item)
+                const name = $item.attr('data-text')
+                $item.addClass('item-selected')
+                // unfold
+                radsItems.buildFoldableItem(
+                    null,
+                    $item,
+                    RadioList_List,
+                    name,
+                    this.favoriteListItemOpts(
+                        radiosLists.getList(name)
+                    ),
+                    true
+                )
             }
             return { $panel: $pl, $selected: $selected, id: id, it: it }
         }
@@ -104,7 +122,7 @@ class ListsBuilder {
                 null)
             j++
             btns[name] = $item
-            this.initBtn($container, item, $item, itemsByName[name],
+            this.initListItem($container, item, $item, itemsByName[name],
                 uiState.RDList(listId, name, $item))
             $container.append($item)
         })
@@ -127,7 +145,7 @@ class ListsBuilder {
         $n.text(opts.count)
     }
 
-    initBtn($container, item, $item, t, currentRDList) {
+    initListItem($container, item, $item, t, currentRDList) {
         $item.on('click', e => {
             const $e = $(e.currentTarget)
             if ($e.hasClass('but-icon-disabled')) return
@@ -137,9 +155,29 @@ class ListsBuilder {
                 // favorite select
                 favorites.endAddFavorite($item, currentRDList, false)
             else {
-                // normal select
-                infosPane.hideInfoPane()
+
+                // clear selections & unbuild folded items
                 wrpp.clearListsSelection()
+
+                if (currentRDList.listId == RadioList_List) {
+
+                    radsItems
+
+                        // unfold
+                        .buildFoldableItem(
+                            null,
+                            $item,
+                            currentRDList.listId,
+                            currentRDList.name,
+                            this.favoriteListItemOpts(
+                                radiosLists.getList(currentRDList.name)
+                            ),
+                            true
+                        )
+                }
+
+                // select
+                infosPane.hideInfoPane()
                 $item.addClass('item-selected')
                 radListBuilder
                     .updateRadList(
@@ -147,6 +185,7 @@ class ListsBuilder {
                         currentRDList.listId,
                         currentRDList.name)
                 wrpp.setCurrentRDList(currentRDList)
+
             }
         })
     }
