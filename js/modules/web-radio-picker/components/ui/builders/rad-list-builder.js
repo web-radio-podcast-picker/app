@@ -220,4 +220,42 @@ ${butRemove}${butHeartOn}${butHeartOff}
         else
             $subit.removeClass('hidden')
     }
+
+    // update the rdList view for the current rdList and the given item
+    updateCurrentRDList(item) {
+        // find the list item / button
+        const rdList = this.wrpp.uiState.currentRDList
+        if (rdList == null) return
+        const itemRef = this.wrpp.getListItem(rdList)
+        if (itemRef == null || itemRef.item == null) return
+
+        // get the target items panel props
+        const $pl = $('#wrp_radio_list')
+        const $selected = $pl.find('.item-selected')
+        const id = $selected.attr('data-id')
+        // get dynamic item props
+        const text = $selected.attr('data-text')
+        const y = $pl.scrollTop()
+
+        // open the list
+        const r = itemRef.item.click()
+
+        // restore the position & selection
+        $pl.scrollTop(y)
+        if (id !== undefined) {
+            const it = this.wrpp.getRadListItemById(id)
+            if (it != null) {
+                it.item.scrollIntoView({
+                    behavior: 'instant',
+                    block: 'center',
+                    inline: 'center'
+                })
+                const $item = $(it.item)
+                $item.addClass('item-selected')
+                this.wrpp.radsItems.setLoadingItem(item, $item)
+                this.wrpp.radsItems.updateLoadingRadItem(text)
+            }
+            return { $panel: $pl, $selected: $selected, id: id, it: it }
+        }
+    }
 }

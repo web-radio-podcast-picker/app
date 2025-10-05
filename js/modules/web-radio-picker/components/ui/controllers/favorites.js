@@ -47,7 +47,7 @@ class Favorites {
             addingFavoriteItem.favLists.push(rdList.name)
         this.wrpp.radiosLists.addToList(rdList.name, addingFavoriteItem)
 
-        this.wrpp.updateRadItem(
+        this.wrpp.radsItems.updateRadItem(
             addingFavoriteItem,
             $addingFavoriteItem,
             $addingFavoriteItemButOn,
@@ -129,7 +129,7 @@ class Favorites {
             delFav = favs[0]
             this.wrpp.radiosLists.removeFromList(item, delFav)
         }
-        this.wrpp.updateRadItem(item, $item, $butOn, $butOff)
+        this.wrpp.radsItems.updateRadItem(item, $item, $butOn, $butOff)
 
         // update the fav list
         this.wrpp.listsBuilder.updateListsItems()
@@ -137,7 +137,8 @@ class Favorites {
         // update rad list if current is the fav list
         const crdl = this.wrpp.uiState.currentRDList
         if (crdl.listId == RadioList_List && crdl.name == delFav)
-            this.wrpp.updateCurrentRDList(item)
+            this.wrpp.listsBuilder.radListBuilder
+                .updateCurrentRDList(item)
 
         settings.dataStore.saveAll()
     }

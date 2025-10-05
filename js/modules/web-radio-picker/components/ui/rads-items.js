@@ -39,7 +39,7 @@ class RadsItems {
     }
 
     updateRadItem(item, $item, $butOn, $butOff) {
-        const favs = this.favorites.getItemFavoritesFiltered(item)
+        const favs = this.wrpp.favorites.getItemFavoritesFiltered(item)
         if (favs.length > 0) {
             $butOn.removeClass('hidden')
             $butOff.addClass('hidden')

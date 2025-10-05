@@ -224,11 +224,12 @@ class WebRadioPickerModule extends ModuleBase {
                 // first launch init
                 const us = this.uiState
                 us.updateCurrentTab('btn_wrp_tag_list')
-                us.updateCurrentRDList(us.RDList(
-                    RadioList_Tag,
-                    null,
-                    $('#btn_wrp_tag_list')
-                ))
+                us.listsBuilder.radListBuilder.updateCurrentRDList(
+                    us.RDList(
+                        RadioList_Tag,
+                        null,
+                        $('#btn_wrp_tag_list')
+                    ))
             }
         )
 
@@ -278,44 +279,6 @@ class WebRadioPickerModule extends ModuleBase {
             block: 'center',
             inline: 'center'
         })
-    }
-
-    // update the rdList view for the current rdList and the given item
-    updateCurrentRDList(item) {
-        // find the list item / button
-        const rdList = this.uiState.currentRDList
-        if (rdList == null) return
-        const itemRef = this.getListItem(rdList)
-        if (itemRef == null || itemRef.item == null) return
-
-        // get the target items panel props
-        const $pl = $('#wrp_radio_list')
-        const $selected = $pl.find('.item-selected')
-        const id = $selected.attr('data-id')
-        // get dynamic item props
-        const text = $selected.attr('data-text')
-        const y = $pl.scrollTop()
-
-        // open the list
-        const r = itemRef.item.click()
-
-        // restore the position & selection
-        $pl.scrollTop(y)
-        if (id !== undefined) {
-            const it = this.getRadListItemById(id)
-            if (it != null) {
-                it.item.scrollIntoView({
-                    behavior: 'instant',
-                    block: 'center',
-                    inline: 'center'
-                })
-                const $item = $(it.item)
-                $item.addClass('item-selected')
-                this.radsItems.setLoadingItem(item, $item)
-                this.radsItems.updateLoadingRadItem(text)
-            }
-            return { $panel: $pl, $selected: $selected, id: id, it: it }
-        }
     }
 
     getPaneScrollBackup($pane) {

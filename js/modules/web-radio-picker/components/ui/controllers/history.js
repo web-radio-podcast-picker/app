@@ -53,8 +53,7 @@ class History {
 
         if (historyVisible)
             // TODO: restore scroll pos after that
-            // TODO: change call target
-            this.wrpp.updateCurrentRDList(o)
+            this.wrpp.listsBuilder.radListBuilder.updateCurrentRDList(o)
     }
 
     // always called from the history list
@@ -79,7 +78,8 @@ class History {
         // update history list if visible
 
         if (this.wrpp.isRDListVisible(RadioList_List, RadioList_History))
-            this.wrpp.updateCurrentRDList(item)
+            this.wrpp.listsBuilder.radListBuilder
+                .updateCurrentRDList(item)
 
         // clear Media view
         this.wrpp.noImage()
