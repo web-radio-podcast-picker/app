@@ -78,10 +78,12 @@ class PlayEventsHandlers {
         radsItems.updateLoadingRadItem(st)
     }
 
-    onPauseStateChanged(updateRadItemStatusText, $item) {
+    onPauseStateChanged(updateRadItemStatusText, item, $item) {
         if (updateRadItemStatusText)
-            radsItems.updateLoadingRadItem(oscilloscope.pause ?
-                'pause' : 'playing', $item)
+            radsItems.updateLoadingRadItem(
+                oscilloscope.pause ?
+                    'pause' : 'playing',
+                $item)
         if (oscilloscope.pause)
             playHistory.clearHistoryTimer()
         uiState.updatePauseView()

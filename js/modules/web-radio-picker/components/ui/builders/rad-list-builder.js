@@ -62,9 +62,50 @@ class RadListBuilder {
             this.initItemRad($rad, $item, n)
             $rad.append($item)
         })
-        $rad.scrollTop(0)
+
+        // show current playing rd item if any
+        if (uiState.currentRDItem != null) {
+            const citem = uiState.currentRDItem
+            const id = citem.id
+            const it = wrpp.getRadListItem(citem)
+            const $item = $(it?.item)
+            if ($item.length > 0) {
+                const item = wrpp.findRadItem(citem)
+                this.restorePlayingRDItemInView(
+                    item,
+                    $item,
+                    listId,
+                    listName,
+                    {},
+                    true
+                )
+            }
+        }
+        else
+            $rad.scrollTop(0)
+
         if (settings.features.swype.enableArrowsButtonsOverScrollPanes)
             ui.scrollers.update('wrp_radio_list')
+    }
+
+    restorePlayingRDItemInView(item, $item, listId, listName, opts, unfolded) {
+        if (settings.debug.debug)
+            logger.log('focus playing item: ' + item.name)
+        radsItems.buildFoldableItem(
+            item,
+            $item,
+            listId,
+            listName,
+            opts,
+            unfolded
+        )
+        const domEl = $item[0]
+        wrpp.focusListItem(domEl, true)
+        radsItems
+            .setLoadingItem(item, $item)
+            .updateLoadingRadItem(
+                item.metadata.statusText || '',
+                item, $item)
     }
 
     // init a playable item
@@ -129,7 +170,7 @@ class RadListBuilder {
                     // turn on channel
 
                     // update pause state
-                    playEventsHandlers.onPauseStateChanged()
+                    playEventsHandlers.onPauseStateChanged(false)
 
                     // setup channel media
                     await app.updateChannelMedia(
@@ -173,11 +214,7 @@ class RadListBuilder {
         if (id !== undefined) {
             const it = wrpp.getRadListItemById(id)
             if (it != null) {
-                it.item.scrollIntoView({
-                    behavior: 'instant',
-                    block: 'center',
-                    inline: 'center'
-                })
+                it.item.scrollIntoView(ScrollIntoViewProps)
                 const $item = $(it.item)
                 $item.addClass('item-selected')
 
@@ -192,7 +229,7 @@ class RadListBuilder {
                 )
 
                 radsItems.setLoadingItem(item, $item)
-                radsItems.updateLoadingRadItem(text)
+                radsItems.updateLoadingRadItem(text, item, $item)
             }
             return { $panel: $pl, $selected: $selected, id: id, it: it }
         }

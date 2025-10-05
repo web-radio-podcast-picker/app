@@ -55,15 +55,11 @@ const Device_Kind_Id_Audio_Input = 'audioinput'
 const Device_Kind_Id_Video_Input = 'videoinput'
 const Device_Kind_Id_Audio_Output = 'audiooutput'
 
-// generator functions
-const Gen_Fn_Sin = 'Sine'
-const Gen_Fn_Square = 'Square'
-const Gen_Fn_Sawtooth = 'Sawtooth'
-const Gen_Fn_Triangle = 'Triangle'
-
-// triggers types
-const Trigger_Type_Up = 'Up'
-const Trigger_Type_Down = 'Down'
+const ScrollIntoViewProps = {
+    behavior: 'instant',
+    block: 'center',
+    inline: 'center'
+}
 
 // kbd tags
 const Kbd_Op = 'op'

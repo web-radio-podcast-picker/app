@@ -201,7 +201,11 @@ class WebRadioPickerModule extends ModuleBase {
             if ($('#wrp_btn_pause_on').hasClass('but-icon-disabled'))
                 return
             app.toggleOPause(() => playEventsHandlers
-                .onPauseStateChanged(true))
+                .onPauseStateChanged(
+                    true,
+                    uiState.currentRDItem,
+                    null
+                ))
         })
 
         $('#wrp_but_add_fav').on('click', (e) => {
@@ -265,11 +269,7 @@ class WebRadioPickerModule extends ModuleBase {
         const $e = $(element)
         if (selectIt)
             $e.addClass('item-selected')
-        element.scrollIntoView({
-            behavior: 'instant',
-            block: 'center',
-            inline: 'center'
-        })
+        element.scrollIntoView(ScrollIntoViewProps)
     }
 
     getPaneScrollBackup($pane) {
@@ -286,11 +286,7 @@ class WebRadioPickerModule extends ModuleBase {
             const $item = s.$pane.find('[data-id="' + s.selectedItemId + '"]')
             if ($item.length > 0) {
                 const domItem = $item[0]
-                domItem.scrollIntoView({
-                    behavior: 'instant',
-                    block: 'center',
-                    inline: 'center'
-                })
+                domItem.scrollIntoView(ScrollIntoViewProps)
             }
         }
     }
@@ -375,7 +371,8 @@ class WebRadioPickerModule extends ModuleBase {
                 encoding: null,
                 sampleFrq: null,
                 sampleRes: null,
-                country: null
+                country: null,
+                statusText: null
             }
         }
     }

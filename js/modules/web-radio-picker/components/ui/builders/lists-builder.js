@@ -77,11 +77,7 @@ class ListsBuilder {
         if (id !== undefined) {
             const it = wrpp.getPlaysListsItemById(id)
             if (it != null) {
-                it.item.scrollIntoView({
-                    behavior: 'instant',
-                    block: 'center',
-                    inline: 'center'
-                })
+                it.item.scrollIntoView(ScrollIntoViewProps)
                 $(it.item).addClass('item-selected')
             }
             return { $panel: $pl, $selected: $selected, id: id, it: it }

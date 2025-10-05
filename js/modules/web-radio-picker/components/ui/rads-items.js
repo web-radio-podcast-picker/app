@@ -17,16 +17,23 @@ class RadsItems {
     setLoadingItem(loadingRDItem, $loadingRDItem) {
         this.loadingRDItem = loadingRDItem
         this.$loadingRDItem = $loadingRDItem
+        return this
     }
 
-    updateLoadingRadItem(statusText, $item) {
-        var $ldgRDItem = $item || this.$loadingRDItem
-        if ($ldgRDItem == null) return
-        const $subit = $ldgRDItem.find('.wrp-list-item-sub')
-        const $statusText = $ldgRDItem.find('.wrp-item-info-text')
-        $ldgRDItem.attr('data-text', statusText)
+    updateLoadingRadItem(statusText, item, $item) {
+        $item ||= this.$loadingRDItem
+        item ||= this.loadingRDItem
+        if ($item == null) return
+
+        if (item != null) item.metadata.statusText = statusText
+
+        const $subit = $item.find('.wrp-list-item-sub')
+        const $statusText = $item.find('.wrp-item-info-text')
+        $item.attr('data-text', statusText)
         $statusText.text(statusText)
         $subit.removeClass('hidden')
+
+        return this
     }
 
     updateRadItem(item, $item, $butOn, $butOff) {
