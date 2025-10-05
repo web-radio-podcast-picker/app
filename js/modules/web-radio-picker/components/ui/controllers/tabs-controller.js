@@ -52,7 +52,6 @@ class TabsController {
             ui.vizTabActivated = false
         }
         uiState.updateCurrentTab(c.id)
-        //this.focusTabSelectedItem($tab)
 
         return this
     }

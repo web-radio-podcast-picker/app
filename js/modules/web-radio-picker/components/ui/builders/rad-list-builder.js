@@ -143,7 +143,7 @@ class RadListBuilder {
             } else {
                 // no img
                 $i.addClass('hidden')
-                mediaImage.noImage()
+                rdMediaImage.noImage()
             }
 
             const channel = ui.getCurrentChannel()

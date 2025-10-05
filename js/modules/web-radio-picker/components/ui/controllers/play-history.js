@@ -77,7 +77,7 @@ class PlayHistory {
                 .updateCurrentRDList(item)
 
         // clear Media view
-        mediaImage.noImage()
+        rdMediaImage.noImage()
         wrpp.clearRadioView()
         setTimeout(() =>
             app.clearMediaView(), 500)

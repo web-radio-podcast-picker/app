@@ -17,9 +17,9 @@ var wrpp = null
 var radsItems = null
 
 /**
- * @type {MediaImage}
+ * @type {RdMediaImage}
  */
-var mediaImage = null
+var rdMediaImage = null
 
 /**
  * @type {ListsBuilder}
@@ -147,7 +147,7 @@ class WebRadioPickerModule extends ModuleBase {
 
         wrpp = this
         radsItems = new RadsItems()
-        mediaImage = new MediaImage()
+        rdMediaImage = new MediaImage()
         listsBuilder = new ListsBuilder()
         radListBuilder = new RadListBuilder()
         playHistory = new PlayHistory()
@@ -216,10 +216,10 @@ class WebRadioPickerModule extends ModuleBase {
         const readOnly = { readOnly: true, attr: 'text' };
 
         $('#wrp_img').on('error', () => {
-            mediaImage.noImage()
+            rdMediaImage.noImage()
         })
         $('#wrp_img').on('load', () => {
-            mediaImage.showImage()
+            rdMediaImage.showImage()
         })
 
         const thisPath = 'app.moduleLoader.getModuleById("' + this.id + '").'
@@ -240,13 +240,13 @@ class WebRadioPickerModule extends ModuleBase {
             $('#wrp_fullscreen_on').on('click', () => {
                 cui.setFullscreen(true)
                 if (this.resizeEventInitialized)
-                    mediaImage.showImage()
+                    rdMediaImage.showImage()
             })
 
             $('#wrp_fullscreen_off').on('click', () => {
                 cui.setFullscreen(false)
                 if (this.resizeEventInitialized)
-                    mediaImage.showImage()
+                    rdMediaImage.showImage()
             })
         }
 
