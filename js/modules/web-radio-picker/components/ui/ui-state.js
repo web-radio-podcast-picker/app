@@ -26,7 +26,6 @@ class UIState {
     }
     // current group tab
     currentTab = null
-    wrpp = null
     disableSave = false
     // rd lists cur & back memo
     memRDLists = null
@@ -38,11 +37,6 @@ class UIState {
     $addingFavoriteItemButOff = null
     addingNewFavoriteListItem = null
     $addingNewFavoriteListItem = null
-
-    init(wrpp) {
-        this.wrpp = wrpp
-        return this
-    }
 
     setTab(listId) {
         if (this.listIdToTabId[listId]) {
@@ -79,7 +73,7 @@ class UIState {
         if (((rdList?.name || null) == null)
             && !acceptNoName.includes(rdList.listId))
             return
-        const itemRef = this.wrpp.getListItem(rdList)
+        const itemRef = wrpp.getListItem(rdList)
         if (itemRef == null) return
         const r = itemRef.item.click()
     }
@@ -101,12 +95,12 @@ class UIState {
     }
 
     #setRDItem(rdItem) {
-        var radItem = this.wrpp.findRadItem(rdItem)
+        var radItem = wrpp.findRadItem(rdItem)
         if (radItem == null) return
-        var item = this.wrpp.getRadListItem(radItem)
+        var item = wrpp.getRadListItem(radItem)
         if (item != null) {
             const $item = $(item.item)
-            this.wrpp.focusListItem(item.item)
+            wrpp.focusListItem(item.item)
             $item.find('.wrp-list-item-text-container').click()
         }
     }
@@ -158,7 +152,7 @@ class UIState {
             this.#setRDList(state.currentRDList)
         if (state.currentTab != null)
             this.setTab(state.currentTab.listId)
-        this.wrpp.preserveCurrentTab = true
+        tabsController.preserveCurrentTab = true
         // ---
         if (state.currentRDItem != null)
             this.#setRDItem(state.currentRDItem)
@@ -181,6 +175,32 @@ class UIState {
     fromJSON(s) {
         const state = JSON.parse(s)
         this.restoreUIState(state)
+    }
+
+    // ----- UI states updaters -----
+
+    setPlayPauseButtonFreezeState(freezed) {
+        const c = 'but-icon-disabled'
+        const setState = (id, freezed) => {
+            const $b = $('#' + id)
+            if (freezed)
+                $b.addClass(c)
+            else
+                $b.removeClass(c)
+        }
+        setState('wrp_btn_pause_on', freezed)
+        setState('wrp_btn_pause_off', freezed)
+        return this
+    }
+
+    updatePauseView() {
+        if (oscilloscope.pause) {
+            $('#wrp_btn_pause_on').addClass('hidden')
+            $('#wrp_btn_pause_off').removeClass('hidden')
+        } else {
+            $('#wrp_btn_pause_off').addClass('hidden')
+            $('#wrp_btn_pause_on').removeClass('hidden')
+        }
     }
 
     // ----- UI freeze & editing status management -----
@@ -232,7 +252,7 @@ class UIState {
         const menuItemDisabledCl = 'menu-item-disabled'
 
         ui.tabs
-            .setTabsFreezed(wrpp.tabs,
+            .setTabsFreezed(wrpp.tabsController.tabs,
                 'btn_wrp_play_list',
                 menuItemDisabledCl, enabled)
             .setTabsFreezed(
@@ -246,7 +266,6 @@ class UIState {
         if (enabled) {
 
             this.memoRDLists()
-            const wrpp = this.wrpp
             this.setTab(RadioList_List)
             $('#opts_add_favorite_action_pane')
                 .removeClass('hidden')
@@ -289,7 +308,6 @@ class UIState {
     }
 
     setCurrentRadItemButtonsState(enabled) {
-        const wrpp = this.wrpp
         const item = this.currentRDItem
         if (item == null) return
         const $item = $(wrpp.getRadListItemById(item.id).item)

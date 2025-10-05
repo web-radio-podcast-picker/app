@@ -122,3 +122,14 @@ function index(t, e) {
 function quote(s) {
     return '"' + s + '"'
 }
+
+function ifQuoteUnQuote(s) {
+    if (!s.startsWith('"')) return s
+    return unquote(s)
+}
+
+function getSortedNames(t) {
+    const names = Object.keys(t)
+    names.sort((a, b) => a.localeCompare(b))
+    return names
+}

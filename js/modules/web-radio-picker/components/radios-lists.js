@@ -19,13 +19,6 @@ class RadiosLists {
     // radio lists
     lists = {}
 
-    wrpp = null
-
-    init(wrpp) {
-        this.wrpp = wrpp
-        return this
-    }
-
     addList(listId, name, isSystem) {
         if (isSystem === undefined) isSystem = false
         if (!this.lists[name]) {
@@ -109,12 +102,13 @@ class RadiosLists {
                 srcList.isSystem = srcList.name == RadioList_History
             // transfers props
             srcList.items.forEach(item => {
-                const newItem = this.wrpp.findRadItem(item)
+                const newItem = wrpp.findRadItem(item)
 
                 // copy dynamic properties from storage
                 if (name == RadioList_History && !item.favLists.includes(RadioList_History))
                     item.favLists.push(RadioList_History)
-                newItem.favLists = item.favLists
+                if (newItem != null)
+                    newItem.favLists = item.favLists
 
                 substItems.push(item)
             })
