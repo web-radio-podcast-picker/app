@@ -40,7 +40,7 @@ class ListsBuilder {
 
     buildListsItems() {
         const $pl = $('#opts_wrp_play_list')
-        const t = wrpp.radiosLists.lists
+        const t = radiosLists.lists
         const names = getSortedNames(t)
         var i = 0
         names.forEach(name => {

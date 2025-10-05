@@ -4,6 +4,70 @@
     find license and copyright informations in files /COPYRIGHT and /LICENCE
 */
 
+//#region global attributes
+
+/**
+ * @type {WebRadioPickerModule}
+ */
+var wrpp = null
+
+/**
+ * @type {RadsItems}
+ */
+var radsItems = null
+
+/**
+ * @type {MediaImage}
+ */
+var mediaImage = null
+
+/**
+ * @type {ListsBuilder}
+ */
+var listsBuilder = null
+
+/**
+ * @type {RadListBuilder}
+ */
+var radListBuilder = null
+
+/**
+ * @type {PlayHistory}
+ */
+var playHistory = null
+
+/**
+ * @type {Favorites}
+ */
+var favorites = null
+
+/**
+ * @type {PlayEventsHandlers}
+ */
+var playEventsHandlers = null
+
+/**
+ * @type {InfosPane}
+ */
+var infosPane = null
+
+/**
+ * @type {TabsController}
+ */
+var tabsController = null
+
+/**
+ * @type {RadiosLists}
+ */
+var radiosLists = null
+
+/**
+ * @type {UIState}
+ */
+var uiState = null
+
+//#endregion
+
 const WRP_Radio_List = 'all_stations.m3u'
 const WRP_Json_Radio_List = 'radios.txt'
 const WRP_Unknown_Group_Label = 'unclassified'
@@ -61,19 +125,8 @@ class WebRadioPickerModule extends ModuleBase {
 
     // components
 
-    radsItems = new RadsItems()
-    mediaImage = new MediaImage()
-    listsBuilder = new ListsBuilder()
-    radListBuilder = new RadListBuilder()
-    playHistory = new PlayHistory()
-    favorites = new Favorites()
-    playEventsHandlers = new PlayEventsHandlers()
-    infosPane = new InfosPane()
-    tabsController = new TabsController()
     m3uDataBuilder = null
     radioDataParser = null
-    radiosLists = new RadiosLists()
-    uiState = new UIState()
 
     //#endregion
 
@@ -92,20 +145,20 @@ class WebRadioPickerModule extends ModuleBase {
         else
             this.radioDataParser = new RadioDataParser().init(this)
 
-        this.radiosLists.addList(RadioList_List, RadioList_History, true)
+        wrpp = this
+        radsItems = new RadsItems()
+        mediaImage = new MediaImage()
+        listsBuilder = new ListsBuilder()
+        radListBuilder = new RadListBuilder()
+        playHistory = new PlayHistory()
+        favorites = new Favorites()
+        playEventsHandlers = new PlayEventsHandlers()
+        infosPane = new InfosPane()
+        tabsController = new TabsController()
+        radiosLists = new RadiosLists()
+        uiState = new UIState()
 
-        window.wrpp = this
-        window.radsItems = this.radsItems
-        window.mediaImage = this.mediaImage
-        window.listsBuilder = this.listsBuilder
-        window.radListBuilder = this.radListBuilder
-        window.playHistory = this.playHistory
-        window.favorites = this.favorites
-        window.playEventsHandlers = this.playEventsHandlers
-        window.infosPane = this.infosPane
-        window.tabsController = this.tabsController
-        window.radiosLists = this.radiosLists
-        window.uiState = this.uiState
+        radiosLists.addList(RadioList_List, RadioList_History, true)
     }
 
     // return the clickable item (a button or a tab or a list item)

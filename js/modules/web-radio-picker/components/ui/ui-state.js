@@ -49,8 +49,8 @@ class UIState {
     }
 
     updateCurrentTab(tabId, skipSave) {
-        const t = Object.keys(wrpp.uiState.listIdToTabId)
-            .map(x => { return { 'listId': x, 'tabId': wrpp.uiState.listIdToTabId[x] } })
+        const t = Object.keys(uiState.listIdToTabId)
+            .map(x => { return { 'listId': x, 'tabId': uiState.listIdToTabId[x] } })
             .filter(x => x.tabId == tabId)
         this.currentTab = t.length > 0 ? t[0] : null
         if (skipSave !== true && !this.disableSave)
@@ -252,7 +252,7 @@ class UIState {
         const menuItemDisabledCl = 'menu-item-disabled'
 
         ui.tabs
-            .setTabsFreezed(wrpp.tabsController.tabs,
+            .setTabsFreezed(tabsController.tabs,
                 'btn_wrp_play_list',
                 menuItemDisabledCl, enabled)
             .setTabsFreezed(
