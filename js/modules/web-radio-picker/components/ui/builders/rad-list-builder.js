@@ -17,10 +17,7 @@ class RadListBuilder {
         $item.attr('data-text', text)
         $item.addClass('wrp-list-item')
         $item.removeClass('hidden')
-        if (j & 1)
-            $item.addClass('wrp-list-item-a')
-        else
-            $item.addClass('wrp-list-item-b')
+        this.#setRowStyle(j, $item)
 
         const $textBox = $('<div class="wrp-list-item-text-container">' + text + '</div>')
         $item.append($textBox)
@@ -38,10 +35,34 @@ class RadListBuilder {
             }
         }
 
-        /*if (rdItem != null) {            
-        }*/
-
         return { item: item, $item: $item }
+    }
+
+    #setRowStyle(i, $row) {
+        if (i & 1)
+            $row.addClass('wrp-list-item-a')
+        else
+            $row.addClass('wrp-list-item-b')
+    }
+
+    #resetRowsStyles($pane) {
+        $.each(
+            $pane.find('.wrp-list-item'),
+            (i, e) => {
+                const $e = $(e)
+                $e.removeClass('wrp-list-item-a')
+                $e.removeClass('wrp-list-item-b')
+                this.#setRowStyle(i, $e)
+            })
+    }
+
+    deleteSelectedListItem(containerId) {
+        const $pane = $('#' + containerId)
+        const $selected = $pane.find('.item-selected')
+        $selected.remove()
+        if ($selected.length > 0)
+            this.#resetRowsStyles($pane)
+        return this
     }
 
     buildRadListItems(items, listId, listName) {

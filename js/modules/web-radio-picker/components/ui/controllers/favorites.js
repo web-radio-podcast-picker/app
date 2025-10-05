@@ -145,9 +145,9 @@ class Favorites {
 
         radiosLists.deleteList(listName)
 
-        wrpp.deleteSelectedListItem('opts_wrp_play_list')
-
-        radListBuilder.clearRadList()
+        radListBuilder
+            .deleteSelectedListItem('opts_wrp_play_list')
+            .clearRadList()
 
         uiState.updateCurrentRDList(null, true)
 

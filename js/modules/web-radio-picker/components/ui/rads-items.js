@@ -81,9 +81,11 @@ ${butRemove}${butHeartOn}${butHeartOff}
 </div>
 </div>`)
         const disabledCl = 'but-icon-disabled'
+        var $butOn = null
+        var $butOff = null
 
         if (isRdItem) {
-            const $butOn = $subit.find('img[name="heart_on"]')
+            $butOn = $subit.find('img[name="heart_on"]')
             $butOn
                 .on('click', e => {
                     e.preventDefault()
@@ -91,7 +93,7 @@ ${butRemove}${butHeartOn}${butHeartOff}
                     favorites.removeFavorite(rdItem, $item, $butOn, $butOff)
                 })
 
-            const $butOff = $subit.find('img[name="heart_off"]')
+            $butOff = $subit.find('img[name="heart_off"]')
             $butOff
                 .on('click', e => {
                     e.preventDefault()

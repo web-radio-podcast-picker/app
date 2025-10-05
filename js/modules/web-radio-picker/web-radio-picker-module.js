@@ -181,7 +181,7 @@ class WebRadioPickerModule extends ModuleBase {
                 if (butId !== undefined) {
                     const paneId = butId.replace('btn_', 'opts_')
                     res = radiosLists.findListItemByName(rdList.name, paneId)
-                    if (res!=null)
+                    if (res != null)
                         res.listId = rdList.listId
                 }
                 break
@@ -389,10 +389,6 @@ class WebRadioPickerModule extends ModuleBase {
 
     findSelectedListItem(containerId) {
         return $('#' + containerId).find('.item-selected')
-    }
-
-    deleteSelectedListItem(containerId) {
-        $(this.findSelectedListItem(containerId)).remove()
     }
 
     allRadios() {
