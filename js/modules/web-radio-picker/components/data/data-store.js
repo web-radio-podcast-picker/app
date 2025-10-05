@@ -25,7 +25,7 @@ class DataStore {
             this.saveRadiosLists()
             return
         }
-        wrpp.radiosLists.fromJSON(str)
+        radiosLists.fromJSON(str)
     }
 
     saveRadiosLists() {
@@ -36,7 +36,7 @@ class DataStore {
                 logger.warn('no local storage')
             return
         }
-        const str = wrpp.radiosLists.toJSON()
+        const str = radiosLists.toJSON()
         localStorage.setItem(ST_RadiosLists, str)
     }
 
@@ -55,7 +55,7 @@ class DataStore {
             this.saveUIState()
             return
         }
-        wrpp.uiState.fromJSON(str)
+        uiState.fromJSON(str)
     }
 
     saveUIState() {
@@ -66,7 +66,7 @@ class DataStore {
                 logger.warn('no local storage')
             return
         }
-        const str = wrpp.uiState.toJSON()
+        const str = uiState.toJSON()
         localStorage.setItem(ST_UIState, str)
     }
 }

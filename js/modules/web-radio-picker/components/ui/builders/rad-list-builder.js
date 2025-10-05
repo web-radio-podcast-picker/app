@@ -17,10 +17,7 @@ class RadListBuilder {
         $item.attr('data-text', text)
         $item.addClass('wrp-list-item')
         $item.removeClass('hidden')
-        if (j & 1)
-            $item.addClass('wrp-list-item-a')
-        else
-            $item.addClass('wrp-list-item-b')
+        this.#setRowStyle(j, $item)
 
         const $textBox = $('<div class="wrp-list-item-text-container">' + text + '</div>')
         $item.append($textBox)
@@ -38,10 +35,34 @@ class RadListBuilder {
             }
         }
 
-        /*if (rdItem != null) {            
-        }*/
-
         return { item: item, $item: $item }
+    }
+
+    #setRowStyle(i, $row) {
+        if (i & 1)
+            $row.addClass('wrp-list-item-a')
+        else
+            $row.addClass('wrp-list-item-b')
+    }
+
+    #resetRowsStyles($pane) {
+        $.each(
+            $pane.find('.wrp-list-item'),
+            (i, e) => {
+                const $e = $(e)
+                $e.removeClass('wrp-list-item-a')
+                $e.removeClass('wrp-list-item-b')
+                this.#setRowStyle(i, $e)
+            })
+    }
+
+    deleteSelectedListItem(containerId) {
+        const $pane = $('#' + containerId)
+        const $selected = $pane.find('.item-selected')
+        $selected.remove()
+        if ($selected.length > 0)
+            this.#resetRowsStyles($pane)
+        return this
     }
 
     buildRadListItems(items, listId, listName) {
@@ -143,7 +164,7 @@ class RadListBuilder {
             } else {
                 // no img
                 $i.addClass('hidden')
-                mediaImage.noImage()
+                rdMediaImage.noImage()
             }
 
             const channel = ui.getCurrentChannel()
@@ -206,7 +227,7 @@ class RadListBuilder {
         const text = $selected.attr('data-text')
         const y = $pl.scrollTop()
 
-        // open the list
+        // open the list (will auto restore any unfolded item)
         const r = itemRef.item.click()
 
         // restore the position & selection
@@ -218,16 +239,6 @@ class RadListBuilder {
                 const $item = $(it.item)
                 $item.addClass('item-selected')
 
-                // restore item in unfolded state
-                radsItems.buildFoldableItem(
-                    item,
-                    $item,
-                    rdList.listId,
-                    rdList.name,
-                    {},
-                    true
-                )
-
                 radsItems.setLoadingItem(item, $item)
                 radsItems.updateLoadingRadItem(text, item, $item)
             }
@@ -236,13 +247,19 @@ class RadListBuilder {
     }
 
     updateRadList(lst, listId, listName) {
-        const $rad = $('#wrp_radio_list')
-        if ($rad.length > 0)
-            $rad[0].innerHTML = ''
+        this.clearRadList()
         this.buildRadListItems(lst, listId, listName)
         wrpp.filteredListCount = lst.length
         wrpp.updateBindings()
         if (settings.debug.trace)
             logger.log('update rad list')
+        return this
+    }
+
+    clearRadList() {
+        const $rad = $('#wrp_radio_list')
+        if ($rad.length > 0)
+            $rad[0].innerHTML = ''
+        return this
     }
 }

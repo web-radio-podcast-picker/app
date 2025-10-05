@@ -4,7 +4,7 @@
     find license and copyright informations in files /COPYRIGHT and /LICENCE
 */
 
-class MediaImage {
+class RdMediaImage {
 
     noImage() {
         const $i = $('#wrp_img')

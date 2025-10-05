@@ -51,7 +51,7 @@ class PlayHistory {
             radListBuilder.updateCurrentRDList(o)
     }
 
-    // always called from the history list
+    // always called from the history rd list
     removeFromHistory(item, $item, listId, listName, $butOn, $butOff) {
         if (settings.debug.debug)
             logger.log(`remove from history: ${item.name} list=${listId}:${listName}`)
@@ -61,7 +61,7 @@ class PlayHistory {
         radiosLists.removeFromList(item, listName)
         if (!oscilloscope.pause)
             app.toggleOPause(() => playEventsHandlers
-                .onPauseStateChanged(true, item, $item))
+                .onPauseStateChanged(false, item, $item))
         uiState
             .setPlayPauseButtonFreezeState(true)
             .updateCurrentRDItem(null, true)
@@ -77,7 +77,7 @@ class PlayHistory {
                 .updateCurrentRDList(item)
 
         // clear Media view
-        mediaImage.noImage()
+        rdMediaImage.noImage()
         wrpp.clearRadioView()
         setTimeout(() =>
             app.clearMediaView(), 500)
