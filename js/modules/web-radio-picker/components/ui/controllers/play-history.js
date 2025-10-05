@@ -6,6 +6,7 @@
 
 class PlayHistory {
 
+    // timer to add later to history (if any)
     addToHistoryTimer = null
 
     setupAddToHistoryTimer(radItem) {
@@ -77,7 +78,7 @@ class PlayHistory {
 
         // clear Media view
         mediaImage.noImage()
-        wrpp.clearCurrentRadioView()
+        wrpp.clearRadioView()
         setTimeout(() =>
             app.clearMediaView(), 500)
     }

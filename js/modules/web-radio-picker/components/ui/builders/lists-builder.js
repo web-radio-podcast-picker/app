@@ -6,9 +6,6 @@
 
 class ListsBuilder {
 
-    addToHistoryTimer = null
-    wrpp = null
-
     buildTagItems() {
         const $tag = $('#opts_wrp_tag_list')
         const keys = Object.keys(wrpp.items)

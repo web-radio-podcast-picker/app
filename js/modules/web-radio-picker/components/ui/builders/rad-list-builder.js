@@ -6,8 +6,6 @@
 
 class RadListBuilder {
 
-    addToHistoryTimer = null
-
     // build a playable item
     buildListItem(text, id, j, opts, rdItem, listId, listName) {
         if (opts === undefined) opts = null
@@ -40,67 +38,8 @@ class RadListBuilder {
             }
         }
 
-        if (rdItem != null) {
-
-            // rad item : control box
-
-            const isHistoryList = listId == RadioList_List && listName == RadioList_History
-
-            const existsInFavorites =
-                rdItem.favLists.length == 0 ? false :
-                    (rdItem.favLists.length == 1 && rdItem.favLists[0] != RadioList_History)
-                    || rdItem.favLists.length > 1
-
-            const butHeartOnVis = existsInFavorites ? '' : 'hidden'
-            const butHeartOn =
-                `<img name="heart_on" src="./img/icons8-heart-fill-48.png" width="32" height="32" alt="heart" class="wrp-rad-item-icon ${butHeartOnVis}">`
-            const butHeartOffVis = !existsInFavorites ? '' : 'hidden'
-            const butHeartOff =
-                `<img name="heart_off" src="./img/icons8-heart-outline-48.png" width="32" height="32" alt="heart" class="wrp-rad-item-icon ${butHeartOffVis}">`
-
-            const butRemove = isHistoryList ?
-                `<img name="trash" src="./img/trash-32.png" width="32" height="32" alt="heart" class="wrp-rad-item-icon">`
-                : ''
-
-            $item.addClass('wrp-list-item-2h')
-            const $subit = $(
-                `<div class="wrp-list-item-sub hidden">
-<span class="wrp-item-info-text"></span>
-<div class="wrp-item-controls-container">
-${butRemove}${butHeartOn}${butHeartOff}
-</div>
-</div>`)
-            const disabledCl = 'but-icon-disabled'
-            const $butOn = $subit.find('img[name="heart_on"]')
-            $butOn
-                .on('click', e => {
-                    e.preventDefault()
-                    if ($(e.currentTarget).hasClass(disabledCl)) return
-                    favorites.removeFavorite(rdItem, $item, $butOn, $butOff)
-                })
-
-            const $butOff = $subit.find('img[name="heart_off"]')
-            $butOff
-                .on('click', e => {
-                    e.preventDefault()
-                    if ($(e.currentTarget).hasClass(disabledCl)) return
-                    favorites.addFavorite(rdItem, $item, listId, listName, $butOn, $butOff)
-                })
-
-            if (isHistoryList)
-                $subit.find('img[name="trash"]')
-                    .on('click', e => {
-                        e.preventDefault()
-                        if ($(e.currentTarget).hasClass(disabledCl)) return
-                        playHistory.removeFromHistory(rdItem, $item, listId, listName, $butOn, $butOff)
-                    })
-
-            $item.append($subit)
-
-            if (opts != null) {
-
-            }
-        }
+        /*if (rdItem != null) {            
+        }*/
 
         return { item: item, $item: $item }
     }
@@ -135,14 +74,14 @@ ${butRemove}${butHeartOn}${butHeartOff}
 
             if (uiState.isRadOpenDisabled()) return
 
-            $rad.find('.item-selected')
-                .removeClass('item-selected')
-            this.foldLoadingRadItem()
+            // unselect & fold last current item
+            const $prevItem = $rad.find('.item-selected')
+            $prevItem.removeClass('item-selected')
+            radsItems.unbuildFoldableItem($prevItem)
             $item.addClass('item-selected')
 
-            $('#wrp_radio_url').text(o.url)
-            $('#wrp_radio_name').text(o.name)
-            $('#wrp_radio_box').text(o.groups.join(' '))
+            // update radio view with new current item
+            wrpp.setupRadioView(o)
             const $i = $('#wrp_img')
             $i.attr('data-w', null)
             $i.attr('data-h', null)
@@ -170,6 +109,16 @@ ${butRemove}${butHeartOn}${butHeartOff}
             if (channel != null && channel !== undefined) {
 
                 radsItems.setLoadingItem(o, $item)
+
+                // build foldable item + unfold it
+                radsItems.buildFoldableItem(
+                    o, $item,
+                    uiState.currentRDList?.listId,
+                    uiState.currentRDList?.name,
+                    {},
+                    true
+                )
+
                 wrpp.clearAppStatus()
                 playEventsHandlers.initAudioSourceHandlers()
                 playEventsHandlers.onLoading(o)
@@ -198,21 +147,6 @@ ${butRemove}${butHeartOn}${butHeartOff}
                     await pl()
             }
         })
-    }
-
-    foldLoadingRadItem() {
-        if (!radsItems.isLoadingItemSet()) return
-        const $subit = radsItems.$loadingRDItem
-            .find('.wrp-list-item-sub')
-        $subit.addClass('hidden')
-    }
-
-    foldUnfoldRadItem($rdItem, folded) {
-        const $subit = $rdItem.find('.wrp-list-item-sub')
-        if (folded)
-            $subit.addClass('hidden')
-        else
-            $subit.removeClass('hidden')
     }
 
     // update the rdList view for the current rdList and the given item
@@ -246,6 +180,17 @@ ${butRemove}${butHeartOn}${butHeartOff}
                 })
                 const $item = $(it.item)
                 $item.addClass('item-selected')
+
+                // restore item in unfolded state
+                radsItems.buildFoldableItem(
+                    item,
+                    $item,
+                    rdList.listId,
+                    rdList.name,
+                    {},
+                    true
+                )
+
                 radsItems.setLoadingItem(item, $item)
                 radsItems.updateLoadingRadItem(text)
             }

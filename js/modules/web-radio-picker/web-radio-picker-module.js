@@ -51,12 +51,13 @@ class WebRadioPickerModule extends ModuleBase {
     itemsByLang = []        // items by lang (those having one)
     itemsAll = []           // all items
     listCount = 0
+    // items count in rad list
     filteredListCount = 0
-
-    resizeEventInitialized = false
     // pre-processed data
     groupsById = {}
     itemsById = {}
+
+    resizeEventInitialized = false
 
     // components
 
@@ -260,12 +261,10 @@ class WebRadioPickerModule extends ModuleBase {
         ui.bindings.updateBindingTarget('wrp_list_count')
     }
 
-    focusListItem(element, selectIt, unfoldIt) {
+    focusListItem(element, selectIt) {
         const $e = $(element)
         if (selectIt)
             $e.addClass('item-selected')
-        if (unfoldIt)
-            radListBuilder.foldUnfoldRadItem($e, false)
         element.scrollIntoView({
             behavior: 'instant',
             block: 'center',
@@ -301,11 +300,18 @@ class WebRadioPickerModule extends ModuleBase {
         return r.name?.replace('- Hits', '')?.trim()
     }
 
-    clearCurrentRadioView() {
+    clearRadioView() {
         this.clearAppStatus()
-        $('#wrp_radio_url').text('')
-        $('#wrp_radio_name').text('')
-        $('#wrp_radio_box').text('')
+        this.setupRadioView(null)
+    }
+
+    setupRadioView(rdItem) {
+        const url = rdItem?.url || ''
+        const name = rdItem?.name || ''
+        const box = rdItem?.groups?.join(' ') || ''
+        $('#wrp_radio_url').text(url)
+        $('#wrp_radio_name').text(name)
+        $('#wrp_radio_box').text(box)
     }
 
     clearAppStatus() {

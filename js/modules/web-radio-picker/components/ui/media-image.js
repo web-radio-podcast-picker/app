@@ -6,8 +6,6 @@
 
 class MediaImage {
 
-    addToHistoryTimer = null
-
     noImage() {
         const $i = $('#wrp_img')
         $i[0].src = './img/icon.ico'
