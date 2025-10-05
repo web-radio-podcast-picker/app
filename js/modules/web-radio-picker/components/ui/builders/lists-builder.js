@@ -154,7 +154,10 @@ class ListsBuilder {
             )
                 // favorite select
                 favorites.endAddFavorite($item, currentRDList, false)
+
             else {
+
+                if ($item.hasClass('item-selected')) return
 
                 // clear selections & unbuild folded items
                 wrpp.clearListsSelection()
