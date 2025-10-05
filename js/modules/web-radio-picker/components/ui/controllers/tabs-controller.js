@@ -16,12 +16,6 @@ class TabsController {
 
     // ask to not change current tab automatically (eg. case restore ui state)
     preserveCurrentTab = false
-    wrpp = null
-
-    init(wrpp) {
-        this.wrpp = wrpp
-        return this
-    }
 
     initTabs() {
         ui.tabs.initTabs(this.tabs, {
@@ -52,11 +46,13 @@ class TabsController {
             $cnv.addClass('hidden')
             ui.vizTabActivated = false
         }
-        this.wrpp.uiState.updateCurrentTab(c.id)
+        uiState.updateCurrentTab(c.id)
+        return this
     }
 
     selectTab(tabId) {
         ui.tabs.selectTab(tabId, this.tabs)
+        return this
     }
 
 }

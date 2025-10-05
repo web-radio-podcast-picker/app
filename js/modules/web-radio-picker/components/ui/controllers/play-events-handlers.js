@@ -6,13 +6,6 @@
 
 class PlayEventsHandlers {
 
-    wrpp = null
-
-    init(wrpp) {
-        this.wrpp = wrpp
-        return this
-    }
-
     initAudioSourceHandlers() {
         WRPPMediaSource.onLoadError = (err, audio) => this.onLoadError(err, audio)
         WRPPMediaSource.onLoadSuccess = (audio) => this.onLoadSuccess(audio)
@@ -20,12 +13,12 @@ class PlayEventsHandlers {
     }
 
     onLoading(item) {
-        this.wrpp.uiState.setPlayPauseButtonFreezeState(true)
+        uiState.setPlayPauseButtonFreezeState(true)
         const st = 'connecting...'
         if (settings.debug.debug) {
             logger.log(st)
         }
-        this.wrpp.radsItems.updateLoadingRadItem(st)
+        radsItems.updateLoadingRadItem(st)
 
         app.channel.connected = false
         $('#wrp_connected_icon').addClass('hidden')
@@ -38,7 +31,7 @@ class PlayEventsHandlers {
         if (settings.debug.debug) {
             logger.log(st)
         }
-        this.wrpp.radsItems.updateLoadingRadItem(st)
+        radsItems.updateLoadingRadItem(st)
 
         app.channel.connected = false
         $('#wrp_connected_icon').addClass('hidden')
@@ -51,8 +44,7 @@ class PlayEventsHandlers {
     onLoadSuccess(audio) {
         const st = 'connected'
         app.channel.connected = true
-        // TODO: change call target
-        this.wrpp.radsItems.updateLoadingRadItem(st)
+        radsItems.updateLoadingRadItem(st)
 
         // metatadata available: audio.duration
 
@@ -66,32 +58,32 @@ class PlayEventsHandlers {
 
         // enable save to history list
 
-        const o = this.wrpp.uiState.currentRDItem
+        const o = uiState.currentRDItem
         if (o != null) {
 
             window.audio = audio
             o.metadata = {
                 duration: audio.duration
             }
-            this.wrpp.history.setupAddToHistoryTimer(o)
+            playHistory.setupAddToHistoryTimer(o)
         }
     }
 
     onCanPlay(audio) {
-        this.wrpp.uiState.setPlayPauseButtonFreezeState(false)
+        uiState.setPlayPauseButtonFreezeState(false)
         const st = 'playing'
         if (settings.debug.debug) {
             logger.log(st)
         }
-        this.wrpp.radsItems.updateLoadingRadItem(st)
+        radsItems.updateLoadingRadItem(st)
     }
 
     onPauseStateChanged(updateRadItemStatusText, $item) {
         if (updateRadItemStatusText)
-            this.wrpp.radsItems.updateLoadingRadItem(oscilloscope.pause ?
+            radsItems.updateLoadingRadItem(oscilloscope.pause ?
                 'pause' : 'playing', $item)
         if (oscilloscope.pause)
-            this.wrpp.history.clearHistoryTimer()
-        this.wrpp.uiState.updatePauseView()
+            playHistory.clearHistoryTimer()
+        uiState.updatePauseView()
     }
 }

@@ -7,12 +7,6 @@
 class MediaImage {
 
     addToHistoryTimer = null
-    wrpp = null
-
-    init(wrpp) {
-        this.wrpp = wrpp
-        return this
-    }
 
     noImage() {
         const $i = $('#wrp_img')
@@ -86,20 +80,21 @@ class MediaImage {
 
         //this.ignoreNextShowImage = false
 
-        if (!this.wrpp.resizeEventInitialized) {
+        if (!wrpp.resizeEventInitialized) {
             ui.onResize.push(() => {
                 this.showImage()
             })
-            this.wrpp.resizeEventInitialized = true
+            wrpp.resizeEventInitialized = true
         }
 
-        if (!this.wrpp.tabsController.preserveCurrentTab
-            && !this.wrpp.uiState.favoriteInputState
+        if (!tabsController.preserveCurrentTab
+            && !uiState.favoriteInputState
         ) {
-            this.wrpp.tabsController.selectTab('btn_wrp_logo')
-            this.wrpp.tabsController.onTabChanged($('#btn_wrp_logo'))
+            tabsController
+                .selectTab('btn_wrp_logo')
+                .onTabChanged($('#btn_wrp_logo'))
         }
         else
-            this.wrpp.tabsController.preserveCurrentTab = false
+            tabsController.preserveCurrentTab = false
     }
 }

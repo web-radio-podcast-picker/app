@@ -12,13 +12,6 @@ class RadsItems {
     // add to history timer if any
     addToHistoryTimer = null
 
-    wrpp = null
-
-    init(wrpp) {
-        this.wrpp = wrpp
-        return this
-    }
-
     isLoadingItemSet() {
         return this.loadingRDItem != null && this.$loadingRDItem != null
     }
@@ -39,7 +32,7 @@ class RadsItems {
     }
 
     updateRadItem(item, $item, $butOn, $butOff) {
-        const favs = this.wrpp.favorites.getItemFavoritesFiltered(item)
+        const favs = favorites.getItemFavoritesFiltered(item)
         if (favs.length > 0) {
             $butOn.removeClass('hidden')
             $butOff.addClass('hidden')

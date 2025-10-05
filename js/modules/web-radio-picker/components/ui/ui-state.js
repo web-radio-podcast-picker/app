@@ -26,7 +26,6 @@ class UIState {
     }
     // current group tab
     currentTab = null
-    wrpp = null
     disableSave = false
     // rd lists cur & back memo
     memRDLists = null
@@ -38,11 +37,6 @@ class UIState {
     $addingFavoriteItemButOff = null
     addingNewFavoriteListItem = null
     $addingNewFavoriteListItem = null
-
-    init(wrpp) {
-        this.wrpp = wrpp
-        return this
-    }
 
     setTab(listId) {
         if (this.listIdToTabId[listId]) {
@@ -79,7 +73,7 @@ class UIState {
         if (((rdList?.name || null) == null)
             && !acceptNoName.includes(rdList.listId))
             return
-        const itemRef = this.wrpp.getListItem(rdList)
+        const itemRef = wrpp.getListItem(rdList)
         if (itemRef == null) return
         const r = itemRef.item.click()
     }
@@ -101,12 +95,12 @@ class UIState {
     }
 
     #setRDItem(rdItem) {
-        var radItem = this.wrpp.findRadItem(rdItem)
+        var radItem = wrpp.findRadItem(rdItem)
         if (radItem == null) return
-        var item = this.wrpp.getRadListItem(radItem)
+        var item = wrpp.getRadListItem(radItem)
         if (item != null) {
             const $item = $(item.item)
-            this.wrpp.focusListItem(item.item)
+            wrpp.focusListItem(item.item)
             $item.find('.wrp-list-item-text-container').click()
         }
     }
@@ -158,7 +152,7 @@ class UIState {
             this.#setRDList(state.currentRDList)
         if (state.currentTab != null)
             this.setTab(state.currentTab.listId)
-        this.wrpp.tabsController.preserveCurrentTab = true
+        tabsController.preserveCurrentTab = true
         // ---
         if (state.currentRDItem != null)
             this.#setRDItem(state.currentRDItem)
@@ -272,7 +266,6 @@ class UIState {
         if (enabled) {
 
             this.memoRDLists()
-            const wrpp = this.wrpp
             this.setTab(RadioList_List)
             $('#opts_add_favorite_action_pane')
                 .removeClass('hidden')
@@ -315,7 +308,6 @@ class UIState {
     }
 
     setCurrentRadItemButtonsState(enabled) {
-        const wrpp = this.wrpp
         const item = this.currentRDItem
         if (item == null) return
         const $item = $(wrpp.getRadListItemById(item.id).item)

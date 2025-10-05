@@ -6,13 +6,6 @@
 
 class InfosPane {
 
-    wrpp = null
-
-    init(wrpp) {
-        this.wrpp = wrpp
-        return this
-    }
-
     initEventsHandlers() {
         ui.onResize.push(async () => {
             await this.updateInfoPaneOnResize()
@@ -94,7 +87,6 @@ You should have received a copy of the GNU General Public License along with thi
     }
 
     toggleInfos() {
-        const uiState = this.wrpp.uiState
         const $but = $('#btn_wrp_infos')
         const $pane = $('#wrp_inf_pane')
         const $radPane = $('#wrp_radio_list')
@@ -115,8 +107,7 @@ You should have received a copy of the GNU General Public License along with thi
         }
         if (settings.features.swype.enableArrowsButtonsOverScrollPanes)
             ui.scrollers.update(scPane)
-        // TODO: change call target
-        this.wrpp.setCurrentRDList(rd)
+        wrpp.setCurrentRDList(rd)
     }
 
     hideInfoPane() {

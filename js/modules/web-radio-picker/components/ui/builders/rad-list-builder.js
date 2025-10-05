@@ -7,12 +7,6 @@
 class RadListBuilder {
 
     addToHistoryTimer = null
-    wrpp = null
-
-    init(wrpp) {
-        this.wrpp = wrpp
-        return this
-    }
 
     // build a playable item
     buildListItem(text, id, j, opts, rdItem, listId, listName) {
@@ -82,7 +76,7 @@ ${butRemove}${butHeartOn}${butHeartOff}
                 .on('click', e => {
                     e.preventDefault()
                     if ($(e.currentTarget).hasClass(disabledCl)) return
-                    this.wrpp.favorites.removeFavorite(rdItem, $item, $butOn, $butOff)
+                    favorites.removeFavorite(rdItem, $item, $butOn, $butOff)
                 })
 
             const $butOff = $subit.find('img[name="heart_off"]')
@@ -90,7 +84,7 @@ ${butRemove}${butHeartOn}${butHeartOff}
                 .on('click', e => {
                     e.preventDefault()
                     if ($(e.currentTarget).hasClass(disabledCl)) return
-                    this.wrpp.favorites.addFavorite(rdItem, $item, listId, listName, $butOn, $butOff)
+                    favorites.addFavorite(rdItem, $item, listId, listName, $butOn, $butOff)
                 })
 
             if (isHistoryList)
@@ -98,7 +92,7 @@ ${butRemove}${butHeartOn}${butHeartOff}
                     .on('click', e => {
                         e.preventDefault()
                         if ($(e.currentTarget).hasClass(disabledCl)) return
-                        this.wrpp.history.removeFromHistory(rdItem, $item, listId, listName, $butOn, $butOff)
+                        playHistory.removeFromHistory(rdItem, $item, listId, listName, $butOn, $butOff)
                     })
 
             $item.append($subit)
@@ -115,7 +109,7 @@ ${butRemove}${butHeartOn}${butHeartOff}
         const $rad = $('#wrp_radio_list')
         var j = 0
         items.forEach(n => {
-            const { item, $item } = this.wrpp.listsBuilder.radListBuilder
+            const { item, $item } = this
                 .buildListItem(
                     n.name,
                     n.id,
@@ -139,7 +133,7 @@ ${butRemove}${butHeartOn}${butHeartOff}
         const $textContainer = $item.find('.wrp-list-item-text-container')
         $textContainer.on('click', async () => {
 
-            if (this.wrpp.uiState.isRadOpenDisabled()) return
+            if (uiState.isRadOpenDisabled()) return
 
             $rad.find('.item-selected')
                 .removeClass('item-selected')
@@ -169,16 +163,16 @@ ${butRemove}${butHeartOn}${butHeartOff}
             } else {
                 // no img
                 $i.addClass('hidden')
-                this.wrpp.noImage()
+                mediaImage.noImage()
             }
 
             const channel = ui.getCurrentChannel()
             if (channel != null && channel !== undefined) {
 
-                this.wrpp.radsItems.setLoadingItem(o, $item)
-                this.wrpp.clearAppStatus()
-                this.wrpp.playEventsHandlers.initAudioSourceHandlers()
-                this.wrpp.playEventsHandlers.onLoading(o)
+                radsItems.setLoadingItem(o, $item)
+                wrpp.clearAppStatus()
+                playEventsHandlers.initAudioSourceHandlers()
+                playEventsHandlers.onLoading(o)
 
                 // plays the item
                 const pl = async () => {
@@ -186,7 +180,7 @@ ${butRemove}${butHeartOn}${butHeartOff}
                     // turn on channel
 
                     // update pause state
-                    this.wrpp.playEventsHandlers.onPauseStateChanged()
+                    playEventsHandlers.onPauseStateChanged()
 
                     // setup channel media
                     await app.updateChannelMedia(
@@ -195,7 +189,7 @@ ${butRemove}${butHeartOn}${butHeartOff}
                     )
 
                     // update ui state
-                    this.wrpp.uiState.updateCurrentRDItem(o)
+                    uiState.updateCurrentRDItem(o)
                 }
 
                 if (oscilloscope.pause)
@@ -207,8 +201,8 @@ ${butRemove}${butHeartOn}${butHeartOff}
     }
 
     foldLoadingRadItem() {
-        if (!this.wrpp.radsItems.isLoadingItemSet()) return
-        const $subit = this.wrpp.radsItems.$loadingRDItem
+        if (!radsItems.isLoadingItemSet()) return
+        const $subit = radsItems.$loadingRDItem
             .find('.wrp-list-item-sub')
         $subit.addClass('hidden')
     }
@@ -224,9 +218,9 @@ ${butRemove}${butHeartOn}${butHeartOff}
     // update the rdList view for the current rdList and the given item
     updateCurrentRDList(item) {
         // find the list item / button
-        const rdList = this.wrpp.uiState.currentRDList
+        const rdList = uiState.currentRDList
         if (rdList == null) return
-        const itemRef = this.wrpp.getListItem(rdList)
+        const itemRef = wrpp.getListItem(rdList)
         if (itemRef == null || itemRef.item == null) return
 
         // get the target items panel props
@@ -243,7 +237,7 @@ ${butRemove}${butHeartOn}${butHeartOff}
         // restore the position & selection
         $pl.scrollTop(y)
         if (id !== undefined) {
-            const it = this.wrpp.getRadListItemById(id)
+            const it = wrpp.getRadListItemById(id)
             if (it != null) {
                 it.item.scrollIntoView({
                     behavior: 'instant',
@@ -252,8 +246,8 @@ ${butRemove}${butHeartOn}${butHeartOff}
                 })
                 const $item = $(it.item)
                 $item.addClass('item-selected')
-                this.wrpp.radsItems.setLoadingItem(item, $item)
-                this.wrpp.radsItems.updateLoadingRadItem(text)
+                radsItems.setLoadingItem(item, $item)
+                radsItems.updateLoadingRadItem(text)
             }
             return { $panel: $pl, $selected: $selected, id: id, it: it }
         }
@@ -263,10 +257,9 @@ ${butRemove}${butHeartOn}${butHeartOff}
         const $rad = $('#wrp_radio_list')
         if ($rad.length > 0)
             $rad[0].innerHTML = ''
-        this.wrpp.listsBuilder.radListBuilder
-            .buildRadListItems(lst, listId, listName)
-        this.wrpp.filteredListCount = lst.length
-        this.wrpp.updateBindings()
+        this.buildRadListItems(lst, listId, listName)
+        wrpp.filteredListCount = lst.length
+        wrpp.updateBindings()
         if (settings.debug.trace)
             logger.log('update rad list')
     }

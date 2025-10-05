@@ -60,18 +60,19 @@ class WebRadioPickerModule extends ModuleBase {
 
     // components
 
-    radsItems = new RadsItems().init(this)
-    mediaImage = new MediaImage().init(this)
-    listsBuilder = new ListsBuilder().init(this)
-    history = new History().init(this)
-    favorites = new Favorites().init(this)
-    playEventsHandlers = new PlayEventsHandlers().init(this)
-    infosPane = new InfosPane().init(this)
-    tabsController = new TabsController().init(this)
+    radsItems = new RadsItems()
+    mediaImage = new MediaImage()
+    listsBuilder = new ListsBuilder()
+    radListBuilder = new RadListBuilder()
+    playHistory = new PlayHistory()
+    favorites = new Favorites()
+    playEventsHandlers = new PlayEventsHandlers()
+    infosPane = new InfosPane()
+    tabsController = new TabsController()
     m3uDataBuilder = null
     radioDataParser = null
-    radiosLists = new RadiosLists().init(this)
-    uiState = new UIState().init(this)
+    radiosLists = new RadiosLists()
+    uiState = new UIState()
 
     //#endregion
 
@@ -89,8 +90,21 @@ class WebRadioPickerModule extends ModuleBase {
             this.m3uDataBuilder = new M3UDataBuilder().init(this)
         else
             this.radioDataParser = new RadioDataParser().init(this)
+
         this.radiosLists.addList(RadioList_List, RadioList_History, true)
+
         window.wrpp = this
+        window.radsItems = this.radsItems
+        window.mediaImage = this.mediaImage
+        window.listsBuilder = this.listsBuilder
+        window.radListBuilder = this.radListBuilder
+        window.playHistory = this.playHistory
+        window.favorites = this.favorites
+        window.playEventsHandlers = this.playEventsHandlers
+        window.infosPane = this.infosPane
+        window.tabsController = this.tabsController
+        window.radiosLists = this.radiosLists
+        window.uiState = this.uiState
     }
 
     // return the clickable item (a button or a tab or a list item)
@@ -109,10 +123,10 @@ class WebRadioPickerModule extends ModuleBase {
             case RadioList_Viz: // no list. will switch to tab
                 break
             default:
-                const butId = this.uiState.listIdToTabId[rdList.listId]
+                const butId = uiState.listIdToTabId[rdList.listId]
                 if (butId !== undefined) {
                     const paneId = butId.replace('btn_', 'opts_')
-                    res = this.radiosLists.findListItemByName(rdList.name, paneId)
+                    res = radiosLists.findListItemByName(rdList.name, paneId)
                     res.listId = rdList.listId
                 }
                 break
@@ -122,25 +136,25 @@ class WebRadioPickerModule extends ModuleBase {
 
     // { domElement, id }
     getRadListItem(item) {
-        return this.radiosLists.findListItemById(item.id, 'wrp_radio_list')
+        return radiosLists.findListItemById(item.id, 'wrp_radio_list')
     }
 
     // { domElement, id }
     getRadListItemById(id) {
-        return this.radiosLists.findListItemById(id, 'wrp_radio_list')
+        return radiosLists.findListItemById(id, 'wrp_radio_list')
     }
 
     // { domElement, id }
     getPlaysListsItemById(id) {
-        return this.radiosLists.findListItemById(id, 'opts_wrp_play_list')
+        return radiosLists.findListItemById(id, 'opts_wrp_play_list')
     }
 
     initView(viewId) {
 
         settings.dataStore.loadRadiosLists()
 
-        this.tabsController.initTabs()
-        this.listsBuilder.buildTagItems()
+        tabsController.initTabs()
+        listsBuilder.buildTagItems()
             .buildArtItems()
             .buildLangItems()
             .buildListsItems()
@@ -148,10 +162,10 @@ class WebRadioPickerModule extends ModuleBase {
         const readOnly = { readOnly: true, attr: 'text' };
 
         $('#wrp_img').on('error', () => {
-            this.mediaImage.noImage()
+            mediaImage.noImage()
         })
         $('#wrp_img').on('load', () => {
-            this.mediaImage.showImage()
+            mediaImage.showImage()
         })
 
         const thisPath = 'app.moduleLoader.getModuleById("' + this.id + '").'
@@ -172,36 +186,36 @@ class WebRadioPickerModule extends ModuleBase {
             $('#wrp_fullscreen_on').on('click', () => {
                 cui.setFullscreen(true)
                 if (this.resizeEventInitialized)
-                    this.mediaImage.showImage()
+                    mediaImage.showImage()
             })
 
             $('#wrp_fullscreen_off').on('click', () => {
                 cui.setFullscreen(false)
                 if (this.resizeEventInitialized)
-                    this.mediaImage.showImage()
+                    mediaImage.showImage()
             })
         }
 
         $('#wrp_btn_pause_onoff').on('click', () => {
             if ($('#wrp_btn_pause_on').hasClass('but-icon-disabled'))
                 return
-            app.toggleOPause(() => this.playEventsHandlers
+            app.toggleOPause(() => playEventsHandlers
                 .onPauseStateChanged(true))
         })
 
         $('#wrp_but_add_fav').on('click', (e) => {
             const $e = $(e.currentTarget)
             if ($e.hasClass('menu-item-disabled')) return
-            if (!this.uiState.favoriteInputState) return
-            this.favorites.addNewFavoriteList()
+            if (!uiState.favoriteInputState) return
+            favorites.addNewFavoriteList()
         })
 
         $('#btn_wrp_infos').on('click', () => {
-            if (this.uiState.favoriteInputState) return
-            this.infosPane.toggleInfos()
+            if (uiState.favoriteInputState) return
+            infosPane.toggleInfos()
         })
 
-        this.infosPane.initEventsHandlers()
+        infosPane.initEventsHandlers()
 
         if (settings.features.swype.enableArrowsButtonsOverScrollPanes) {
             $("#rdl_top").removeClass('hidden')
@@ -222,10 +236,11 @@ class WebRadioPickerModule extends ModuleBase {
         const firstInit = settings.dataStore.initUIStateStorage(
             () => {
                 // first launch init
-                const us = this.uiState
-                us.updateCurrentTab('btn_wrp_tag_list')
-                us.listsBuilder.radListBuilder.updateCurrentRDList(
-                    us.RDList(
+                if (settings.debug.info)
+                    logger.log('initializing first launch')
+                uiState.updateCurrentTab('btn_wrp_tag_list')
+                radListBuilder.updateCurrentRDList(
+                    uiState.RDList(
                         RadioList_Tag,
                         null,
                         $('#btn_wrp_tag_list')
@@ -238,7 +253,7 @@ class WebRadioPickerModule extends ModuleBase {
     }
 
     setCurrentRDList(currentRDList) {
-        this.uiState.updateCurrentRDList(currentRDList)
+        uiState.updateCurrentRDList(currentRDList)
     }
 
     updateBindings() {
@@ -250,7 +265,7 @@ class WebRadioPickerModule extends ModuleBase {
         if (selectIt)
             $e.addClass('item-selected')
         if (unfoldIt)
-            this.listsBuilder.radListBuilder.foldUnfoldRadItem($e, false)
+            radListBuilder.foldUnfoldRadItem($e, false)
         element.scrollIntoView({
             behavior: 'instant',
             block: 'center',
@@ -299,31 +314,33 @@ class WebRadioPickerModule extends ModuleBase {
     }
 
     clearListsSelection() {
-        this.clearContainerSelection('opts_wrp_art_list')
-        this.clearContainerSelection('opts_wrp_play_list')
-        this.clearContainerSelection('opts_wrp_tag_list')
-        this.clearContainerSelection('opts_wrp_lang_list')
+        this
+            .clearContainerSelection('opts_wrp_art_list')
+            .clearContainerSelection('opts_wrp_play_list')
+            .clearContainerSelection('opts_wrp_tag_list')
+            .clearContainerSelection('opts_wrp_lang_list')
     }
 
     clearContainerSelection(containerId) {
         const $container = $('#' + containerId)
         $container.find('.item-selected')
             .removeClass('item-selected')
+        return this
     }
 
     findSelectedListItem(containerId) {
-        return $$('#' + containerId).find('.item-selected')
+        return $('#' + containerId).find('.item-selected')
     }
 
     allRadios() {
         this.clearListsSelection()
-        this.listsBuilder.radListBuilder
+        radListBuilder
             .updateRadList(this.itemsAll, RadioList_All)
-        this.setCurrentRDList(this.uiState.RDList(RadioList_All, null, null))
+        this.setCurrentRDList(uiState.RDList(RadioList_All, null, null))
     }
 
     isRDListVisible(listId, listName) {
-        const crdl = this.uiState.currentRDList
+        const crdl = uiState.currentRDList
         if (crdl == null) return null
         return crdl.listId == listId && crdl.name == listName
     }
