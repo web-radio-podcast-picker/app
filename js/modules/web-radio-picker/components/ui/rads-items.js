@@ -50,9 +50,10 @@ class RadsItems {
     buildFoldableItem(rdItem, $item, listId, listName, opts, unfolded) {
         // rad item or list item : control box
 
+        const list = radiosLists.getList(listName)
         const isHistoryList = listId == RadioList_List && listName == RadioList_History
         const isRdItem = rdItem != null
-        const hasTrash = isHistoryList || !isRdItem
+        const hasTrash = (rdItem != null && isHistoryList) || (!isRdItem && !list.isSystem)
 
         const existsInFavorites = isRdItem &&
             (rdItem.favLists.length == 0 ? false :
