@@ -135,4 +135,22 @@ class Favorites {
 
         settings.dataStore.saveAll()
     }
+
+    // always called from the history list
+    deleteFavoriteList(listName) {
+        if (settings.debug.debug)
+            logger.log(`delete favorite list: ${listName}`)
+
+        playHistory.clearHistoryTimer()
+
+        radiosLists.deleteList(listName)
+
+        wrpp.deleteSelectedListItem('opts_wrp_play_list')
+
+        radListBuilder.clearRadList()
+
+        uiState.updateCurrentRDList(null, true)
+
+        settings.dataStore.saveAll()
+    }
 }

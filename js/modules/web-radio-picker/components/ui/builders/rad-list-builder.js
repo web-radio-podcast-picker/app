@@ -226,13 +226,19 @@ class RadListBuilder {
     }
 
     updateRadList(lst, listId, listName) {
-        const $rad = $('#wrp_radio_list')
-        if ($rad.length > 0)
-            $rad[0].innerHTML = ''
+        this.clearRadList()
         this.buildRadListItems(lst, listId, listName)
         wrpp.filteredListCount = lst.length
         wrpp.updateBindings()
         if (settings.debug.trace)
             logger.log('update rad list')
+        return this
+    }
+
+    clearRadList() {
+        const $rad = $('#wrp_radio_list')
+        if ($rad.length > 0)
+            $rad[0].innerHTML = ''
+        return this
     }
 }

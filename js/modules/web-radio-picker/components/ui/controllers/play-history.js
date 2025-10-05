@@ -51,7 +51,7 @@ class PlayHistory {
             radListBuilder.updateCurrentRDList(o)
     }
 
-    // always called from the history list
+    // always called from the history rd list
     removeFromHistory(item, $item, listId, listName, $butOn, $butOff) {
         if (settings.debug.debug)
             logger.log(`remove from history: ${item.name} list=${listId}:${listName}`)

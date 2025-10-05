@@ -107,7 +107,7 @@ ${butRemove}${butHeartOn}${butHeartOff}
                     if (isRdItem)
                         playHistory.removeFromHistory(rdItem, $item, listId, listName, $butOn, $butOff)
                     else
-                        ;// TODO
+                        favorites.deleteFavoriteList(listName)
                 })
 
         $item.append($subit)

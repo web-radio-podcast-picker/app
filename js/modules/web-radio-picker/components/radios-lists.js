@@ -38,6 +38,10 @@ class RadiosLists {
         return this.lists[name]
     }
 
+    deleteList(name) {
+        delete this.lists[name]
+    }
+
     removeFromList(item, listName) {
         const list = this.getList(listName)
         if (list == null) return
