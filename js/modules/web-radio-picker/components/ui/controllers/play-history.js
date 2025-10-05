@@ -61,7 +61,7 @@ class PlayHistory {
         radiosLists.removeFromList(item, listName)
         if (!oscilloscope.pause)
             app.toggleOPause(() => playEventsHandlers
-                .onPauseStateChanged(true, item, $item))
+                .onPauseStateChanged(false, item, $item))
         uiState
             .setPlayPauseButtonFreezeState(true)
             .updateCurrentRDItem(null, true)
