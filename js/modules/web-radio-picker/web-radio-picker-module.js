@@ -60,6 +60,8 @@ class WebRadioPickerModule extends ModuleBase {
 
     // components
 
+    radsItems = new RadsItems().init(this)
+    mediaImage = new MediaImage().init(this)
     listsBuilder = new ListsBuilder().init(this)
     history = new History().init(this)
     favorites = new Favorites().init(this)
@@ -70,9 +72,6 @@ class WebRadioPickerModule extends ModuleBase {
     radioDataParser = null
     radiosLists = new RadiosLists().init(this)
     uiState = new UIState().init(this)
-    // current loading item if any
-    loadingRDItem = null
-    $loadingRDItem = null
 
     //#endregion
 
@@ -149,10 +148,10 @@ class WebRadioPickerModule extends ModuleBase {
         const readOnly = { readOnly: true, attr: 'text' };
 
         $('#wrp_img').on('error', () => {
-            this.noImage()
+            this.mediaImage.noImage()
         })
         $('#wrp_img').on('load', () => {
-            this.showImage()
+            this.mediaImage.showImage()
         })
 
         const thisPath = 'app.moduleLoader.getModuleById("' + this.id + '").'
@@ -173,13 +172,13 @@ class WebRadioPickerModule extends ModuleBase {
             $('#wrp_fullscreen_on').on('click', () => {
                 cui.setFullscreen(true)
                 if (this.resizeEventInitialized)
-                    this.showImage()
+                    this.mediaImage.showImage()
             })
 
             $('#wrp_fullscreen_off').on('click', () => {
                 cui.setFullscreen(false)
                 if (this.resizeEventInitialized)
-                    this.showImage()
+                    this.mediaImage.showImage()
             })
         }
 
@@ -273,7 +272,7 @@ class WebRadioPickerModule extends ModuleBase {
         if (selectIt)
             $e.addClass('item-selected')
         if (unfoldIt)
-            this.foldUnfoldRadItem($e, false)
+            this.listsBuilder.radListBuilder.foldUnfoldRadItem($e, false)
         element.scrollIntoView({
             behavior: 'instant',
             block: 'center',
@@ -312,9 +311,8 @@ class WebRadioPickerModule extends ModuleBase {
                 })
                 const $item = $(it.item)
                 $item.addClass('item-selected')
-                this.$loadingRDItem = $item
-                this.loadingRDItem = item
-                this.updateLoadingRadItem(text)
+                this.radsItems.setLoadingItem(item, $item)
+                this.radsItems.updateLoadingRadItem(text)
             }
             return { $panel: $pl, $selected: $selected, id: id, it: it }
         }
@@ -348,101 +346,6 @@ class WebRadioPickerModule extends ModuleBase {
         return r.name?.replace('- Hits', '')?.trim()
     }
 
-    buildRadListItems(items, listId, listName) {
-        const $rad = $('#wrp_radio_list')
-        var j = 0
-        items.forEach(n => {
-            const { item, $item } = this.listsBuilder.radListBuilder.buildListItem(
-                n.name,
-                n.id,
-                j,
-                null,
-                n,
-                listId,
-                listName
-            )
-            j++
-            this.initItemRad($rad, $item, n)
-            $rad.append($item)
-        })
-        $rad.scrollTop(0)
-        if (settings.features.swype.enableArrowsButtonsOverScrollPanes)
-            ui.scrollers.update('wrp_radio_list')
-    }
-
-    // init a playable item
-    initItemRad($rad, $item, o) {
-        const $textContainer = $item.find('.wrp-list-item-text-container')
-        $textContainer.on('click', async () => {
-
-            if (this.uiState.isRadOpenDisabled()) return
-
-            $rad.find('.item-selected')
-                .removeClass('item-selected')
-            this.foldLoadingRadItem()
-            $item.addClass('item-selected')
-
-            $('#wrp_radio_url').text(o.url)
-            $('#wrp_radio_name').text(o.name)
-            $('#wrp_radio_box').text(o.groups.join(' '))
-            const $i = $('#wrp_img')
-            $i.attr('data-w', null)
-            $i.attr('data-h', null)
-
-            // setup up media image
-            if (o.logo != null && o.logo !== undefined && o.logo != '') {
-                // get img
-                $i.addClass('hidden')
-                $i.attr('width', null)
-                $i.attr('height', null)
-                $i.attr('data-noimg', null)
-                $i.removeClass('wrp-img-half')
-                var url = o.logo
-                if (settings.net.enforceHttps)
-                    url = url.replace('http://', 'https://')
-                $i.attr('src', url)
-
-            } else {
-                // no img
-                $i.addClass('hidden')
-                this.noImage()
-            }
-
-            const channel = ui.getCurrentChannel()
-            if (channel != null && channel !== undefined) {
-
-                this.loadingRDItem = o
-                this.$loadingRDItem = $item
-                this.clearAppStatus()
-                this.playEventsHandlers.initAudioSourceHandlers()
-                this.playEventsHandlers.onLoading(o)
-
-                // plays the item
-                const pl = async () => {
-
-                    // turn on channel
-
-                    // update pause state
-                    this.playEventsHandlers.onPauseStateChanged()
-
-                    // setup channel media
-                    await app.updateChannelMedia(
-                        ui.getCurrentChannel(),
-                        o.url
-                    )
-
-                    // update ui state
-                    this.uiState.updateCurrentRDItem(o)
-                }
-
-                if (oscilloscope.pause)
-                    app.toggleOPause(async () => await pl())
-                else
-                    await pl()
-            }
-        })
-    }
-
     clearCurrentRadioView() {
         this.clearAppStatus()
         $('#wrp_radio_url').text('')
@@ -455,47 +358,13 @@ class WebRadioPickerModule extends ModuleBase {
         $('#err_holder').addClass('hidden')
     }
 
-    updateLoadingRadItem(statusText, $item) {
-        var $ldgRDItem = $item || this.$loadingRDItem
-        if ($ldgRDItem == null) return
-        const $subit = $ldgRDItem.find('.wrp-list-item-sub')
-        const $statusText = $ldgRDItem.find('.wrp-item-info-text')
-        $ldgRDItem.attr('data-text', statusText)
-        $statusText.text(statusText)
-        $subit.removeClass('hidden')
-    }
-
-    updateRadItem(item, $item, $butOn, $butOff) {
-        const favs = this.favorites.getItemFavoritesFiltered(item)
-        if (favs.length > 0) {
-            $butOn.removeClass('hidden')
-            $butOff.addClass('hidden')
-        } else {
-            $butOn.addClass('hidden')
-            $butOff.removeClass('hidden')
-        }
-    }
-
-    foldLoadingRadItem() {
-        if (this.$loadingRDItem == null && this.loadingRDItem == null) return
-        const $subit = this.$loadingRDItem.find('.wrp-list-item-sub')
-        $subit.addClass('hidden')
-    }
-
-    foldUnfoldRadItem($rdItem, folded) {
-        const $subit = $rdItem.find('.wrp-list-item-sub')
-        if (folded)
-            $subit.addClass('hidden')
-        else
-            $subit.removeClass('hidden')
-    }
-
     updateRadList(lst, listId, listName) {
         const $rad = $('#wrp_radio_list')
         if ($rad.length > 0)
             $rad[0].innerHTML = ''
-        this.buildRadListItems(lst, listId, listName),
-            this.filteredListCount = lst.length
+        this.listsBuilder.radListBuilder
+            .buildRadListItems(lst, listId, listName)
+        this.filteredListCount = lst.length
         this.updateBindings()
         if (settings.debug.trace)
             logger.log('update rad list')
@@ -522,95 +391,6 @@ class WebRadioPickerModule extends ModuleBase {
         this.clearListsSelection()
         this.updateRadList(this.itemsAll, RadioList_All)
         this.setCurrentRDList(this.uiState.RDList(RadioList_All, null, null))
-    }
-
-    noImage() {
-        const $i = $('#wrp_img')
-        $i[0].src = './img/icon.ico'
-        $i.attr('data-noimg', '1')
-        $i.attr('width', null)
-        $i.attr('height', null)
-        $i.attr('data-w', null)
-        $i.attr('data-h', null)
-    }
-
-    showImage() {
-        const $i = $('#wrp_img')
-        const noimg = $i.attr('data-noimg') != null
-        if (noimg)
-            $i.addClass('wrp-img-half')
-
-        $i.removeClass('ptransparent')
-        $i.removeClass('hidden')
-
-        var iw = $i[0].width
-        var ih = $i[0].height
-        const dw = $i.attr('data-w')
-        const dh = $i.attr('data-h')
-        if (dw != null && dh != null) {
-            // case: resize
-            iw = dw
-            ih = dh
-        } else {
-            $i.attr('data-w', iw)
-            $i.attr('data-h', ih)
-        }
-        var r = iw / ih
-
-        const $c = $('#left-pane')
-        const cw = $c.width()
-        const ch = $c.height()
-        var rw = iw / cw
-        var rh = ih / ch
-
-        // auto zoom
-        if (!noimg) {
-            iw *= 2
-            ih *= 2
-        }
-
-        // limit bounds
-        if (iw >= ih) {
-            // square or landscape
-            if (iw > cw) {
-                iw = cw
-                ih = iw / r
-            }
-            if (ih > ch) {
-                ih = ch
-                iw = r * ih
-            }
-        } else {
-            // portrait
-            if (ih > ch) {
-                ih = ch
-                iw = r * ih
-            }
-            if (iw > cw) {
-                iw = cw
-                ih = iw / r
-            }
-        }
-        $i.attr('width', iw + 'px')
-        $i.attr('height', ih + 'px')
-
-        //this.ignoreNextShowImage = false
-
-        if (!this.resizeEventInitialized) {
-            ui.onResize.push(() => {
-                this.showImage()
-            })
-            this.resizeEventInitialized = true
-        }
-
-        if (!this.tabsController.preserveCurrentTab
-            && !this.uiState.favoriteInputState
-        ) {
-            this.tabsController.selectTab('btn_wrp_logo')
-            this.tabsController.onTabChanged($('#btn_wrp_logo'))
-        }
-        else
-            this.tabsController.preserveCurrentTab = false
     }
 
     isRDListVisible(listId, listName) {

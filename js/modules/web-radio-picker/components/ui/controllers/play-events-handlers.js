@@ -26,8 +26,7 @@ class PlayEventsHandlers {
         if (settings.debug.debug) {
             logger.log(st)
         }
-        // TODO: change call target
-        this.wrpp.updateLoadingRadItem(st)
+        this.wrpp.radsItems.updateLoadingRadItem(st)
 
         app.channel.connected = false
         $('#wrp_connected_icon').addClass('hidden')
@@ -40,8 +39,7 @@ class PlayEventsHandlers {
         if (settings.debug.debug) {
             logger.log(st)
         }
-        // TODO: change call target
-        this.wrpp.updateLoadingRadItem(st)
+        this.wrpp.radsItems.updateLoadingRadItem(st)
 
         app.channel.connected = false
         $('#wrp_connected_icon').addClass('hidden')
@@ -55,7 +53,7 @@ class PlayEventsHandlers {
         const st = 'connected'
         app.channel.connected = true
         // TODO: change call target
-        this.wrpp.updateLoadingRadItem(st)
+        this.wrpp.radsItems.updateLoadingRadItem(st)
 
         // metatadata available: audio.duration
 
@@ -87,14 +85,12 @@ class PlayEventsHandlers {
         if (settings.debug.debug) {
             logger.log(st)
         }
-        // TODO: change call target
-        this.wrpp.updateLoadingRadItem(st)
+        this.wrpp.radsItems.updateLoadingRadItem(st)
     }
 
     onPauseStateChanged(updateRadItemStatusText, $item) {
         if (updateRadItemStatusText)
-            // TODO: change call target
-            this.wrpp.updateLoadingRadItem(oscilloscope.pause ?
+            this.wrpp.radsItems.updateLoadingRadItem(oscilloscope.pause ?
                 'pause' : 'playing', $item)
         if (oscilloscope.pause)
             this.wrpp.history.clearHistoryTimer()

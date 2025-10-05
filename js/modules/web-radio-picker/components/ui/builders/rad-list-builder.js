@@ -111,4 +111,113 @@ ${butRemove}${butHeartOn}${butHeartOff}
         return { item: item, $item: $item }
     }
 
+    buildRadListItems(items, listId, listName) {
+        const $rad = $('#wrp_radio_list')
+        var j = 0
+        items.forEach(n => {
+            const { item, $item } = this.wrpp.listsBuilder.radListBuilder
+                .buildListItem(
+                    n.name,
+                    n.id,
+                    j,
+                    null,
+                    n,
+                    listId,
+                    listName
+                )
+            j++
+            this.initItemRad($rad, $item, n)
+            $rad.append($item)
+        })
+        $rad.scrollTop(0)
+        if (settings.features.swype.enableArrowsButtonsOverScrollPanes)
+            ui.scrollers.update('wrp_radio_list')
+    }
+
+    // init a playable item
+    initItemRad($rad, $item, o) {
+        const $textContainer = $item.find('.wrp-list-item-text-container')
+        $textContainer.on('click', async () => {
+
+            if (this.wrpp.uiState.isRadOpenDisabled()) return
+
+            $rad.find('.item-selected')
+                .removeClass('item-selected')
+            this.foldLoadingRadItem()
+            $item.addClass('item-selected')
+
+            $('#wrp_radio_url').text(o.url)
+            $('#wrp_radio_name').text(o.name)
+            $('#wrp_radio_box').text(o.groups.join(' '))
+            const $i = $('#wrp_img')
+            $i.attr('data-w', null)
+            $i.attr('data-h', null)
+
+            // setup up media image
+            if (o.logo != null && o.logo !== undefined && o.logo != '') {
+                // get img
+                $i.addClass('hidden')
+                $i.attr('width', null)
+                $i.attr('height', null)
+                $i.attr('data-noimg', null)
+                $i.removeClass('wrp-img-half')
+                var url = o.logo
+                if (settings.net.enforceHttps)
+                    url = url.replace('http://', 'https://')
+                $i.attr('src', url)
+
+            } else {
+                // no img
+                $i.addClass('hidden')
+                this.wrpp.noImage()
+            }
+
+            const channel = ui.getCurrentChannel()
+            if (channel != null && channel !== undefined) {
+
+                this.wrpp.radsItems.setLoadingItem(o, $item)
+                this.wrpp.clearAppStatus()
+                this.wrpp.playEventsHandlers.initAudioSourceHandlers()
+                this.wrpp.playEventsHandlers.onLoading(o)
+
+                // plays the item
+                const pl = async () => {
+
+                    // turn on channel
+
+                    // update pause state
+                    this.wrpp.playEventsHandlers.onPauseStateChanged()
+
+                    // setup channel media
+                    await app.updateChannelMedia(
+                        ui.getCurrentChannel(),
+                        o.url
+                    )
+
+                    // update ui state
+                    this.wrpp.uiState.updateCurrentRDItem(o)
+                }
+
+                if (oscilloscope.pause)
+                    app.toggleOPause(async () => await pl())
+                else
+                    await pl()
+            }
+        })
+    }
+
+    foldLoadingRadItem() {
+        if (!this.wrpp.radsItems.isLoadingItemSet()) return
+        const $subit = this.wrpp.radsItems.$loadingRDItem
+            .find('.wrp-list-item-sub')
+        $subit.addClass('hidden')
+    }
+
+    foldUnfoldRadItem($rdItem, folded) {
+        const $subit = $rdItem.find('.wrp-list-item-sub')
+        if (folded)
+            $subit.addClass('hidden')
+        else
+            $subit.removeClass('hidden')
+    }
 }
