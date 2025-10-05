@@ -67,9 +67,9 @@ class History {
         if (!oscilloscope.pause)
             app.toggleOPause(() => this.wrpp.playEventsHandlers
                 .onPauseStateChanged(true, $item))
-        this.wrpp.setPlayPauseButtonFreezeState(true)
-
-        this.wrpp.uiState.updateCurrentRDItem(null, true)
+        this.wrpp.uiState
+            .setPlayPauseButtonFreezeState(true)
+            .updateCurrentRDItem(null, true)
         settings.dataStore.saveAll()
 
         // update views

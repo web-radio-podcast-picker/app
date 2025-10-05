@@ -183,6 +183,32 @@ class UIState {
         this.restoreUIState(state)
     }
 
+    // ----- UI states updaters -----
+
+    setPlayPauseButtonFreezeState(freezed) {
+        const c = 'but-icon-disabled'
+        const setState = (id, freezed) => {
+            const $b = $('#' + id)
+            if (freezed)
+                $b.addClass(c)
+            else
+                $b.removeClass(c)
+        }
+        setState('wrp_btn_pause_on', freezed)
+        setState('wrp_btn_pause_off', freezed)
+        return this
+    }
+
+    updatePauseView() {
+        if (oscilloscope.pause) {
+            $('#wrp_btn_pause_on').addClass('hidden')
+            $('#wrp_btn_pause_off').removeClass('hidden')
+        } else {
+            $('#wrp_btn_pause_off').addClass('hidden')
+            $('#wrp_btn_pause_on').removeClass('hidden')
+        }
+    }
+
     // ----- UI freeze & editing status management -----
 
     memoRDLists() {

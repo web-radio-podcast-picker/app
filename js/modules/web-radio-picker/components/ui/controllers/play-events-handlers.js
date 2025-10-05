@@ -20,8 +20,7 @@ class PlayEventsHandlers {
     }
 
     onLoading(item) {
-        // TODO: change call target
-        this.wrpp.setPlayPauseButtonFreezeState(true)
+        this.wrpp.uiState.setPlayPauseButtonFreezeState(true)
         const st = 'connecting...'
         if (settings.debug.debug) {
             logger.log(st)
@@ -79,8 +78,7 @@ class PlayEventsHandlers {
     }
 
     onCanPlay(audio) {
-        // TODO: change call target
-        this.wrpp.setPlayPauseButtonFreezeState(false)
+        this.wrpp.uiState.setPlayPauseButtonFreezeState(false)
         const st = 'playing'
         if (settings.debug.debug) {
             logger.log(st)
@@ -94,7 +92,6 @@ class PlayEventsHandlers {
                 'pause' : 'playing', $item)
         if (oscilloscope.pause)
             this.wrpp.history.clearHistoryTimer()
-        // TODO: change call target
-        this.wrpp.updatePauseView()
+        this.wrpp.uiState.updatePauseView()
     }
 }

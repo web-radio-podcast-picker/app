@@ -241,29 +241,6 @@ class WebRadioPickerModule extends ModuleBase {
         this.uiState.updateCurrentRDList(currentRDList)
     }
 
-    updatePauseView() {
-        if (oscilloscope.pause) {
-            $('#wrp_btn_pause_on').addClass('hidden')
-            $('#wrp_btn_pause_off').removeClass('hidden')
-        } else {
-            $('#wrp_btn_pause_off').addClass('hidden')
-            $('#wrp_btn_pause_on').removeClass('hidden')
-        }
-    }
-
-    setPlayPauseButtonFreezeState(freezed) {
-        const c = 'but-icon-disabled'
-        const setState = (id, freezed) => {
-            const $b = $('#' + id)
-            if (freezed)
-                $b.addClass(c)
-            else
-                $b.removeClass(c)
-        }
-        setState('wrp_btn_pause_on', freezed)
-        setState('wrp_btn_pause_off', freezed)
-    }
-
     updateBindings() {
         ui.bindings.updateBindingTarget('wrp_list_count')
     }
