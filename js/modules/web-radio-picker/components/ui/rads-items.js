@@ -49,24 +49,32 @@ class RadsItems {
 
     buildFoldableItem(rdItem, $item, listId, listName, opts, unfolded) {
         // rad item or list item : control box
+        // -- only foldable: listId==RadioList_List items OR any rad item
 
         const list = radiosLists.getList(listName)
         const isHistoryList = listId == RadioList_List && listName == RadioList_History
         const isRdItem = rdItem != null
         const hasTrash = (rdItem != null && isHistoryList) || (!isRdItem && !list.isSystem)
+        const isEditable = (!isRdItem && !list.isSystem)
 
         const existsInFavorites = isRdItem &&
             (rdItem.favLists.length == 0 ? false :
                 (rdItem.favLists.length == 1 && rdItem.favLists[0] != RadioList_History)
                 || rdItem.favLists.length > 1)
 
+        // remove favorite
         const butHeartOnVis = existsInFavorites ? '' : 'hidden'
         const butHeartOn = !isRdItem ? '' :
             `<img name="heart_on" src="./img/icons8-heart-fill-48.png" width="32" height="32" alt="heart" class="wrp-rad-item-icon ${butHeartOnVis}">`
+        // add favorite
         const butHeartOffVis = !existsInFavorites ? '' : 'hidden'
         const butHeartOff = !isRdItem ? '' :
             `<img name="heart_off" src="./img/icons8-heart-outline-48.png" width="32" height="32" alt="heart" class="wrp-rad-item-icon ${butHeartOffVis}">`
-
+        // edit
+        const butEditVis = !existsInFavorites ? '' : 'hidden'
+        const butEdit = !isEditable ? '' :
+            `<img name="pen_edit" src="./img/icons8-pen-100.png" width="32" height="32" alt="pen" class="wrp-rad-item-icon ${butEditVis}">`
+        // delete        
         const butRemove = hasTrash ?
             `<img name="trash" src="./img/trash-32.png" width="32" height="32" alt="heart" class="wrp-rad-item-icon">`
             : ''
@@ -77,7 +85,7 @@ class RadsItems {
             `<div class="wrp-list-item-sub ${subitHidden}">
 <span class="wrp-item-info-text"></span>
 <div class="wrp-item-controls-container">
-${butRemove}${butHeartOn}${butHeartOff}
+${butRemove}${butHeartOn}${butHeartOff}${butEdit}
 </div>
 </div>`)
         const disabledCl = 'but-icon-disabled'
