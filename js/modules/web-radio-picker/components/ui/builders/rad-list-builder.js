@@ -93,6 +93,7 @@ class RadListBuilder {
             if ($item.length > 0) {
                 const item = wrpp.findRadItem(citem)
                 this.restorePlayingRDItemInView(
+                    radsItems.$loadingRDItem,   // last known current
                     item,
                     $item,
                     listId,
@@ -109,7 +110,7 @@ class RadListBuilder {
             ui.scrollers.update('wrp_radio_list')
     }
 
-    restorePlayingRDItemInView(item, $item, listId, listName, opts, unfolded) {
+    restorePlayingRDItemInView($prevItem, item, $item, listId, listName, opts, unfolded) {
         if (settings.debug.debug)
             logger.log('focus playing item: ' + item.name)
         radsItems.buildFoldableItem(
@@ -122,11 +123,22 @@ class RadListBuilder {
         )
         const domEl = $item[0]
         wrpp.focusListItem(domEl, true)
+
+        this.copyDynamicProps($prevItem, $item)
+
         radsItems
             .setLoadingItem(item, $item)
             .updateLoadingRadItem(
-                item.metadata.statusText || '',
+                $item.attr('data-status-text'),
                 item, $item)
+    }
+
+    copyDynamicProps($prevItem, $item) {
+        if ($prevItem == null || $prevItem === undefined) return
+        const cp = id => {
+            $item.attr(id, $prevItem.attr(id))
+        }
+        cp('data-status-text')
     }
 
     // init a playable item
@@ -224,7 +236,7 @@ class RadListBuilder {
         const $selected = $pl.find('.item-selected')
         const id = $selected.attr('data-id')
         // get dynamic item props
-        const text = $selected.attr('data-text')
+        const statusText = $selected.attr('data-status-text')
         const y = $pl.scrollTop()
 
         // open the list (will auto restore any unfolded item)
@@ -239,8 +251,11 @@ class RadListBuilder {
                 const $item = $(it.item)
                 $item.addClass('item-selected')
 
-                radsItems.setLoadingItem(item, $item)
-                radsItems.updateLoadingRadItem(text, item, $item)
+                radsItems
+                    .setLoadingItem(item, $item)
+                    // this will also set the data-status-text attribute
+                    // force use the current loadingItem by passing null values
+                    .updateLoadingRadItem(statusText, null, null)
             }
             return { $panel: $pl, $selected: $selected, id: id, it: it }
         }

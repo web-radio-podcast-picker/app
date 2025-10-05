@@ -29,7 +29,7 @@ class RadsItems {
 
         const $subit = $item.find('.wrp-list-item-sub')
         const $statusText = $item.find('.wrp-item-info-text')
-        $item.attr('data-text', statusText)
+        $item.attr('data-status-text', statusText)
         $statusText.text(statusText)
         $subit.removeClass('hidden')
 
