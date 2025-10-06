@@ -142,7 +142,7 @@ find license and copyright informations in files /COPYRIGHT and /LICENCE
     min-height: 1.5em;
     /* max-width: 256px; */
     word-wrap: break-word;
-    padding: 0.5em;
+    /* padding: 0.5em; */
     font-size: 1.2em;
     cursor: pointer;
     line-height: 2em;
@@ -182,6 +182,7 @@ find license and copyright informations in files /COPYRIGHT and /LICENCE
 .wrp-list-item-text-container {
     grid-row: 1;
     grid-column: 1;
+    padding: 0.5em;
 }
 
 .wrp-item-controls-container {
@@ -190,6 +191,7 @@ find license and copyright informations in files /COPYRIGHT and /LICENCE
     grid-row: 1;
     grid-column: 1;
     flex-direction: row-reverse;
+    padding: 0.5em;
 }
 
 .wrp-item-info-text {
@@ -198,6 +200,7 @@ find license and copyright informations in files /COPYRIGHT and /LICENCE
     color: #FFFFAACC;
     font-size: 1em;
     align-content: center;
+    padding: 0.5em;
 }
 
 .wrp-list-item:hover {
@@ -315,7 +318,7 @@ find license and copyright informations in files /COPYRIGHT and /LICENCE
     /* float: right; */
     font-size: 0.7em;
     margin-top: -0.25em;
-    margin-right: -0.25em;
+    margin-right: 0.5em;
     color: #FFFF00E0;
     grid-row: 1;
     grid-column: 1;
