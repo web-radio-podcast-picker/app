@@ -38,6 +38,13 @@ class RadiosLists {
         return this.lists[name]
     }
 
+    renameList(id, name) {
+        const list = this.getList(id)
+        delete this.lists[id]
+        this.lists[name] = list
+        return list
+    }
+
     deleteList(name) {
         delete this.lists[name]
     }
@@ -48,6 +55,20 @@ class RadiosLists {
         // compare on id to support clones
         list.items = list.items.filter(x => x.id != item.id)
         item.favLists = item.favLists.filter(x => x != listName)
+    }
+
+    findItem(listId, itemId) {
+        const list = this.getList(listId)
+        if (list == null) return
+        var res = null
+        list.items.some(o => {
+            if (o.id == itemId) {
+                res = o
+                return true
+            }
+            return false
+        })
+        return res
     }
 
     findListItemByName(name, containerId) {

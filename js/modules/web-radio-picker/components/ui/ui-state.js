@@ -90,7 +90,10 @@ class UIState {
             return
         const itemRef = wrpp.getListItem(rdList)
         if (itemRef == null) return
-        const r = itemRef.item.click()
+
+        const $item = $(itemRef.item)
+        const $cbox = $item.find('.wrp-list-item-text-container')
+        $cbox[0].click()
     }
 
     updateCurrentRDList(newList, skipSave) {
@@ -229,16 +232,18 @@ class UIState {
         }
     }
 
-    restoreRDLists() {
+    restoreRDLists(opts) {
         const m = this.memRDLists
         if (m == null) return
         this.currentRDList = m.curList
         this.currentRDList_Back = m.backList
-        const listId = m.curTab != null ?
-            m.curTab.listId :
-            m.curList.listId
-        const tabId = this.#setTab(listId)
-        this.currentTab = { listId: listId, tabId: tabId }
+        if (opts.noChangeTab != true) {
+            const listId = m.curTab != null ?
+                m.curTab.listId :
+                m.curList.listId
+            const tabId = this.#setTab(listId)
+            this.currentTab = { listId: listId, tabId: tabId }
+        }
         this.memRDLists = null
     }
 
@@ -263,7 +268,9 @@ class UIState {
         }
     }
 
-    setFavoriteInputState(enabled, item, $item, $butOn, $butOff) {
+    setFavoriteInputState(enabled, item, $item, $butOn, $butOff, opts) {
+        if (opts === undefined || opts == null)
+            opts = {}
         const menuItemDisabledCl = 'menu-item-disabled'
 
         ui.tabs
@@ -277,17 +284,23 @@ class UIState {
         this.setInfoButtonState(!enabled)
         this.setCurrentRadItemButtonsState(!enabled)
         this.setRadItemsListState(!enabled)
+        if (opts.setListState)
+            this.setItemsListState(opts.setListState, !enabled, true)
 
         if (enabled) {
 
             this.memoRDLists()
-            this.#setTab(RadioList_List)
-            $('#opts_add_favorite_action_pane')
-                .removeClass('hidden')
-            $('#left-pane')
-                .addClass('showActionPane')
-            // remove selection
-            wrpp.clearContainerSelection('opts_wrp_play_list')
+            if (opts.noChangeTab != true)
+                this.#setTab(RadioList_List)
+            if (opts.noActionPane != true) {
+                $('#opts_add_favorite_action_pane')
+                    .removeClass('hidden')
+                $('#left-pane')
+                    .addClass('showActionPane')
+            }
+            if (opts.noUnselectItem != true)
+                // remove selection
+                wrpp.clearContainerSelection('opts_wrp_play_list')
 
             this.addingFavoriteItem = item
             this.$addingFavoriteItem = $item
@@ -300,11 +313,12 @@ class UIState {
                 .addClass('hidden')
             $('#left-pane')
                 .removeClass('showActionPane')
-            this.restoreRDLists()
+            this.restoreRDLists(opts)
             $('#wrp_but_add_fav').removeClass('menu-item-disabled')
         }
 
         this.favoriteInputState = enabled
+        return this
     }
 
     setInfoButtonState(enabled) {
@@ -325,31 +339,37 @@ class UIState {
     setCurrentRadItemButtonsState(enabled) {
         const item = this.currentRDItem
         if (item == null) return
-        const $item = $(wrpp.getRadListItemById(item.id).item)
-        const $buts = $item.find('.wrp-rad-item-icon ')
-        const disabledCl = 'but-icon-disabled'
-        if (!enabled) {
-            $buts.addClass(disabledCl)
-        }
-        else {
-            $buts.removeClass(disabledCl)
+        const radListItem = wrpp.getRadListItemById(item.id)
+        if (radListItem != null) {
+            const $item = $(radListItem.item)
+            const $buts = $item.find('.wrp-rad-item-icon ')
+            const disabledCl = 'but-icon-disabled'
+            if (!enabled) {
+                $buts.addClass(disabledCl)
+            }
+            else {
+                $buts.removeClass(disabledCl)
+            }
         }
     }
 
     setRadItemsListState(enabled) {
         const disabledCl = 'but-icon-disabled'
         const $items = $('#wrp_radio_list')
-            .find('.wrp-list-item:not([class~="item-selected"]')
+            .find('.wrp-list-item:not([class~="item-selected"])')
         if (!enabled)
             $items.addClass(disabledCl)
         else
             $items.removeClass(disabledCl)
     }
 
-    setItemsListState(paneId, enabled) {
+    setItemsListState(paneId, enabled, skipSelectedItem) {
         const disabledCl = 'but-icon-disabled'
         const $items = $('#' + paneId)
-            .find('.wrp-list-item')
+            .find('.wrp-list-item' +
+                (skipSelectedItem != true ? '' :
+                    ':not([class~="item-selected"])')
+            )
         if (!enabled)
             $items.addClass(disabledCl)
         else

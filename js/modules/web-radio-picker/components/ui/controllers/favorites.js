@@ -52,6 +52,73 @@ class Favorites {
         settings.dataStore.saveAll()
     }
 
+    editFavoriteListName($item, listId, listName) {
+        if (settings.debug.debug)
+            logger.log(`edit favorite list name: list=${listId}:${listName}`)
+
+        playHistory.clearHistoryTimer()
+
+        uiState.setFavoriteInputState(
+            true,
+            null,
+            $item,
+            null, null,
+            {
+                noActionPane: true,
+                noUnselectItem: true,
+                noChangeTab: true,
+                setListState: 'opts_wrp_play_list'
+            })
+
+        radsItems.setAllButtonsStatus($item, false)
+        $item.find('.wrp-list-item-sub').addClass('hidden')
+
+        const $inp = $('<input type="text" id="input_list_item">')
+        const $container = $item.find('.wrp-list-item-text-container')
+        const value = $container.text()
+        $container.text('')
+        $inp[0].value = value
+        $container.append($inp)
+
+        $inp.on('keypress', e => {
+            const $inp = $(e.currentTarget)
+            const text = $inp.length > 0 ? $inp[0].value : null
+            const textValid = text !== undefined && text != null && text != ''
+            // return
+            if (textValid && e.which == 13) {
+                this.endEditFavoriteListName($item, $inp, text)
+            }
+        })
+
+        $inp.focus()
+    }
+
+    endEditFavoriteListName($item, $inp, text) {
+        const key = $item.attr('data-text')
+        radiosLists.renameList(key, text)
+        uiState.currentRDList.name = text
+
+        uiState.setFavoriteInputState(
+            false,
+            null,
+            $item,
+            null, null,
+            {
+                noActionPane: true,
+                noUnselectItem: true,
+                noChangeTab: true,
+                setListState: 'opts_wrp_play_list'
+            })
+
+        $inp.remove()
+        $item.find('.wrp-list-item-text-container').text(text)
+
+        radsItems.setAllButtonsStatus($item, true)
+        $item.find('.wrp-list-item-sub').removeClass('hidden')
+
+        settings.dataStore.saveAll()
+    }
+
     addNewFavoriteList() {
         $('#wrp_but_add_fav').addClass('menu-item-disabled')
         const t = radiosLists.lists
@@ -74,7 +141,6 @@ class Favorites {
         const item = radiosLists.radioList(RadioList_List, listName)
 
         $inp.on('keypress', e => {
-            logger.log(e)
             const $inp = $(e.currentTarget)
             const text = $inp.length > 0 ? $inp[0].value : null
             const textValid = text !== undefined && text != null && text != ''

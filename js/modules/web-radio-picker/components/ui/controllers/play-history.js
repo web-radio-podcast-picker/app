@@ -25,6 +25,7 @@ class PlayHistory {
 
     addToHistory(o) {
         if (uiState.favoriteInputState) return
+        // TODO: the method seams not giving credible results
         const historyVisible = wrpp.isRDListVisible(RadioList_List, RadioList_History)
 
         if (settings.debug.debug)

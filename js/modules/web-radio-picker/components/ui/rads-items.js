@@ -29,7 +29,7 @@ class RadsItems {
 
         const $subit = $item.find('.wrp-list-item-sub')
         const $statusText = $item.find('.wrp-item-info-text')
-        $item.attr('data-text', statusText)
+        $item.attr('data-status-text', statusText)
         $statusText.text(statusText)
         $subit.removeClass('hidden')
 
@@ -49,26 +49,34 @@ class RadsItems {
 
     buildFoldableItem(rdItem, $item, listId, listName, opts, unfolded) {
         // rad item or list item : control box
+        // -- only foldable: listId==RadioList_List items OR any rad item
 
         const list = radiosLists.getList(listName)
         const isHistoryList = listId == RadioList_List && listName == RadioList_History
         const isRdItem = rdItem != null
         const hasTrash = (rdItem != null && isHistoryList) || (!isRdItem && !list.isSystem)
+        const isEditable = (!isRdItem && !list.isSystem)
 
         const existsInFavorites = isRdItem &&
             (rdItem.favLists.length == 0 ? false :
                 (rdItem.favLists.length == 1 && rdItem.favLists[0] != RadioList_History)
                 || rdItem.favLists.length > 1)
 
+        // remove favorite
         const butHeartOnVis = existsInFavorites ? '' : 'hidden'
         const butHeartOn = !isRdItem ? '' :
             `<img name="heart_on" src="./img/icons8-heart-fill-48.png" width="32" height="32" alt="heart" class="wrp-rad-item-icon ${butHeartOnVis}">`
+        // add favorite
         const butHeartOffVis = !existsInFavorites ? '' : 'hidden'
         const butHeartOff = !isRdItem ? '' :
             `<img name="heart_off" src="./img/icons8-heart-outline-48.png" width="32" height="32" alt="heart" class="wrp-rad-item-icon ${butHeartOffVis}">`
-
+        // edit
+        const butEditVis = !existsInFavorites ? '' : 'hidden'
+        const butEdit = !isEditable ? '' :
+            `<img name="pen_edit" src="./img/icons8-pen-100.png" width="32" height="32" alt="pen" class="wrp-rad-item-icon ${butEditVis}">`
+        // delete        
         const butRemove = hasTrash ?
-            `<img name="trash" src="./img/trash-32.png" width="32" height="32" alt="heart" class="wrp-rad-item-icon">`
+            `<img name="trash" src="./img/trash-32.png" width="32" height="32" alt="remove" class="wrp-rad-item-icon">`
             : ''
 
         $item.addClass('wrp-list-item-foldable')
@@ -77,10 +85,9 @@ class RadsItems {
             `<div class="wrp-list-item-sub ${subitHidden}">
 <span class="wrp-item-info-text"></span>
 <div class="wrp-item-controls-container">
-${butRemove}${butHeartOn}${butHeartOff}
+${butRemove}${butHeartOn}${butHeartOff}${butEdit}
 </div>
 </div>`)
-        const disabledCl = 'but-icon-disabled'
         var $butOn = null
         var $butOff = null
 
@@ -89,7 +96,7 @@ ${butRemove}${butHeartOn}${butHeartOff}
             $butOn
                 .on('click', e => {
                     e.preventDefault()
-                    if ($(e.currentTarget).hasClass(disabledCl)) return
+                    if ($(e.currentTarget).hasClass(Class_Icon_Disabled)) return
                     favorites.removeFavorite(rdItem, $item, $butOn, $butOff)
                 })
 
@@ -97,16 +104,24 @@ ${butRemove}${butHeartOn}${butHeartOff}
             $butOff
                 .on('click', e => {
                     e.preventDefault()
-                    if ($(e.currentTarget).hasClass(disabledCl)) return
+                    if ($(e.currentTarget).hasClass(Class_Icon_Disabled)) return
                     favorites.addFavorite(rdItem, $item, listId, listName, $butOn, $butOff)
                 })
         }
+
+        if (isEditable)
+            $subit.find('img[name="pen_edit"]')
+                .on('click', e => {
+                    e.preventDefault()
+                    if ($(e.currentTarget).hasClass(Class_Icon_Disabled)) return
+                    favorites.editFavoriteListName($item, listId, listName)
+                })
 
         if (hasTrash)
             $subit.find('img[name="trash"]')
                 .on('click', e => {
                     e.preventDefault()
-                    if ($(e.currentTarget).hasClass(disabledCl)) return
+                    if ($(e.currentTarget).hasClass(Class_Icon_Disabled)) return
                     if (isRdItem)
                         playHistory.removeFromHistory(rdItem, $item, listId, listName, $butOn, $butOff)
                     else
@@ -118,6 +133,25 @@ ${butRemove}${butHeartOn}${butHeartOff}
         if (opts != null) {
 
         }
+    }
+
+    setButtonStatus($item, buttonName, enabled) {
+        const $but = $item.find('img[name="' + buttonName + '"]')
+        if (enabled)
+            $but.removeClass(Class_Icon_Disabled)
+        else
+            $but.addClass(Class_Icon_Disabled)
+    }
+
+    setAllButtonsStatus($item, enabled) {
+        const t = [
+            'heart_on', 'heart_off',
+            'pen_edit',
+            'trash'
+        ]
+        t.forEach(x => {
+            this.setButtonStatus($item, x, enabled)
+        })
     }
 
     unbuildFoldableItem($item) {
