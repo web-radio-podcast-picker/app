@@ -76,7 +76,7 @@ class RadsItems {
             `<img name="pen_edit" src="./img/icons8-pen-100.png" width="32" height="32" alt="pen" class="wrp-rad-item-icon ${butEditVis}">`
         // delete        
         const butRemove = hasTrash ?
-            `<img name="trash" src="./img/trash-32.png" width="32" height="32" alt="heart" class="wrp-rad-item-icon">`
+            `<img name="trash" src="./img/trash-32.png" width="32" height="32" alt="remove" class="wrp-rad-item-icon">`
             : ''
 
         $item.addClass('wrp-list-item-foldable')
@@ -109,6 +109,14 @@ ${butRemove}${butHeartOn}${butHeartOff}${butEdit}
                     favorites.addFavorite(rdItem, $item, listId, listName, $butOn, $butOff)
                 })
         }
+
+        if (isEditable)
+            $subit.find('img[name="pen_edit"]')
+                .on('click', e => {
+                    e.preventDefault()
+                    if ($(e.currentTarget).hasClass(disabledCl)) return
+                    favorites.editFavoriteListName($item, listId, listName)
+                })
 
         if (hasTrash)
             $subit.find('img[name="trash"]')

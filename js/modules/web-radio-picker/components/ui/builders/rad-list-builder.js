@@ -241,8 +241,10 @@ class RadListBuilder {
 
         // open the list (will auto restore any unfolded item)
         // force click over an already selected item
-        $(itemRef.item).removeClass('item-selected')
-        const r = itemRef.item.click()
+        const $item = $(itemRef.item)
+        $item.removeClass('item-selected')
+        const $cbox = $item.find('.wrp-list-item-text-container')
+        $cbox[0].click()
 
         // restore the position & selection
         $pl.scrollTop(y)

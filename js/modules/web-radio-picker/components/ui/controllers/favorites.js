@@ -52,6 +52,23 @@ class Favorites {
         settings.dataStore.saveAll()
     }
 
+    editFavoriteListName($item, listId, listName) {
+        if (settings.debug.debug)
+            logger.log(`edit favorite list name: list=${listId}:${listName}`)
+
+        playHistory.clearHistoryTimer()
+
+        uiState.setFavoriteInputState(
+            true,
+            null,
+            $item,
+            null, null,
+            {
+                noActionPane: true,
+                noUnselectItem: true
+            })
+    }
+
     addNewFavoriteList() {
         $('#wrp_but_add_fav').addClass('menu-item-disabled')
         const t = radiosLists.lists

@@ -90,7 +90,10 @@ class UIState {
             return
         const itemRef = wrpp.getListItem(rdList)
         if (itemRef == null) return
-        const r = itemRef.item.click()
+
+        const $item = $(itemRef.item)
+        const $cbox = $item.find('.wrp-list-item-text-container')
+        $cbox[0].click()
     }
 
     updateCurrentRDList(newList, skipSave) {
@@ -263,7 +266,9 @@ class UIState {
         }
     }
 
-    setFavoriteInputState(enabled, item, $item, $butOn, $butOff) {
+    setFavoriteInputState(enabled, item, $item, $butOn, $butOff, opts) {
+        if (opts === undefined || opts == null)
+            opts = {}
         const menuItemDisabledCl = 'menu-item-disabled'
 
         ui.tabs
@@ -282,12 +287,14 @@ class UIState {
 
             this.memoRDLists()
             this.#setTab(RadioList_List)
-            $('#opts_add_favorite_action_pane')
-                .removeClass('hidden')
+            if (opts.noActionPane != true)
+                $('#opts_add_favorite_action_pane')
+                    .removeClass('hidden')
             $('#left-pane')
                 .addClass('showActionPane')
-            // remove selection
-            wrpp.clearContainerSelection('opts_wrp_play_list')
+            if (opts.noUnselectItem != true)
+                // remove selection
+                wrpp.clearContainerSelection('opts_wrp_play_list')
 
             this.addingFavoriteItem = item
             this.$addingFavoriteItem = $item
@@ -325,14 +332,17 @@ class UIState {
     setCurrentRadItemButtonsState(enabled) {
         const item = this.currentRDItem
         if (item == null) return
-        const $item = $(wrpp.getRadListItemById(item.id).item)
-        const $buts = $item.find('.wrp-rad-item-icon ')
-        const disabledCl = 'but-icon-disabled'
-        if (!enabled) {
-            $buts.addClass(disabledCl)
-        }
-        else {
-            $buts.removeClass(disabledCl)
+        const radListItem = wrpp.getRadListItemById(item.id)
+        if (radListItem != null) {
+            const $item = $(radListItem.item)
+            const $buts = $item.find('.wrp-rad-item-icon ')
+            const disabledCl = 'but-icon-disabled'
+            if (!enabled) {
+                $buts.addClass(disabledCl)
+            }
+            else {
+                $buts.removeClass(disabledCl)
+            }
         }
     }
 
