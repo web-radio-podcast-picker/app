@@ -61,6 +61,8 @@ class RadsItems {
             (rdItem.favLists.length == 0 ? false :
                 (rdItem.favLists.length == 1 && rdItem.favLists[0] != RadioList_History)
                 || rdItem.favLists.length > 1)
+        const favs = !isRdItem ? [] : rdItem.favLists.filter(x => x != RadioList_History)
+        const favName = favs.length > 0 ? favs[0] : ''
 
         // remove favorite
         const butHeartOnVis = existsInFavorites ? '' : 'hidden'
@@ -81,11 +83,14 @@ class RadsItems {
 
         $item.addClass('wrp-list-item-foldable')
         const subitHidden = unfolded ? '' : 'hidden'
+
+        const text2 = !isRdItem ? '' :
+            `<span class="wrp-item-info-text2">${favName}</span>`
         const $subit = $(
             `<div class="wrp-list-item-sub ${subitHidden}">
 <span class="wrp-item-info-text"></span>
 <div class="wrp-item-controls-container">
-${butRemove}${butHeartOn}${butHeartOff}${butEdit}
+${butRemove}${butHeartOn}${butHeartOff}${butEdit}${text2}
 </div>
 </div>`)
         var $butOn = null
