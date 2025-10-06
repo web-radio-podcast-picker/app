@@ -150,19 +150,21 @@ class ListsBuilder {
 
         $textContainer.on('click', e => {
             const $e = $(e.currentTarget)
-            if ($e.hasClass('but-icon-disabled')) return
-            const isSelected = $item.hasClass('item-selected')
+            if ($e.hasClass(Class_Icon_Disabled)) return
+            const isDisabled = $item.hasClass(Class_Icon_Disabled)
+            const isSelected = $item.hasClass(Class_Item_Selected)
+            const isAccepted = !isDisabled && !isSelected
 
             if (currentRDList.listId == RadioList_List
                 && uiState.favoriteInputState
-                && !isSelected
+                && isAccepted
             )
                 // favorite select
                 favorites.endAddFavorite($item, currentRDList, false)
 
             else {
 
-                if (isSelected) return
+                if (!isAccepted) return
 
                 // clear selections & unbuild folded items
                 wrpp.clearListsSelection()

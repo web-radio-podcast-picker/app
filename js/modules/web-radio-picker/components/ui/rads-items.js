@@ -88,7 +88,6 @@ class RadsItems {
 ${butRemove}${butHeartOn}${butHeartOff}${butEdit}
 </div>
 </div>`)
-        const disabledCl = 'but-icon-disabled'
         var $butOn = null
         var $butOff = null
 
@@ -97,7 +96,7 @@ ${butRemove}${butHeartOn}${butHeartOff}${butEdit}
             $butOn
                 .on('click', e => {
                     e.preventDefault()
-                    if ($(e.currentTarget).hasClass(disabledCl)) return
+                    if ($(e.currentTarget).hasClass(Class_Icon_Disabled)) return
                     favorites.removeFavorite(rdItem, $item, $butOn, $butOff)
                 })
 
@@ -105,7 +104,7 @@ ${butRemove}${butHeartOn}${butHeartOff}${butEdit}
             $butOff
                 .on('click', e => {
                     e.preventDefault()
-                    if ($(e.currentTarget).hasClass(disabledCl)) return
+                    if ($(e.currentTarget).hasClass(Class_Icon_Disabled)) return
                     favorites.addFavorite(rdItem, $item, listId, listName, $butOn, $butOff)
                 })
         }
@@ -114,7 +113,7 @@ ${butRemove}${butHeartOn}${butHeartOff}${butEdit}
             $subit.find('img[name="pen_edit"]')
                 .on('click', e => {
                     e.preventDefault()
-                    if ($(e.currentTarget).hasClass(disabledCl)) return
+                    if ($(e.currentTarget).hasClass(Class_Icon_Disabled)) return
                     favorites.editFavoriteListName($item, listId, listName)
                 })
 
@@ -122,7 +121,7 @@ ${butRemove}${butHeartOn}${butHeartOff}${butEdit}
             $subit.find('img[name="trash"]')
                 .on('click', e => {
                     e.preventDefault()
-                    if ($(e.currentTarget).hasClass(disabledCl)) return
+                    if ($(e.currentTarget).hasClass(Class_Icon_Disabled)) return
                     if (isRdItem)
                         playHistory.removeFromHistory(rdItem, $item, listId, listName, $butOn, $butOff)
                     else
@@ -134,6 +133,25 @@ ${butRemove}${butHeartOn}${butHeartOff}${butEdit}
         if (opts != null) {
 
         }
+    }
+
+    setButtonStatus($item, buttonName, enabled) {
+        const $but = $item.find('img[name="' + buttonName + '"]')
+        if (enabled)
+            $but.removeClass(Class_Icon_Disabled)
+        else
+            $but.addClass(Class_Icon_Disabled)
+    }
+
+    setAllButtonsStatus($item, enabled) {
+        const t = [
+            'heart_on', 'heart_off',
+            'pen_edit',
+            'trash'
+        ]
+        t.forEach(x => {
+            this.setButtonStatus($item, x, enabled)
+        })
     }
 
     unbuildFoldableItem($item) {
