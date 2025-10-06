@@ -240,6 +240,8 @@ class RadListBuilder {
         const y = $pl.scrollTop()
 
         // open the list (will auto restore any unfolded item)
+        // force click over an already selected item
+        $(itemRef.item).removeClass('item-selected')
         const r = itemRef.item.click()
 
         // restore the position & selection
