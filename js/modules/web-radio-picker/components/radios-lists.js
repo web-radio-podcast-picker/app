@@ -42,6 +42,7 @@ class RadiosLists {
         const list = this.getList(id)
         delete this.lists[id]
         this.lists[name] = list
+        return list
     }
 
     deleteList(name) {

@@ -96,6 +96,7 @@ class Favorites {
     endEditFavoriteListName($item, $inp, text) {
         const key = $item.attr('data-text')
         radiosLists.renameList(key, text)
+        uiState.currentRDList.name = text
 
         uiState.setFavoriteInputState(
             false,
@@ -114,6 +115,8 @@ class Favorites {
 
         radsItems.setAllButtonsStatus($item, true)
         $item.find('.wrp-list-item-sub').removeClass('hidden')
+
+        settings.dataStore.saveAll()
     }
 
     addNewFavoriteList() {
