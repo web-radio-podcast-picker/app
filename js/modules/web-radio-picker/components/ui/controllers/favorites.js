@@ -40,11 +40,10 @@ class Favorites {
             addingFavoriteItem.favLists.push(rdList.name)
         radiosLists.addToList(rdList.name, addingFavoriteItem)
 
-        radsItems.updateRadItem(
+        radsItems.updateRadItemView(
             addingFavoriteItem,
-            $addingFavoriteItem,
-            $addingFavoriteItemButOn,
-            $addingFavoriteItemButOff)
+            $addingFavoriteItem
+        )
 
         // update the fav list
         listsBuilder.updateListsItems()
@@ -192,7 +191,7 @@ class Favorites {
             delFav = favs[0]
             radiosLists.removeFromList(item, delFav)
         }
-        radsItems.updateRadItem(item, $item, $butOn, $butOff)
+        radsItems.updateRadItemView(item, $item)
 
         // update the fav list
         listsBuilder.updateListsItems()

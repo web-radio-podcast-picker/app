@@ -42,18 +42,29 @@ class RadiosLists {
         // rename the list itself
         const list = this.getList(id)
         delete this.lists[id]
-        if (list==null) return
+        if (list == null) return
         this.lists[name] = list
+        list.name = name
         // renames list in rad items favs
         list.items.forEach(rad => {
-            rad.favLists = rad.favLists.filter(x => x != id)
+            this.removeFavFromList(rad, id)
             rad.favLists.push(name)
         })
         return list
     }
 
     deleteList(name) {
+        const list = this.lists[name]
+        // delete in favs lists
+        list.items.forEach(rad => {
+            this.removeFavFromList(rad, name)
+        })
+        // delete the favlist
         delete this.lists[name]
+    }
+
+    removeFavFromList(rdItem, favName) {
+        rdItem.favLists = rdItem.favLists.filter(x => x != favName)
     }
 
     removeFromList(item, listName) {
