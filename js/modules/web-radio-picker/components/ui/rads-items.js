@@ -20,6 +20,13 @@ class RadsItems {
         return this
     }
 
+    getLoadingItem() {
+        return {
+            loadingRDItem: this.loadingRDItem,
+            $loadingRDItem: this.$loadingRDItem
+        }
+    }
+
     updateLoadingRadItem(statusText, item, $item) {
         $item ||= this.$loadingRDItem
         item ||= this.loadingRDItem
@@ -47,6 +54,21 @@ class RadsItems {
         }
     }
 
+    updateRadItemView(item, $item) {
+        if (item === undefined || item == null) return
+        if ($item === undefined || $item == null) return
+        const $butOn = $item.find('img[name="heart_on"]')
+        const $butOff = $item.find('img[name="heart_off"]')
+        const $text2 = $item.find('.wrp-item-info-text2')
+        const $text = $item.find('.wrp-list-item-text-container')
+        const $statusText = $item.find('.wrp-item-info-text')
+        $text.text(item.name)
+        $statusText.text(item.metadata.statusText)
+        const favName = favorites.getFavName(item) || ''
+        $text2.text(favName)
+        this.updateRadItem(item, $item, $butOn, $butOff)
+    }
+
     buildFoldableItem(rdItem, $item, listId, listName, opts, unfolded) {
         // rad item or list item : control box
         // -- only foldable: listId==RadioList_List items OR any rad item
@@ -61,8 +83,7 @@ class RadsItems {
             (rdItem.favLists.length == 0 ? false :
                 (rdItem.favLists.length == 1 && rdItem.favLists[0] != RadioList_History)
                 || rdItem.favLists.length > 1)
-        const favs = !isRdItem ? [] : rdItem.favLists.filter(x => x != RadioList_History)
-        const favName = favs.length > 0 ? favs[0] : ''
+        const favName = favorites.getFavName(rdItem) || ''
 
         // remove favorite
         const butHeartOnVis = existsInFavorites ? '' : 'hidden'

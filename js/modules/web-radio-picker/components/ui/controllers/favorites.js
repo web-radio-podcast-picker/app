@@ -98,6 +98,10 @@ class Favorites {
         radiosLists.renameList(key, text)
         uiState.currentRDList.name = text
 
+        $item.attr('data-text', text)
+        const { loadingRDItem, $loadingRDItem } = radsItems.getLoadingItem()
+        radsItems.updateRadItemView(loadingRDItem, $loadingRDItem)
+
         uiState.setFavoriteInputState(
             false,
             null,
@@ -218,5 +222,13 @@ class Favorites {
         uiState.updateCurrentRDList(null, true)
 
         settings.dataStore.saveAll()
+    }
+
+    getFavName(rdItem) {
+        if (rdItem == null || rdItem.favLists === undefined || rdItem.favLists == null)
+            return null
+        const favs = rdItem.favLists.filter(x => x != RadioList_History)
+        const favName = favs.length > 0 ? favs[0] : null
+        return favName
     }
 }

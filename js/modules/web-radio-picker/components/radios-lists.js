@@ -39,9 +39,16 @@ class RadiosLists {
     }
 
     renameList(id, name) {
+        // rename the list itself
         const list = this.getList(id)
         delete this.lists[id]
+        if (list==null) return
         this.lists[name] = list
+        // renames list in rad items favs
+        list.items.forEach(rad => {
+            rad.favLists = rad.favLists.filter(x => x != id)
+            rad.favLists.push(name)
+        })
         return list
     }
 
