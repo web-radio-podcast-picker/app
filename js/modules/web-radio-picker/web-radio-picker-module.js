@@ -406,7 +406,7 @@ class WebRadioPickerModule extends ModuleBase {
 
     // radio item model
     radioItem(id, name, groupName, url, logo) {
-        return {
+        const rdItem = {
             // const properties
             id: id,
             name: name,
@@ -421,8 +421,15 @@ class WebRadioPickerModule extends ModuleBase {
             // static & dynamic properties
             country: null,
             favLists: [],
-            // dynamic properties
-            metadata: {
+        }
+        // dynamic properties
+        this.checkMetaData(rdItem)
+        return rdItem
+    }
+
+    checkMetaData(rdItem) {
+        if (rdItem.metadata === undefined)
+            rdItem.metadata = {
                 duration: null,
                 stereo: null,
                 encoding: null,
@@ -431,7 +438,6 @@ class WebRadioPickerModule extends ModuleBase {
                 country: null,
                 statusText: null
             }
-        }
     }
 
     findRadItem(item) {

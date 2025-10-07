@@ -32,7 +32,10 @@ class RadsItems {
         item ||= this.loadingRDItem
         if ($item == null) return
 
-        if (item != null) item.metadata.statusText = statusText
+        if (item != null) {
+            wrpp.checkMetaData(item)
+            item.metadata.statusText = statusText
+        }
 
         const $subit = $item.find('.wrp-list-item-sub')
         const $statusText = $item.find('.wrp-item-info-text')
@@ -63,6 +66,7 @@ class RadsItems {
         const $text = $item.find('.wrp-list-item-text-container')
         const $statusText = $item.find('.wrp-item-info-text')
         $text.text(item.name)
+        wrpp.checkMetaData(item)
         $statusText.text(item.metadata.statusText)
         const favName = favorites.getFavName(item) || ''
         $text2.text(favName)
