@@ -162,11 +162,13 @@ find license and copyright informations in files /COPYRIGHT and /LICENCE
     font-size: 0.8em;
     display: grid;
     background-color: #00003333;
-    margin-left: Calc(-0.5em + 2px);
-    margin-right: Calc(-0.5em + 2px);
-    margin-bottom: Calc(-0.5em + 2px);
-    padding: 0.5em;
+    /* margin-left: Calc(-0.5em + 2px); */
+    /* margin-right: Calc(-0.5em + 2px); */
+    /* margin-bottom: Calc(-0.5em + 2px); */
+    /* padding: 0.5em; */
     line-height: 1em;
+    margin: 0.25em;
+    margin-top: 0px;
 }
 
 .wrp-rad-item-icon {
