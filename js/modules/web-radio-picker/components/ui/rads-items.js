@@ -110,8 +110,9 @@ class RadsItems {
         const $subit = $(
             `<div class="wrp-list-item-sub ${subitHidden}">
 <span class="wrp-item-info-text"></span>
+${text2}
 <div class="wrp-item-controls-container">
-${butRemove}${butHeartOn}${butHeartOff}${butEdit}${text2}
+${butRemove}${butHeartOn}${butHeartOff}${butEdit}
 </div>
 </div>`)
         var $butOn = null

@@ -169,6 +169,7 @@ find license and copyright informations in files /COPYRIGHT and /LICENCE
     line-height: 1em;
     margin: 0.25em;
     margin-top: 0px;
+    grid-template-columns: min-content auto min-content;
 }
 
 .wrp-rad-item-icon {
@@ -190,10 +191,10 @@ find license and copyright informations in files /COPYRIGHT and /LICENCE
 .wrp-item-controls-container {
     display: flex;
     text-align: right;
-    grid-row: 1;
-    grid-column: 1;
     flex-direction: row-reverse;
     padding: 0.5em;
+    grid-row: 1;
+    grid-column: 3;
 }
 
 .wrp-item-info-text {
@@ -203,10 +204,11 @@ find license and copyright informations in files /COPYRIGHT and /LICENCE
     font-size: 1em;
     align-content: center;
     padding: 0.5em;
+    text-wrap: nowrap;
 }
 
 .wrp-item-info-text2 {
-    grid-column: 1;
+    grid-column: 2;
     grid-row: 1;
     color: #FFFFFFCC;
     text-align: right;
