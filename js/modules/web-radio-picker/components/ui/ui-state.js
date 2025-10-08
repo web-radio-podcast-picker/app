@@ -42,7 +42,7 @@ class UIState {
 
     //#endregion
 
-    #setTab(listId) {
+    setTab(listId) {
         if (this.listIdToTabId[listId]) {
             const tabId = this.listIdToTabId[listId]
             const $tab = $('#' + tabId)
@@ -92,8 +92,15 @@ class UIState {
         if (itemRef == null) return
 
         const $item = $(itemRef.item)
-        const $cbox = $item.find('.wrp-list-item-text-container')
-        $cbox[0].click()
+        if (rdList.listId == RadioList_All) {
+            // button 'all'
+            $item.click()
+        }
+        else {
+            // list item
+            const $cbox = $item.find('.wrp-list-item-text-container')
+            $cbox[0].click()
+        }
     }
 
     updateCurrentRDList(newList, skipSave) {
@@ -169,7 +176,7 @@ class UIState {
         if (state.currentRDList != null)
             this.#setRDList(state.currentRDList)
         if (state.currentTab != null)
-            this.#setTab(state.currentTab.listId)
+            this.setTab(state.currentTab.listId)
         tabsController.preserveCurrentTab = true
         // ---
         if (state.currentRDItem != null)
@@ -241,7 +248,7 @@ class UIState {
             const listId = m.curTab != null ?
                 m.curTab.listId :
                 m.curList.listId
-            const tabId = this.#setTab(listId)
+            const tabId = this.setTab(listId)
             this.currentTab = { listId: listId, tabId: tabId }
         }
         this.memRDLists = null
@@ -291,7 +298,7 @@ class UIState {
 
             this.memoRDLists()
             if (opts.noChangeTab != true)
-                this.#setTab(RadioList_List)
+                this.setTab(RadioList_List)
             if (opts.noActionPane != true) {
                 $('#opts_add_favorite_action_pane')
                     .removeClass('hidden')

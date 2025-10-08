@@ -106,6 +106,7 @@
     <script src="./js/modules/web-radio-picker/components/ui/controllers/favorites.js?hash=q"></script>
     <script src="./js/modules/web-radio-picker/components/ui/controllers/play-history.js?hash=q"></script>
     <script src="./js/modules/web-radio-picker/components/ui/builders/lists-builder.js?hash=q"></script>
+    <script src="./js/modules/web-radio-picker/components/ui/builders/rad-list-path-builder.js?hash=q"></script>
     <script src="./js/modules/web-radio-picker/components/ui/builders/rad-list-builder.js?hash=q"></script>
     <script src="./js/modules/web-radio-picker/components/ui/infos-pane.js?hash=q"></script>
 
@@ -361,12 +362,12 @@
             <div class="gr1 gc5 rows-min-max-grid gridh100p">
 
                 <div id="wrp_radio_list_btn_bar" class="gr1 gc1 padding-small border-light grid">
-                    <span id="btn_wrp_radios"
-                        class="gr1 gc1 menu-item menu-item-blue onoff-small-height no-width selected">Streams</span>
-
+                    <div id="wrp_rad_list_ref" class="gr1 gc1" class="align-left">
+                        <!--<span class="menu-item menu-item-blue onoff-small-height no-width">Streams</span>-->
+                    </div>
                     <div class="gr1 gc2">
                         <span id="btn_wrp_all_radios" class="menu-item menu-item-blue 
-                            onoff-small-height no-width">Clear filter</span>
+                            onoff-small-height no-width">All</span>
                     </div>
                     <span id="wrp_list_count" class="gr1 gc3"></span>
 

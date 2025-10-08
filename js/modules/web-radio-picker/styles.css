@@ -245,12 +245,14 @@ find license and copyright informations in files /COPYRIGHT and /LICENCE
 }
 
 #wrp_radio_list_btn_bar {
-    justify-content: space-between;
+    /* justify-content: space-between; */
     align-content: center;
+    grid-template-columns: auto min-content min-content;
 }
 
 #wrp_list_count {
     align-content: center;
+    text-wrap: nowrap;
 }
 
 .wrp-img-holder {
@@ -297,10 +299,11 @@ find license and copyright informations in files /COPYRIGHT and /LICENCE
 
 #btn_wrp_all_radios,
 #btn_wrp_inf {
-    padding-left: 0.25em;
-    padding-right: 0.25em;
+    padding-left: 0.5em;
+    padding-right: 0.5em;
     font-size: 0.9em;
     margin-top: 0.25em;
+    margin-right: 0.5em;
 }
 
 .wrp-inf-pane {

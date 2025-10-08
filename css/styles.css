@@ -763,6 +763,10 @@ div.popup-grid > span.menu-item {
     margin-right: 0.5em !important;
 }
 
+.dmargin-right {
+    margin-right: 0.25em !important;
+}
+
 .no-border {
     border: none !important;
 }

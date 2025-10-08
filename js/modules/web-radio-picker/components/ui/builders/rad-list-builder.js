@@ -6,6 +6,8 @@
 
 class RadListBuilder {
 
+    pathBuilder = new RadListPathBuilder()
+
     // build a playable item
     buildListItem(text, id, j, opts, rdItem, listId, listName) {
         if (opts === undefined) opts = null
@@ -110,6 +112,8 @@ class RadListBuilder {
         }
         else
             $rad.scrollTop(0)
+
+        this.pathBuilder.buildPath(listId, listName)
 
         if (settings.features.swype.enableArrowsButtonsOverScrollPanes)
             ui.scrollers.update('wrp_radio_list')
