@@ -41,7 +41,7 @@ class RadListPathBuilder {
             const $favBut = this.buildFavButton(fav)
             $p.append($favBut)
         }
-        // tag path
+        // tag path / lang path
         const w = 24
         const $img = $(`<img name="fav_but" class="small-tag-icon" src="./img/icons8-tag-50.png" width="${w}" height="${w}" alt="fav_but" class="wrp-rad-item-icon ">`)
         $p.append($img)
@@ -81,7 +81,10 @@ class RadListPathBuilder {
         const rm = hasLeftMargin ? ' hmargin-left' : ''
         const $but = $(`<span data-id="${grp}" class="menu-item menu-item-blue onoff-small-height2 no-width ${rm}">${grp}</span>`)
         $but.on('click', () => {
-            this.selectTagPath(grp)
+            if (wrpp.isGroupALang(grp))
+                this.selectLangPath(grp)
+            else
+                this.selectTagPath(grp)
         })
         return $but
     }
@@ -121,6 +124,20 @@ class RadListPathBuilder {
         if (cLst == null
             || (cLst.listId != RadioList_Tag || cLst.name != grp)) {
             const listItem = wrpp.getTagsListsItemByName(grp)
+            if (listItem != null) {
+                const $item = $(listItem.item)
+                listsBuilder.clickListItem($item)
+                wrpp.focusListItem(listItem.item)
+            }
+        }
+    }
+
+    selectLangPath(grp) {
+        uiState.setTab(RadioList_Lang)   // /!\ do not set currentRDList
+        const cLst = uiState.currentRDList
+        if (cLst == null
+            || (cLst.listId != RadioList_Tag || cLst.name != grp)) {
+            const listItem = wrpp.getLangsListsItemByName(grp)
             if (listItem != null) {
                 const $item = $(listItem.item)
                 listsBuilder.clickListItem($item)

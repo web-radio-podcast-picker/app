@@ -161,6 +161,11 @@ class WebRadioPickerModule extends ModuleBase {
         radiosLists.addList(RadioList_List, RadioList_History, true)
     }
 
+    isGroupALang(grp) {
+        const langs = Object.keys(this.itemsByLang)
+        return langs.includes(grp)
+    }
+
     // return the clickable item (a button or a tab or a list item)
     // returns null || { item, name, listId }
     getListItem(rdList) {
@@ -212,6 +217,11 @@ class WebRadioPickerModule extends ModuleBase {
     // { domElement, id }
     getTagsListsItemByName(name) {
         return radiosLists.findListItemByName(name, 'opts_wrp_tag_list')
+    }
+
+    // { domElement, id }
+    getLangsListsItemByName(name) {
+        return radiosLists.findListItemByName(name, 'opts_wrp_lang_list')
     }
 
     initView(viewId) {
