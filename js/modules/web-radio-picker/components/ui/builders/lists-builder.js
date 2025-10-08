@@ -176,10 +176,15 @@ class ListsBuilder {
 
                 if (!isAccepted) return
 
+                var listName = currentRDList.name
+
                 // clear selections & unbuild folded items
                 wrpp.clearListsSelection()
 
                 if (currentRDList.listId == RadioList_List) {
+
+                    // upd list name
+                    listName = $item.attr('data-text')
 
                     radsItems
 
@@ -203,7 +208,7 @@ class ListsBuilder {
                     .updateRadList(
                         t,
                         currentRDList.listId,
-                        currentRDList.name)
+                        listName)
                 wrpp.setCurrentRDList(currentRDList)
 
             }
