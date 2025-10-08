@@ -34,10 +34,17 @@ class RadListPathBuilder {
         const $p = $('#wrp_rad_list_ref')
         $p[0].innerHTML = ''
         if (listId == RadioList_All) return
-        const $listIdBut = this.buildPathButton(listId, listId, id, true, true)
+        if (listId == null || listName == null) return
+        const $listIdBut = this.buildPathButton(listId, listId, id, true, false)
         const $listNameBut = this.buildPathButton(listId, listName, listName, false)
         $p.append($listIdBut)
+        $p.append(this.buildRightChevron())
         $p.append($listNameBut)
+    }
+
+    buildRightChevron() {
+        const $img = $('<img src="./img/icons8-right-arrow-24.png" class="right-chevron">')
+        return $img
     }
 
     buildPathButton(listId, id, text, isTab, hasRightMargin) {

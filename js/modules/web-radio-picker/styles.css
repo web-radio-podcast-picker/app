@@ -170,6 +170,7 @@ find license and copyright informations in files /COPYRIGHT and /LICENCE
     margin: 0.25em;
     margin-top: 0px;
     grid-template-columns: min-content auto min-content;
+    cursor: default;
 }
 
 .wrp-rad-item-icon {
@@ -514,4 +515,8 @@ background-color: #44AAffAA !important
 
 #input_list_item:focus {
     outline: #00FFAAC0 solid 1px;
+}
+
+.right-chevron {
+    vertical-align: middle;
 }
