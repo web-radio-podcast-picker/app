@@ -152,7 +152,6 @@ class RadListPathBuilder {
         if (isTab) {
             uiState.setTab(listId)
             const cLst = uiState.currentRDList
-            uiState.currentRDList = radiosLists.getList(listName)
             if (cLst == null
                 || (cLst.listId != listId || cLst.name != listName)) {
                 const listItem = wrpp.getPlaysListsItemByName(listName)
