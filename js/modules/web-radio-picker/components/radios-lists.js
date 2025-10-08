@@ -78,11 +78,11 @@ class RadiosLists {
     }
 
     removeFromList(item, listName) {
+        item.favLists = item.favLists.filter(x => x != listName)
         const list = this.getList(listName)
         if (list == null) return
         // compare on id to support clones
         list.items = list.items.filter(x => x.id != item.id)
-        item.favLists = item.favLists.filter(x => x != listName)
     }
 
     findItem(listId, itemId) {

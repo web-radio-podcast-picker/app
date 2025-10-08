@@ -31,7 +31,7 @@ const RadioList = 'rad'
 
 // in 'lists' pane
 const RadioList_History = 'History'
-const RadioList_List_VisibleName = 'ᯓ★ History'
+const RadioList_List_VisibleName = '- History -'
 
 // out of 'lists' pane
 const RadioList_List = 'List'
