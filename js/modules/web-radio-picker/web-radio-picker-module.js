@@ -210,8 +210,8 @@ class WebRadioPickerModule extends ModuleBase {
     }
 
     // { domElement, id }
-    getPlaysListsItemById(id) {
-        return radiosLists.findListItemById(id, 'opts_wrp_play_list')
+    getTagsListsItemByName(name) {
+        return radiosLists.findListItemByName(name, 'opts_wrp_tag_list')
     }
 
     initView(viewId) {

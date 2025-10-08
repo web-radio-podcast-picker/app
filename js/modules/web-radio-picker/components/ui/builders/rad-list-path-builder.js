@@ -116,7 +116,17 @@ class RadListPathBuilder {
     }
 
     selectTagPath(grp) {
-
+        uiState.setTab(RadioList_Tag)   // /!\ do not set currentRDList
+        const cLst = uiState.currentRDList
+        if (cLst == null
+            || (cLst.listId != RadioList_Tag || cLst.name != grp)) {
+            const listItem = wrpp.getTagsListsItemByName(grp)
+            if (listItem != null) {
+                const $item = $(listItem.item)
+                listsBuilder.clickListItem($item)
+                wrpp.focusListItem(listItem.item)
+            }
+        }
     }
 
     selectArtistPath(artist) {
@@ -140,13 +150,16 @@ class RadListPathBuilder {
 
     selectFavPath(listId, listName, isTab) {
         if (isTab) {
-            uiState.setTab(listId)      // /!\ doesn't set currentRDList
+            uiState.setTab(listId)
             const cLst = uiState.currentRDList
-            if (cLst.listId != listId && cLst.name != listName) {
+            uiState.currentRDList = radiosLists.getList(listName)
+            if (cLst == null
+                || (cLst.listId != listId || cLst.name != listName)) {
                 const listItem = wrpp.getPlaysListsItemByName(listName)
                 if (listItem != null) {
                     const $item = $(listItem.item)
                     listsBuilder.clickListItem($item)
+                    wrpp.focusListItem(listItem.item)
                 }
             }
         }
