@@ -159,5 +159,19 @@ class RadiosLists {
             srcList.items = substItems
         })
         this.lists = t
+        this.cleanupHistoryItemsFavorites()
+    }
+
+    cleanupHistoryItemsFavorites() {
+        // delete unexisting favorites in history items
+        const list = this.lists[RadioList_History]
+        const listNames = Object.keys(this.lists)
+        list.items.forEach(item => {
+            const t = [...item.favLists]
+            t.forEach(favName => {
+                if (!listNames.includes(favName))
+                    this.removeFavFromList(item, favName)
+            })
+        })
     }
 }

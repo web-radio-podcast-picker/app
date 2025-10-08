@@ -188,6 +188,16 @@ find license and copyright informations in files /COPYRIGHT and /LICENCE
     padding: 0.5em;
 }
 
+.wrp-list-item-history-favs {
+    
+}
+
+.wrp-list-item-history-favs > div.wrp-list-item-text-container
+{
+    color: #E0FF80;
+    font-weight: bold;
+}
+
 .wrp-item-controls-container {
     display: flex;
     text-align: right;

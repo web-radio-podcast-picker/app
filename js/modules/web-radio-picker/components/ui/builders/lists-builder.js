@@ -46,9 +46,15 @@ class ListsBuilder {
         const $pl = $('#opts_wrp_play_list')
         const t = radiosLists.lists
         const names = getSortedNames(t)
+
+        // put History first
+        remove(names, RadioList_History)
+        names.unshift(RadioList_History)
+
         var i = 0
         names.forEach(name => {
-            const lst = t[name].items
+            const list = t[name]
+            const lst = list.items
             const { item, $item } = radListBuilder.buildListItem(
                 name,
                 i,
@@ -62,6 +68,10 @@ class ListsBuilder {
             this.initListItem($pl, item, $item, lst,
                 uiState.RDList(RadioList_List, name, $item)
             )
+            if (list.name == RadioList_History) {
+                $item.addClass('wrp-list-item-history-favs')
+                radListBuilder.updateListItemText($item, RadioList_List_VisibleName)
+            }
             $pl.append($item)
         })
         return this

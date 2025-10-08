@@ -38,6 +38,11 @@ class RadListBuilder {
         return { item: item, $item: $item }
     }
 
+    updateListItemText($item, text) {
+        const $textBox = $item.find('.wrp-list-item-text-container')
+        $textBox.text(text)
+    }
+
     #setRowStyle(i, $row) {
         if (i & 1)
             $row.addClass('wrp-list-item-a')
