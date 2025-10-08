@@ -186,6 +186,7 @@ find license and copyright informations in files /COPYRIGHT and /LICENCE
     grid-row: 1;
     grid-column: 1;
     padding: 0.5em;
+    overflow-wrap: anywhere;
 }
 
 .wrp-list-item-history-favs {
@@ -226,6 +227,7 @@ find license and copyright informations in files /COPYRIGHT and /LICENCE
     align-content: center;
     padding: 0.5em;
     padding-right: 0em;
+    overflow-wrap: anywhere;
 }
 
 .wrp-list-item:hover {

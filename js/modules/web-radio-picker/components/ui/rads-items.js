@@ -109,7 +109,7 @@ class RadsItems {
             : ''
         // empty 
         const butEmpty = canEmpty ?
-            `<img name="empty" src="./img/icons8-empty-64.png" width="32" height="32" alt="empty" class="wrp-rad-item-icon">`
+            `<img name="empty" src="./img/icons8-delete-all-50.png" width="32" height="32" alt="empty" class="wrp-rad-item-icon">`
             : ''
 
         $item.addClass('wrp-list-item-foldable')
