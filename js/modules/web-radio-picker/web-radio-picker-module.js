@@ -204,6 +204,16 @@ class WebRadioPickerModule extends ModuleBase {
         return radiosLists.findListItemById(id, 'opts_wrp_play_list')
     }
 
+    // { domElement, id }
+    getPlaysListsItemByName(name) {
+        return radiosLists.findListItemByName(name, 'opts_wrp_play_list')
+    }
+
+    // { domElement, id }
+    getPlaysListsItemById(id) {
+        return radiosLists.findListItemById(id, 'opts_wrp_play_list')
+    }
+
     initView(viewId) {
 
         settings.dataStore.loadRadiosLists()

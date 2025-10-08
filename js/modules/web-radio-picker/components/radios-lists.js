@@ -101,6 +101,7 @@ class RadiosLists {
 
     findListItemByName(name, containerId) {
         const $items = $('#' + containerId).find('.wrp-list-item')
+        // TODO: use 'some' operator to speed up this
         const t = $items.map((i, e) => {
             return {
                 name: e.attributes['data-text'].value,
@@ -113,6 +114,7 @@ class RadiosLists {
 
     findListItemById(id, containerId) {
         const $items = $('#' + containerId).find('.wrp-list-item')
+        // TODO: use 'some' operator to speed up this
         const t = $items.map((i, e) => {
             return {
                 item: e,
@@ -120,6 +122,19 @@ class RadiosLists {
             }
         })
         const r = t.filter((i, x) => x.id == id)
+        return (r.length == 0) ? null : r[0]
+    }
+
+    findListItemByName(name, containerId) {
+        const $items = $('#' + containerId).find('.wrp-list-item')
+        // TODO: use 'some' operator to speed up this
+        const t = $items.map((i, e) => {
+            return {
+                item: e,
+                id: e.attributes['data-text'].value
+            }
+        })
+        const r = t.filter((i, x) => x.id == name)
         return (r.length == 0) ? null : r[0]
     }
 
@@ -184,5 +199,12 @@ class RadiosLists {
                     this.removeFavFromList(item, favName)
             })
         })
+    }
+
+    equalTo(rdList1, rdList2) {
+        return rdList1 == null
+            || rdList2 == null
+            || (rdList1.listId == rdList2.listId
+                && rdList1.name == rdList2.name)
     }
 }

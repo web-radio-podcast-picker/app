@@ -214,4 +214,10 @@ class ListsBuilder {
             }
         })
     }
+
+    clickListItem($item) {
+        const z = $item.find('.wrp-list-item-text-container')
+        if (z.length == 0) return
+        z[0].click()
+    }
 }

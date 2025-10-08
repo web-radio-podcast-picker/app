@@ -8,6 +8,7 @@ class RadListPathBuilder {
 
     listIdToLabel(listId) {
         var id = listId
+        // match consts to ui texts
         switch (listId) {
             case RadioList_List:
                 id = 'Favs'
@@ -128,7 +129,7 @@ class RadListPathBuilder {
         const selected = !isTab ? 'selected' : ''
         const butcl = noClick == true ? '' : 'menu-item-blue'
         const $but = $(`<span data-id="${id}" class="${butcl} fav-path-button menu-item ${cl} no-width ${rm} ${selected}">${text}</span>`)
-        if (noClick == true)
+        if (noClick != true)
             $but.on('click', () => {
                 this.selectFavPath(listId, id, isTab)
                 if (onClick !== undefined && onClick != null)
@@ -138,8 +139,17 @@ class RadListPathBuilder {
     }
 
     selectFavPath(listId, listName, isTab) {
-        if (isTab)
-            uiState.setTab(listId)
+        if (isTab) {
+            uiState.setTab(listId)      // /!\ doesn't set currentRDList
+            const cLst = uiState.currentRDList
+            if (cLst.listId != listId && cLst.name != listName) {
+                const listItem = wrpp.getPlaysListsItemByName(listName)
+                if (listItem != null) {
+                    const $item = $(listItem.item)
+                    listsBuilder.clickListItem($item)
+                }
+            }
+        }
     }
 
     selectFavList(listName) {
