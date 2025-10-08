@@ -648,19 +648,20 @@ div.popup-grid > span.menu-item {
 }
 
 .cols2 {
-    grid-column: span 2;
+    grid-column-end: span 2;
 }
 
 .cols3 {
-    grid-column: span 3;
+    grid-column-end: span 3;
 }
 
 .cols4 {
-    grid-column: span 4;
+    grid-column-end: span 4;
 }
 
 .cols5 {
-    grid-column: span 5;
+    /*grid-column: span 5;*/
+    grid-column-end: span 5;
 }
 
 .test-border {
@@ -745,6 +746,10 @@ div.popup-grid > span.menu-item {
 
 .no-pointer {
     cursor: default;
+}
+
+.align-self-center {
+    align-self: center;
 }
 
 .margin-top {

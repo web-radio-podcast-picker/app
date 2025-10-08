@@ -171,6 +171,7 @@ find license and copyright informations in files /COPYRIGHT and /LICENCE
     margin-top: 0px;
     grid-template-columns: min-content auto min-content;
     cursor: default;
+    /* align-items: baseline; */
 }
 
 .wrp-rad-item-icon {
@@ -207,6 +208,8 @@ find license and copyright informations in files /COPYRIGHT and /LICENCE
     padding: 0.5em;
     grid-row: 1;
     grid-column: 3;
+    /* align-self: flex-start; */
+    align-items: center;
 }
 
 .wrp-item-info-text {
@@ -217,6 +220,7 @@ find license and copyright informations in files /COPYRIGHT and /LICENCE
     align-content: center;
     padding: 0.5em;
     text-wrap: nowrap;
+    /* align-self: flex-start; */
 }
 
 .wrp-item-info-text2 {
@@ -248,11 +252,35 @@ find license and copyright informations in files /COPYRIGHT and /LICENCE
 #wrp_radio_list_btn_bar {
     /* justify-content: space-between; */
     align-content: center;
-    grid-template-columns: auto min-content min-content;
+    grid-template-columns: min-content auto min-content min-content min-content;
+    align-items: unset;
+    /* align-content: space-around; */
+}
+
+#wrp_rad_list_ref {
+    text-wrap: nowrap;
+    text-wrap-mode: nowrap;
+    /*text-wrap-mode: wrap;
+    word-break: break-word;*/
+    text-align: left;
+    align-content: space-around;
+}
+
+#wrp_rad_list_ref_name {
+    text-wrap: wrap;
+    text-wrap-mode: wrap;
+    word-break: break-word;
+    text-align: left;
+}
+
+.fav-path-button {
+    overflow-wrap: anywhere;
+    text-align: left;
+    color: yellow;
 }
 
 #wrp_list_count {
-    align-content: center;
+    align-content: space-around;
     text-wrap: nowrap;
 }
 
@@ -280,11 +308,20 @@ find license and copyright informations in files /COPYRIGHT and /LICENCE
     /* max-height: 100%; */
 }
 
-#wrp_footer {
+#wrp_footer,#wrp_footer2 {
     height: 2.8em;
     max-height: 2.8em;
     overflow: hidden;
-    grid-template-columns: min-content auto;
+    /* grid-template-columns: none; */
+    align-items: self-start;
+    grid-template-rows: auto auto;
+}
+
+#wrp_footer2 {
+    grid-template-rows: auto !important;
+    justify-content: end;
+    grid-template-columns: max-content;
+    /* background-color: darkblue; */
 }
 
 #wrp_radio_url {
@@ -300,6 +337,8 @@ find license and copyright informations in files /COPYRIGHT and /LICENCE
     color: #FFFF00AA;
     text-wrap: nowrap;
     text-overflow: clip;
+    /* grid-row-start: 1; */
+    /* grid-row-end: span 2; */
 }
 
 #btn_wrp_all_radios,
@@ -309,6 +348,7 @@ find license and copyright informations in files /COPYRIGHT and /LICENCE
     font-size: 0.9em;
     margin-top: 0.25em;
     margin-right: 0.5em;
+    /* align-content: space-around; */
 }
 
 .wrp-inf-pane {
@@ -340,7 +380,25 @@ find license and copyright informations in files /COPYRIGHT and /LICENCE
 #wrp_radio_box {
     text-align: right;
     color: #44AAffFF;
-    grid-row: span 2;
+    /* grid-row-start: 1; */
+    /* grid-row-end: span 2; */
+    display: flex;
+    grid-template-columns: repeat(auto-fit, minmax(0px, 1fr));
+    justify-content: end;
+    /* align-items: center; */
+    /* overflow-wrap: break-word; */
+    overflow: hidden;
+    text-overflow: clip;
+    /* grid-template-columns: max-content; */
+    /* float: right;*/
+    background-color: darkblue;
+}
+
+.wrp_radio_box_fav_button {
+    display: grid;
+    grid-auto-columns: min-content min-content;
+    grid-template-columns: min-content max-content max-content;
+    align-items: center;
 }
 
 .wrp-list-item-container {
@@ -526,9 +584,17 @@ background-color: #44AAffAA !important
     vertical-align: middle;
 }
 
+.right-chevron-extended {
+    height: 2.5em;
+    width: 1.7em;
+    text-overflow: clip;
+    vertical-align: top;
+}
+
 .small-fav-icon, .small-tag-icon {
     width: 24px;
     height: 24px;
     vertical-align: middle;
     margin-right: 0.25em;
+    align-self: center;
 }

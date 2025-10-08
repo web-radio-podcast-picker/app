@@ -50,19 +50,25 @@ class RadListPathBuilder {
             $p.append($but)
             i++
         });
+        // artist == listName, if any
+        if (item.artist == null || item.artist === undefined) return;
+        $p.append(this.buildRightChevron())
+        $p.append(this.buildArtistButton(item.artist, false))
     }
 
     buildTopFavPath(listId, listName) {
         const id = this.listIdToLabel(listId)
         const $p = $('#wrp_rad_list_ref')
         $p[0].innerHTML = ''
+        const $p2 = $('#wrp_rad_list_ref_name')
+        $p2[0].innerHTML = ''
         if (listId == RadioList_All) return
         if (listId == null || listName == null) return
         const $listIdBut = this.buildFavPathButton(listId, listId, id, true, false)
-        const $listNameBut = this.buildFavPathButton(listId, listName, listName, false)
+        const $listNameBut = this.buildFavPathButton(listId, listName, listName, false, false, null, null, true)
         $p.append($listIdBut)
-        $p.append(this.buildRightChevron())
-        $p.append($listNameBut)
+        $p.append(this.buildRightChevron().addClass('right-chevron-extended'))
+        $p2.append($listNameBut)
     }
 
     buildRightChevron() {
@@ -75,6 +81,15 @@ class RadListPathBuilder {
         const $but = $(`<span data-id="${grp}" class="menu-item menu-item-blue onoff-small-height2 no-width ${rm}">${grp}</span>`)
         $but.on('click', () => {
             this.selectTagPath(grp)
+        })
+        return $but
+    }
+
+    buildArtistButton(artist, hasLeftMargin) {
+        const rm = hasLeftMargin ? ' hmargin-left' : ''
+        const $but = $(`<span data-id="${artist}" class="menu-item menu-item-blue onoff-small-height2 no-width ${rm}">${artist}</span>`)
+        $but.on('click', () => {
+            this.selectArtistPath(artist)
         })
         return $but
     }
@@ -93,7 +108,7 @@ class RadListPathBuilder {
                 this.selectFavList(fav)
             }
         )
-        const $div = $('<span></span>')
+        const $div = $('<span class="wrp_radio_box_fav_button"></span>')
         $div.append($img)
         $div.append($but)
         return $div
@@ -103,16 +118,22 @@ class RadListPathBuilder {
 
     }
 
-    buildFavPathButton(listId, id, text, isTab, hasRightMargin, cl, onClick) {
+    selectArtistPath(artist) {
+
+    }
+
+    buildFavPathButton(listId, id, text, isTab, hasRightMargin, cl, onClick, noClick) {
         cl = (cl == null || cl === undefined) ? 'onoff-small-height' : cl
         const rm = hasRightMargin ? ' margin-right' : ''
         const selected = !isTab ? 'selected' : ''
-        const $but = $(`<span data-id="${id}" class="menu-item menu-item-blue ${cl} no-width ${rm} ${selected}">${text}</span>`)
-        $but.on('click', () => {
-            this.selectFavPath(listId, id, isTab)
-            if (onClick !== undefined)
-                onClick()
-        })
+        const butcl = noClick == true ? '' : 'menu-item-blue'
+        const $but = $(`<span data-id="${id}" class="${butcl} fav-path-button menu-item ${cl} no-width ${rm} ${selected}">${text}</span>`)
+        if (noClick == true)
+            $but.on('click', () => {
+                this.selectFavPath(listId, id, isTab)
+                if (onClick !== undefined && onClick != null)
+                    onClick()
+            })
         return $but
     }
 
