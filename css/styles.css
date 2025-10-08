@@ -763,8 +763,12 @@ div.popup-grid > span.menu-item {
     margin-right: 0.5em !important;
 }
 
-.dmargin-right {
-    margin-right: 0.25em !important;
+.hmargin-right {
+    margin-right: 0.5em !important;
+}
+
+.hmargin-left {
+    margin-left: 0.5em !important;
 }
 
 .no-border {
@@ -1114,6 +1118,10 @@ li {
 
 .onoff-small-height {
     line-height: 2em !important;
+}
+
+.onoff-small-height2 {
+    line-height: 2.2em !important;
 }
 
 iframe {

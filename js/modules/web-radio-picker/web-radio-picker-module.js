@@ -358,10 +358,9 @@ class WebRadioPickerModule extends ModuleBase {
     setupRadioView(rdItem) {
         const url = rdItem?.url || ''
         const name = rdItem?.name || ''
-        const box = rdItem?.groups?.join(' ') || ''
         $('#wrp_radio_url').text(url)
         $('#wrp_radio_name').text(name)
-        $('#wrp_radio_box').text(box)
+        radListBuilder.pathBuilder.buildRadioViewTagPath(rdItem)
     }
 
     clearAppStatus() {

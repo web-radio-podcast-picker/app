@@ -158,13 +158,14 @@ class RadiosLists {
             srcList.items.forEach(item => {
                 const newItem = wrpp.findRadItem(item)
 
-                // copy dynamic properties from storage
-                if (name == RadioList_History && !item.favLists.includes(RadioList_History))
-                    item.favLists.push(RadioList_History)
-                if (newItem != null)
-                    newItem.favLists = item.favLists
-
-                substItems.push(item)
+                // copy dynamic properties from storage                
+                if (newItem != null) {
+                    newItem.favLists = [...item.favLists]
+                    // fix history fav
+                    if (name == RadioList_History && !newItem.favLists.includes(RadioList_History))
+                        newItem.favLists.push(RadioList_History)
+                    substItems.push(newItem)
+                }
             })
             srcList.items = substItems
         })

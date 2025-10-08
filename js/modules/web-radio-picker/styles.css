@@ -284,18 +284,22 @@ find license and copyright informations in files /COPYRIGHT and /LICENCE
     height: 2.8em;
     max-height: 2.8em;
     overflow: hidden;
-    /* grid-template-columns: max-content; */
+    grid-template-columns: min-content auto;
 }
 
 #wrp_radio_url {
-    word-wrap: break-word;
-    contain: inline-size;
+    /* word-wrap: break-word; */
+    /* contain: inline-size; */
     overflow: hidden;
+    text-wrap: nowrap;
+    text-overflow: clip;
 }
 
 #wrp_radio_name {
     font-size: 1.3em;
     color: #FFFF00AA;
+    text-wrap: nowrap;
+    text-overflow: clip;
 }
 
 #btn_wrp_all_radios,
@@ -336,6 +340,7 @@ find license and copyright informations in files /COPYRIGHT and /LICENCE
 #wrp_radio_box {
     text-align: right;
     color: #44AAffFF;
+    grid-row: span 2;
 }
 
 .wrp-list-item-container {
@@ -519,4 +524,11 @@ background-color: #44AAffAA !important
 
 .right-chevron {
     vertical-align: middle;
+}
+
+.small-fav-icon, .small-tag-icon {
+    width: 24px;
+    height: 24px;
+    vertical-align: middle;
+    margin-right: 0.25em;
 }

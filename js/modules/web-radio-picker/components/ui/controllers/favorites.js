@@ -44,6 +44,7 @@ class Favorites {
             addingFavoriteItem,
             $addingFavoriteItem
         )
+        wrpp.setupRadioView(uiState.currentRDItem)
 
         // update the fav list
         listsBuilder.updateListsItems()
@@ -93,13 +94,8 @@ class Favorites {
     }
 
     endEditFavoriteListName($item, $inp, text) {
-        const key = $item.attr('data-text')
-        radiosLists.renameList(key, text)
-        uiState.currentRDList.name = text
 
-        $item.attr('data-text', text)
-        const { loadingRDItem, $loadingRDItem } = radsItems.getLoadingItem()
-        radsItems.updateRadItemView(loadingRDItem, $loadingRDItem)
+        playHistory.clearHistoryTimer()
 
         uiState.setFavoriteInputState(
             false,
@@ -113,6 +109,24 @@ class Favorites {
                 setListState: 'opts_wrp_play_list'
             })
 
+        const key = $item.attr('data-text')
+        radiosLists.renameList(key, text)
+        uiState.currentRDList.name = text
+        $item.attr('data-text', text)
+        if (settings.debug.debug) {
+            logger.log(`rename list '${key}' to '${text}'`)
+        }
+
+        const { loadingRDItem, $loadingRDItem } = radsItems.getLoadingItem()
+        if (settings.debug.debug) {
+            logger.log(`loading RDItem : ${loadingRDItem?.name}`)
+        }
+        radsItems.updateRadItemView(loadingRDItem, $loadingRDItem)
+
+        const lst = uiState.currentRDList
+        radListBuilder.pathBuilder.buildTopFavPath(lst.listId, lst.name)
+        wrpp.setupRadioView(uiState.currentRDItem)
+
         $inp.remove()
         $item.find('.wrp-list-item-text-container').text(text)
 
@@ -121,6 +135,8 @@ class Favorites {
 
         settings.dataStore.saveAll()
     }
+
+    //#updateCurrentItemFav()
 
     addNewFavoriteList() {
         $('#wrp_but_add_fav').addClass('menu-item-disabled')
@@ -194,6 +210,8 @@ class Favorites {
 
         // update the fav list
         listsBuilder.updateListsItems()
+
+        wrpp.setupRadioView(uiState.currentRDItem)
 
         // update rad list if current is the fav list
         const crdl = uiState.currentRDList

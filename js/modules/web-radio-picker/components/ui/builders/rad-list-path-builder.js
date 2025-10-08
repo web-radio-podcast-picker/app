@@ -29,36 +29,99 @@ class RadListPathBuilder {
         return id
     }
 
-    buildPath(listId, listName) {
+    buildRadioViewTagPath(item) {
+        const $p = $('#wrp_radio_box')
+        $p[0].innerHTML = ''
+        if (item == null || item.groups == null) return
+        // fav button
+        const favs = favorites.getItemFavoritesFiltered(item)
+        if (favs.length > 0) {
+            const fav = favs[0]
+            const $favBut = this.buildFavButton(fav)
+            $p.append($favBut)
+        }
+        // tag path
+        const w = 24
+        const $img = $(`<img name="fav_but" class="small-tag-icon" src="./img/icons8-tag-50.png" width="${w}" height="${w}" alt="fav_but" class="wrp-rad-item-icon ">`)
+        $p.append($img)
+        var i = 0
+        item.groups.forEach(grp => {
+            const $but = this.buildTagPathButton(grp, i > 0)
+            $p.append($but)
+            i++
+        });
+    }
+
+    buildTopFavPath(listId, listName) {
         const id = this.listIdToLabel(listId)
         const $p = $('#wrp_rad_list_ref')
         $p[0].innerHTML = ''
         if (listId == RadioList_All) return
         if (listId == null || listName == null) return
-        const $listIdBut = this.buildPathButton(listId, listId, id, true, false)
-        const $listNameBut = this.buildPathButton(listId, listName, listName, false)
+        const $listIdBut = this.buildFavPathButton(listId, listId, id, true, false)
+        const $listNameBut = this.buildFavPathButton(listId, listName, listName, false)
         $p.append($listIdBut)
         $p.append(this.buildRightChevron())
         $p.append($listNameBut)
     }
 
     buildRightChevron() {
-        const $img = $('<img src="./img/icons8-right-arrow-24.png" class="right-chevron">')
+        const $img = $('<img alt="chevron" src="./img/icons8-right-arrow-24.png" class="right-chevron">')
         return $img
     }
 
-    buildPathButton(listId, id, text, isTab, hasRightMargin) {
-        const rm = hasRightMargin ? ' margin-right' : ''
-        const selected = !isTab ? 'selected' : ''
-        const $but = $(`<span data-id="${id}" class="menu-item menu-item-blue onoff-small-height no-width ${rm} ${selected}">${text}</span>`)
+    buildTagPathButton(grp, hasLeftMargin) {
+        const rm = hasLeftMargin ? ' hmargin-left' : ''
+        const $but = $(`<span data-id="${grp}" class="menu-item menu-item-blue onoff-small-height2 no-width ${rm}">${grp}</span>`)
         $but.on('click', () => {
-            this.selectPath(listId, id, isTab)
+            this.selectTagPath(grp)
         })
         return $but
     }
 
-    selectPath(listId, listName, isTab) {
+    buildFavButton(fav) {
+        const w = 24
+        const $img = $(`<img name="fav_but" class="small-fav-icon" src="./img/icons8-heart-outline-48.png" width="${w}" height="${w}" alt="fav_but" class="wrp-rad-item-icon ">`)
+        const $but = this.buildFavPathButton(
+            RadioList_List,
+            fav,
+            fav,
+            true,
+            true,
+            'onoff-small-height2',
+            () => {
+                this.selectFavList(fav)
+            }
+        )
+        const $div = $('<span></span>')
+        $div.append($img)
+        $div.append($but)
+        return $div
+    }
+
+    selectTagPath(grp) {
+
+    }
+
+    buildFavPathButton(listId, id, text, isTab, hasRightMargin, cl, onClick) {
+        cl = (cl == null || cl === undefined) ? 'onoff-small-height' : cl
+        const rm = hasRightMargin ? ' margin-right' : ''
+        const selected = !isTab ? 'selected' : ''
+        const $but = $(`<span data-id="${id}" class="menu-item menu-item-blue ${cl} no-width ${rm} ${selected}">${text}</span>`)
+        $but.on('click', () => {
+            this.selectFavPath(listId, id, isTab)
+            if (onClick !== undefined)
+                onClick()
+        })
+        return $but
+    }
+
+    selectFavPath(listId, listName, isTab) {
         if (isTab)
             uiState.setTab(listId)
+    }
+
+    selectFavList(listName) {
+
     }
 }

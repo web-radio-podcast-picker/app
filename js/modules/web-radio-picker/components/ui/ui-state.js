@@ -122,6 +122,7 @@ class UIState {
     #setRDItem(rdItem) {
         var radItem = wrpp.findRadItem(rdItem)
         if (radItem == null) return
+        this.currentRDItem = radItem    // avoid a clone
         var item = wrpp.getRadListItem(radItem)
         if (item != null) {
             const $item = $(item.item)
@@ -131,7 +132,7 @@ class UIState {
     }
 
     // a playable item (not a group) : radioItem
-    // build an RD
+    // build a RD
     updateCurrentRDItem(radioItem, skipSave) {
         if (radioItem != null)
             radioItem.ref = this.radioRef()

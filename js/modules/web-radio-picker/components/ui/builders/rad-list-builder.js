@@ -113,7 +113,7 @@ class RadListBuilder {
         else
             $rad.scrollTop(0)
 
-        this.pathBuilder.buildPath(listId, listName)
+        this.pathBuilder.buildTopFavPath(listId, listName)
 
         if (settings.features.swype.enableArrowsButtonsOverScrollPanes)
             ui.scrollers.update('wrp_radio_list')
