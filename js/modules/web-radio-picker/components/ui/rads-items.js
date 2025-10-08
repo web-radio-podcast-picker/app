@@ -78,10 +78,12 @@ class RadsItems {
         // -- only foldable: listId==RadioList_List items OR any rad item
 
         const list = radiosLists.getList(listName)
+        const isFavList = listId == RadioList_List
         const isHistoryList = listId == RadioList_List && listName == RadioList_History
         const isRdItem = rdItem != null
         const hasTrash = (rdItem != null && isHistoryList) || (!isRdItem && !list.isSystem)
         const isEditable = (!isRdItem && !list.isSystem)
+        const canEmpty = !isRdItem && isFavList
 
         const existsInFavorites = isRdItem &&
             (rdItem.favLists.length == 0 ? false :
@@ -105,6 +107,10 @@ class RadsItems {
         const butRemove = hasTrash ?
             `<img name="trash" src="./img/trash-32.png" width="32" height="32" alt="remove" class="wrp-rad-item-icon">`
             : ''
+        // empty 
+        const butEmpty = canEmpty ?
+            `<img name="empty" src="./img/icons8-empty-64.png" width="32" height="32" alt="empty" class="wrp-rad-item-icon">`
+            : ''
 
         $item.addClass('wrp-list-item-foldable')
         const subitHidden = unfolded ? '' : 'hidden'
@@ -116,7 +122,7 @@ class RadsItems {
 <span class="wrp-item-info-text"></span>
 ${text2}
 <div class="wrp-item-controls-container">
-${butRemove}${butHeartOn}${butHeartOff}${butEdit}
+${butRemove}${butHeartOn}${butHeartOff}${butEmpty}${butEdit}
 </div>
 </div>`)
         var $butOn = null
@@ -157,6 +163,15 @@ ${butRemove}${butHeartOn}${butHeartOff}${butEdit}
                         playHistory.removeFromHistory(rdItem, $item, listId, listName, $butOn, $butOff)
                     else
                         favorites.deleteFavoriteList($item.attr('data-text'))
+                })
+
+        if (canEmpty)
+            $subit.find('img[name="empty"]')
+                .on('click', e => {
+                    e.preventDefault()
+                    if ($(e.currentTarget).hasClass(Class_Icon_Disabled)) return
+                    if (!isRdItem)
+                        favorites.emptyFavoriteList($item.attr('data-text'))
                 })
 
         $item.append($subit)

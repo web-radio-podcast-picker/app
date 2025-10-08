@@ -53,6 +53,16 @@ class RadiosLists {
         return list
     }
 
+    emptyList(name) {
+        const list = this.lists[name]
+        // delete in favs lists
+        list.items.forEach(rad => {
+            this.removeFavFromList(rad, name)
+        })
+        // empty the favlist
+        this.lists[name].items = []
+    }
+
     deleteList(name) {
         const list = this.lists[name]
         // delete in favs lists

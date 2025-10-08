@@ -178,7 +178,7 @@ class Favorites {
         return favs
     }
 
-    removeFavorite(item, $item, $butOn, $butOff) {
+    removeFavorite(item, $item, listName, $butOn, $butOff) {
         if (settings.debug.debug)
             logger.log(`remove favorite: ${item.name}`)
 
@@ -186,11 +186,10 @@ class Favorites {
 
         const favs = this.getItemFavoritesFiltered(item)
         var delFav = null
-
-        if (favs.length == 1) {
-            delFav = favs[0]
-            radiosLists.removeFromList(item, delFav)
-        }
+        favs.forEach(fav => {
+            radiosLists.removeFromList(item, fav)
+            delFav = fav
+        });
         radsItems.updateRadItemView(item, $item)
 
         // update the fav list
@@ -219,6 +218,19 @@ class Favorites {
             .clearRadList()
 
         uiState.updateCurrentRDList(null, true)
+
+        settings.dataStore.saveAll()
+    }
+
+    emptyFavoriteList(listName) {
+        if (settings.debug.debug)
+            logger.log(`empty favorite list: ${listName}`)
+
+        playHistory.clearHistoryTimer()
+        radiosLists.emptyList(listName)
+        // update the fav list
+        listsBuilder.updateListsItems()
+        radListBuilder.clearRadList()
 
         settings.dataStore.saveAll()
     }
