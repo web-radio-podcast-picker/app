@@ -12,7 +12,7 @@ class TabsController {
         'btn_wrp_play_list',
         'btn_wrp_logo']
 
-    infTabs = ['btn_wrp_inf', 'btn_log_pane']
+    infTabs = ['btn_wrp_inf', 'btn_wrp_set', 'btn_log_pane']
 
     // ask to not change current tab automatically (eg. case restore ui state)
     preserveCurrentTab = false

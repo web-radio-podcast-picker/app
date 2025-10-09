@@ -361,6 +361,8 @@
             <!-- right col -->
             <div class="gr1 gc5 rows-min-max-grid gridh100p">
 
+                <!-- button bar -->
+
                 <div id="wrp_radio_list_btn_bar" class="gr1 gc1 padding-small border-light grid">
                     <div id="wrp_rad_list_ref" class="gr1 gc1" class="align-left">
                         <!-- top fav path : list id -->
@@ -394,13 +396,24 @@
                 <div id="wrp_inf_pane" class="hidden gr2 gc1 border-light margin-top gridh100p lim-height">
                     <div id="wrp_info_but_bar" class="gr1 gc1 padding-small border-light grid">
 
-                        <div class="gr1 gc1 margin-right">
+                        <!-- info -->
+
+                        <div class="gr1 gc1">
                             <span id="btn_wrp_inf" class="menu-item menu-item-blue 
-                                onoff-small-height no-width selected">Info</span>
+                                onoff-small-height no-width selected">About...</span>
                         </div>
 
+                        <!-- settings -->
+
                         <div class="gr1 gc2">
-                            <span id="btn_log_pane" class="menu-item menu-item-blue 
+                            <span id="btn_wrp_set" class="no-margin-left menu-item menu-item-blue 
+                                onoff-small-height no-width">Settings</span>
+                        </div>
+
+                        <!-- log -->
+
+                        <div class="gr1 gc3">
+                            <span id="btn_log_pane" class="no-margin-left menu-item menu-item-blue 
                                 onoff-small-height no-width">Log</span>
                         </div>
 
@@ -408,7 +421,15 @@
 
                     <div id="opts_wrp_inf" class="wrp-scroll-pane wrp-inf-pane">
                     </div>
-
+                    <div id="opts_wrp_set" class="wrp-scroll-pane wrp-inf-pane hidden">
+                        <h1>Favorites</h1>
+                        <div class="flex gap">
+                            <span id="btn_wrp_exp_fav" class="no-margin-left menu-item menu-item-blue 
+                                                    onoff-small-height no-width">Export to clipboard</span>
+                            <span id="btn_wrp_imp_fav" class="no-margin-left menu-item menu-item-blue 
+                                                    onoff-small-height no-width">Import from clipboard</span>
+                        </div>
+                    </div>
                     <div id="opts_log_pane" class="wrp-scroll-pane wrp-inf-pane hidden">
                     </div>
                 </div>

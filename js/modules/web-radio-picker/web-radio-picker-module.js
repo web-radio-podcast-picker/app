@@ -4,6 +4,23 @@
     find license and copyright informations in files /COPYRIGHT and /LICENCE
 */
 
+//#region globals consts
+
+const WRP_Radio_List = 'all_stations.m3u'
+const WRP_Json_Radio_List = 'radios.txt'
+const WRP_Unknown_Group_Label = 'unclassified'
+const WRP_Artists_Group_Label = 'artists'
+const Group_Name_Artists = 'Artists'
+
+const Sep = '|'
+const List_Sep = ','
+const Line_Sep = '\n'
+const Bloc_Sep = '---------- ----------'
+
+const Build_Json_Radio_List = false
+
+//#endregion
+
 //#region global attributes
 
 /**
@@ -68,24 +85,11 @@ var uiState = null
 
 //#endregion
 
-const WRP_Radio_List = 'all_stations.m3u'
-const WRP_Json_Radio_List = 'radios.txt'
-const WRP_Unknown_Group_Label = 'unclassified'
-const WRP_Artists_Group_Label = 'artists'
-const Group_Name_Artists = 'Artists'
-
-const Sep = '|'
-const List_Sep = ','
-const Line_Sep = '\n'
-const Bloc_Sep = '---------- ----------'
-
-const Build_Json_Radio_List = false
-
 // module: web radio picker
 
 class WebRadioPickerModule extends ModuleBase {
 
-    //#region ----- module spec ----->
+    //#region ----- module spec -----
 
     id = 'web_radio_picker'         // unique id
     author = 'franck gaspoz'        // author
@@ -131,6 +135,8 @@ class WebRadioPickerModule extends ModuleBase {
 
     //#endregion
 
+    //#region init
+
     constructor() {
         super()
         this.version = settings.app.wrp.version
@@ -160,74 +166,6 @@ class WebRadioPickerModule extends ModuleBase {
         uiState = new UIState()
 
         radiosLists.addList(RadioList_List, RadioList_History, true)
-    }
-
-    isGroupALang(grp) {
-        const langs = Object.keys(this.itemsByLang)
-        return langs.includes(grp)
-    }
-
-    // return the clickable item (a button or a tab or a list item)
-    // returns null || { item, name, listId }
-    getListItem(rdList) {
-        if (rdList == null || rdList.listId == null)
-            return null
-        var res = null
-        switch (rdList.listId) {
-            case RadioList_Info:
-                // must be ignored to preserve list init
-                break
-            case RadioList_All:
-                res = { item: $('#btn_wrp_all_radios')[0], name: null, listId: RadioList_All }
-                break
-            case RadioList_Viz: // no list. will switch to tab
-                break
-            default:
-                const butId = uiState.listIdToTabId[rdList.listId]
-                if (butId !== undefined) {
-                    const paneId = butId.replace('btn_', 'opts_')
-                    res = radiosLists.findListItemByName(rdList.name, paneId)
-                    if (res != null)
-                        res.listId = rdList.listId
-                }
-                break
-        }
-        return res
-    }
-
-    // { domElement, id }
-    getRadListItem(item) {
-        return radiosLists.findListItemById(item.id, 'wrp_radio_list')
-    }
-
-    // { domElement, id }
-    getRadListItemById(id) {
-        return radiosLists.findListItemById(id, 'wrp_radio_list')
-    }
-
-    // { domElement, id }
-    getPlaysListsItemById(id) {
-        return radiosLists.findListItemById(id, 'opts_wrp_play_list')
-    }
-
-    // { domElement, id }
-    getPlaysListsItemByName(name) {
-        return radiosLists.findListItemByName(name, 'opts_wrp_play_list')
-    }
-
-    // { domElement, id }
-    getTagsListsItemByName(name) {
-        return radiosLists.findListItemByName(name, 'opts_wrp_tag_list')
-    }
-
-    // { domElement, id }
-    getLangsListsItemByName(name) {
-        return radiosLists.findListItemByName(name, 'opts_wrp_lang_list')
-    }
-
-    // { domElement, id }
-    getArtistsListsItemByName(name) {
-        return radiosLists.findListItemByName(name, 'opts_wrp_art_list')
     }
 
     initView(viewId) {
@@ -300,6 +238,14 @@ class WebRadioPickerModule extends ModuleBase {
             infosPane.toggleInfos()
         })
 
+        $('#btn_wrp_exp_fav').on('click', () => {
+            radiosLists.exportToClipboard()
+        })
+
+        $('#btn_wrp_imp_fav').on('click', async () => {
+            await radiosLists.importFromClipboard()
+        })
+
         infosPane.initEventsHandlers()
 
         if (settings.features.swype.enableArrowsButtonsOverScrollPanes) {
@@ -308,7 +254,7 @@ class WebRadioPickerModule extends ModuleBase {
 
             ui.scrollers
                 .new(ui.scrollers.scroller(
-                    ['wrp_radio_list', 'opts_wrp_inf', 'opts_log_pane'],
+                    ['wrp_radio_list', 'opts_wrp_inf', 'opts_wrp_set', 'opts_log_pane'],
                     'rdl_top',
                     'rdl_btm'
                 ))
@@ -337,20 +283,13 @@ class WebRadioPickerModule extends ModuleBase {
             settings.dataStore.loadUIState()
     }
 
-    setCurrentRDList(currentRDList) {
-        uiState.updateCurrentRDList(currentRDList)
-    }
-
     updateBindings() {
         ui.bindings.updateBindingTarget('wrp_list_count')
     }
 
-    focusListItem(element, selectIt) {
-        const $e = $(element)
-        if (selectIt)
-            $e.addClass('item-selected')
-        element.scrollIntoView(ScrollIntoViewProps)
-    }
+    // #endregion
+
+    // #region lists/items accessors
 
     getPaneScrollBackup($pane) {
         return {
@@ -360,21 +299,110 @@ class WebRadioPickerModule extends ModuleBase {
         }
     }
 
-    setPaneScroll(scrollBackup) {
-        const s = scrollBackup
-        if (s.selectedItemId != null && s.selectedItemId != '') {
-            const $item = s.$pane.find('[data-id="' + s.selectedItemId + '"]')
-            if ($item.length > 0) {
-                const domItem = $item[0]
-                domItem.scrollIntoView(ScrollIntoViewProps)
-            }
-        }
+    findRadItem(item) {
+        return this.findRadItemInList(item, this.itemsAll)
     }
 
-    toArtistFromtreamingExclusive(r) {
-        if (r === undefined || r == null) return null
-        return r.name?.replace('- Hits', '')?.trim()
+    findRadItemInList(item, lst) {
+        var res = null
+        lst.some(o => {
+            if (item.name == o.name
+                && item.url == o.url) {
+                res = o
+                return true
+            }
+            return false
+        })
+        return res
     }
+
+    findSelectedListItem(containerId) {
+        return $('#' + containerId).find('.item-selected')
+    }
+
+    isGroupALang(grp) {
+        const langs = Object.keys(this.itemsByLang)
+        return langs.includes(grp)
+    }
+
+    // return the clickable item (a button or a tab or a list item)
+    // returns null || { item, name, listId }
+    getListItem(rdList) {
+        if (rdList == null || rdList.listId == null)
+            return null
+        var res = null
+        switch (rdList.listId) {
+            case RadioList_Info:
+                // must be ignored to preserve list init
+                break
+            case RadioList_All:
+                res = { item: $('#btn_wrp_all_radios')[0], name: null, listId: RadioList_All }
+                break
+            case RadioList_Viz: // no list. will switch to tab
+                break
+            default:
+                const butId = uiState.listIdToTabId[rdList.listId]
+                if (butId !== undefined) {
+                    const paneId = butId.replace('btn_', 'opts_')
+                    res = radiosLists.findListItemByName(rdList.name, paneId)
+                    if (res != null)
+                        res.listId = rdList.listId
+                }
+                break
+        }
+        return res
+    }
+
+    // { domElement, id }
+    getRadListItem(item) {
+        return radiosLists.findListItemById(item.id, 'wrp_radio_list')
+    }
+
+    // { domElement, id }
+    getRadListItemById(id) {
+        return radiosLists.findListItemById(id, 'wrp_radio_list')
+    }
+
+    // { domElement, id }
+    getPlaysListsItemById(id) {
+        return radiosLists.findListItemById(id, 'opts_wrp_play_list')
+    }
+
+    // { domElement, id }
+    getPlaysListsItemByName(name) {
+        return radiosLists.findListItemByName(name, 'opts_wrp_play_list')
+    }
+
+    // { domElement, id }
+    getTagsListsItemByName(name) {
+        return radiosLists.findListItemByName(name, 'opts_wrp_tag_list')
+    }
+
+    // { domElement, id }
+    getLangsListsItemByName(name) {
+        return radiosLists.findListItemByName(name, 'opts_wrp_lang_list')
+    }
+
+    // { domElement, id }
+    getArtistsListsItemByName(name) {
+        return radiosLists.findListItemByName(name, 'opts_wrp_art_list')
+    }
+
+    // #endregion
+
+    // #region lists/items setters
+
+    focusListItem(element, selectIt) {
+        const $e = $(element)
+        if (selectIt)
+            $e.addClass('item-selected')
+        element.scrollIntoView(ScrollIntoViewProps)
+    }
+
+    setCurrentRDList(currentRDList) {
+        uiState.updateCurrentRDList(currentRDList)
+    }
+
 
     clearRadioView() {
         this.clearAppStatus()
@@ -412,15 +440,31 @@ class WebRadioPickerModule extends ModuleBase {
         return this
     }
 
-    findSelectedListItem(containerId) {
-        return $('#' + containerId).find('.item-selected')
-    }
-
     allRadios() {
         this.clearListsSelection()
         radListBuilder
             .updateRadList(this.itemsAll, RadioList_All)
         this.setCurrentRDList(uiState.RDList(RadioList_All, null, null))
+    }
+
+    setPaneScroll(scrollBackup) {
+        const s = scrollBackup
+        if (s.selectedItemId != null && s.selectedItemId != '') {
+            const $item = s.$pane.find('[data-id="' + s.selectedItemId + '"]')
+            if ($item.length > 0) {
+                const domItem = $item[0]
+                domItem.scrollIntoView(ScrollIntoViewProps)
+            }
+        }
+    }
+
+    // #endregion
+
+    //#region data
+
+    toArtistFromtreamingExclusive(r) {
+        if (r === undefined || r == null) return null
+        return r.name?.replace('- Hits', '')?.trim()
     }
 
     isRDListVisible(listId, listName) {
@@ -465,23 +509,6 @@ class WebRadioPickerModule extends ModuleBase {
             }
     }
 
-    findRadItem(item) {
-        return this.findRadItemInList(item, this.itemsAll)
-    }
-
-    findRadItemInList(item, lst) {
-        var res = null
-        lst.some(o => {
-            if (item.name == o.name
-                && item.url == o.url) {
-                res = o
-                return true
-            }
-            return false
-        })
-        return res
-    }
-
     // set data from .m3u or .txt
     setData(dataId, text) {
         if (dataId.includes(WRP_Radio_List))
@@ -489,4 +516,6 @@ class WebRadioPickerModule extends ModuleBase {
         if (dataId.includes(WRP_Json_Radio_List))
             this.radioDataParser.setDataRadioList(text)
     }
+
+    //#endregion
 }

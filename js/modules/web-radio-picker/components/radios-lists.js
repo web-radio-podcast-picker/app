@@ -4,7 +4,11 @@
     find license and copyright informations in files /COPYRIGHT and /LICENCE
 */
 
+const FavoritesJSONExportValidatorTag = 'WRPP-FavoritesJSONExportValidatorTag'
+
 class RadiosLists {
+
+    validator = FavoritesJSONExportValidatorTag
 
     // list id to containers ids
     listIdToPanelId = {
@@ -87,10 +91,24 @@ class RadiosLists {
 
     findItem(listId, itemId) {
         const list = this.getList(listId)
-        if (list == null) return
+        if (list == null) return null
         var res = null
         list.items.some(o => {
             if (o.id == itemId) {
+                res = o
+                return true
+            }
+            return false
+        })
+        return res
+    }
+
+    findItemByNameAndUrl(listId, name, url) {
+        const list = this.getList(listId)
+        if (list == null) return null
+        var res = null
+        list.items.some(o => {
+            if (o.name == name && o.url == url) {
                 res = o
                 return true
             }
@@ -154,8 +172,76 @@ class RadiosLists {
         }
     }
 
-    toJSON() {
-        return JSON.stringify(this.lists)
+    exportToClipboard() {
+        try {
+            this.lists[FavoritesJSONExportValidatorTag]
+                = FavoritesJSONExportValidatorTag
+            const txt = this.toJSON(true)
+            delete this.lists[FavoritesJSONExportValidatorTag]
+            window.exportedFavorites = txt
+            copyToClipboard(txt)
+            return null
+        } catch (err) {
+            ui.showError(err)
+            return err
+        }
+    }
+
+    async importFromClipboard() {
+        try {
+            const txt = await readFromClipboard()
+
+            window.importedFavorites = txt
+            const o = JSON.parse(txt)
+            this.importFavoritesJSONExport(o)
+
+            return null
+        } catch (err) {
+            ui.showError(err)
+            return err
+        }
+    }
+
+    importFavoritesJSONExport(o) {
+        if (o[FavoritesJSONExportValidatorTag] === undefined)
+            throw new Error('favorites JSON export is not a valid object')
+        delete o[FavoritesJSONExportValidatorTag]
+        delete o[RadioList_History]
+        const names = Object.keys(o)
+        if (settings.debug.info) {
+            logger.log('favorites lists: ' + names.length)
+            logger.log(names.join(','))
+        }
+        // merge favorites
+        var importedItems = 0
+        var importedLists = 0
+        names.forEach(name => {
+            const srcList = o[name]
+            var tgtList = this.lists[name]
+            if (tgtList === undefined) {
+                importedLists++
+                if (settings.debug.info)
+                    logger.log('add favorite list: ' + name)
+                tgtList = this.radioList(srcList.listId, srcList.name, false)
+            }
+            srcList.items.forEach(srcItem => {
+                const tgtItem = this.findItemByNameAndUrl(name, srcItem.name, srcItem.url)
+                if (tgtItem == null) {
+                    importedItems++
+                    if (settings.debug.info)
+                        logger.log('add to favorite list "' + name + '" : ' + srcItem.name)
+                }
+            })
+        })
+        if (settings.debug.info) {
+            logger.log('favorites lists imported: ' + importedLists)
+            logger.log('favorites imported: ' + importedItems)
+        }
+    }
+
+    toJSON(applyFormat) {
+        return !applyFormat ? JSON.stringify(this.lists)
+            : JSON.stringify(this.lists, null, 2)
     }
 
     fromJSON(str) {

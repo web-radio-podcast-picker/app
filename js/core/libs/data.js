@@ -6,6 +6,23 @@
 
 // data lib functions
 
+function copyToClipboard(text) {
+    navigator.clipboard.writeText(text).then(() => {
+        if (settings.debug.debug)
+            logger.log('text copied to clipboard');
+    }).catch(err => {
+        logger.error('failed to copy text to clipboard')
+        throw new Error(err);
+    })
+}
+
+async function readFromClipboard() {
+    const res = await navigator.clipboard.readText()
+    if (settings.debug.debug)
+        logger.log('text readed from clipboard');
+    return res
+}
+
 function remove(t, e) {
     const index = t.indexOf(e);
     if (index > -1)

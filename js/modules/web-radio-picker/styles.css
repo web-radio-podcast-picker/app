@@ -342,7 +342,9 @@ find license and copyright informations in files /COPYRIGHT and /LICENCE
 }
 
 #btn_wrp_all_radios,
-#btn_wrp_inf {
+#btn_wrp_inf,
+#btn_log_pane,
+#btn_wrp_set {
     padding-left: 0.5em;
     padding-right: 0.5em;
     font-size: 0.9em;
@@ -357,7 +359,7 @@ find license and copyright informations in files /COPYRIGHT and /LICENCE
 }
 
 #wrp_info_but_bar {
-    grid-template-columns: min-content;
+    grid-template-columns: repeat(3,min-content);
     background-color: darkblue;
 }
 
@@ -365,7 +367,7 @@ find license and copyright informations in files /COPYRIGHT and /LICENCE
     grid-template-rows: min-content;
 }
 
-#opts_wrp_inf {
+#opts_wrp_inf,#opts_long_pane,#opts_wrp_set {
     grid-row: 2 !important;
 }
 
@@ -374,7 +376,7 @@ find license and copyright informations in files /COPYRIGHT and /LICENCE
 }
 
 #btn_wrp_inf.selected {
-    cursor: pointer;
+    cursor: default;
 }
 
 #wrp_radio_box {
@@ -597,4 +599,10 @@ background-color: #44AAffAA !important
     vertical-align: middle;
     margin-right: 0.25em;
     align-self: center;
+}
+
+h1 {
+    font-size: 1.3em;
+    color: #FFFF00DD;
+    /* text-decoration: underline; */
 }
