@@ -72,6 +72,7 @@ const WRP_Radio_List = 'all_stations.m3u'
 const WRP_Json_Radio_List = 'radios.txt'
 const WRP_Unknown_Group_Label = 'unclassified'
 const WRP_Artists_Group_Label = 'artists'
+const Group_Name_Artists = 'Artists'
 
 const Sep = '|'
 const List_Sep = ','
@@ -222,6 +223,11 @@ class WebRadioPickerModule extends ModuleBase {
     // { domElement, id }
     getLangsListsItemByName(name) {
         return radiosLists.findListItemByName(name, 'opts_wrp_lang_list')
+    }
+
+    // { domElement, id }
+    getArtistsListsItemByName(name) {
+        return radiosLists.findListItemByName(name, 'opts_wrp_art_list')
     }
 
     initView(viewId) {

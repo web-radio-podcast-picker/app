@@ -41,13 +41,13 @@ class RadListPathBuilder {
             const $favBut = this.buildFavButton(fav)
             $p.append($favBut)
         }
-        // tag path / lang path
+        // tag path / lang path / artists path
         const w = 24
         const $img = $(`<img name="fav_but" class="small-tag-icon" src="./img/icons8-tag-50.png" width="${w}" height="${w}" alt="fav_but" class="wrp-rad-item-icon ">`)
         $p.append($img)
         var i = 0
         item.groups.forEach(grp => {
-            const $but = this.buildTagPathButton(grp, i > 0)
+            const $but = this.buildTagPathButton(item, grp, i > 0)
             $p.append($but)
             i++
         });
@@ -77,24 +77,29 @@ class RadListPathBuilder {
         return $img
     }
 
-    buildTagPathButton(grp, hasLeftMargin) {
+    buildTagPathButton(item, grp, hasLeftMargin) {
         const rm = hasLeftMargin ? ' hmargin-left' : ''
         const $but = $(`<span data-id="${grp}" class="menu-item menu-item-blue onoff-small-height2 no-width ${rm}">${grp}</span>`)
         $but.on('click', () => {
-            if (wrpp.isGroupALang(grp))
-                this.selectLangPath(grp)
-            else
-                this.selectTagPath(grp)
+            if (grp == Group_Name_Artists
+                && item.artist != null) {
+                // artists list
+                this.selectArtistPath(item, item.artist)
+            } else {
+                if (wrpp.isGroupALang(item.artist))
+                    // langs
+                    this.selectLangPath(grp)
+                else
+                    // tags
+                    this.selectTagPath(grp)
+            }
         })
         return $but
     }
 
     buildArtistButton(artist, hasLeftMargin) {
         const rm = hasLeftMargin ? ' hmargin-left' : ''
-        const $but = $(`<span data-id="${artist}" class="menu-item menu-item-blue onoff-small-height2 no-width ${rm}">${artist}</span>`)
-        $but.on('click', () => {
-            this.selectArtistPath(artist)
-        })
+        const $but = $(`<span data-id="${artist}" class="fav-path-button menu-item onoff-small-height2 no-width selected ${rm}">${artist}</span>`)
         return $but
     }
 
@@ -136,7 +141,7 @@ class RadListPathBuilder {
         uiState.setTab(RadioList_Lang)   // /!\ do not set currentRDList
         const cLst = uiState.currentRDList
         if (cLst == null
-            || (cLst.listId != RadioList_Tag || cLst.name != grp)) {
+            || (cLst.listId != RadioList_Lang || cLst.name != grp)) {
             const listItem = wrpp.getLangsListsItemByName(grp)
             if (listItem != null) {
                 const $item = $(listItem.item)
@@ -146,8 +151,18 @@ class RadListPathBuilder {
         }
     }
 
-    selectArtistPath(artist) {
-
+    selectArtistPath(item, grp) {
+        uiState.setTab(RadioList_Art)   // /!\ do not set currentRDList
+        const cLst = uiState.currentRDList
+        if (cLst == null
+            || (cLst.listId != RadioList_Art || cLst.name != grp)) {
+            const listItem = wrpp.getArtistsListsItemByName(grp)
+            if (listItem != null) {
+                const $item = $(listItem.item)
+                listsBuilder.clickListItem($item)
+                wrpp.focusListItem(listItem.item)
+            }
+        }
     }
 
     buildFavPathButton(listId, id, text, isTab, hasRightMargin, cl, onClick, noClick) {
