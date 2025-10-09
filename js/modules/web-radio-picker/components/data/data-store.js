@@ -45,7 +45,19 @@ class DataStore {
         const str = localStorage.getItem(ST_UIState)
         if (str != null) return false // storage exists. do nothing
         initFunc()
+        if (settings.debug.debug)
+            logger.log('UIState local storage initialized')
         return true
+    }
+
+    deleteStorage(skipReload) {
+        if (localStorage === undefined) return
+        localStorage.removeItem(ST_UIState)
+        localStorage.removeItem(ST_RadiosLists)
+        if (settings.debug.debug)
+            logger.log('UIState local storage deleted')
+        if (skipReload != true)
+            window.location.reload()
     }
 
     loadUIState() {

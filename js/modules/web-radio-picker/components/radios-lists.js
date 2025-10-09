@@ -219,17 +219,33 @@ class RadiosLists {
             const srcList = o[name]
             var tgtList = this.lists[name]
             if (tgtList === undefined) {
+                // add list
+                tgtList = this.radioList(srcList.listId, srcList.name, false)
+                this.lists[name] = tgtList
                 importedLists++
                 if (settings.debug.info)
                     logger.log('add favorite list: ' + name)
-                tgtList = this.radioList(srcList.listId, srcList.name, false)
             }
+            // update target list
             srcList.items.forEach(srcItem => {
                 const tgtItem = this.findItemByNameAndUrl(name, srcItem.name, srcItem.url)
                 if (tgtItem == null) {
-                    importedItems++
-                    if (settings.debug.info)
-                        logger.log('add to favorite list "' + name + '" : ' + srcItem.name)
+                    // add favorite
+                    const newItem = wrpp.findRadItem(srcItem)
+                    if (newItem != null) {
+                        // merge favs lists
+                        this.merge(newItem.favLists, srcItem.favLists)
+                        // add to favlist
+                        tgtList.items.push(newItem)
+                        importedItems++
+                        if (settings.debug.info)
+                            logger.log('add to favorite list "' + name + '" : ' + srcItem.name)
+                    }
+                    else
+                        logger.warn('skip item not in db: ' + srcItem.name)
+                } else {
+                    // already in target fav list. update favlist nevertheless
+                    this.merge(tgtItem.favLists, srcItem.favLists)
                 }
             })
         })
@@ -292,5 +308,13 @@ class RadiosLists {
             || rdList2 == null
             || (rdList1.listId == rdList2.listId
                 && rdList1.name == rdList2.name)
+    }
+
+    merge(from, into) {
+        if (from == null || into == null) return
+        from.forEach(x => {
+            if (!into.includes(x))
+                into.push(x)
+        })
     }
 }
