@@ -1486,3 +1486,19 @@ a:hover {
 .nowrap {
     white-space: nowrap;
 }
+
+.pop-anim {
+    animation: popupAnimation 0.5s ease-in-out;
+}
+
+/* Animation */
+@keyframes popupAnimation {
+    from {
+        transform: scale(0.8);
+        opacity: 0;
+    }
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}

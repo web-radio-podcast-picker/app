@@ -246,14 +246,14 @@ class WebRadioPickerModule extends ModuleBase {
 
         $('#btn_wrp_exp_fav').on('click', () => {
             radiosLists.exportToClipboard()
-            dialogs.showInfoPopup('favorites exported.')
+            dialogs.showInfoPopup('favorites exported')
         })
 
         $('#btn_wrp_imp_fav').on('click', async () => {
             await radiosLists.importFromClipboard()
             listsBuilder.updateListsItems()
             settings.dataStore.saveRadiosLists()
-            dialogs.showInfoPopup('favorites imported.')
+            dialogs.showInfoPopup('favorites imported')
         })
 
         infosPane.initEventsHandlers()

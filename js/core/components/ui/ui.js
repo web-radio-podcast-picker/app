@@ -15,7 +15,12 @@ ui = {
     popupCtrlId: null,      // popup control placement if any else null
     bindings: new Bindings(),
     toggles: new Toggles(),
+
+    /**
+     * @type {Popups}
+     */
     popups: new Popups(),
+
     channels: new Channels(),
     inputWidgets: new InputWidgets(),
     scrollers: new Scrollers(),

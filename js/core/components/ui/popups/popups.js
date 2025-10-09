@@ -50,11 +50,15 @@ class Popups {
             })
     }
 
-    showPopup(controlId, popupId, align) {
-        this.togglePopup(controlId, popupId, true, align)
+    showPopup(controlId, popupId, align, appearFunc) {
+        this.togglePopup(controlId, popupId, true, align, appearFunc, null)
     }
 
-    togglePopup(controlId, popupId, showState, align) {
+    hidePopup(popupId, hideFunc) {
+        this.togglePopup(null, popupId, false, null, null, hideFunc)
+    }
+
+    togglePopup(controlId, popupId, showState, align, appearFunc, hideFunc) {
 
         const $popup = $('#' + popupId);
         const visible = !$popup.hasClass('hidden');
@@ -64,17 +68,30 @@ class Popups {
         var newvis = false
 
         if (showState === undefined) {
+
             $popup.toggleClass('hidden');
             if (!visible) {
                 newvis = true
                 ui.bindings.initBindedControls();
             }
         } else {
-            if (!showState)
-                $popup.addClass('hidden');
+
+            if (!showState) {
+                if (hideFunc)
+                    hideFunc($popup)
+                else
+                    $popup.addClass('hidden');
+            }
             else {
-                $popup.removeClass('hidden');
-                newvis = true
+                if (appearFunc) {
+                    this.updatePopupPositionAndSize(controlId, $popup, align)
+                    newvis = true
+                    appearFunc($popup)
+                }
+                else {
+                    $popup.removeClass('hidden');
+                    newvis = true
+                }
                 ui.bindings.initBindedControls();
             }
         }
