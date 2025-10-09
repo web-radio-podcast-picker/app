@@ -4,6 +4,192 @@
     "name": "History",
     "items": [
       {
+        "id": "7415",
+        "name": "Galaxie Lounge",
+        "description": null,
+        "groupTitle": null,
+        "groups": [
+          "Lounge"
+        ],
+        "url": "https://listen.radioking.com/radio/45838/stream/82624",
+        "logo": "http://galaxie-radio1.radio-website.com//upload/578f3bce151616.43092430.ico",
+        "artist": null,
+        "lang": null,
+        "channels": null,
+        "country": null,
+        "favLists": [
+          "Lounge"
+        ],
+        "metadata": {
+          "duration": null,
+          "statusText": "playing"
+        },
+        "ref": {
+          "currentRDList": {
+            "listId": "List",
+            "name": "Lounge",
+            "$item": {
+              "0": {},
+              "length": 1
+            }
+          },
+          "currentTab": {
+            "listId": "Viz",
+            "tabId": "btn_wrp_logo"
+          }
+        }
+      },
+      {
+        "id": "18204",
+        "name": "Bo Diddley",
+        "description": null,
+        "groupTitle": null,
+        "groups": [
+          "Artists"
+        ],
+        "url": "https://streaming.exclusive.radio/er/bodiddley/icecast.audio",
+        "logo": "https://manager.uber.radio/static/uploads/station/4b9e794d-70ce-484a-ae97-7627954c91d2.jpg",
+        "artist": "Bo Diddley",
+        "lang": null,
+        "channels": null,
+        "country": null,
+        "favLists": [
+          "Blues"
+        ],
+        "metadata": {
+          "duration": null,
+          "statusText": "playing"
+        },
+        "ref": {
+          "currentRDList": {
+            "listId": "List",
+            "name": "Blues",
+            "$item": {
+              "0": {},
+              "length": 1
+            }
+          },
+          "currentTab": {
+            "listId": "Viz",
+            "tabId": "btn_wrp_logo"
+          }
+        }
+      },
+      {
+        "id": "4052",
+        "name": "60s Hits",
+        "description": null,
+        "groupTitle": null,
+        "groups": [
+          "50s",
+          "Oldies",
+          "60s",
+          "Hits"
+        ],
+        "url": "https://playerservices.streamtheworld.com/api/livestream-redirect/977_OLDIES_SC",
+        "logo": "http://hitsradio.com/img/default/hitsradio.png",
+        "artist": null,
+        "lang": null,
+        "channels": null,
+        "country": null,
+        "favLists": [
+          "History",
+          "Années 60"
+        ],
+        "metadata": {
+          "duration": null,
+          "statusText": "playing"
+        },
+        "ref": {
+          "currentRDList": {
+            "listId": "List",
+            "name": "Années 60",
+            "$item": {
+              "0": {},
+              "length": 1
+            }
+          },
+          "currentTab": {
+            "listId": "List",
+            "tabId": "btn_wrp_play_list"
+          }
+        }
+      },
+      {
+        "id": "3063",
+        "name": "100hitz The Mix 80s 90s & Today's Hits",
+        "description": null,
+        "groupTitle": null,
+        "groups": [
+          "Mix",
+          "80s",
+          "90s",
+          "Hits"
+        ],
+        "url": "https://pureplay.cdnstream1.com/6038_128.mp3",
+        "logo": "https://100hitz.com/wp-content/uploads/2018/07/favicon.png",
+        "artist": null,
+        "lang": null,
+        "channels": null,
+        "country": null,
+        "favLists": [],
+        "metadata": {
+          "duration": null,
+          "statusText": "playing"
+        },
+        "ref": {
+          "currentRDList": {
+            "listId": "Tag",
+            "name": "90s",
+            "$item": {
+              "0": {},
+              "length": 1
+            }
+          },
+          "currentTab": {
+            "listId": "Viz",
+            "tabId": "btn_wrp_logo"
+          }
+        }
+      },
+      {
+        "id": "8457",
+        "name": "France Info",
+        "description": null,
+        "groupTitle": null,
+        "groups": [
+          "French"
+        ],
+        "url": "https://icecast.radiofrance.fr/franceinfo-hifi.aac",
+        "logo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTTOrtJJ0l34GIjFRRUcl-X_GxOtNNRNT9rXw&s",
+        "artist": null,
+        "lang": "French",
+        "channels": null,
+        "country": null,
+        "favLists": [
+          "History",
+          "Infos"
+        ],
+        "metadata": {
+          "duration": null,
+          "statusText": "pause"
+        },
+        "ref": {
+          "currentRDList": {
+            "listId": "List",
+            "name": "Infos",
+            "$item": {
+              "0": {},
+              "length": 1
+            }
+          },
+          "currentTab": {
+            "listId": "Viz",
+            "tabId": "btn_wrp_logo"
+          }
+        }
+      },
+      {
         "id": "20903",
         "name": "La Premiere",
         "description": null,
@@ -24,21 +210,12 @@
         ],
         "metadata": {
           "duration": null,
-          "statusText": "playing"
-        },
-        "ref": {
-          "currentRDList": {
-            "listId": "List",
-            "name": "Infos",
-            "$item": {
-              "0": {},
-              "length": 1
-            }
-          },
-          "currentTab": {
-            "listId": "List",
-            "tabId": "btn_wrp_play_list"
-          }
+          "stereo": null,
+          "encoding": null,
+          "sampleFrq": null,
+          "sampleRes": null,
+          "country": null,
+          "statusText": null
         }
       },
       {
@@ -205,34 +382,6 @@
         "country": null,
         "favLists": [
           "Slows & Love Songs"
-        ],
-        "metadata": {
-          "duration": null,
-          "stereo": null,
-          "encoding": null,
-          "sampleFrq": null,
-          "sampleRes": null,
-          "country": null,
-          "statusText": null
-        }
-      },
-      {
-        "id": "8457",
-        "name": "France Info",
-        "description": null,
-        "groupTitle": null,
-        "groups": [
-          "French"
-        ],
-        "url": "https://icecast.radiofrance.fr/franceinfo-hifi.aac",
-        "logo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTTOrtJJ0l34GIjFRRUcl-X_GxOtNNRNT9rXw&s",
-        "artist": null,
-        "lang": "French",
-        "channels": null,
-        "country": null,
-        "favLists": [
-          "History",
-          "Infos"
         ],
         "metadata": {
           "duration": null,
@@ -1123,12 +1272,21 @@
         ],
         "metadata": {
           "duration": null,
-          "stereo": null,
-          "encoding": null,
-          "sampleFrq": null,
-          "sampleRes": null,
-          "country": null,
-          "statusText": null
+          "statusText": "playing"
+        },
+        "ref": {
+          "currentRDList": {
+            "listId": "List",
+            "name": "Lounge",
+            "$item": {
+              "0": {},
+              "length": 1
+            }
+          },
+          "currentTab": {
+            "listId": "List",
+            "tabId": "btn_wrp_play_list"
+          }
         }
       },
       {
@@ -1707,12 +1865,21 @@
         ],
         "metadata": {
           "duration": null,
-          "stereo": null,
-          "encoding": null,
-          "sampleFrq": null,
-          "sampleRes": null,
-          "country": null,
-          "statusText": null
+          "statusText": "playing"
+        },
+        "ref": {
+          "currentRDList": {
+            "listId": "List",
+            "name": "Lounge",
+            "$item": {
+              "0": {},
+              "length": 1
+            }
+          },
+          "currentTab": {
+            "listId": "Viz",
+            "tabId": "btn_wrp_logo"
+          }
         }
       },
       {
@@ -1786,33 +1953,6 @@
         "logo": "https://www.radio.net/images/broadcasts/0d/91/124497/10/c300.png",
         "artist": null,
         "lang": "Deutsch",
-        "channels": null,
-        "country": null,
-        "favLists": [
-          "Lounge"
-        ],
-        "metadata": {
-          "duration": null,
-          "stereo": null,
-          "encoding": null,
-          "sampleFrq": null,
-          "sampleRes": null,
-          "country": null,
-          "statusText": null
-        }
-      },
-      {
-        "id": "7415",
-        "name": "Galaxie Lounge",
-        "description": null,
-        "groupTitle": null,
-        "groups": [
-          "Lounge"
-        ],
-        "url": "https://listen.radioking.com/radio/45838/stream/82624",
-        "logo": "http://galaxie-radio1.radio-website.com//upload/578f3bce151616.43092430.ico",
-        "artist": null,
-        "lang": null,
         "channels": null,
         "country": null,
         "favLists": [
@@ -3139,33 +3279,6 @@
         }
       },
       {
-        "id": "18204",
-        "name": "Bo Diddley",
-        "description": null,
-        "groupTitle": null,
-        "groups": [
-          "Artists"
-        ],
-        "url": "https://streaming.exclusive.radio/er/bodiddley/icecast.audio",
-        "logo": "https://manager.uber.radio/static/uploads/station/4b9e794d-70ce-484a-ae97-7627954c91d2.jpg",
-        "artist": "Bo Diddley",
-        "lang": null,
-        "channels": null,
-        "country": null,
-        "favLists": [
-          "Blues"
-        ],
-        "metadata": {
-          "duration": null,
-          "stereo": null,
-          "encoding": null,
-          "sampleFrq": null,
-          "sampleRes": null,
-          "country": null,
-          "statusText": null
-        }
-      },
-      {
         "id": "17785",
         "name": "1.FM A List 80s",
         "description": null,
@@ -3330,12 +3443,21 @@
         ],
         "metadata": {
           "duration": null,
-          "stereo": null,
-          "encoding": null,
-          "sampleFrq": null,
-          "sampleRes": null,
-          "country": null,
-          "statusText": null
+          "statusText": "connecting..."
+        },
+        "ref": {
+          "currentRDList": {
+            "listId": "List",
+            "name": "Blues",
+            "$item": {
+              "0": {},
+              "length": 1
+            }
+          },
+          "currentTab": {
+            "listId": "Viz",
+            "tabId": "btn_wrp_logo"
+          }
         }
       },
       {
@@ -3411,37 +3533,6 @@
         "country": null,
         "favLists": [
           "History"
-        ],
-        "metadata": {
-          "duration": null,
-          "stereo": null,
-          "encoding": null,
-          "sampleFrq": null,
-          "sampleRes": null,
-          "country": null,
-          "statusText": null
-        }
-      },
-      {
-        "id": "4052",
-        "name": "60s Hits",
-        "description": null,
-        "groupTitle": null,
-        "groups": [
-          "50s",
-          "Oldies",
-          "60s",
-          "Hits"
-        ],
-        "url": "https://playerservices.streamtheworld.com/api/livestream-redirect/977_OLDIES_SC",
-        "logo": "http://hitsradio.com/img/default/hitsradio.png",
-        "artist": null,
-        "lang": null,
-        "channels": null,
-        "country": null,
-        "favLists": [
-          "History",
-          "Années 60"
         ],
         "metadata": {
           "duration": null,
@@ -5024,6 +5115,42 @@
           "country": null,
           "statusText": null
         }
+      },
+      {
+        "id": "18525",
+        "name": "Neha Kakkar",
+        "description": null,
+        "groupTitle": null,
+        "groups": [
+          "Artists"
+        ],
+        "url": "https://drive.uber.radio/uber/bollywoodneharkakkar/icecast.audio",
+        "logo": "https://manager.uber.radio/static/uploads/station/6cf82e50-678d-4af2-8718-baafd949834b.jpg",
+        "artist": "Neha Kakkar",
+        "lang": null,
+        "channels": null,
+        "country": null,
+        "favLists": [
+          "Indien"
+        ],
+        "metadata": {
+          "duration": null,
+          "statusText": "playing"
+        },
+        "ref": {
+          "currentRDList": {
+            "listId": "Art",
+            "name": "Neha Kakkar",
+            "$item": {
+              "0": {},
+              "length": 1
+            }
+          },
+          "currentTab": {
+            "listId": "Art",
+            "tabId": "btn_wrp_art_list"
+          }
+        }
       }
     ],
     "isSystem": false
@@ -5876,12 +6003,21 @@
         ],
         "metadata": {
           "duration": null,
-          "stereo": null,
-          "encoding": null,
-          "sampleFrq": null,
-          "sampleRes": null,
-          "country": null,
-          "statusText": null
+          "statusText": "playing"
+        },
+        "ref": {
+          "currentRDList": {
+            "listId": "List",
+            "name": "Années 60",
+            "$item": {
+              "0": {},
+              "length": 1
+            }
+          },
+          "currentTab": {
+            "listId": "List",
+            "tabId": "btn_wrp_play_list"
+          }
         }
       },
       {
@@ -6452,12 +6588,21 @@
         ],
         "metadata": {
           "duration": null,
-          "stereo": null,
-          "encoding": null,
-          "sampleFrq": null,
-          "sampleRes": null,
-          "country": null,
-          "statusText": null
+          "statusText": "playing"
+        },
+        "ref": {
+          "currentRDList": {
+            "listId": "List",
+            "name": "Crooners",
+            "$item": {
+              "0": {},
+              "length": 1
+            }
+          },
+          "currentTab": {
+            "listId": "List",
+            "tabId": "btn_wrp_play_list"
+          }
         }
       },
       {
@@ -7056,12 +7201,21 @@
         ],
         "metadata": {
           "duration": null,
-          "stereo": null,
-          "encoding": null,
-          "sampleFrq": null,
-          "sampleRes": null,
-          "country": null,
-          "statusText": null
+          "statusText": "pause"
+        },
+        "ref": {
+          "currentRDList": {
+            "listId": "List",
+            "name": "Infos",
+            "$item": {
+              "0": {},
+              "length": 1
+            }
+          },
+          "currentTab": {
+            "listId": "Viz",
+            "tabId": "btn_wrp_logo"
+          }
         }
       },
       {
@@ -7196,21 +7350,12 @@
         ],
         "metadata": {
           "duration": null,
-          "statusText": "playing"
-        },
-        "ref": {
-          "currentRDList": {
-            "listId": "List",
-            "name": "Infos",
-            "$item": {
-              "0": {},
-              "length": 1
-            }
-          },
-          "currentTab": {
-            "listId": "List",
-            "tabId": "btn_wrp_play_list"
-          }
+          "stereo": null,
+          "encoding": null,
+          "sampleFrq": null,
+          "sampleRes": null,
+          "country": null,
+          "statusText": null
         }
       },
       {
@@ -7593,12 +7738,21 @@
         ],
         "metadata": {
           "duration": null,
-          "stereo": null,
-          "encoding": null,
-          "sampleFrq": null,
-          "sampleRes": null,
-          "country": null,
-          "statusText": null
+          "statusText": "connecting..."
+        },
+        "ref": {
+          "currentRDList": {
+            "listId": "List",
+            "name": "Blues",
+            "$item": {
+              "0": {},
+              "length": 1
+            }
+          },
+          "currentTab": {
+            "listId": "Viz",
+            "tabId": "btn_wrp_logo"
+          }
         }
       },
       {
@@ -7620,12 +7774,21 @@
         ],
         "metadata": {
           "duration": null,
-          "stereo": null,
-          "encoding": null,
-          "sampleFrq": null,
-          "sampleRes": null,
-          "country": null,
-          "statusText": null
+          "statusText": "playing"
+        },
+        "ref": {
+          "currentRDList": {
+            "listId": "List",
+            "name": "Blues",
+            "$item": {
+              "0": {},
+              "length": 1
+            }
+          },
+          "currentTab": {
+            "listId": "Viz",
+            "tabId": "btn_wrp_logo"
+          }
         }
       }
     ],
@@ -8295,12 +8458,21 @@
         ],
         "metadata": {
           "duration": null,
-          "stereo": null,
-          "encoding": null,
-          "sampleFrq": null,
-          "sampleRes": null,
-          "country": null,
-          "statusText": null
+          "statusText": "playing"
+        },
+        "ref": {
+          "currentRDList": {
+            "listId": "List",
+            "name": "Lounge",
+            "$item": {
+              "0": {},
+              "length": 1
+            }
+          },
+          "currentTab": {
+            "listId": "Viz",
+            "tabId": "btn_wrp_logo"
+          }
         }
       },
       {
@@ -8351,12 +8523,21 @@
         ],
         "metadata": {
           "duration": null,
-          "stereo": null,
-          "encoding": null,
-          "sampleFrq": null,
-          "sampleRes": null,
-          "country": null,
-          "statusText": null
+          "statusText": "playing"
+        },
+        "ref": {
+          "currentRDList": {
+            "listId": "List",
+            "name": "Lounge",
+            "$item": {
+              "0": {},
+              "length": 1
+            }
+          },
+          "currentTab": {
+            "listId": "Viz",
+            "tabId": "btn_wrp_logo"
+          }
         }
       },
       {
@@ -8551,12 +8732,21 @@
         ],
         "metadata": {
           "duration": null,
-          "stereo": null,
-          "encoding": null,
-          "sampleFrq": null,
-          "sampleRes": null,
-          "country": null,
-          "statusText": null
+          "statusText": "playing"
+        },
+        "ref": {
+          "currentRDList": {
+            "listId": "List",
+            "name": "Lounge",
+            "$item": {
+              "0": {},
+              "length": 1
+            }
+          },
+          "currentTab": {
+            "listId": "List",
+            "tabId": "btn_wrp_play_list"
+          }
         }
       }
     ],
