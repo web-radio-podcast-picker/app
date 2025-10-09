@@ -24,6 +24,11 @@ const Build_Json_Radio_List = false
 //#region global attributes
 
 /**
+ * @type {Dialogs}
+ */
+var dialogs = null
+
+/**
  * @type {WebRadioPickerModule}
  */
 var wrpp = null
@@ -153,6 +158,7 @@ class WebRadioPickerModule extends ModuleBase {
             this.radioDataParser = new RadioDataParser().init(this)
 
         wrpp = this
+        dialogs = new Dialogs()
         radsItems = new RadsItems()
         rdMediaImage = new RdMediaImage()
         listsBuilder = new ListsBuilder()
@@ -240,12 +246,14 @@ class WebRadioPickerModule extends ModuleBase {
 
         $('#btn_wrp_exp_fav').on('click', () => {
             radiosLists.exportToClipboard()
+            dialogs.showInfoPopup('favorites exported.')
         })
 
         $('#btn_wrp_imp_fav').on('click', async () => {
             await radiosLists.importFromClipboard()
             listsBuilder.updateListsItems()
             settings.dataStore.saveRadiosLists()
+            dialogs.showInfoPopup('favorites imported.')
         })
 
         infosPane.initEventsHandlers()
