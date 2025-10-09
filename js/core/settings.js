@@ -14,7 +14,7 @@ window.settings = {
             verDate: '8/23/2025'
         },
         wrp: {
-            version: '1.2.23.5',
+            version: '1.2.24',
             verDate: '10/9/2025'
         }
     },
@@ -149,7 +149,7 @@ window.settings = {
     ui: {
         autoHideInfoPopupDelay: 2000,
         infoPopupFadeInDelay: 250,
-        infoPopupFadeOutDelay: 250,
+        infoPopupFadeOutDelay: 150,
         maxRefreshRate: 250,        // maximum views refresh rate in Fps
         clientWidthBorder: 4,       // default border width for client area
         clientHeightBorder: 2,      // default border height for client area

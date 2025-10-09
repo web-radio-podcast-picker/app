@@ -245,15 +245,11 @@ class WebRadioPickerModule extends ModuleBase {
         })
 
         $('#btn_wrp_exp_fav').on('click', () => {
-            radiosLists.exportToClipboard()
-            dialogs.showInfoPopup('favorites exported')
+            this.exportRadiosListsToClipboard()
         })
 
         $('#btn_wrp_imp_fav').on('click', async () => {
-            await radiosLists.importFromClipboard()
-            listsBuilder.updateListsItems()
-            settings.dataStore.saveRadiosLists()
-            dialogs.showInfoPopup('favorites imported')
+            await this.importRadiosListsFromClipboard()
         })
 
         infosPane.initEventsHandlers()
@@ -295,6 +291,39 @@ class WebRadioPickerModule extends ModuleBase {
 
     updateBindings() {
         ui.bindings.updateBindingTarget('wrp_list_count')
+    }
+
+    // #endregion
+
+    // #region import/export
+
+    async importRadiosListsFromClipboard() {
+        try {
+            const res = await radiosLists.importFromClipboard()
+            listsBuilder.updateListsItems()
+            settings.dataStore.saveRadiosLists()
+            const text = `&bull; imported lists: ${res.importedLists}<br>&bull; imported items: ${res.importedItems}`
+            dialogs.showInfoPopup(
+                dialogs.infoPopup('favorites imported', text, null, null, true)
+            )
+        } catch (err) {
+            dialogs.showInfoPopup(
+                dialogs.infoPopupError('import failed', err)
+            )
+        }
+    }
+
+    exportRadiosListsToClipboard() {
+        try {
+            radiosLists.exportToClipboard()
+            dialogs.showInfoPopup(
+                dialogs.infoPopup('favorites exported')
+            )
+        } catch (err) {
+            dialogs.showInfoPopup(
+                dialogs.infoPopupError('export failed', err)
+            )
+        }
     }
 
     // #endregion

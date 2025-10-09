@@ -4,21 +4,22 @@
     "name": "History",
     "items": [
       {
-        "id": "8457",
-        "name": "France Info",
+        "id": "20903",
+        "name": "La Premiere",
         "description": null,
         "groupTitle": null,
         "groups": [
-          "French"
+          "French",
+          "News",
+          "Talk"
         ],
-        "url": "https://icecast.radiofrance.fr/franceinfo-hifi.aac",
-        "logo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTTOrtJJ0l34GIjFRRUcl-X_GxOtNNRNT9rXw&s",
+        "url": "https://redbeemedia.streamabc.net/redbm-lapremiere-aac-128-7561067",
+        "logo": "https://ca.radio.net/300/rtbflapremiere.jpeg?version=aba8f0c1da08cbedc110831d9050a941",
         "artist": null,
         "lang": "French",
         "channels": null,
         "country": null,
         "favLists": [
-          "History",
           "Infos"
         ],
         "metadata": {
@@ -35,28 +36,115 @@
             }
           },
           "currentTab": {
-            "listId": "Viz",
-            "tabId": "btn_wrp_logo"
+            "listId": "List",
+            "tabId": "btn_wrp_play_list"
           }
         }
       },
       {
-        "id": "7267",
-        "name": "ABC Lounge Radio",
+        "id": "8455",
+        "name": "France Culture",
         "description": null,
         "groupTitle": null,
         "groups": [
-          "Lounge",
-          "Radio"
+          "French",
+          "Culture"
         ],
-        "url": "https://eu1.fastcast4u.com/proxy/kpmxz?mp=/1",
-        "logo": "https://www.abc-lounge.com/radio/wp-content/uploads/2019/11/logo-ABC-Lounge100.png",
+        "url": "https://icecast.radiofrance.fr/franceculture-hifi.aac",
+        "logo": "https://upload.wikimedia.org/wikipedia/fr/thumb/c/c9/France_Culture_-_2008.svg/1024px-France_Culture_-_2008.svg.png",
+        "artist": null,
+        "lang": "French",
+        "channels": null,
+        "country": null,
+        "favLists": [
+          "History",
+          "Infos"
+        ],
+        "metadata": {
+          "duration": null,
+          "stereo": null,
+          "encoding": null,
+          "sampleFrq": null,
+          "sampleRes": null,
+          "country": null,
+          "statusText": null
+        }
+      },
+      {
+        "id": "1892",
+        "name": "P24-7 Mix",
+        "description": null,
+        "groupTitle": null,
+        "groups": [
+          "Mix"
+        ],
+        "url": "https://live-bauerno.sharp-stream.com/p247mix_no_mp3",
+        "logo": "https://assets.planetradio.co.uk/img/ConfigWebListenBarLogoImageUrl/342.jpg",
         "artist": null,
         "lang": null,
         "channels": null,
         "country": null,
         "favLists": [
-          "Slows & Love Songs"
+          "Pop"
+        ],
+        "metadata": {
+          "duration": null,
+          "stereo": null,
+          "encoding": null,
+          "sampleFrq": null,
+          "sampleRes": null,
+          "country": null,
+          "statusText": null
+        }
+      },
+      {
+        "id": "20884",
+        "name": "Fréquence Plus Andenne 106.6",
+        "description": null,
+        "groupTitle": null,
+        "groups": [
+          "Hits",
+          "News",
+          "French"
+        ],
+        "url": "http://frequenceplusandenne.ice.infomaniak.ch/frequenceplusandenne-192",
+        "logo": "http://frequenceplus.be/images/favicon_000.png",
+        "artist": null,
+        "lang": "French",
+        "channels": null,
+        "country": null,
+        "favLists": [
+          "Pop"
+        ],
+        "metadata": {
+          "duration": null,
+          "stereo": null,
+          "encoding": null,
+          "sampleFrq": null,
+          "sampleRes": null,
+          "country": null,
+          "statusText": null
+        }
+      },
+      {
+        "id": "12237",
+        "name": "Dr. Dick’s Dub Shack",
+        "description": null,
+        "groupTitle": null,
+        "groups": [
+          "Dub",
+          "Reggae",
+          "Roots"
+        ],
+        "url": "http://streamer.radio.co/s0635c8b0d/listen?fbclid=IwAR16t5mC5UFT9Fp8pbWe0dvYn9VEI3FYJTogE5AJtUF3G1dJi38lwLgD9as",
+        "logo": "http://drdicksdubshack.com/favicon.ico",
+        "artist": null,
+        "lang": null,
+        "channels": null,
+        "country": null,
+        "favLists": [
+          "History",
+          "DUB"
         ],
         "metadata": {
           "duration": null,
@@ -89,6 +177,201 @@
         "country": null,
         "favLists": [
           "Slows & Love Songs"
+        ],
+        "metadata": {
+          "duration": null,
+          "stereo": null,
+          "encoding": null,
+          "sampleFrq": null,
+          "sampleRes": null,
+          "country": null,
+          "statusText": null
+        }
+      },
+      {
+        "id": "7267",
+        "name": "ABC Lounge Radio",
+        "description": null,
+        "groupTitle": null,
+        "groups": [
+          "Lounge",
+          "Radio"
+        ],
+        "url": "https://eu1.fastcast4u.com/proxy/kpmxz?mp=/1",
+        "logo": "https://www.abc-lounge.com/radio/wp-content/uploads/2019/11/logo-ABC-Lounge100.png",
+        "artist": null,
+        "lang": null,
+        "channels": null,
+        "country": null,
+        "favLists": [
+          "Slows & Love Songs"
+        ],
+        "metadata": {
+          "duration": null,
+          "stereo": null,
+          "encoding": null,
+          "sampleFrq": null,
+          "sampleRes": null,
+          "country": null,
+          "statusText": null
+        }
+      },
+      {
+        "id": "8457",
+        "name": "France Info",
+        "description": null,
+        "groupTitle": null,
+        "groups": [
+          "French"
+        ],
+        "url": "https://icecast.radiofrance.fr/franceinfo-hifi.aac",
+        "logo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTTOrtJJ0l34GIjFRRUcl-X_GxOtNNRNT9rXw&s",
+        "artist": null,
+        "lang": "French",
+        "channels": null,
+        "country": null,
+        "favLists": [
+          "History",
+          "Infos"
+        ],
+        "metadata": {
+          "duration": null,
+          "stereo": null,
+          "encoding": null,
+          "sampleFrq": null,
+          "sampleRes": null,
+          "country": null,
+          "statusText": null
+        }
+      },
+      {
+        "id": "18145",
+        "name": "Alka Yagnik",
+        "description": null,
+        "groupTitle": null,
+        "groups": [
+          "Artists"
+        ],
+        "url": "https://drive.uber.radio/uber/bollywoodalkayagnik/icecast.audio",
+        "logo": "https://manager.uber.radio/static/uploads/station/4a259d43-af38-4a2a-af32-a04281d45676.jpg",
+        "artist": "Alka Yagnik",
+        "lang": null,
+        "channels": null,
+        "country": null,
+        "favLists": [
+          "History",
+          "Indien"
+        ],
+        "metadata": {
+          "duration": null,
+          "stereo": null,
+          "encoding": null,
+          "sampleFrq": null,
+          "sampleRes": null,
+          "country": null,
+          "statusText": null
+        }
+      },
+      {
+        "id": "21397",
+        "name": "Radio Brisvaani 1701",
+        "description": null,
+        "groupTitle": null,
+        "groups": [
+          "Hindi",
+          "World"
+        ],
+        "url": "https://centova71.instainternet.com/proxy/brisvaaniradio?mp=/stream",
+        "logo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTenIUC_Fu0vGulVOqRZ6fAelxsMUfqMUiNmg&s",
+        "artist": null,
+        "lang": "Hindi",
+        "channels": null,
+        "country": null,
+        "favLists": [
+          "Indien"
+        ],
+        "metadata": {
+          "duration": null,
+          "stereo": null,
+          "encoding": null,
+          "sampleFrq": null,
+          "sampleRes": null,
+          "country": null,
+          "statusText": null
+        }
+      },
+      {
+        "id": "9960",
+        "name": "ON Radio 50s",
+        "description": null,
+        "groupTitle": null,
+        "groups": [
+          "Radio",
+          "50s"
+        ],
+        "url": "http://0n-50s.radionetz.de/0n-50s.aac",
+        "logo": "http://www.0nradio.com/images/favicon/mstile-144x144.png",
+        "artist": null,
+        "lang": null,
+        "channels": null,
+        "country": null,
+        "favLists": [
+          "History",
+          "Années 50"
+        ],
+        "metadata": {
+          "duration": null,
+          "stereo": null,
+          "encoding": null,
+          "sampleFrq": null,
+          "sampleRes": null,
+          "country": null,
+          "statusText": null
+        }
+      },
+      {
+        "id": "18150",
+        "name": "Amy Winehouse - Hits",
+        "description": null,
+        "groupTitle": null,
+        "groups": [
+          "Artists"
+        ],
+        "url": "https://streaming.exclusive.radio/er/amywinehousehits/icecast.audio",
+        "logo": "https://manager.uber.radio/static/uploads/station/b926828a-083f-456c-bbf2-0c3f8931ddaa.jpg",
+        "artist": "Amy Winehouse",
+        "lang": null,
+        "channels": null,
+        "country": null,
+        "favLists": [
+          "Jazz"
+        ],
+        "metadata": {
+          "duration": null,
+          "stereo": null,
+          "encoding": null,
+          "sampleFrq": null,
+          "sampleRes": null,
+          "country": null,
+          "statusText": null
+        }
+      },
+      {
+        "id": "20888",
+        "name": "Halloween Radio Atmosphere",
+        "description": null,
+        "groupTitle": null,
+        "groups": [
+          "Ambient"
+        ],
+        "url": "http://radio1.streamserver.link/radio/8040/hra-aac",
+        "logo": "https://www.halloweenradio.net/images/channel_atmosphere.png",
+        "artist": null,
+        "lang": null,
+        "channels": null,
+        "country": null,
+        "favLists": [
+          "Bizarre"
         ],
         "metadata": {
           "duration": null,
@@ -155,36 +438,6 @@
         }
       },
       {
-        "id": "12237",
-        "name": "Dr. Dick’s Dub Shack",
-        "description": null,
-        "groupTitle": null,
-        "groups": [
-          "Dub",
-          "Reggae",
-          "Roots"
-        ],
-        "url": "http://streamer.radio.co/s0635c8b0d/listen?fbclid=IwAR16t5mC5UFT9Fp8pbWe0dvYn9VEI3FYJTogE5AJtUF3G1dJi38lwLgD9as",
-        "logo": "http://drdicksdubshack.com/favicon.ico",
-        "artist": null,
-        "lang": null,
-        "channels": null,
-        "country": null,
-        "favLists": [
-          "History",
-          "DUB"
-        ],
-        "metadata": {
-          "duration": null,
-          "stereo": null,
-          "encoding": null,
-          "sampleFrq": null,
-          "sampleRes": null,
-          "country": null,
-          "statusText": null
-        }
-      },
-      {
         "id": "20919",
         "name": "MyNoise Drone Zone",
         "description": null,
@@ -222,33 +475,6 @@
         ],
         "url": "http://radio1.streamserver.link/radio/8000/hrm-aac",
         "logo": "https://www.halloweenradio.net/images/channel_main.png",
-        "artist": null,
-        "lang": null,
-        "channels": null,
-        "country": null,
-        "favLists": [
-          "Bizarre"
-        ],
-        "metadata": {
-          "duration": null,
-          "stereo": null,
-          "encoding": null,
-          "sampleFrq": null,
-          "sampleRes": null,
-          "country": null,
-          "statusText": null
-        }
-      },
-      {
-        "id": "20888",
-        "name": "Halloween Radio Atmosphere",
-        "description": null,
-        "groupTitle": null,
-        "groups": [
-          "Ambient"
-        ],
-        "url": "http://radio1.streamserver.link/radio/8040/hra-aac",
-        "logo": "https://www.halloweenradio.net/images/channel_atmosphere.png",
         "artist": null,
         "lang": null,
         "channels": null,
@@ -1212,35 +1438,6 @@
         }
       },
       {
-        "id": "8455",
-        "name": "France Culture",
-        "description": null,
-        "groupTitle": null,
-        "groups": [
-          "French",
-          "Culture"
-        ],
-        "url": "https://icecast.radiofrance.fr/franceculture-hifi.aac",
-        "logo": "https://upload.wikimedia.org/wikipedia/fr/thumb/c/c9/France_Culture_-_2008.svg/1024px-France_Culture_-_2008.svg.png",
-        "artist": null,
-        "lang": "French",
-        "channels": null,
-        "country": null,
-        "favLists": [
-          "History",
-          "Infos"
-        ],
-        "metadata": {
-          "duration": null,
-          "stereo": null,
-          "encoding": null,
-          "sampleFrq": null,
-          "sampleRes": null,
-          "country": null,
-          "statusText": null
-        }
-      },
-      {
         "id": "8854",
         "name": "Oldies Radio",
         "description": null,
@@ -1407,35 +1604,6 @@
         }
       },
       {
-        "id": "20884",
-        "name": "Fréquence Plus Andenne 106.6",
-        "description": null,
-        "groupTitle": null,
-        "groups": [
-          "Hits",
-          "News",
-          "French"
-        ],
-        "url": "http://frequenceplusandenne.ice.infomaniak.ch/frequenceplusandenne-192",
-        "logo": "http://frequenceplus.be/images/favicon_000.png",
-        "artist": null,
-        "lang": "French",
-        "channels": null,
-        "country": null,
-        "favLists": [
-          "Pop"
-        ],
-        "metadata": {
-          "duration": null,
-          "stereo": null,
-          "encoding": null,
-          "sampleFrq": null,
-          "sampleRes": null,
-          "country": null,
-          "statusText": null
-        }
-      },
-      {
         "id": "7398",
         "name": "Fréquence K",
         "description": null,
@@ -1451,35 +1619,6 @@
         "country": null,
         "favLists": [
           "History"
-        ],
-        "metadata": {
-          "duration": null,
-          "stereo": null,
-          "encoding": null,
-          "sampleFrq": null,
-          "sampleRes": null,
-          "country": null,
-          "statusText": null
-        }
-      },
-      {
-        "id": "20903",
-        "name": "La Premiere",
-        "description": null,
-        "groupTitle": null,
-        "groups": [
-          "French",
-          "News",
-          "Talk"
-        ],
-        "url": "https://redbeemedia.streamabc.net/redbm-lapremiere-aac-128-7561067",
-        "logo": "https://ca.radio.net/300/rtbflapremiere.jpeg?version=aba8f0c1da08cbedc110831d9050a941",
-        "artist": null,
-        "lang": "French",
-        "channels": null,
-        "country": null,
-        "favLists": [
-          "Infos"
         ],
         "metadata": {
           "duration": null,
@@ -4828,6 +4967,63 @@
           "country": null,
           "statusText": null
         }
+      },
+      {
+        "id": "21397",
+        "name": "Radio Brisvaani 1701",
+        "description": null,
+        "groupTitle": null,
+        "groups": [
+          "Hindi",
+          "World"
+        ],
+        "url": "https://centova71.instainternet.com/proxy/brisvaaniradio?mp=/stream",
+        "logo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTenIUC_Fu0vGulVOqRZ6fAelxsMUfqMUiNmg&s",
+        "artist": null,
+        "lang": "Hindi",
+        "channels": null,
+        "country": null,
+        "favLists": [
+          "Indien"
+        ],
+        "metadata": {
+          "duration": null,
+          "stereo": null,
+          "encoding": null,
+          "sampleFrq": null,
+          "sampleRes": null,
+          "country": null,
+          "statusText": null
+        }
+      },
+      {
+        "id": "19776",
+        "name": "Radio Ullash",
+        "description": null,
+        "groupTitle": null,
+        "groups": [
+          "Arabic",
+          "Hindi",
+          "Pop"
+        ],
+        "url": "http://stream.zeno.fm/gpgkgp9mp18uv.mp3?rj-ttl=5&rj-tok=AAABfdtlzfoAxm6y11yovMKQow",
+        "logo": "https://radioullash.com/wp-content/uploads/2021/07/cropped-radio-ullash-round-32x32.png",
+        "artist": null,
+        "lang": "Hindi",
+        "channels": null,
+        "country": null,
+        "favLists": [
+          "Indien"
+        ],
+        "metadata": {
+          "duration": null,
+          "stereo": null,
+          "encoding": null,
+          "sampleFrq": null,
+          "sampleRes": null,
+          "country": null,
+          "statusText": null
+        }
       }
     ],
     "isSystem": false
@@ -6860,21 +7056,12 @@
         ],
         "metadata": {
           "duration": null,
-          "statusText": "playing"
-        },
-        "ref": {
-          "currentRDList": {
-            "listId": "List",
-            "name": "Infos",
-            "$item": {
-              "0": {},
-              "length": 1
-            }
-          },
-          "currentTab": {
-            "listId": "Viz",
-            "tabId": "btn_wrp_logo"
-          }
+          "stereo": null,
+          "encoding": null,
+          "sampleFrq": null,
+          "sampleRes": null,
+          "country": null,
+          "statusText": null
         }
       },
       {
@@ -7009,12 +7196,21 @@
         ],
         "metadata": {
           "duration": null,
-          "stereo": null,
-          "encoding": null,
-          "sampleFrq": null,
-          "sampleRes": null,
-          "country": null,
-          "statusText": null
+          "statusText": "playing"
+        },
+        "ref": {
+          "currentRDList": {
+            "listId": "List",
+            "name": "Infos",
+            "$item": {
+              "0": {},
+              "length": 1
+            }
+          },
+          "currentTab": {
+            "listId": "List",
+            "tabId": "btn_wrp_play_list"
+          }
         }
       },
       {

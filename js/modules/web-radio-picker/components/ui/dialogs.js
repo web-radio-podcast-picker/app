@@ -9,18 +9,71 @@ const Id_Popup_Info = 'info_popup'
 class Dialogs {
 
     autoHideInfoPopupTimer = null
+    initialized = false
 
-    showInfoPopup(text) {
+    infoPopup(text, text2, error, error2, noAutoHide) {
+        return {
+            text: text,
+            text2: text2,
+            error: error,
+            error2: error2,
+            noAutoHide: noAutoHide
+        }
+    }
+
+    infoPopupError(error, error2, noAutoHide) {
+        return {
+            text: null,
+            text2: null,
+            error: error,
+            error2: error2,
+            noAutoHide: noAutoHide !== undefined ? noAutoHide : true
+        }
+    }
+
+    showInfoPopup(opts) {
+        if (opts == null || opts === undefined) return
+
+        clearTimeout(this.autoHideInfoPopupTimer)
+
         const $popup = $('#' + Id_Popup_Info)
-        const $txt = $popup.find('.info-popup-text')
-        $txt.text(text)
+        if (!this.initialized) {
+            $popup.on('click', () => {
+                this.hideInfoPopup()
+            })
+            this.initialized = true
+        }
+
+        const $text = $popup.find('.info-popup-text')
+        const $text2 = $popup.find('.info-popup-text2')
+        const $error = $popup.find('.info-popup-error')
+        const $error2 = $popup.find('.info-popup-error2')
+        const updVis = (v, $e) => {
+            if (v)
+                $e.removeClass(Class_Hidden)
+            else
+                $e.addClass(Class_Hidden)
+        }
+
+        // text
+        $text.html(opts.text)
+        $text2.html(opts.text2)
+
+        // error
+        $error.html(opts.error)
+        $error2.html(opts.error2)
+
+        updVis(opts.text, $text)
+        updVis(opts.text2, $text2)
+        updVis(opts.error, $error)
+        updVis(opts.error2, $error2)
+
         ui.popups.showPopup(null, Id_Popup_Info, null, this.appearFunc)
-        this.startAutoHideInfoPopupTimer()
+        if (opts.noAutoHide != true)
+            this.startAutoHideInfoPopupTimer()
     }
 
     appearFunc($e) {
-        window.$e = $e
-        //$e.addClass('transparent').removeClass('hidden')
         $e.removeClass('hidden').addClass('pop-anim').fadeIn(
             settings.ui.infoPopupFadeInDelay
         )

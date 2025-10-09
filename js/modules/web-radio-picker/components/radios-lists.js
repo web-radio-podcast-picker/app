@@ -168,38 +168,24 @@ class RadiosLists {
             listId: listId,
             name: name,
             items: [],
-            isSystem: false
+            isSystem: isSystem !== undefined ? isSystem : false
         }
     }
 
     exportToClipboard() {
-        try {
-            this.lists[FavoritesJSONExportValidatorTag]
-                = FavoritesJSONExportValidatorTag
-            const txt = this.toJSON(true)
-            delete this.lists[FavoritesJSONExportValidatorTag]
-            window.exportedFavorites = txt
-            copyToClipboard(txt)
-            return null
-        } catch (err) {
-            ui.showError(err)
-            return err
-        }
+        this.lists[FavoritesJSONExportValidatorTag]
+            = FavoritesJSONExportValidatorTag
+        const txt = this.toJSON(true)
+        delete this.lists[FavoritesJSONExportValidatorTag]
+        window.exportedFavorites = txt
+        copyToClipboard(txt)
     }
 
     async importFromClipboard() {
-        try {
-            const txt = await readFromClipboard()
-
-            window.importedFavorites = txt
-            const o = JSON.parse(txt)
-            this.importFavoritesJSONExport(o)
-
-            return null
-        } catch (err) {
-            ui.showError(err)
-            return err
-        }
+        const txt = await readFromClipboard()
+        window.importedFavorites = txt
+        const o = JSON.parse(txt)
+        return this.importFavoritesJSONExport(o)
     }
 
     importFavoritesJSONExport(o) {
@@ -252,6 +238,10 @@ class RadiosLists {
         if (settings.debug.info) {
             logger.log('favorites lists imported: ' + importedLists)
             logger.log('favorites imported: ' + importedItems)
+        }
+        return {
+            importedLists: importedLists,
+            importedItems: importedItems
         }
     }
 

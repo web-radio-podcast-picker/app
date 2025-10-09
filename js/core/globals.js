@@ -109,5 +109,6 @@ const Screen_Orientation_Landscape = 'landscape'
 // ui
 
 const Class_Icon_Disabled = 'but-icon-disabled'
-
 const Class_Item_Selected = 'item-selected'
+
+const Class_Hidden = 'hidden'
