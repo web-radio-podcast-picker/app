@@ -234,7 +234,7 @@ class RadiosLists {
                     const newItem = wrpp.findRadItem(srcItem)
                     if (newItem != null) {
                         // merge favs lists
-                        this.merge(newItem.favLists, srcItem.favLists)
+                        this.merge(srcItem.favLists, newItem.favLists)
                         // add to favlist
                         tgtList.items.push(newItem)
                         importedItems++
@@ -245,7 +245,7 @@ class RadiosLists {
                         logger.warn('skip item not in db: ' + srcItem.name)
                 } else {
                     // already in target fav list. update favlist nevertheless
-                    this.merge(tgtItem.favLists, srcItem.favLists)
+                    this.merge(srcItem.favLists, tgtItem.favLists)
                 }
             })
         })
