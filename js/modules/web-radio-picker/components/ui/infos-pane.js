@@ -66,6 +66,8 @@ class InfosPane {
         sep()
 
         w('credits', 'icons by <a href="https://icons8.com/" target="blank">Icons8</a>')
+
+        val('logo <img src="./img/icon-180x180.png" width="24" height="24" valign="middle"> designed by <a href="http://www.freepik.com/" target="blank">Freepick</a>')
         val('testing by Gaspard Moyrand', 'ifp_tgp')
         w('project readme',
             $('<a href="https://github.com/franck-gaspoz/web-radio-podcast-picker/blob/main/README.md" target="_blank">https://github.com/franck-gaspoz/web-radio-podcast-picker/blob/main/README.md</a>'))
