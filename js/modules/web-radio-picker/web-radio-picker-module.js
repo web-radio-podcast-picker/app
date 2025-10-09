@@ -245,6 +245,7 @@ class WebRadioPickerModule extends ModuleBase {
         $('#btn_wrp_imp_fav').on('click', async () => {
             await radiosLists.importFromClipboard()
             listsBuilder.updateListsItems()
+            settings.dataStore.saveRadiosLists()
         })
 
         infosPane.initEventsHandlers()
