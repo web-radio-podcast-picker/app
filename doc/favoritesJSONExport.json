@@ -4,6 +4,389 @@
     "name": "History",
     "items": [
       {
+        "id": "18288",
+        "name": "Diana Krall",
+        "description": null,
+        "groupTitle": null,
+        "groups": [
+          "Artists"
+        ],
+        "url": "https://streaming.exclusive.radio/er/dianakrall/icecast.audio",
+        "logo": "https://manager.uber.radio/static/uploads/station/64da41ad-3742-4f62-907d-96f1cf11d81a.jpg",
+        "artist": "Diana Krall",
+        "lang": null,
+        "channels": null,
+        "country": null,
+        "favLists": [
+          "History",
+          "Jazz"
+        ],
+        "metadata": {
+          "duration": null,
+          "statusText": "playing"
+        },
+        "ref": {
+          "currentRDList": {
+            "listId": "List",
+            "name": "Jazz",
+            "$item": {
+              "0": {},
+              "length": 1
+            }
+          },
+          "currentTab": {
+            "listId": "Viz",
+            "tabId": "btn_wrp_logo"
+          }
+        }
+      },
+      {
+        "id": "1942",
+        "name": "101.ru French Chanson",
+        "description": null,
+        "groupTitle": null,
+        "groups": [
+          "Radio",
+          "French",
+          "Songs"
+        ],
+        "url": "http://ic6.101.ru:8000/stream/pro/aac/64/146",
+        "logo": "https://kuasark.com/files/stations-logos/101ru-french-chanson.png",
+        "artist": null,
+        "lang": "French",
+        "channels": null,
+        "country": null,
+        "favLists": [
+          "History",
+          "Chanson Française"
+        ],
+        "metadata": {
+          "duration": null,
+          "statusText": "playing"
+        },
+        "ref": {
+          "currentRDList": {
+            "listId": "Tag",
+            "name": "Songs"
+          },
+          "currentTab": {
+            "listId": "Viz",
+            "tabId": "btn_wrp_logo"
+          }
+        }
+      },
+      {
+        "id": "9776",
+        "name": "Kalp FM 102.2",
+        "description": null,
+        "groupTitle": null,
+        "groups": [
+          "Ballad",
+          "Songs",
+          "Turk"
+        ],
+        "url": "https://yayin.kalpfm.com:8080/",
+        "logo": "https://radyodinle.com/wp-content/uploads/2025/02/kalpfm.jpg",
+        "artist": null,
+        "lang": "Turk",
+        "channels": null,
+        "country": null,
+        "favLists": [
+          "History",
+          "Turk"
+        ],
+        "metadata": {
+          "duration": null,
+          "stereo": null,
+          "encoding": null,
+          "sampleFrq": null,
+          "sampleRes": null,
+          "country": null,
+          "statusText": null
+        }
+      },
+      {
+        "id": "1998",
+        "name": "Chanson Radio",
+        "description": null,
+        "groupTitle": null,
+        "groups": [
+          "Songs",
+          "Radio"
+        ],
+        "url": "http://chanson.hostingradio.ru:8041/chanson128.mp3?md5=2eMCvcYXPx0fjyorGnLWuw&e=1545675080",
+        "logo": "https://www.radio.net/300/chansonru.png?version=f4a34774252dfaf84660f3817ae48a80",
+        "artist": null,
+        "lang": null,
+        "channels": null,
+        "country": null,
+        "favLists": [
+          "History"
+        ],
+        "metadata": {
+          "duration": null,
+          "stereo": null,
+          "encoding": null,
+          "sampleFrq": null,
+          "sampleRes": null,
+          "country": null,
+          "statusText": null
+        }
+      },
+      {
+        "id": "12936",
+        "name": "Calm Radio Opera",
+        "description": null,
+        "groupTitle": null,
+        "groups": [
+          "Radio",
+          "Opera"
+        ],
+        "url": "http://streams.calmradio.com:1128/stream",
+        "logo": "https://ca.radio.net/images/broadcasts/41/76/35230/c300.png",
+        "artist": null,
+        "lang": null,
+        "channels": null,
+        "country": null,
+        "favLists": [
+          "History"
+        ],
+        "metadata": {
+          "duration": null,
+          "stereo": null,
+          "encoding": null,
+          "sampleFrq": null,
+          "sampleRes": null,
+          "country": null,
+          "statusText": null
+        }
+      },
+      {
+        "id": "15147",
+        "name": "Changchun Rural Opera Broadcasting 90.0",
+        "description": null,
+        "groupTitle": null,
+        "groups": [
+          "Opera"
+        ],
+        "url": "http://lhttp.qingting.fm/live/5014/64k.mp3",
+        "logo": "https://pic.qingting.fm/2020/0410/20200410015430.png!200",
+        "artist": null,
+        "lang": null,
+        "channels": null,
+        "country": null,
+        "favLists": [
+          "History"
+        ],
+        "metadata": {
+          "duration": null,
+          "stereo": null,
+          "encoding": null,
+          "sampleFrq": null,
+          "sampleRes": null,
+          "country": null,
+          "statusText": null
+        }
+      },
+      {
+        "id": "14795",
+        "name": "Chaozhou Opera Broadcasting 103.1",
+        "description": null,
+        "groupTitle": null,
+        "groups": [
+          "Opera"
+        ],
+        "url": "http://lhttp.qingting.fm/live/4595/64k.mp3",
+        "logo": "https://pic.qtfm.cn/2015/0427/20150427150246450.jpg!200",
+        "artist": null,
+        "lang": null,
+        "channels": null,
+        "country": null,
+        "favLists": [
+          "History"
+        ],
+        "metadata": {
+          "duration": null,
+          "stereo": null,
+          "encoding": null,
+          "sampleFrq": null,
+          "sampleRes": null,
+          "country": null,
+          "statusText": null
+        }
+      },
+      {
+        "id": "14308",
+        "name": "Langfang Opera Radio 105.0",
+        "description": null,
+        "groupTitle": null,
+        "groups": [
+          "Opera",
+          "Radio"
+        ],
+        "url": "http://lhttp.qingting.fm/live/20211678/64k.mp3",
+        "logo": "https://pic.qingting.fm/2018/0717/20180717092127.jpeg!200",
+        "artist": null,
+        "lang": null,
+        "channels": null,
+        "country": null,
+        "favLists": [
+          "Pop"
+        ],
+        "metadata": {
+          "duration": null,
+          "stereo": null,
+          "encoding": null,
+          "sampleFrq": null,
+          "sampleRes": null,
+          "country": null,
+          "statusText": null
+        }
+      },
+      {
+        "id": "13791",
+        "name": "Shanghai Opera and Folk Arts Broadcasting",
+        "description": null,
+        "groupTitle": null,
+        "groups": [
+          "Opera",
+          "Folk",
+          "Arts"
+        ],
+        "url": "https://lhttp.qingting.fm/live/269/64k.mp3",
+        "logo": "http://www.666scly.com/img/logo/20140909014232438.jpg",
+        "artist": null,
+        "lang": null,
+        "channels": null,
+        "country": null,
+        "favLists": [
+          "Opéra"
+        ],
+        "metadata": {
+          "duration": null,
+          "stereo": null,
+          "encoding": null,
+          "sampleFrq": null,
+          "sampleRes": null,
+          "country": null,
+          "statusText": null
+        }
+      },
+      {
+        "id": "14935",
+        "name": "Suzhou Opera Broadcasting",
+        "description": null,
+        "groupTitle": null,
+        "groups": [
+          "Opera"
+        ],
+        "url": "http://lhttp.qingting.fm/live/20211622/64k.mp3",
+        "logo": "https://pic.qingting.fm/2018/0212/20180212113048425.jpg!200",
+        "artist": null,
+        "lang": null,
+        "channels": null,
+        "country": null,
+        "favLists": [
+          "Pop"
+        ],
+        "metadata": {
+          "duration": null,
+          "stereo": null,
+          "encoding": null,
+          "sampleFrq": null,
+          "sampleRes": null,
+          "country": null,
+          "statusText": null
+        }
+      },
+      {
+        "id": "1289",
+        "name": "Radio Art Opera",
+        "description": null,
+        "groupTitle": null,
+        "groups": [
+          "Radio",
+          "Arts",
+          "Opera"
+        ],
+        "url": "http://air.radioart.com/fOpera.mp3",
+        "logo": "https://www.radioart.com/images/channels/017_opera-600x400.jpg",
+        "artist": null,
+        "lang": null,
+        "channels": null,
+        "country": null,
+        "favLists": [
+          "Opéra"
+        ],
+        "metadata": {
+          "duration": null,
+          "stereo": null,
+          "encoding": null,
+          "sampleFrq": null,
+          "sampleRes": null,
+          "country": null,
+          "statusText": null
+        }
+      },
+      {
+        "id": "17837",
+        "name": "1.FM Movie Soundtrack",
+        "description": null,
+        "groupTitle": null,
+        "groups": [
+          "Radio",
+          "Movie",
+          "Electro"
+        ],
+        "url": "http://strm112.1.fm/moviesoundtracks_mobile_mp3",
+        "logo": "http://liveradio.de/media/cache/station_detail/18f08aee-f06b-4965-b607-3f25a581619c.jpg",
+        "artist": null,
+        "lang": null,
+        "channels": null,
+        "country": null,
+        "favLists": [
+          "History",
+          "Sound Track"
+        ],
+        "metadata": {
+          "duration": null,
+          "stereo": null,
+          "encoding": null,
+          "sampleFrq": null,
+          "sampleRes": null,
+          "country": null,
+          "statusText": null
+        }
+      },
+      {
+        "id": "13505",
+        "name": "RDMIX Love Songs",
+        "description": null,
+        "groupTitle": null,
+        "groups": [
+          "Love",
+          "Songs"
+        ],
+        "url": "http://maggie.torontocast.com:8022/stream",
+        "logo": "https://radiodimensionemix.torontocast.stream/wp-content/uploads/2020/09/RDMIX-LOVE_SONGS_512_OK-150x150.png",
+        "artist": null,
+        "lang": null,
+        "channels": null,
+        "country": null,
+        "favLists": [
+          "Slows & Love Songs"
+        ],
+        "metadata": {
+          "duration": null,
+          "stereo": null,
+          "encoding": null,
+          "sampleFrq": null,
+          "sampleRes": null,
+          "country": null,
+          "statusText": null
+        }
+      },
+      {
         "id": "20897",
         "name": "Kiosk Radio",
         "description": null,
@@ -22,21 +405,12 @@
         ],
         "metadata": {
           "duration": null,
-          "statusText": "playing"
-        },
-        "ref": {
-          "currentRDList": {
-            "listId": "List",
-            "name": "Groove",
-            "$item": {
-              "0": {},
-              "length": 1
-            }
-          },
-          "currentTab": {
-            "listId": "List",
-            "tabId": "btn_wrp_play_list"
-          }
+          "stereo": null,
+          "encoding": null,
+          "sampleFrq": null,
+          "sampleRes": null,
+          "country": null,
+          "statusText": null
         }
       },
       {
@@ -59,21 +433,12 @@
         ],
         "metadata": {
           "duration": null,
-          "statusText": "playing"
-        },
-        "ref": {
-          "currentRDList": {
-            "listId": "List",
-            "name": "Lounge",
-            "$item": {
-              "0": {},
-              "length": 1
-            }
-          },
-          "currentTab": {
-            "listId": "Viz",
-            "tabId": "btn_wrp_logo"
-          }
+          "stereo": null,
+          "encoding": null,
+          "sampleFrq": null,
+          "sampleRes": null,
+          "country": null,
+          "statusText": null
         }
       },
       {
@@ -97,21 +462,12 @@
         ],
         "metadata": {
           "duration": null,
-          "statusText": "playing"
-        },
-        "ref": {
-          "currentRDList": {
-            "listId": "List",
-            "name": "Lounge",
-            "$item": {
-              "0": {},
-              "length": 1
-            }
-          },
-          "currentTab": {
-            "listId": "Viz",
-            "tabId": "btn_wrp_logo"
-          }
+          "stereo": null,
+          "encoding": null,
+          "sampleFrq": null,
+          "sampleRes": null,
+          "country": null,
+          "statusText": null
         }
       },
       {
@@ -134,21 +490,12 @@
         ],
         "metadata": {
           "duration": null,
-          "statusText": "playing"
-        },
-        "ref": {
-          "currentRDList": {
-            "listId": "List",
-            "name": "Lounge",
-            "$item": {
-              "0": {},
-              "length": 1
-            }
-          },
-          "currentTab": {
-            "listId": "List",
-            "tabId": "btn_wrp_play_list"
-          }
+          "stereo": null,
+          "encoding": null,
+          "sampleFrq": null,
+          "sampleRes": null,
+          "country": null,
+          "statusText": null
         }
       },
       {
@@ -173,21 +520,12 @@
         ],
         "metadata": {
           "duration": null,
-          "statusText": "playing"
-        },
-        "ref": {
-          "currentRDList": {
-            "listId": "List",
-            "name": "DUB",
-            "$item": {
-              "0": {},
-              "length": 1
-            }
-          },
-          "currentTab": {
-            "listId": "List",
-            "tabId": "btn_wrp_play_list"
-          }
+          "stereo": null,
+          "encoding": null,
+          "sampleFrq": null,
+          "sampleRes": null,
+          "country": null,
+          "statusText": null
         }
       },
       {
@@ -209,21 +547,12 @@
         ],
         "metadata": {
           "duration": null,
-          "statusText": "playing"
-        },
-        "ref": {
-          "currentRDList": {
-            "listId": "List",
-            "name": "Lounge",
-            "$item": {
-              "0": {},
-              "length": 1
-            }
-          },
-          "currentTab": {
-            "listId": "Viz",
-            "tabId": "btn_wrp_logo"
-          }
+          "stereo": null,
+          "encoding": null,
+          "sampleFrq": null,
+          "sampleRes": null,
+          "country": null,
+          "statusText": null
         }
       },
       {
@@ -246,21 +575,12 @@
         ],
         "metadata": {
           "duration": null,
-          "statusText": "playing"
-        },
-        "ref": {
-          "currentRDList": {
-            "listId": "List",
-            "name": "Lounge",
-            "$item": {
-              "0": {},
-              "length": 1
-            }
-          },
-          "currentTab": {
-            "listId": "Viz",
-            "tabId": "btn_wrp_logo"
-          }
+          "stereo": null,
+          "encoding": null,
+          "sampleFrq": null,
+          "sampleRes": null,
+          "country": null,
+          "statusText": null
         }
       },
       {
@@ -283,21 +603,12 @@
         ],
         "metadata": {
           "duration": null,
-          "statusText": "playing"
-        },
-        "ref": {
-          "currentRDList": {
-            "listId": "List",
-            "name": "Pop",
-            "$item": {
-              "0": {},
-              "length": 1
-            }
-          },
-          "currentTab": {
-            "listId": "Viz",
-            "tabId": "btn_wrp_logo"
-          }
+          "stereo": null,
+          "encoding": null,
+          "sampleFrq": null,
+          "sampleRes": null,
+          "country": null,
+          "statusText": null
         }
       },
       {
@@ -321,21 +632,12 @@
         ],
         "metadata": {
           "duration": null,
-          "statusText": "playing"
-        },
-        "ref": {
-          "currentRDList": {
-            "listId": "List",
-            "name": "Pop",
-            "$item": {
-              "0": {},
-              "length": 1
-            }
-          },
-          "currentTab": {
-            "listId": "List",
-            "tabId": "btn_wrp_play_list"
-          }
+          "stereo": null,
+          "encoding": null,
+          "sampleFrq": null,
+          "sampleRes": null,
+          "country": null,
+          "statusText": null
         }
       },
       {
@@ -354,23 +656,17 @@
         "lang": null,
         "channels": null,
         "country": null,
-        "favLists": [],
+        "favLists": [
+          "History"
+        ],
         "metadata": {
-          "duration": null
-        },
-        "ref": {
-          "currentRDList": {
-            "listId": "List",
-            "name": "History",
-            "$item": {
-              "0": {},
-              "length": 1
-            }
-          },
-          "currentTab": {
-            "listId": "List",
-            "tabId": "btn_wrp_play_list"
-          }
+          "duration": null,
+          "stereo": null,
+          "encoding": null,
+          "sampleFrq": null,
+          "sampleRes": null,
+          "country": null,
+          "statusText": null
         }
       },
       {
@@ -389,23 +685,17 @@
         "lang": null,
         "channels": null,
         "country": null,
-        "favLists": [],
+        "favLists": [
+          "History"
+        ],
         "metadata": {
-          "duration": null
-        },
-        "ref": {
-          "currentRDList": {
-            "listId": "List",
-            "name": "History",
-            "$item": {
-              "0": {},
-              "length": 1
-            }
-          },
-          "currentTab": {
-            "listId": "Viz",
-            "tabId": "btn_wrp_logo"
-          }
+          "duration": null,
+          "stereo": null,
+          "encoding": null,
+          "sampleFrq": null,
+          "sampleRes": null,
+          "country": null,
+          "statusText": null
         }
       },
       {
@@ -428,21 +718,12 @@
         ],
         "metadata": {
           "duration": null,
-          "statusText": "connecting..."
-        },
-        "ref": {
-          "currentRDList": {
-            "listId": "List",
-            "name": "History",
-            "$item": {
-              "0": {},
-              "length": 1
-            }
-          },
-          "currentTab": {
-            "listId": "Viz",
-            "tabId": "btn_wrp_logo"
-          }
+          "stereo": null,
+          "encoding": null,
+          "sampleFrq": null,
+          "sampleRes": null,
+          "country": null,
+          "statusText": null
         }
       },
       {
@@ -464,21 +745,12 @@
         ],
         "metadata": {
           "duration": null,
-          "statusText": "playing"
-        },
-        "ref": {
-          "currentRDList": {
-            "listId": "List",
-            "name": "Lounge",
-            "$item": {
-              "0": {},
-              "length": 1
-            }
-          },
-          "currentTab": {
-            "listId": "Viz",
-            "tabId": "btn_wrp_logo"
-          }
+          "stereo": null,
+          "encoding": null,
+          "sampleFrq": null,
+          "sampleRes": null,
+          "country": null,
+          "statusText": null
         }
       },
       {
@@ -642,21 +914,12 @@
         ],
         "metadata": {
           "duration": null,
-          "statusText": "playing"
-        },
-        "ref": {
-          "currentRDList": {
-            "listId": "List",
-            "name": "Lounge",
-            "$item": {
-              "0": {},
-              "length": 1
-            }
-          },
-          "currentTab": {
-            "listId": "Viz",
-            "tabId": "btn_wrp_logo"
-          }
+          "stereo": null,
+          "encoding": null,
+          "sampleFrq": null,
+          "sampleRes": null,
+          "country": null,
+          "statusText": null
         }
       },
       {
@@ -736,21 +999,12 @@
         ],
         "metadata": {
           "duration": null,
-          "statusText": "playing"
-        },
-        "ref": {
-          "currentRDList": {
-            "listId": "List",
-            "name": "Lounge",
-            "$item": {
-              "0": {},
-              "length": 1
-            }
-          },
-          "currentTab": {
-            "listId": "Viz",
-            "tabId": "btn_wrp_logo"
-          }
+          "stereo": null,
+          "encoding": null,
+          "sampleFrq": null,
+          "sampleRes": null,
+          "country": null,
+          "statusText": null
         }
       },
       {
@@ -774,21 +1028,12 @@
         ],
         "metadata": {
           "duration": null,
-          "statusText": "playing"
-        },
-        "ref": {
-          "currentRDList": {
-            "listId": "List",
-            "name": "Lounge",
-            "$item": {
-              "0": {},
-              "length": 1
-            }
-          },
-          "currentTab": {
-            "listId": "Viz",
-            "tabId": "btn_wrp_logo"
-          }
+          "stereo": null,
+          "encoding": null,
+          "sampleFrq": null,
+          "sampleRes": null,
+          "country": null,
+          "statusText": null
         }
       },
       {
@@ -951,21 +1196,12 @@
         ],
         "metadata": {
           "duration": null,
-          "statusText": "playing"
-        },
-        "ref": {
-          "currentRDList": {
-            "listId": "List",
-            "name": "Groove",
-            "$item": {
-              "0": {},
-              "length": 1
-            }
-          },
-          "currentTab": {
-            "listId": "Viz",
-            "tabId": "btn_wrp_logo"
-          }
+          "stereo": null,
+          "encoding": null,
+          "sampleFrq": null,
+          "sampleRes": null,
+          "country": null,
+          "statusText": null
         }
       },
       {
@@ -987,21 +1223,12 @@
         ],
         "metadata": {
           "duration": null,
-          "statusText": "playing"
-        },
-        "ref": {
-          "currentRDList": {
-            "listId": "List",
-            "name": "Groove",
-            "$item": {
-              "0": {},
-              "length": 1
-            }
-          },
-          "currentTab": {
-            "listId": "Viz",
-            "tabId": "btn_wrp_logo"
-          }
+          "stereo": null,
+          "encoding": null,
+          "sampleFrq": null,
+          "sampleRes": null,
+          "country": null,
+          "statusText": null
         }
       },
       {
@@ -1025,21 +1252,12 @@
         ],
         "metadata": {
           "duration": null,
-          "statusText": "playing"
-        },
-        "ref": {
-          "currentRDList": {
-            "listId": "List",
-            "name": "Groove",
-            "$item": {
-              "0": {},
-              "length": 1
-            }
-          },
-          "currentTab": {
-            "listId": "Viz",
-            "tabId": "btn_wrp_logo"
-          }
+          "stereo": null,
+          "encoding": null,
+          "sampleFrq": null,
+          "sampleRes": null,
+          "country": null,
+          "statusText": null
         }
       },
       {
@@ -1061,21 +1279,12 @@
         ],
         "metadata": {
           "duration": null,
-          "statusText": "playing"
-        },
-        "ref": {
-          "currentRDList": {
-            "listId": "List",
-            "name": "Groove",
-            "$item": {
-              "0": {},
-              "length": 1
-            }
-          },
-          "currentTab": {
-            "listId": "Viz",
-            "tabId": "btn_wrp_logo"
-          }
+          "stereo": null,
+          "encoding": null,
+          "sampleFrq": null,
+          "sampleRes": null,
+          "country": null,
+          "statusText": null
         }
       },
       {
@@ -1211,21 +1420,12 @@
         ],
         "metadata": {
           "duration": null,
-          "statusText": "playing"
-        },
-        "ref": {
-          "currentRDList": {
-            "listId": "List",
-            "name": "Lounge",
-            "$item": {
-              "0": {},
-              "length": 1
-            }
-          },
-          "currentTab": {
-            "listId": "List",
-            "tabId": "btn_wrp_play_list"
-          }
+          "stereo": null,
+          "encoding": null,
+          "sampleFrq": null,
+          "sampleRes": null,
+          "country": null,
+          "statusText": null
         }
       },
       {
@@ -2231,34 +2431,6 @@
         }
       },
       {
-        "id": "18288",
-        "name": "Diana Krall",
-        "description": null,
-        "groupTitle": null,
-        "groups": [
-          "Artists"
-        ],
-        "url": "https://streaming.exclusive.radio/er/dianakrall/icecast.audio",
-        "logo": "https://manager.uber.radio/static/uploads/station/64da41ad-3742-4f62-907d-96f1cf11d81a.jpg",
-        "artist": "Diana Krall",
-        "lang": null,
-        "channels": null,
-        "country": null,
-        "favLists": [
-          "History",
-          "Jazz"
-        ],
-        "metadata": {
-          "duration": null,
-          "stereo": null,
-          "encoding": null,
-          "sampleFrq": null,
-          "sampleRes": null,
-          "country": null,
-          "statusText": null
-        }
-      },
-      {
         "id": "18417",
         "name": "Joe Satriani",
         "description": null,
@@ -2447,21 +2619,13 @@
           "Lounge"
         ],
         "metadata": {
-          "duration": null
-        },
-        "ref": {
-          "currentRDList": {
-            "listId": "List",
-            "name": "Lounge",
-            "$item": {
-              "0": {},
-              "length": 1
-            }
-          },
-          "currentTab": {
-            "listId": "Viz",
-            "tabId": "btn_wrp_logo"
-          }
+          "duration": null,
+          "stereo": null,
+          "encoding": null,
+          "sampleFrq": null,
+          "sampleRes": null,
+          "country": null,
+          "statusText": null
         }
       },
       {
@@ -2513,21 +2677,12 @@
         ],
         "metadata": {
           "duration": null,
-          "statusText": "playing"
-        },
-        "ref": {
-          "currentRDList": {
-            "listId": "List",
-            "name": "Lounge",
-            "$item": {
-              "0": {},
-              "length": 1
-            }
-          },
-          "currentTab": {
-            "listId": "Viz",
-            "tabId": "btn_wrp_logo"
-          }
+          "stereo": null,
+          "encoding": null,
+          "sampleFrq": null,
+          "sampleRes": null,
+          "country": null,
+          "statusText": null
         }
       },
       {
@@ -2550,21 +2705,12 @@
         ],
         "metadata": {
           "duration": null,
-          "statusText": "playing"
-        },
-        "ref": {
-          "currentRDList": {
-            "listId": "List",
-            "name": "Groove",
-            "$item": {
-              "0": {},
-              "length": 1
-            }
-          },
-          "currentTab": {
-            "listId": "Viz",
-            "tabId": "btn_wrp_logo"
-          }
+          "stereo": null,
+          "encoding": null,
+          "sampleFrq": null,
+          "sampleRes": null,
+          "country": null,
+          "statusText": null
         }
       },
       {
@@ -2729,12 +2875,21 @@
         ],
         "metadata": {
           "duration": null,
-          "stereo": null,
-          "encoding": null,
-          "sampleFrq": null,
-          "sampleRes": null,
-          "country": null,
-          "statusText": null
+          "statusText": "playing"
+        },
+        "ref": {
+          "currentRDList": {
+            "listId": "List",
+            "name": "Jazz",
+            "$item": {
+              "0": {},
+              "length": 1
+            }
+          },
+          "currentTab": {
+            "listId": "Viz",
+            "tabId": "btn_wrp_logo"
+          }
         }
       },
       {
@@ -2839,21 +2994,12 @@
         ],
         "metadata": {
           "duration": null,
-          "statusText": "playing"
-        },
-        "ref": {
-          "currentRDList": {
-            "listId": "List",
-            "name": "History",
-            "$item": {
-              "0": {},
-              "length": 1
-            }
-          },
-          "currentTab": {
-            "listId": "List",
-            "tabId": "btn_wrp_play_list"
-          }
+          "stereo": null,
+          "encoding": null,
+          "sampleFrq": null,
+          "sampleRes": null,
+          "country": null,
+          "statusText": null
         }
       },
       {
@@ -2958,21 +3104,12 @@
         ],
         "metadata": {
           "duration": null,
-          "statusText": "playing"
-        },
-        "ref": {
-          "currentRDList": {
-            "listId": "List",
-            "name": "Groove",
-            "$item": {
-              "0": {},
-              "length": 1
-            }
-          },
-          "currentTab": {
-            "listId": "Viz",
-            "tabId": "btn_wrp_logo"
-          }
+          "stereo": null,
+          "encoding": null,
+          "sampleFrq": null,
+          "sampleRes": null,
+          "country": null,
+          "statusText": null
         }
       },
       {
@@ -3001,21 +3138,7 @@
           "sampleFrq": null,
           "sampleRes": null,
           "country": null,
-          "statusText": "no connection"
-        },
-        "ref": {
-          "currentRDList": {
-            "listId": "Tag",
-            "name": "Lounge",
-            "$item": {
-              "0": {},
-              "length": 1
-            }
-          },
-          "currentTab": {
-            "listId": "Viz",
-            "tabId": "btn_wrp_logo"
-          }
+          "statusText": null
         }
       },
       {
@@ -3095,21 +3218,12 @@
         ],
         "metadata": {
           "duration": null,
-          "statusText": "playing"
-        },
-        "ref": {
-          "currentRDList": {
-            "listId": "List",
-            "name": "Groove",
-            "$item": {
-              "0": {},
-              "length": 1
-            }
-          },
-          "currentTab": {
-            "listId": "Viz",
-            "tabId": "btn_wrp_logo"
-          }
+          "stereo": null,
+          "encoding": null,
+          "sampleFrq": null,
+          "sampleRes": null,
+          "country": null,
+          "statusText": null
         }
       },
       {
@@ -3132,21 +3246,12 @@
         ],
         "metadata": {
           "duration": null,
-          "statusText": "playing"
-        },
-        "ref": {
-          "currentRDList": {
-            "listId": "List",
-            "name": "Groove",
-            "$item": {
-              "0": {},
-              "length": 1
-            }
-          },
-          "currentTab": {
-            "listId": "Viz",
-            "tabId": "btn_wrp_logo"
-          }
+          "stereo": null,
+          "encoding": null,
+          "sampleFrq": null,
+          "sampleRes": null,
+          "country": null,
+          "statusText": null
         }
       },
       {
@@ -3679,36 +3784,6 @@
         }
       },
       {
-        "id": "17837",
-        "name": "1.FM Movie Soundtrack",
-        "description": null,
-        "groupTitle": null,
-        "groups": [
-          "Radio",
-          "Movie",
-          "Electro"
-        ],
-        "url": "http://strm112.1.fm/moviesoundtracks_mobile_mp3",
-        "logo": "http://liveradio.de/media/cache/station_detail/18f08aee-f06b-4965-b607-3f25a581619c.jpg",
-        "artist": null,
-        "lang": null,
-        "channels": null,
-        "country": null,
-        "favLists": [
-          "History",
-          "Sound Track"
-        ],
-        "metadata": {
-          "duration": null,
-          "stereo": null,
-          "encoding": null,
-          "sampleFrq": null,
-          "sampleRes": null,
-          "country": null,
-          "statusText": null
-        }
-      },
-      {
         "id": "17806",
         "name": "1.FM Back To The 50s & 60s Radio",
         "description": null,
@@ -3891,34 +3966,6 @@
         "country": null,
         "favLists": [
           "Jazz"
-        ],
-        "metadata": {
-          "duration": null,
-          "stereo": null,
-          "encoding": null,
-          "sampleFrq": null,
-          "sampleRes": null,
-          "country": null,
-          "statusText": null
-        }
-      },
-      {
-        "id": "13505",
-        "name": "RDMIX Love Songs",
-        "description": null,
-        "groupTitle": null,
-        "groups": [
-          "Love",
-          "Songs"
-        ],
-        "url": "http://maggie.torontocast.com:8022/stream",
-        "logo": "https://radiodimensionemix.torontocast.stream/wp-content/uploads/2020/09/RDMIX-LOVE_SONGS_512_OK-150x150.png",
-        "artist": null,
-        "lang": null,
-        "channels": null,
-        "country": null,
-        "favLists": [
-          "Slows & Love Songs"
         ],
         "metadata": {
           "duration": null,
@@ -4182,36 +4229,6 @@
         }
       },
       {
-        "id": "1942",
-        "name": "101.ru French Chanson",
-        "description": null,
-        "groupTitle": null,
-        "groups": [
-          "Radio",
-          "French",
-          "Songs"
-        ],
-        "url": "http://ic6.101.ru:8000/stream/pro/aac/64/146",
-        "logo": "https://kuasark.com/files/stations-logos/101ru-french-chanson.png",
-        "artist": null,
-        "lang": "French",
-        "channels": null,
-        "country": null,
-        "favLists": [
-          "History",
-          "Chanson Française"
-        ],
-        "metadata": {
-          "duration": null,
-          "stereo": null,
-          "encoding": null,
-          "sampleFrq": null,
-          "sampleRes": null,
-          "country": null,
-          "statusText": null
-        }
-      },
-      {
         "id": "781",
         "name": "Blues Radio",
         "description": null,
@@ -4437,813 +4454,6 @@
       }
     ],
     "isSystem": true
-  },
-  "Jazz": {
-    "listId": "List",
-    "name": "Jazz",
-    "items": [
-      {
-        "id": "10299",
-        "name": "Acid Jazz Radio",
-        "description": null,
-        "groupTitle": null,
-        "groups": [
-          "Acid",
-          "Jazz",
-          "Radio"
-        ],
-        "url": "http://acidjazz.stream.laut.fm/acidjazz?t302=2021-12-21_16-16-36&uuid=e92aae83-3ae3-44b5-8d29-dd1dee29262c",
-        "logo": "http://www.acid-jazz-radio.de/logo-gruen.jpg",
-        "artist": null,
-        "lang": null,
-        "channels": null,
-        "country": null,
-        "favLists": [
-          "History",
-          "Jazz"
-        ],
-        "metadata": {
-          "duration": null,
-          "stereo": null,
-          "encoding": null,
-          "sampleFrq": null,
-          "sampleRes": null,
-          "country": null,
-          "statusText": null
-        }
-      },
-      {
-        "id": "3094",
-        "name": "101 Smooth Jazz",
-        "description": null,
-        "groupTitle": null,
-        "groups": [
-          "Smooth",
-          "Jazz"
-        ],
-        "url": "https://edge1.peta.live365.net/b22139_128mp3",
-        "logo": "http://101smoothjazz.com/favicon.ico",
-        "artist": null,
-        "lang": null,
-        "channels": null,
-        "country": null,
-        "favLists": [
-          "History",
-          "Jazz"
-        ],
-        "metadata": {
-          "duration": null,
-          "stereo": null,
-          "encoding": null,
-          "sampleFrq": null,
-          "sampleRes": null,
-          "country": null,
-          "statusText": null
-        }
-      },
-      {
-        "id": "8341",
-        "name": "FIP Jazz",
-        "description": null,
-        "groupTitle": null,
-        "groups": [
-          "French",
-          "Jazz"
-        ],
-        "url": "https://icecast.radiofrance.fr/fipjazz-hifi.aac",
-        "logo": "https://cdn.radiofrance.fr/s3/cruiser-production/2019/06/840a4431-0db0-4a94-aa28-53f8de011ab6/200x200_fip-jazz-01.jpg",
-        "artist": null,
-        "lang": "French",
-        "channels": null,
-        "country": null,
-        "favLists": [
-          "Jazz"
-        ],
-        "metadata": {
-          "duration": null,
-          "stereo": null,
-          "encoding": null,
-          "sampleFrq": null,
-          "sampleRes": null,
-          "country": null,
-          "statusText": null
-        }
-      },
-      {
-        "id": "18288",
-        "name": "Diana Krall",
-        "description": null,
-        "groupTitle": null,
-        "groups": [
-          "Artists"
-        ],
-        "url": "https://streaming.exclusive.radio/er/dianakrall/icecast.audio",
-        "logo": "https://manager.uber.radio/static/uploads/station/64da41ad-3742-4f62-907d-96f1cf11d81a.jpg",
-        "artist": "Diana Krall",
-        "lang": null,
-        "channels": null,
-        "country": null,
-        "favLists": [
-          "History",
-          "Jazz"
-        ],
-        "metadata": {
-          "duration": null,
-          "stereo": null,
-          "encoding": null,
-          "sampleFrq": null,
-          "sampleRes": null,
-          "country": null,
-          "statusText": null
-        }
-      },
-      {
-        "id": "13575",
-        "name": "80 Houyinyuetai",
-        "description": null,
-        "groupTitle": null,
-        "groups": [
-          "80s"
-        ],
-        "url": "http://lhttp.qingting.fm/live/20207761/64k.mp3",
-        "logo": "https://media.radiodeck.com/stations/5f74f2b3664ee8400841a0df/profile/606edba09175373112bdb158/xl.jpg",
-        "artist": null,
-        "lang": null,
-        "channels": null,
-        "country": null,
-        "favLists": [
-          "History",
-          "Jazz"
-        ],
-        "metadata": {
-          "duration": null,
-          "stereo": null,
-          "encoding": null,
-          "sampleFrq": null,
-          "sampleRes": null,
-          "country": null,
-          "statusText": null
-        }
-      },
-      {
-        "id": "10728",
-        "name": "Euro Smooth Jazz",
-        "description": null,
-        "groupTitle": null,
-        "groups": [
-          "Smooth",
-          "Jazz"
-        ],
-        "url": "http://eurosmoothjazz.stream.laut.fm/eurosmoothjazz?t302=2021-12-21_03-04-14&uuid=aefa5532-59b1-4df2-a8b6-7d749280505b",
-        "logo": "http://eurosmoothjazz.com/wp-content/themes/twentytwelve-eurosmoothjazz/apple-touch-icon-76x76.png",
-        "artist": null,
-        "lang": null,
-        "channels": null,
-        "country": null,
-        "favLists": [
-          "Jazz"
-        ],
-        "metadata": {
-          "duration": null,
-          "stereo": null,
-          "encoding": null,
-          "sampleFrq": null,
-          "sampleRes": null,
-          "country": null,
-          "statusText": null
-        }
-      },
-      {
-        "id": "4055",
-        "name": "HitsRadio Smooth Jazz",
-        "description": null,
-        "groupTitle": null,
-        "groups": [
-          "Smooth",
-          "Jazz"
-        ],
-        "url": "https://playerservices.streamtheworld.com/api/livestream-redirect/977_SMOOJAZZ.mp3",
-        "logo": "https://www.hitsradio.com/img/default/hitsradio.png",
-        "artist": null,
-        "lang": null,
-        "channels": null,
-        "country": null,
-        "favLists": [
-          "Jazz"
-        ],
-        "metadata": {
-          "duration": null,
-          "stereo": null,
-          "encoding": null,
-          "sampleFrq": null,
-          "sampleRes": null,
-          "country": null,
-          "statusText": null
-        }
-      },
-      {
-        "id": "10120",
-        "name": "ON Smooth Jazz",
-        "description": null,
-        "groupTitle": null,
-        "groups": [
-          "Smooth",
-          "Jazz"
-        ],
-        "url": "https://0n-smoothjazz.radionetz.de/0n-smoothjazz.mp3",
-        "logo": "https://www.0nradio.com/images/favicon/favicon.ico",
-        "artist": null,
-        "lang": null,
-        "channels": null,
-        "country": null,
-        "favLists": [
-          "Jazz"
-        ],
-        "metadata": {
-          "duration": null,
-          "stereo": null,
-          "encoding": null,
-          "sampleFrq": null,
-          "sampleRes": null,
-          "country": null,
-          "statusText": null
-        }
-      },
-      {
-        "id": "11055",
-        "name": "Klassik Radio Smooth Jazz",
-        "description": null,
-        "groupTitle": null,
-        "groups": [
-          "Radio",
-          "Smooth",
-          "Jazz"
-        ],
-        "url": "http://klassikr.streamabc.net/klr-smooth-mp3-128-7968529?sABC=61p12qn4%230%23r4880qrn6s01nn6n263q843o4n00pqq9%23enqvbfher&amsparams=playerid:radiosure;skey:1640050084",
-        "logo": "http://cdn-radiotime-logos.tunein.com/s25028q.png",
-        "artist": null,
-        "lang": null,
-        "channels": null,
-        "country": null,
-        "favLists": [
-          "Jazz"
-        ],
-        "metadata": {
-          "duration": null,
-          "stereo": null,
-          "encoding": null,
-          "sampleFrq": null,
-          "sampleRes": null,
-          "country": null,
-          "statusText": null
-        }
-      },
-      {
-        "id": "18149",
-        "name": "Amy Winehouse",
-        "description": null,
-        "groupTitle": null,
-        "groups": [
-          "Artists"
-        ],
-        "url": "https://streaming.exclusive.radio/er/amywinehouse/icecast.audio",
-        "logo": "https://manager.uber.radio/static/uploads/station/649d1bc9-5b68-4003-af85-f7e8348126cf.jpg",
-        "artist": "Amy Winehouse",
-        "lang": null,
-        "channels": null,
-        "country": null,
-        "favLists": [
-          "Jazz"
-        ],
-        "metadata": {
-          "duration": null,
-          "stereo": null,
-          "encoding": null,
-          "sampleFrq": null,
-          "sampleRes": null,
-          "country": null,
-          "statusText": null
-        }
-      },
-      {
-        "id": "18150",
-        "name": "Amy Winehouse - Hits",
-        "description": null,
-        "groupTitle": null,
-        "groups": [
-          "Artists"
-        ],
-        "url": "https://streaming.exclusive.radio/er/amywinehousehits/icecast.audio",
-        "logo": "https://manager.uber.radio/static/uploads/station/b926828a-083f-456c-bbf2-0c3f8931ddaa.jpg",
-        "artist": "Amy Winehouse",
-        "lang": null,
-        "channels": null,
-        "country": null,
-        "favLists": [
-          "Jazz"
-        ],
-        "metadata": {
-          "duration": null,
-          "stereo": null,
-          "encoding": null,
-          "sampleFrq": null,
-          "sampleRes": null,
-          "country": null,
-          "statusText": null
-        }
-      },
-      {
-        "id": "18308",
-        "name": "Duke Ellington",
-        "description": null,
-        "groupTitle": null,
-        "groups": [
-          "Artists"
-        ],
-        "url": "https://streaming.exclusive.radio/er/dukeellington/icecast.audio",
-        "logo": "https://manager.uber.radio/static/uploads/station/2fbd9a6e-e48c-461c-a667-50f360a13f4a.jpg",
-        "artist": "Duke Ellington",
-        "lang": null,
-        "channels": null,
-        "country": null,
-        "favLists": [
-          "Jazz"
-        ],
-        "metadata": {
-          "duration": null,
-          "stereo": null,
-          "encoding": null,
-          "sampleFrq": null,
-          "sampleRes": null,
-          "country": null,
-          "statusText": null
-        }
-      },
-      {
-        "id": "18317",
-        "name": "Ella Fitzgerald",
-        "description": null,
-        "groupTitle": null,
-        "groups": [
-          "Artists"
-        ],
-        "url": "https://streaming.exclusive.radio/er/ellafitzgerald/icecast.audio",
-        "logo": "https://manager.uber.radio/static/uploads/station/5a9dbcbd-8bae-488a-8e04-5cf645c13562.jpg",
-        "artist": "Ella Fitzgerald",
-        "lang": null,
-        "channels": null,
-        "country": null,
-        "favLists": [
-          "Jazz"
-        ],
-        "metadata": {
-          "duration": null,
-          "stereo": null,
-          "encoding": null,
-          "sampleFrq": null,
-          "sampleRes": null,
-          "country": null,
-          "statusText": null
-        }
-      },
-      {
-        "id": "18536",
-        "name": "Norah Jones",
-        "description": null,
-        "groupTitle": null,
-        "groups": [
-          "Artists"
-        ],
-        "url": "https://streaming.exclusive.radio/er/norahjones/icecast.audio",
-        "logo": "https://manager.uber.radio/static/uploads/station/9776168b-277a-43d8-9bb4-2759976d28c5.jpg",
-        "artist": "Norah Jones",
-        "lang": null,
-        "channels": null,
-        "country": null,
-        "favLists": [
-          "Jazz"
-        ],
-        "metadata": {
-          "duration": null,
-          "stereo": null,
-          "encoding": null,
-          "sampleFrq": null,
-          "sampleRes": null,
-          "country": null,
-          "statusText": null
-        }
-      },
-      {
-        "id": "18534",
-        "name": "Nina Simone",
-        "description": null,
-        "groupTitle": null,
-        "groups": [
-          "Artists"
-        ],
-        "url": "https://streaming.exclusive.radio/er/ninasimone/icecast.audio",
-        "logo": "https://manager.uber.radio/static/uploads/station/222ca4a1-2954-41f3-afbc-43ba2c15bf37.jpg",
-        "artist": "Nina Simone",
-        "lang": null,
-        "channels": null,
-        "country": null,
-        "favLists": [
-          "Jazz"
-        ],
-        "metadata": {
-          "duration": null,
-          "stereo": null,
-          "encoding": null,
-          "sampleFrq": null,
-          "sampleRes": null,
-          "country": null,
-          "statusText": null
-        }
-      },
-      {
-        "id": "18485",
-        "name": "Louis Armstrong",
-        "description": null,
-        "groupTitle": null,
-        "groups": [
-          "Artists"
-        ],
-        "url": "https://streaming.exclusive.radio/er/louisarmstrong/icecast.audio",
-        "logo": "https://manager.uber.radio/static/uploads/station/9dd7f32f-79dc-42c5-b479-005ecdbe3483.jpg",
-        "artist": "Louis Armstrong",
-        "lang": null,
-        "channels": null,
-        "country": null,
-        "favLists": [
-          "Jazz"
-        ],
-        "metadata": {
-          "duration": null,
-          "stereo": null,
-          "encoding": null,
-          "sampleFrq": null,
-          "sampleRes": null,
-          "country": null,
-          "statusText": null
-        }
-      },
-      {
-        "id": "18418",
-        "name": "John Coltrane",
-        "description": null,
-        "groupTitle": null,
-        "groups": [
-          "Artists"
-        ],
-        "url": "https://streaming.exclusive.radio/er/johncoltrane/icecast.audio",
-        "logo": "https://manager.uber.radio/static/uploads/station/a6338885-fc0b-4295-809b-f265446cbcc3.jpg",
-        "artist": "John Coltrane",
-        "lang": null,
-        "channels": null,
-        "country": null,
-        "favLists": [
-          "Jazz"
-        ],
-        "metadata": {
-          "duration": null,
-          "stereo": null,
-          "encoding": null,
-          "sampleFrq": null,
-          "sampleRes": null,
-          "country": null,
-          "statusText": null
-        }
-      },
-      {
-        "id": "18384",
-        "name": "Herbie Hancock",
-        "description": null,
-        "groupTitle": null,
-        "groups": [
-          "Artists"
-        ],
-        "url": "https://streaming.exclusive.radio/er/herbiehancock/icecast.audio",
-        "logo": "https://manager.uber.radio/static/uploads/station/3363394a-cb41-4441-8a46-ca33962b18fe.jpg",
-        "artist": "Herbie Hancock",
-        "lang": null,
-        "channels": null,
-        "country": null,
-        "favLists": [
-          "Jazz"
-        ],
-        "metadata": {
-          "duration": null,
-          "stereo": null,
-          "encoding": null,
-          "sampleFrq": null,
-          "sampleRes": null,
-          "country": null,
-          "statusText": null
-        }
-      },
-      {
-        "id": "18368",
-        "name": "Glenn Miller",
-        "description": null,
-        "groupTitle": null,
-        "groups": [
-          "Artists"
-        ],
-        "url": "https://streaming.exclusive.radio/er/glennmiller/icecast.audio",
-        "logo": "https://manager.uber.radio/static/uploads/station/0a263053-ce9e-4a7d-9495-e8232839e07e.jpg",
-        "artist": "Glenn Miller",
-        "lang": null,
-        "channels": null,
-        "country": null,
-        "favLists": [
-          "Jazz"
-        ],
-        "metadata": {
-          "duration": null,
-          "stereo": null,
-          "encoding": null,
-          "sampleFrq": null,
-          "sampleRes": null,
-          "country": null,
-          "statusText": null
-        }
-      },
-      {
-        "id": "18291",
-        "name": "Dionne Warwick",
-        "description": null,
-        "groupTitle": null,
-        "groups": [
-          "Artists"
-        ],
-        "url": "https://streaming.exclusive.radio/er/dionnewarwick/icecast.audio",
-        "logo": "https://manager.uber.radio/static/uploads/station/3d7226ef-7d66-4a30-81a1-ea78f1800aea.jpg",
-        "artist": "Dionne Warwick",
-        "lang": null,
-        "channels": null,
-        "country": null,
-        "favLists": [
-          "Jazz"
-        ],
-        "metadata": {
-          "duration": null,
-          "stereo": null,
-          "encoding": null,
-          "sampleFrq": null,
-          "sampleRes": null,
-          "country": null,
-          "statusText": null
-        }
-      },
-      {
-        "id": "18290",
-        "name": "Diana Ross - Hits",
-        "description": null,
-        "groupTitle": null,
-        "groups": [
-          "Artists"
-        ],
-        "url": "https://streaming.exclusive.radio/er/dianarosshits/icecast.audio",
-        "logo": "https://manager.uber.radio/static/uploads/station/4ad0582b-7357-466f-bd19-3b64ace462bf.jpg",
-        "artist": "Diana Ross",
-        "lang": null,
-        "channels": null,
-        "country": null,
-        "favLists": [
-          "Jazz"
-        ],
-        "metadata": {
-          "duration": null,
-          "stereo": null,
-          "encoding": null,
-          "sampleFrq": null,
-          "sampleRes": null,
-          "country": null,
-          "statusText": null
-        }
-      },
-      {
-        "id": "18289",
-        "name": "Diana Ross",
-        "description": null,
-        "groupTitle": null,
-        "groups": [
-          "Artists"
-        ],
-        "url": "https://streaming.exclusive.radio/er/dianaross/icecast.audio",
-        "logo": "https://manager.uber.radio/static/uploads/station/2ab7a04b-e341-4575-ae59-27a3cab0ef2c.jpg",
-        "artist": "Diana Ross",
-        "lang": null,
-        "channels": null,
-        "country": null,
-        "favLists": [
-          "Jazz"
-        ],
-        "metadata": {
-          "duration": null,
-          "stereo": null,
-          "encoding": null,
-          "sampleFrq": null,
-          "sampleRes": null,
-          "country": null,
-          "statusText": null
-        }
-      },
-      {
-        "id": "18158",
-        "name": "Aretha Franklin",
-        "description": null,
-        "groupTitle": null,
-        "groups": [
-          "Artists"
-        ],
-        "url": "https://streaming.exclusive.radio/er/arethafranklin/icecast.audio",
-        "logo": "https://manager.uber.radio/static/uploads/station/41163ac0-baaa-460f-b96d-934bf4383dc2.jpg",
-        "artist": "Aretha Franklin",
-        "lang": null,
-        "channels": null,
-        "country": null,
-        "favLists": [
-          "Jazz"
-        ],
-        "metadata": {
-          "duration": null,
-          "stereo": null,
-          "encoding": null,
-          "sampleFrq": null,
-          "sampleRes": null,
-          "country": null,
-          "statusText": null
-        }
-      },
-      {
-        "id": "18159",
-        "name": "Aretha Franklin - Hits",
-        "description": null,
-        "groupTitle": null,
-        "groups": [
-          "Artists"
-        ],
-        "url": "https://streaming.exclusive.radio/er/arethafranklinhits/icecast.audio",
-        "logo": "https://manager.uber.radio/static/uploads/station/e607c244-6615-48f9-a2e0-38c3a787bfdf.jpg",
-        "artist": "Aretha Franklin",
-        "lang": null,
-        "channels": null,
-        "country": null,
-        "favLists": [
-          "Jazz"
-        ],
-        "metadata": {
-          "duration": null,
-          "stereo": null,
-          "encoding": null,
-          "sampleFrq": null,
-          "sampleRes": null,
-          "country": null,
-          "statusText": null
-        }
-      },
-      {
-        "id": "3095",
-        "name": "101 Smooth Jazz Mellow Mix",
-        "description": null,
-        "groupTitle": null,
-        "groups": [
-          "Smooth",
-          "Jazz",
-          "Mix"
-        ],
-        "url": "http://ais-sa5.cdnstream1.com/b48071_128mp3",
-        "logo": "http://www.101smoothjazz.com/favicon.ico",
-        "artist": null,
-        "lang": null,
-        "channels": null,
-        "country": null,
-        "favLists": [
-          "Jazz"
-        ],
-        "metadata": {
-          "duration": null,
-          "stereo": null,
-          "encoding": null,
-          "sampleFrq": null,
-          "sampleRes": null,
-          "country": null,
-          "statusText": null
-        }
-      },
-      {
-        "id": "18275",
-        "name": "Dave Brubeck",
-        "description": null,
-        "groupTitle": null,
-        "groups": [
-          "Artists"
-        ],
-        "url": "https://streaming.exclusive.radio/er/davebrubeck/icecast.audio",
-        "logo": "https://manager.uber.radio/static/uploads/station/15e5f117-a00a-4086-97c5-3cb4a1f3099c.jpg",
-        "artist": "Dave Brubeck",
-        "lang": null,
-        "channels": null,
-        "country": null,
-        "favLists": [
-          "Jazz"
-        ],
-        "metadata": {
-          "duration": null,
-          "stereo": null,
-          "encoding": null,
-          "sampleFrq": null,
-          "sampleRes": null,
-          "country": null,
-          "statusText": null
-        }
-      },
-      {
-        "id": "8475",
-        "name": "France Musique La Jazz",
-        "description": null,
-        "groupTitle": null,
-        "groups": [
-          "French",
-          "Jazz"
-        ],
-        "url": "https://icecast.radiofrance.fr/francemusiquelajazz-hifi.aac",
-        "logo": "https://cdn.radiofrance.fr/s3/cruiser-production/2017/06/09ee5fb8-7a84-48ec-97fa-daea307d9415/200x200_fmwebradiosnormaljazz.jpg",
-        "artist": null,
-        "lang": "French",
-        "channels": null,
-        "country": null,
-        "favLists": [
-          "Jazz"
-        ],
-        "metadata": {
-          "duration": null,
-          "stereo": null,
-          "encoding": null,
-          "sampleFrq": null,
-          "sampleRes": null,
-          "country": null,
-          "statusText": null
-        }
-      },
-      {
-        "id": "18144",
-        "name": "Alison Moyet",
-        "description": null,
-        "groupTitle": null,
-        "groups": [
-          "Artists"
-        ],
-        "url": "https://streaming.exclusive.radio/er/alisonmoyet/icecast.audio",
-        "logo": "https://manager.uber.radio/static/uploads/station/40609ef5-9ee0-4105-be7c-3933440daa71.jpg",
-        "artist": "Alison Moyet",
-        "lang": null,
-        "channels": null,
-        "country": null,
-        "favLists": [
-          "Jazz"
-        ],
-        "metadata": {
-          "duration": null,
-          "stereo": null,
-          "encoding": null,
-          "sampleFrq": null,
-          "sampleRes": null,
-          "country": null,
-          "statusText": null
-        }
-      },
-      {
-        "id": "2063",
-        "name": "Instrumental Jazz",
-        "description": null,
-        "groupTitle": null,
-        "groups": [
-          "Instrumental",
-          "Jazz"
-        ],
-        "url": "https://jfm1.hostingradio.ru:14536/ijstream.mp3",
-        "logo": "https://radiojazzfm.ru/favicons/apple-touch-icon.png",
-        "artist": null,
-        "lang": null,
-        "channels": null,
-        "country": null,
-        "favLists": [
-          "Jazz"
-        ],
-        "metadata": {
-          "duration": null,
-          "stereo": null,
-          "encoding": null,
-          "sampleFrq": null,
-          "sampleRes": null,
-          "country": null,
-          "statusText": null
-        }
-      }
-    ],
-    "isSystem": false
   },
   "Classique": {
     "listId": "List",
@@ -6254,21 +5464,12 @@
         ],
         "metadata": {
           "duration": null,
-          "statusText": "playing"
-        },
-        "ref": {
-          "currentRDList": {
-            "listId": "List",
-            "name": "Groove",
-            "$item": {
-              "0": {},
-              "length": 1
-            }
-          },
-          "currentTab": {
-            "listId": "Viz",
-            "tabId": "btn_wrp_logo"
-          }
+          "stereo": null,
+          "encoding": null,
+          "sampleFrq": null,
+          "sampleRes": null,
+          "country": null,
+          "statusText": null
         }
       },
       {
@@ -6292,21 +5493,12 @@
         ],
         "metadata": {
           "duration": null,
-          "statusText": "playing"
-        },
-        "ref": {
-          "currentRDList": {
-            "listId": "List",
-            "name": "Groove",
-            "$item": {
-              "0": {},
-              "length": 1
-            }
-          },
-          "currentTab": {
-            "listId": "Viz",
-            "tabId": "btn_wrp_logo"
-          }
+          "stereo": null,
+          "encoding": null,
+          "sampleFrq": null,
+          "sampleRes": null,
+          "country": null,
+          "statusText": null
         }
       },
       {
@@ -6329,21 +5521,12 @@
         ],
         "metadata": {
           "duration": null,
-          "statusText": "playing"
-        },
-        "ref": {
-          "currentRDList": {
-            "listId": "List",
-            "name": "Groove",
-            "$item": {
-              "0": {},
-              "length": 1
-            }
-          },
-          "currentTab": {
-            "listId": "Viz",
-            "tabId": "btn_wrp_logo"
-          }
+          "stereo": null,
+          "encoding": null,
+          "sampleFrq": null,
+          "sampleRes": null,
+          "country": null,
+          "statusText": null
         }
       },
       {
@@ -6365,21 +5548,12 @@
         ],
         "metadata": {
           "duration": null,
-          "statusText": "playing"
-        },
-        "ref": {
-          "currentRDList": {
-            "listId": "List",
-            "name": "Groove",
-            "$item": {
-              "0": {},
-              "length": 1
-            }
-          },
-          "currentTab": {
-            "listId": "Viz",
-            "tabId": "btn_wrp_logo"
-          }
+          "stereo": null,
+          "encoding": null,
+          "sampleFrq": null,
+          "sampleRes": null,
+          "country": null,
+          "statusText": null
         }
       },
       {
@@ -6401,21 +5575,12 @@
         ],
         "metadata": {
           "duration": null,
-          "statusText": "playing"
-        },
-        "ref": {
-          "currentRDList": {
-            "listId": "List",
-            "name": "Groove",
-            "$item": {
-              "0": {},
-              "length": 1
-            }
-          },
-          "currentTab": {
-            "listId": "List",
-            "tabId": "btn_wrp_play_list"
-          }
+          "stereo": null,
+          "encoding": null,
+          "sampleFrq": null,
+          "sampleRes": null,
+          "country": null,
+          "statusText": null
         }
       },
       {
@@ -6438,21 +5603,12 @@
         ],
         "metadata": {
           "duration": null,
-          "statusText": "playing"
-        },
-        "ref": {
-          "currentRDList": {
-            "listId": "List",
-            "name": "Groove",
-            "$item": {
-              "0": {},
-              "length": 1
-            }
-          },
-          "currentTab": {
-            "listId": "Viz",
-            "tabId": "btn_wrp_logo"
-          }
+          "stereo": null,
+          "encoding": null,
+          "sampleFrq": null,
+          "sampleRes": null,
+          "country": null,
+          "statusText": null
         }
       },
       {
@@ -6476,21 +5632,12 @@
         ],
         "metadata": {
           "duration": null,
-          "statusText": "playing"
-        },
-        "ref": {
-          "currentRDList": {
-            "listId": "List",
-            "name": "Groove",
-            "$item": {
-              "0": {},
-              "length": 1
-            }
-          },
-          "currentTab": {
-            "listId": "Viz",
-            "tabId": "btn_wrp_logo"
-          }
+          "stereo": null,
+          "encoding": null,
+          "sampleFrq": null,
+          "sampleRes": null,
+          "country": null,
+          "statusText": null
         }
       },
       {
@@ -6512,21 +5659,12 @@
         ],
         "metadata": {
           "duration": null,
-          "statusText": "playing"
-        },
-        "ref": {
-          "currentRDList": {
-            "listId": "List",
-            "name": "Groove",
-            "$item": {
-              "0": {},
-              "length": 1
-            }
-          },
-          "currentTab": {
-            "listId": "Viz",
-            "tabId": "btn_wrp_logo"
-          }
+          "stereo": null,
+          "encoding": null,
+          "sampleFrq": null,
+          "sampleRes": null,
+          "country": null,
+          "statusText": null
         }
       },
       {
@@ -6549,21 +5687,12 @@
         ],
         "metadata": {
           "duration": null,
-          "statusText": "playing"
-        },
-        "ref": {
-          "currentRDList": {
-            "listId": "List",
-            "name": "Groove",
-            "$item": {
-              "0": {},
-              "length": 1
-            }
-          },
-          "currentTab": {
-            "listId": "Viz",
-            "tabId": "btn_wrp_logo"
-          }
+          "stereo": null,
+          "encoding": null,
+          "sampleFrq": null,
+          "sampleRes": null,
+          "country": null,
+          "statusText": null
         }
       },
       {
@@ -7660,21 +6789,12 @@
         ],
         "metadata": {
           "duration": null,
-          "statusText": "playing"
-        },
-        "ref": {
-          "currentRDList": {
-            "listId": "List",
-            "name": "History",
-            "$item": {
-              "0": {},
-              "length": 1
-            }
-          },
-          "currentTab": {
-            "listId": "List",
-            "tabId": "btn_wrp_play_list"
-          }
+          "stereo": null,
+          "encoding": null,
+          "sampleFrq": null,
+          "sampleRes": null,
+          "country": null,
+          "statusText": null
         }
       }
     ],
@@ -8450,21 +7570,12 @@
         ],
         "metadata": {
           "duration": null,
-          "statusText": "playing"
-        },
-        "ref": {
-          "currentRDList": {
-            "listId": "List",
-            "name": "DUB",
-            "$item": {
-              "0": {},
-              "length": 1
-            }
-          },
-          "currentTab": {
-            "listId": "List",
-            "tabId": "btn_wrp_play_list"
-          }
+          "stereo": null,
+          "encoding": null,
+          "sampleFrq": null,
+          "sampleRes": null,
+          "country": null,
+          "statusText": null
         }
       }
     ],
@@ -8692,6 +7803,34 @@
         ],
         "url": "https://eu1.fastcast4u.com/proxy/kpmxz?mp=/1",
         "logo": "https://www.abc-lounge.com/radio/wp-content/uploads/2019/11/logo-ABC-Lounge100.png",
+        "artist": null,
+        "lang": null,
+        "channels": null,
+        "country": null,
+        "favLists": [
+          "Slows & Love Songs"
+        ],
+        "metadata": {
+          "duration": null,
+          "stereo": null,
+          "encoding": null,
+          "sampleFrq": null,
+          "sampleRes": null,
+          "country": null,
+          "statusText": null
+        }
+      },
+      {
+        "id": "12804",
+        "name": "Oxygen Love Songs",
+        "description": null,
+        "groupTitle": null,
+        "groups": [
+          "Love",
+          "Songs"
+        ],
+        "url": "https://oxygenmusic.hu:8443/oxygenlovesongs",
+        "logo": "https://oxygenmusic.hu/wp-content/uploads/2021/02/love_songs_web_cover.jpg",
         "artist": null,
         "lang": null,
         "channels": null,
@@ -9180,21 +8319,12 @@
         ],
         "metadata": {
           "duration": null,
-          "statusText": "playing"
-        },
-        "ref": {
-          "currentRDList": {
-            "listId": "List",
-            "name": "Pop",
-            "$item": {
-              "0": {},
-              "length": 1
-            }
-          },
-          "currentTab": {
-            "listId": "Viz",
-            "tabId": "btn_wrp_logo"
-          }
+          "stereo": null,
+          "encoding": null,
+          "sampleFrq": null,
+          "sampleRes": null,
+          "country": null,
+          "statusText": null
         }
       },
       {
@@ -9218,21 +8348,67 @@
         ],
         "metadata": {
           "duration": null,
-          "statusText": "playing"
-        },
-        "ref": {
-          "currentRDList": {
-            "listId": "List",
-            "name": "Pop",
-            "$item": {
-              "0": {},
-              "length": 1
-            }
-          },
-          "currentTab": {
-            "listId": "List",
-            "tabId": "btn_wrp_play_list"
-          }
+          "stereo": null,
+          "encoding": null,
+          "sampleFrq": null,
+          "sampleRes": null,
+          "country": null,
+          "statusText": null
+        }
+      },
+      {
+        "id": "14935",
+        "name": "Suzhou Opera Broadcasting",
+        "description": null,
+        "groupTitle": null,
+        "groups": [
+          "Opera"
+        ],
+        "url": "http://lhttp.qingting.fm/live/20211622/64k.mp3",
+        "logo": "https://pic.qingting.fm/2018/0212/20180212113048425.jpg!200",
+        "artist": null,
+        "lang": null,
+        "channels": null,
+        "country": null,
+        "favLists": [
+          "Pop"
+        ],
+        "metadata": {
+          "duration": null,
+          "stereo": null,
+          "encoding": null,
+          "sampleFrq": null,
+          "sampleRes": null,
+          "country": null,
+          "statusText": null
+        }
+      },
+      {
+        "id": "14308",
+        "name": "Langfang Opera Radio 105.0",
+        "description": null,
+        "groupTitle": null,
+        "groups": [
+          "Opera",
+          "Radio"
+        ],
+        "url": "http://lhttp.qingting.fm/live/20211678/64k.mp3",
+        "logo": "https://pic.qingting.fm/2018/0717/20180717092127.jpeg!200",
+        "artist": null,
+        "lang": null,
+        "channels": null,
+        "country": null,
+        "favLists": [
+          "Pop"
+        ],
+        "metadata": {
+          "duration": null,
+          "stereo": null,
+          "encoding": null,
+          "sampleFrq": null,
+          "sampleRes": null,
+          "country": null,
+          "statusText": null
         }
       }
     ],
@@ -9264,12 +8440,17 @@
         ],
         "metadata": {
           "duration": null,
-          "stereo": null,
-          "encoding": null,
-          "sampleFrq": null,
-          "sampleRes": null,
-          "country": null,
-          "statusText": null
+          "statusText": "playing"
+        },
+        "ref": {
+          "currentRDList": {
+            "listId": "Tag",
+            "name": "Songs"
+          },
+          "currentTab": {
+            "listId": "Viz",
+            "tabId": "btn_wrp_logo"
+          }
         }
       },
       {
@@ -9492,21 +8673,12 @@
         ],
         "metadata": {
           "duration": null,
-          "statusText": "playing"
-        },
-        "ref": {
-          "currentRDList": {
-            "listId": "List",
-            "name": "Lounge",
-            "$item": {
-              "0": {},
-              "length": 1
-            }
-          },
-          "currentTab": {
-            "listId": "List",
-            "tabId": "btn_wrp_play_list"
-          }
+          "stereo": null,
+          "encoding": null,
+          "sampleFrq": null,
+          "sampleRes": null,
+          "country": null,
+          "statusText": null
         }
       },
       {
@@ -9529,21 +8701,12 @@
         ],
         "metadata": {
           "duration": null,
-          "statusText": "playing"
-        },
-        "ref": {
-          "currentRDList": {
-            "listId": "List",
-            "name": "Lounge",
-            "$item": {
-              "0": {},
-              "length": 1
-            }
-          },
-          "currentTab": {
-            "listId": "Viz",
-            "tabId": "btn_wrp_logo"
-          }
+          "stereo": null,
+          "encoding": null,
+          "sampleFrq": null,
+          "sampleRes": null,
+          "country": null,
+          "statusText": null
         }
       },
       {
@@ -9565,21 +8728,12 @@
         ],
         "metadata": {
           "duration": null,
-          "statusText": "playing"
-        },
-        "ref": {
-          "currentRDList": {
-            "listId": "List",
-            "name": "Lounge",
-            "$item": {
-              "0": {},
-              "length": 1
-            }
-          },
-          "currentTab": {
-            "listId": "Viz",
-            "tabId": "btn_wrp_logo"
-          }
+          "stereo": null,
+          "encoding": null,
+          "sampleFrq": null,
+          "sampleRes": null,
+          "country": null,
+          "statusText": null
         }
       },
       {
@@ -9601,21 +8755,12 @@
         ],
         "metadata": {
           "duration": null,
-          "statusText": "playing"
-        },
-        "ref": {
-          "currentRDList": {
-            "listId": "List",
-            "name": "Lounge",
-            "$item": {
-              "0": {},
-              "length": 1
-            }
-          },
-          "currentTab": {
-            "listId": "Viz",
-            "tabId": "btn_wrp_logo"
-          }
+          "stereo": null,
+          "encoding": null,
+          "sampleFrq": null,
+          "sampleRes": null,
+          "country": null,
+          "statusText": null
         }
       },
       {
@@ -9639,21 +8784,12 @@
         ],
         "metadata": {
           "duration": null,
-          "statusText": "playing"
-        },
-        "ref": {
-          "currentRDList": {
-            "listId": "List",
-            "name": "Lounge",
-            "$item": {
-              "0": {},
-              "length": 1
-            }
-          },
-          "currentTab": {
-            "listId": "Viz",
-            "tabId": "btn_wrp_logo"
-          }
+          "stereo": null,
+          "encoding": null,
+          "sampleFrq": null,
+          "sampleRes": null,
+          "country": null,
+          "statusText": null
         }
       },
       {
@@ -9677,21 +8813,12 @@
         ],
         "metadata": {
           "duration": null,
-          "statusText": "playing"
-        },
-        "ref": {
-          "currentRDList": {
-            "listId": "List",
-            "name": "Lounge",
-            "$item": {
-              "0": {},
-              "length": 1
-            }
-          },
-          "currentTab": {
-            "listId": "Viz",
-            "tabId": "btn_wrp_logo"
-          }
+          "stereo": null,
+          "encoding": null,
+          "sampleFrq": null,
+          "sampleRes": null,
+          "country": null,
+          "statusText": null
         }
       },
       {
@@ -9715,21 +8842,12 @@
         ],
         "metadata": {
           "duration": null,
-          "statusText": "playing"
-        },
-        "ref": {
-          "currentRDList": {
-            "listId": "List",
-            "name": "Lounge",
-            "$item": {
-              "0": {},
-              "length": 1
-            }
-          },
-          "currentTab": {
-            "listId": "Viz",
-            "tabId": "btn_wrp_logo"
-          }
+          "stereo": null,
+          "encoding": null,
+          "sampleFrq": null,
+          "sampleRes": null,
+          "country": null,
+          "statusText": null
         }
       },
       {
@@ -9752,21 +8870,12 @@
         ],
         "metadata": {
           "duration": null,
-          "statusText": "playing"
-        },
-        "ref": {
-          "currentRDList": {
-            "listId": "List",
-            "name": "Lounge",
-            "$item": {
-              "0": {},
-              "length": 1
-            }
-          },
-          "currentTab": {
-            "listId": "Viz",
-            "tabId": "btn_wrp_logo"
-          }
+          "stereo": null,
+          "encoding": null,
+          "sampleFrq": null,
+          "sampleRes": null,
+          "country": null,
+          "statusText": null
         }
       },
       {
@@ -9819,21 +8928,13 @@
           "Lounge"
         ],
         "metadata": {
-          "duration": null
-        },
-        "ref": {
-          "currentRDList": {
-            "listId": "List",
-            "name": "Lounge",
-            "$item": {
-              "0": {},
-              "length": 1
-            }
-          },
-          "currentTab": {
-            "listId": "Viz",
-            "tabId": "btn_wrp_logo"
-          }
+          "duration": null,
+          "stereo": null,
+          "encoding": null,
+          "sampleFrq": null,
+          "sampleRes": null,
+          "country": null,
+          "statusText": null
         }
       },
       {
@@ -9855,22 +8956,13 @@
           "Lounge"
         ],
         "metadata": {
-          "duration": 30.072018,
-          "statusText": "playing"
-        },
-        "ref": {
-          "currentRDList": {
-            "listId": "List",
-            "name": "Lounge",
-            "$item": {
-              "0": {},
-              "length": 1
-            }
-          },
-          "currentTab": {
-            "listId": "Viz",
-            "tabId": "btn_wrp_logo"
-          }
+          "duration": null,
+          "stereo": null,
+          "encoding": null,
+          "sampleFrq": null,
+          "sampleRes": null,
+          "country": null,
+          "statusText": null
         }
       },
       {
@@ -9892,21 +8984,12 @@
         ],
         "metadata": {
           "duration": null,
-          "statusText": "playing"
-        },
-        "ref": {
-          "currentRDList": {
-            "listId": "List",
-            "name": "Lounge",
-            "$item": {
-              "0": {},
-              "length": 1
-            }
-          },
-          "currentTab": {
-            "listId": "Viz",
-            "tabId": "btn_wrp_logo"
-          }
+          "stereo": null,
+          "encoding": null,
+          "sampleFrq": null,
+          "sampleRes": null,
+          "country": null,
+          "statusText": null
         }
       },
       {
@@ -9930,21 +9013,12 @@
         ],
         "metadata": {
           "duration": null,
-          "statusText": "playing"
-        },
-        "ref": {
-          "currentRDList": {
-            "listId": "List",
-            "name": "Lounge",
-            "$item": {
-              "0": {},
-              "length": 1
-            }
-          },
-          "currentTab": {
-            "listId": "Viz",
-            "tabId": "btn_wrp_logo"
-          }
+          "stereo": null,
+          "encoding": null,
+          "sampleFrq": null,
+          "sampleRes": null,
+          "country": null,
+          "statusText": null
         }
       },
       {
@@ -9967,21 +9041,12 @@
         ],
         "metadata": {
           "duration": null,
-          "statusText": "playing"
-        },
-        "ref": {
-          "currentRDList": {
-            "listId": "List",
-            "name": "Lounge",
-            "$item": {
-              "0": {},
-              "length": 1
-            }
-          },
-          "currentTab": {
-            "listId": "List",
-            "tabId": "btn_wrp_play_list"
-          }
+          "stereo": null,
+          "encoding": null,
+          "sampleFrq": null,
+          "sampleRes": null,
+          "country": null,
+          "statusText": null
         }
       }
     ],
@@ -10121,6 +9186,919 @@
         "country": null,
         "favLists": [
           "Exotique"
+        ],
+        "metadata": {
+          "duration": null,
+          "stereo": null,
+          "encoding": null,
+          "sampleFrq": null,
+          "sampleRes": null,
+          "country": null,
+          "statusText": null
+        }
+      }
+    ],
+    "isSystem": false
+  },
+  "Opéra": {
+    "listId": "List",
+    "name": "Opéra",
+    "items": [
+      {
+        "id": "1289",
+        "name": "Radio Art Opera",
+        "description": null,
+        "groupTitle": null,
+        "groups": [
+          "Radio",
+          "Arts",
+          "Opera"
+        ],
+        "url": "http://air.radioart.com/fOpera.mp3",
+        "logo": "https://www.radioart.com/images/channels/017_opera-600x400.jpg",
+        "artist": null,
+        "lang": null,
+        "channels": null,
+        "country": null,
+        "favLists": [
+          "Opéra"
+        ],
+        "metadata": {
+          "duration": null,
+          "stereo": null,
+          "encoding": null,
+          "sampleFrq": null,
+          "sampleRes": null,
+          "country": null,
+          "statusText": null
+        }
+      },
+      {
+        "id": "13791",
+        "name": "Shanghai Opera and Folk Arts Broadcasting",
+        "description": null,
+        "groupTitle": null,
+        "groups": [
+          "Opera",
+          "Folk",
+          "Arts"
+        ],
+        "url": "https://lhttp.qingting.fm/live/269/64k.mp3",
+        "logo": "http://www.666scly.com/img/logo/20140909014232438.jpg",
+        "artist": null,
+        "lang": null,
+        "channels": null,
+        "country": null,
+        "favLists": [
+          "Opéra"
+        ],
+        "metadata": {
+          "duration": null,
+          "stereo": null,
+          "encoding": null,
+          "sampleFrq": null,
+          "sampleRes": null,
+          "country": null,
+          "statusText": null
+        }
+      }
+    ],
+    "isSystem": false
+  },
+  "Jazz": {
+    "listId": "List",
+    "name": "Jazz",
+    "items": [
+      {
+        "id": "10299",
+        "name": "Acid Jazz Radio",
+        "description": null,
+        "groupTitle": null,
+        "groups": [
+          "Acid",
+          "Jazz",
+          "Radio"
+        ],
+        "url": "http://acidjazz.stream.laut.fm/acidjazz?t302=2021-12-21_16-16-36&uuid=e92aae83-3ae3-44b5-8d29-dd1dee29262c",
+        "logo": "http://www.acid-jazz-radio.de/logo-gruen.jpg",
+        "artist": null,
+        "lang": null,
+        "channels": null,
+        "country": null,
+        "favLists": [
+          "History",
+          "Jazz"
+        ],
+        "metadata": {
+          "duration": null,
+          "stereo": null,
+          "encoding": null,
+          "sampleFrq": null,
+          "sampleRes": null,
+          "country": null,
+          "statusText": null
+        }
+      },
+      {
+        "id": "3094",
+        "name": "101 Smooth Jazz",
+        "description": null,
+        "groupTitle": null,
+        "groups": [
+          "Smooth",
+          "Jazz"
+        ],
+        "url": "https://edge1.peta.live365.net/b22139_128mp3",
+        "logo": "http://101smoothjazz.com/favicon.ico",
+        "artist": null,
+        "lang": null,
+        "channels": null,
+        "country": null,
+        "favLists": [
+          "History",
+          "Jazz"
+        ],
+        "metadata": {
+          "duration": null,
+          "stereo": null,
+          "encoding": null,
+          "sampleFrq": null,
+          "sampleRes": null,
+          "country": null,
+          "statusText": null
+        }
+      },
+      {
+        "id": "8341",
+        "name": "FIP Jazz",
+        "description": null,
+        "groupTitle": null,
+        "groups": [
+          "French",
+          "Jazz"
+        ],
+        "url": "https://icecast.radiofrance.fr/fipjazz-hifi.aac",
+        "logo": "https://cdn.radiofrance.fr/s3/cruiser-production/2019/06/840a4431-0db0-4a94-aa28-53f8de011ab6/200x200_fip-jazz-01.jpg",
+        "artist": null,
+        "lang": "French",
+        "channels": null,
+        "country": null,
+        "favLists": [
+          "Jazz"
+        ],
+        "metadata": {
+          "duration": null,
+          "stereo": null,
+          "encoding": null,
+          "sampleFrq": null,
+          "sampleRes": null,
+          "country": null,
+          "statusText": null
+        }
+      },
+      {
+        "id": "18288",
+        "name": "Diana Krall",
+        "description": null,
+        "groupTitle": null,
+        "groups": [
+          "Artists"
+        ],
+        "url": "https://streaming.exclusive.radio/er/dianakrall/icecast.audio",
+        "logo": "https://manager.uber.radio/static/uploads/station/64da41ad-3742-4f62-907d-96f1cf11d81a.jpg",
+        "artist": "Diana Krall",
+        "lang": null,
+        "channels": null,
+        "country": null,
+        "favLists": [
+          "History",
+          "Jazz"
+        ],
+        "metadata": {
+          "duration": null,
+          "statusText": "playing"
+        },
+        "ref": {
+          "currentRDList": {
+            "listId": "List",
+            "name": "Jazz",
+            "$item": {
+              "0": {},
+              "length": 1
+            }
+          },
+          "currentTab": {
+            "listId": "Viz",
+            "tabId": "btn_wrp_logo"
+          }
+        }
+      },
+      {
+        "id": "13575",
+        "name": "80 Houyinyuetai",
+        "description": null,
+        "groupTitle": null,
+        "groups": [
+          "80s"
+        ],
+        "url": "http://lhttp.qingting.fm/live/20207761/64k.mp3",
+        "logo": "https://media.radiodeck.com/stations/5f74f2b3664ee8400841a0df/profile/606edba09175373112bdb158/xl.jpg",
+        "artist": null,
+        "lang": null,
+        "channels": null,
+        "country": null,
+        "favLists": [
+          "History",
+          "Jazz"
+        ],
+        "metadata": {
+          "duration": null,
+          "stereo": null,
+          "encoding": null,
+          "sampleFrq": null,
+          "sampleRes": null,
+          "country": null,
+          "statusText": null
+        }
+      },
+      {
+        "id": "10728",
+        "name": "Euro Smooth Jazz",
+        "description": null,
+        "groupTitle": null,
+        "groups": [
+          "Smooth",
+          "Jazz"
+        ],
+        "url": "http://eurosmoothjazz.stream.laut.fm/eurosmoothjazz?t302=2021-12-21_03-04-14&uuid=aefa5532-59b1-4df2-a8b6-7d749280505b",
+        "logo": "http://eurosmoothjazz.com/wp-content/themes/twentytwelve-eurosmoothjazz/apple-touch-icon-76x76.png",
+        "artist": null,
+        "lang": null,
+        "channels": null,
+        "country": null,
+        "favLists": [
+          "Jazz"
+        ],
+        "metadata": {
+          "duration": null,
+          "statusText": "playing"
+        },
+        "ref": {
+          "currentRDList": {
+            "listId": "List",
+            "name": "Jazz",
+            "$item": {
+              "0": {},
+              "length": 1
+            }
+          },
+          "currentTab": {
+            "listId": "List",
+            "tabId": "btn_wrp_play_list"
+          }
+        }
+      },
+      {
+        "id": "4055",
+        "name": "HitsRadio Smooth Jazz",
+        "description": null,
+        "groupTitle": null,
+        "groups": [
+          "Smooth",
+          "Jazz"
+        ],
+        "url": "https://playerservices.streamtheworld.com/api/livestream-redirect/977_SMOOJAZZ.mp3",
+        "logo": "https://www.hitsradio.com/img/default/hitsradio.png",
+        "artist": null,
+        "lang": null,
+        "channels": null,
+        "country": null,
+        "favLists": [
+          "Jazz"
+        ],
+        "metadata": {
+          "duration": null,
+          "stereo": null,
+          "encoding": null,
+          "sampleFrq": null,
+          "sampleRes": null,
+          "country": null,
+          "statusText": null
+        }
+      },
+      {
+        "id": "10120",
+        "name": "ON Smooth Jazz",
+        "description": null,
+        "groupTitle": null,
+        "groups": [
+          "Smooth",
+          "Jazz"
+        ],
+        "url": "https://0n-smoothjazz.radionetz.de/0n-smoothjazz.mp3",
+        "logo": "https://www.0nradio.com/images/favicon/favicon.ico",
+        "artist": null,
+        "lang": null,
+        "channels": null,
+        "country": null,
+        "favLists": [
+          "Jazz"
+        ],
+        "metadata": {
+          "duration": null,
+          "stereo": null,
+          "encoding": null,
+          "sampleFrq": null,
+          "sampleRes": null,
+          "country": null,
+          "statusText": null
+        }
+      },
+      {
+        "id": "11055",
+        "name": "Klassik Radio Smooth Jazz",
+        "description": null,
+        "groupTitle": null,
+        "groups": [
+          "Radio",
+          "Smooth",
+          "Jazz"
+        ],
+        "url": "http://klassikr.streamabc.net/klr-smooth-mp3-128-7968529?sABC=61p12qn4%230%23r4880qrn6s01nn6n263q843o4n00pqq9%23enqvbfher&amsparams=playerid:radiosure;skey:1640050084",
+        "logo": "http://cdn-radiotime-logos.tunein.com/s25028q.png",
+        "artist": null,
+        "lang": null,
+        "channels": null,
+        "country": null,
+        "favLists": [
+          "Jazz"
+        ],
+        "metadata": {
+          "duration": null,
+          "stereo": null,
+          "encoding": null,
+          "sampleFrq": null,
+          "sampleRes": null,
+          "country": null,
+          "statusText": null
+        }
+      },
+      {
+        "id": "18149",
+        "name": "Amy Winehouse",
+        "description": null,
+        "groupTitle": null,
+        "groups": [
+          "Artists"
+        ],
+        "url": "https://streaming.exclusive.radio/er/amywinehouse/icecast.audio",
+        "logo": "https://manager.uber.radio/static/uploads/station/649d1bc9-5b68-4003-af85-f7e8348126cf.jpg",
+        "artist": "Amy Winehouse",
+        "lang": null,
+        "channels": null,
+        "country": null,
+        "favLists": [
+          "Jazz"
+        ],
+        "metadata": {
+          "duration": null,
+          "stereo": null,
+          "encoding": null,
+          "sampleFrq": null,
+          "sampleRes": null,
+          "country": null,
+          "statusText": null
+        }
+      },
+      {
+        "id": "18150",
+        "name": "Amy Winehouse - Hits",
+        "description": null,
+        "groupTitle": null,
+        "groups": [
+          "Artists"
+        ],
+        "url": "https://streaming.exclusive.radio/er/amywinehousehits/icecast.audio",
+        "logo": "https://manager.uber.radio/static/uploads/station/b926828a-083f-456c-bbf2-0c3f8931ddaa.jpg",
+        "artist": "Amy Winehouse",
+        "lang": null,
+        "channels": null,
+        "country": null,
+        "favLists": [
+          "Jazz"
+        ],
+        "metadata": {
+          "duration": null,
+          "stereo": null,
+          "encoding": null,
+          "sampleFrq": null,
+          "sampleRes": null,
+          "country": null,
+          "statusText": null
+        }
+      },
+      {
+        "id": "18308",
+        "name": "Duke Ellington",
+        "description": null,
+        "groupTitle": null,
+        "groups": [
+          "Artists"
+        ],
+        "url": "https://streaming.exclusive.radio/er/dukeellington/icecast.audio",
+        "logo": "https://manager.uber.radio/static/uploads/station/2fbd9a6e-e48c-461c-a667-50f360a13f4a.jpg",
+        "artist": "Duke Ellington",
+        "lang": null,
+        "channels": null,
+        "country": null,
+        "favLists": [
+          "Jazz"
+        ],
+        "metadata": {
+          "duration": null,
+          "stereo": null,
+          "encoding": null,
+          "sampleFrq": null,
+          "sampleRes": null,
+          "country": null,
+          "statusText": null
+        }
+      },
+      {
+        "id": "18317",
+        "name": "Ella Fitzgerald",
+        "description": null,
+        "groupTitle": null,
+        "groups": [
+          "Artists"
+        ],
+        "url": "https://streaming.exclusive.radio/er/ellafitzgerald/icecast.audio",
+        "logo": "https://manager.uber.radio/static/uploads/station/5a9dbcbd-8bae-488a-8e04-5cf645c13562.jpg",
+        "artist": "Ella Fitzgerald",
+        "lang": null,
+        "channels": null,
+        "country": null,
+        "favLists": [
+          "Jazz"
+        ],
+        "metadata": {
+          "duration": null,
+          "stereo": null,
+          "encoding": null,
+          "sampleFrq": null,
+          "sampleRes": null,
+          "country": null,
+          "statusText": null
+        }
+      },
+      {
+        "id": "18536",
+        "name": "Norah Jones",
+        "description": null,
+        "groupTitle": null,
+        "groups": [
+          "Artists"
+        ],
+        "url": "https://streaming.exclusive.radio/er/norahjones/icecast.audio",
+        "logo": "https://manager.uber.radio/static/uploads/station/9776168b-277a-43d8-9bb4-2759976d28c5.jpg",
+        "artist": "Norah Jones",
+        "lang": null,
+        "channels": null,
+        "country": null,
+        "favLists": [
+          "Jazz"
+        ],
+        "metadata": {
+          "duration": null,
+          "stereo": null,
+          "encoding": null,
+          "sampleFrq": null,
+          "sampleRes": null,
+          "country": null,
+          "statusText": null
+        }
+      },
+      {
+        "id": "18534",
+        "name": "Nina Simone",
+        "description": null,
+        "groupTitle": null,
+        "groups": [
+          "Artists"
+        ],
+        "url": "https://streaming.exclusive.radio/er/ninasimone/icecast.audio",
+        "logo": "https://manager.uber.radio/static/uploads/station/222ca4a1-2954-41f3-afbc-43ba2c15bf37.jpg",
+        "artist": "Nina Simone",
+        "lang": null,
+        "channels": null,
+        "country": null,
+        "favLists": [
+          "Jazz"
+        ],
+        "metadata": {
+          "duration": null,
+          "stereo": null,
+          "encoding": null,
+          "sampleFrq": null,
+          "sampleRes": null,
+          "country": null,
+          "statusText": null
+        }
+      },
+      {
+        "id": "18485",
+        "name": "Louis Armstrong",
+        "description": null,
+        "groupTitle": null,
+        "groups": [
+          "Artists"
+        ],
+        "url": "https://streaming.exclusive.radio/er/louisarmstrong/icecast.audio",
+        "logo": "https://manager.uber.radio/static/uploads/station/9dd7f32f-79dc-42c5-b479-005ecdbe3483.jpg",
+        "artist": "Louis Armstrong",
+        "lang": null,
+        "channels": null,
+        "country": null,
+        "favLists": [
+          "Jazz"
+        ],
+        "metadata": {
+          "duration": null,
+          "stereo": null,
+          "encoding": null,
+          "sampleFrq": null,
+          "sampleRes": null,
+          "country": null,
+          "statusText": null
+        }
+      },
+      {
+        "id": "18418",
+        "name": "John Coltrane",
+        "description": null,
+        "groupTitle": null,
+        "groups": [
+          "Artists"
+        ],
+        "url": "https://streaming.exclusive.radio/er/johncoltrane/icecast.audio",
+        "logo": "https://manager.uber.radio/static/uploads/station/a6338885-fc0b-4295-809b-f265446cbcc3.jpg",
+        "artist": "John Coltrane",
+        "lang": null,
+        "channels": null,
+        "country": null,
+        "favLists": [
+          "Jazz"
+        ],
+        "metadata": {
+          "duration": null,
+          "stereo": null,
+          "encoding": null,
+          "sampleFrq": null,
+          "sampleRes": null,
+          "country": null,
+          "statusText": null
+        }
+      },
+      {
+        "id": "18384",
+        "name": "Herbie Hancock",
+        "description": null,
+        "groupTitle": null,
+        "groups": [
+          "Artists"
+        ],
+        "url": "https://streaming.exclusive.radio/er/herbiehancock/icecast.audio",
+        "logo": "https://manager.uber.radio/static/uploads/station/3363394a-cb41-4441-8a46-ca33962b18fe.jpg",
+        "artist": "Herbie Hancock",
+        "lang": null,
+        "channels": null,
+        "country": null,
+        "favLists": [
+          "Jazz"
+        ],
+        "metadata": {
+          "duration": null,
+          "stereo": null,
+          "encoding": null,
+          "sampleFrq": null,
+          "sampleRes": null,
+          "country": null,
+          "statusText": null
+        }
+      },
+      {
+        "id": "18368",
+        "name": "Glenn Miller",
+        "description": null,
+        "groupTitle": null,
+        "groups": [
+          "Artists"
+        ],
+        "url": "https://streaming.exclusive.radio/er/glennmiller/icecast.audio",
+        "logo": "https://manager.uber.radio/static/uploads/station/0a263053-ce9e-4a7d-9495-e8232839e07e.jpg",
+        "artist": "Glenn Miller",
+        "lang": null,
+        "channels": null,
+        "country": null,
+        "favLists": [
+          "Jazz"
+        ],
+        "metadata": {
+          "duration": null,
+          "stereo": null,
+          "encoding": null,
+          "sampleFrq": null,
+          "sampleRes": null,
+          "country": null,
+          "statusText": null
+        }
+      },
+      {
+        "id": "18291",
+        "name": "Dionne Warwick",
+        "description": null,
+        "groupTitle": null,
+        "groups": [
+          "Artists"
+        ],
+        "url": "https://streaming.exclusive.radio/er/dionnewarwick/icecast.audio",
+        "logo": "https://manager.uber.radio/static/uploads/station/3d7226ef-7d66-4a30-81a1-ea78f1800aea.jpg",
+        "artist": "Dionne Warwick",
+        "lang": null,
+        "channels": null,
+        "country": null,
+        "favLists": [
+          "Jazz"
+        ],
+        "metadata": {
+          "duration": null,
+          "stereo": null,
+          "encoding": null,
+          "sampleFrq": null,
+          "sampleRes": null,
+          "country": null,
+          "statusText": null
+        }
+      },
+      {
+        "id": "18290",
+        "name": "Diana Ross - Hits",
+        "description": null,
+        "groupTitle": null,
+        "groups": [
+          "Artists"
+        ],
+        "url": "https://streaming.exclusive.radio/er/dianarosshits/icecast.audio",
+        "logo": "https://manager.uber.radio/static/uploads/station/4ad0582b-7357-466f-bd19-3b64ace462bf.jpg",
+        "artist": "Diana Ross",
+        "lang": null,
+        "channels": null,
+        "country": null,
+        "favLists": [
+          "Jazz"
+        ],
+        "metadata": {
+          "duration": null,
+          "stereo": null,
+          "encoding": null,
+          "sampleFrq": null,
+          "sampleRes": null,
+          "country": null,
+          "statusText": null
+        }
+      },
+      {
+        "id": "18289",
+        "name": "Diana Ross",
+        "description": null,
+        "groupTitle": null,
+        "groups": [
+          "Artists"
+        ],
+        "url": "https://streaming.exclusive.radio/er/dianaross/icecast.audio",
+        "logo": "https://manager.uber.radio/static/uploads/station/2ab7a04b-e341-4575-ae59-27a3cab0ef2c.jpg",
+        "artist": "Diana Ross",
+        "lang": null,
+        "channels": null,
+        "country": null,
+        "favLists": [
+          "Jazz"
+        ],
+        "metadata": {
+          "duration": null,
+          "stereo": null,
+          "encoding": null,
+          "sampleFrq": null,
+          "sampleRes": null,
+          "country": null,
+          "statusText": null
+        }
+      },
+      {
+        "id": "18158",
+        "name": "Aretha Franklin",
+        "description": null,
+        "groupTitle": null,
+        "groups": [
+          "Artists"
+        ],
+        "url": "https://streaming.exclusive.radio/er/arethafranklin/icecast.audio",
+        "logo": "https://manager.uber.radio/static/uploads/station/41163ac0-baaa-460f-b96d-934bf4383dc2.jpg",
+        "artist": "Aretha Franklin",
+        "lang": null,
+        "channels": null,
+        "country": null,
+        "favLists": [
+          "Jazz"
+        ],
+        "metadata": {
+          "duration": null,
+          "stereo": null,
+          "encoding": null,
+          "sampleFrq": null,
+          "sampleRes": null,
+          "country": null,
+          "statusText": null
+        }
+      },
+      {
+        "id": "18159",
+        "name": "Aretha Franklin - Hits",
+        "description": null,
+        "groupTitle": null,
+        "groups": [
+          "Artists"
+        ],
+        "url": "https://streaming.exclusive.radio/er/arethafranklinhits/icecast.audio",
+        "logo": "https://manager.uber.radio/static/uploads/station/e607c244-6615-48f9-a2e0-38c3a787bfdf.jpg",
+        "artist": "Aretha Franklin",
+        "lang": null,
+        "channels": null,
+        "country": null,
+        "favLists": [
+          "Jazz"
+        ],
+        "metadata": {
+          "duration": null,
+          "stereo": null,
+          "encoding": null,
+          "sampleFrq": null,
+          "sampleRes": null,
+          "country": null,
+          "statusText": null
+        }
+      },
+      {
+        "id": "3095",
+        "name": "101 Smooth Jazz Mellow Mix",
+        "description": null,
+        "groupTitle": null,
+        "groups": [
+          "Smooth",
+          "Jazz",
+          "Mix"
+        ],
+        "url": "http://ais-sa5.cdnstream1.com/b48071_128mp3",
+        "logo": "http://www.101smoothjazz.com/favicon.ico",
+        "artist": null,
+        "lang": null,
+        "channels": null,
+        "country": null,
+        "favLists": [
+          "Jazz"
+        ],
+        "metadata": {
+          "duration": null,
+          "statusText": "playing"
+        },
+        "ref": {
+          "currentRDList": {
+            "listId": "List",
+            "name": "Jazz",
+            "$item": {
+              "0": {},
+              "length": 1
+            }
+          },
+          "currentTab": {
+            "listId": "Viz",
+            "tabId": "btn_wrp_logo"
+          }
+        }
+      },
+      {
+        "id": "18275",
+        "name": "Dave Brubeck",
+        "description": null,
+        "groupTitle": null,
+        "groups": [
+          "Artists"
+        ],
+        "url": "https://streaming.exclusive.radio/er/davebrubeck/icecast.audio",
+        "logo": "https://manager.uber.radio/static/uploads/station/15e5f117-a00a-4086-97c5-3cb4a1f3099c.jpg",
+        "artist": "Dave Brubeck",
+        "lang": null,
+        "channels": null,
+        "country": null,
+        "favLists": [
+          "Jazz"
+        ],
+        "metadata": {
+          "duration": null,
+          "stereo": null,
+          "encoding": null,
+          "sampleFrq": null,
+          "sampleRes": null,
+          "country": null,
+          "statusText": null
+        }
+      },
+      {
+        "id": "8475",
+        "name": "France Musique La Jazz",
+        "description": null,
+        "groupTitle": null,
+        "groups": [
+          "French",
+          "Jazz"
+        ],
+        "url": "https://icecast.radiofrance.fr/francemusiquelajazz-hifi.aac",
+        "logo": "https://cdn.radiofrance.fr/s3/cruiser-production/2017/06/09ee5fb8-7a84-48ec-97fa-daea307d9415/200x200_fmwebradiosnormaljazz.jpg",
+        "artist": null,
+        "lang": "French",
+        "channels": null,
+        "country": null,
+        "favLists": [
+          "Jazz"
+        ],
+        "metadata": {
+          "duration": null,
+          "stereo": null,
+          "encoding": null,
+          "sampleFrq": null,
+          "sampleRes": null,
+          "country": null,
+          "statusText": "connecting..."
+        },
+        "ref": {
+          "currentRDList": {
+            "listId": "List",
+            "name": "Jazz",
+            "$item": {
+              "0": {},
+              "length": 1
+            }
+          },
+          "currentTab": {
+            "listId": "Viz",
+            "tabId": "btn_wrp_logo"
+          }
+        }
+      },
+      {
+        "id": "18144",
+        "name": "Alison Moyet",
+        "description": null,
+        "groupTitle": null,
+        "groups": [
+          "Artists"
+        ],
+        "url": "https://streaming.exclusive.radio/er/alisonmoyet/icecast.audio",
+        "logo": "https://manager.uber.radio/static/uploads/station/40609ef5-9ee0-4105-be7c-3933440daa71.jpg",
+        "artist": "Alison Moyet",
+        "lang": null,
+        "channels": null,
+        "country": null,
+        "favLists": [
+          "Jazz"
+        ],
+        "metadata": {
+          "duration": null,
+          "stereo": null,
+          "encoding": null,
+          "sampleFrq": null,
+          "sampleRes": null,
+          "country": null,
+          "statusText": null
+        }
+      },
+      {
+        "id": "2063",
+        "name": "Instrumental Jazz",
+        "description": null,
+        "groupTitle": null,
+        "groups": [
+          "Instrumental",
+          "Jazz"
+        ],
+        "url": "https://jfm1.hostingradio.ru:14536/ijstream.mp3",
+        "logo": "https://radiojazzfm.ru/favicons/apple-touch-icon.png",
+        "artist": null,
+        "lang": null,
+        "channels": null,
+        "country": null,
+        "favLists": [
+          "Jazz"
         ],
         "metadata": {
           "duration": null,
