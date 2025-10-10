@@ -4,6 +4,448 @@
     "name": "History",
     "items": [
       {
+        "id": "20897",
+        "name": "Kiosk Radio",
+        "description": null,
+        "groupTitle": null,
+        "groups": [
+          "Mix"
+        ],
+        "url": "https://kioskradiobxl.out.airtime.pro/kioskradiobxl_b",
+        "logo": "https://kioskradio.com/images/logo.svg",
+        "artist": null,
+        "lang": null,
+        "channels": null,
+        "country": null,
+        "favLists": [
+          "Groove"
+        ],
+        "metadata": {
+          "duration": null,
+          "statusText": "playing"
+        },
+        "ref": {
+          "currentRDList": {
+            "listId": "List",
+            "name": "Groove",
+            "$item": {
+              "0": {},
+              "length": 1
+            }
+          },
+          "currentTab": {
+            "listId": "List",
+            "tabId": "btn_wrp_play_list"
+          }
+        }
+      },
+      {
+        "id": "20871",
+        "name": "chillout CROOZE",
+        "description": null,
+        "groupTitle": null,
+        "groups": [
+          "Ambient",
+          "Electro"
+        ],
+        "url": "http://streams.crooze.fm:8006/stream/1/",
+        "logo": "https://crooze.fm/wp-content/uploads/sites/3/2018/12/CHILLOUT-CROOZE-128x128.png",
+        "artist": null,
+        "lang": null,
+        "channels": null,
+        "country": null,
+        "favLists": [
+          "Lounge"
+        ],
+        "metadata": {
+          "duration": null,
+          "statusText": "playing"
+        },
+        "ref": {
+          "currentRDList": {
+            "listId": "List",
+            "name": "Lounge",
+            "$item": {
+              "0": {},
+              "length": 1
+            }
+          },
+          "currentTab": {
+            "listId": "Viz",
+            "tabId": "btn_wrp_logo"
+          }
+        }
+      },
+      {
+        "id": "8294",
+        "name": "Allzic Jazz Lounge",
+        "description": null,
+        "groupTitle": null,
+        "groups": [
+          "French",
+          "Jazz",
+          "Lounge"
+        ],
+        "url": "http://allzic03.ice.infomaniak.ch/allzic03.mp3",
+        "logo": "https://www.allzicradio.com/apple-touch-icon.png",
+        "artist": null,
+        "lang": "French",
+        "channels": null,
+        "country": null,
+        "favLists": [
+          "Lounge"
+        ],
+        "metadata": {
+          "duration": null,
+          "statusText": "playing"
+        },
+        "ref": {
+          "currentRDList": {
+            "listId": "List",
+            "name": "Lounge",
+            "$item": {
+              "0": {},
+              "length": 1
+            }
+          },
+          "currentTab": {
+            "listId": "Viz",
+            "tabId": "btn_wrp_logo"
+          }
+        }
+      },
+      {
+        "id": "11492",
+        "name": "POP LOUNGE CAFE",
+        "description": null,
+        "groupTitle": null,
+        "groups": [
+          "Pop",
+          "Lounge"
+        ],
+        "url": "http://poploungecafe.stream.laut.fm/poploungecafe?t302=2021-12-21_03-38-03&uuid=e6be5064-2a80-4aa3-8c3a-c6df1ffa2ca4",
+        "logo": "https://play-lh.googleusercontent.com/6RnorZH_6PZObYdLC4nBepeoVZD90SJ5iW1Edge_OHZ6VEMt6NgsuD9EPOY3HAMcEg=w240-h480-rw",
+        "artist": null,
+        "lang": null,
+        "channels": null,
+        "country": null,
+        "favLists": [
+          "Lounge"
+        ],
+        "metadata": {
+          "duration": null,
+          "statusText": "playing"
+        },
+        "ref": {
+          "currentRDList": {
+            "listId": "List",
+            "name": "Lounge",
+            "$item": {
+              "0": {},
+              "length": 1
+            }
+          },
+          "currentTab": {
+            "listId": "List",
+            "tabId": "btn_wrp_play_list"
+          }
+        }
+      },
+      {
+        "id": "12237",
+        "name": "Dr. Dick’s Dub Shack",
+        "description": null,
+        "groupTitle": null,
+        "groups": [
+          "Dub",
+          "Reggae",
+          "Roots"
+        ],
+        "url": "http://streamer.radio.co/s0635c8b0d/listen?fbclid=IwAR16t5mC5UFT9Fp8pbWe0dvYn9VEI3FYJTogE5AJtUF3G1dJi38lwLgD9as",
+        "logo": "http://drdicksdubshack.com/favicon.ico",
+        "artist": null,
+        "lang": null,
+        "channels": null,
+        "country": null,
+        "favLists": [
+          "History",
+          "DUB"
+        ],
+        "metadata": {
+          "duration": null,
+          "statusText": "playing"
+        },
+        "ref": {
+          "currentRDList": {
+            "listId": "List",
+            "name": "DUB",
+            "$item": {
+              "0": {},
+              "length": 1
+            }
+          },
+          "currentTab": {
+            "listId": "List",
+            "tabId": "btn_wrp_play_list"
+          }
+        }
+      },
+      {
+        "id": "3758",
+        "name": "Chill Lounge Florida",
+        "description": null,
+        "groupTitle": null,
+        "groups": [
+          "Lounge"
+        ],
+        "url": "https://vip2.fastcast4u.com/proxy/chillfla?mp=/1",
+        "logo": "https://img1.wsimg.com/isteam/stock/nzaDy9/:/cr=t:0%25,l:0%25,w:100%25,h:100%25/rs=h:500,cg:true",
+        "artist": null,
+        "lang": null,
+        "channels": null,
+        "country": null,
+        "favLists": [
+          "Lounge"
+        ],
+        "metadata": {
+          "duration": null,
+          "statusText": "playing"
+        },
+        "ref": {
+          "currentRDList": {
+            "listId": "List",
+            "name": "Lounge",
+            "$item": {
+              "0": {},
+              "length": 1
+            }
+          },
+          "currentTab": {
+            "listId": "Viz",
+            "tabId": "btn_wrp_logo"
+          }
+        }
+      },
+      {
+        "id": "17813",
+        "name": "1.FM Chillout Lounge Radio",
+        "description": null,
+        "groupTitle": null,
+        "groups": [
+          "Radio",
+          "Lounge"
+        ],
+        "url": "http://strm112.1.fm/chilloutlounge_mobile_mp3",
+        "logo": "http://liveradio.de/media/cache/station_detail/18f08aee-f06b-4965-b607-3f25a581619c.jpg",
+        "artist": null,
+        "lang": null,
+        "channels": null,
+        "country": null,
+        "favLists": [
+          "Lounge"
+        ],
+        "metadata": {
+          "duration": null,
+          "statusText": "playing"
+        },
+        "ref": {
+          "currentRDList": {
+            "listId": "List",
+            "name": "Lounge",
+            "$item": {
+              "0": {},
+              "length": 1
+            }
+          },
+          "currentTab": {
+            "listId": "Viz",
+            "tabId": "btn_wrp_logo"
+          }
+        }
+      },
+      {
+        "id": "11426",
+        "name": "NORA Oldies",
+        "description": null,
+        "groupTitle": null,
+        "groups": [
+          "Oldies"
+        ],
+        "url": "http://norawebstreams-stream22.radiohost.de/nora-oldies_mp3-128?sabc=61p21qs6%230%232qqpnss01895rqr0s8oq129o03s183o0%23ubzrcntr&amsparams=playerid:homepage;skey:1640111606&listenerrmid=31363430313131363036-326130333a343030303a33373a34323a633466653a346366663a666561373a38393431-3435343330-53747265616d436865636b426f742f302e312e30",
+        "logo": "http://www.norawebstreams.de/_nuxt/icons/icon_64.a8000000000.png",
+        "artist": null,
+        "lang": null,
+        "channels": null,
+        "country": null,
+        "favLists": [
+          "History",
+          "Pop"
+        ],
+        "metadata": {
+          "duration": null,
+          "statusText": "playing"
+        },
+        "ref": {
+          "currentRDList": {
+            "listId": "List",
+            "name": "Pop",
+            "$item": {
+              "0": {},
+              "length": 1
+            }
+          },
+          "currentTab": {
+            "listId": "Viz",
+            "tabId": "btn_wrp_logo"
+          }
+        }
+      },
+      {
+        "id": "21329",
+        "name": "Fleurieu 89.3 FM",
+        "description": null,
+        "groupTitle": null,
+        "groups": [
+          "Community",
+          "Variety"
+        ],
+        "url": "https://stream.sigile.net/live/fleurieufm-128-mp3",
+        "logo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQm1S7lAwdJZ9_XQnLnCfO5f-Uv3dy1BXAdOA&s",
+        "artist": null,
+        "lang": null,
+        "channels": null,
+        "country": null,
+        "favLists": [
+          "History",
+          "Pop"
+        ],
+        "metadata": {
+          "duration": null,
+          "statusText": "playing"
+        },
+        "ref": {
+          "currentRDList": {
+            "listId": "List",
+            "name": "Pop",
+            "$item": {
+              "0": {},
+              "length": 1
+            }
+          },
+          "currentTab": {
+            "listId": "List",
+            "tabId": "btn_wrp_play_list"
+          }
+        }
+      },
+      {
+        "id": "20964",
+        "name": "Radio KIF 97.8",
+        "description": null,
+        "groupTitle": null,
+        "groups": [
+          "Hip Hop",
+          "R'N'B",
+          "Rap"
+        ],
+        "url": "https://broadcast.sksgroup.com/kif_mp3",
+        "logo": "https://assets.radioplayer.org/056/0561133/600/600/kyess3iv.png",
+        "artist": null,
+        "lang": null,
+        "channels": null,
+        "country": null,
+        "favLists": [],
+        "metadata": {
+          "duration": null
+        },
+        "ref": {
+          "currentRDList": {
+            "listId": "List",
+            "name": "History",
+            "$item": {
+              "0": {},
+              "length": 1
+            }
+          },
+          "currentTab": {
+            "listId": "List",
+            "tabId": "btn_wrp_play_list"
+          }
+        }
+      },
+      {
+        "id": "17210",
+        "name": "Motsweding FM",
+        "description": null,
+        "groupTitle": null,
+        "groups": [
+          "Blues",
+          "R'N'B",
+          "Soul"
+        ],
+        "url": "http://28933.live.streamtheworld.com/MOTSWEDINGAAC.aac",
+        "logo": "https://static.mytuner.mobi/media/tvos_radios/mcT8nm7JPJ.png",
+        "artist": null,
+        "lang": null,
+        "channels": null,
+        "country": null,
+        "favLists": [],
+        "metadata": {
+          "duration": null
+        },
+        "ref": {
+          "currentRDList": {
+            "listId": "List",
+            "name": "History",
+            "$item": {
+              "0": {},
+              "length": 1
+            }
+          },
+          "currentTab": {
+            "listId": "Viz",
+            "tabId": "btn_wrp_logo"
+          }
+        }
+      },
+      {
+        "id": "21335",
+        "name": "Gold 1611",
+        "description": null,
+        "groupTitle": null,
+        "groups": [
+          "Hits",
+          "Oldies"
+        ],
+        "url": "https://ic2666.c2017.fastserv.com/GoldMX1",
+        "logo": "https://static-media.streema.com/media/cache/34/7b/347b242b67913e5929ee015554066c6f.png",
+        "artist": null,
+        "lang": null,
+        "channels": null,
+        "country": null,
+        "favLists": [
+          "History"
+        ],
+        "metadata": {
+          "duration": null,
+          "statusText": "connecting..."
+        },
+        "ref": {
+          "currentRDList": {
+            "listId": "List",
+            "name": "History",
+            "$item": {
+              "0": {},
+              "length": 1
+            }
+          },
+          "currentTab": {
+            "listId": "Viz",
+            "tabId": "btn_wrp_logo"
+          }
+        }
+      },
+      {
         "id": "7415",
         "name": "Galaxie Lounge",
         "description": null,
@@ -40,6 +482,1085 @@
         }
       },
       {
+        "id": "10598",
+        "name": "Cosmo Afro Beats",
+        "description": null,
+        "groupTitle": null,
+        "groups": [
+          "Afro"
+        ],
+        "url": "https://d111.rndfnk.com/ard/wdr/cosmo/afrobeat/mp3/128/stream.mp3?sid=22baLPW5cRxAqadp1TE8EsO2KZ3&token=yZkqgf6OCq-mEelPR8xZ3UHeEIcbaCZ9eI0dl1QJNDI&tvf=DUeVos3pwhZkMTExLnJuZGZuay5jb20",
+        "logo": "https://www1.wdr.de/radio/1live/musik/heimatkult/akua-naru-202~_v-ARDAustauschformats.jpg",
+        "artist": null,
+        "lang": null,
+        "channels": null,
+        "country": null,
+        "favLists": [
+          "Groove"
+        ],
+        "metadata": {
+          "duration": null,
+          "stereo": null,
+          "encoding": null,
+          "sampleFrq": null,
+          "sampleRes": null,
+          "country": null,
+          "statusText": null
+        }
+      },
+      {
+        "id": "17290",
+        "name": "Menya Live Online Radio",
+        "description": null,
+        "groupTitle": null,
+        "groups": [
+          "Afrikaans",
+          "Kirundi",
+          "Variety"
+        ],
+        "url": "https://stream-176.zeno.fm/387qyxsn0c9uv",
+        "logo": "https://proxy.zeno.fm/content/stations/agxzfnplbm8tc3RhdHNyMgsSCkF1dGhDbGllbnQYgIDgwcSl3gkMCxIOU3RhdGlvblByb2ZpbGUYgIDwidvK6AgMogEEemVubw/image/?u=1724769302000",
+        "artist": null,
+        "lang": "Kirundi",
+        "channels": null,
+        "country": null,
+        "favLists": [
+          "Exotique"
+        ],
+        "metadata": {
+          "duration": null,
+          "stereo": null,
+          "encoding": null,
+          "sampleFrq": null,
+          "sampleRes": null,
+          "country": null,
+          "statusText": null
+        }
+      },
+      {
+        "id": "21360",
+        "name": "Koori Radio 93.7",
+        "description": null,
+        "groupTitle": null,
+        "groups": [
+          "Aboriginal",
+          "Indigenous"
+        ],
+        "url": "https://playerservices.streamtheworld.com/api/livestream-redirect/2LNDAAC.aac",
+        "logo": "https://www.kooriradio.com/favicon.ico",
+        "artist": null,
+        "lang": null,
+        "channels": null,
+        "country": null,
+        "favLists": [
+          "Exotique"
+        ],
+        "metadata": {
+          "duration": null,
+          "stereo": null,
+          "encoding": null,
+          "sampleFrq": null,
+          "sampleRes": null,
+          "country": null,
+          "statusText": null
+        }
+      },
+      {
+        "id": "7157",
+        "name": "La Retro 80s Chile",
+        "description": null,
+        "groupTitle": null,
+        "groups": [
+          "Oldies",
+          "80s"
+        ],
+        "url": "https://s2.radio.co:80/s9ecef4f68/listen",
+        "logo": "https://www.laretro.cl/img/cass2.svg",
+        "artist": null,
+        "lang": null,
+        "channels": null,
+        "country": null,
+        "favLists": [
+          "Années 80"
+        ],
+        "metadata": {
+          "duration": null,
+          "stereo": null,
+          "encoding": null,
+          "sampleFrq": null,
+          "sampleRes": null,
+          "country": null,
+          "statusText": null
+        }
+      },
+      {
+        "id": "21331",
+        "name": "Fresh 92.7",
+        "description": null,
+        "groupTitle": null,
+        "groups": [
+          "Community",
+          "Pop"
+        ],
+        "url": "https://live.fresh927.com.au/freshaac",
+        "logo": "https://fresh927.com.au/wp-content/uploads/2014/08/Fresh_favicon.png",
+        "artist": null,
+        "lang": null,
+        "channels": null,
+        "country": null,
+        "favLists": [
+          "History"
+        ],
+        "metadata": {
+          "duration": null,
+          "stereo": null,
+          "encoding": null,
+          "sampleFrq": null,
+          "sampleRes": null,
+          "country": null,
+          "statusText": null
+        }
+      },
+      {
+        "id": "20742",
+        "name": "LoungeFM 100% Austria",
+        "description": null,
+        "groupTitle": null,
+        "groups": [
+          "Lounge",
+          "Lounge"
+        ],
+        "url": "https://s35.derstream.net/100austria.mp3",
+        "logo": "https://www.allzicradio.com/media/radios/c17511.png",
+        "artist": null,
+        "lang": null,
+        "channels": null,
+        "country": null,
+        "favLists": [
+          "History",
+          "Lounge"
+        ],
+        "metadata": {
+          "duration": null,
+          "statusText": "playing"
+        },
+        "ref": {
+          "currentRDList": {
+            "listId": "List",
+            "name": "Lounge",
+            "$item": {
+              "0": {},
+              "length": 1
+            }
+          },
+          "currentTab": {
+            "listId": "Viz",
+            "tabId": "btn_wrp_logo"
+          }
+        }
+      },
+      {
+        "id": "6960",
+        "name": "Radio The Best Mix",
+        "description": null,
+        "groupTitle": null,
+        "groups": [
+          "Radio",
+          "Mix"
+        ],
+        "url": "http://stream.zeno.fm/v1qe5y1vetzuv?rj-ttl=5&rj-tok=AAABfd4j0BUAa7AxGoaJGlESWw",
+        "logo": "https://myradioenvivo.pe/public/uploads/radio_img/radio-mix/fb_cover.jpg",
+        "artist": null,
+        "lang": null,
+        "channels": null,
+        "country": null,
+        "favLists": [
+          "History"
+        ],
+        "metadata": {
+          "duration": null,
+          "stereo": null,
+          "encoding": null,
+          "sampleFrq": null,
+          "sampleRes": null,
+          "country": null,
+          "statusText": null
+        }
+      },
+      {
+        "id": "17902",
+        "name": "my105 DJ Mixes",
+        "description": null,
+        "groupTitle": null,
+        "groups": [
+          "Mix"
+        ],
+        "url": "http://stream01.my105.ch/my105djnights.mp3",
+        "logo": "http://www.my105.ch/fileadmin/templates/img/my105_logo.jpg",
+        "artist": null,
+        "lang": null,
+        "channels": null,
+        "country": null,
+        "favLists": [
+          "History",
+          "Pop"
+        ],
+        "metadata": {
+          "duration": null,
+          "stereo": null,
+          "encoding": null,
+          "sampleFrq": null,
+          "sampleRes": null,
+          "country": null,
+          "statusText": null
+        }
+      },
+      {
+        "id": "10359",
+        "name": "Antenne Bayern Lounge",
+        "description": null,
+        "groupTitle": null,
+        "groups": [
+          "Radio",
+          "Deutsch",
+          "Lounge"
+        ],
+        "url": "http://s3-webradio.antenne.de/lounge/stream/aacp",
+        "logo": "https://www.radio.net/images/broadcasts/0d/91/124497/10/c300.png",
+        "artist": null,
+        "lang": "Deutsch",
+        "channels": null,
+        "country": null,
+        "favLists": [
+          "Lounge"
+        ],
+        "metadata": {
+          "duration": null,
+          "statusText": "playing"
+        },
+        "ref": {
+          "currentRDList": {
+            "listId": "List",
+            "name": "Lounge",
+            "$item": {
+              "0": {},
+              "length": 1
+            }
+          },
+          "currentTab": {
+            "listId": "Viz",
+            "tabId": "btn_wrp_logo"
+          }
+        }
+      },
+      {
+        "id": "10462",
+        "name": "BDJ Electronic Lounge Radio",
+        "description": null,
+        "groupTitle": null,
+        "groups": [
+          "Electro",
+          "Lounge",
+          "Radio"
+        ],
+        "url": "https://bdjelectronicloungeradio.stream.laut.fm/bdj_electronic_lounge_radio?t302=2021-12-21_03-06-52&uuid=d628e7da-1d91-4911-8472-23df039fa65f",
+        "logo": "http://www.bdjradio.com/assets/bdj-favicon-2.png?v=2",
+        "artist": null,
+        "lang": null,
+        "channels": null,
+        "country": null,
+        "favLists": [
+          "Lounge"
+        ],
+        "metadata": {
+          "duration": null,
+          "statusText": "playing"
+        },
+        "ref": {
+          "currentRDList": {
+            "listId": "List",
+            "name": "Lounge",
+            "$item": {
+              "0": {},
+              "length": 1
+            }
+          },
+          "currentTab": {
+            "listId": "Viz",
+            "tabId": "btn_wrp_logo"
+          }
+        }
+      },
+      {
+        "id": "3786",
+        "name": "Classic Oldies",
+        "description": null,
+        "groupTitle": null,
+        "groups": [
+          "Classic",
+          "Oldies"
+        ],
+        "url": "http://streaming.radio.co/s88a0bddf2/listen",
+        "logo": "https://www.radio.net/images/broadcasts/19/06/106732/1/c300.png",
+        "artist": null,
+        "lang": null,
+        "channels": null,
+        "country": null,
+        "favLists": [
+          "Oldies but goodies"
+        ],
+        "metadata": {
+          "duration": null,
+          "stereo": null,
+          "encoding": null,
+          "sampleFrq": null,
+          "sampleRes": null,
+          "country": null,
+          "statusText": null
+        }
+      },
+      {
+        "id": "17797",
+        "name": "1.FM Afterbeat Electronica Radio",
+        "description": null,
+        "groupTitle": null,
+        "groups": [
+          "Radio",
+          "Electro"
+        ],
+        "url": "http://strm112.1.fm/electronica_mobile_mp3",
+        "logo": "http://liveradio.de/media/cache/station_detail/18f08aee-f06b-4965-b607-3f25a581619c.jpg",
+        "artist": null,
+        "lang": null,
+        "channels": null,
+        "country": null,
+        "favLists": [
+          "Electro"
+        ],
+        "metadata": {
+          "duration": null,
+          "stereo": null,
+          "encoding": null,
+          "sampleFrq": null,
+          "sampleRes": null,
+          "country": null,
+          "statusText": null
+        }
+      },
+      {
+        "id": "3274",
+        "name": "181.FM Reggae Roots",
+        "description": null,
+        "groupTitle": null,
+        "groups": [
+          "Radio",
+          "Reggae",
+          "Roots",
+          "French"
+        ],
+        "url": "http://listen.181fm.com/181-reggae_128k.mp3",
+        "logo": "http://www.181.fm/images/playerlanding/181.FM.jpg",
+        "artist": null,
+        "lang": "French",
+        "channels": null,
+        "country": null,
+        "favLists": [
+          "History",
+          "Reggae"
+        ],
+        "metadata": {
+          "duration": null,
+          "stereo": null,
+          "encoding": null,
+          "sampleFrq": null,
+          "sampleRes": null,
+          "country": null,
+          "statusText": null
+        }
+      },
+      {
+        "id": "3403",
+        "name": "KCVM 93.5 The Mix",
+        "description": null,
+        "groupTitle": null,
+        "groups": [
+          "Mix"
+        ],
+        "url": "https://ice7.securenetsystems.net/THEMIX",
+        "logo": "https://radiostationusa.fm/assets/image/radio/180/KCVM.png",
+        "artist": null,
+        "lang": null,
+        "channels": null,
+        "country": null,
+        "favLists": [
+          "Pop"
+        ],
+        "metadata": {
+          "duration": null,
+          "stereo": null,
+          "encoding": null,
+          "sampleFrq": null,
+          "sampleRes": null,
+          "country": null,
+          "statusText": null
+        }
+      },
+      {
+        "id": "1892",
+        "name": "P24-7 Mix",
+        "description": null,
+        "groupTitle": null,
+        "groups": [
+          "Mix"
+        ],
+        "url": "https://live-bauerno.sharp-stream.com/p247mix_no_mp3",
+        "logo": "https://assets.planetradio.co.uk/img/ConfigWebListenBarLogoImageUrl/342.jpg",
+        "artist": null,
+        "lang": null,
+        "channels": null,
+        "country": null,
+        "favLists": [
+          "Pop"
+        ],
+        "metadata": {
+          "duration": null,
+          "stereo": null,
+          "encoding": null,
+          "sampleFrq": null,
+          "sampleRes": null,
+          "country": null,
+          "statusText": null
+        }
+      },
+      {
+        "id": "11242",
+        "name": "Maretimo Lounge",
+        "description": null,
+        "groupTitle": null,
+        "groups": [
+          "Lounge"
+        ],
+        "url": "https://s35.derstream.net/lounge.mp3",
+        "logo": "https://d3kle7qwymxpcy.cloudfront.net/images/broadcasts/08/a3/107873/5/c175.png",
+        "artist": null,
+        "lang": null,
+        "channels": null,
+        "country": null,
+        "favLists": [
+          "Groove"
+        ],
+        "metadata": {
+          "duration": null,
+          "statusText": "playing"
+        },
+        "ref": {
+          "currentRDList": {
+            "listId": "List",
+            "name": "Groove",
+            "$item": {
+              "0": {},
+              "length": 1
+            }
+          },
+          "currentTab": {
+            "listId": "Viz",
+            "tabId": "btn_wrp_logo"
+          }
+        }
+      },
+      {
+        "id": "7419",
+        "name": "Galaxie Mix",
+        "description": null,
+        "groupTitle": null,
+        "groups": [
+          "Mix"
+        ],
+        "url": "https://listen.radioking.com/radio/187063/stream/229186",
+        "logo": "https://static.mytuner.mobi/media/tvos_radios/xjqlagpksykv.jpg",
+        "artist": null,
+        "lang": null,
+        "channels": null,
+        "country": null,
+        "favLists": [
+          "Groove"
+        ],
+        "metadata": {
+          "duration": null,
+          "statusText": "playing"
+        },
+        "ref": {
+          "currentRDList": {
+            "listId": "List",
+            "name": "Groove",
+            "$item": {
+              "0": {},
+              "length": 1
+            }
+          },
+          "currentTab": {
+            "listId": "Viz",
+            "tabId": "btn_wrp_logo"
+          }
+        }
+      },
+      {
+        "id": "2332",
+        "name": "Radio Record Russian Mix",
+        "description": null,
+        "groupTitle": null,
+        "groups": [
+          "Radio",
+          "Russian",
+          "Mix"
+        ],
+        "url": "https://radiorecord.hostingradio.ru/rus96.aacp",
+        "logo": "https://www.radiorecord.ru/components/Header/img/desktop_logo.png?109479708dc38d9dd97e6d8093e6bc65",
+        "artist": null,
+        "lang": "Russian",
+        "channels": null,
+        "country": null,
+        "favLists": [
+          "Groove"
+        ],
+        "metadata": {
+          "duration": null,
+          "statusText": "playing"
+        },
+        "ref": {
+          "currentRDList": {
+            "listId": "List",
+            "name": "Groove",
+            "$item": {
+              "0": {},
+              "length": 1
+            }
+          },
+          "currentTab": {
+            "listId": "Viz",
+            "tabId": "btn_wrp_logo"
+          }
+        }
+      },
+      {
+        "id": "7421",
+        "name": "Génération Mix",
+        "description": null,
+        "groupTitle": null,
+        "groups": [
+          "Mix"
+        ],
+        "url": "https://ecmanager2.pro-fhi.net/generationmix",
+        "logo": "https://www.radio.fr/images/broadcasts/62/e7/139914/1/c300.png",
+        "artist": null,
+        "lang": null,
+        "channels": null,
+        "country": null,
+        "favLists": [
+          "Groove"
+        ],
+        "metadata": {
+          "duration": null,
+          "statusText": "playing"
+        },
+        "ref": {
+          "currentRDList": {
+            "listId": "List",
+            "name": "Groove",
+            "$item": {
+              "0": {},
+              "length": 1
+            }
+          },
+          "currentTab": {
+            "listId": "Viz",
+            "tabId": "btn_wrp_logo"
+          }
+        }
+      },
+      {
+        "id": "18190",
+        "name": "Big Country",
+        "description": null,
+        "groupTitle": null,
+        "groups": [
+          "Artists"
+        ],
+        "url": "https://streaming.exclusive.radio/er/bigcountry/icecast.audio",
+        "logo": "https://manager.uber.radio/static/uploads/station/9546a7bb-6ff4-4c6a-a15a-6b667260bf55.jpg",
+        "artist": "Big Country",
+        "lang": null,
+        "channels": null,
+        "country": null,
+        "favLists": [
+          "History"
+        ],
+        "metadata": {
+          "duration": null,
+          "stereo": null,
+          "encoding": null,
+          "sampleFrq": null,
+          "sampleRes": null,
+          "country": null,
+          "statusText": null
+        }
+      },
+      {
+        "id": "18178",
+        "name": "Barry White - Hits",
+        "description": null,
+        "groupTitle": null,
+        "groups": [
+          "Artists"
+        ],
+        "url": "https://streaming.exclusive.radio/er/barrywhitehits/icecast.audio",
+        "logo": "https://manager.uber.radio/static/uploads/station/c0f0d3a2-c68e-45e3-a6e8-6f65811bb271.jpg",
+        "artist": "Barry White",
+        "lang": null,
+        "channels": null,
+        "country": null,
+        "favLists": [
+          "Crooners"
+        ],
+        "metadata": {
+          "duration": null,
+          "stereo": null,
+          "encoding": null,
+          "sampleFrq": null,
+          "sampleRes": null,
+          "country": null,
+          "statusText": null
+        }
+      },
+      {
+        "id": "19864",
+        "name": "1 Slow-Radio laut.fm",
+        "description": null,
+        "groupTitle": null,
+        "groups": [
+          "Radio"
+        ],
+        "url": "https://1slowradio.stream.laut.fm/1_slowradio",
+        "logo": "https://assets.laut.fm/9670c7c141ede546101df1cdfe18e0b4?t=_640x640",
+        "artist": null,
+        "lang": null,
+        "channels": null,
+        "country": null,
+        "favLists": [
+          "Slows & Love Songs"
+        ],
+        "metadata": {
+          "duration": null,
+          "stereo": null,
+          "encoding": null,
+          "sampleFrq": null,
+          "sampleRes": null,
+          "country": null,
+          "statusText": null
+        }
+      },
+      {
+        "id": "4917",
+        "name": "Love Radio Only Love Songs 70s 80s 90s",
+        "description": null,
+        "groupTitle": null,
+        "groups": [
+          "Love",
+          "Radio",
+          "Songs",
+          "70s",
+          "80s",
+          "90s"
+        ],
+        "url": "https://loveradio.streamingmedia.it/usa",
+        "logo": "https://love.radio/loveradio_logo.png",
+        "artist": null,
+        "lang": null,
+        "channels": null,
+        "country": null,
+        "favLists": [
+          "Slows & Love Songs"
+        ],
+        "metadata": {
+          "duration": null,
+          "stereo": null,
+          "encoding": null,
+          "sampleFrq": null,
+          "sampleRes": null,
+          "country": null,
+          "statusText": null
+        }
+      },
+      {
+        "id": "19787",
+        "name": "Taiwan Lounge Radio",
+        "description": null,
+        "groupTitle": null,
+        "groups": [
+          "Lounge",
+          "Radio"
+        ],
+        "url": "https://azuracast.conceptradio.fr/radio/8030/stream.mp3",
+        "logo": "http://www.taiwan-lounge.com/site/images/logo.jpg",
+        "artist": null,
+        "lang": null,
+        "channels": null,
+        "country": null,
+        "favLists": [
+          "Lounge"
+        ],
+        "metadata": {
+          "duration": null,
+          "statusText": "playing"
+        },
+        "ref": {
+          "currentRDList": {
+            "listId": "List",
+            "name": "Lounge",
+            "$item": {
+              "0": {},
+              "length": 1
+            }
+          },
+          "currentTab": {
+            "listId": "List",
+            "tabId": "btn_wrp_play_list"
+          }
+        }
+      },
+      {
+        "id": "5358",
+        "name": "Retro Hit Mix",
+        "description": null,
+        "groupTitle": null,
+        "groups": [
+          "Oldies",
+          "Hits",
+          "Mix"
+        ],
+        "url": "http://hestia.cdnstream.com/1340_128",
+        "logo": "https://static.wixstatic.com/media/bab08c_d1b0665eb22f4b048b9c8be23ef28b24~mv2_d_3133_1929_s_2.png/v1/crop/x_0,y_73,w_3133,h_1792/fill/w_343,h_196,al_c,usm_0.66_1.00_0.01/bab08c_d1b0665eb22f4b048b9c8be23ef28b24~mv2_d_3133_1929_s_2.png",
+        "artist": null,
+        "lang": null,
+        "channels": null,
+        "country": null,
+        "favLists": [
+          "Pop"
+        ],
+        "metadata": {
+          "duration": null,
+          "stereo": null,
+          "encoding": null,
+          "sampleFrq": null,
+          "sampleRes": null,
+          "country": null,
+          "statusText": null
+        }
+      },
+      {
+        "id": "18525",
+        "name": "Neha Kakkar",
+        "description": null,
+        "groupTitle": null,
+        "groups": [
+          "Artists"
+        ],
+        "url": "https://drive.uber.radio/uber/bollywoodneharkakkar/icecast.audio",
+        "logo": "https://manager.uber.radio/static/uploads/station/6cf82e50-678d-4af2-8718-baafd949834b.jpg",
+        "artist": "Neha Kakkar",
+        "lang": null,
+        "channels": null,
+        "country": null,
+        "favLists": [
+          "Indien"
+        ],
+        "metadata": {
+          "duration": null,
+          "stereo": null,
+          "encoding": null,
+          "sampleFrq": null,
+          "sampleRes": null,
+          "country": null,
+          "statusText": null
+        }
+      },
+      {
+        "id": "10713",
+        "name": "ElectroZombies",
+        "description": null,
+        "groupTitle": null,
+        "groups": [
+          "Electro"
+        ],
+        "url": "http://electrozombies.stream.laut.fm/electrozombies?t302=2021-12-21_02-42-35&uuid=f829707f-f917-4ec8-82d6-8b641e79f803",
+        "logo": "https://electrozombies.com/wp-content/uploads/2015/09/electrozombies_icon.jpg",
+        "artist": null,
+        "lang": null,
+        "channels": null,
+        "country": null,
+        "favLists": [
+          "Pop"
+        ],
+        "metadata": {
+          "duration": null,
+          "stereo": null,
+          "encoding": null,
+          "sampleFrq": null,
+          "sampleRes": null,
+          "country": null,
+          "statusText": null
+        }
+      },
+      {
+        "id": "18145",
+        "name": "Alka Yagnik",
+        "description": null,
+        "groupTitle": null,
+        "groups": [
+          "Artists"
+        ],
+        "url": "https://drive.uber.radio/uber/bollywoodalkayagnik/icecast.audio",
+        "logo": "https://manager.uber.radio/static/uploads/station/4a259d43-af38-4a2a-af32-a04281d45676.jpg",
+        "artist": "Alka Yagnik",
+        "lang": null,
+        "channels": null,
+        "country": null,
+        "favLists": [
+          "History",
+          "Indien"
+        ],
+        "metadata": {
+          "duration": null,
+          "stereo": null,
+          "encoding": null,
+          "sampleFrq": null,
+          "sampleRes": null,
+          "country": null,
+          "statusText": null
+        }
+      },
+      {
+        "id": "20894",
+        "name": "Instrumentals Forever",
+        "description": null,
+        "groupTitle": null,
+        "groups": [
+          "Big Band",
+          "Instrumental"
+        ],
+        "url": "http://quincy.torontocast.com:1920/stream",
+        "logo": "https://instrumentalsforever.eu/favicon.ico",
+        "artist": null,
+        "lang": null,
+        "channels": null,
+        "country": null,
+        "favLists": [
+          "History"
+        ],
+        "metadata": {
+          "duration": null,
+          "stereo": null,
+          "encoding": null,
+          "sampleFrq": null,
+          "sampleRes": null,
+          "country": null,
+          "statusText": null
+        }
+      },
+      {
+        "id": "2063",
+        "name": "Instrumental Jazz",
+        "description": null,
+        "groupTitle": null,
+        "groups": [
+          "Instrumental",
+          "Jazz"
+        ],
+        "url": "https://jfm1.hostingradio.ru:14536/ijstream.mp3",
+        "logo": "https://radiojazzfm.ru/favicons/apple-touch-icon.png",
+        "artist": null,
+        "lang": null,
+        "channels": null,
+        "country": null,
+        "favLists": [
+          "Jazz"
+        ],
+        "metadata": {
+          "duration": null,
+          "stereo": null,
+          "encoding": null,
+          "sampleFrq": null,
+          "sampleRes": null,
+          "country": null,
+          "statusText": null
+        }
+      },
+      {
+        "id": "20893",
+        "name": "Instrumentals Forever",
+        "description": null,
+        "groupTitle": null,
+        "groups": [
+          "Big Band",
+          "Instrumental"
+        ],
+        "url": "http://quincy.torontocast.com:1910/stream",
+        "logo": "https://instrumentalsforever.eu/favicon.ico",
+        "artist": null,
+        "lang": null,
+        "channels": null,
+        "country": null,
+        "favLists": [
+          "History",
+          "Instrumental"
+        ],
+        "metadata": {
+          "duration": null,
+          "stereo": null,
+          "encoding": null,
+          "sampleFrq": null,
+          "sampleRes": null,
+          "country": null,
+          "statusText": null
+        }
+      },
+      {
+        "id": "12123",
+        "name": "Total Instrumental",
+        "description": null,
+        "groupTitle": null,
+        "groups": [
+          "Instrumental"
+        ],
+        "url": "http://total-instrumental.stream.laut.fm/total-instrumental?t302=2021-12-21_18-33-12&uuid=99ea5c76-a3e7-47bf-b3eb-4db00f7c8b21",
+        "logo": "http://files.radio-total-instrumental.de/200000242-0a7490b6f8/favicon.ico",
+        "artist": null,
+        "lang": null,
+        "channels": null,
+        "country": null,
+        "favLists": [
+          "Instrumental"
+        ],
+        "metadata": {
+          "duration": null,
+          "stereo": null,
+          "encoding": null,
+          "sampleFrq": null,
+          "sampleRes": null,
+          "country": null,
+          "statusText": null
+        }
+      },
+      {
+        "id": "9377",
+        "name": "Radio Gold Instrumental",
+        "description": null,
+        "groupTitle": null,
+        "groups": [
+          "Ambient",
+          "Instrumental"
+        ],
+        "url": "https://centova.svdns.com.br:19373/stream/2/",
+        "logo": "https://players.rcast.net/sombras/62127",
+        "artist": null,
+        "lang": null,
+        "channels": null,
+        "country": null,
+        "favLists": [
+          "Instrumental"
+        ],
+        "metadata": {
+          "duration": null,
+          "stereo": null,
+          "encoding": null,
+          "sampleFrq": null,
+          "sampleRes": null,
+          "country": null,
+          "statusText": null
+        }
+      },
+      {
+        "id": "8469",
+        "name": "France Musique La B.O.",
+        "description": null,
+        "groupTitle": null,
+        "groups": [
+          "French"
+        ],
+        "url": "https://icecast.radiofrance.fr/francemusiquelabo-hifi.aac",
+        "logo": "https://cdn.radiofrance.fr/s3/cruiser-production/2017/06/d2ac7a26-843d-4f0c-a497-8ddf6f3b2f0f/200x200_fmwebbotout.jpg",
+        "artist": null,
+        "lang": "French",
+        "channels": null,
+        "country": null,
+        "favLists": [
+          "Instrumental"
+        ],
+        "metadata": {
+          "duration": null,
+          "stereo": null,
+          "encoding": null,
+          "sampleFrq": null,
+          "sampleRes": null,
+          "country": null,
+          "statusText": null
+        }
+      },
+      {
+        "id": "18398",
+        "name": "James Taylor",
+        "description": null,
+        "groupTitle": null,
+        "groups": [
+          "Artists"
+        ],
+        "url": "https://streaming.exclusive.radio/er/jamestaylor/icecast.audio",
+        "logo": "https://manager.uber.radio/static/uploads/station/e66c65c6-3e83-4d42-b41a-a7cc198a4f88.jpg",
+        "artist": "James Taylor",
+        "lang": null,
+        "channels": null,
+        "country": null,
+        "favLists": [
+          "Country"
+        ],
+        "metadata": {
+          "duration": null,
+          "stereo": null,
+          "encoding": null,
+          "sampleFrq": null,
+          "sampleRes": null,
+          "country": null,
+          "statusText": null
+        }
+      },
+      {
+        "id": "12887",
+        "name": "100 Greatest of The 80s",
+        "description": null,
+        "groupTitle": null,
+        "groups": [
+          "80s"
+        ],
+        "url": "https://maggie.torontocast.com:2020/stream/100greatestofthe80s",
+        "logo": "https://100-greatest-network.torontocast.stream/wp-content/uploads/2021/07/100-GREATEST-80S_LOGO_512-300x300.jpg",
+        "artist": null,
+        "lang": null,
+        "channels": null,
+        "country": null,
+        "favLists": [
+          "History"
+        ],
+        "metadata": {
+          "duration": null,
+          "stereo": null,
+          "encoding": null,
+          "sampleFrq": null,
+          "sampleRes": null,
+          "country": null,
+          "statusText": null
+        }
+      },
+      {
         "id": "18204",
         "name": "Bo Diddley",
         "description": null,
@@ -58,21 +1579,12 @@
         ],
         "metadata": {
           "duration": null,
-          "statusText": "playing"
-        },
-        "ref": {
-          "currentRDList": {
-            "listId": "List",
-            "name": "Blues",
-            "$item": {
-              "0": {},
-              "length": 1
-            }
-          },
-          "currentTab": {
-            "listId": "Viz",
-            "tabId": "btn_wrp_logo"
-          }
+          "stereo": null,
+          "encoding": null,
+          "sampleFrq": null,
+          "sampleRes": null,
+          "country": null,
+          "statusText": null
         }
       },
       {
@@ -98,21 +1610,12 @@
         ],
         "metadata": {
           "duration": null,
-          "statusText": "playing"
-        },
-        "ref": {
-          "currentRDList": {
-            "listId": "List",
-            "name": "Années 60",
-            "$item": {
-              "0": {},
-              "length": 1
-            }
-          },
-          "currentTab": {
-            "listId": "List",
-            "tabId": "btn_wrp_play_list"
-          }
+          "stereo": null,
+          "encoding": null,
+          "sampleFrq": null,
+          "sampleRes": null,
+          "country": null,
+          "statusText": null
         }
       },
       {
@@ -132,24 +1635,17 @@
         "lang": null,
         "channels": null,
         "country": null,
-        "favLists": [],
+        "favLists": [
+          "History"
+        ],
         "metadata": {
           "duration": null,
-          "statusText": "playing"
-        },
-        "ref": {
-          "currentRDList": {
-            "listId": "Tag",
-            "name": "90s",
-            "$item": {
-              "0": {},
-              "length": 1
-            }
-          },
-          "currentTab": {
-            "listId": "Viz",
-            "tabId": "btn_wrp_logo"
-          }
+          "stereo": null,
+          "encoding": null,
+          "sampleFrq": null,
+          "sampleRes": null,
+          "country": null,
+          "statusText": null
         }
       },
       {
@@ -172,21 +1668,12 @@
         ],
         "metadata": {
           "duration": null,
-          "statusText": "pause"
-        },
-        "ref": {
-          "currentRDList": {
-            "listId": "List",
-            "name": "Infos",
-            "$item": {
-              "0": {},
-              "length": 1
-            }
-          },
-          "currentTab": {
-            "listId": "Viz",
-            "tabId": "btn_wrp_logo"
-          }
+          "stereo": null,
+          "encoding": null,
+          "sampleFrq": null,
+          "sampleRes": null,
+          "country": null,
+          "statusText": null
         }
       },
       {
@@ -248,33 +1735,6 @@
         }
       },
       {
-        "id": "1892",
-        "name": "P24-7 Mix",
-        "description": null,
-        "groupTitle": null,
-        "groups": [
-          "Mix"
-        ],
-        "url": "https://live-bauerno.sharp-stream.com/p247mix_no_mp3",
-        "logo": "https://assets.planetradio.co.uk/img/ConfigWebListenBarLogoImageUrl/342.jpg",
-        "artist": null,
-        "lang": null,
-        "channels": null,
-        "country": null,
-        "favLists": [
-          "Pop"
-        ],
-        "metadata": {
-          "duration": null,
-          "stereo": null,
-          "encoding": null,
-          "sampleFrq": null,
-          "sampleRes": null,
-          "country": null,
-          "statusText": null
-        }
-      },
-      {
         "id": "20884",
         "name": "Fréquence Plus Andenne 106.6",
         "description": null,
@@ -304,68 +1764,6 @@
         }
       },
       {
-        "id": "12237",
-        "name": "Dr. Dick’s Dub Shack",
-        "description": null,
-        "groupTitle": null,
-        "groups": [
-          "Dub",
-          "Reggae",
-          "Roots"
-        ],
-        "url": "http://streamer.radio.co/s0635c8b0d/listen?fbclid=IwAR16t5mC5UFT9Fp8pbWe0dvYn9VEI3FYJTogE5AJtUF3G1dJi38lwLgD9as",
-        "logo": "http://drdicksdubshack.com/favicon.ico",
-        "artist": null,
-        "lang": null,
-        "channels": null,
-        "country": null,
-        "favLists": [
-          "History",
-          "DUB"
-        ],
-        "metadata": {
-          "duration": null,
-          "stereo": null,
-          "encoding": null,
-          "sampleFrq": null,
-          "sampleRes": null,
-          "country": null,
-          "statusText": null
-        }
-      },
-      {
-        "id": "4917",
-        "name": "Love Radio Only Love Songs 70s 80s 90s",
-        "description": null,
-        "groupTitle": null,
-        "groups": [
-          "Love",
-          "Radio",
-          "Songs",
-          "70s",
-          "80s",
-          "90s"
-        ],
-        "url": "https://loveradio.streamingmedia.it/usa",
-        "logo": "https://love.radio/loveradio_logo.png",
-        "artist": null,
-        "lang": null,
-        "channels": null,
-        "country": null,
-        "favLists": [
-          "Slows & Love Songs"
-        ],
-        "metadata": {
-          "duration": null,
-          "stereo": null,
-          "encoding": null,
-          "sampleFrq": null,
-          "sampleRes": null,
-          "country": null,
-          "statusText": null
-        }
-      },
-      {
         "id": "7267",
         "name": "ABC Lounge Radio",
         "description": null,
@@ -382,34 +1780,6 @@
         "country": null,
         "favLists": [
           "Slows & Love Songs"
-        ],
-        "metadata": {
-          "duration": null,
-          "stereo": null,
-          "encoding": null,
-          "sampleFrq": null,
-          "sampleRes": null,
-          "country": null,
-          "statusText": null
-        }
-      },
-      {
-        "id": "18145",
-        "name": "Alka Yagnik",
-        "description": null,
-        "groupTitle": null,
-        "groups": [
-          "Artists"
-        ],
-        "url": "https://drive.uber.radio/uber/bollywoodalkayagnik/icecast.audio",
-        "logo": "https://manager.uber.radio/static/uploads/station/4a259d43-af38-4a2a-af32-a04281d45676.jpg",
-        "artist": "Alka Yagnik",
-        "lang": null,
-        "channels": null,
-        "country": null,
-        "favLists": [
-          "History",
-          "Indien"
         ],
         "metadata": {
           "duration": null,
@@ -543,33 +1913,6 @@
         "url": "https://streaming.exclusive.radio/er/streisandhits/icecast.audio",
         "logo": "https://manager.uber.radio/static/uploads/station/562bb3c5-962c-40ff-b5a6-8b9953b5f8a8.jpg",
         "artist": "Barbra Streisand",
-        "lang": null,
-        "channels": null,
-        "country": null,
-        "favLists": [
-          "Slows & Love Songs"
-        ],
-        "metadata": {
-          "duration": null,
-          "stereo": null,
-          "encoding": null,
-          "sampleFrq": null,
-          "sampleRes": null,
-          "country": null,
-          "statusText": null
-        }
-      },
-      {
-        "id": "19864",
-        "name": "1 Slow-Radio laut.fm",
-        "description": null,
-        "groupTitle": null,
-        "groups": [
-          "Radio"
-        ],
-        "url": "https://1slowradio.stream.laut.fm/1_slowradio",
-        "logo": "https://assets.laut.fm/9670c7c141ede546101df1cdfe18e0b4?t=_640x640",
-        "artist": null,
         "lang": null,
         "channels": null,
         "country": null,
@@ -1085,60 +2428,6 @@
         }
       },
       {
-        "id": "10713",
-        "name": "ElectroZombies",
-        "description": null,
-        "groupTitle": null,
-        "groups": [
-          "Electro"
-        ],
-        "url": "http://electrozombies.stream.laut.fm/electrozombies?t302=2021-12-21_02-42-35&uuid=f829707f-f917-4ec8-82d6-8b641e79f803",
-        "logo": "https://electrozombies.com/wp-content/uploads/2015/09/electrozombies_icon.jpg",
-        "artist": null,
-        "lang": null,
-        "channels": null,
-        "country": null,
-        "favLists": [
-          "----- TEST LIST -----"
-        ],
-        "metadata": {
-          "duration": null,
-          "stereo": null,
-          "encoding": null,
-          "sampleFrq": null,
-          "sampleRes": null,
-          "country": null,
-          "statusText": null
-        }
-      },
-      {
-        "id": "3758",
-        "name": "Chill Lounge Florida",
-        "description": null,
-        "groupTitle": null,
-        "groups": [
-          "Lounge"
-        ],
-        "url": "https://vip2.fastcast4u.com/proxy/chillfla?mp=/1",
-        "logo": "https://img1.wsimg.com/isteam/stock/nzaDy9/:/cr=t:0%25,l:0%25,w:100%25,h:100%25/rs=h:500,cg:true",
-        "artist": null,
-        "lang": null,
-        "channels": null,
-        "country": null,
-        "favLists": [
-          "Lounge"
-        ],
-        "metadata": {
-          "duration": null,
-          "stereo": null,
-          "encoding": null,
-          "sampleFrq": null,
-          "sampleRes": null,
-          "country": null,
-          "statusText": null
-        }
-      },
-      {
         "id": "1222",
         "name": "Radio Art Lounge",
         "description": null,
@@ -1158,13 +2447,21 @@
           "Lounge"
         ],
         "metadata": {
-          "duration": null,
-          "stereo": null,
-          "encoding": null,
-          "sampleFrq": null,
-          "sampleRes": null,
-          "country": null,
-          "statusText": null
+          "duration": null
+        },
+        "ref": {
+          "currentRDList": {
+            "listId": "List",
+            "name": "Lounge",
+            "$item": {
+              "0": {},
+              "length": 1
+            }
+          },
+          "currentTab": {
+            "listId": "Viz",
+            "tabId": "btn_wrp_logo"
+          }
         }
       },
       {
@@ -1186,62 +2483,6 @@
         "country": null,
         "favLists": [
           "Lounge"
-        ],
-        "metadata": {
-          "duration": null,
-          "stereo": null,
-          "encoding": null,
-          "sampleFrq": null,
-          "sampleRes": null,
-          "country": null,
-          "statusText": null
-        }
-      },
-      {
-        "id": "17813",
-        "name": "1.FM Chillout Lounge Radio",
-        "description": null,
-        "groupTitle": null,
-        "groups": [
-          "Radio",
-          "Lounge"
-        ],
-        "url": "http://strm112.1.fm/chilloutlounge_mobile_mp3",
-        "logo": "http://liveradio.de/media/cache/station_detail/18f08aee-f06b-4965-b607-3f25a581619c.jpg",
-        "artist": null,
-        "lang": null,
-        "channels": null,
-        "country": null,
-        "favLists": [
-          "Lounge"
-        ],
-        "metadata": {
-          "duration": null,
-          "stereo": null,
-          "encoding": null,
-          "sampleFrq": null,
-          "sampleRes": null,
-          "country": null,
-          "statusText": null
-        }
-      },
-      {
-        "id": "11492",
-        "name": "POP LOUNGE CAFE",
-        "description": null,
-        "groupTitle": null,
-        "groups": [
-          "Pop",
-          "Lounge"
-        ],
-        "url": "http://poploungecafe.stream.laut.fm/poploungecafe?t302=2021-12-21_03-38-03&uuid=e6be5064-2a80-4aa3-8c3a-c6df1ffa2ca4",
-        "logo": "https://play-lh.googleusercontent.com/6RnorZH_6PZObYdLC4nBepeoVZD90SJ5iW1Edge_OHZ6VEMt6NgsuD9EPOY3HAMcEg=w240-h480-rw",
-        "artist": null,
-        "lang": null,
-        "channels": null,
-        "country": null,
-        "favLists": [
-          "Groove"
         ],
         "metadata": {
           "duration": null,
@@ -1284,36 +2525,9 @@
             }
           },
           "currentTab": {
-            "listId": "List",
-            "tabId": "btn_wrp_play_list"
+            "listId": "Viz",
+            "tabId": "btn_wrp_logo"
           }
-        }
-      },
-      {
-        "id": "20897",
-        "name": "Kiosk Radio",
-        "description": null,
-        "groupTitle": null,
-        "groups": [
-          "Mix"
-        ],
-        "url": "https://kioskradiobxl.out.airtime.pro/kioskradiobxl_b",
-        "logo": "https://kioskradio.com/images/logo.svg",
-        "artist": null,
-        "lang": null,
-        "channels": null,
-        "country": null,
-        "favLists": [
-          "Groove"
-        ],
-        "metadata": {
-          "duration": null,
-          "stereo": null,
-          "encoding": null,
-          "sampleFrq": null,
-          "sampleRes": null,
-          "country": null,
-          "statusText": null
         }
       },
       {
@@ -1336,39 +2550,21 @@
         ],
         "metadata": {
           "duration": null,
-          "stereo": null,
-          "encoding": null,
-          "sampleFrq": null,
-          "sampleRes": null,
-          "country": null,
-          "statusText": null
-        }
-      },
-      {
-        "id": "7421",
-        "name": "Génération Mix",
-        "description": null,
-        "groupTitle": null,
-        "groups": [
-          "Mix"
-        ],
-        "url": "https://ecmanager2.pro-fhi.net/generationmix",
-        "logo": "https://www.radio.fr/images/broadcasts/62/e7/139914/1/c300.png",
-        "artist": null,
-        "lang": null,
-        "channels": null,
-        "country": null,
-        "favLists": [
-          "Groove"
-        ],
-        "metadata": {
-          "duration": null,
-          "stereo": null,
-          "encoding": null,
-          "sampleFrq": null,
-          "sampleRes": null,
-          "country": null,
-          "statusText": null
+          "statusText": "playing"
+        },
+        "ref": {
+          "currentRDList": {
+            "listId": "List",
+            "name": "Groove",
+            "$item": {
+              "0": {},
+              "length": 1
+            }
+          },
+          "currentTab": {
+            "listId": "Viz",
+            "tabId": "btn_wrp_logo"
+          }
         }
       },
       {
@@ -1624,33 +2820,6 @@
         }
       },
       {
-        "id": "11426",
-        "name": "NORA Oldies",
-        "description": null,
-        "groupTitle": null,
-        "groups": [
-          "Oldies"
-        ],
-        "url": "http://norawebstreams-stream22.radiohost.de/nora-oldies_mp3-128?sabc=61p21qs6%230%232qqpnss01895rqr0s8oq129o03s183o0%23ubzrcntr&amsparams=playerid:homepage;skey:1640111606&listenerrmid=31363430313131363036-326130333a343030303a33373a34323a633466653a346366663a666561373a38393431-3435343330-53747265616d436865636b426f742f302e312e30",
-        "logo": "http://www.norawebstreams.de/_nuxt/icons/icon_64.a8000000000.png",
-        "artist": null,
-        "lang": null,
-        "channels": null,
-        "country": null,
-        "favLists": [
-          "History"
-        ],
-        "metadata": {
-          "duration": null,
-          "stereo": null,
-          "encoding": null,
-          "sampleFrq": null,
-          "sampleRes": null,
-          "country": null,
-          "statusText": null
-        }
-      },
-      {
         "id": "10183",
         "name": "laut.fm 1000 Oldies",
         "description": null,
@@ -1670,40 +2839,21 @@
         ],
         "metadata": {
           "duration": null,
-          "stereo": null,
-          "encoding": null,
-          "sampleFrq": null,
-          "sampleRes": null,
-          "country": null,
-          "statusText": null
-        }
-      },
-      {
-        "id": "21335",
-        "name": "Gold 1611",
-        "description": null,
-        "groupTitle": null,
-        "groups": [
-          "Hits",
-          "Oldies"
-        ],
-        "url": "https://ic2666.c2017.fastserv.com/GoldMX1",
-        "logo": "https://static-media.streema.com/media/cache/34/7b/347b242b67913e5929ee015554066c6f.png",
-        "artist": null,
-        "lang": null,
-        "channels": null,
-        "country": null,
-        "favLists": [
-          "History"
-        ],
-        "metadata": {
-          "duration": null,
-          "stereo": null,
-          "encoding": null,
-          "sampleFrq": null,
-          "sampleRes": null,
-          "country": null,
-          "statusText": null
+          "statusText": "playing"
+        },
+        "ref": {
+          "currentRDList": {
+            "listId": "List",
+            "name": "History",
+            "$item": {
+              "0": {},
+              "length": 1
+            }
+          },
+          "currentTab": {
+            "listId": "List",
+            "tabId": "btn_wrp_play_list"
+          }
         }
       },
       {
@@ -1789,100 +2939,6 @@
         }
       },
       {
-        "id": "19787",
-        "name": "Taiwan Lounge Radio",
-        "description": null,
-        "groupTitle": null,
-        "groups": [
-          "Lounge",
-          "Radio"
-        ],
-        "url": "https://azuracast.conceptradio.fr/radio/8030/stream.mp3",
-        "logo": "http://www.taiwan-lounge.com/site/images/logo.jpg",
-        "artist": null,
-        "lang": null,
-        "channels": null,
-        "country": null,
-        "favLists": [
-          "Lounge"
-        ],
-        "metadata": {
-          "duration": null,
-          "stereo": null,
-          "encoding": null,
-          "sampleFrq": null,
-          "sampleRes": null,
-          "country": null,
-          "statusText": null
-        }
-      },
-      {
-        "id": "20871",
-        "name": "chillout CROOZE",
-        "description": null,
-        "groupTitle": null,
-        "groups": [
-          "Ambient",
-          "Electro"
-        ],
-        "url": "http://streams.crooze.fm:8006/stream/1/",
-        "logo": "https://crooze.fm/wp-content/uploads/sites/3/2018/12/CHILLOUT-CROOZE-128x128.png",
-        "artist": null,
-        "lang": null,
-        "channels": null,
-        "country": null,
-        "favLists": [
-          "Lounge"
-        ],
-        "metadata": {
-          "duration": null,
-          "stereo": null,
-          "encoding": null,
-          "sampleFrq": null,
-          "sampleRes": null,
-          "country": null,
-          "statusText": null
-        }
-      },
-      {
-        "id": "10462",
-        "name": "BDJ Electronic Lounge Radio",
-        "description": null,
-        "groupTitle": null,
-        "groups": [
-          "Electro",
-          "Lounge",
-          "Radio"
-        ],
-        "url": "https://bdjelectronicloungeradio.stream.laut.fm/bdj_electronic_lounge_radio?t302=2021-12-21_03-06-52&uuid=d628e7da-1d91-4911-8472-23df039fa65f",
-        "logo": "http://www.bdjradio.com/assets/bdj-favicon-2.png?v=2",
-        "artist": null,
-        "lang": null,
-        "channels": null,
-        "country": null,
-        "favLists": [
-          "Lounge"
-        ],
-        "metadata": {
-          "duration": null,
-          "statusText": "playing"
-        },
-        "ref": {
-          "currentRDList": {
-            "listId": "List",
-            "name": "Lounge",
-            "$item": {
-              "0": {},
-              "length": 1
-            }
-          },
-          "currentTab": {
-            "listId": "Viz",
-            "tabId": "btn_wrp_logo"
-          }
-        }
-      },
-      {
         "id": "10570",
         "name": "Charivari München Lounge Music",
         "description": null,
@@ -1902,70 +2958,21 @@
         ],
         "metadata": {
           "duration": null,
-          "stereo": null,
-          "encoding": null,
-          "sampleFrq": null,
-          "sampleRes": null,
-          "country": null,
-          "statusText": null
-        }
-      },
-      {
-        "id": "8294",
-        "name": "Allzic Jazz Lounge",
-        "description": null,
-        "groupTitle": null,
-        "groups": [
-          "French",
-          "Jazz",
-          "Lounge"
-        ],
-        "url": "http://allzic03.ice.infomaniak.ch/allzic03.mp3",
-        "logo": "https://www.allzicradio.com/apple-touch-icon.png",
-        "artist": null,
-        "lang": "French",
-        "channels": null,
-        "country": null,
-        "favLists": [
-          "Lounge"
-        ],
-        "metadata": {
-          "duration": null,
-          "stereo": null,
-          "encoding": null,
-          "sampleFrq": null,
-          "sampleRes": null,
-          "country": null,
-          "statusText": null
-        }
-      },
-      {
-        "id": "10359",
-        "name": "Antenne Bayern Lounge",
-        "description": null,
-        "groupTitle": null,
-        "groups": [
-          "Radio",
-          "Deutsch",
-          "Lounge"
-        ],
-        "url": "http://s3-webradio.antenne.de/lounge/stream/aacp",
-        "logo": "https://www.radio.net/images/broadcasts/0d/91/124497/10/c300.png",
-        "artist": null,
-        "lang": "Deutsch",
-        "channels": null,
-        "country": null,
-        "favLists": [
-          "Lounge"
-        ],
-        "metadata": {
-          "duration": null,
-          "stereo": null,
-          "encoding": null,
-          "sampleFrq": null,
-          "sampleRes": null,
-          "country": null,
-          "statusText": null
+          "statusText": "playing"
+        },
+        "ref": {
+          "currentRDList": {
+            "listId": "List",
+            "name": "Groove",
+            "$item": {
+              "0": {},
+              "length": 1
+            }
+          },
+          "currentTab": {
+            "listId": "Viz",
+            "tabId": "btn_wrp_logo"
+          }
         }
       },
       {
@@ -1994,62 +3001,21 @@
           "sampleFrq": null,
           "sampleRes": null,
           "country": null,
-          "statusText": null
-        }
-      },
-      {
-        "id": "20742",
-        "name": "LoungeFM 100% Austria",
-        "description": null,
-        "groupTitle": null,
-        "groups": [
-          "Lounge",
-          "Lounge"
-        ],
-        "url": "https://s35.derstream.net/100austria.mp3",
-        "logo": "https://www.allzicradio.com/media/radios/c17511.png",
-        "artist": null,
-        "lang": null,
-        "channels": null,
-        "country": null,
-        "favLists": [
-          "History"
-        ],
-        "metadata": {
-          "duration": null,
-          "stereo": null,
-          "encoding": null,
-          "sampleFrq": null,
-          "sampleRes": null,
-          "country": null,
-          "statusText": null
-        }
-      },
-      {
-        "id": "11242",
-        "name": "Maretimo Lounge",
-        "description": null,
-        "groupTitle": null,
-        "groups": [
-          "Lounge"
-        ],
-        "url": "https://s35.derstream.net/lounge.mp3",
-        "logo": "https://d3kle7qwymxpcy.cloudfront.net/images/broadcasts/08/a3/107873/5/c175.png",
-        "artist": null,
-        "lang": null,
-        "channels": null,
-        "country": null,
-        "favLists": [
-          "Groove"
-        ],
-        "metadata": {
-          "duration": null,
-          "stereo": null,
-          "encoding": null,
-          "sampleFrq": null,
-          "sampleRes": null,
-          "country": null,
-          "statusText": null
+          "statusText": "no connection"
+        },
+        "ref": {
+          "currentRDList": {
+            "listId": "Tag",
+            "name": "Lounge",
+            "$item": {
+              "0": {},
+              "length": 1
+            }
+          },
+          "currentTab": {
+            "listId": "Viz",
+            "tabId": "btn_wrp_logo"
+          }
         }
       },
       {
@@ -2129,12 +3095,21 @@
         ],
         "metadata": {
           "duration": null,
-          "stereo": null,
-          "encoding": null,
-          "sampleFrq": null,
-          "sampleRes": null,
-          "country": null,
-          "statusText": null
+          "statusText": "playing"
+        },
+        "ref": {
+          "currentRDList": {
+            "listId": "List",
+            "name": "Groove",
+            "$item": {
+              "0": {},
+              "length": 1
+            }
+          },
+          "currentTab": {
+            "listId": "Viz",
+            "tabId": "btn_wrp_logo"
+          }
         }
       },
       {
@@ -2157,12 +3132,21 @@
         ],
         "metadata": {
           "duration": null,
-          "stereo": null,
-          "encoding": null,
-          "sampleFrq": null,
-          "sampleRes": null,
-          "country": null,
-          "statusText": null
+          "statusText": "playing"
+        },
+        "ref": {
+          "currentRDList": {
+            "listId": "List",
+            "name": "Groove",
+            "$item": {
+              "0": {},
+              "length": 1
+            }
+          },
+          "currentTab": {
+            "listId": "Viz",
+            "tabId": "btn_wrp_logo"
+          }
         }
       },
       {
@@ -2205,63 +3189,6 @@
         "logo": "https://www.allzicradio.com/media/radios/thumb/195x195_allzic-lounge_600px-carre.png",
         "artist": null,
         "lang": "French",
-        "channels": null,
-        "country": null,
-        "favLists": [
-          "History"
-        ],
-        "metadata": {
-          "duration": null,
-          "stereo": null,
-          "encoding": null,
-          "sampleFrq": null,
-          "sampleRes": null,
-          "country": null,
-          "statusText": null
-        }
-      },
-      {
-        "id": "5358",
-        "name": "Retro Hit Mix",
-        "description": null,
-        "groupTitle": null,
-        "groups": [
-          "Oldies",
-          "Hits",
-          "Mix"
-        ],
-        "url": "http://hestia.cdnstream.com/1340_128",
-        "logo": "https://static.wixstatic.com/media/bab08c_d1b0665eb22f4b048b9c8be23ef28b24~mv2_d_3133_1929_s_2.png/v1/crop/x_0,y_73,w_3133,h_1792/fill/w_343,h_196,al_c,usm_0.66_1.00_0.01/bab08c_d1b0665eb22f4b048b9c8be23ef28b24~mv2_d_3133_1929_s_2.png",
-        "artist": null,
-        "lang": null,
-        "channels": null,
-        "country": null,
-        "favLists": [
-          "Pop"
-        ],
-        "metadata": {
-          "duration": null,
-          "stereo": null,
-          "encoding": null,
-          "sampleFrq": null,
-          "sampleRes": null,
-          "country": null,
-          "statusText": null
-        }
-      },
-      {
-        "id": "6960",
-        "name": "Radio The Best Mix",
-        "description": null,
-        "groupTitle": null,
-        "groups": [
-          "Radio",
-          "Mix"
-        ],
-        "url": "http://stream.zeno.fm/v1qe5y1vetzuv?rj-ttl=5&rj-tok=AAABfd4j0BUAa7AxGoaJGlESWw",
-        "logo": "https://myradioenvivo.pe/public/uploads/radio_img/radio-mix/fb_cover.jpg",
-        "artist": null,
-        "lang": null,
         "channels": null,
         "country": null,
         "favLists": [
@@ -2321,34 +3248,8 @@
         "channels": null,
         "country": null,
         "favLists": [
-          "History"
-        ],
-        "metadata": {
-          "duration": null,
-          "stereo": null,
-          "encoding": null,
-          "sampleFrq": null,
-          "sampleRes": null,
-          "country": null,
-          "statusText": null
-        }
-      },
-      {
-        "id": "17902",
-        "name": "my105 DJ Mixes",
-        "description": null,
-        "groupTitle": null,
-        "groups": [
-          "Mix"
-        ],
-        "url": "http://stream01.my105.ch/my105djnights.mp3",
-        "logo": "http://www.my105.ch/fileadmin/templates/img/my105_logo.jpg",
-        "artist": null,
-        "lang": null,
-        "channels": null,
-        "country": null,
-        "favLists": [
-          "History"
+          "History",
+          "Exotique"
         ],
         "metadata": {
           "duration": null,
@@ -2377,33 +3278,6 @@
         "country": null,
         "favLists": [
           "History"
-        ],
-        "metadata": {
-          "duration": null,
-          "stereo": null,
-          "encoding": null,
-          "sampleFrq": null,
-          "sampleRes": null,
-          "country": null,
-          "statusText": null
-        }
-      },
-      {
-        "id": "3403",
-        "name": "KCVM 93.5 The Mix",
-        "description": null,
-        "groupTitle": null,
-        "groups": [
-          "Mix"
-        ],
-        "url": "https://ice7.securenetsystems.net/THEMIX",
-        "logo": "https://radiostationusa.fm/assets/image/radio/180/KCVM.png",
-        "artist": null,
-        "lang": null,
-        "channels": null,
-        "country": null,
-        "favLists": [
-          "Pop"
         ],
         "metadata": {
           "duration": null,
@@ -2543,35 +3417,6 @@
         "country": null,
         "favLists": [
           "History"
-        ],
-        "metadata": {
-          "duration": null,
-          "stereo": null,
-          "encoding": null,
-          "sampleFrq": null,
-          "sampleRes": null,
-          "country": null,
-          "statusText": null
-        }
-      },
-      {
-        "id": "2332",
-        "name": "Radio Record Russian Mix",
-        "description": null,
-        "groupTitle": null,
-        "groups": [
-          "Radio",
-          "Russian",
-          "Mix"
-        ],
-        "url": "https://radiorecord.hostingradio.ru/rus96.aacp",
-        "logo": "https://www.radiorecord.ru/components/Header/img/desktop_logo.png?109479708dc38d9dd97e6d8093e6bc65",
-        "artist": null,
-        "lang": "Russian",
-        "channels": null,
-        "country": null,
-        "favLists": [
-          "Groove"
         ],
         "metadata": {
           "duration": null,
@@ -2852,63 +3697,6 @@
         "favLists": [
           "History",
           "Sound Track"
-        ],
-        "metadata": {
-          "duration": null,
-          "stereo": null,
-          "encoding": null,
-          "sampleFrq": null,
-          "sampleRes": null,
-          "country": null,
-          "statusText": null
-        }
-      },
-      {
-        "id": "20893",
-        "name": "Instrumentals Forever",
-        "description": null,
-        "groupTitle": null,
-        "groups": [
-          "Big Band",
-          "Instrumental"
-        ],
-        "url": "http://quincy.torontocast.com:1910/stream",
-        "logo": "https://instrumentalsforever.eu/favicon.ico",
-        "artist": null,
-        "lang": null,
-        "channels": null,
-        "country": null,
-        "favLists": [
-          "History",
-          "Instrumental"
-        ],
-        "metadata": {
-          "duration": null,
-          "stereo": null,
-          "encoding": null,
-          "sampleFrq": null,
-          "sampleRes": null,
-          "country": null,
-          "statusText": null
-        }
-      },
-      {
-        "id": "3786",
-        "name": "Classic Oldies",
-        "description": null,
-        "groupTitle": null,
-        "groups": [
-          "Classic",
-          "Oldies"
-        ],
-        "url": "http://streaming.radio.co/s88a0bddf2/listen",
-        "logo": "https://www.radio.net/images/broadcasts/19/06/106732/1/c300.png",
-        "artist": null,
-        "lang": null,
-        "channels": null,
-        "country": null,
-        "favLists": [
-          "Oldies but goodies"
         ],
         "metadata": {
           "duration": null,
@@ -3443,21 +4231,12 @@
         ],
         "metadata": {
           "duration": null,
-          "statusText": "connecting..."
-        },
-        "ref": {
-          "currentRDList": {
-            "listId": "List",
-            "name": "Blues",
-            "$item": {
-              "0": {},
-              "length": 1
-            }
-          },
-          "currentTab": {
-            "listId": "Viz",
-            "tabId": "btn_wrp_logo"
-          }
+          "stereo": null,
+          "encoding": null,
+          "sampleFrq": null,
+          "sampleRes": null,
+          "country": null,
+          "statusText": null
         }
       },
       {
@@ -4434,6 +5213,34 @@
           "country": null,
           "statusText": null
         }
+      },
+      {
+        "id": "2063",
+        "name": "Instrumental Jazz",
+        "description": null,
+        "groupTitle": null,
+        "groups": [
+          "Instrumental",
+          "Jazz"
+        ],
+        "url": "https://jfm1.hostingradio.ru:14536/ijstream.mp3",
+        "logo": "https://radiojazzfm.ru/favicons/apple-touch-icon.png",
+        "artist": null,
+        "lang": null,
+        "channels": null,
+        "country": null,
+        "favLists": [
+          "Jazz"
+        ],
+        "metadata": {
+          "duration": null,
+          "stereo": null,
+          "encoding": null,
+          "sampleFrq": null,
+          "sampleRes": null,
+          "country": null,
+          "statusText": null
+        }
       }
     ],
     "isSystem": false
@@ -4577,236 +5384,6 @@
         "favLists": [
           "History",
           "Classique"
-        ],
-        "metadata": {
-          "duration": null,
-          "stereo": null,
-          "encoding": null,
-          "sampleFrq": null,
-          "sampleRes": null,
-          "country": null,
-          "statusText": null
-        }
-      }
-    ],
-    "isSystem": false
-  },
-  "Chanson Française": {
-    "listId": "List",
-    "name": "Chanson Française",
-    "items": [
-      {
-        "id": "1942",
-        "name": "101.ru French Chanson",
-        "description": null,
-        "groupTitle": null,
-        "groups": [
-          "Radio",
-          "French",
-          "Songs"
-        ],
-        "url": "http://ic6.101.ru:8000/stream/pro/aac/64/146",
-        "logo": "https://kuasark.com/files/stations-logos/101ru-french-chanson.png",
-        "artist": null,
-        "lang": "French",
-        "channels": null,
-        "country": null,
-        "favLists": [
-          "History",
-          "Chanson Française"
-        ],
-        "metadata": {
-          "duration": null,
-          "stereo": null,
-          "encoding": null,
-          "sampleFrq": null,
-          "sampleRes": null,
-          "country": null,
-          "statusText": null
-        }
-      },
-      {
-        "id": "8057",
-        "name": "Chante France",
-        "description": null,
-        "groupTitle": null,
-        "groups": [
-          "French"
-        ],
-        "url": "https://chantefrance.ice.infomaniak.ch/chantefrance-128.mp3",
-        "logo": "http://www.chantefrance.com/public/img/logo.png",
-        "artist": null,
-        "lang": "French",
-        "channels": null,
-        "country": null,
-        "favLists": [
-          "Chanson Française"
-        ],
-        "metadata": {
-          "duration": null,
-          "stereo": null,
-          "encoding": null,
-          "sampleFrq": null,
-          "sampleRes": null,
-          "country": null,
-          "statusText": null
-        }
-      },
-      {
-        "id": "8058",
-        "name": "Chante France 60's",
-        "description": null,
-        "groupTitle": null,
-        "groups": [
-          "French",
-          "60s"
-        ],
-        "url": "https://chantefrance60s.ice.infomaniak.ch/chantefrance60s-128.mp3",
-        "logo": "http://www.chantefrance.com/public/img/logo.png",
-        "artist": null,
-        "lang": "French",
-        "channels": null,
-        "country": null,
-        "favLists": [
-          "Chanson Française"
-        ],
-        "metadata": {
-          "duration": null,
-          "stereo": null,
-          "encoding": null,
-          "sampleFrq": null,
-          "sampleRes": null,
-          "country": null,
-          "statusText": null
-        }
-      },
-      {
-        "id": "8059",
-        "name": "Chante France 70's",
-        "description": null,
-        "groupTitle": null,
-        "groups": [
-          "French",
-          "70s"
-        ],
-        "url": "https://chantefrance70s.ice.infomaniak.ch/chantefrance70s-128.mp3",
-        "logo": "http://www.chantefrance.com/public/img/logo.png",
-        "artist": null,
-        "lang": "French",
-        "channels": null,
-        "country": null,
-        "favLists": [
-          "Chanson Française"
-        ],
-        "metadata": {
-          "duration": null,
-          "stereo": null,
-          "encoding": null,
-          "sampleFrq": null,
-          "sampleRes": null,
-          "country": null,
-          "statusText": null
-        }
-      },
-      {
-        "id": "8060",
-        "name": "Chante France 80's",
-        "description": null,
-        "groupTitle": null,
-        "groups": [
-          "French",
-          "80s"
-        ],
-        "url": "https://chantefrance80s.ice.infomaniak.ch/chantefrance80s-128.mp3",
-        "logo": "http://www.chantefrance.com/public/img/logo.png",
-        "artist": null,
-        "lang": "French",
-        "channels": null,
-        "country": null,
-        "favLists": [
-          "Chanson Française"
-        ],
-        "metadata": {
-          "duration": null,
-          "stereo": null,
-          "encoding": null,
-          "sampleFrq": null,
-          "sampleRes": null,
-          "country": null,
-          "statusText": null
-        }
-      },
-      {
-        "id": "8061",
-        "name": "Chante France Emotion",
-        "description": null,
-        "groupTitle": null,
-        "groups": [
-          "French"
-        ],
-        "url": "https://chantefranceemotion.ice.infomaniak.ch/chantefranceemotion-128.mp3",
-        "logo": "http://www.chantefrance.com/public/img/logo.png",
-        "artist": null,
-        "lang": "French",
-        "channels": null,
-        "country": null,
-        "favLists": [
-          "Chanson Française"
-        ],
-        "metadata": {
-          "duration": null,
-          "stereo": null,
-          "encoding": null,
-          "sampleFrq": null,
-          "sampleRes": null,
-          "country": null,
-          "statusText": null
-        }
-      },
-      {
-        "id": "8062",
-        "name": "Chante France Nouveautés",
-        "description": null,
-        "groupTitle": null,
-        "groups": [
-          "French"
-        ],
-        "url": "https://chantefrancenouveautes.ice.infomaniak.ch/chantefrancenouveautes-96.aac",
-        "logo": "https://www.chantefrance.com/public/img/favico.png",
-        "artist": null,
-        "lang": "French",
-        "channels": null,
-        "country": null,
-        "favLists": [
-          "Chanson Française"
-        ],
-        "metadata": {
-          "duration": null,
-          "stereo": null,
-          "encoding": null,
-          "sampleFrq": null,
-          "sampleRes": null,
-          "country": null,
-          "statusText": null
-        }
-      },
-      {
-        "id": "7959",
-        "name": "tout FIP",
-        "description": null,
-        "groupTitle": null,
-        "groups": [
-          "French"
-        ],
-        "url": "https://icecast.radiofrance.fr/fipnouveautes-hifi.aac",
-        "logo": "https://cdn.radiofrance.fr/s3/cruiser-production/2019/06/e061141c-f6b4-4502-ba43-f6ec693a049b/200x200_fip-nouveau_ok.jpg",
-        "artist": null,
-        "lang": "French",
-        "channels": null,
-        "country": null,
-        "favLists": [
-          "History",
-          "Chanson Française"
         ],
         "metadata": {
           "duration": null,
@@ -5135,21 +5712,12 @@
         ],
         "metadata": {
           "duration": null,
-          "statusText": "playing"
-        },
-        "ref": {
-          "currentRDList": {
-            "listId": "Art",
-            "name": "Neha Kakkar",
-            "$item": {
-              "0": {},
-              "length": 1
-            }
-          },
-          "currentTab": {
-            "listId": "Art",
-            "tabId": "btn_wrp_art_list"
-          }
+          "stereo": null,
+          "encoding": null,
+          "sampleFrq": null,
+          "sampleRes": null,
+          "country": null,
+          "statusText": null
         }
       }
     ],
@@ -5686,12 +6254,21 @@
         ],
         "metadata": {
           "duration": null,
-          "stereo": null,
-          "encoding": null,
-          "sampleFrq": null,
-          "sampleRes": null,
-          "country": null,
-          "statusText": null
+          "statusText": "playing"
+        },
+        "ref": {
+          "currentRDList": {
+            "listId": "List",
+            "name": "Groove",
+            "$item": {
+              "0": {},
+              "length": 1
+            }
+          },
+          "currentTab": {
+            "listId": "Viz",
+            "tabId": "btn_wrp_logo"
+          }
         }
       },
       {
@@ -5715,12 +6292,21 @@
         ],
         "metadata": {
           "duration": null,
-          "stereo": null,
-          "encoding": null,
-          "sampleFrq": null,
-          "sampleRes": null,
-          "country": null,
-          "statusText": null
+          "statusText": "playing"
+        },
+        "ref": {
+          "currentRDList": {
+            "listId": "List",
+            "name": "Groove",
+            "$item": {
+              "0": {},
+              "length": 1
+            }
+          },
+          "currentTab": {
+            "listId": "Viz",
+            "tabId": "btn_wrp_logo"
+          }
         }
       },
       {
@@ -5743,12 +6329,21 @@
         ],
         "metadata": {
           "duration": null,
-          "stereo": null,
-          "encoding": null,
-          "sampleFrq": null,
-          "sampleRes": null,
-          "country": null,
-          "statusText": null
+          "statusText": "playing"
+        },
+        "ref": {
+          "currentRDList": {
+            "listId": "List",
+            "name": "Groove",
+            "$item": {
+              "0": {},
+              "length": 1
+            }
+          },
+          "currentTab": {
+            "listId": "Viz",
+            "tabId": "btn_wrp_logo"
+          }
         }
       },
       {
@@ -5770,12 +6365,21 @@
         ],
         "metadata": {
           "duration": null,
-          "stereo": null,
-          "encoding": null,
-          "sampleFrq": null,
-          "sampleRes": null,
-          "country": null,
-          "statusText": null
+          "statusText": "playing"
+        },
+        "ref": {
+          "currentRDList": {
+            "listId": "List",
+            "name": "Groove",
+            "$item": {
+              "0": {},
+              "length": 1
+            }
+          },
+          "currentTab": {
+            "listId": "Viz",
+            "tabId": "btn_wrp_logo"
+          }
         }
       },
       {
@@ -5797,12 +6401,21 @@
         ],
         "metadata": {
           "duration": null,
-          "stereo": null,
-          "encoding": null,
-          "sampleFrq": null,
-          "sampleRes": null,
-          "country": null,
-          "statusText": null
+          "statusText": "playing"
+        },
+        "ref": {
+          "currentRDList": {
+            "listId": "List",
+            "name": "Groove",
+            "$item": {
+              "0": {},
+              "length": 1
+            }
+          },
+          "currentTab": {
+            "listId": "List",
+            "tabId": "btn_wrp_play_list"
+          }
         }
       },
       {
@@ -5825,12 +6438,21 @@
         ],
         "metadata": {
           "duration": null,
-          "stereo": null,
-          "encoding": null,
-          "sampleFrq": null,
-          "sampleRes": null,
-          "country": null,
-          "statusText": null
+          "statusText": "playing"
+        },
+        "ref": {
+          "currentRDList": {
+            "listId": "List",
+            "name": "Groove",
+            "$item": {
+              "0": {},
+              "length": 1
+            }
+          },
+          "currentTab": {
+            "listId": "Viz",
+            "tabId": "btn_wrp_logo"
+          }
         }
       },
       {
@@ -5854,12 +6476,21 @@
         ],
         "metadata": {
           "duration": null,
-          "stereo": null,
-          "encoding": null,
-          "sampleFrq": null,
-          "sampleRes": null,
-          "country": null,
-          "statusText": null
+          "statusText": "playing"
+        },
+        "ref": {
+          "currentRDList": {
+            "listId": "List",
+            "name": "Groove",
+            "$item": {
+              "0": {},
+              "length": 1
+            }
+          },
+          "currentTab": {
+            "listId": "Viz",
+            "tabId": "btn_wrp_logo"
+          }
         }
       },
       {
@@ -5881,12 +6512,21 @@
         ],
         "metadata": {
           "duration": null,
-          "stereo": null,
-          "encoding": null,
-          "sampleFrq": null,
-          "sampleRes": null,
-          "country": null,
-          "statusText": null
+          "statusText": "playing"
+        },
+        "ref": {
+          "currentRDList": {
+            "listId": "List",
+            "name": "Groove",
+            "$item": {
+              "0": {},
+              "length": 1
+            }
+          },
+          "currentTab": {
+            "listId": "Viz",
+            "tabId": "btn_wrp_logo"
+          }
         }
       },
       {
@@ -5909,25 +6549,33 @@
         ],
         "metadata": {
           "duration": null,
-          "stereo": null,
-          "encoding": null,
-          "sampleFrq": null,
-          "sampleRes": null,
-          "country": null,
-          "statusText": null
+          "statusText": "playing"
+        },
+        "ref": {
+          "currentRDList": {
+            "listId": "List",
+            "name": "Groove",
+            "$item": {
+              "0": {},
+              "length": 1
+            }
+          },
+          "currentTab": {
+            "listId": "Viz",
+            "tabId": "btn_wrp_logo"
+          }
         }
       },
       {
-        "id": "11492",
-        "name": "POP LOUNGE CAFE",
+        "id": "10598",
+        "name": "Cosmo Afro Beats",
         "description": null,
         "groupTitle": null,
         "groups": [
-          "Pop",
-          "Lounge"
+          "Afro"
         ],
-        "url": "http://poploungecafe.stream.laut.fm/poploungecafe?t302=2021-12-21_03-38-03&uuid=e6be5064-2a80-4aa3-8c3a-c6df1ffa2ca4",
-        "logo": "https://play-lh.googleusercontent.com/6RnorZH_6PZObYdLC4nBepeoVZD90SJ5iW1Edge_OHZ6VEMt6NgsuD9EPOY3HAMcEg=w240-h480-rw",
+        "url": "https://d111.rndfnk.com/ard/wdr/cosmo/afrobeat/mp3/128/stream.mp3?sid=22baLPW5cRxAqadp1TE8EsO2KZ3&token=yZkqgf6OCq-mEelPR8xZ3UHeEIcbaCZ9eI0dl1QJNDI&tvf=DUeVos3pwhZkMTExLnJuZGZuay5jb20",
+        "logo": "https://www1.wdr.de/radio/1live/musik/heimatkult/akua-naru-202~_v-ARDAustauschformats.jpg",
         "artist": null,
         "lang": null,
         "channels": null,
@@ -6003,21 +6651,12 @@
         ],
         "metadata": {
           "duration": null,
-          "statusText": "playing"
-        },
-        "ref": {
-          "currentRDList": {
-            "listId": "List",
-            "name": "Années 60",
-            "$item": {
-              "0": {},
-              "length": 1
-            }
-          },
-          "currentTab": {
-            "listId": "List",
-            "tabId": "btn_wrp_play_list"
-          }
+          "stereo": null,
+          "encoding": null,
+          "sampleFrq": null,
+          "sampleRes": null,
+          "country": null,
+          "statusText": null
         }
       },
       {
@@ -6588,21 +7227,12 @@
         ],
         "metadata": {
           "duration": null,
-          "statusText": "playing"
-        },
-        "ref": {
-          "currentRDList": {
-            "listId": "List",
-            "name": "Crooners",
-            "$item": {
-              "0": {},
-              "length": 1
-            }
-          },
-          "currentTab": {
-            "listId": "List",
-            "tabId": "btn_wrp_play_list"
-          }
+          "stereo": null,
+          "encoding": null,
+          "sampleFrq": null,
+          "sampleRes": null,
+          "country": null,
+          "statusText": null
         }
       },
       {
@@ -6861,42 +7491,6 @@
     ],
     "isSystem": false
   },
-  "Années 50": {
-    "listId": "List",
-    "name": "Années 50",
-    "items": [
-      {
-        "id": "9960",
-        "name": "ON Radio 50s",
-        "description": null,
-        "groupTitle": null,
-        "groups": [
-          "Radio",
-          "50s"
-        ],
-        "url": "http://0n-50s.radionetz.de/0n-50s.aac",
-        "logo": "http://www.0nradio.com/images/favicon/mstile-144x144.png",
-        "artist": null,
-        "lang": null,
-        "channels": null,
-        "country": null,
-        "favLists": [
-          "History",
-          "Années 50"
-        ],
-        "metadata": {
-          "duration": null,
-          "stereo": null,
-          "encoding": null,
-          "sampleFrq": null,
-          "sampleRes": null,
-          "country": null,
-          "statusText": null
-        }
-      }
-    ],
-    "isSystem": false
-  },
   "International": {
     "listId": "List",
     "name": "International",
@@ -7066,12 +7660,21 @@
         ],
         "metadata": {
           "duration": null,
-          "stereo": null,
-          "encoding": null,
-          "sampleFrq": null,
-          "sampleRes": null,
-          "country": null,
-          "statusText": null
+          "statusText": "playing"
+        },
+        "ref": {
+          "currentRDList": {
+            "listId": "List",
+            "name": "History",
+            "$item": {
+              "0": {},
+              "length": 1
+            }
+          },
+          "currentTab": {
+            "listId": "List",
+            "tabId": "btn_wrp_play_list"
+          }
         }
       }
     ],
@@ -7125,8 +7728,35 @@
         "channels": null,
         "country": null,
         "favLists": [
-          "History",
-          "années 80"
+          "History"
+        ],
+        "metadata": {
+          "duration": null,
+          "stereo": null,
+          "encoding": null,
+          "sampleFrq": null,
+          "sampleRes": null,
+          "country": null,
+          "statusText": null
+        }
+      },
+      {
+        "id": "7157",
+        "name": "La Retro 80s Chile",
+        "description": null,
+        "groupTitle": null,
+        "groups": [
+          "Oldies",
+          "80s"
+        ],
+        "url": "https://s2.radio.co:80/s9ecef4f68/listen",
+        "logo": "https://www.laretro.cl/img/cass2.svg",
+        "artist": null,
+        "lang": null,
+        "channels": null,
+        "country": null,
+        "favLists": [
+          "Années 80"
         ],
         "metadata": {
           "duration": null,
@@ -7201,21 +7831,12 @@
         ],
         "metadata": {
           "duration": null,
-          "statusText": "pause"
-        },
-        "ref": {
-          "currentRDList": {
-            "listId": "List",
-            "name": "Infos",
-            "$item": {
-              "0": {},
-              "length": 1
-            }
-          },
-          "currentTab": {
-            "listId": "Viz",
-            "tabId": "btn_wrp_logo"
-          }
+          "stereo": null,
+          "encoding": null,
+          "sampleFrq": null,
+          "sampleRes": null,
+          "country": null,
+          "statusText": null
         }
       },
       {
@@ -7710,6 +8331,33 @@
           "country": null,
           "statusText": null
         }
+      },
+      {
+        "id": "12123",
+        "name": "Total Instrumental",
+        "description": null,
+        "groupTitle": null,
+        "groups": [
+          "Instrumental"
+        ],
+        "url": "http://total-instrumental.stream.laut.fm/total-instrumental?t302=2021-12-21_18-33-12&uuid=99ea5c76-a3e7-47bf-b3eb-4db00f7c8b21",
+        "logo": "http://files.radio-total-instrumental.de/200000242-0a7490b6f8/favicon.ico",
+        "artist": null,
+        "lang": null,
+        "channels": null,
+        "country": null,
+        "favLists": [
+          "Instrumental"
+        ],
+        "metadata": {
+          "duration": null,
+          "stereo": null,
+          "encoding": null,
+          "sampleFrq": null,
+          "sampleRes": null,
+          "country": null,
+          "statusText": null
+        }
       }
     ],
     "isSystem": false
@@ -7738,21 +8386,12 @@
         ],
         "metadata": {
           "duration": null,
-          "statusText": "connecting..."
-        },
-        "ref": {
-          "currentRDList": {
-            "listId": "List",
-            "name": "Blues",
-            "$item": {
-              "0": {},
-              "length": 1
-            }
-          },
-          "currentTab": {
-            "listId": "Viz",
-            "tabId": "btn_wrp_logo"
-          }
+          "stereo": null,
+          "encoding": null,
+          "sampleFrq": null,
+          "sampleRes": null,
+          "country": null,
+          "statusText": null
         }
       },
       {
@@ -7774,21 +8413,12 @@
         ],
         "metadata": {
           "duration": null,
-          "statusText": "playing"
-        },
-        "ref": {
-          "currentRDList": {
-            "listId": "List",
-            "name": "Blues",
-            "$item": {
-              "0": {},
-              "length": 1
-            }
-          },
-          "currentTab": {
-            "listId": "Viz",
-            "tabId": "btn_wrp_logo"
-          }
+          "stereo": null,
+          "encoding": null,
+          "sampleFrq": null,
+          "sampleRes": null,
+          "country": null,
+          "statusText": null
         }
       }
     ],
@@ -7820,12 +8450,21 @@
         ],
         "metadata": {
           "duration": null,
-          "stereo": null,
-          "encoding": null,
-          "sampleFrq": null,
-          "sampleRes": null,
-          "country": null,
-          "statusText": null
+          "statusText": "playing"
+        },
+        "ref": {
+          "currentRDList": {
+            "listId": "List",
+            "name": "DUB",
+            "$item": {
+              "0": {},
+              "length": 1
+            }
+          },
+          "currentTab": {
+            "listId": "List",
+            "tabId": "btn_wrp_play_list"
+          }
         }
       }
     ],
@@ -8143,6 +8782,158 @@
     ],
     "isSystem": false
   },
+  "Bizarre": {
+    "listId": "List",
+    "name": "Bizarre",
+    "items": [
+      {
+        "id": "5099",
+        "name": "and Madison Counties Public Safety",
+        "description": null,
+        "groupTitle": null,
+        "groups": [
+          "Unclassified"
+        ],
+        "url": "https://broadcastify.cdnstream1.com/4130",
+        "logo": "https://s.broadcastify.com/icons/apple-icon-120x120.png",
+        "artist": null,
+        "lang": null,
+        "channels": null,
+        "country": null,
+        "favLists": [
+          "Bizarre"
+        ],
+        "metadata": {
+          "duration": null,
+          "stereo": null,
+          "encoding": null,
+          "sampleFrq": null,
+          "sampleRes": null,
+          "country": null,
+          "statusText": null
+        }
+      },
+      {
+        "id": "20888",
+        "name": "Halloween Radio Atmosphere",
+        "description": null,
+        "groupTitle": null,
+        "groups": [
+          "Ambient"
+        ],
+        "url": "http://radio1.streamserver.link/radio/8040/hra-aac",
+        "logo": "https://www.halloweenradio.net/images/channel_atmosphere.png",
+        "artist": null,
+        "lang": null,
+        "channels": null,
+        "country": null,
+        "favLists": [
+          "Bizarre"
+        ],
+        "metadata": {
+          "duration": null,
+          "stereo": null,
+          "encoding": null,
+          "sampleFrq": null,
+          "sampleRes": null,
+          "country": null,
+          "statusText": null
+        }
+      },
+      {
+        "id": "20889",
+        "name": "Halloween Radio Main",
+        "description": null,
+        "groupTitle": null,
+        "groups": [
+          "Ambient"
+        ],
+        "url": "http://radio1.streamserver.link/radio/8000/hrm-aac",
+        "logo": "https://www.halloweenradio.net/images/channel_main.png",
+        "artist": null,
+        "lang": null,
+        "channels": null,
+        "country": null,
+        "favLists": [
+          "Bizarre"
+        ],
+        "metadata": {
+          "duration": null,
+          "stereo": null,
+          "encoding": null,
+          "sampleFrq": null,
+          "sampleRes": null,
+          "country": null,
+          "statusText": null
+        }
+      },
+      {
+        "id": "20919",
+        "name": "MyNoise Drone Zone",
+        "description": null,
+        "groupTitle": null,
+        "groups": [
+          "Ambient",
+          "Relaxation"
+        ],
+        "url": "http://dronezone-mynoise.radioca.st/stream",
+        "logo": "https://mynoise.net/apple-touch-icon.png",
+        "artist": null,
+        "lang": null,
+        "channels": null,
+        "country": null,
+        "favLists": [
+          "Bizarre"
+        ],
+        "metadata": {
+          "duration": null,
+          "stereo": null,
+          "encoding": null,
+          "sampleFrq": null,
+          "sampleRes": null,
+          "country": null,
+          "statusText": null
+        }
+      }
+    ],
+    "isSystem": false
+  },
+  "Années 50": {
+    "listId": "List",
+    "name": "Années 50",
+    "items": [
+      {
+        "id": "9960",
+        "name": "ON Radio 50s",
+        "description": null,
+        "groupTitle": null,
+        "groups": [
+          "Radio",
+          "50s"
+        ],
+        "url": "http://0n-50s.radionetz.de/0n-50s.aac",
+        "logo": "http://www.0nradio.com/images/favicon/mstile-144x144.png",
+        "artist": null,
+        "lang": null,
+        "channels": null,
+        "country": null,
+        "favLists": [
+          "History",
+          "Années 50"
+        ],
+        "metadata": {
+          "duration": null,
+          "stereo": null,
+          "encoding": null,
+          "sampleFrq": null,
+          "sampleRes": null,
+          "country": null,
+          "statusText": null
+        }
+      }
+    ],
+    "isSystem": false
+  },
   "Pop": {
     "listId": "List",
     "name": "Pop",
@@ -8313,6 +9104,885 @@
           "country": null,
           "statusText": null
         }
+      },
+      {
+        "id": "10713",
+        "name": "ElectroZombies",
+        "description": null,
+        "groupTitle": null,
+        "groups": [
+          "Electro"
+        ],
+        "url": "http://electrozombies.stream.laut.fm/electrozombies?t302=2021-12-21_02-42-35&uuid=f829707f-f917-4ec8-82d6-8b641e79f803",
+        "logo": "https://electrozombies.com/wp-content/uploads/2015/09/electrozombies_icon.jpg",
+        "artist": null,
+        "lang": null,
+        "channels": null,
+        "country": null,
+        "favLists": [
+          "Pop"
+        ],
+        "metadata": {
+          "duration": null,
+          "stereo": null,
+          "encoding": null,
+          "sampleFrq": null,
+          "sampleRes": null,
+          "country": null,
+          "statusText": null
+        }
+      },
+      {
+        "id": "17902",
+        "name": "my105 DJ Mixes",
+        "description": null,
+        "groupTitle": null,
+        "groups": [
+          "Mix"
+        ],
+        "url": "http://stream01.my105.ch/my105djnights.mp3",
+        "logo": "http://www.my105.ch/fileadmin/templates/img/my105_logo.jpg",
+        "artist": null,
+        "lang": null,
+        "channels": null,
+        "country": null,
+        "favLists": [
+          "History",
+          "Pop"
+        ],
+        "metadata": {
+          "duration": null,
+          "stereo": null,
+          "encoding": null,
+          "sampleFrq": null,
+          "sampleRes": null,
+          "country": null,
+          "statusText": null
+        }
+      },
+      {
+        "id": "11426",
+        "name": "NORA Oldies",
+        "description": null,
+        "groupTitle": null,
+        "groups": [
+          "Oldies"
+        ],
+        "url": "http://norawebstreams-stream22.radiohost.de/nora-oldies_mp3-128?sabc=61p21qs6%230%232qqpnss01895rqr0s8oq129o03s183o0%23ubzrcntr&amsparams=playerid:homepage;skey:1640111606&listenerrmid=31363430313131363036-326130333a343030303a33373a34323a633466653a346366663a666561373a38393431-3435343330-53747265616d436865636b426f742f302e312e30",
+        "logo": "http://www.norawebstreams.de/_nuxt/icons/icon_64.a8000000000.png",
+        "artist": null,
+        "lang": null,
+        "channels": null,
+        "country": null,
+        "favLists": [
+          "History",
+          "Pop"
+        ],
+        "metadata": {
+          "duration": null,
+          "statusText": "playing"
+        },
+        "ref": {
+          "currentRDList": {
+            "listId": "List",
+            "name": "Pop",
+            "$item": {
+              "0": {},
+              "length": 1
+            }
+          },
+          "currentTab": {
+            "listId": "Viz",
+            "tabId": "btn_wrp_logo"
+          }
+        }
+      },
+      {
+        "id": "21329",
+        "name": "Fleurieu 89.3 FM",
+        "description": null,
+        "groupTitle": null,
+        "groups": [
+          "Community",
+          "Variety"
+        ],
+        "url": "https://stream.sigile.net/live/fleurieufm-128-mp3",
+        "logo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQm1S7lAwdJZ9_XQnLnCfO5f-Uv3dy1BXAdOA&s",
+        "artist": null,
+        "lang": null,
+        "channels": null,
+        "country": null,
+        "favLists": [
+          "History",
+          "Pop"
+        ],
+        "metadata": {
+          "duration": null,
+          "statusText": "playing"
+        },
+        "ref": {
+          "currentRDList": {
+            "listId": "List",
+            "name": "Pop",
+            "$item": {
+              "0": {},
+              "length": 1
+            }
+          },
+          "currentTab": {
+            "listId": "List",
+            "tabId": "btn_wrp_play_list"
+          }
+        }
+      }
+    ],
+    "isSystem": false
+  },
+  "Chanson Française": {
+    "listId": "List",
+    "name": "Chanson Française",
+    "items": [
+      {
+        "id": "1942",
+        "name": "101.ru French Chanson",
+        "description": null,
+        "groupTitle": null,
+        "groups": [
+          "Radio",
+          "French",
+          "Songs"
+        ],
+        "url": "http://ic6.101.ru:8000/stream/pro/aac/64/146",
+        "logo": "https://kuasark.com/files/stations-logos/101ru-french-chanson.png",
+        "artist": null,
+        "lang": "French",
+        "channels": null,
+        "country": null,
+        "favLists": [
+          "History",
+          "Chanson Française"
+        ],
+        "metadata": {
+          "duration": null,
+          "stereo": null,
+          "encoding": null,
+          "sampleFrq": null,
+          "sampleRes": null,
+          "country": null,
+          "statusText": null
+        }
+      },
+      {
+        "id": "8057",
+        "name": "Chante France",
+        "description": null,
+        "groupTitle": null,
+        "groups": [
+          "French"
+        ],
+        "url": "https://chantefrance.ice.infomaniak.ch/chantefrance-128.mp3",
+        "logo": "http://www.chantefrance.com/public/img/logo.png",
+        "artist": null,
+        "lang": "French",
+        "channels": null,
+        "country": null,
+        "favLists": [
+          "Chanson Française"
+        ],
+        "metadata": {
+          "duration": null,
+          "stereo": null,
+          "encoding": null,
+          "sampleFrq": null,
+          "sampleRes": null,
+          "country": null,
+          "statusText": null
+        }
+      },
+      {
+        "id": "8058",
+        "name": "Chante France 60's",
+        "description": null,
+        "groupTitle": null,
+        "groups": [
+          "French",
+          "60s"
+        ],
+        "url": "https://chantefrance60s.ice.infomaniak.ch/chantefrance60s-128.mp3",
+        "logo": "http://www.chantefrance.com/public/img/logo.png",
+        "artist": null,
+        "lang": "French",
+        "channels": null,
+        "country": null,
+        "favLists": [
+          "Chanson Française"
+        ],
+        "metadata": {
+          "duration": null,
+          "stereo": null,
+          "encoding": null,
+          "sampleFrq": null,
+          "sampleRes": null,
+          "country": null,
+          "statusText": null
+        }
+      },
+      {
+        "id": "8059",
+        "name": "Chante France 70's",
+        "description": null,
+        "groupTitle": null,
+        "groups": [
+          "French",
+          "70s"
+        ],
+        "url": "https://chantefrance70s.ice.infomaniak.ch/chantefrance70s-128.mp3",
+        "logo": "http://www.chantefrance.com/public/img/logo.png",
+        "artist": null,
+        "lang": "French",
+        "channels": null,
+        "country": null,
+        "favLists": [
+          "Chanson Française"
+        ],
+        "metadata": {
+          "duration": null,
+          "stereo": null,
+          "encoding": null,
+          "sampleFrq": null,
+          "sampleRes": null,
+          "country": null,
+          "statusText": null
+        }
+      },
+      {
+        "id": "8060",
+        "name": "Chante France 80's",
+        "description": null,
+        "groupTitle": null,
+        "groups": [
+          "French",
+          "80s"
+        ],
+        "url": "https://chantefrance80s.ice.infomaniak.ch/chantefrance80s-128.mp3",
+        "logo": "http://www.chantefrance.com/public/img/logo.png",
+        "artist": null,
+        "lang": "French",
+        "channels": null,
+        "country": null,
+        "favLists": [
+          "Chanson Française"
+        ],
+        "metadata": {
+          "duration": null,
+          "stereo": null,
+          "encoding": null,
+          "sampleFrq": null,
+          "sampleRes": null,
+          "country": null,
+          "statusText": null
+        }
+      },
+      {
+        "id": "8061",
+        "name": "Chante France Emotion",
+        "description": null,
+        "groupTitle": null,
+        "groups": [
+          "French"
+        ],
+        "url": "https://chantefranceemotion.ice.infomaniak.ch/chantefranceemotion-128.mp3",
+        "logo": "http://www.chantefrance.com/public/img/logo.png",
+        "artist": null,
+        "lang": "French",
+        "channels": null,
+        "country": null,
+        "favLists": [
+          "Chanson Française"
+        ],
+        "metadata": {
+          "duration": null,
+          "stereo": null,
+          "encoding": null,
+          "sampleFrq": null,
+          "sampleRes": null,
+          "country": null,
+          "statusText": null
+        }
+      },
+      {
+        "id": "8062",
+        "name": "Chante France Nouveautés",
+        "description": null,
+        "groupTitle": null,
+        "groups": [
+          "French"
+        ],
+        "url": "https://chantefrancenouveautes.ice.infomaniak.ch/chantefrancenouveautes-96.aac",
+        "logo": "https://www.chantefrance.com/public/img/favico.png",
+        "artist": null,
+        "lang": "French",
+        "channels": null,
+        "country": null,
+        "favLists": [
+          "Chanson Française"
+        ],
+        "metadata": {
+          "duration": null,
+          "stereo": null,
+          "encoding": null,
+          "sampleFrq": null,
+          "sampleRes": null,
+          "country": null,
+          "statusText": null
+        }
+      },
+      {
+        "id": "7959",
+        "name": "tout FIP",
+        "description": null,
+        "groupTitle": null,
+        "groups": [
+          "French"
+        ],
+        "url": "https://icecast.radiofrance.fr/fipnouveautes-hifi.aac",
+        "logo": "https://cdn.radiofrance.fr/s3/cruiser-production/2019/06/e061141c-f6b4-4502-ba43-f6ec693a049b/200x200_fip-nouveau_ok.jpg",
+        "artist": null,
+        "lang": "French",
+        "channels": null,
+        "country": null,
+        "favLists": [
+          "History",
+          "Chanson Française"
+        ],
+        "metadata": {
+          "duration": null,
+          "stereo": null,
+          "encoding": null,
+          "sampleFrq": null,
+          "sampleRes": null,
+          "country": null,
+          "statusText": null
+        }
+      }
+    ],
+    "isSystem": false
+  },
+  "Lounge": {
+    "listId": "List",
+    "name": "Lounge",
+    "items": [
+      {
+        "id": "19787",
+        "name": "Taiwan Lounge Radio",
+        "description": null,
+        "groupTitle": null,
+        "groups": [
+          "Lounge",
+          "Radio"
+        ],
+        "url": "https://azuracast.conceptradio.fr/radio/8030/stream.mp3",
+        "logo": "http://www.taiwan-lounge.com/site/images/logo.jpg",
+        "artist": null,
+        "lang": null,
+        "channels": null,
+        "country": null,
+        "favLists": [
+          "Lounge"
+        ],
+        "metadata": {
+          "duration": null,
+          "statusText": "playing"
+        },
+        "ref": {
+          "currentRDList": {
+            "listId": "List",
+            "name": "Lounge",
+            "$item": {
+              "0": {},
+              "length": 1
+            }
+          },
+          "currentTab": {
+            "listId": "List",
+            "tabId": "btn_wrp_play_list"
+          }
+        }
+      },
+      {
+        "id": "20871",
+        "name": "chillout CROOZE",
+        "description": null,
+        "groupTitle": null,
+        "groups": [
+          "Ambient",
+          "Electro"
+        ],
+        "url": "http://streams.crooze.fm:8006/stream/1/",
+        "logo": "https://crooze.fm/wp-content/uploads/sites/3/2018/12/CHILLOUT-CROOZE-128x128.png",
+        "artist": null,
+        "lang": null,
+        "channels": null,
+        "country": null,
+        "favLists": [
+          "Lounge"
+        ],
+        "metadata": {
+          "duration": null,
+          "statusText": "playing"
+        },
+        "ref": {
+          "currentRDList": {
+            "listId": "List",
+            "name": "Lounge",
+            "$item": {
+              "0": {},
+              "length": 1
+            }
+          },
+          "currentTab": {
+            "listId": "Viz",
+            "tabId": "btn_wrp_logo"
+          }
+        }
+      },
+      {
+        "id": "7415",
+        "name": "Galaxie Lounge",
+        "description": null,
+        "groupTitle": null,
+        "groups": [
+          "Lounge"
+        ],
+        "url": "https://listen.radioking.com/radio/45838/stream/82624",
+        "logo": "http://galaxie-radio1.radio-website.com//upload/578f3bce151616.43092430.ico",
+        "artist": null,
+        "lang": null,
+        "channels": null,
+        "country": null,
+        "favLists": [
+          "Lounge"
+        ],
+        "metadata": {
+          "duration": null,
+          "statusText": "playing"
+        },
+        "ref": {
+          "currentRDList": {
+            "listId": "List",
+            "name": "Lounge",
+            "$item": {
+              "0": {},
+              "length": 1
+            }
+          },
+          "currentTab": {
+            "listId": "Viz",
+            "tabId": "btn_wrp_logo"
+          }
+        }
+      },
+      {
+        "id": "3758",
+        "name": "Chill Lounge Florida",
+        "description": null,
+        "groupTitle": null,
+        "groups": [
+          "Lounge"
+        ],
+        "url": "https://vip2.fastcast4u.com/proxy/chillfla?mp=/1",
+        "logo": "https://img1.wsimg.com/isteam/stock/nzaDy9/:/cr=t:0%25,l:0%25,w:100%25,h:100%25/rs=h:500,cg:true",
+        "artist": null,
+        "lang": null,
+        "channels": null,
+        "country": null,
+        "favLists": [
+          "Lounge"
+        ],
+        "metadata": {
+          "duration": null,
+          "statusText": "playing"
+        },
+        "ref": {
+          "currentRDList": {
+            "listId": "List",
+            "name": "Lounge",
+            "$item": {
+              "0": {},
+              "length": 1
+            }
+          },
+          "currentTab": {
+            "listId": "Viz",
+            "tabId": "btn_wrp_logo"
+          }
+        }
+      },
+      {
+        "id": "10462",
+        "name": "BDJ Electronic Lounge Radio",
+        "description": null,
+        "groupTitle": null,
+        "groups": [
+          "Electro",
+          "Lounge",
+          "Radio"
+        ],
+        "url": "https://bdjelectronicloungeradio.stream.laut.fm/bdj_electronic_lounge_radio?t302=2021-12-21_03-06-52&uuid=d628e7da-1d91-4911-8472-23df039fa65f",
+        "logo": "http://www.bdjradio.com/assets/bdj-favicon-2.png?v=2",
+        "artist": null,
+        "lang": null,
+        "channels": null,
+        "country": null,
+        "favLists": [
+          "Lounge"
+        ],
+        "metadata": {
+          "duration": null,
+          "statusText": "playing"
+        },
+        "ref": {
+          "currentRDList": {
+            "listId": "List",
+            "name": "Lounge",
+            "$item": {
+              "0": {},
+              "length": 1
+            }
+          },
+          "currentTab": {
+            "listId": "Viz",
+            "tabId": "btn_wrp_logo"
+          }
+        }
+      },
+      {
+        "id": "10359",
+        "name": "Antenne Bayern Lounge",
+        "description": null,
+        "groupTitle": null,
+        "groups": [
+          "Radio",
+          "Deutsch",
+          "Lounge"
+        ],
+        "url": "http://s3-webradio.antenne.de/lounge/stream/aacp",
+        "logo": "https://www.radio.net/images/broadcasts/0d/91/124497/10/c300.png",
+        "artist": null,
+        "lang": "Deutsch",
+        "channels": null,
+        "country": null,
+        "favLists": [
+          "Lounge"
+        ],
+        "metadata": {
+          "duration": null,
+          "statusText": "playing"
+        },
+        "ref": {
+          "currentRDList": {
+            "listId": "List",
+            "name": "Lounge",
+            "$item": {
+              "0": {},
+              "length": 1
+            }
+          },
+          "currentTab": {
+            "listId": "Viz",
+            "tabId": "btn_wrp_logo"
+          }
+        }
+      },
+      {
+        "id": "8294",
+        "name": "Allzic Jazz Lounge",
+        "description": null,
+        "groupTitle": null,
+        "groups": [
+          "French",
+          "Jazz",
+          "Lounge"
+        ],
+        "url": "http://allzic03.ice.infomaniak.ch/allzic03.mp3",
+        "logo": "https://www.allzicradio.com/apple-touch-icon.png",
+        "artist": null,
+        "lang": "French",
+        "channels": null,
+        "country": null,
+        "favLists": [
+          "Lounge"
+        ],
+        "metadata": {
+          "duration": null,
+          "statusText": "playing"
+        },
+        "ref": {
+          "currentRDList": {
+            "listId": "List",
+            "name": "Lounge",
+            "$item": {
+              "0": {},
+              "length": 1
+            }
+          },
+          "currentTab": {
+            "listId": "Viz",
+            "tabId": "btn_wrp_logo"
+          }
+        }
+      },
+      {
+        "id": "17813",
+        "name": "1.FM Chillout Lounge Radio",
+        "description": null,
+        "groupTitle": null,
+        "groups": [
+          "Radio",
+          "Lounge"
+        ],
+        "url": "http://strm112.1.fm/chilloutlounge_mobile_mp3",
+        "logo": "http://liveradio.de/media/cache/station_detail/18f08aee-f06b-4965-b607-3f25a581619c.jpg",
+        "artist": null,
+        "lang": null,
+        "channels": null,
+        "country": null,
+        "favLists": [
+          "Lounge"
+        ],
+        "metadata": {
+          "duration": null,
+          "statusText": "playing"
+        },
+        "ref": {
+          "currentRDList": {
+            "listId": "List",
+            "name": "Lounge",
+            "$item": {
+              "0": {},
+              "length": 1
+            }
+          },
+          "currentTab": {
+            "listId": "Viz",
+            "tabId": "btn_wrp_logo"
+          }
+        }
+      },
+      {
+        "id": "1260",
+        "name": "Radio Art Smooth Lounge",
+        "description": null,
+        "groupTitle": null,
+        "groups": [
+          "Radio",
+          "Arts",
+          "Smooth",
+          "Lounge"
+        ],
+        "url": "http://air.radioart.com/fSmooth_lounge.mp3",
+        "logo": "https://www.radioart.com/templates/yootheme/cache/logo-2d9baf0b.png",
+        "artist": null,
+        "lang": null,
+        "channels": null,
+        "country": null,
+        "favLists": [
+          "Lounge"
+        ],
+        "metadata": {
+          "duration": null,
+          "stereo": null,
+          "encoding": null,
+          "sampleFrq": null,
+          "sampleRes": null,
+          "country": null,
+          "statusText": null
+        }
+      },
+      {
+        "id": "1222",
+        "name": "Radio Art Lounge",
+        "description": null,
+        "groupTitle": null,
+        "groups": [
+          "Radio",
+          "Arts",
+          "Lounge"
+        ],
+        "url": "http://air.radioart.com/fLounge.mp3",
+        "logo": "https://d1iyh67kzf6t3o.cloudfront.net/images/channels/Lounge.jpg",
+        "artist": null,
+        "lang": null,
+        "channels": null,
+        "country": null,
+        "favLists": [
+          "Lounge"
+        ],
+        "metadata": {
+          "duration": null
+        },
+        "ref": {
+          "currentRDList": {
+            "listId": "List",
+            "name": "Lounge",
+            "$item": {
+              "0": {},
+              "length": 1
+            }
+          },
+          "currentTab": {
+            "listId": "Viz",
+            "tabId": "btn_wrp_logo"
+          }
+        }
+      },
+      {
+        "id": "7351",
+        "name": "Crooner Radio Lounge",
+        "description": null,
+        "groupTitle": null,
+        "groups": [
+          "Radio",
+          "Lounge"
+        ],
+        "url": "http://croonerradio_lounge.ice.infomaniak.ch/croonerradio-lounge-midfi",
+        "logo": "https://www.croonerradio.fr/favicon.ico",
+        "artist": null,
+        "lang": null,
+        "channels": null,
+        "country": null,
+        "favLists": [
+          "Lounge"
+        ],
+        "metadata": {
+          "duration": 30.072018,
+          "statusText": "playing"
+        },
+        "ref": {
+          "currentRDList": {
+            "listId": "List",
+            "name": "Lounge",
+            "$item": {
+              "0": {},
+              "length": 1
+            }
+          },
+          "currentTab": {
+            "listId": "Viz",
+            "tabId": "btn_wrp_logo"
+          }
+        }
+      },
+      {
+        "id": "21052",
+        "name": "Zen FM",
+        "description": null,
+        "groupTitle": null,
+        "groups": [
+          "Lounge"
+        ],
+        "url": "https://playerservices.streamtheworld.com/api/livestream-redirect/TOPZEN.mp3",
+        "logo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQOZr7Z6HZ5A27xtbJ51iPQFMex_bD2iJHpzlCNBdNKY_QxPuMIzLn0XSCb5MfunT7meeQ&usqp=CAU",
+        "artist": null,
+        "lang": null,
+        "channels": null,
+        "country": null,
+        "favLists": [
+          "Lounge"
+        ],
+        "metadata": {
+          "duration": null,
+          "statusText": "playing"
+        },
+        "ref": {
+          "currentRDList": {
+            "listId": "List",
+            "name": "Lounge",
+            "$item": {
+              "0": {},
+              "length": 1
+            }
+          },
+          "currentTab": {
+            "listId": "Viz",
+            "tabId": "btn_wrp_logo"
+          }
+        }
+      },
+      {
+        "id": "20742",
+        "name": "LoungeFM 100% Austria",
+        "description": null,
+        "groupTitle": null,
+        "groups": [
+          "Lounge",
+          "Lounge"
+        ],
+        "url": "https://s35.derstream.net/100austria.mp3",
+        "logo": "https://www.allzicradio.com/media/radios/c17511.png",
+        "artist": null,
+        "lang": null,
+        "channels": null,
+        "country": null,
+        "favLists": [
+          "History",
+          "Lounge"
+        ],
+        "metadata": {
+          "duration": null,
+          "statusText": "playing"
+        },
+        "ref": {
+          "currentRDList": {
+            "listId": "List",
+            "name": "Lounge",
+            "$item": {
+              "0": {},
+              "length": 1
+            }
+          },
+          "currentTab": {
+            "listId": "Viz",
+            "tabId": "btn_wrp_logo"
+          }
+        }
+      },
+      {
+        "id": "11492",
+        "name": "POP LOUNGE CAFE",
+        "description": null,
+        "groupTitle": null,
+        "groups": [
+          "Pop",
+          "Lounge"
+        ],
+        "url": "http://poploungecafe.stream.laut.fm/poploungecafe?t302=2021-12-21_03-38-03&uuid=e6be5064-2a80-4aa3-8c3a-c6df1ffa2ca4",
+        "logo": "https://play-lh.googleusercontent.com/6RnorZH_6PZObYdLC4nBepeoVZD90SJ5iW1Edge_OHZ6VEMt6NgsuD9EPOY3HAMcEg=w240-h480-rw",
+        "artist": null,
+        "lang": null,
+        "channels": null,
+        "country": null,
+        "favLists": [
+          "Lounge"
+        ],
+        "metadata": {
+          "duration": null,
+          "statusText": "playing"
+        },
+        "ref": {
+          "currentRDList": {
+            "listId": "List",
+            "name": "Lounge",
+            "$item": {
+              "0": {},
+              "length": 1
+            }
+          },
+          "currentTab": {
+            "listId": "List",
+            "tabId": "btn_wrp_play_list"
+          }
+        }
       }
     ],
     "isSystem": false
@@ -8375,189 +10045,25 @@
           "country": null,
           "statusText": null
         }
-      }
-    ],
-    "isSystem": false
-  },
-  "Lounge": {
-    "listId": "List",
-    "name": "Lounge",
-    "items": [
-      {
-        "id": "19787",
-        "name": "Taiwan Lounge Radio",
-        "description": null,
-        "groupTitle": null,
-        "groups": [
-          "Lounge",
-          "Radio"
-        ],
-        "url": "https://azuracast.conceptradio.fr/radio/8030/stream.mp3",
-        "logo": "http://www.taiwan-lounge.com/site/images/logo.jpg",
-        "artist": null,
-        "lang": null,
-        "channels": null,
-        "country": null,
-        "favLists": [
-          "Lounge"
-        ],
-        "metadata": {
-          "duration": null,
-          "stereo": null,
-          "encoding": null,
-          "sampleFrq": null,
-          "sampleRes": null,
-          "country": null,
-          "statusText": null
-        }
       },
       {
-        "id": "20871",
-        "name": "chillout CROOZE",
-        "description": null,
-        "groupTitle": null,
-        "groups": [
-          "Ambient",
-          "Electro"
-        ],
-        "url": "http://streams.crooze.fm:8006/stream/1/",
-        "logo": "https://crooze.fm/wp-content/uploads/sites/3/2018/12/CHILLOUT-CROOZE-128x128.png",
-        "artist": null,
-        "lang": null,
-        "channels": null,
-        "country": null,
-        "favLists": [
-          "Lounge"
-        ],
-        "metadata": {
-          "duration": null,
-          "stereo": null,
-          "encoding": null,
-          "sampleFrq": null,
-          "sampleRes": null,
-          "country": null,
-          "statusText": null
-        }
-      },
-      {
-        "id": "7415",
-        "name": "Galaxie Lounge",
-        "description": null,
-        "groupTitle": null,
-        "groups": [
-          "Lounge"
-        ],
-        "url": "https://listen.radioking.com/radio/45838/stream/82624",
-        "logo": "http://galaxie-radio1.radio-website.com//upload/578f3bce151616.43092430.ico",
-        "artist": null,
-        "lang": null,
-        "channels": null,
-        "country": null,
-        "favLists": [
-          "Lounge"
-        ],
-        "metadata": {
-          "duration": null,
-          "statusText": "playing"
-        },
-        "ref": {
-          "currentRDList": {
-            "listId": "List",
-            "name": "Lounge",
-            "$item": {
-              "0": {},
-              "length": 1
-            }
-          },
-          "currentTab": {
-            "listId": "Viz",
-            "tabId": "btn_wrp_logo"
-          }
-        }
-      },
-      {
-        "id": "3758",
-        "name": "Chill Lounge Florida",
-        "description": null,
-        "groupTitle": null,
-        "groups": [
-          "Lounge"
-        ],
-        "url": "https://vip2.fastcast4u.com/proxy/chillfla?mp=/1",
-        "logo": "https://img1.wsimg.com/isteam/stock/nzaDy9/:/cr=t:0%25,l:0%25,w:100%25,h:100%25/rs=h:500,cg:true",
-        "artist": null,
-        "lang": null,
-        "channels": null,
-        "country": null,
-        "favLists": [
-          "Lounge"
-        ],
-        "metadata": {
-          "duration": null,
-          "stereo": null,
-          "encoding": null,
-          "sampleFrq": null,
-          "sampleRes": null,
-          "country": null,
-          "statusText": null
-        }
-      },
-      {
-        "id": "10462",
-        "name": "BDJ Electronic Lounge Radio",
-        "description": null,
-        "groupTitle": null,
-        "groups": [
-          "Electro",
-          "Lounge",
-          "Radio"
-        ],
-        "url": "https://bdjelectronicloungeradio.stream.laut.fm/bdj_electronic_lounge_radio?t302=2021-12-21_03-06-52&uuid=d628e7da-1d91-4911-8472-23df039fa65f",
-        "logo": "http://www.bdjradio.com/assets/bdj-favicon-2.png?v=2",
-        "artist": null,
-        "lang": null,
-        "channels": null,
-        "country": null,
-        "favLists": [
-          "Lounge"
-        ],
-        "metadata": {
-          "duration": null,
-          "statusText": "playing"
-        },
-        "ref": {
-          "currentRDList": {
-            "listId": "List",
-            "name": "Lounge",
-            "$item": {
-              "0": {},
-              "length": 1
-            }
-          },
-          "currentTab": {
-            "listId": "Viz",
-            "tabId": "btn_wrp_logo"
-          }
-        }
-      },
-      {
-        "id": "10359",
-        "name": "Antenne Bayern Lounge",
+        "id": "5294",
+        "name": "Radio Paradise World/Etc Mix",
         "description": null,
         "groupTitle": null,
         "groups": [
           "Radio",
-          "Deutsch",
-          "Lounge"
+          "Mix"
         ],
-        "url": "http://s3-webradio.antenne.de/lounge/stream/aacp",
-        "logo": "https://www.radio.net/images/broadcasts/0d/91/124497/10/c300.png",
+        "url": "https://stream.radioparadise.com/world-etc-320",
+        "logo": "https://radioparadise.com/rpassets/images/logo/icon_flat_black_padded_62x50.png",
         "artist": null,
-        "lang": "Deutsch",
+        "lang": null,
         "channels": null,
         "country": null,
         "favLists": [
-          "Lounge"
+          "History",
+          "Exotique"
         ],
         "metadata": {
           "duration": null,
@@ -8570,23 +10076,22 @@
         }
       },
       {
-        "id": "8294",
-        "name": "Allzic Jazz Lounge",
+        "id": "21360",
+        "name": "Koori Radio 93.7",
         "description": null,
         "groupTitle": null,
         "groups": [
-          "French",
-          "Jazz",
-          "Lounge"
+          "Aboriginal",
+          "Indigenous"
         ],
-        "url": "http://allzic03.ice.infomaniak.ch/allzic03.mp3",
-        "logo": "https://www.allzicradio.com/apple-touch-icon.png",
+        "url": "https://playerservices.streamtheworld.com/api/livestream-redirect/2LNDAAC.aac",
+        "logo": "https://www.kooriradio.com/favicon.ico",
         "artist": null,
-        "lang": "French",
+        "lang": null,
         "channels": null,
         "country": null,
         "favLists": [
-          "Lounge"
+          "Exotique"
         ],
         "metadata": {
           "duration": null,
@@ -8599,323 +10104,23 @@
         }
       },
       {
-        "id": "17813",
-        "name": "1.FM Chillout Lounge Radio",
+        "id": "17290",
+        "name": "Menya Live Online Radio",
         "description": null,
         "groupTitle": null,
         "groups": [
-          "Radio",
-          "Lounge"
+          "Afrikaans",
+          "Kirundi",
+          "Variety"
         ],
-        "url": "http://strm112.1.fm/chilloutlounge_mobile_mp3",
-        "logo": "http://liveradio.de/media/cache/station_detail/18f08aee-f06b-4965-b607-3f25a581619c.jpg",
+        "url": "https://stream-176.zeno.fm/387qyxsn0c9uv",
+        "logo": "https://proxy.zeno.fm/content/stations/agxzfnplbm8tc3RhdHNyMgsSCkF1dGhDbGllbnQYgIDgwcSl3gkMCxIOU3RhdGlvblByb2ZpbGUYgIDwidvK6AgMogEEemVubw/image/?u=1724769302000",
         "artist": null,
-        "lang": null,
+        "lang": "Kirundi",
         "channels": null,
         "country": null,
         "favLists": [
-          "Lounge"
-        ],
-        "metadata": {
-          "duration": null,
-          "stereo": null,
-          "encoding": null,
-          "sampleFrq": null,
-          "sampleRes": null,
-          "country": null,
-          "statusText": null
-        }
-      },
-      {
-        "id": "1260",
-        "name": "Radio Art Smooth Lounge",
-        "description": null,
-        "groupTitle": null,
-        "groups": [
-          "Radio",
-          "Arts",
-          "Smooth",
-          "Lounge"
-        ],
-        "url": "http://air.radioart.com/fSmooth_lounge.mp3",
-        "logo": "https://www.radioart.com/templates/yootheme/cache/logo-2d9baf0b.png",
-        "artist": null,
-        "lang": null,
-        "channels": null,
-        "country": null,
-        "favLists": [
-          "Lounge"
-        ],
-        "metadata": {
-          "duration": null,
-          "stereo": null,
-          "encoding": null,
-          "sampleFrq": null,
-          "sampleRes": null,
-          "country": null,
-          "statusText": null
-        }
-      },
-      {
-        "id": "1222",
-        "name": "Radio Art Lounge",
-        "description": null,
-        "groupTitle": null,
-        "groups": [
-          "Radio",
-          "Arts",
-          "Lounge"
-        ],
-        "url": "http://air.radioart.com/fLounge.mp3",
-        "logo": "https://d1iyh67kzf6t3o.cloudfront.net/images/channels/Lounge.jpg",
-        "artist": null,
-        "lang": null,
-        "channels": null,
-        "country": null,
-        "favLists": [
-          "Lounge"
-        ],
-        "metadata": {
-          "duration": null,
-          "stereo": null,
-          "encoding": null,
-          "sampleFrq": null,
-          "sampleRes": null,
-          "country": null,
-          "statusText": null
-        }
-      },
-      {
-        "id": "7351",
-        "name": "Crooner Radio Lounge",
-        "description": null,
-        "groupTitle": null,
-        "groups": [
-          "Radio",
-          "Lounge"
-        ],
-        "url": "http://croonerradio_lounge.ice.infomaniak.ch/croonerradio-lounge-midfi",
-        "logo": "https://www.croonerradio.fr/favicon.ico",
-        "artist": null,
-        "lang": null,
-        "channels": null,
-        "country": null,
-        "favLists": [
-          "Lounge"
-        ],
-        "metadata": {
-          "duration": null,
-          "stereo": null,
-          "encoding": null,
-          "sampleFrq": null,
-          "sampleRes": null,
-          "country": null,
-          "statusText": null
-        }
-      },
-      {
-        "id": "21052",
-        "name": "Zen FM",
-        "description": null,
-        "groupTitle": null,
-        "groups": [
-          "Lounge"
-        ],
-        "url": "https://playerservices.streamtheworld.com/api/livestream-redirect/TOPZEN.mp3",
-        "logo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQOZr7Z6HZ5A27xtbJ51iPQFMex_bD2iJHpzlCNBdNKY_QxPuMIzLn0XSCb5MfunT7meeQ&usqp=CAU",
-        "artist": null,
-        "lang": null,
-        "channels": null,
-        "country": null,
-        "favLists": [
-          "Lounge"
-        ],
-        "metadata": {
-          "duration": null,
-          "statusText": "playing"
-        },
-        "ref": {
-          "currentRDList": {
-            "listId": "List",
-            "name": "Lounge",
-            "$item": {
-              "0": {},
-              "length": 1
-            }
-          },
-          "currentTab": {
-            "listId": "List",
-            "tabId": "btn_wrp_play_list"
-          }
-        }
-      }
-    ],
-    "isSystem": false
-  },
-  "----- TEST LIST -----": {
-    "listId": "List",
-    "name": "----- TEST LIST -----",
-    "items": [
-      {
-        "id": "16476",
-        "name": "Absolute Radio 00s",
-        "description": null,
-        "groupTitle": null,
-        "groups": [
-          "Radio",
-          "00s"
-        ],
-        "url": "https://edge-bauerall-01-gos2.sharp-stream.com/absolute00shigh.aac",
-        "logo": "https://planetradio.co.uk/tesla/static/favicons/absolute/favicon.ico",
-        "artist": null,
-        "lang": null,
-        "channels": null,
-        "country": null,
-        "favLists": [
-          "----- TEST LIST -----"
-        ],
-        "metadata": {
-          "duration": null,
-          "stereo": null,
-          "encoding": null,
-          "sampleFrq": null,
-          "sampleRes": null,
-          "country": null,
-          "statusText": null
-        }
-      },
-      {
-        "id": "10713",
-        "name": "ElectroZombies",
-        "description": null,
-        "groupTitle": null,
-        "groups": [
-          "Electro"
-        ],
-        "url": "http://electrozombies.stream.laut.fm/electrozombies?t302=2021-12-21_02-42-35&uuid=f829707f-f917-4ec8-82d6-8b641e79f803",
-        "logo": "https://electrozombies.com/wp-content/uploads/2015/09/electrozombies_icon.jpg",
-        "artist": null,
-        "lang": null,
-        "channels": null,
-        "country": null,
-        "favLists": [
-          "----- TEST LIST -----"
-        ],
-        "metadata": {
-          "duration": null,
-          "stereo": null,
-          "encoding": null,
-          "sampleFrq": null,
-          "sampleRes": null,
-          "country": null,
-          "statusText": null
-        }
-      }
-    ],
-    "isSystem": false
-  },
-  "Bizarre": {
-    "listId": "List",
-    "name": "Bizarre",
-    "items": [
-      {
-        "id": "5099",
-        "name": "and Madison Counties Public Safety",
-        "description": null,
-        "groupTitle": null,
-        "groups": [
-          "Unclassified"
-        ],
-        "url": "https://broadcastify.cdnstream1.com/4130",
-        "logo": "https://s.broadcastify.com/icons/apple-icon-120x120.png",
-        "artist": null,
-        "lang": null,
-        "channels": null,
-        "country": null,
-        "favLists": [
-          "Bizarre"
-        ],
-        "metadata": {
-          "duration": null,
-          "stereo": null,
-          "encoding": null,
-          "sampleFrq": null,
-          "sampleRes": null,
-          "country": null,
-          "statusText": null
-        }
-      },
-      {
-        "id": "20888",
-        "name": "Halloween Radio Atmosphere",
-        "description": null,
-        "groupTitle": null,
-        "groups": [
-          "Ambient"
-        ],
-        "url": "http://radio1.streamserver.link/radio/8040/hra-aac",
-        "logo": "https://www.halloweenradio.net/images/channel_atmosphere.png",
-        "artist": null,
-        "lang": null,
-        "channels": null,
-        "country": null,
-        "favLists": [
-          "Bizarre"
-        ],
-        "metadata": {
-          "duration": null,
-          "stereo": null,
-          "encoding": null,
-          "sampleFrq": null,
-          "sampleRes": null,
-          "country": null,
-          "statusText": null
-        }
-      },
-      {
-        "id": "20889",
-        "name": "Halloween Radio Main",
-        "description": null,
-        "groupTitle": null,
-        "groups": [
-          "Ambient"
-        ],
-        "url": "http://radio1.streamserver.link/radio/8000/hrm-aac",
-        "logo": "https://www.halloweenradio.net/images/channel_main.png",
-        "artist": null,
-        "lang": null,
-        "channels": null,
-        "country": null,
-        "favLists": [
-          "Bizarre"
-        ],
-        "metadata": {
-          "duration": null,
-          "stereo": null,
-          "encoding": null,
-          "sampleFrq": null,
-          "sampleRes": null,
-          "country": null,
-          "statusText": null
-        }
-      },
-      {
-        "id": "20919",
-        "name": "MyNoise Drone Zone",
-        "description": null,
-        "groupTitle": null,
-        "groups": [
-          "Ambient",
-          "Relaxation"
-        ],
-        "url": "http://dronezone-mynoise.radioca.st/stream",
-        "logo": "https://mynoise.net/apple-touch-icon.png",
-        "artist": null,
-        "lang": null,
-        "channels": null,
-        "country": null,
-        "favLists": [
-          "Bizarre"
+          "Exotique"
         ],
         "metadata": {
           "duration": null,
