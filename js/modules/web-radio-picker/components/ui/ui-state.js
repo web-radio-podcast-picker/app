@@ -308,6 +308,7 @@ class UIState {
         this.setSelectedListItemButtonsState(!enabled)
         this.setRadItemsListState(!enabled)
         this.setSelectedItemsState(!enabled)
+        this.setPathButtonsState(!enabled)
         if (opts.setListState)
             this.setItemsListState(opts.setListState, !enabled, true)
 
@@ -394,6 +395,14 @@ class UIState {
         else {
             $items.removeClass('but-icon-disabled-light')
         }
+    }
+
+    setPathButtonsState(enabled) {
+        const $items = $('.fav-path-button')
+        if (!enabled)
+            $items.addClass('but-icon-disabled')
+        else
+            $items.removeClass('but-icon-disabled')
     }
 
     setSelectedListItemButtonsState(enabled) {

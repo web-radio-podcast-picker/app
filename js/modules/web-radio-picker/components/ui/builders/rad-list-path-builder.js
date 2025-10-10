@@ -79,8 +79,9 @@ class RadListPathBuilder {
 
     buildTagPathButton(item, grp, hasLeftMargin) {
         const rm = hasLeftMargin ? ' hmargin-left' : ''
-        const $but = $(`<span data-id="${grp}" class="menu-item menu-item-blue onoff-small-height2 no-width ${rm}">${grp}</span>`)
-        $but.on('click', () => {
+        const $but = $(`<span data-id="${grp}" class="fav-path-button menu-item menu-item-blue onoff-small-height2 no-width ${rm}">${grp}</span>`)
+        $but.on('click', e => {
+            if ($(e.currentTarget).hasClass('but-icon-disabled')) return
             if (grp == Group_Name_Artists
                 && item.artist != null) {
                 // artists list
@@ -172,7 +173,8 @@ class RadListPathBuilder {
         const butcl = noClick == true ? '' : 'menu-item-blue'
         const $but = $(`<span data-id="${id}" class="${butcl} fav-path-button menu-item ${cl} no-width ${rm} ${selected}">${text}</span>`)
         if (noClick != true)
-            $but.on('click', () => {
+            $but.on('click', e => {
+                if ($(e.currentTarget).hasClass('but-icon-disabled')) return
                 this.selectFavPath(listId, id, isTab)
                 if (onClick !== undefined && onClick != null)
                     onClick()
