@@ -33,6 +33,7 @@ class UIState {
     memRDLists = null
     // ui in favorite input state if true
     favoriteInputState = false
+    freezedState = false
     addingFavoriteItem = null
     $addingFavoriteItem = null
     $addingFavoriteItemButOn = null
@@ -279,7 +280,7 @@ class UIState {
     setFreezeUI(enabled) {
         const opts = {
             noRestoreLists: true,
-            setListState: true,
+            setListState: 'opts_wrp_play_list',
             noChangeTab: true,
             noActionPane: true,
             noUnselectItem: true,
@@ -291,6 +292,7 @@ class UIState {
     setFreezeUIState(enabled, opts, item, $item, $butOn, $butOff) {
         if (opts === undefined || opts == null)
             opts = {}
+        this.freezedState = enabled
         const menuItemDisabledCl = 'menu-item-disabled'
 
         ui.tabs
@@ -303,7 +305,9 @@ class UIState {
 
         this.setInfoButtonState(!enabled)
         this.setCurrentRadItemButtonsState(!enabled)
+        this.setSelectedListItemButtonsState(!enabled)
         this.setRadItemsListState(!enabled)
+        this.setSelectedItemsState(!enabled)
         if (opts.setListState)
             this.setItemsListState(opts.setListState, !enabled, true)
 
@@ -381,6 +385,30 @@ class UIState {
         }
     }
 
+    setSelectedItemsState(enabled) {
+        const $items = $('.item-selected')
+            .find('.wrp-list-item-text-container')
+        if (!enabled) {
+            $items.addClass('but-icon-disabled-light')
+        }
+        else {
+            $items.removeClass('but-icon-disabled-light')
+        }
+    }
+
+    setSelectedListItemButtonsState(enabled) {
+        const $item = wrpp.findSelectedListItem('opts_wrp_play_list')
+        if ($item.length == 0) return
+        const $buts = $item.find('.wrp-rad-item-icon ')
+        const disabledCl = 'but-icon-disabled'
+        if (!enabled) {
+            $buts.addClass(disabledCl)
+        }
+        else {
+            $buts.removeClass(disabledCl)
+        }
+    }
+
     setRadItemsListState(enabled) {
         const disabledCl = 'but-icon-disabled'
         const $items = $('#wrp_radio_list')
@@ -405,7 +433,7 @@ class UIState {
     }
 
     isRadOpenDisabled() {
-        return this.favoriteInputState
+        return this.favoriteInputState || this.freezedState
     }
 }
 

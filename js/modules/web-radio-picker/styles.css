@@ -472,6 +472,11 @@ find license and copyright informations in files /COPYRIGHT and /LICENCE
     opacity: 0.4;
 }
 
+.but-icon-disabled-light {
+    cursor: default !important;
+    opacity: 0.9 !important;
+}
+
 #cnv_oscillo {
     width: 95%;
     /* width: 800px; */
