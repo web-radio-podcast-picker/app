@@ -276,7 +276,19 @@ class UIState {
         }
     }
 
-    setFavoriteInputState(enabled, item, $item, $butOn, $butOff, opts) {
+    setFreezeUI(enabled) {
+        const opts = {
+            noRestoreLists: true,
+            setListState: true,
+            noChangeTab: true,
+            noActionPane: true,
+            noUnselectItem: true,
+            avoidAddingState: true
+        }
+        this.setFreezeUIState(enabled, opts)
+    }
+
+    setFreezeUIState(enabled, opts, item, $item, $butOn, $butOff) {
         if (opts === undefined || opts == null)
             opts = {}
         const menuItemDisabledCl = 'menu-item-disabled'
@@ -297,7 +309,8 @@ class UIState {
 
         if (enabled) {
 
-            this.memoRDLists()
+            if (opts.noRestoreLists != true)
+                this.memoRDLists()
             if (opts.noChangeTab != true)
                 this.setTab(RadioList_List)
             if (opts.noActionPane != true) {
@@ -310,10 +323,12 @@ class UIState {
                 // remove selection
                 wrpp.clearContainerSelection('opts_wrp_play_list')
 
-            this.addingFavoriteItem = item
-            this.$addingFavoriteItem = $item
-            this.$addingFavoriteItemButOn = $butOn
-            this.$addingFavoriteItemButOff = $butOff
+            if (opts.avoidAddingState != true) {
+                this.addingFavoriteItem = item
+                this.$addingFavoriteItem = $item
+                this.$addingFavoriteItemButOn = $butOn
+                this.$addingFavoriteItemButOff = $butOff
+            }
 
         } else {
 
@@ -321,10 +336,15 @@ class UIState {
                 .addClass('hidden')
             $('#left-pane')
                 .removeClass('showActionPane')
-            this.restoreRDLists(opts)
+            if (opts.noRestoreLists != true)
+                this.restoreRDLists(opts)
             $('#wrp_but_add_fav').removeClass('menu-item-disabled')
         }
+    }
 
+    setFavoriteInputState(enabled, item, $item, $butOn, $butOff, opts) {
+
+        this.setFreezeUIState(enabled, opts, item, $item, $butOn, $butOff)
         this.favoriteInputState = enabled
         return this
     }

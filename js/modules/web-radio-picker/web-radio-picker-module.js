@@ -304,11 +304,11 @@ class WebRadioPickerModule extends ModuleBase {
             settings.dataStore.saveRadiosLists()
             const text = `&bull; imported lists: ${res.importedLists}<br>&bull; imported items: ${res.importedItems}`
             dialogs.showInfoPopup(
-                dialogs.infoPopup('favorites imported', text, null, null, true)
+                dialogs.infoPopup('Favorites imported', text, null, null, true)
             )
         } catch (err) {
             dialogs.showInfoPopup(
-                dialogs.infoPopupError('import failed', err)
+                dialogs.infoPopupError('Import failed', err)
             )
         }
     }
@@ -317,11 +317,11 @@ class WebRadioPickerModule extends ModuleBase {
         try {
             radiosLists.exportToClipboard()
             dialogs.showInfoPopup(
-                dialogs.infoPopup('favorites exported')
+                dialogs.infoPopup('Favorites exported')
             )
         } catch (err) {
             dialogs.showInfoPopup(
-                dialogs.infoPopupError('export failed', err)
+                dialogs.infoPopupError('Export failed', err)
             )
         }
     }

@@ -5,11 +5,12 @@
 */
 
 const Id_Popup_Info = 'info_popup'
+const Id_Dialog_Confirm = 'confirm_dialog'
 
 class Dialogs {
 
-    autoHideInfoPopupTimer = null
-    initialized = false
+    autoHidePopupTimer = null
+    dialogConfirmInitialized = false
 
     infoPopup(text, text2, error, error2, noAutoHide) {
         return {
@@ -17,7 +18,9 @@ class Dialogs {
             text2: text2,
             error: error,
             error2: error2,
-            noAutoHide: noAutoHide
+            noAutoHide: noAutoHide,
+            enableCloseOnClick: true,
+            freezeUI: false
         }
     }
 
@@ -27,27 +30,96 @@ class Dialogs {
             text2: null,
             error: error,
             error2: error2,
-            noAutoHide: noAutoHide !== undefined ? noAutoHide : true
+            noAutoHide: noAutoHide !== undefined ? noAutoHide : true,
+            enableCloseOnClick: true,
+            freezeUI: false
         }
     }
 
     showInfoPopup(opts) {
+        opts = {
+            ...opts,
+            ...{
+                id: Id_Popup_Info,
+                clText: 'info-popup-text',
+                clText2: 'info-popup-text2',
+                clError: 'info-popup-error',
+                clError2: 'info-popup-error2',
+                hasErrorPane: true
+            }
+        }
+        this.showPopup(opts)
+    }
+
+    dialogConfirm(text, text2, then) {
+        return {
+            id: Id_Dialog_Confirm,
+            text: text,
+            text2: text2,
+            clText: 'dialog-text',
+            clText2: 'dialog-text2',
+            hasErrorPane: false,
+            then: then,
+            enableCloseOnClick: false,
+            noAutoHide: true,
+            freezeUI: true
+        }
+    }
+
+    dialogOpts(opts) {
+        return {
+            ...opts,
+            ...{
+                clText: 'dialog-text',
+                clText2: 'dialog-text2',
+                hasErrorPane: false,
+                enableCloseOnClick: false,
+                noAutoHide: true,
+                freezeUI: true
+            }
+        }
+    }
+
+    showDialog(opts) {
+        opts = this.dialogOpts(opts)
+        this.showPopup(opts)
+    }
+
+    showDialogConfirm(opts) {
+        opts = this.dialogOpts(opts)
+        opts.id = Id_Dialog_Confirm
+
+        const $dial = $('#' + opts.id)
+        if (!$dial.hasClass('dialog-confirm-initialized')) {
+            $dial.find('.dialog-btn-yes').on('click', () => {
+                if (opts.freezeUI) uiState.setFreezeUI(false)
+                if (window.then) window.then({ confirm: true })
+            })
+            $dial.find('.dialog-btn-no').on('click', () => {
+                if (opts.freezeUI) uiState.setFreezeUI(false)
+                if (window.then) window.then({ confirm: false })
+            })
+            $dial.addClass('dialog-confirm-initialized')
+        }
+        window.then = opts.then
+
+        this.showPopup(opts)
+    }
+
+    showPopup(opts) {
         if (opts == null || opts === undefined) return
 
-        clearTimeout(this.autoHideInfoPopupTimer)
+        clearTimeout(this.autoHidePopupTimer)
 
-        const $popup = $('#' + Id_Popup_Info)
-        if (!this.initialized) {
+        const $popup = $('#' + opts.id)
+        if (!$popup.hasClass('popup-initialized')) {
             $popup.on('click', () => {
-                this.hideInfoPopup()
+                if (window.opts.enableCloseOnClick)
+                    this.hideInfoPopup()
             })
-            this.initialized = true
+            $popup.addClass('popup-initialized')
         }
 
-        const $text = $popup.find('.info-popup-text')
-        const $text2 = $popup.find('.info-popup-text2')
-        const $error = $popup.find('.info-popup-error')
-        const $error2 = $popup.find('.info-popup-error2')
         const updVis = (v, $e) => {
             if (v)
                 $e.removeClass(Class_Hidden)
@@ -56,21 +128,28 @@ class Dialogs {
         }
 
         // text
+        const $text = $popup.find('.' + opts.clText)
+        const $text2 = $popup.find('.' + opts.clText2)
         $text.html(opts.text)
         $text2.html(opts.text2)
-
-        // error
-        $error.html(opts.error)
-        $error2.html(opts.error2)
-
         updVis(opts.text, $text)
         updVis(opts.text2, $text2)
-        updVis(opts.error, $error)
-        updVis(opts.error2, $error2)
 
-        ui.popups.showPopup(null, Id_Popup_Info, null, this.appearFunc)
+        // error
+        if (opts.hasErrorPane) {
+            const $error = $popup.find('.' + opts.clError)
+            const $error2 = $popup.find('.' + opts.clError2)
+            $error.html(opts.error)
+            $error2.html(opts.error2)
+            updVis(opts.error, $error)
+            updVis(opts.error2, $error2)
+        }
+
+        window.opts = opts
+        if (opts.freezeUI) uiState.setFreezeUI(true)
+        ui.popups.showPopup(null, opts.id, null, this.appearFunc)
         if (opts.noAutoHide != true)
-            this.startAutoHideInfoPopupTimer()
+            this.startautoHidePopupTimer()
     }
 
     appearFunc($e) {
@@ -83,15 +162,22 @@ class Dialogs {
         $e.fadeOut(settings.ui.infoPopupFadeOutDelay)
     }
 
-    startAutoHideInfoPopupTimer() {
-        clearTimeout(this.autoHideInfoPopupTimer)
-        this.autoHideInfoPopupTimer = setTimeout(
-            () => this.hideInfoPopup(this.hideFunc),
+    startautoHidePopupTimer() {
+        clearTimeout(this.autoHidePopupTimer)
+        this.autoHidePopupTimer = setTimeout(
+            () => this.hideInfoPopup(),
             settings.ui.autoHideInfoPopupDelay)
     }
 
     hideInfoPopup(hideFunc) {
-        ui.popups.hidePopup(Id_Popup_Info, hideFunc)
+        this.hidePopup(Id_Popup_Info, hideFunc)
     }
 
+    hideDialogConfirm(hideFunc) {
+        this.hidePopup(Id_Dialog_Confirm, hideFunc)
+    }
+
+    hidePopup(id, hideFunc) {
+        ui.popups.hidePopup(id, hideFunc || this.hideFunc)
+    }
 }

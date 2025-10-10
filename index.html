@@ -22,6 +22,9 @@
 -->
 
 <head>
+
+    <!-- #region meta -->
+
     <meta charset="utf-8" />
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="mobile-web-app-capable" content="yes">
@@ -33,11 +36,19 @@
     <meta name="description"
         content="free online web radio and podcast more than 22000 radios compatible with windows android ios osx pc smartphone tablet desktop pc" />
 
+    <!-- #endregion -->
+
+    <!-- #region cache -->
+
     <meta http-equiv="cache-control" content="max-age=0" />
     <meta http-equiv="cache-control" content="no-cache" />
     <meta http-equiv="expires" content="0" />
     <meta http-equiv="expires" content="Tue, 01 Jan 1980 1:00:00 GMT" />
     <meta http-equiv="pragma" content="no-cache" />
+
+    <!-- #endregion -->
+
+    <!-- #region seo -->
     <!--<meta name="google-site-verification" content="J22kWwAYXIVQS63YGK8waguFeWOag89Gg3-pnY0yfqw" />-->
 
     <!-- Google tag (gtag.js) -->
@@ -48,14 +59,25 @@
         gtag('js', new Date());
         gtag('config', 'G-J4K3X336J5');
     </script>-->
+    <!-- #endregion -->
+
+    <!-- #region app -->
 
     <link rel="manifest" href="./manifest.json">
     <link rel="icon" type="image/ico" href="./img/icon.ico?hash=q">
     <link rel="apple-touch-icon" href="./img/icon-180x180.png">
 
-    <!-- styles -->
+    <!-- #endregion -->
+
+    <!-- #region styles -->
+
     <link rel="stylesheet" type="text/css" href="./css/styles.css?hash=q" />
     <link rel="stylesheet" type="text/css" href="./js/modules/web-radio-picker/styles.css?hash=q" />
+
+    <!-- #endregion -->
+
+    <!-- #region scripts -->
+
     <!-- dependencies -->
     <script src="./js/ext/jquery-3.7.1.min.js?hash=q"></script>
 
@@ -113,12 +135,17 @@
 
     <script src="./js/core/app.js?hash=q"></script>
 
+    <!-- #endregion -->
+
     <!-- should have http header Permissions-policy: audio -->
+
 </head>
 
 <body class="ui no-select">
 
     <audio id="audio_tag" crossorigin="anonymous" class="hidden"></audio>
+
+    <!-- #region pages -->
 
     <!-- rotate your device popup -->
     <div id="ryd_popup" class="popup popup-pane hidden">
@@ -189,9 +216,11 @@
 
     </div>
 
-    <!-- html models -->
+    <!-- #endregion -->
 
-    <!-- input widgets -->
+    <!-- #region html models -->
+
+    <!-- #region input widgets -->
 
     <div id="input_widget" class="input-widget hidden">
         <div id="iw_vpane" class="gr1 gc1 input-widget-value-vpane">
@@ -215,7 +244,9 @@
         </div>
     </div>
 
-    <!-- info popup -->
+    <!-- #endregion -->
+
+    <!-- #region info popup -->
 
     <div id="info_popup" class="popup hidden">
         <span class="info-popup-text"></span>
@@ -224,7 +255,24 @@
         <span class="info-popup-error2"></span>
     </div>
 
-    <!-- module web radio picker -->
+    <!-- #endregion -->
+
+    <!-- #region confirm dialog -->
+
+    <div id="confirm_dialog" class="popup hidden">
+        <span class="dialog-text"></span>
+        <span class="dialog-text2"></span>
+        <div class="dialog-bbar-container">
+            <span class="dialog-btn-yes menu-item menu-item-blue onoff-small-height no-width">Yes</span>
+            <span class="dialog-btn-no menu-item menu-item-blue onoff-small-height no-width">No</span>
+        </div>
+    </div>
+
+    <!-- #endregion -->
+
+    <!-- #endregion -->
+
+    <!-- #region -- module web radio picker -- -->
 
     <div id="wrp-pane" class="module-full-pane transparent">
 
@@ -447,6 +495,7 @@
             </div>
 
             <!-- footer -->
+
             <div id="wrp_footer" class="gr2 gc1 grid cols5 margin-top padding-small border-light">
                 <div id="wrp_radio_name" class="gr1 gc1"></div>
                 <div id="err_txt" class="gr1 gc1 err-text align-center content-center"></div>
@@ -458,6 +507,8 @@
 
         </div>
     </div>
+
+    <!-- #endregion -->
 
 </body>
 

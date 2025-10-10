@@ -229,6 +229,20 @@ class Favorites {
 
         playHistory.clearHistoryTimer()
 
+        dialogs.showDialogConfirm(
+            dialogs.dialogConfirm(
+                'Confirm delete ?', null,
+                res => this.confirmDeleteFavoriteList(res, listName)
+            )
+        )
+    }
+
+    confirmDeleteFavoriteList(res, listName) {
+
+        dialogs.hideDialogConfirm()
+
+        if (!res.confirm) return
+
         radiosLists.deleteList(listName)
 
         radListBuilder
@@ -245,7 +259,23 @@ class Favorites {
             logger.log(`empty favorite list: ${listName}`)
 
         playHistory.clearHistoryTimer()
+
+        dialogs.showDialogConfirm(
+            dialogs.dialogConfirm(
+                'Confirm erase ?', null,
+                res => this.confirmEmptyFavoriteList(res, listName)
+            )
+        )
+    }
+
+    confirmEmptyFavoriteList(res, listName) {
+
+        dialogs.hideDialogConfirm()
+
+        if (!res.confirm) return
+
         radiosLists.emptyList(listName)
+
         // update the fav list
         listsBuilder.updateListsItems()
         radListBuilder.clearRadList()
