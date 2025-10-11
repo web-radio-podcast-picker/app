@@ -165,7 +165,19 @@ window.settings = {
         popupTransparency: true,
         errDisplayTime: 4000,        // error display time ms
         longInfoDisplayTime: 6000,        // error display time ms
-        longErrDisplayTime: 6000        // error display time ms
+        longErrDisplayTime: 6000,        // error display time ms
+
+        themes: {
+            default: {
+                icons: {
+                    history: '',
+                    favorite_off: '',
+                    favorite_on: '',
+                    trash: '',
+                    erase: ''
+                }
+            }
+        }
     },
 
     net: {

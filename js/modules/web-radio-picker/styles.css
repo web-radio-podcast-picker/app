@@ -337,8 +337,6 @@ find license and copyright informations in files /COPYRIGHT and /LICENCE
     color: #FFFF00AA;
     text-wrap: nowrap;
     text-overflow: clip;
-    /* grid-row-start: 1; */
-    /* grid-row-end: span 2; */
 }
 
 #btn_wrp_all_radios,
@@ -350,7 +348,14 @@ find license and copyright informations in files /COPYRIGHT and /LICENCE
     font-size: 0.9em;
     margin-top: 0.25em;
     margin-right: 0.5em;
-    /* align-content: space-around; */
+}
+
+div#btn_wrp_infos.selected > img {
+    background-color: blue;
+}
+
+.icon-settings {
+    padding: 4px !important;
 }
 
 .wrp-inf-pane {
@@ -604,6 +609,22 @@ background-color: #44AAffAA !important
     vertical-align: middle;
     margin-right: 0.25em;
     align-self: center;
+}
+
+
+
+.hover-icon {
+    background-color: unset;
+    padding: 0.5em;
+}
+
+.hover-icon:hover {
+    background-color: #44AAff !important;
+    cursor: pointer;
+}
+
+.hover-icon.selected {
+    background-color: blue;
 }
 
 h1 {

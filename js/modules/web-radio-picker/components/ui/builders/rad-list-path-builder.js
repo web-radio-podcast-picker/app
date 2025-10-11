@@ -33,6 +33,7 @@ class RadListPathBuilder {
     buildRadioViewTagPath(item) {
         const $p = $('#wrp_radio_box')
         $p[0].innerHTML = ''
+        $p.append(this.buildHistorybutton())
         if (item == null || item.groups == null) return
         // fav button
         const favs = favorites.getItemFavoritesFiltered(item)
@@ -43,7 +44,7 @@ class RadListPathBuilder {
         }
         // tag path / lang path / artists path
         const w = 24
-        const $img = $(`<img name="fav_but" class="small-tag-icon" src="./img/icons8-tag-50.png" width="${w}" height="${w}" alt="fav_but" class="wrp-rad-item-icon ">`)
+        const $img = $(`<img name="fav_but" class="small-tag-icon" src="./img/icons8-tag-50.png" width="${w}" height="${w}" alt="fav_but">`)
         $p.append($img)
         var i = 0
         item.groups.forEach(grp => {
@@ -55,6 +56,12 @@ class RadListPathBuilder {
         if (item.artist == null || item.artist === undefined) return;
         $p.append(this.buildRightChevron())
         $p.append(this.buildArtistButton(item.artist, false))
+    }
+
+    buildHistorybutton() {
+        const w = 24
+        const $img = $(`<img name="histo_but" class="hover-icon small-tag-icon margin-right" src="./img/icons8-list-50.png" width="${w}" height="${w}" alt="histo_but">`)
+        return $img
     }
 
     buildTopFavPath(listId, listName) {
@@ -106,7 +113,7 @@ class RadListPathBuilder {
 
     buildFavButton(fav) {
         const w = 24
-        const $img = $(`<img name="fav_but" class="small-fav-icon" src="./img/icons8-heart-outline-48.png" width="${w}" height="${w}" alt="fav_but" class="wrp-rad-item-icon ">`)
+        const $img = $(`<img name="fav_but" class="small-fav-icon" src="./img/icons8-heart-outline-48.png" width="${w}" height="${w}" alt="fav_but">`)
         const $but = this.buildFavPathButton(
             RadioList_List,
             fav,
