@@ -14,7 +14,7 @@ window.settings = {
             verDate: '8/23/2025'
         },
         wrp: {
-            version: '1.2.25.1',
+            version: '1.2.26',
             verDate: '10/9/2025'
         }
     },
@@ -170,11 +170,19 @@ window.settings = {
         themes: {
             default: {
                 icons: {
-                    history: '',
-                    favorite_off: '',
-                    favorite_on: '',
-                    trash: '',
-                    erase: ''
+                    fullscreen: 'fullscreen-trsp.gif',
+                    restore: 'minimize.png',
+                    connecting: 'no-connection-trsp.gif',
+                    connected: 'connected.png',
+                    noconnection: 'error-globe.png',
+                    pause: 'pause.png',
+                    play: 'play-trsp.gif',
+                    history: 'icons8-list-50.png',
+                    favorite_off: 'icons8-heart-outline-48.png',
+                    favorite_on: 'icons8-heart-fill-48.png',
+                    edit: 'icons8-pen-100.png',
+                    trash: 'trash-32.png',
+                    erase: 'icons8-delete-all-50.png'
                 }
             }
         }

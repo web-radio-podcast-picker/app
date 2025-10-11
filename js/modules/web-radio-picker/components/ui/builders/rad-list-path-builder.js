@@ -61,6 +61,9 @@ class RadListPathBuilder {
     buildHistorybutton() {
         const w = 24
         const $img = $(`<img name="histo_but" class="hover-icon small-tag-icon margin-right" src="./img/icons8-list-50.png" width="${w}" height="${w}" alt="histo_but">`)
+        $img.on('click', e => {
+            this.favButtonOnClick(e, RadioList_List, RadioList_History, true, null)
+        })
         return $img
     }
 
@@ -181,12 +184,20 @@ class RadListPathBuilder {
         const $but = $(`<span data-id="${id}" class="${butcl} fav-path-button menu-item ${cl} no-width ${rm} ${selected}">${text}</span>`)
         if (noClick != true)
             $but.on('click', e => {
-                if ($(e.currentTarget).hasClass('but-icon-disabled')) return
+                /*if ($(e.currentTarget).hasClass('but-icon-disabled')) return
                 this.selectFavPath(listId, id, isTab)
                 if (onClick !== undefined && onClick != null)
-                    onClick()
+                    onClick()*/
+                this.favButtonOnClick(e, listId, id, isTab, onClick)
             })
         return $but
+    }
+
+    favButtonOnClick(e, listId, id, isTab, onClick) {
+        if ($(e.currentTarget).hasClass('but-icon-disabled')) return
+        this.selectFavPath(listId, id, isTab)
+        if (onClick !== undefined && onClick != null)
+            onClick()
     }
 
     selectFavPath(listId, listName, isTab) {
