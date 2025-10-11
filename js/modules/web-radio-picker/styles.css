@@ -423,6 +423,10 @@ div#btn_wrp_infos.selected > img {
     color: #FFFF00E0;
     grid-row: 1;
     grid-column: 1;
+    width: auto;
+    /* border: red solid 1px; */
+    /* display: inline; */
+    justify-self: end;
 }
 
 .gauge {

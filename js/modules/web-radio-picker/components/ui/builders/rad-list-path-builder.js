@@ -97,7 +97,7 @@ class RadListPathBuilder {
                 // artists list
                 this.selectArtistPath(item, item.artist)
             } else {
-                if (wrpp.isGroupALang(item.lang))
+                if (wrpp.isGroupALang(item.lang) && item.lang==grp)
                     // langs
                     this.selectLangPath(grp)
                 else
