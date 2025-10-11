@@ -4,22 +4,21 @@
     "name": "History",
     "items": [
       {
-        "id": "18288",
-        "name": "Diana Krall",
+        "id": "7378",
+        "name": "Europe 1",
         "description": null,
         "groupTitle": null,
         "groups": [
-          "Artists"
+          "French"
         ],
-        "url": "https://streaming.exclusive.radio/er/dianakrall/icecast.audio",
-        "logo": "https://manager.uber.radio/static/uploads/station/64da41ad-3742-4f62-907d-96f1cf11d81a.jpg",
-        "artist": "Diana Krall",
-        "lang": null,
+        "url": "https://europe1.lmn.fm/europe1.aac",
+        "logo": "https://cdn-europe1.lanmedia.fr/bundles/europe1integration/images/europe1_home.jpg",
+        "artist": null,
+        "lang": "French",
         "channels": null,
         "country": null,
         "favLists": [
-          "History",
-          "Jazz"
+          "Infos"
         ],
         "metadata": {
           "duration": null,
@@ -28,7 +27,473 @@
         "ref": {
           "currentRDList": {
             "listId": "List",
-            "name": "Jazz",
+            "name": "Infos",
+            "$item": {
+              "0": {},
+              "length": 1
+            }
+          },
+          "currentTab": {
+            "listId": "Viz",
+            "tabId": "btn_wrp_logo"
+          }
+        }
+      },
+      {
+        "id": "18534",
+        "name": "Nina Simone",
+        "description": null,
+        "groupTitle": null,
+        "groups": [
+          "Artists"
+        ],
+        "url": "https://streaming.exclusive.radio/er/ninasimone/icecast.audio",
+        "logo": "https://manager.uber.radio/static/uploads/station/222ca4a1-2954-41f3-afbc-43ba2c15bf37.jpg",
+        "artist": "Nina Simone",
+        "lang": null,
+        "channels": null,
+        "country": null,
+        "favLists": [
+          "Jazz"
+        ],
+        "metadata": {
+          "duration": null,
+          "statusText": "pause"
+        },
+        "ref": {
+          "currentRDList": {
+            "listId": "Art",
+            "name": "Nina Simone",
+            "$item": {
+              "0": {},
+              "length": 1
+            }
+          },
+          "currentTab": {
+            "listId": "Art",
+            "tabId": "btn_wrp_art_list"
+          }
+        }
+      },
+      {
+        "id": "18523",
+        "name": "Nat King Cole",
+        "description": null,
+        "groupTitle": null,
+        "groups": [
+          "Artists"
+        ],
+        "url": "https://streaming.exclusive.radio/er/natkingcole/icecast.audio",
+        "logo": "https://manager.uber.radio/static/uploads/station/2d5fbc1d-dd34-4170-b68e-17dac50384e5.jpg",
+        "artist": "Nat King Cole",
+        "lang": null,
+        "channels": null,
+        "country": null,
+        "favLists": [
+          "Crooners"
+        ],
+        "metadata": {
+          "duration": null,
+          "statusText": "playing"
+        },
+        "ref": {
+          "currentRDList": {
+            "listId": "Art",
+            "name": "Nat King Cole",
+            "$item": {
+              "0": {},
+              "length": 1
+            }
+          },
+          "currentTab": {
+            "listId": "Viz",
+            "tabId": "btn_wrp_logo"
+          }
+        }
+      },
+      {
+        "id": "18520",
+        "name": "Muddy Waters",
+        "description": null,
+        "groupTitle": null,
+        "groups": [
+          "Artists"
+        ],
+        "url": "https://streaming.exclusive.radio/er/muddywaters/icecast.audio",
+        "logo": "https://manager.uber.radio/static/uploads/station/89b7545c-2e75-4e7a-a265-029d934da2b5.png",
+        "artist": "Muddy Waters",
+        "lang": null,
+        "channels": null,
+        "country": null,
+        "favLists": [
+          "Blues"
+        ],
+        "metadata": {
+          "duration": null,
+          "statusText": "playing"
+        },
+        "ref": {
+          "currentRDList": {
+            "listId": "Art",
+            "name": "Muddy Waters",
+            "$item": {
+              "0": {},
+              "length": 1
+            }
+          },
+          "currentTab": {
+            "listId": "Art",
+            "tabId": "btn_wrp_art_list"
+          }
+        }
+      },
+      {
+        "id": "18495",
+        "name": "Marvin Gaye",
+        "description": null,
+        "groupTitle": null,
+        "groups": [
+          "Artists"
+        ],
+        "url": "https://streaming.exclusive.radio/er/marvingaye/icecast.audio",
+        "logo": "https://manager.uber.radio/static/uploads/station/6bb0927d-f160-4b1b-adc6-288290c30f44.jpg",
+        "artist": "Marvin Gaye",
+        "lang": null,
+        "channels": null,
+        "country": null,
+        "favLists": [],
+        "metadata": {
+          "duration": null,
+          "statusText": "playing"
+        },
+        "ref": {
+          "currentRDList": {
+            "listId": "Art",
+            "name": "Marvin Gaye",
+            "$item": {
+              "0": {},
+              "length": 1
+            }
+          },
+          "currentTab": {
+            "listId": "Art",
+            "tabId": "btn_wrp_art_list"
+          }
+        }
+      },
+      {
+        "id": "18479",
+        "name": "Little Mix",
+        "description": null,
+        "groupTitle": null,
+        "groups": [
+          "Artists"
+        ],
+        "url": "https://streaming.exclusive.radio/er/littlemix/icecast.audio",
+        "logo": "https://manager.uber.radio/static/uploads/station/b7415ea9-9e6e-4b5f-9902-a0bd602f643a.jpg",
+        "artist": "Little Mix",
+        "lang": null,
+        "channels": null,
+        "country": null,
+        "favLists": [],
+        "metadata": {
+          "duration": null,
+          "statusText": "playing"
+        },
+        "ref": {
+          "currentRDList": {
+            "listId": "Art",
+            "name": "Little Mix",
+            "$item": {
+              "0": {},
+              "length": 1
+            }
+          },
+          "currentTab": {
+            "listId": "Art",
+            "tabId": "btn_wrp_art_list"
+          }
+        }
+      },
+      {
+        "id": "18476",
+        "name": "Lionel Richie",
+        "description": null,
+        "groupTitle": null,
+        "groups": [
+          "Artists"
+        ],
+        "url": "https://streaming.exclusive.radio/er/lionelrichie/icecast.audio",
+        "logo": "https://manager.uber.radio/static/uploads/station/b2a16604-de3f-424a-ab0e-3d0e2461d645.jpg",
+        "artist": "Lionel Richie",
+        "lang": null,
+        "channels": null,
+        "country": null,
+        "favLists": [],
+        "metadata": {
+          "duration": null,
+          "statusText": "playing"
+        },
+        "ref": {
+          "currentRDList": {
+            "listId": "Art",
+            "name": "Lionel Richie",
+            "$item": {
+              "0": {},
+              "length": 1
+            }
+          },
+          "currentTab": {
+            "listId": "Viz",
+            "tabId": "btn_wrp_logo"
+          }
+        }
+      },
+      {
+        "id": "18428",
+        "name": "Johnny Mathis",
+        "description": null,
+        "groupTitle": null,
+        "groups": [
+          "Artists"
+        ],
+        "url": "https://streaming.exclusive.radio/er/johnnymathis/icecast.audio",
+        "logo": "https://manager.uber.radio/static/uploads/station/2c9bc8f4-8178-44ca-af7a-51817d18a5bc.jpg",
+        "artist": "Johnny Mathis",
+        "lang": null,
+        "channels": null,
+        "country": null,
+        "favLists": [],
+        "metadata": {
+          "duration": null,
+          "statusText": "playing"
+        },
+        "ref": {
+          "currentRDList": {
+            "listId": "Art",
+            "name": "Johnny Mathis",
+            "$item": {
+              "0": {},
+              "length": 1
+            }
+          },
+          "currentTab": {
+            "listId": "Art",
+            "tabId": "btn_wrp_art_list"
+          }
+        }
+      },
+      {
+        "id": "18421",
+        "name": "John Lee Hooker",
+        "description": null,
+        "groupTitle": null,
+        "groups": [
+          "Artists"
+        ],
+        "url": "https://streaming.exclusive.radio/er/johnleehooker/icecast.audio",
+        "logo": "https://manager.uber.radio/static/uploads/station/eba1aa86-22ec-459f-90ce-9c11eba339fa.jpg",
+        "artist": "John Lee Hooker",
+        "lang": null,
+        "channels": null,
+        "country": null,
+        "favLists": [
+          "Blues"
+        ],
+        "metadata": {
+          "duration": null,
+          "statusText": "playing"
+        },
+        "ref": {
+          "currentRDList": {
+            "listId": "Art",
+            "name": "John Lee Hooker",
+            "$item": {
+              "0": {},
+              "length": 1
+            }
+          },
+          "currentTab": {
+            "listId": "Art",
+            "tabId": "btn_wrp_art_list"
+          }
+        }
+      },
+      {
+        "id": "18204",
+        "name": "Bo Diddley",
+        "description": null,
+        "groupTitle": null,
+        "groups": [
+          "Artists"
+        ],
+        "url": "https://streaming.exclusive.radio/er/bodiddley/icecast.audio",
+        "logo": "https://manager.uber.radio/static/uploads/station/4b9e794d-70ce-484a-ae97-7627954c91d2.jpg",
+        "artist": "Bo Diddley",
+        "lang": null,
+        "channels": null,
+        "country": null,
+        "favLists": [
+          "Blues"
+        ],
+        "metadata": {
+          "duration": null,
+          "statusText": "playing"
+        },
+        "ref": {
+          "currentRDList": {
+            "listId": "List",
+            "name": "Blues",
+            "$item": {
+              "0": {},
+              "length": 1
+            }
+          },
+          "currentTab": {
+            "listId": "Viz",
+            "tabId": "btn_wrp_logo"
+          }
+        }
+      },
+      {
+        "id": "18380",
+        "name": "Hank Williams",
+        "description": null,
+        "groupTitle": null,
+        "groups": [
+          "Artists"
+        ],
+        "url": "https://streaming.exclusive.radio/er/hankwilliams/icecast.audio",
+        "logo": "https://manager.uber.radio/static/uploads/station/fa06e3de-8d13-424e-88f3-8a0c2197cb6d.jpg",
+        "artist": "Hank Williams",
+        "lang": null,
+        "channels": null,
+        "country": null,
+        "favLists": [
+          "Country"
+        ],
+        "metadata": {
+          "duration": null,
+          "statusText": "playing"
+        },
+        "ref": {
+          "currentRDList": {
+            "listId": "List",
+            "name": "Country",
+            "$item": {
+              "0": {},
+              "length": 1
+            }
+          },
+          "currentTab": {
+            "listId": "List",
+            "tabId": "btn_wrp_play_list"
+          }
+        }
+      },
+      {
+        "id": "10341",
+        "name": "Antenne Bayern 70er Hits",
+        "description": null,
+        "groupTitle": null,
+        "groups": [
+          "Radio",
+          "Deutsch",
+          "70s",
+          "Hits"
+        ],
+        "url": "http://s3-webradio.antenne.de/70er-hits/stream/aacp",
+        "logo": "https://ca.radio.net/images/broadcasts/57/c5/127918/1/c300.png",
+        "artist": null,
+        "lang": "Deutsch",
+        "channels": null,
+        "country": null,
+        "favLists": [
+          "Années 70"
+        ],
+        "metadata": {
+          "duration": null,
+          "statusText": "pause"
+        },
+        "ref": {
+          "currentRDList": {
+            "listId": "List",
+            "name": "Années 70",
+            "$item": {
+              "0": {},
+              "length": 1
+            }
+          },
+          "currentTab": {
+            "listId": "Viz",
+            "tabId": "btn_wrp_logo"
+          }
+        }
+      },
+      {
+        "id": "17787",
+        "name": "1.FM Absolute 70's Pop Radio",
+        "description": null,
+        "groupTitle": null,
+        "groups": [
+          "Radio",
+          "70s",
+          "Pop"
+        ],
+        "url": "http://strm112.1.fm/70s_mobile_mp3",
+        "logo": "http://liveradio.de/media/cache/station_detail/18f08aee-f06b-4965-b607-3f25a581619c.jpg",
+        "artist": null,
+        "lang": null,
+        "channels": null,
+        "country": null,
+        "favLists": [
+          "History",
+          "Années 70"
+        ],
+        "metadata": {
+          "duration": null,
+          "statusText": "playing"
+        },
+        "ref": {
+          "currentRDList": {
+            "listId": "List",
+            "name": "Années 70",
+            "$item": {
+              "0": {},
+              "length": 1
+            }
+          },
+          "currentTab": {
+            "listId": "Viz",
+            "tabId": "btn_wrp_logo"
+          }
+        }
+      },
+      {
+        "id": "16830",
+        "name": "Nation 70s",
+        "description": null,
+        "groupTitle": null,
+        "groups": [
+          "70s"
+        ],
+        "url": "http://listen-nation.sharp-stream.com/nationradio70s.mp3?ref=RF",
+        "logo": "https://static.mytuner.mobi/media/tvos_radios/KLFgFRrzAV.png",
+        "artist": null,
+        "lang": null,
+        "channels": null,
+        "country": null,
+        "favLists": [
+          "Années 70"
+        ],
+        "metadata": {
+          "duration": null,
+          "statusText": "playing"
+        },
+        "ref": {
+          "currentRDList": {
+            "listId": "List",
+            "name": "Années 70",
             "$item": {
               "0": {},
               "length": 1
@@ -66,13 +531,168 @@
         },
         "ref": {
           "currentRDList": {
-            "listId": "Tag",
-            "name": "Songs"
+            "listId": "List",
+            "name": "History",
+            "$item": {
+              "0": {},
+              "length": 1
+            }
           },
           "currentTab": {
-            "listId": "Viz",
-            "tabId": "btn_wrp_logo"
+            "listId": "List",
+            "tabId": "btn_wrp_play_list"
           }
+        }
+      },
+      {
+        "id": "8457",
+        "name": "France Info",
+        "description": null,
+        "groupTitle": null,
+        "groups": [
+          "French"
+        ],
+        "url": "https://icecast.radiofrance.fr/franceinfo-hifi.aac",
+        "logo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTTOrtJJ0l34GIjFRRUcl-X_GxOtNNRNT9rXw&s",
+        "artist": null,
+        "lang": "French",
+        "channels": null,
+        "country": null,
+        "favLists": [
+          "History",
+          "Infos"
+        ],
+        "metadata": {
+          "duration": null,
+          "statusText": "playing"
+        },
+        "ref": {
+          "currentRDList": {
+            "listId": "List",
+            "name": "Infos",
+            "$item": {
+              "0": {},
+              "length": 1
+            }
+          },
+          "currentTab": {
+            "listId": "List",
+            "tabId": "btn_wrp_play_list"
+          }
+        }
+      },
+      {
+        "id": "13578",
+        "name": "Alxa Chinese Radio",
+        "description": null,
+        "groupTitle": null,
+        "groups": [
+          "Chinese",
+          "Radio"
+        ],
+        "url": "http://lhttp.qingting.fm/live/5022521/64k.mp3",
+        "logo": "http://pic.qingting.fm/2015/0725/20150725202533809.jpg",
+        "artist": null,
+        "lang": "Chinese",
+        "channels": null,
+        "country": null,
+        "favLists": [
+          "Exotique"
+        ],
+        "metadata": {
+          "duration": null,
+          "stereo": null,
+          "encoding": null,
+          "sampleFrq": null,
+          "sampleRes": null,
+          "country": null,
+          "statusText": null
+        }
+      },
+      {
+        "id": "21360",
+        "name": "Koori Radio 93.7",
+        "description": null,
+        "groupTitle": null,
+        "groups": [
+          "Aboriginal",
+          "Indigenous"
+        ],
+        "url": "https://playerservices.streamtheworld.com/api/livestream-redirect/2LNDAAC.aac",
+        "logo": "https://www.kooriradio.com/favicon.ico",
+        "artist": null,
+        "lang": null,
+        "channels": null,
+        "country": null,
+        "favLists": [
+          "Exotique"
+        ],
+        "metadata": {
+          "duration": null,
+          "stereo": null,
+          "encoding": null,
+          "sampleFrq": null,
+          "sampleRes": null,
+          "country": null,
+          "statusText": null
+        }
+      },
+      {
+        "id": "5294",
+        "name": "Radio Paradise World/Etc Mix",
+        "description": null,
+        "groupTitle": null,
+        "groups": [
+          "Radio",
+          "Mix"
+        ],
+        "url": "https://stream.radioparadise.com/world-etc-320",
+        "logo": "https://radioparadise.com/rpassets/images/logo/icon_flat_black_padded_62x50.png",
+        "artist": null,
+        "lang": null,
+        "channels": null,
+        "country": null,
+        "favLists": [
+          "History",
+          "Exotique"
+        ],
+        "metadata": {
+          "duration": null,
+          "stereo": null,
+          "encoding": null,
+          "sampleFrq": null,
+          "sampleRes": null,
+          "country": null,
+          "statusText": null
+        }
+      },
+      {
+        "id": "8455",
+        "name": "France Culture",
+        "description": null,
+        "groupTitle": null,
+        "groups": [
+          "French",
+          "Culture"
+        ],
+        "url": "https://icecast.radiofrance.fr/franceculture-hifi.aac",
+        "logo": "https://upload.wikimedia.org/wikipedia/fr/thumb/c/c9/France_Culture_-_2008.svg/1024px-France_Culture_-_2008.svg.png",
+        "artist": null,
+        "lang": "French",
+        "channels": null,
+        "country": null,
+        "favLists": [
+          "History",
+          "Infos"
+        ],
+        "metadata": {
+          "duration": null,
+          "stereo": null,
+          "encoding": null,
+          "sampleFrq": null,
+          "sampleRes": null,
+          "country": null,
+          "statusText": null
         }
       },
       {
@@ -94,6 +714,1227 @@
         "favLists": [
           "History",
           "Turk"
+        ],
+        "metadata": {
+          "duration": null,
+          "stereo": null,
+          "encoding": null,
+          "sampleFrq": null,
+          "sampleRes": null,
+          "country": null,
+          "statusText": null
+        }
+      },
+      {
+        "id": "9822",
+        "name": "Power Turk",
+        "description": null,
+        "groupTitle": null,
+        "groups": [
+          "Turk"
+        ],
+        "url": "http://listen.powerapp.com.tr/powerturk/mpeg/icecast.audio?/listen.pls",
+        "logo": "https://cdn.powergroup.com.tr/image/100x100/powerapp/channels/v2/inverse/logo_34.png?v=1",
+        "artist": null,
+        "lang": "Turk",
+        "channels": null,
+        "country": null,
+        "favLists": [
+          "History",
+          "Turk"
+        ],
+        "metadata": {
+          "duration": null,
+          "stereo": null,
+          "encoding": null,
+          "sampleFrq": null,
+          "sampleRes": null,
+          "country": null,
+          "statusText": null
+        }
+      },
+      {
+        "id": "18145",
+        "name": "Alka Yagnik",
+        "description": null,
+        "groupTitle": null,
+        "groups": [
+          "Artists"
+        ],
+        "url": "https://drive.uber.radio/uber/bollywoodalkayagnik/icecast.audio",
+        "logo": "https://manager.uber.radio/static/uploads/station/4a259d43-af38-4a2a-af32-a04281d45676.jpg",
+        "artist": "Alka Yagnik",
+        "lang": null,
+        "channels": null,
+        "country": null,
+        "favLists": [
+          "History",
+          "Indien"
+        ],
+        "metadata": {
+          "duration": null,
+          "stereo": null,
+          "encoding": null,
+          "sampleFrq": null,
+          "sampleRes": null,
+          "country": null,
+          "statusText": null
+        }
+      },
+      {
+        "id": "10598",
+        "name": "Cosmo Afro Beats",
+        "description": null,
+        "groupTitle": null,
+        "groups": [
+          "Afro"
+        ],
+        "url": "https://d111.rndfnk.com/ard/wdr/cosmo/afrobeat/mp3/128/stream.mp3?sid=22baLPW5cRxAqadp1TE8EsO2KZ3&token=yZkqgf6OCq-mEelPR8xZ3UHeEIcbaCZ9eI0dl1QJNDI&tvf=DUeVos3pwhZkMTExLnJuZGZuay5jb20",
+        "logo": "https://www1.wdr.de/radio/1live/musik/heimatkult/akua-naru-202~_v-ARDAustauschformats.jpg",
+        "artist": null,
+        "lang": null,
+        "channels": null,
+        "country": null,
+        "favLists": [
+          "Groove"
+        ],
+        "metadata": {
+          "duration": null,
+          "stereo": null,
+          "encoding": null,
+          "sampleFrq": null,
+          "sampleRes": null,
+          "country": null,
+          "statusText": null
+        }
+      },
+      {
+        "id": "1970",
+        "name": "Anima Amoris Dub Techno Mix",
+        "description": null,
+        "groupTitle": null,
+        "groups": [
+          "Dub",
+          "Techno",
+          "Mix"
+        ],
+        "url": "http://amoris.sknt.ru/dubtechnomix.mp3",
+        "logo": "https://dx7vbl8yjmzxy.cloudfront.net/new_images/radioapp_75467.png",
+        "artist": null,
+        "lang": null,
+        "channels": null,
+        "country": null,
+        "favLists": [
+          "Techno"
+        ],
+        "metadata": {
+          "duration": null,
+          "stereo": null,
+          "encoding": null,
+          "sampleFrq": null,
+          "sampleRes": null,
+          "country": null,
+          "statusText": null
+        }
+      },
+      {
+        "id": "10484",
+        "name": "Best of Techno",
+        "description": null,
+        "groupTitle": null,
+        "groups": [
+          "Techno"
+        ],
+        "url": "http://best-of-techno.stream.laut.fm/best-of-techno?t302=2021-12-21_04-07-13&uuid=2f56ee5f-4a83-4ef5-8ab0-c75a40b52cb3",
+        "logo": "https://www.radio.net/images/broadcasts/0a/96/114257/4/c300.png",
+        "artist": null,
+        "lang": null,
+        "channels": null,
+        "country": null,
+        "favLists": [
+          "Techno"
+        ],
+        "metadata": {
+          "duration": null,
+          "stereo": null,
+          "encoding": null,
+          "sampleFrq": null,
+          "sampleRes": null,
+          "country": null,
+          "statusText": null
+        }
+      },
+      {
+        "id": "12084",
+        "name": "Techno Paradize",
+        "description": null,
+        "groupTitle": null,
+        "groups": [
+          "Techno"
+        ],
+        "url": "https://techno-paradize.stream.laut.fm/techno-paradize?t302=2021-12-12_09-00-32&uuid=8fb20a49-0aa6-427a-b0ff-2f65e43898b4",
+        "logo": "https://scontent.fmex23-1.fna.fbcdn.net/v/t1.18169-9/1239749_274837249315104_1042633431_n.jpg?_nc_cat=104&ccb=1-5&_nc_sid=09cbfe&_nc_ohc=rdKu-WJBRmsAX-te_j-&_nc_ht=scontent.fmex23-1.fna&oh=f6159613a2564f36e608e9a5a214198b&oe=61DD2162",
+        "artist": null,
+        "lang": null,
+        "channels": null,
+        "country": null,
+        "favLists": [
+          "Techno"
+        ],
+        "metadata": {
+          "duration": null,
+          "stereo": null,
+          "encoding": null,
+          "sampleFrq": null,
+          "sampleRes": null,
+          "country": null,
+          "statusText": null
+        }
+      },
+      {
+        "id": "10867",
+        "name": "FluxFM Techno Underground",
+        "description": null,
+        "groupTitle": null,
+        "groups": [
+          "Techno",
+          "Underground"
+        ],
+        "url": "http://fluxfm.streamabc.net/flx-technounderground-aacplus-64-7295680?sABC=61p1147n%230%23r4880qrn6s01nn6n263q843o4n00pqq9%23nhqvb&amsparams=playerid:audio;skey:1640043642",
+        "logo": "https://cdn-profiles.tunein.com/s280926/images/logog.png?t=2",
+        "artist": null,
+        "lang": null,
+        "channels": null,
+        "country": null,
+        "favLists": [
+          "Techno"
+        ],
+        "metadata": {
+          "duration": null,
+          "stereo": null,
+          "encoding": null,
+          "sampleFrq": null,
+          "sampleRes": null,
+          "country": null,
+          "statusText": null
+        }
+      },
+      {
+        "id": "10185",
+        "name": "1000 Techno",
+        "description": null,
+        "groupTitle": null,
+        "groups": [
+          "Techno"
+        ],
+        "url": "https://1000techno.stream.laut.fm/1000techno?pl=m3u&t302=2021-12-21_19-29-29&uuid=81d32fee-89ca-4fb4-a431-46c77cce1ff2",
+        "logo": "http://rsn.li/favicon.ico",
+        "artist": null,
+        "lang": null,
+        "channels": null,
+        "country": null,
+        "favLists": [
+          "Techno"
+        ],
+        "metadata": {
+          "duration": null,
+          "stereo": null,
+          "encoding": null,
+          "sampleFrq": null,
+          "sampleRes": null,
+          "country": null,
+          "statusText": null
+        }
+      },
+      {
+        "id": "12641",
+        "name": "Radio Techno Dance",
+        "description": null,
+        "groupTitle": null,
+        "groups": [
+          "Radio",
+          "Techno",
+          "Dance"
+        ],
+        "url": "http://stream.zeno.fm/8d2pyzm5wp8uv?rj-ttl=5&rj-tok=AAABfd0phy8AWRspuI-L0VD51w",
+        "logo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQuUUzMD28qDEEbK1tRWezd4lKzeSkFxmReJA&s",
+        "artist": null,
+        "lang": null,
+        "channels": null,
+        "country": null,
+        "favLists": [
+          "Techno"
+        ],
+        "metadata": {
+          "duration": null,
+          "stereo": null,
+          "encoding": null,
+          "sampleFrq": null,
+          "sampleRes": null,
+          "country": null,
+          "statusText": null
+        }
+      },
+      {
+        "id": "20015",
+        "name": "Loca FM Deep Techno",
+        "description": null,
+        "groupTitle": null,
+        "groups": [
+          "Radio",
+          "Techno"
+        ],
+        "url": "http://s02.fjperezdj.com:8066/live",
+        "logo": "https://www.locafm.com/assets/img/favicon/apple-icon-120x120.png",
+        "artist": null,
+        "lang": null,
+        "channels": null,
+        "country": null,
+        "favLists": [
+          "History"
+        ],
+        "metadata": {
+          "duration": null,
+          "stereo": null,
+          "encoding": null,
+          "sampleFrq": null,
+          "sampleRes": null,
+          "country": null,
+          "statusText": null
+        }
+      },
+      {
+        "id": "7959",
+        "name": "tout FIP",
+        "description": null,
+        "groupTitle": null,
+        "groups": [
+          "French"
+        ],
+        "url": "https://icecast.radiofrance.fr/fipnouveautes-hifi.aac",
+        "logo": "https://cdn.radiofrance.fr/s3/cruiser-production/2019/06/e061141c-f6b4-4502-ba43-f6ec693a049b/200x200_fip-nouveau_ok.jpg",
+        "artist": null,
+        "lang": "French",
+        "channels": null,
+        "country": null,
+        "favLists": [
+          "History",
+          "Chanson Française"
+        ],
+        "metadata": {
+          "duration": null,
+          "stereo": null,
+          "encoding": null,
+          "sampleFrq": null,
+          "sampleRes": null,
+          "country": null,
+          "statusText": null
+        }
+      },
+      {
+        "id": "8060",
+        "name": "Chante France 80's",
+        "description": null,
+        "groupTitle": null,
+        "groups": [
+          "French",
+          "80s"
+        ],
+        "url": "https://chantefrance80s.ice.infomaniak.ch/chantefrance80s-128.mp3",
+        "logo": "http://www.chantefrance.com/public/img/logo.png",
+        "artist": null,
+        "lang": "French",
+        "channels": null,
+        "country": null,
+        "favLists": [
+          "Chanson Française"
+        ],
+        "metadata": {
+          "duration": null,
+          "stereo": null,
+          "encoding": null,
+          "sampleFrq": null,
+          "sampleRes": null,
+          "country": null,
+          "statusText": null
+        }
+      },
+      {
+        "id": "8061",
+        "name": "Chante France Emotion",
+        "description": null,
+        "groupTitle": null,
+        "groups": [
+          "French"
+        ],
+        "url": "https://chantefranceemotion.ice.infomaniak.ch/chantefranceemotion-128.mp3",
+        "logo": "http://www.chantefrance.com/public/img/logo.png",
+        "artist": null,
+        "lang": "French",
+        "channels": null,
+        "country": null,
+        "favLists": [
+          "Chanson Française"
+        ],
+        "metadata": {
+          "duration": null,
+          "stereo": null,
+          "encoding": null,
+          "sampleFrq": null,
+          "sampleRes": null,
+          "country": null,
+          "statusText": null
+        }
+      },
+      {
+        "id": "8057",
+        "name": "Chante France",
+        "description": null,
+        "groupTitle": null,
+        "groups": [
+          "French"
+        ],
+        "url": "https://chantefrance.ice.infomaniak.ch/chantefrance-128.mp3",
+        "logo": "http://www.chantefrance.com/public/img/logo.png",
+        "artist": null,
+        "lang": "French",
+        "channels": null,
+        "country": null,
+        "favLists": [
+          "Chanson Française"
+        ],
+        "metadata": {
+          "duration": null,
+          "stereo": null,
+          "encoding": null,
+          "sampleFrq": null,
+          "sampleRes": null,
+          "country": null,
+          "statusText": null
+        }
+      },
+      {
+        "id": "10359",
+        "name": "Antenne Bayern Lounge",
+        "description": null,
+        "groupTitle": null,
+        "groups": [
+          "Radio",
+          "Deutsch",
+          "Lounge"
+        ],
+        "url": "http://s3-webradio.antenne.de/lounge/stream/aacp",
+        "logo": "https://www.radio.net/images/broadcasts/0d/91/124497/10/c300.png",
+        "artist": null,
+        "lang": "Deutsch",
+        "channels": null,
+        "country": null,
+        "favLists": [
+          "Lounge"
+        ],
+        "metadata": {
+          "duration": null,
+          "stereo": null,
+          "encoding": null,
+          "sampleFrq": null,
+          "sampleRes": null,
+          "country": null,
+          "statusText": null
+        }
+      },
+      {
+        "id": "11492",
+        "name": "POP LOUNGE CAFE",
+        "description": null,
+        "groupTitle": null,
+        "groups": [
+          "Pop",
+          "Lounge"
+        ],
+        "url": "http://poploungecafe.stream.laut.fm/poploungecafe?t302=2021-12-21_03-38-03&uuid=e6be5064-2a80-4aa3-8c3a-c6df1ffa2ca4",
+        "logo": "https://play-lh.googleusercontent.com/6RnorZH_6PZObYdLC4nBepeoVZD90SJ5iW1Edge_OHZ6VEMt6NgsuD9EPOY3HAMcEg=w240-h480-rw",
+        "artist": null,
+        "lang": null,
+        "channels": null,
+        "country": null,
+        "favLists": [
+          "Lounge"
+        ],
+        "metadata": {
+          "duration": null,
+          "stereo": null,
+          "encoding": null,
+          "sampleFrq": null,
+          "sampleRes": null,
+          "country": null,
+          "statusText": null
+        }
+      },
+      {
+        "id": "19864",
+        "name": "1 Slow-Radio laut.fm",
+        "description": null,
+        "groupTitle": null,
+        "groups": [
+          "Radio"
+        ],
+        "url": "https://1slowradio.stream.laut.fm/1_slowradio",
+        "logo": "https://assets.laut.fm/9670c7c141ede546101df1cdfe18e0b4?t=_640x640",
+        "artist": null,
+        "lang": null,
+        "channels": null,
+        "country": null,
+        "favLists": [
+          "Slows & Love Songs"
+        ],
+        "metadata": {
+          "duration": null,
+          "stereo": null,
+          "encoding": null,
+          "sampleFrq": null,
+          "sampleRes": null,
+          "country": null,
+          "statusText": null
+        }
+      },
+      {
+        "id": "18174",
+        "name": "Barbra Streisand",
+        "description": null,
+        "groupTitle": null,
+        "groups": [
+          "Artists"
+        ],
+        "url": "https://streaming.exclusive.radio/er/streisand/icecast.audio",
+        "logo": "https://manager.uber.radio/static/uploads/station/b1976ff8-47a3-4789-904a-4d3a4184a24a.jpg",
+        "artist": "Barbra Streisand",
+        "lang": null,
+        "channels": null,
+        "country": null,
+        "favLists": [
+          "Slows & Love Songs"
+        ],
+        "metadata": {
+          "duration": null,
+          "stereo": null,
+          "encoding": null,
+          "sampleFrq": null,
+          "sampleRes": null,
+          "country": null,
+          "statusText": null
+        }
+      },
+      {
+        "id": "18314",
+        "name": "Earth Wind & Fire - Hits",
+        "description": null,
+        "groupTitle": null,
+        "groups": [
+          "Artists"
+        ],
+        "url": "https://streaming.exclusive.radio/er/earthwindandfirehits/icecast.audio",
+        "logo": "https://manager.uber.radio/static/uploads/station/44a30c86-4751-48ed-acb6-7f7db0dffa9f.jpg",
+        "artist": "Earth Wind & Fire",
+        "lang": null,
+        "channels": null,
+        "country": null,
+        "favLists": [
+          "Disco & Funk"
+        ],
+        "metadata": {
+          "duration": null,
+          "stereo": null,
+          "encoding": null,
+          "sampleFrq": null,
+          "sampleRes": null,
+          "country": null,
+          "statusText": null
+        }
+      },
+      {
+        "id": "18313",
+        "name": "Earth Wind & Fire",
+        "description": null,
+        "groupTitle": null,
+        "groups": [
+          "Artists"
+        ],
+        "url": "https://streaming.exclusive.radio/er/earthwindandfire/icecast.audio",
+        "logo": "https://manager.uber.radio/static/uploads/station/36f022c1-8177-4966-ad76-4933888ef846.jpg",
+        "artist": "Earth Wind & Fire",
+        "lang": null,
+        "channels": null,
+        "country": null,
+        "favLists": [
+          "Disco & Funk"
+        ],
+        "metadata": {
+          "duration": null,
+          "stereo": null,
+          "encoding": null,
+          "sampleFrq": null,
+          "sampleRes": null,
+          "country": null,
+          "statusText": null
+        }
+      },
+      {
+        "id": "18297",
+        "name": "Dolly Parton - Hits",
+        "description": null,
+        "groupTitle": null,
+        "groups": [
+          "Artists"
+        ],
+        "url": "https://streaming.exclusive.radio/er/dollypartonhits/icecast.audio",
+        "logo": "https://manager.uber.radio/static/uploads/station/f302678a-d682-4c81-a0c6-6a7595e3ef35.jpg",
+        "artist": "Dolly Parton",
+        "lang": null,
+        "channels": null,
+        "country": null,
+        "favLists": [
+          "Country"
+        ],
+        "metadata": {
+          "duration": null,
+          "stereo": null,
+          "encoding": null,
+          "sampleFrq": null,
+          "sampleRes": null,
+          "country": null,
+          "statusText": null
+        }
+      },
+      {
+        "id": "18293",
+        "name": "Dire Straits - Hits",
+        "description": null,
+        "groupTitle": null,
+        "groups": [
+          "Artists"
+        ],
+        "url": "https://streaming.exclusive.radio/er/direstraitshits/icecast.audio",
+        "logo": "https://manager.uber.radio/static/uploads/station/d7318b9a-aa05-47a3-91e0-fe566986dac1.jpg",
+        "artist": "Dire Straits",
+        "lang": null,
+        "channels": null,
+        "country": null,
+        "favLists": [
+          "Guitare électrique"
+        ],
+        "metadata": {
+          "duration": null,
+          "stereo": null,
+          "encoding": null,
+          "sampleFrq": null,
+          "sampleRes": null,
+          "country": null,
+          "statusText": null
+        }
+      },
+      {
+        "id": "18292",
+        "name": "Dire Straits",
+        "description": null,
+        "groupTitle": null,
+        "groups": [
+          "Artists"
+        ],
+        "url": "https://streaming.exclusive.radio/er/direstraits/icecast.audio",
+        "logo": "https://manager.uber.radio/static/uploads/station/6fbeb789-537d-46b5-8862-83d4e948b520.jpg",
+        "artist": "Dire Straits",
+        "lang": null,
+        "channels": null,
+        "country": null,
+        "favLists": [
+          "Guitare électrique"
+        ],
+        "metadata": {
+          "duration": null,
+          "stereo": null,
+          "encoding": null,
+          "sampleFrq": null,
+          "sampleRes": null,
+          "country": null,
+          "statusText": null
+        }
+      },
+      {
+        "id": "18354",
+        "name": "Gary Moore",
+        "description": null,
+        "groupTitle": null,
+        "groups": [
+          "Artists"
+        ],
+        "url": "https://streaming.exclusive.radio/er/garymoore/icecast.audio",
+        "logo": "https://manager.uber.radio/static/uploads/station/f416a097-ac6c-49a8-9d73-0c1534a0c2d7.jpg",
+        "artist": "Gary Moore",
+        "lang": null,
+        "channels": null,
+        "country": null,
+        "favLists": [
+          "Guitare électrique"
+        ],
+        "metadata": {
+          "duration": null,
+          "stereo": null,
+          "encoding": null,
+          "sampleFrq": null,
+          "sampleRes": null,
+          "country": null,
+          "statusText": null
+        }
+      },
+      {
+        "id": "10713",
+        "name": "ElectroZombies",
+        "description": null,
+        "groupTitle": null,
+        "groups": [
+          "Electro"
+        ],
+        "url": "http://electrozombies.stream.laut.fm/electrozombies?t302=2021-12-21_02-42-35&uuid=f829707f-f917-4ec8-82d6-8b641e79f803",
+        "logo": "https://electrozombies.com/wp-content/uploads/2015/09/electrozombies_icon.jpg",
+        "artist": null,
+        "lang": null,
+        "channels": null,
+        "country": null,
+        "favLists": [
+          "Pop"
+        ],
+        "metadata": {
+          "duration": null,
+          "stereo": null,
+          "encoding": null,
+          "sampleFrq": null,
+          "sampleRes": null,
+          "country": null,
+          "statusText": null
+        }
+      },
+      {
+        "id": "7421",
+        "name": "Génération Mix",
+        "description": null,
+        "groupTitle": null,
+        "groups": [
+          "Mix"
+        ],
+        "url": "https://ecmanager2.pro-fhi.net/generationmix",
+        "logo": "https://www.radio.fr/images/broadcasts/62/e7/139914/1/c300.png",
+        "artist": null,
+        "lang": null,
+        "channels": null,
+        "country": null,
+        "favLists": [
+          "Pop"
+        ],
+        "metadata": {
+          "duration": null,
+          "stereo": null,
+          "encoding": null,
+          "sampleFrq": null,
+          "sampleRes": null,
+          "country": null,
+          "statusText": null
+        }
+      },
+      {
+        "id": "20897",
+        "name": "Kiosk Radio",
+        "description": null,
+        "groupTitle": null,
+        "groups": [
+          "Mix"
+        ],
+        "url": "https://kioskradiobxl.out.airtime.pro/kioskradiobxl_b",
+        "logo": "https://kioskradio.com/images/logo.svg",
+        "artist": null,
+        "lang": null,
+        "channels": null,
+        "country": null,
+        "favLists": [
+          "Groove"
+        ],
+        "metadata": {
+          "duration": null,
+          "stereo": null,
+          "encoding": null,
+          "sampleFrq": null,
+          "sampleRes": null,
+          "country": null,
+          "statusText": null
+        }
+      },
+      {
+        "id": "20817",
+        "name": "Styrialounge",
+        "description": null,
+        "groupTitle": null,
+        "groups": [
+          "Blues",
+          "Jazz",
+          "Lounge"
+        ],
+        "url": "https://styrialounge.out.airtime.pro/styrialounge_a",
+        "logo": "https://styrialounge.com/assets/images/card.jpg?v78616770366451",
+        "artist": null,
+        "lang": null,
+        "channels": null,
+        "country": null,
+        "favLists": [
+          "Groove"
+        ],
+        "metadata": {
+          "duration": null,
+          "stereo": null,
+          "encoding": null,
+          "sampleFrq": null,
+          "sampleRes": null,
+          "country": null,
+          "statusText": null
+        }
+      },
+      {
+        "id": "11242",
+        "name": "Maretimo Lounge",
+        "description": null,
+        "groupTitle": null,
+        "groups": [
+          "Lounge"
+        ],
+        "url": "https://s35.derstream.net/lounge.mp3",
+        "logo": "https://d3kle7qwymxpcy.cloudfront.net/images/broadcasts/08/a3/107873/5/c175.png",
+        "artist": null,
+        "lang": null,
+        "channels": null,
+        "country": null,
+        "favLists": [
+          "Groove"
+        ],
+        "metadata": {
+          "duration": null,
+          "stereo": null,
+          "encoding": null,
+          "sampleFrq": null,
+          "sampleRes": null,
+          "country": null,
+          "statusText": null
+        }
+      },
+      {
+        "id": "10570",
+        "name": "Charivari München Lounge Music",
+        "description": null,
+        "groupTitle": null,
+        "groups": [
+          "Lounge",
+          "Music"
+        ],
+        "url": "https://rs24.stream24.net/lounge.aac?ref=charivari.de&aw_0_1st.playerid=radioplayer.de",
+        "logo": "https://www.charivari.de/assets/Uploads/_resampled/ScaleHeightWyIxMDAiXQ/171211-channel-icon-lounge-1100x1100.png",
+        "artist": null,
+        "lang": null,
+        "channels": null,
+        "country": null,
+        "favLists": [
+          "Groove"
+        ],
+        "metadata": {
+          "duration": null,
+          "stereo": null,
+          "encoding": null,
+          "sampleFrq": null,
+          "sampleRes": null,
+          "country": null,
+          "statusText": null
+        }
+      },
+      {
+        "id": "10120",
+        "name": "ON Smooth Jazz",
+        "description": null,
+        "groupTitle": null,
+        "groups": [
+          "Smooth",
+          "Jazz"
+        ],
+        "url": "https://0n-smoothjazz.radionetz.de/0n-smoothjazz.mp3",
+        "logo": "https://www.0nradio.com/images/favicon/favicon.ico",
+        "artist": null,
+        "lang": null,
+        "channels": null,
+        "country": null,
+        "favLists": [
+          "Jazz"
+        ],
+        "metadata": {
+          "duration": null,
+          "stereo": null,
+          "encoding": null,
+          "sampleFrq": null,
+          "sampleRes": null,
+          "country": null,
+          "statusText": null
+        }
+      },
+      {
+        "id": "18288",
+        "name": "Diana Krall",
+        "description": null,
+        "groupTitle": null,
+        "groups": [
+          "Artists"
+        ],
+        "url": "https://streaming.exclusive.radio/er/dianakrall/icecast.audio",
+        "logo": "https://manager.uber.radio/static/uploads/station/64da41ad-3742-4f62-907d-96f1cf11d81a.jpg",
+        "artist": "Diana Krall",
+        "lang": null,
+        "channels": null,
+        "country": null,
+        "favLists": [
+          "History",
+          "Jazz"
+        ],
+        "metadata": {
+          "duration": null,
+          "stereo": null,
+          "encoding": null,
+          "sampleFrq": null,
+          "sampleRes": null,
+          "country": null,
+          "statusText": null
+        }
+      },
+      {
+        "id": "18150",
+        "name": "Amy Winehouse - Hits",
+        "description": null,
+        "groupTitle": null,
+        "groups": [
+          "Artists"
+        ],
+        "url": "https://streaming.exclusive.radio/er/amywinehousehits/icecast.audio",
+        "logo": "https://manager.uber.radio/static/uploads/station/b926828a-083f-456c-bbf2-0c3f8931ddaa.jpg",
+        "artist": "Amy Winehouse",
+        "lang": null,
+        "channels": null,
+        "country": null,
+        "favLists": [
+          "Jazz"
+        ],
+        "metadata": {
+          "duration": null,
+          "stereo": null,
+          "encoding": null,
+          "sampleFrq": null,
+          "sampleRes": null,
+          "country": null,
+          "statusText": null
+        }
+      },
+      {
+        "id": "11473",
+        "name": "Perfect Roots Reggae",
+        "description": null,
+        "groupTitle": null,
+        "groups": [
+          "Roots",
+          "Reggae"
+        ],
+        "url": "http://n13.radiojar.com/ezs0qr9m4qruv?rj-ttl=5&rj-tok=AAABfdmZtAEAcMqwIUCFz65_iw",
+        "logo": "https://www.radio.net/images/broadcasts/30/97/124592/2/c300.png",
+        "artist": null,
+        "lang": null,
+        "channels": null,
+        "country": null,
+        "favLists": [
+          "Reggae"
+        ],
+        "metadata": {
+          "duration": null,
+          "stereo": null,
+          "encoding": null,
+          "sampleFrq": null,
+          "sampleRes": null,
+          "country": null,
+          "statusText": null
+        }
+      },
+      {
+        "id": "10462",
+        "name": "BDJ Electronic Lounge Radio",
+        "description": null,
+        "groupTitle": null,
+        "groups": [
+          "Electro",
+          "Lounge",
+          "Radio"
+        ],
+        "url": "https://bdjelectronicloungeradio.stream.laut.fm/bdj_electronic_lounge_radio?t302=2021-12-21_03-06-52&uuid=d628e7da-1d91-4911-8472-23df039fa65f",
+        "logo": "http://www.bdjradio.com/assets/bdj-favicon-2.png?v=2",
+        "artist": null,
+        "lang": null,
+        "channels": null,
+        "country": null,
+        "favLists": [
+          "Lounge"
+        ],
+        "metadata": {
+          "duration": null,
+          "stereo": null,
+          "encoding": null,
+          "sampleFrq": null,
+          "sampleRes": null,
+          "country": null,
+          "statusText": null
+        }
+      },
+      {
+        "id": "19787",
+        "name": "Taiwan Lounge Radio",
+        "description": null,
+        "groupTitle": null,
+        "groups": [
+          "Lounge",
+          "Radio"
+        ],
+        "url": "https://azuracast.conceptradio.fr/radio/8030/stream.mp3",
+        "logo": "http://www.taiwan-lounge.com/site/images/logo.jpg",
+        "artist": null,
+        "lang": null,
+        "channels": null,
+        "country": null,
+        "favLists": [
+          "Lounge"
+        ],
+        "metadata": {
+          "duration": null,
+          "stereo": null,
+          "encoding": null,
+          "sampleFrq": null,
+          "sampleRes": null,
+          "country": null,
+          "statusText": null
+        }
+      },
+      {
+        "id": "6219",
+        "name": "WMOT 89.5 Roots",
+        "description": null,
+        "groupTitle": null,
+        "groups": [
+          "Roots"
+        ],
+        "url": "https://playerservices.streamtheworld.com/api/livestream-redirect/WMOTFM.mp3",
+        "logo": "http://mediad.publicbroadcasting.net/p/wmot/files/201702/favicon.ico",
+        "artist": null,
+        "lang": null,
+        "channels": null,
+        "country": null,
+        "favLists": [
+          "History"
+        ],
+        "metadata": {
+          "duration": null,
+          "stereo": null,
+          "encoding": null,
+          "sampleFrq": null,
+          "sampleRes": null,
+          "country": null,
+          "statusText": null
+        }
+      },
+      {
+        "id": "12237",
+        "name": "Dr. Dick’s Dub Shack",
+        "description": null,
+        "groupTitle": null,
+        "groups": [
+          "Dub",
+          "Reggae",
+          "Roots"
+        ],
+        "url": "http://streamer.radio.co/s0635c8b0d/listen?fbclid=IwAR16t5mC5UFT9Fp8pbWe0dvYn9VEI3FYJTogE5AJtUF3G1dJi38lwLgD9as",
+        "logo": "http://drdicksdubshack.com/favicon.ico",
+        "artist": null,
+        "lang": null,
+        "channels": null,
+        "country": null,
+        "favLists": [
+          "History",
+          "DUB"
+        ],
+        "metadata": {
+          "duration": null,
+          "stereo": null,
+          "encoding": null,
+          "sampleFrq": null,
+          "sampleRes": null,
+          "country": null,
+          "statusText": null
+        }
+      },
+      {
+        "id": "17870",
+        "name": "electroradio.fm",
+        "description": null,
+        "groupTitle": null,
+        "groups": [
+          "Electro"
+        ],
+        "url": "http://n01.radiojar.com/fkyxx4q35k0uv?rj-ttl=5&rj-tok=AAABfd5dBFwAZjQ6V2S0Hqix_Q",
+        "logo": "https://electroradio.fm/wp-content/uploads/2020/12/cropped-er_logo-512-180x180.png",
+        "artist": null,
+        "lang": null,
+        "channels": null,
+        "country": null,
+        "favLists": [
+          "Electro"
+        ],
+        "metadata": {
+          "duration": null,
+          "stereo": null,
+          "encoding": null,
+          "sampleFrq": null,
+          "sampleRes": null,
+          "country": null,
+          "statusText": null
+        }
+      },
+      {
+        "id": "3786",
+        "name": "Classic Oldies",
+        "description": null,
+        "groupTitle": null,
+        "groups": [
+          "Classic",
+          "Oldies"
+        ],
+        "url": "http://streaming.radio.co/s88a0bddf2/listen",
+        "logo": "https://www.radio.net/images/broadcasts/19/06/106732/1/c300.png",
+        "artist": null,
+        "lang": null,
+        "channels": null,
+        "country": null,
+        "favLists": [
+          "Oldies but goodies"
+        ],
+        "metadata": {
+          "duration": null,
+          "stereo": null,
+          "encoding": null,
+          "sampleFrq": null,
+          "sampleRes": null,
+          "country": null,
+          "statusText": null
+        }
+      },
+      {
+        "id": "9549",
+        "name": "Venenos Psicodélicos",
+        "description": null,
+        "groupTitle": null,
+        "groups": [
+          "60s",
+          "70s",
+          "Psychedelic"
+        ],
+        "url": "http://stream.zeno.fm/c5bc53qc3k0uv?rj-ttl=5&rj-tok=AAABfdom0-AA3t5HNVYO2lrU4g",
+        "logo": "https://imgproxy.zenomedia.com/insecure/fit/500/500/ce/0/plain/https://proxy.zeno.fm/content/stations/agxzfnplbm8tc3RhdHNyMgsSCkF1dGhDbGllbnQYgIDQvLi93wgMCxIOU3RhdGlvblByb2ZpbGUYgIDQ0ZL8iQkMogEEemVubw/image/%3Fresize=500x500&v=1",
+        "artist": null,
+        "lang": null,
+        "channels": null,
+        "country": null,
+        "favLists": [
+          "History"
+        ],
+        "metadata": {
+          "duration": null,
+          "stereo": null,
+          "encoding": null,
+          "sampleFrq": null,
+          "sampleRes": null,
+          "country": null,
+          "statusText": null
+        }
+      },
+      {
+        "id": "7415",
+        "name": "Galaxie Lounge",
+        "description": null,
+        "groupTitle": null,
+        "groups": [
+          "Lounge"
+        ],
+        "url": "https://listen.radioking.com/radio/45838/stream/82624",
+        "logo": "http://galaxie-radio1.radio-website.com//upload/578f3bce151616.43092430.ico",
+        "artist": null,
+        "lang": null,
+        "channels": null,
+        "country": null,
+        "favLists": [
+          "Lounge"
+        ],
+        "metadata": {
+          "duration": null,
+          "stereo": null,
+          "encoding": null,
+          "sampleFrq": null,
+          "sampleRes": null,
+          "country": null,
+          "statusText": null
+        }
+      },
+      {
+        "id": "4496",
+        "name": "KNCJ Nevada Classical and Jazz",
+        "description": null,
+        "groupTitle": null,
+        "groups": [
+          "Classic",
+          "Jazz"
+        ],
+        "url": "https://kncjstream.com:8443/live",
+        "logo": "https://www.renojazz.org/4_Main_File/HTML/events/crimson-teal/images/temp/kncj_logo_0.jpg",
+        "artist": null,
+        "lang": null,
+        "channels": null,
+        "country": null,
+        "favLists": [
+          "Classique"
+        ],
+        "metadata": {
+          "duration": null,
+          "stereo": null,
+          "encoding": null,
+          "sampleFrq": null,
+          "sampleRes": null,
+          "country": null,
+          "statusText": null
+        }
+      },
+      {
+        "id": "1165",
+        "name": "Radio Art Ambient Piano",
+        "description": null,
+        "groupTitle": null,
+        "groups": [
+          "Radio",
+          "Arts",
+          "Ambient",
+          "Classic"
+        ],
+        "url": "http://air.radioart.com/fAmbient_piano.mp3",
+        "logo": "https://d1iyh67kzf6t3o.cloudfront.net/images/channels/12_Ambient_Piano.jpg",
+        "artist": null,
+        "lang": null,
+        "channels": null,
+        "country": null,
+        "favLists": [
+          "History",
+          "Classique"
         ],
         "metadata": {
           "duration": null,
@@ -387,33 +2228,6 @@
         }
       },
       {
-        "id": "20897",
-        "name": "Kiosk Radio",
-        "description": null,
-        "groupTitle": null,
-        "groups": [
-          "Mix"
-        ],
-        "url": "https://kioskradiobxl.out.airtime.pro/kioskradiobxl_b",
-        "logo": "https://kioskradio.com/images/logo.svg",
-        "artist": null,
-        "lang": null,
-        "channels": null,
-        "country": null,
-        "favLists": [
-          "Groove"
-        ],
-        "metadata": {
-          "duration": null,
-          "stereo": null,
-          "encoding": null,
-          "sampleFrq": null,
-          "sampleRes": null,
-          "country": null,
-          "statusText": null
-        }
-      },
-      {
         "id": "20871",
         "name": "chillout CROOZE",
         "description": null,
@@ -459,64 +2273,6 @@
         "country": null,
         "favLists": [
           "Lounge"
-        ],
-        "metadata": {
-          "duration": null,
-          "stereo": null,
-          "encoding": null,
-          "sampleFrq": null,
-          "sampleRes": null,
-          "country": null,
-          "statusText": null
-        }
-      },
-      {
-        "id": "11492",
-        "name": "POP LOUNGE CAFE",
-        "description": null,
-        "groupTitle": null,
-        "groups": [
-          "Pop",
-          "Lounge"
-        ],
-        "url": "http://poploungecafe.stream.laut.fm/poploungecafe?t302=2021-12-21_03-38-03&uuid=e6be5064-2a80-4aa3-8c3a-c6df1ffa2ca4",
-        "logo": "https://play-lh.googleusercontent.com/6RnorZH_6PZObYdLC4nBepeoVZD90SJ5iW1Edge_OHZ6VEMt6NgsuD9EPOY3HAMcEg=w240-h480-rw",
-        "artist": null,
-        "lang": null,
-        "channels": null,
-        "country": null,
-        "favLists": [
-          "Lounge"
-        ],
-        "metadata": {
-          "duration": null,
-          "stereo": null,
-          "encoding": null,
-          "sampleFrq": null,
-          "sampleRes": null,
-          "country": null,
-          "statusText": null
-        }
-      },
-      {
-        "id": "12237",
-        "name": "Dr. Dick’s Dub Shack",
-        "description": null,
-        "groupTitle": null,
-        "groups": [
-          "Dub",
-          "Reggae",
-          "Roots"
-        ],
-        "url": "http://streamer.radio.co/s0635c8b0d/listen?fbclid=IwAR16t5mC5UFT9Fp8pbWe0dvYn9VEI3FYJTogE5AJtUF3G1dJi38lwLgD9as",
-        "logo": "http://drdicksdubshack.com/favicon.ico",
-        "artist": null,
-        "lang": null,
-        "channels": null,
-        "country": null,
-        "favLists": [
-          "History",
-          "DUB"
         ],
         "metadata": {
           "duration": null,
@@ -727,60 +2483,6 @@
         }
       },
       {
-        "id": "7415",
-        "name": "Galaxie Lounge",
-        "description": null,
-        "groupTitle": null,
-        "groups": [
-          "Lounge"
-        ],
-        "url": "https://listen.radioking.com/radio/45838/stream/82624",
-        "logo": "http://galaxie-radio1.radio-website.com//upload/578f3bce151616.43092430.ico",
-        "artist": null,
-        "lang": null,
-        "channels": null,
-        "country": null,
-        "favLists": [
-          "Lounge"
-        ],
-        "metadata": {
-          "duration": null,
-          "stereo": null,
-          "encoding": null,
-          "sampleFrq": null,
-          "sampleRes": null,
-          "country": null,
-          "statusText": null
-        }
-      },
-      {
-        "id": "10598",
-        "name": "Cosmo Afro Beats",
-        "description": null,
-        "groupTitle": null,
-        "groups": [
-          "Afro"
-        ],
-        "url": "https://d111.rndfnk.com/ard/wdr/cosmo/afrobeat/mp3/128/stream.mp3?sid=22baLPW5cRxAqadp1TE8EsO2KZ3&token=yZkqgf6OCq-mEelPR8xZ3UHeEIcbaCZ9eI0dl1QJNDI&tvf=DUeVos3pwhZkMTExLnJuZGZuay5jb20",
-        "logo": "https://www1.wdr.de/radio/1live/musik/heimatkult/akua-naru-202~_v-ARDAustauschformats.jpg",
-        "artist": null,
-        "lang": null,
-        "channels": null,
-        "country": null,
-        "favLists": [
-          "Groove"
-        ],
-        "metadata": {
-          "duration": null,
-          "stereo": null,
-          "encoding": null,
-          "sampleFrq": null,
-          "sampleRes": null,
-          "country": null,
-          "statusText": null
-        }
-      },
-      {
         "id": "17290",
         "name": "Menya Live Online Radio",
         "description": null,
@@ -794,34 +2496,6 @@
         "logo": "https://proxy.zeno.fm/content/stations/agxzfnplbm8tc3RhdHNyMgsSCkF1dGhDbGllbnQYgIDgwcSl3gkMCxIOU3RhdGlvblByb2ZpbGUYgIDwidvK6AgMogEEemVubw/image/?u=1724769302000",
         "artist": null,
         "lang": "Kirundi",
-        "channels": null,
-        "country": null,
-        "favLists": [
-          "Exotique"
-        ],
-        "metadata": {
-          "duration": null,
-          "stereo": null,
-          "encoding": null,
-          "sampleFrq": null,
-          "sampleRes": null,
-          "country": null,
-          "statusText": null
-        }
-      },
-      {
-        "id": "21360",
-        "name": "Koori Radio 93.7",
-        "description": null,
-        "groupTitle": null,
-        "groups": [
-          "Aboriginal",
-          "Indigenous"
-        ],
-        "url": "https://playerservices.streamtheworld.com/api/livestream-redirect/2LNDAAC.aac",
-        "logo": "https://www.kooriradio.com/favicon.ico",
-        "artist": null,
-        "lang": null,
         "channels": null,
         "country": null,
         "favLists": [
@@ -979,92 +2653,6 @@
         }
       },
       {
-        "id": "10359",
-        "name": "Antenne Bayern Lounge",
-        "description": null,
-        "groupTitle": null,
-        "groups": [
-          "Radio",
-          "Deutsch",
-          "Lounge"
-        ],
-        "url": "http://s3-webradio.antenne.de/lounge/stream/aacp",
-        "logo": "https://www.radio.net/images/broadcasts/0d/91/124497/10/c300.png",
-        "artist": null,
-        "lang": "Deutsch",
-        "channels": null,
-        "country": null,
-        "favLists": [
-          "Lounge"
-        ],
-        "metadata": {
-          "duration": null,
-          "stereo": null,
-          "encoding": null,
-          "sampleFrq": null,
-          "sampleRes": null,
-          "country": null,
-          "statusText": null
-        }
-      },
-      {
-        "id": "10462",
-        "name": "BDJ Electronic Lounge Radio",
-        "description": null,
-        "groupTitle": null,
-        "groups": [
-          "Electro",
-          "Lounge",
-          "Radio"
-        ],
-        "url": "https://bdjelectronicloungeradio.stream.laut.fm/bdj_electronic_lounge_radio?t302=2021-12-21_03-06-52&uuid=d628e7da-1d91-4911-8472-23df039fa65f",
-        "logo": "http://www.bdjradio.com/assets/bdj-favicon-2.png?v=2",
-        "artist": null,
-        "lang": null,
-        "channels": null,
-        "country": null,
-        "favLists": [
-          "Lounge"
-        ],
-        "metadata": {
-          "duration": null,
-          "stereo": null,
-          "encoding": null,
-          "sampleFrq": null,
-          "sampleRes": null,
-          "country": null,
-          "statusText": null
-        }
-      },
-      {
-        "id": "3786",
-        "name": "Classic Oldies",
-        "description": null,
-        "groupTitle": null,
-        "groups": [
-          "Classic",
-          "Oldies"
-        ],
-        "url": "http://streaming.radio.co/s88a0bddf2/listen",
-        "logo": "https://www.radio.net/images/broadcasts/19/06/106732/1/c300.png",
-        "artist": null,
-        "lang": null,
-        "channels": null,
-        "country": null,
-        "favLists": [
-          "Oldies but goodies"
-        ],
-        "metadata": {
-          "duration": null,
-          "stereo": null,
-          "encoding": null,
-          "sampleFrq": null,
-          "sampleRes": null,
-          "country": null,
-          "statusText": null
-        }
-      },
-      {
         "id": "17797",
         "name": "1.FM Afterbeat Electronica Radio",
         "description": null,
@@ -1178,33 +2766,6 @@
         }
       },
       {
-        "id": "11242",
-        "name": "Maretimo Lounge",
-        "description": null,
-        "groupTitle": null,
-        "groups": [
-          "Lounge"
-        ],
-        "url": "https://s35.derstream.net/lounge.mp3",
-        "logo": "https://d3kle7qwymxpcy.cloudfront.net/images/broadcasts/08/a3/107873/5/c175.png",
-        "artist": null,
-        "lang": null,
-        "channels": null,
-        "country": null,
-        "favLists": [
-          "Groove"
-        ],
-        "metadata": {
-          "duration": null,
-          "stereo": null,
-          "encoding": null,
-          "sampleFrq": null,
-          "sampleRes": null,
-          "country": null,
-          "statusText": null
-        }
-      },
-      {
         "id": "7419",
         "name": "Galaxie Mix",
         "description": null,
@@ -1245,33 +2806,6 @@
         "logo": "https://www.radiorecord.ru/components/Header/img/desktop_logo.png?109479708dc38d9dd97e6d8093e6bc65",
         "artist": null,
         "lang": "Russian",
-        "channels": null,
-        "country": null,
-        "favLists": [
-          "Groove"
-        ],
-        "metadata": {
-          "duration": null,
-          "stereo": null,
-          "encoding": null,
-          "sampleFrq": null,
-          "sampleRes": null,
-          "country": null,
-          "statusText": null
-        }
-      },
-      {
-        "id": "7421",
-        "name": "Génération Mix",
-        "description": null,
-        "groupTitle": null,
-        "groups": [
-          "Mix"
-        ],
-        "url": "https://ecmanager2.pro-fhi.net/generationmix",
-        "logo": "https://www.radio.fr/images/broadcasts/62/e7/139914/1/c300.png",
-        "artist": null,
-        "lang": null,
         "channels": null,
         "country": null,
         "favLists": [
@@ -1342,33 +2876,6 @@
         }
       },
       {
-        "id": "19864",
-        "name": "1 Slow-Radio laut.fm",
-        "description": null,
-        "groupTitle": null,
-        "groups": [
-          "Radio"
-        ],
-        "url": "https://1slowradio.stream.laut.fm/1_slowradio",
-        "logo": "https://assets.laut.fm/9670c7c141ede546101df1cdfe18e0b4?t=_640x640",
-        "artist": null,
-        "lang": null,
-        "channels": null,
-        "country": null,
-        "favLists": [
-          "Slows & Love Songs"
-        ],
-        "metadata": {
-          "duration": null,
-          "stereo": null,
-          "encoding": null,
-          "sampleFrq": null,
-          "sampleRes": null,
-          "country": null,
-          "statusText": null
-        }
-      },
-      {
         "id": "4917",
         "name": "Love Radio Only Love Songs 70s 80s 90s",
         "description": null,
@@ -1389,34 +2896,6 @@
         "country": null,
         "favLists": [
           "Slows & Love Songs"
-        ],
-        "metadata": {
-          "duration": null,
-          "stereo": null,
-          "encoding": null,
-          "sampleFrq": null,
-          "sampleRes": null,
-          "country": null,
-          "statusText": null
-        }
-      },
-      {
-        "id": "19787",
-        "name": "Taiwan Lounge Radio",
-        "description": null,
-        "groupTitle": null,
-        "groups": [
-          "Lounge",
-          "Radio"
-        ],
-        "url": "https://azuracast.conceptradio.fr/radio/8030/stream.mp3",
-        "logo": "http://www.taiwan-lounge.com/site/images/logo.jpg",
-        "artist": null,
-        "lang": null,
-        "channels": null,
-        "country": null,
-        "favLists": [
-          "Lounge"
         ],
         "metadata": {
           "duration": null,
@@ -1472,61 +2951,6 @@
         "channels": null,
         "country": null,
         "favLists": [
-          "Indien"
-        ],
-        "metadata": {
-          "duration": null,
-          "stereo": null,
-          "encoding": null,
-          "sampleFrq": null,
-          "sampleRes": null,
-          "country": null,
-          "statusText": null
-        }
-      },
-      {
-        "id": "10713",
-        "name": "ElectroZombies",
-        "description": null,
-        "groupTitle": null,
-        "groups": [
-          "Electro"
-        ],
-        "url": "http://electrozombies.stream.laut.fm/electrozombies?t302=2021-12-21_02-42-35&uuid=f829707f-f917-4ec8-82d6-8b641e79f803",
-        "logo": "https://electrozombies.com/wp-content/uploads/2015/09/electrozombies_icon.jpg",
-        "artist": null,
-        "lang": null,
-        "channels": null,
-        "country": null,
-        "favLists": [
-          "Pop"
-        ],
-        "metadata": {
-          "duration": null,
-          "stereo": null,
-          "encoding": null,
-          "sampleFrq": null,
-          "sampleRes": null,
-          "country": null,
-          "statusText": null
-        }
-      },
-      {
-        "id": "18145",
-        "name": "Alka Yagnik",
-        "description": null,
-        "groupTitle": null,
-        "groups": [
-          "Artists"
-        ],
-        "url": "https://drive.uber.radio/uber/bollywoodalkayagnik/icecast.audio",
-        "logo": "https://manager.uber.radio/static/uploads/station/4a259d43-af38-4a2a-af32-a04281d45676.jpg",
-        "artist": "Alka Yagnik",
-        "lang": null,
-        "channels": null,
-        "country": null,
-        "favLists": [
-          "History",
           "Indien"
         ],
         "metadata": {
@@ -1761,33 +3185,6 @@
         }
       },
       {
-        "id": "18204",
-        "name": "Bo Diddley",
-        "description": null,
-        "groupTitle": null,
-        "groups": [
-          "Artists"
-        ],
-        "url": "https://streaming.exclusive.radio/er/bodiddley/icecast.audio",
-        "logo": "https://manager.uber.radio/static/uploads/station/4b9e794d-70ce-484a-ae97-7627954c91d2.jpg",
-        "artist": "Bo Diddley",
-        "lang": null,
-        "channels": null,
-        "country": null,
-        "favLists": [
-          "Blues"
-        ],
-        "metadata": {
-          "duration": null,
-          "stereo": null,
-          "encoding": null,
-          "sampleFrq": null,
-          "sampleRes": null,
-          "country": null,
-          "statusText": null
-        }
-      },
-      {
         "id": "4052",
         "name": "60s Hits",
         "description": null,
@@ -1849,34 +3246,6 @@
         }
       },
       {
-        "id": "8457",
-        "name": "France Info",
-        "description": null,
-        "groupTitle": null,
-        "groups": [
-          "French"
-        ],
-        "url": "https://icecast.radiofrance.fr/franceinfo-hifi.aac",
-        "logo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTTOrtJJ0l34GIjFRRUcl-X_GxOtNNRNT9rXw&s",
-        "artist": null,
-        "lang": "French",
-        "channels": null,
-        "country": null,
-        "favLists": [
-          "History",
-          "Infos"
-        ],
-        "metadata": {
-          "duration": null,
-          "stereo": null,
-          "encoding": null,
-          "sampleFrq": null,
-          "sampleRes": null,
-          "country": null,
-          "statusText": null
-        }
-      },
-      {
         "id": "20903",
         "name": "La Premiere",
         "description": null,
@@ -1897,41 +3266,21 @@
         ],
         "metadata": {
           "duration": null,
-          "stereo": null,
-          "encoding": null,
-          "sampleFrq": null,
-          "sampleRes": null,
-          "country": null,
-          "statusText": null
-        }
-      },
-      {
-        "id": "8455",
-        "name": "France Culture",
-        "description": null,
-        "groupTitle": null,
-        "groups": [
-          "French",
-          "Culture"
-        ],
-        "url": "https://icecast.radiofrance.fr/franceculture-hifi.aac",
-        "logo": "https://upload.wikimedia.org/wikipedia/fr/thumb/c/c9/France_Culture_-_2008.svg/1024px-France_Culture_-_2008.svg.png",
-        "artist": null,
-        "lang": "French",
-        "channels": null,
-        "country": null,
-        "favLists": [
-          "History",
-          "Infos"
-        ],
-        "metadata": {
-          "duration": null,
-          "stereo": null,
-          "encoding": null,
-          "sampleFrq": null,
-          "sampleRes": null,
-          "country": null,
-          "statusText": null
+          "statusText": "playing"
+        },
+        "ref": {
+          "currentRDList": {
+            "listId": "List",
+            "name": "Infos",
+            "$item": {
+              "0": {},
+              "length": 1
+            }
+          },
+          "currentTab": {
+            "listId": "Viz",
+            "tabId": "btn_wrp_logo"
+          }
         }
       },
       {
@@ -1992,34 +3341,6 @@
         }
       },
       {
-        "id": "21397",
-        "name": "Radio Brisvaani 1701",
-        "description": null,
-        "groupTitle": null,
-        "groups": [
-          "Hindi",
-          "World"
-        ],
-        "url": "https://centova71.instainternet.com/proxy/brisvaaniradio?mp=/stream",
-        "logo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTenIUC_Fu0vGulVOqRZ6fAelxsMUfqMUiNmg&s",
-        "artist": null,
-        "lang": "Hindi",
-        "channels": null,
-        "country": null,
-        "favLists": [
-          "Indien"
-        ],
-        "metadata": {
-          "duration": null,
-          "stereo": null,
-          "encoding": null,
-          "sampleFrq": null,
-          "sampleRes": null,
-          "country": null,
-          "statusText": null
-        }
-      },
-      {
         "id": "9960",
         "name": "ON Radio 50s",
         "description": null,
@@ -2037,33 +3358,6 @@
         "favLists": [
           "History",
           "Années 50"
-        ],
-        "metadata": {
-          "duration": null,
-          "stereo": null,
-          "encoding": null,
-          "sampleFrq": null,
-          "sampleRes": null,
-          "country": null,
-          "statusText": null
-        }
-      },
-      {
-        "id": "18150",
-        "name": "Amy Winehouse - Hits",
-        "description": null,
-        "groupTitle": null,
-        "groups": [
-          "Artists"
-        ],
-        "url": "https://streaming.exclusive.radio/er/amywinehousehits/icecast.audio",
-        "logo": "https://manager.uber.radio/static/uploads/station/b926828a-083f-456c-bbf2-0c3f8931ddaa.jpg",
-        "artist": "Amy Winehouse",
-        "lang": null,
-        "channels": null,
-        "country": null,
-        "favLists": [
-          "Jazz"
         ],
         "metadata": {
           "duration": null,
@@ -2230,60 +3524,6 @@
         "country": null,
         "favLists": [
           "History"
-        ],
-        "metadata": {
-          "duration": null,
-          "stereo": null,
-          "encoding": null,
-          "sampleFrq": null,
-          "sampleRes": null,
-          "country": null,
-          "statusText": null
-        }
-      },
-      {
-        "id": "18292",
-        "name": "Dire Straits",
-        "description": null,
-        "groupTitle": null,
-        "groups": [
-          "Artists"
-        ],
-        "url": "https://streaming.exclusive.radio/er/direstraits/icecast.audio",
-        "logo": "https://manager.uber.radio/static/uploads/station/6fbeb789-537d-46b5-8862-83d4e948b520.jpg",
-        "artist": "Dire Straits",
-        "lang": null,
-        "channels": null,
-        "country": null,
-        "favLists": [
-          "Guitare électrique"
-        ],
-        "metadata": {
-          "duration": null,
-          "stereo": null,
-          "encoding": null,
-          "sampleFrq": null,
-          "sampleRes": null,
-          "country": null,
-          "statusText": null
-        }
-      },
-      {
-        "id": "18293",
-        "name": "Dire Straits - Hits",
-        "description": null,
-        "groupTitle": null,
-        "groups": [
-          "Artists"
-        ],
-        "url": "https://streaming.exclusive.radio/er/direstraitshits/icecast.audio",
-        "logo": "https://manager.uber.radio/static/uploads/station/d7318b9a-aa05-47a3-91e0-fe566986dac1.jpg",
-        "artist": "Dire Straits",
-        "lang": null,
-        "channels": null,
-        "country": null,
-        "favLists": [
-          "Guitare électrique"
         ],
         "metadata": {
           "duration": null,
@@ -2468,33 +3708,6 @@
           "Radio"
         ],
         "url": "http://stream.electroradio.fm/192k",
-        "logo": "https://electroradio.fm/wp-content/uploads/2020/12/cropped-er_logo-512-180x180.png",
-        "artist": null,
-        "lang": null,
-        "channels": null,
-        "country": null,
-        "favLists": [
-          "Electro"
-        ],
-        "metadata": {
-          "duration": null,
-          "stereo": null,
-          "encoding": null,
-          "sampleFrq": null,
-          "sampleRes": null,
-          "country": null,
-          "statusText": null
-        }
-      },
-      {
-        "id": "17870",
-        "name": "electroradio.fm",
-        "description": null,
-        "groupTitle": null,
-        "groups": [
-          "Electro"
-        ],
-        "url": "http://n01.radiojar.com/fkyxx4q35k0uv?rj-ttl=5&rj-tok=AAABfd5dBFwAZjQ6V2S0Hqix_Q",
         "logo": "https://electroradio.fm/wp-content/uploads/2020/12/cropped-er_logo-512-180x180.png",
         "artist": null,
         "lang": null,
@@ -2714,36 +3927,6 @@
         }
       },
       {
-        "id": "10341",
-        "name": "Antenne Bayern 70er Hits",
-        "description": null,
-        "groupTitle": null,
-        "groups": [
-          "Radio",
-          "Deutsch",
-          "70s",
-          "Hits"
-        ],
-        "url": "http://s3-webradio.antenne.de/70er-hits/stream/aacp",
-        "logo": "https://ca.radio.net/images/broadcasts/57/c5/127918/1/c300.png",
-        "artist": null,
-        "lang": "Deutsch",
-        "channels": null,
-        "country": null,
-        "favLists": [
-          "Années 70"
-        ],
-        "metadata": {
-          "duration": null,
-          "stereo": null,
-          "encoding": null,
-          "sampleFrq": null,
-          "sampleRes": null,
-          "country": null,
-          "statusText": null
-        }
-      },
-      {
         "id": "21468",
         "name": "Vintage 87.8 FM",
         "description": null,
@@ -2828,33 +4011,6 @@
         }
       },
       {
-        "id": "16830",
-        "name": "Nation 70s",
-        "description": null,
-        "groupTitle": null,
-        "groups": [
-          "70s"
-        ],
-        "url": "http://listen-nation.sharp-stream.com/nationradio70s.mp3?ref=RF",
-        "logo": "https://static.mytuner.mobi/media/tvos_radios/KLFgFRrzAV.png",
-        "artist": null,
-        "lang": null,
-        "channels": null,
-        "country": null,
-        "favLists": [
-          "Années 70"
-        ],
-        "metadata": {
-          "duration": null,
-          "stereo": null,
-          "encoding": null,
-          "sampleFrq": null,
-          "sampleRes": null,
-          "country": null,
-          "statusText": null
-        }
-      },
-      {
         "id": "3095",
         "name": "101 Smooth Jazz Mellow Mix",
         "description": null,
@@ -2875,21 +4031,12 @@
         ],
         "metadata": {
           "duration": null,
-          "statusText": "playing"
-        },
-        "ref": {
-          "currentRDList": {
-            "listId": "List",
-            "name": "Jazz",
-            "$item": {
-              "0": {},
-              "length": 1
-            }
-          },
-          "currentTab": {
-            "listId": "Viz",
-            "tabId": "btn_wrp_logo"
-          }
+          "stereo": null,
+          "encoding": null,
+          "sampleFrq": null,
+          "sampleRes": null,
+          "country": null,
+          "statusText": null
         }
       },
       {
@@ -3003,34 +4150,6 @@
         }
       },
       {
-        "id": "8459",
-        "name": "France Inter",
-        "description": null,
-        "groupTitle": null,
-        "groups": [
-          "French"
-        ],
-        "url": "https://icecast.radiofrance.fr/franceinter-hifi.aac",
-        "logo": "https://canada-culture.org/wp-content/uploads/2018/05/logo-france-inter.png",
-        "artist": null,
-        "lang": "French",
-        "channels": null,
-        "country": null,
-        "favLists": [
-          "History",
-          "Infos"
-        ],
-        "metadata": {
-          "duration": null,
-          "stereo": null,
-          "encoding": null,
-          "sampleFrq": null,
-          "sampleRes": null,
-          "country": null,
-          "statusText": null
-        }
-      },
-      {
         "id": "8133",
         "name": "Generations",
         "description": null,
@@ -3073,34 +4192,6 @@
         "country": null,
         "favLists": [
           "History"
-        ],
-        "metadata": {
-          "duration": null,
-          "stereo": null,
-          "encoding": null,
-          "sampleFrq": null,
-          "sampleRes": null,
-          "country": null,
-          "statusText": null
-        }
-      },
-      {
-        "id": "10570",
-        "name": "Charivari München Lounge Music",
-        "description": null,
-        "groupTitle": null,
-        "groups": [
-          "Lounge",
-          "Music"
-        ],
-        "url": "https://rs24.stream24.net/lounge.aac?ref=charivari.de&aw_0_1st.playerid=radioplayer.de",
-        "logo": "https://www.charivari.de/assets/Uploads/_resampled/ScaleHeightWyIxMDAiXQ/171211-channel-icon-lounge-1100x1100.png",
-        "artist": null,
-        "lang": null,
-        "channels": null,
-        "country": null,
-        "favLists": [
-          "Groove"
         ],
         "metadata": {
           "duration": null,
@@ -3198,35 +4289,6 @@
         }
       },
       {
-        "id": "20817",
-        "name": "Styrialounge",
-        "description": null,
-        "groupTitle": null,
-        "groups": [
-          "Blues",
-          "Jazz",
-          "Lounge"
-        ],
-        "url": "https://styrialounge.out.airtime.pro/styrialounge_a",
-        "logo": "https://styrialounge.com/assets/images/card.jpg?v78616770366451",
-        "artist": null,
-        "lang": null,
-        "channels": null,
-        "country": null,
-        "favLists": [
-          "Groove"
-        ],
-        "metadata": {
-          "duration": null,
-          "stereo": null,
-          "encoding": null,
-          "sampleFrq": null,
-          "sampleRes": null,
-          "country": null,
-          "statusText": null
-        }
-      },
-      {
         "id": "18084",
         "name": "Traxx FM Lounge",
         "description": null,
@@ -3243,33 +4305,6 @@
         "country": null,
         "favLists": [
           "Groove"
-        ],
-        "metadata": {
-          "duration": null,
-          "stereo": null,
-          "encoding": null,
-          "sampleFrq": null,
-          "sampleRes": null,
-          "country": null,
-          "statusText": null
-        }
-      },
-      {
-        "id": "18174",
-        "name": "Barbra Streisand",
-        "description": null,
-        "groupTitle": null,
-        "groups": [
-          "Artists"
-        ],
-        "url": "https://streaming.exclusive.radio/er/streisand/icecast.audio",
-        "logo": "https://manager.uber.radio/static/uploads/station/b1976ff8-47a3-4789-904a-4d3a4184a24a.jpg",
-        "artist": "Barbra Streisand",
-        "lang": null,
-        "channels": null,
-        "country": null,
-        "favLists": [
-          "Slows & Love Songs"
         ],
         "metadata": {
           "duration": null,
@@ -3325,35 +4360,6 @@
         "channels": null,
         "country": null,
         "favLists": [
-          "Exotique"
-        ],
-        "metadata": {
-          "duration": null,
-          "stereo": null,
-          "encoding": null,
-          "sampleFrq": null,
-          "sampleRes": null,
-          "country": null,
-          "statusText": null
-        }
-      },
-      {
-        "id": "5294",
-        "name": "Radio Paradise World/Etc Mix",
-        "description": null,
-        "groupTitle": null,
-        "groups": [
-          "Radio",
-          "Mix"
-        ],
-        "url": "https://stream.radioparadise.com/world-etc-320",
-        "logo": "https://radioparadise.com/rpassets/images/logo/icon_flat_black_padded_62x50.png",
-        "artist": null,
-        "lang": null,
-        "channels": null,
-        "country": null,
-        "favLists": [
-          "History",
           "Exotique"
         ],
         "metadata": {
@@ -3924,33 +4930,6 @@
         }
       },
       {
-        "id": "18534",
-        "name": "Nina Simone",
-        "description": null,
-        "groupTitle": null,
-        "groups": [
-          "Artists"
-        ],
-        "url": "https://streaming.exclusive.radio/er/ninasimone/icecast.audio",
-        "logo": "https://manager.uber.radio/static/uploads/station/222ca4a1-2954-41f3-afbc-43ba2c15bf37.jpg",
-        "artist": "Nina Simone",
-        "lang": null,
-        "channels": null,
-        "country": null,
-        "favLists": [
-          "Jazz"
-        ],
-        "metadata": {
-          "duration": null,
-          "stereo": null,
-          "encoding": null,
-          "sampleFrq": null,
-          "sampleRes": null,
-          "country": null,
-          "statusText": null
-        }
-      },
-      {
         "id": "18149",
         "name": "Amy Winehouse",
         "description": null,
@@ -3965,7 +4944,8 @@
         "channels": null,
         "country": null,
         "favLists": [
-          "Jazz"
+          "Jazz",
+          "History"
         ],
         "metadata": {
           "duration": null,
@@ -4248,12 +5228,21 @@
         ],
         "metadata": {
           "duration": null,
-          "stereo": null,
-          "encoding": null,
-          "sampleFrq": null,
-          "sampleRes": null,
-          "country": null,
-          "statusText": null
+          "statusText": "playing"
+        },
+        "ref": {
+          "currentRDList": {
+            "listId": "List",
+            "name": "Blues",
+            "$item": {
+              "0": {},
+              "length": 1
+            }
+          },
+          "currentTab": {
+            "listId": "List",
+            "tabId": "btn_wrp_play_list"
+          }
         }
       },
       {
@@ -4341,35 +5330,6 @@
         }
       },
       {
-        "id": "9549",
-        "name": "Venenos Psicodélicos",
-        "description": null,
-        "groupTitle": null,
-        "groups": [
-          "60s",
-          "70s",
-          "Psychedelic"
-        ],
-        "url": "http://stream.zeno.fm/c5bc53qc3k0uv?rj-ttl=5&rj-tok=AAABfdom0-AA3t5HNVYO2lrU4g",
-        "logo": "https://imgproxy.zenomedia.com/insecure/fit/500/500/ce/0/plain/https://proxy.zeno.fm/content/stations/agxzfnplbm8tc3RhdHNyMgsSCkF1dGhDbGllbnQYgIDQvLi93wgMCxIOU3RhdGlvblByb2ZpbGUYgIDQ0ZL8iQkMogEEemVubw/image/%3Fresize=500x500&v=1",
-        "artist": null,
-        "lang": null,
-        "channels": null,
-        "country": null,
-        "favLists": [
-          "History"
-        ],
-        "metadata": {
-          "duration": null,
-          "stereo": null,
-          "encoding": null,
-          "sampleFrq": null,
-          "sampleRes": null,
-          "country": null,
-          "statusText": null
-        }
-      },
-      {
         "id": "10137",
         "name": "Onlineradio Country",
         "description": null,
@@ -4386,33 +5346,6 @@
         "favLists": [
           "History",
           "Country"
-        ],
-        "metadata": {
-          "duration": null,
-          "stereo": null,
-          "encoding": null,
-          "sampleFrq": null,
-          "sampleRes": null,
-          "country": null,
-          "statusText": null
-        }
-      },
-      {
-        "id": "8057",
-        "name": "Chante France",
-        "description": null,
-        "groupTitle": null,
-        "groups": [
-          "French"
-        ],
-        "url": "https://chantefrance.ice.infomaniak.ch/chantefrance-128.mp3",
-        "logo": "http://www.chantefrance.com/public/img/logo.png",
-        "artist": null,
-        "lang": "French",
-        "channels": null,
-        "country": null,
-        "favLists": [
-          "Chanson Française"
         ],
         "metadata": {
           "duration": null,
@@ -4716,7 +5649,6 @@
         "channels": null,
         "country": null,
         "favLists": [
-          "History",
           "Turk"
         ],
         "metadata": {
@@ -4805,7 +5737,6 @@
         "channels": null,
         "country": null,
         "favLists": [
-          "History",
           "Indien"
         ],
         "metadata": {
@@ -4919,284 +5850,6 @@
         "country": null,
         "favLists": [
           "Indien"
-        ],
-        "metadata": {
-          "duration": null,
-          "stereo": null,
-          "encoding": null,
-          "sampleFrq": null,
-          "sampleRes": null,
-          "country": null,
-          "statusText": null
-        }
-      }
-    ],
-    "isSystem": false
-  },
-  "Country": {
-    "listId": "List",
-    "name": "Country",
-    "items": [
-      {
-        "id": "10137",
-        "name": "Onlineradio Country",
-        "description": null,
-        "groupTitle": null,
-        "groups": [
-          "Country"
-        ],
-        "url": "https://stream.0nlineradio.com/country?ref=radiobrowser",
-        "logo": "https://i.ibb.co/qmK33Rk/country.jpg",
-        "artist": null,
-        "lang": null,
-        "channels": null,
-        "country": null,
-        "favLists": [
-          "History",
-          "Country"
-        ],
-        "metadata": {
-          "duration": null,
-          "stereo": null,
-          "encoding": null,
-          "sampleFrq": null,
-          "sampleRes": null,
-          "country": null,
-          "statusText": null
-        }
-      },
-      {
-        "id": "18398",
-        "name": "James Taylor",
-        "description": null,
-        "groupTitle": null,
-        "groups": [
-          "Artists"
-        ],
-        "url": "https://streaming.exclusive.radio/er/jamestaylor/icecast.audio",
-        "logo": "https://manager.uber.radio/static/uploads/station/e66c65c6-3e83-4d42-b41a-a7cc198a4f88.jpg",
-        "artist": "James Taylor",
-        "lang": null,
-        "channels": null,
-        "country": null,
-        "favLists": [
-          "Country"
-        ],
-        "metadata": {
-          "duration": null,
-          "stereo": null,
-          "encoding": null,
-          "sampleFrq": null,
-          "sampleRes": null,
-          "country": null,
-          "statusText": null
-        }
-      },
-      {
-        "id": "18399",
-        "name": "James Taylor - Hits",
-        "description": null,
-        "groupTitle": null,
-        "groups": [
-          "Artists"
-        ],
-        "url": "https://streaming.exclusive.radio/er/jamestaylorhits/icecast.audio",
-        "logo": "https://manager.uber.radio/static/uploads/station/52584fa0-a9f4-4f8d-95ee-727e5513b52d.jpg",
-        "artist": "James Taylor",
-        "lang": null,
-        "channels": null,
-        "country": null,
-        "favLists": [
-          "Country"
-        ],
-        "metadata": {
-          "duration": null,
-          "stereo": null,
-          "encoding": null,
-          "sampleFrq": null,
-          "sampleRes": null,
-          "country": null,
-          "statusText": null
-        }
-      },
-      {
-        "id": "18380",
-        "name": "Hank Williams",
-        "description": null,
-        "groupTitle": null,
-        "groups": [
-          "Artists"
-        ],
-        "url": "https://streaming.exclusive.radio/er/hankwilliams/icecast.audio",
-        "logo": "https://manager.uber.radio/static/uploads/station/fa06e3de-8d13-424e-88f3-8a0c2197cb6d.jpg",
-        "artist": "Hank Williams",
-        "lang": null,
-        "channels": null,
-        "country": null,
-        "favLists": [
-          "Country"
-        ],
-        "metadata": {
-          "duration": null,
-          "stereo": null,
-          "encoding": null,
-          "sampleFrq": null,
-          "sampleRes": null,
-          "country": null,
-          "statusText": null
-        }
-      },
-      {
-        "id": "18366",
-        "name": "Glen Campbell",
-        "description": null,
-        "groupTitle": null,
-        "groups": [
-          "Artists"
-        ],
-        "url": "https://streaming.exclusive.radio/er/glencampbell/icecast.audio",
-        "logo": "https://manager.uber.radio/static/uploads/station/80a9da50-8cc9-41b4-b566-5328f94f77b7.jpg",
-        "artist": "Glen Campbell",
-        "lang": null,
-        "channels": null,
-        "country": null,
-        "favLists": [
-          "Country"
-        ],
-        "metadata": {
-          "duration": null,
-          "stereo": null,
-          "encoding": null,
-          "sampleFrq": null,
-          "sampleRes": null,
-          "country": null,
-          "statusText": null
-        }
-      },
-      {
-        "id": "18367",
-        "name": "Glen Campbell - Hits",
-        "description": null,
-        "groupTitle": null,
-        "groups": [
-          "Artists"
-        ],
-        "url": "https://streaming.exclusive.radio/er/glencampbellhits/icecast.audio",
-        "logo": "https://manager.uber.radio/static/uploads/station/f5c52af6-c608-4336-9fdb-7f1fed445e8d.jpg",
-        "artist": "Glen Campbell",
-        "lang": null,
-        "channels": null,
-        "country": null,
-        "favLists": [
-          "Country"
-        ],
-        "metadata": {
-          "duration": null,
-          "stereo": null,
-          "encoding": null,
-          "sampleFrq": null,
-          "sampleRes": null,
-          "country": null,
-          "statusText": null
-        }
-      },
-      {
-        "id": "18336",
-        "name": "Eva Cassidy",
-        "description": null,
-        "groupTitle": null,
-        "groups": [
-          "Artists"
-        ],
-        "url": "https://streaming.exclusive.radio/er/evacassidy/icecast.audio",
-        "logo": "https://manager.uber.radio/static/uploads/station/cb1ac45e-268d-4d70-9ca3-155eab0cd3b9.jpg",
-        "artist": "Eva Cassidy",
-        "lang": null,
-        "channels": null,
-        "country": null,
-        "favLists": [
-          "Country"
-        ],
-        "metadata": {
-          "duration": null,
-          "stereo": null,
-          "encoding": null,
-          "sampleFrq": null,
-          "sampleRes": null,
-          "country": null,
-          "statusText": null
-        }
-      },
-      {
-        "id": "18296",
-        "name": "Dolly Parton",
-        "description": null,
-        "groupTitle": null,
-        "groups": [
-          "Artists"
-        ],
-        "url": "https://streaming.exclusive.radio/er/dollyparton/icecast.audio",
-        "logo": "https://manager.uber.radio/static/uploads/station/1336b322-9297-4fc0-ac70-3020efee134c.jpg",
-        "artist": "Dolly Parton",
-        "lang": null,
-        "channels": null,
-        "country": null,
-        "favLists": [
-          "Country"
-        ],
-        "metadata": {
-          "duration": null,
-          "stereo": null,
-          "encoding": null,
-          "sampleFrq": null,
-          "sampleRes": null,
-          "country": null,
-          "statusText": null
-        }
-      },
-      {
-        "id": "18297",
-        "name": "Dolly Parton - Hits",
-        "description": null,
-        "groupTitle": null,
-        "groups": [
-          "Artists"
-        ],
-        "url": "https://streaming.exclusive.radio/er/dollypartonhits/icecast.audio",
-        "logo": "https://manager.uber.radio/static/uploads/station/f302678a-d682-4c81-a0c6-6a7595e3ef35.jpg",
-        "artist": "Dolly Parton",
-        "lang": null,
-        "channels": null,
-        "country": null,
-        "favLists": [
-          "Country"
-        ],
-        "metadata": {
-          "duration": null,
-          "stereo": null,
-          "encoding": null,
-          "sampleFrq": null,
-          "sampleRes": null,
-          "country": null,
-          "statusText": null
-        }
-      },
-      {
-        "id": "18139",
-        "name": "Alabama",
-        "description": null,
-        "groupTitle": null,
-        "groups": [
-          "Artists"
-        ],
-        "url": "https://streaming.exclusive.radio/er/alabama/icecast.audio",
-        "logo": "https://manager.uber.radio/static/uploads/station/99013535-9f6b-4bb4-8685-3eca022bab3a.jpg",
-        "artist": "Alabama",
-        "lang": null,
-        "channels": null,
-        "country": null,
-        "favLists": [
-          "Country"
         ],
         "metadata": {
           "duration": null,
@@ -5445,33 +6098,6 @@
     "listId": "List",
     "name": "Groove",
     "items": [
-      {
-        "id": "7421",
-        "name": "Génération Mix",
-        "description": null,
-        "groupTitle": null,
-        "groups": [
-          "Mix"
-        ],
-        "url": "https://ecmanager2.pro-fhi.net/generationmix",
-        "logo": "https://www.radio.fr/images/broadcasts/62/e7/139914/1/c300.png",
-        "artist": null,
-        "lang": null,
-        "channels": null,
-        "country": null,
-        "favLists": [
-          "Groove"
-        ],
-        "metadata": {
-          "duration": null,
-          "stereo": null,
-          "encoding": null,
-          "sampleFrq": null,
-          "sampleRes": null,
-          "country": null,
-          "statusText": null
-        }
-      },
       {
         "id": "2332",
         "name": "Radio Record Russian Mix",
@@ -5872,12 +6498,21 @@
         ],
         "metadata": {
           "duration": null,
-          "stereo": null,
-          "encoding": null,
-          "sampleFrq": null,
-          "sampleRes": null,
-          "country": null,
-          "statusText": null
+          "statusText": "playing"
+        },
+        "ref": {
+          "currentRDList": {
+            "listId": "List",
+            "name": "Années 70",
+            "$item": {
+              "0": {},
+              "length": 1
+            }
+          },
+          "currentTab": {
+            "listId": "Viz",
+            "tabId": "btn_wrp_logo"
+          }
         }
       },
       {
@@ -5902,12 +6537,21 @@
         ],
         "metadata": {
           "duration": null,
-          "stereo": null,
-          "encoding": null,
-          "sampleFrq": null,
-          "sampleRes": null,
-          "country": null,
-          "statusText": null
+          "statusText": "pause"
+        },
+        "ref": {
+          "currentRDList": {
+            "listId": "List",
+            "name": "Années 70",
+            "$item": {
+              "0": {},
+              "length": 1
+            }
+          },
+          "currentTab": {
+            "listId": "Viz",
+            "tabId": "btn_wrp_logo"
+          }
         }
       },
       {
@@ -5960,12 +6604,21 @@
         ],
         "metadata": {
           "duration": null,
-          "stereo": null,
-          "encoding": null,
-          "sampleFrq": null,
-          "sampleRes": null,
-          "country": null,
-          "statusText": null
+          "statusText": "playing"
+        },
+        "ref": {
+          "currentRDList": {
+            "listId": "List",
+            "name": "Années 70",
+            "$item": {
+              "0": {},
+              "length": 1
+            }
+          },
+          "currentTab": {
+            "listId": "Viz",
+            "tabId": "btn_wrp_logo"
+          }
         }
       },
       {
@@ -5987,12 +6640,21 @@
         ],
         "metadata": {
           "duration": null,
-          "stereo": null,
-          "encoding": null,
-          "sampleFrq": null,
-          "sampleRes": null,
-          "country": null,
-          "statusText": null
+          "statusText": "playing"
+        },
+        "ref": {
+          "currentRDList": {
+            "listId": "List",
+            "name": "Années 70",
+            "$item": {
+              "0": {},
+              "length": 1
+            }
+          },
+          "currentTab": {
+            "listId": "Viz",
+            "tabId": "btn_wrp_logo"
+          }
         }
       },
       {
@@ -6356,12 +7018,21 @@
         ],
         "metadata": {
           "duration": null,
-          "stereo": null,
-          "encoding": null,
-          "sampleFrq": null,
-          "sampleRes": null,
-          "country": null,
-          "statusText": null
+          "statusText": "playing"
+        },
+        "ref": {
+          "currentRDList": {
+            "listId": "Art",
+            "name": "Nat King Cole",
+            "$item": {
+              "0": {},
+              "length": 1
+            }
+          },
+          "currentTab": {
+            "listId": "Viz",
+            "tabId": "btn_wrp_logo"
+          }
         }
       },
       {
@@ -6551,6 +7222,42 @@
           "sampleRes": null,
           "country": null,
           "statusText": null
+        }
+      },
+      {
+        "id": "18523",
+        "name": "Nat King Cole",
+        "description": null,
+        "groupTitle": null,
+        "groups": [
+          "Artists"
+        ],
+        "url": "https://streaming.exclusive.radio/er/natkingcole/icecast.audio",
+        "logo": "https://manager.uber.radio/static/uploads/station/2d5fbc1d-dd34-4170-b68e-17dac50384e5.jpg",
+        "artist": "Nat King Cole",
+        "lang": null,
+        "channels": null,
+        "country": null,
+        "favLists": [
+          "Crooners"
+        ],
+        "metadata": {
+          "duration": null,
+          "statusText": "playing"
+        },
+        "ref": {
+          "currentRDList": {
+            "listId": "Art",
+            "name": "Nat King Cole",
+            "$item": {
+              "0": {},
+              "length": 1
+            }
+          },
+          "currentTab": {
+            "listId": "Viz",
+            "tabId": "btn_wrp_logo"
+          }
         }
       }
     ],
@@ -6927,263 +7634,6 @@
     ],
     "isSystem": false
   },
-  "Infos": {
-    "listId": "List",
-    "name": "info",
-    "items": [
-      {
-        "id": "8457",
-        "name": "France Info",
-        "description": null,
-        "groupTitle": null,
-        "groups": [
-          "French"
-        ],
-        "url": "https://icecast.radiofrance.fr/franceinfo-hifi.aac",
-        "logo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTTOrtJJ0l34GIjFRRUcl-X_GxOtNNRNT9rXw&s",
-        "artist": null,
-        "lang": "French",
-        "channels": null,
-        "country": null,
-        "favLists": [
-          "History",
-          "Infos"
-        ],
-        "metadata": {
-          "duration": null,
-          "stereo": null,
-          "encoding": null,
-          "sampleFrq": null,
-          "sampleRes": null,
-          "country": null,
-          "statusText": null
-        }
-      },
-      {
-        "id": "8455",
-        "name": "France Culture",
-        "description": null,
-        "groupTitle": null,
-        "groups": [
-          "French",
-          "Culture"
-        ],
-        "url": "https://icecast.radiofrance.fr/franceculture-hifi.aac",
-        "logo": "https://upload.wikimedia.org/wikipedia/fr/thumb/c/c9/France_Culture_-_2008.svg/1024px-France_Culture_-_2008.svg.png",
-        "artist": null,
-        "lang": "French",
-        "channels": null,
-        "country": null,
-        "favLists": [
-          "History",
-          "Infos"
-        ],
-        "metadata": {
-          "duration": null,
-          "stereo": null,
-          "encoding": null,
-          "sampleFrq": null,
-          "sampleRes": null,
-          "country": null,
-          "statusText": null
-        }
-      },
-      {
-        "id": "8459",
-        "name": "France Inter",
-        "description": null,
-        "groupTitle": null,
-        "groups": [
-          "French"
-        ],
-        "url": "https://icecast.radiofrance.fr/franceinter-hifi.aac",
-        "logo": "https://canada-culture.org/wp-content/uploads/2018/05/logo-france-inter.png",
-        "artist": null,
-        "lang": "French",
-        "channels": null,
-        "country": null,
-        "favLists": [
-          "History",
-          "Infos"
-        ],
-        "metadata": {
-          "duration": null,
-          "stereo": null,
-          "encoding": null,
-          "sampleFrq": null,
-          "sampleRes": null,
-          "country": null,
-          "statusText": null
-        }
-      },
-      {
-        "id": "7378",
-        "name": "Europe 1",
-        "description": null,
-        "groupTitle": null,
-        "groups": [
-          "French"
-        ],
-        "url": "https://europe1.lmn.fm/europe1.aac",
-        "logo": "https://cdn-europe1.lanmedia.fr/bundles/europe1integration/images/europe1_home.jpg",
-        "artist": null,
-        "lang": "French",
-        "channels": null,
-        "country": null,
-        "favLists": [
-          "Infos"
-        ],
-        "metadata": {
-          "duration": null,
-          "stereo": null,
-          "encoding": null,
-          "sampleFrq": null,
-          "sampleRes": null,
-          "country": null,
-          "statusText": null
-        }
-      },
-      {
-        "id": "8405",
-        "name": "France Bleu Isère",
-        "description": null,
-        "groupTitle": null,
-        "groups": [
-          "French"
-        ],
-        "url": "https://icecast.radiofrance.fr/fbisere-midfi.mp3",
-        "logo": "https://www.francebleu.fr/images/logo-FB-512.png",
-        "artist": null,
-        "lang": "French",
-        "channels": null,
-        "country": null,
-        "favLists": [
-          "Infos"
-        ],
-        "metadata": {
-          "duration": null,
-          "stereo": null,
-          "encoding": null,
-          "sampleFrq": null,
-          "sampleRes": null,
-          "country": null,
-          "statusText": null
-        }
-      },
-      {
-        "id": "20903",
-        "name": "La Premiere",
-        "description": null,
-        "groupTitle": null,
-        "groups": [
-          "French",
-          "News",
-          "Talk"
-        ],
-        "url": "https://redbeemedia.streamabc.net/redbm-lapremiere-aac-128-7561067",
-        "logo": "https://ca.radio.net/300/rtbflapremiere.jpeg?version=aba8f0c1da08cbedc110831d9050a941",
-        "artist": null,
-        "lang": "French",
-        "channels": null,
-        "country": null,
-        "favLists": [
-          "Infos"
-        ],
-        "metadata": {
-          "duration": null,
-          "stereo": null,
-          "encoding": null,
-          "sampleFrq": null,
-          "sampleRes": null,
-          "country": null,
-          "statusText": null
-        }
-      },
-      {
-        "id": "7870",
-        "name": "RMC",
-        "description": null,
-        "groupTitle": null,
-        "groups": [
-          "French"
-        ],
-        "url": "https://audio.bfmtv.com/rmcradio_128.mp3?aw_0_1st.aggregator=unknow_from_dvmr",
-        "logo": "http://static.bfmtv.com/ressources/img/header/rmc.png",
-        "artist": null,
-        "lang": "French",
-        "channels": null,
-        "country": null,
-        "favLists": [
-          "Infos"
-        ],
-        "metadata": {
-          "duration": null,
-          "stereo": null,
-          "encoding": null,
-          "sampleFrq": null,
-          "sampleRes": null,
-          "country": null,
-          "statusText": null
-        }
-      },
-      {
-        "id": "7887",
-        "name": "RTL",
-        "description": null,
-        "groupTitle": null,
-        "groups": [
-          "French"
-        ],
-        "url": "https://streamer-02.rtl.fr/rtl-1-44-128",
-        "logo": "https://play-lh.googleusercontent.com/j9AJ5a4JNcmZZz5QJSxUPys0WflUXTlPOUH9X6N9Z26MxhsZWMA_GxiHoDuvQ0sVZLE",
-        "artist": null,
-        "lang": "French",
-        "channels": null,
-        "country": null,
-        "favLists": [
-          "Infos"
-        ],
-        "metadata": {
-          "duration": null,
-          "stereo": null,
-          "encoding": null,
-          "sampleFrq": null,
-          "sampleRes": null,
-          "country": null,
-          "statusText": null
-        }
-      },
-      {
-        "id": "7892",
-        "name": "RTS",
-        "description": null,
-        "groupTitle": null,
-        "groups": [
-          "French"
-        ],
-        "url": "https://sc.creacast.com/rts-national.mp3",
-        "logo": "http://ecouter.lesindesradios.fr/logos/orange87.png",
-        "artist": null,
-        "lang": "French",
-        "channels": null,
-        "country": null,
-        "favLists": [
-          "History",
-          "Infos"
-        ],
-        "metadata": {
-          "duration": null,
-          "stereo": null,
-          "encoding": null,
-          "sampleFrq": null,
-          "sampleRes": null,
-          "country": null,
-          "statusText": null
-        }
-      }
-    ],
-    "isSystem": false
-  },
   "Reggae": {
     "listId": "List",
     "name": "Reggae",
@@ -7360,6 +7810,34 @@
           "country": null,
           "statusText": null
         }
+      },
+      {
+        "id": "11473",
+        "name": "Perfect Roots Reggae",
+        "description": null,
+        "groupTitle": null,
+        "groups": [
+          "Roots",
+          "Reggae"
+        ],
+        "url": "http://n13.radiojar.com/ezs0qr9m4qruv?rj-ttl=5&rj-tok=AAABfdmZtAEAcMqwIUCFz65_iw",
+        "logo": "https://www.radio.net/images/broadcasts/30/97/124592/2/c300.png",
+        "artist": null,
+        "lang": null,
+        "channels": null,
+        "country": null,
+        "favLists": [
+          "Reggae"
+        ],
+        "metadata": {
+          "duration": null,
+          "stereo": null,
+          "encoding": null,
+          "sampleFrq": null,
+          "sampleRes": null,
+          "country": null,
+          "statusText": null
+        }
       }
     ],
     "isSystem": false
@@ -7506,12 +7984,21 @@
         ],
         "metadata": {
           "duration": null,
-          "stereo": null,
-          "encoding": null,
-          "sampleFrq": null,
-          "sampleRes": null,
-          "country": null,
-          "statusText": null
+          "statusText": "playing"
+        },
+        "ref": {
+          "currentRDList": {
+            "listId": "List",
+            "name": "Blues",
+            "$item": {
+              "0": {},
+              "length": 1
+            }
+          },
+          "currentTab": {
+            "listId": "List",
+            "tabId": "btn_wrp_play_list"
+          }
         }
       },
       {
@@ -7533,12 +8020,93 @@
         ],
         "metadata": {
           "duration": null,
-          "stereo": null,
-          "encoding": null,
-          "sampleFrq": null,
-          "sampleRes": null,
-          "country": null,
-          "statusText": null
+          "statusText": "playing"
+        },
+        "ref": {
+          "currentRDList": {
+            "listId": "List",
+            "name": "Blues",
+            "$item": {
+              "0": {},
+              "length": 1
+            }
+          },
+          "currentTab": {
+            "listId": "Viz",
+            "tabId": "btn_wrp_logo"
+          }
+        }
+      },
+      {
+        "id": "18421",
+        "name": "John Lee Hooker",
+        "description": null,
+        "groupTitle": null,
+        "groups": [
+          "Artists"
+        ],
+        "url": "https://streaming.exclusive.radio/er/johnleehooker/icecast.audio",
+        "logo": "https://manager.uber.radio/static/uploads/station/eba1aa86-22ec-459f-90ce-9c11eba339fa.jpg",
+        "artist": "John Lee Hooker",
+        "lang": null,
+        "channels": null,
+        "country": null,
+        "favLists": [
+          "Blues"
+        ],
+        "metadata": {
+          "duration": null,
+          "statusText": "playing"
+        },
+        "ref": {
+          "currentRDList": {
+            "listId": "Art",
+            "name": "John Lee Hooker",
+            "$item": {
+              "0": {},
+              "length": 1
+            }
+          },
+          "currentTab": {
+            "listId": "Art",
+            "tabId": "btn_wrp_art_list"
+          }
+        }
+      },
+      {
+        "id": "18520",
+        "name": "Muddy Waters",
+        "description": null,
+        "groupTitle": null,
+        "groups": [
+          "Artists"
+        ],
+        "url": "https://streaming.exclusive.radio/er/muddywaters/icecast.audio",
+        "logo": "https://manager.uber.radio/static/uploads/station/89b7545c-2e75-4e7a-a265-029d934da2b5.png",
+        "artist": "Muddy Waters",
+        "lang": null,
+        "channels": null,
+        "country": null,
+        "favLists": [
+          "Blues"
+        ],
+        "metadata": {
+          "duration": null,
+          "statusText": "playing"
+        },
+        "ref": {
+          "currentRDList": {
+            "listId": "Art",
+            "name": "Muddy Waters",
+            "$item": {
+              "0": {},
+              "length": 1
+            }
+          },
+          "currentTab": {
+            "listId": "Art",
+            "tabId": "btn_wrp_art_list"
+          }
         }
       }
     ],
@@ -7613,239 +8181,21 @@
           "sampleFrq": null,
           "sampleRes": null,
           "country": null,
-          "statusText": null
-        }
-      }
-    ],
-    "isSystem": false
-  },
-  "Slows & Love Songs": {
-    "listId": "List",
-    "name": "Slows & Love Songs",
-    "items": [
-      {
-        "id": "19864",
-        "name": "1 Slow-Radio laut.fm",
-        "description": null,
-        "groupTitle": null,
-        "groups": [
-          "Radio"
-        ],
-        "url": "https://1slowradio.stream.laut.fm/1_slowradio",
-        "logo": "https://assets.laut.fm/9670c7c141ede546101df1cdfe18e0b4?t=_640x640",
-        "artist": null,
-        "lang": null,
-        "channels": null,
-        "country": null,
-        "favLists": [
-          "Slows & Love Songs"
-        ],
-        "metadata": {
-          "duration": null,
-          "stereo": null,
-          "encoding": null,
-          "sampleFrq": null,
-          "sampleRes": null,
-          "country": null,
-          "statusText": null
-        }
-      },
-      {
-        "id": "18174",
-        "name": "Barbra Streisand",
-        "description": null,
-        "groupTitle": null,
-        "groups": [
-          "Artists"
-        ],
-        "url": "https://streaming.exclusive.radio/er/streisand/icecast.audio",
-        "logo": "https://manager.uber.radio/static/uploads/station/b1976ff8-47a3-4789-904a-4d3a4184a24a.jpg",
-        "artist": "Barbra Streisand",
-        "lang": null,
-        "channels": null,
-        "country": null,
-        "favLists": [
-          "Slows & Love Songs"
-        ],
-        "metadata": {
-          "duration": null,
-          "stereo": null,
-          "encoding": null,
-          "sampleFrq": null,
-          "sampleRes": null,
-          "country": null,
-          "statusText": null
-        }
-      },
-      {
-        "id": "18175",
-        "name": "Barbra Streisand - Hits",
-        "description": null,
-        "groupTitle": null,
-        "groups": [
-          "Artists"
-        ],
-        "url": "https://streaming.exclusive.radio/er/streisandhits/icecast.audio",
-        "logo": "https://manager.uber.radio/static/uploads/station/562bb3c5-962c-40ff-b5a6-8b9953b5f8a8.jpg",
-        "artist": "Barbra Streisand",
-        "lang": null,
-        "channels": null,
-        "country": null,
-        "favLists": [
-          "Slows & Love Songs"
-        ],
-        "metadata": {
-          "duration": null,
-          "stereo": null,
-          "encoding": null,
-          "sampleFrq": null,
-          "sampleRes": null,
-          "country": null,
-          "statusText": null
-        }
-      },
-      {
-        "id": "4917",
-        "name": "Love Radio Only Love Songs 70s 80s 90s",
-        "description": null,
-        "groupTitle": null,
-        "groups": [
-          "Love",
-          "Radio",
-          "Songs",
-          "70s",
-          "80s",
-          "90s"
-        ],
-        "url": "https://loveradio.streamingmedia.it/usa",
-        "logo": "https://love.radio/loveradio_logo.png",
-        "artist": null,
-        "lang": null,
-        "channels": null,
-        "country": null,
-        "favLists": [
-          "Slows & Love Songs"
-        ],
-        "metadata": {
-          "duration": null,
-          "stereo": null,
-          "encoding": null,
-          "sampleFrq": null,
-          "sampleRes": null,
-          "country": null,
-          "statusText": null
-        }
-      },
-      {
-        "id": "17601",
-        "name": "Sky Radio Lovesongs",
-        "description": null,
-        "groupTitle": null,
-        "groups": [
-          "Radio",
-          "Love"
-        ],
-        "url": "https://playerservices.streamtheworld.com/api/livestream-redirect/SRGSTR03AAC_SC",
-        "logo": "http://www.skyradio.nl/icons/apple-icon-120x120.png",
-        "artist": null,
-        "lang": null,
-        "channels": null,
-        "country": null,
-        "favLists": [
-          "Slows & Love Songs"
-        ],
-        "metadata": {
-          "duration": null,
-          "stereo": null,
-          "encoding": null,
-          "sampleFrq": null,
-          "sampleRes": null,
-          "country": null,
-          "statusText": null
-        }
-      },
-      {
-        "id": "13505",
-        "name": "RDMIX Love Songs",
-        "description": null,
-        "groupTitle": null,
-        "groups": [
-          "Love",
-          "Songs"
-        ],
-        "url": "http://maggie.torontocast.com:8022/stream",
-        "logo": "https://radiodimensionemix.torontocast.stream/wp-content/uploads/2020/09/RDMIX-LOVE_SONGS_512_OK-150x150.png",
-        "artist": null,
-        "lang": null,
-        "channels": null,
-        "country": null,
-        "favLists": [
-          "Slows & Love Songs"
-        ],
-        "metadata": {
-          "duration": null,
-          "stereo": null,
-          "encoding": null,
-          "sampleFrq": null,
-          "sampleRes": null,
-          "country": null,
-          "statusText": null
-        }
-      },
-      {
-        "id": "7267",
-        "name": "ABC Lounge Radio",
-        "description": null,
-        "groupTitle": null,
-        "groups": [
-          "Lounge",
-          "Radio"
-        ],
-        "url": "https://eu1.fastcast4u.com/proxy/kpmxz?mp=/1",
-        "logo": "https://www.abc-lounge.com/radio/wp-content/uploads/2019/11/logo-ABC-Lounge100.png",
-        "artist": null,
-        "lang": null,
-        "channels": null,
-        "country": null,
-        "favLists": [
-          "Slows & Love Songs"
-        ],
-        "metadata": {
-          "duration": null,
-          "stereo": null,
-          "encoding": null,
-          "sampleFrq": null,
-          "sampleRes": null,
-          "country": null,
-          "statusText": null
-        }
-      },
-      {
-        "id": "12804",
-        "name": "Oxygen Love Songs",
-        "description": null,
-        "groupTitle": null,
-        "groups": [
-          "Love",
-          "Songs"
-        ],
-        "url": "https://oxygenmusic.hu:8443/oxygenlovesongs",
-        "logo": "https://oxygenmusic.hu/wp-content/uploads/2021/02/love_songs_web_cover.jpg",
-        "artist": null,
-        "lang": null,
-        "channels": null,
-        "country": null,
-        "favLists": [
-          "Slows & Love Songs"
-        ],
-        "metadata": {
-          "duration": null,
-          "stereo": null,
-          "encoding": null,
-          "sampleFrq": null,
-          "sampleRes": null,
-          "country": null,
-          "statusText": null
+          "statusText": "no connection"
+        },
+        "ref": {
+          "currentRDList": {
+            "listId": "List",
+            "name": "Test Liste Avec Un Nom Long",
+            "$item": {
+              "0": {},
+              "length": 1
+            }
+          },
+          "currentTab": {
+            "listId": "List",
+            "tabId": "btn_wrp_play_list"
+          }
         }
       }
     ],
@@ -8410,6 +8760,33 @@
           "country": null,
           "statusText": null
         }
+      },
+      {
+        "id": "7421",
+        "name": "Génération Mix",
+        "description": null,
+        "groupTitle": null,
+        "groups": [
+          "Mix"
+        ],
+        "url": "https://ecmanager2.pro-fhi.net/generationmix",
+        "logo": "https://www.radio.fr/images/broadcasts/62/e7/139914/1/c300.png",
+        "artist": null,
+        "lang": null,
+        "channels": null,
+        "country": null,
+        "favLists": [
+          "Pop"
+        ],
+        "metadata": {
+          "duration": null,
+          "stereo": null,
+          "encoding": null,
+          "sampleFrq": null,
+          "sampleRes": null,
+          "country": null,
+          "statusText": null
+        }
       }
     ],
     "isSystem": false
@@ -8444,12 +8821,16 @@
         },
         "ref": {
           "currentRDList": {
-            "listId": "Tag",
-            "name": "Songs"
+            "listId": "List",
+            "name": "History",
+            "$item": {
+              "0": {},
+              "length": 1
+            }
           },
           "currentTab": {
-            "listId": "Viz",
-            "tabId": "btn_wrp_logo"
+            "listId": "List",
+            "tabId": "btn_wrp_play_list"
           }
         }
       },
@@ -9196,6 +9577,70 @@
           "country": null,
           "statusText": null
         }
+      },
+      {
+        "id": "13578",
+        "name": "Alxa Chinese Radio",
+        "description": null,
+        "groupTitle": null,
+        "groups": [
+          "Chinese",
+          "Radio"
+        ],
+        "url": "http://lhttp.qingting.fm/live/5022521/64k.mp3",
+        "logo": "http://pic.qingting.fm/2015/0725/20150725202533809.jpg",
+        "artist": null,
+        "lang": "Chinese",
+        "channels": null,
+        "country": null,
+        "favLists": [
+          "Exotique"
+        ],
+        "metadata": {
+          "duration": null,
+          "stereo": null,
+          "encoding": null,
+          "sampleFrq": null,
+          "sampleRes": null,
+          "country": null,
+          "statusText": null
+        }
+      },
+      {
+        "id": "18511",
+        "name": "Mike Oldfield",
+        "description": null,
+        "groupTitle": null,
+        "groups": [
+          "Artists"
+        ],
+        "url": "https://streaming.exclusive.radio/er/mikeoldfield/icecast.audio",
+        "logo": "https://manager.uber.radio/static/uploads/station/e10b5af0-38e5-4592-9343-aa75bdc05fb7.jpg",
+        "artist": "Mike Oldfield",
+        "lang": null,
+        "channels": null,
+        "country": null,
+        "favLists": [
+          "Exotique"
+        ],
+        "metadata": {
+          "duration": null,
+          "statusText": "playing"
+        },
+        "ref": {
+          "currentRDList": {
+            "listId": "Art",
+            "name": "Mike Oldfield",
+            "$item": {
+              "0": {},
+              "length": 1
+            }
+          },
+          "currentTab": {
+            "listId": "Art",
+            "tabId": "btn_wrp_art_list"
+          }
+        }
       }
     ],
     "isSystem": false
@@ -9376,21 +9821,12 @@
         ],
         "metadata": {
           "duration": null,
-          "statusText": "playing"
-        },
-        "ref": {
-          "currentRDList": {
-            "listId": "List",
-            "name": "Jazz",
-            "$item": {
-              "0": {},
-              "length": 1
-            }
-          },
-          "currentTab": {
-            "listId": "Viz",
-            "tabId": "btn_wrp_logo"
-          }
+          "stereo": null,
+          "encoding": null,
+          "sampleFrq": null,
+          "sampleRes": null,
+          "country": null,
+          "statusText": null
         }
       },
       {
@@ -9441,21 +9877,12 @@
         ],
         "metadata": {
           "duration": null,
-          "statusText": "playing"
-        },
-        "ref": {
-          "currentRDList": {
-            "listId": "List",
-            "name": "Jazz",
-            "$item": {
-              "0": {},
-              "length": 1
-            }
-          },
-          "currentTab": {
-            "listId": "List",
-            "tabId": "btn_wrp_play_list"
-          }
+          "stereo": null,
+          "encoding": null,
+          "sampleFrq": null,
+          "sampleRes": null,
+          "country": null,
+          "statusText": null
         }
       },
       {
@@ -9558,7 +9985,8 @@
         "channels": null,
         "country": null,
         "favLists": [
-          "Jazz"
+          "Jazz",
+          "History"
         ],
         "metadata": {
           "duration": null,
@@ -9697,12 +10125,21 @@
         ],
         "metadata": {
           "duration": null,
-          "stereo": null,
-          "encoding": null,
-          "sampleFrq": null,
-          "sampleRes": null,
-          "country": null,
-          "statusText": null
+          "statusText": "pause"
+        },
+        "ref": {
+          "currentRDList": {
+            "listId": "Art",
+            "name": "Nina Simone",
+            "$item": {
+              "0": {},
+              "length": 1
+            }
+          },
+          "currentTab": {
+            "listId": "Art",
+            "tabId": "btn_wrp_art_list"
+          }
         }
       },
       {
@@ -9969,21 +10406,12 @@
         ],
         "metadata": {
           "duration": null,
-          "statusText": "playing"
-        },
-        "ref": {
-          "currentRDList": {
-            "listId": "List",
-            "name": "Jazz",
-            "$item": {
-              "0": {},
-              "length": 1
-            }
-          },
-          "currentTab": {
-            "listId": "Viz",
-            "tabId": "btn_wrp_logo"
-          }
+          "stereo": null,
+          "encoding": null,
+          "sampleFrq": null,
+          "sampleRes": null,
+          "country": null,
+          "statusText": null
         }
       },
       {
@@ -10038,21 +10466,7 @@
           "sampleFrq": null,
           "sampleRes": null,
           "country": null,
-          "statusText": "connecting..."
-        },
-        "ref": {
-          "currentRDList": {
-            "listId": "List",
-            "name": "Jazz",
-            "$item": {
-              "0": {},
-              "length": 1
-            }
-          },
-          "currentTab": {
-            "listId": "Viz",
-            "tabId": "btn_wrp_logo"
-          }
+          "statusText": null
         }
       },
       {
@@ -10099,6 +10513,1100 @@
         "country": null,
         "favLists": [
           "Jazz"
+        ],
+        "metadata": {
+          "duration": null,
+          "stereo": null,
+          "encoding": null,
+          "sampleFrq": null,
+          "sampleRes": null,
+          "country": null,
+          "statusText": null
+        }
+      }
+    ],
+    "isSystem": false
+  },
+  "Disco & Funk": {
+    "listId": "List",
+    "name": "Disco & Funk",
+    "items": [
+      {
+        "id": "18313",
+        "name": "Earth Wind & Fire",
+        "description": null,
+        "groupTitle": null,
+        "groups": [
+          "Artists"
+        ],
+        "url": "https://streaming.exclusive.radio/er/earthwindandfire/icecast.audio",
+        "logo": "https://manager.uber.radio/static/uploads/station/36f022c1-8177-4966-ad76-4933888ef846.jpg",
+        "artist": "Earth Wind & Fire",
+        "lang": null,
+        "channels": null,
+        "country": null,
+        "favLists": [
+          "Disco & Funk"
+        ],
+        "metadata": {
+          "duration": null,
+          "stereo": null,
+          "encoding": null,
+          "sampleFrq": null,
+          "sampleRes": null,
+          "country": null,
+          "statusText": null
+        }
+      },
+      {
+        "id": "18314",
+        "name": "Earth Wind & Fire - Hits",
+        "description": null,
+        "groupTitle": null,
+        "groups": [
+          "Artists"
+        ],
+        "url": "https://streaming.exclusive.radio/er/earthwindandfirehits/icecast.audio",
+        "logo": "https://manager.uber.radio/static/uploads/station/44a30c86-4751-48ed-acb6-7f7db0dffa9f.jpg",
+        "artist": "Earth Wind & Fire",
+        "lang": null,
+        "channels": null,
+        "country": null,
+        "favLists": [
+          "Disco & Funk"
+        ],
+        "metadata": {
+          "duration": null,
+          "stereo": null,
+          "encoding": null,
+          "sampleFrq": null,
+          "sampleRes": null,
+          "country": null,
+          "statusText": null
+        }
+      }
+    ],
+    "isSystem": false
+  },
+  "Techno": {
+    "listId": "List",
+    "name": "Techno",
+    "items": [
+      {
+        "id": "17822",
+        "name": "1.FM Deep Techno & Deep House",
+        "description": null,
+        "groupTitle": null,
+        "groups": [
+          "Radio",
+          "Techno",
+          "House"
+        ],
+        "url": "http://strm112.1.fm/deeptech_mobile_mp3",
+        "logo": "https://www.1.fm/images/favicon.ico",
+        "artist": null,
+        "lang": null,
+        "channels": null,
+        "country": null,
+        "favLists": [
+          "Techno"
+        ],
+        "metadata": {
+          "duration": null,
+          "stereo": null,
+          "encoding": null,
+          "sampleFrq": null,
+          "sampleRes": null,
+          "country": null,
+          "statusText": null
+        }
+      },
+      {
+        "id": "1970",
+        "name": "Anima Amoris Dub Techno Mix",
+        "description": null,
+        "groupTitle": null,
+        "groups": [
+          "Dub",
+          "Techno",
+          "Mix"
+        ],
+        "url": "http://amoris.sknt.ru/dubtechnomix.mp3",
+        "logo": "https://dx7vbl8yjmzxy.cloudfront.net/new_images/radioapp_75467.png",
+        "artist": null,
+        "lang": null,
+        "channels": null,
+        "country": null,
+        "favLists": [
+          "Techno"
+        ],
+        "metadata": {
+          "duration": null,
+          "stereo": null,
+          "encoding": null,
+          "sampleFrq": null,
+          "sampleRes": null,
+          "country": null,
+          "statusText": null
+        }
+      },
+      {
+        "id": "10484",
+        "name": "Best of Techno",
+        "description": null,
+        "groupTitle": null,
+        "groups": [
+          "Techno"
+        ],
+        "url": "http://best-of-techno.stream.laut.fm/best-of-techno?t302=2021-12-21_04-07-13&uuid=2f56ee5f-4a83-4ef5-8ab0-c75a40b52cb3",
+        "logo": "https://www.radio.net/images/broadcasts/0a/96/114257/4/c300.png",
+        "artist": null,
+        "lang": null,
+        "channels": null,
+        "country": null,
+        "favLists": [
+          "Techno"
+        ],
+        "metadata": {
+          "duration": null,
+          "stereo": null,
+          "encoding": null,
+          "sampleFrq": null,
+          "sampleRes": null,
+          "country": null,
+          "statusText": null
+        }
+      },
+      {
+        "id": "12641",
+        "name": "Radio Techno Dance",
+        "description": null,
+        "groupTitle": null,
+        "groups": [
+          "Radio",
+          "Techno",
+          "Dance"
+        ],
+        "url": "http://stream.zeno.fm/8d2pyzm5wp8uv?rj-ttl=5&rj-tok=AAABfd0phy8AWRspuI-L0VD51w",
+        "logo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQuUUzMD28qDEEbK1tRWezd4lKzeSkFxmReJA&s",
+        "artist": null,
+        "lang": null,
+        "channels": null,
+        "country": null,
+        "favLists": [
+          "Techno"
+        ],
+        "metadata": {
+          "duration": null,
+          "stereo": null,
+          "encoding": null,
+          "sampleFrq": null,
+          "sampleRes": null,
+          "country": null,
+          "statusText": null
+        }
+      },
+      {
+        "id": "12084",
+        "name": "Techno Paradize",
+        "description": null,
+        "groupTitle": null,
+        "groups": [
+          "Techno"
+        ],
+        "url": "https://techno-paradize.stream.laut.fm/techno-paradize?t302=2021-12-12_09-00-32&uuid=8fb20a49-0aa6-427a-b0ff-2f65e43898b4",
+        "logo": "https://scontent.fmex23-1.fna.fbcdn.net/v/t1.18169-9/1239749_274837249315104_1042633431_n.jpg?_nc_cat=104&ccb=1-5&_nc_sid=09cbfe&_nc_ohc=rdKu-WJBRmsAX-te_j-&_nc_ht=scontent.fmex23-1.fna&oh=f6159613a2564f36e608e9a5a214198b&oe=61DD2162",
+        "artist": null,
+        "lang": null,
+        "channels": null,
+        "country": null,
+        "favLists": [
+          "Techno"
+        ],
+        "metadata": {
+          "duration": null,
+          "stereo": null,
+          "encoding": null,
+          "sampleFrq": null,
+          "sampleRes": null,
+          "country": null,
+          "statusText": null
+        }
+      },
+      {
+        "id": "10867",
+        "name": "FluxFM Techno Underground",
+        "description": null,
+        "groupTitle": null,
+        "groups": [
+          "Techno",
+          "Underground"
+        ],
+        "url": "http://fluxfm.streamabc.net/flx-technounderground-aacplus-64-7295680?sABC=61p1147n%230%23r4880qrn6s01nn6n263q843o4n00pqq9%23nhqvb&amsparams=playerid:audio;skey:1640043642",
+        "logo": "https://cdn-profiles.tunein.com/s280926/images/logog.png?t=2",
+        "artist": null,
+        "lang": null,
+        "channels": null,
+        "country": null,
+        "favLists": [
+          "Techno"
+        ],
+        "metadata": {
+          "duration": null,
+          "stereo": null,
+          "encoding": null,
+          "sampleFrq": null,
+          "sampleRes": null,
+          "country": null,
+          "statusText": null
+        }
+      },
+      {
+        "id": "10185",
+        "name": "1000 Techno",
+        "description": null,
+        "groupTitle": null,
+        "groups": [
+          "Techno"
+        ],
+        "url": "https://1000techno.stream.laut.fm/1000techno?pl=m3u&t302=2021-12-21_19-29-29&uuid=81d32fee-89ca-4fb4-a431-46c77cce1ff2",
+        "logo": "http://rsn.li/favicon.ico",
+        "artist": null,
+        "lang": null,
+        "channels": null,
+        "country": null,
+        "favLists": [
+          "Techno"
+        ],
+        "metadata": {
+          "duration": null,
+          "stereo": null,
+          "encoding": null,
+          "sampleFrq": null,
+          "sampleRes": null,
+          "country": null,
+          "statusText": null
+        }
+      }
+    ],
+    "isSystem": false
+  },
+  "Slows & Love Songs": {
+    "listId": "List",
+    "name": "Slows & Love Songs",
+    "items": [
+      {
+        "id": "19864",
+        "name": "1 Slow-Radio laut.fm",
+        "description": null,
+        "groupTitle": null,
+        "groups": [
+          "Radio"
+        ],
+        "url": "https://1slowradio.stream.laut.fm/1_slowradio",
+        "logo": "https://assets.laut.fm/9670c7c141ede546101df1cdfe18e0b4?t=_640x640",
+        "artist": null,
+        "lang": null,
+        "channels": null,
+        "country": null,
+        "favLists": [
+          "Slows & Love Songs"
+        ],
+        "metadata": {
+          "duration": null,
+          "stereo": null,
+          "encoding": null,
+          "sampleFrq": null,
+          "sampleRes": null,
+          "country": null,
+          "statusText": null
+        }
+      },
+      {
+        "id": "18174",
+        "name": "Barbra Streisand",
+        "description": null,
+        "groupTitle": null,
+        "groups": [
+          "Artists"
+        ],
+        "url": "https://streaming.exclusive.radio/er/streisand/icecast.audio",
+        "logo": "https://manager.uber.radio/static/uploads/station/b1976ff8-47a3-4789-904a-4d3a4184a24a.jpg",
+        "artist": "Barbra Streisand",
+        "lang": null,
+        "channels": null,
+        "country": null,
+        "favLists": [
+          "Slows & Love Songs"
+        ],
+        "metadata": {
+          "duration": null,
+          "stereo": null,
+          "encoding": null,
+          "sampleFrq": null,
+          "sampleRes": null,
+          "country": null,
+          "statusText": null
+        }
+      },
+      {
+        "id": "18175",
+        "name": "Barbra Streisand - Hits",
+        "description": null,
+        "groupTitle": null,
+        "groups": [
+          "Artists"
+        ],
+        "url": "https://streaming.exclusive.radio/er/streisandhits/icecast.audio",
+        "logo": "https://manager.uber.radio/static/uploads/station/562bb3c5-962c-40ff-b5a6-8b9953b5f8a8.jpg",
+        "artist": "Barbra Streisand",
+        "lang": null,
+        "channels": null,
+        "country": null,
+        "favLists": [
+          "Slows & Love Songs"
+        ],
+        "metadata": {
+          "duration": null,
+          "stereo": null,
+          "encoding": null,
+          "sampleFrq": null,
+          "sampleRes": null,
+          "country": null,
+          "statusText": null
+        }
+      },
+      {
+        "id": "4917",
+        "name": "Love Radio Only Love Songs 70s 80s 90s",
+        "description": null,
+        "groupTitle": null,
+        "groups": [
+          "Love",
+          "Radio",
+          "Songs",
+          "70s",
+          "80s",
+          "90s"
+        ],
+        "url": "https://loveradio.streamingmedia.it/usa",
+        "logo": "https://love.radio/loveradio_logo.png",
+        "artist": null,
+        "lang": null,
+        "channels": null,
+        "country": null,
+        "favLists": [
+          "Slows & Love Songs"
+        ],
+        "metadata": {
+          "duration": null,
+          "stereo": null,
+          "encoding": null,
+          "sampleFrq": null,
+          "sampleRes": null,
+          "country": null,
+          "statusText": null
+        }
+      },
+      {
+        "id": "17601",
+        "name": "Sky Radio Lovesongs",
+        "description": null,
+        "groupTitle": null,
+        "groups": [
+          "Radio",
+          "Love"
+        ],
+        "url": "https://playerservices.streamtheworld.com/api/livestream-redirect/SRGSTR03AAC_SC",
+        "logo": "http://www.skyradio.nl/icons/apple-icon-120x120.png",
+        "artist": null,
+        "lang": null,
+        "channels": null,
+        "country": null,
+        "favLists": [
+          "Slows & Love Songs"
+        ],
+        "metadata": {
+          "duration": null,
+          "stereo": null,
+          "encoding": null,
+          "sampleFrq": null,
+          "sampleRes": null,
+          "country": null,
+          "statusText": null
+        }
+      },
+      {
+        "id": "13505",
+        "name": "RDMIX Love Songs",
+        "description": null,
+        "groupTitle": null,
+        "groups": [
+          "Love",
+          "Songs"
+        ],
+        "url": "http://maggie.torontocast.com:8022/stream",
+        "logo": "https://radiodimensionemix.torontocast.stream/wp-content/uploads/2020/09/RDMIX-LOVE_SONGS_512_OK-150x150.png",
+        "artist": null,
+        "lang": null,
+        "channels": null,
+        "country": null,
+        "favLists": [
+          "Slows & Love Songs"
+        ],
+        "metadata": {
+          "duration": null,
+          "stereo": null,
+          "encoding": null,
+          "sampleFrq": null,
+          "sampleRes": null,
+          "country": null,
+          "statusText": null
+        }
+      },
+      {
+        "id": "7267",
+        "name": "ABC Lounge Radio",
+        "description": null,
+        "groupTitle": null,
+        "groups": [
+          "Lounge",
+          "Radio"
+        ],
+        "url": "https://eu1.fastcast4u.com/proxy/kpmxz?mp=/1",
+        "logo": "https://www.abc-lounge.com/radio/wp-content/uploads/2019/11/logo-ABC-Lounge100.png",
+        "artist": null,
+        "lang": null,
+        "channels": null,
+        "country": null,
+        "favLists": [
+          "Slows & Love Songs"
+        ],
+        "metadata": {
+          "duration": null,
+          "stereo": null,
+          "encoding": null,
+          "sampleFrq": null,
+          "sampleRes": null,
+          "country": null,
+          "statusText": null
+        }
+      },
+      {
+        "id": "12804",
+        "name": "Oxygen Love Songs",
+        "description": null,
+        "groupTitle": null,
+        "groups": [
+          "Love",
+          "Songs"
+        ],
+        "url": "https://oxygenmusic.hu:8443/oxygenlovesongs",
+        "logo": "https://oxygenmusic.hu/wp-content/uploads/2021/02/love_songs_web_cover.jpg",
+        "artist": null,
+        "lang": null,
+        "channels": null,
+        "country": null,
+        "favLists": [
+          "Slows & Love Songs"
+        ],
+        "metadata": {
+          "duration": null,
+          "stereo": null,
+          "encoding": null,
+          "sampleFrq": null,
+          "sampleRes": null,
+          "country": null,
+          "statusText": null
+        }
+      },
+      {
+        "id": "17804",
+        "name": "1.FM America's Best Ballads Radio",
+        "description": null,
+        "groupTitle": null,
+        "groups": [
+          "Radio",
+          "Ballad"
+        ],
+        "url": "http://strm112.1.fm/onelive_mobile_mp3",
+        "logo": "http://liveradio.de/media/cache/station_detail/18f08aee-f06b-4965-b607-3f25a581619c.jpg",
+        "artist": null,
+        "lang": null,
+        "channels": null,
+        "country": null,
+        "favLists": [
+          "Slows & Love Songs"
+        ],
+        "metadata": {
+          "duration": null,
+          "stereo": null,
+          "encoding": null,
+          "sampleFrq": null,
+          "sampleRes": null,
+          "country": null,
+          "statusText": null
+        }
+      }
+    ],
+    "isSystem": false
+  },
+  "Infos": {
+    "listId": "List",
+    "name": "Infos",
+    "items": [
+      {
+        "id": "8457",
+        "name": "France Info",
+        "description": null,
+        "groupTitle": null,
+        "groups": [
+          "French"
+        ],
+        "url": "https://icecast.radiofrance.fr/franceinfo-hifi.aac",
+        "logo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTTOrtJJ0l34GIjFRRUcl-X_GxOtNNRNT9rXw&s",
+        "artist": null,
+        "lang": "French",
+        "channels": null,
+        "country": null,
+        "favLists": [
+          "History",
+          "Infos"
+        ],
+        "metadata": {
+          "duration": null,
+          "statusText": "playing"
+        },
+        "ref": {
+          "currentRDList": {
+            "listId": "List",
+            "name": "Infos",
+            "$item": {
+              "0": {},
+              "length": 1
+            }
+          },
+          "currentTab": {
+            "listId": "List",
+            "tabId": "btn_wrp_play_list"
+          }
+        }
+      },
+      {
+        "id": "8455",
+        "name": "France Culture",
+        "description": null,
+        "groupTitle": null,
+        "groups": [
+          "French",
+          "Culture"
+        ],
+        "url": "https://icecast.radiofrance.fr/franceculture-hifi.aac",
+        "logo": "https://upload.wikimedia.org/wikipedia/fr/thumb/c/c9/France_Culture_-_2008.svg/1024px-France_Culture_-_2008.svg.png",
+        "artist": null,
+        "lang": "French",
+        "channels": null,
+        "country": null,
+        "favLists": [
+          "History",
+          "Infos"
+        ],
+        "metadata": {
+          "duration": null,
+          "stereo": null,
+          "encoding": null,
+          "sampleFrq": null,
+          "sampleRes": null,
+          "country": null,
+          "statusText": null
+        }
+      },
+      {
+        "id": "8459",
+        "name": "France Inter",
+        "description": null,
+        "groupTitle": null,
+        "groups": [
+          "French"
+        ],
+        "url": "https://icecast.radiofrance.fr/franceinter-hifi.aac",
+        "logo": "https://canada-culture.org/wp-content/uploads/2018/05/logo-france-inter.png",
+        "artist": null,
+        "lang": "French",
+        "channels": null,
+        "country": null,
+        "favLists": [
+          "Infos"
+        ],
+        "metadata": {
+          "duration": null,
+          "stereo": null,
+          "encoding": null,
+          "sampleFrq": null,
+          "sampleRes": null,
+          "country": null,
+          "statusText": null
+        }
+      },
+      {
+        "id": "7378",
+        "name": "Europe 1",
+        "description": null,
+        "groupTitle": null,
+        "groups": [
+          "French"
+        ],
+        "url": "https://europe1.lmn.fm/europe1.aac",
+        "logo": "https://cdn-europe1.lanmedia.fr/bundles/europe1integration/images/europe1_home.jpg",
+        "artist": null,
+        "lang": "French",
+        "channels": null,
+        "country": null,
+        "favLists": [
+          "Infos"
+        ],
+        "metadata": {
+          "duration": null,
+          "statusText": "playing"
+        },
+        "ref": {
+          "currentRDList": {
+            "listId": "List",
+            "name": "Infos",
+            "$item": {
+              "0": {},
+              "length": 1
+            }
+          },
+          "currentTab": {
+            "listId": "Viz",
+            "tabId": "btn_wrp_logo"
+          }
+        }
+      },
+      {
+        "id": "8405",
+        "name": "France Bleu Isère",
+        "description": null,
+        "groupTitle": null,
+        "groups": [
+          "French"
+        ],
+        "url": "https://icecast.radiofrance.fr/fbisere-midfi.mp3",
+        "logo": "https://www.francebleu.fr/images/logo-FB-512.png",
+        "artist": null,
+        "lang": "French",
+        "channels": null,
+        "country": null,
+        "favLists": [
+          "Infos"
+        ],
+        "metadata": {
+          "duration": null,
+          "stereo": null,
+          "encoding": null,
+          "sampleFrq": null,
+          "sampleRes": null,
+          "country": null,
+          "statusText": null
+        }
+      },
+      {
+        "id": "20903",
+        "name": "La Premiere",
+        "description": null,
+        "groupTitle": null,
+        "groups": [
+          "French",
+          "News",
+          "Talk"
+        ],
+        "url": "https://redbeemedia.streamabc.net/redbm-lapremiere-aac-128-7561067",
+        "logo": "https://ca.radio.net/300/rtbflapremiere.jpeg?version=aba8f0c1da08cbedc110831d9050a941",
+        "artist": null,
+        "lang": "French",
+        "channels": null,
+        "country": null,
+        "favLists": [
+          "Infos"
+        ],
+        "metadata": {
+          "duration": null,
+          "statusText": "playing"
+        },
+        "ref": {
+          "currentRDList": {
+            "listId": "List",
+            "name": "Infos",
+            "$item": {
+              "0": {},
+              "length": 1
+            }
+          },
+          "currentTab": {
+            "listId": "Viz",
+            "tabId": "btn_wrp_logo"
+          }
+        }
+      },
+      {
+        "id": "7870",
+        "name": "RMC",
+        "description": null,
+        "groupTitle": null,
+        "groups": [
+          "French"
+        ],
+        "url": "https://audio.bfmtv.com/rmcradio_128.mp3?aw_0_1st.aggregator=unknow_from_dvmr",
+        "logo": "http://static.bfmtv.com/ressources/img/header/rmc.png",
+        "artist": null,
+        "lang": "French",
+        "channels": null,
+        "country": null,
+        "favLists": [
+          "Infos"
+        ],
+        "metadata": {
+          "duration": null,
+          "stereo": null,
+          "encoding": null,
+          "sampleFrq": null,
+          "sampleRes": null,
+          "country": null,
+          "statusText": null
+        }
+      },
+      {
+        "id": "7887",
+        "name": "RTL",
+        "description": null,
+        "groupTitle": null,
+        "groups": [
+          "French"
+        ],
+        "url": "https://streamer-02.rtl.fr/rtl-1-44-128",
+        "logo": "https://play-lh.googleusercontent.com/j9AJ5a4JNcmZZz5QJSxUPys0WflUXTlPOUH9X6N9Z26MxhsZWMA_GxiHoDuvQ0sVZLE",
+        "artist": null,
+        "lang": "French",
+        "channels": null,
+        "country": null,
+        "favLists": [
+          "Infos"
+        ],
+        "metadata": {
+          "duration": null,
+          "stereo": null,
+          "encoding": null,
+          "sampleFrq": null,
+          "sampleRes": null,
+          "country": null,
+          "statusText": null
+        }
+      },
+      {
+        "id": "7892",
+        "name": "RTS",
+        "description": null,
+        "groupTitle": null,
+        "groups": [
+          "French"
+        ],
+        "url": "https://sc.creacast.com/rts-national.mp3",
+        "logo": "http://ecouter.lesindesradios.fr/logos/orange87.png",
+        "artist": null,
+        "lang": "French",
+        "channels": null,
+        "country": null,
+        "favLists": [
+          "History",
+          "Infos"
+        ],
+        "metadata": {
+          "duration": null,
+          "stereo": null,
+          "encoding": null,
+          "sampleFrq": null,
+          "sampleRes": null,
+          "country": null,
+          "statusText": null
+        }
+      }
+    ],
+    "isSystem": false
+  },
+  "Country": {
+    "listId": "List",
+    "name": "Country",
+    "items": [
+      {
+        "id": "10137",
+        "name": "Onlineradio Country",
+        "description": null,
+        "groupTitle": null,
+        "groups": [
+          "Country"
+        ],
+        "url": "https://stream.0nlineradio.com/country?ref=radiobrowser",
+        "logo": "https://i.ibb.co/qmK33Rk/country.jpg",
+        "artist": null,
+        "lang": null,
+        "channels": null,
+        "country": null,
+        "favLists": [
+          "History",
+          "Country"
+        ],
+        "metadata": {
+          "duration": null,
+          "stereo": null,
+          "encoding": null,
+          "sampleFrq": null,
+          "sampleRes": null,
+          "country": null,
+          "statusText": null
+        }
+      },
+      {
+        "id": "18398",
+        "name": "James Taylor",
+        "description": null,
+        "groupTitle": null,
+        "groups": [
+          "Artists"
+        ],
+        "url": "https://streaming.exclusive.radio/er/jamestaylor/icecast.audio",
+        "logo": "https://manager.uber.radio/static/uploads/station/e66c65c6-3e83-4d42-b41a-a7cc198a4f88.jpg",
+        "artist": "James Taylor",
+        "lang": null,
+        "channels": null,
+        "country": null,
+        "favLists": [
+          "Country"
+        ],
+        "metadata": {
+          "duration": null,
+          "stereo": null,
+          "encoding": null,
+          "sampleFrq": null,
+          "sampleRes": null,
+          "country": null,
+          "statusText": null
+        }
+      },
+      {
+        "id": "18399",
+        "name": "James Taylor - Hits",
+        "description": null,
+        "groupTitle": null,
+        "groups": [
+          "Artists"
+        ],
+        "url": "https://streaming.exclusive.radio/er/jamestaylorhits/icecast.audio",
+        "logo": "https://manager.uber.radio/static/uploads/station/52584fa0-a9f4-4f8d-95ee-727e5513b52d.jpg",
+        "artist": "James Taylor",
+        "lang": null,
+        "channels": null,
+        "country": null,
+        "favLists": [
+          "Country"
+        ],
+        "metadata": {
+          "duration": null,
+          "stereo": null,
+          "encoding": null,
+          "sampleFrq": null,
+          "sampleRes": null,
+          "country": null,
+          "statusText": null
+        }
+      },
+      {
+        "id": "18380",
+        "name": "Hank Williams",
+        "description": null,
+        "groupTitle": null,
+        "groups": [
+          "Artists"
+        ],
+        "url": "https://streaming.exclusive.radio/er/hankwilliams/icecast.audio",
+        "logo": "https://manager.uber.radio/static/uploads/station/fa06e3de-8d13-424e-88f3-8a0c2197cb6d.jpg",
+        "artist": "Hank Williams",
+        "lang": null,
+        "channels": null,
+        "country": null,
+        "favLists": [
+          "Country"
+        ],
+        "metadata": {
+          "duration": null,
+          "statusText": "playing"
+        },
+        "ref": {
+          "currentRDList": {
+            "listId": "List",
+            "name": "Country",
+            "$item": {
+              "0": {},
+              "length": 1
+            }
+          },
+          "currentTab": {
+            "listId": "List",
+            "tabId": "btn_wrp_play_list"
+          }
+        }
+      },
+      {
+        "id": "18366",
+        "name": "Glen Campbell",
+        "description": null,
+        "groupTitle": null,
+        "groups": [
+          "Artists"
+        ],
+        "url": "https://streaming.exclusive.radio/er/glencampbell/icecast.audio",
+        "logo": "https://manager.uber.radio/static/uploads/station/80a9da50-8cc9-41b4-b566-5328f94f77b7.jpg",
+        "artist": "Glen Campbell",
+        "lang": null,
+        "channels": null,
+        "country": null,
+        "favLists": [
+          "Country"
+        ],
+        "metadata": {
+          "duration": null,
+          "stereo": null,
+          "encoding": null,
+          "sampleFrq": null,
+          "sampleRes": null,
+          "country": null,
+          "statusText": null
+        }
+      },
+      {
+        "id": "18367",
+        "name": "Glen Campbell - Hits",
+        "description": null,
+        "groupTitle": null,
+        "groups": [
+          "Artists"
+        ],
+        "url": "https://streaming.exclusive.radio/er/glencampbellhits/icecast.audio",
+        "logo": "https://manager.uber.radio/static/uploads/station/f5c52af6-c608-4336-9fdb-7f1fed445e8d.jpg",
+        "artist": "Glen Campbell",
+        "lang": null,
+        "channels": null,
+        "country": null,
+        "favLists": [
+          "Country"
+        ],
+        "metadata": {
+          "duration": null,
+          "stereo": null,
+          "encoding": null,
+          "sampleFrq": null,
+          "sampleRes": null,
+          "country": null,
+          "statusText": null
+        }
+      },
+      {
+        "id": "18336",
+        "name": "Eva Cassidy",
+        "description": null,
+        "groupTitle": null,
+        "groups": [
+          "Artists"
+        ],
+        "url": "https://streaming.exclusive.radio/er/evacassidy/icecast.audio",
+        "logo": "https://manager.uber.radio/static/uploads/station/cb1ac45e-268d-4d70-9ca3-155eab0cd3b9.jpg",
+        "artist": "Eva Cassidy",
+        "lang": null,
+        "channels": null,
+        "country": null,
+        "favLists": [
+          "Country"
+        ],
+        "metadata": {
+          "duration": null,
+          "stereo": null,
+          "encoding": null,
+          "sampleFrq": null,
+          "sampleRes": null,
+          "country": null,
+          "statusText": null
+        }
+      },
+      {
+        "id": "18296",
+        "name": "Dolly Parton",
+        "description": null,
+        "groupTitle": null,
+        "groups": [
+          "Artists"
+        ],
+        "url": "https://streaming.exclusive.radio/er/dollyparton/icecast.audio",
+        "logo": "https://manager.uber.radio/static/uploads/station/1336b322-9297-4fc0-ac70-3020efee134c.jpg",
+        "artist": "Dolly Parton",
+        "lang": null,
+        "channels": null,
+        "country": null,
+        "favLists": [
+          "Country"
+        ],
+        "metadata": {
+          "duration": null,
+          "stereo": null,
+          "encoding": null,
+          "sampleFrq": null,
+          "sampleRes": null,
+          "country": null,
+          "statusText": null
+        }
+      },
+      {
+        "id": "18297",
+        "name": "Dolly Parton - Hits",
+        "description": null,
+        "groupTitle": null,
+        "groups": [
+          "Artists"
+        ],
+        "url": "https://streaming.exclusive.radio/er/dollypartonhits/icecast.audio",
+        "logo": "https://manager.uber.radio/static/uploads/station/f302678a-d682-4c81-a0c6-6a7595e3ef35.jpg",
+        "artist": "Dolly Parton",
+        "lang": null,
+        "channels": null,
+        "country": null,
+        "favLists": [
+          "Country"
+        ],
+        "metadata": {
+          "duration": null,
+          "stereo": null,
+          "encoding": null,
+          "sampleFrq": null,
+          "sampleRes": null,
+          "country": null,
+          "statusText": null
+        }
+      },
+      {
+        "id": "18139",
+        "name": "Alabama",
+        "description": null,
+        "groupTitle": null,
+        "groups": [
+          "Artists"
+        ],
+        "url": "https://streaming.exclusive.radio/er/alabama/icecast.audio",
+        "logo": "https://manager.uber.radio/static/uploads/station/99013535-9f6b-4bb4-8685-3eca022bab3a.jpg",
+        "artist": "Alabama",
+        "lang": null,
+        "channels": null,
+        "country": null,
+        "favLists": [
+          "Country"
         ],
         "metadata": {
           "duration": null,
