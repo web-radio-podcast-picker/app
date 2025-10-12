@@ -395,18 +395,16 @@ div#btn_wrp_infos.selected > img {
 #wrp_radio_box {
     text-align: right;
     color: #44AAffFF;
-    /* grid-row-start: 1; */
-    /* grid-row-end: span 2; */
     display: flex;
     grid-template-columns: repeat(auto-fit, minmax(0px, 1fr));
     justify-content: end;
-    /* align-items: center; */
-    /* overflow-wrap: break-word; */
     overflow: hidden;
     text-overflow: clip;
-    /* grid-template-columns: max-content; */
-    /* float: right;*/
     background-color: darkblue;
+}
+
+div#wrp_radio_box > img[class~="but-icon-disabled"] {
+    background-color: #444444 !important;
 }
 
 .wrp_radio_box_fav_button {
@@ -622,8 +620,6 @@ background-color: #44AAffAA !important
     margin-right: 0.25em;
     align-self: center;
 }
-
-
 
 .hover-icon {
     background-color: unset;
