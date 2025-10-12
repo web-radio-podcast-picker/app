@@ -4,7 +4,7 @@
     find license and copyright informations in files /COPYRIGHT and /LICENCE
 */
 
-//#region globals consts
+// #region globals consts
 
 const WRP_Radio_List = 'all_stations.m3u'
 const WRP_Json_Radio_List = 'radios.txt'
@@ -21,7 +21,7 @@ const Build_Json_Radio_List = false
 
 //#endregion
 
-//#region global attributes
+// #region global attributes
 
 /**
  * @type {Dialogs}
@@ -94,7 +94,7 @@ var uiState = null
 
 class WebRadioPickerModule extends ModuleBase {
 
-    //#region ----- module spec -----
+    // #region ----- module spec -----
 
     id = 'web_radio_picker'         // unique id
     author = 'franck gaspoz'        // author
@@ -117,7 +117,7 @@ class WebRadioPickerModule extends ModuleBase {
 
     //#endregion
 
-    //#region attributes
+    // #region attributes
 
     items = []              // all items by group name
     itemsByArtists = []     // item with artist by artist name
@@ -140,7 +140,7 @@ class WebRadioPickerModule extends ModuleBase {
 
     //#endregion
 
-    //#region init
+    // #region init
 
     constructor() {
         super()
@@ -246,7 +246,7 @@ class WebRadioPickerModule extends ModuleBase {
         })
 
         $('#btn_wrp_infos').on('click', () => {
-            $('body').focus()
+            this.loseFocus()
             if (uiState.favoriteInputState) return
             infosPane.toggleInfos()
         })
@@ -438,6 +438,10 @@ class WebRadioPickerModule extends ModuleBase {
 
     // #region lists/items setters
 
+    loseFocus() {
+        $('#bt_bar')[0].click()
+    }
+
     focusListItem(element, selectIt) {
         const $e = $(element)
         if (selectIt)
@@ -506,7 +510,7 @@ class WebRadioPickerModule extends ModuleBase {
 
     // #endregion
 
-    //#region data
+    // #region data
 
     toArtistFromtreamingExclusive(r) {
         if (r === undefined || r == null) return null
