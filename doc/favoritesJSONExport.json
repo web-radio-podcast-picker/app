@@ -4,6 +4,81 @@
     "name": "History",
     "items": [
       {
+        "id": "10707",
+        "name": "egoFM Soundtrack",
+        "description": null,
+        "groupTitle": null,
+        "groups": [
+          "Electro"
+        ],
+        "url": "https://cast.egofm.de/egofmsoundtrack.mp3",
+        "logo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQVtM_L5NZ91Vr8aymRSb4uwNzfcMMeGQ9lzDxt1lG8Ig&s",
+        "artist": null,
+        "lang": null,
+        "channels": null,
+        "country": null,
+        "favLists": [
+          "Pop"
+        ],
+        "metadata": {
+          "duration": null,
+          "statusText": "playing"
+        },
+        "ref": {
+          "currentRDList": {
+            "listId": "Tag",
+            "name": "Electro",
+            "$item": {
+              "0": {},
+              "length": 1
+            }
+          },
+          "currentTab": {
+            "listId": "Tag",
+            "tabId": "btn_wrp_tag_list"
+          }
+        }
+      },
+      {
+        "id": "17837",
+        "name": "1.FM Movie Soundtrack",
+        "description": null,
+        "groupTitle": null,
+        "groups": [
+          "Radio",
+          "Movie",
+          "Electro"
+        ],
+        "url": "http://strm112.1.fm/moviesoundtracks_mobile_mp3",
+        "logo": "http://liveradio.de/media/cache/station_detail/18f08aee-f06b-4965-b607-3f25a581619c.jpg",
+        "artist": null,
+        "lang": null,
+        "channels": null,
+        "country": null,
+        "favLists": [
+          "History",
+          "Musiques de films"
+        ],
+        "metadata": {
+          "duration": null,
+          "statusText": "playing"
+        },
+        "ref": {
+          "currentRDList": {
+            "listId": "List",
+            "name": "Sound Track",
+            "$item": {
+              "0": {},
+              "length": 1
+            }
+          },
+          "currentTab": {
+            "listId": "List",
+            "tabId": "btn_wrp_play_list"
+          }
+        }
+      },
+      {
         "id": "7378",
         "name": "Europe 1",
         "description": null,
@@ -22,12 +97,12 @@
         ],
         "metadata": {
           "duration": null,
-          "statusText": "playing"
+          "statusText": "pause"
         },
         "ref": {
           "currentRDList": {
             "listId": "List",
-            "name": "Infos",
+            "name": "History",
             "$item": {
               "0": {},
               "length": 1
@@ -37,6 +112,93 @@
             "listId": "Viz",
             "tabId": "btn_wrp_logo"
           }
+        }
+      },
+      {
+        "id": "10299",
+        "name": "Acid Jazz Radio",
+        "description": null,
+        "groupTitle": null,
+        "groups": [
+          "Acid",
+          "Jazz",
+          "Radio"
+        ],
+        "url": "http://acidjazz.stream.laut.fm/acidjazz?t302=2021-12-21_16-16-36&uuid=e92aae83-3ae3-44b5-8d29-dd1dee29262c",
+        "logo": "http://www.acid-jazz-radio.de/logo-gruen.jpg",
+        "artist": null,
+        "lang": null,
+        "channels": null,
+        "country": null,
+        "favLists": [
+          "History",
+          "Jazz"
+        ],
+        "metadata": {
+          "duration": null,
+          "stereo": null,
+          "encoding": null,
+          "sampleFrq": null,
+          "sampleRes": null,
+          "country": null,
+          "statusText": null
+        }
+      },
+      {
+        "id": "10728",
+        "name": "Euro Smooth Jazz",
+        "description": null,
+        "groupTitle": null,
+        "groups": [
+          "Smooth",
+          "Jazz"
+        ],
+        "url": "http://eurosmoothjazz.stream.laut.fm/eurosmoothjazz?t302=2021-12-21_03-04-14&uuid=aefa5532-59b1-4df2-a8b6-7d749280505b",
+        "logo": "http://eurosmoothjazz.com/wp-content/themes/twentytwelve-eurosmoothjazz/apple-touch-icon-76x76.png",
+        "artist": null,
+        "lang": null,
+        "channels": null,
+        "country": null,
+        "favLists": [
+          "Jazz"
+        ],
+        "metadata": {
+          "duration": null,
+          "stereo": null,
+          "encoding": null,
+          "sampleFrq": null,
+          "sampleRes": null,
+          "country": null,
+          "statusText": null
+        }
+      },
+      {
+        "id": "11055",
+        "name": "Klassik Radio Smooth Jazz",
+        "description": null,
+        "groupTitle": null,
+        "groups": [
+          "Radio",
+          "Smooth",
+          "Jazz"
+        ],
+        "url": "http://klassikr.streamabc.net/klr-smooth-mp3-128-7968529?sABC=61p12qn4%230%23r4880qrn6s01nn6n263q843o4n00pqq9%23enqvbfher&amsparams=playerid:radiosure;skey:1640050084",
+        "logo": "http://cdn-radiotime-logos.tunein.com/s25028q.png",
+        "artist": null,
+        "lang": null,
+        "channels": null,
+        "country": null,
+        "favLists": [
+          "Jazz"
+        ],
+        "metadata": {
+          "duration": null,
+          "stereo": null,
+          "encoding": null,
+          "sampleFrq": null,
+          "sampleRes": null,
+          "country": null,
+          "statusText": null
         }
       },
       {
@@ -58,451 +220,44 @@
         ],
         "metadata": {
           "duration": null,
-          "statusText": "pause"
-        },
-        "ref": {
-          "currentRDList": {
-            "listId": "Art",
-            "name": "Nina Simone",
-            "$item": {
-              "0": {},
-              "length": 1
-            }
-          },
-          "currentTab": {
-            "listId": "Art",
-            "tabId": "btn_wrp_art_list"
-          }
+          "stereo": null,
+          "encoding": null,
+          "sampleFrq": null,
+          "sampleRes": null,
+          "country": null,
+          "statusText": null
         }
       },
       {
-        "id": "18523",
-        "name": "Nat King Cole",
+        "id": "4917",
+        "name": "Love Radio Only Love Songs 70s 80s 90s",
         "description": null,
         "groupTitle": null,
         "groups": [
-          "Artists"
-        ],
-        "url": "https://streaming.exclusive.radio/er/natkingcole/icecast.audio",
-        "logo": "https://manager.uber.radio/static/uploads/station/2d5fbc1d-dd34-4170-b68e-17dac50384e5.jpg",
-        "artist": "Nat King Cole",
-        "lang": null,
-        "channels": null,
-        "country": null,
-        "favLists": [
-          "Crooners"
-        ],
-        "metadata": {
-          "duration": null,
-          "statusText": "playing"
-        },
-        "ref": {
-          "currentRDList": {
-            "listId": "Art",
-            "name": "Nat King Cole",
-            "$item": {
-              "0": {},
-              "length": 1
-            }
-          },
-          "currentTab": {
-            "listId": "Viz",
-            "tabId": "btn_wrp_logo"
-          }
-        }
-      },
-      {
-        "id": "18520",
-        "name": "Muddy Waters",
-        "description": null,
-        "groupTitle": null,
-        "groups": [
-          "Artists"
-        ],
-        "url": "https://streaming.exclusive.radio/er/muddywaters/icecast.audio",
-        "logo": "https://manager.uber.radio/static/uploads/station/89b7545c-2e75-4e7a-a265-029d934da2b5.png",
-        "artist": "Muddy Waters",
-        "lang": null,
-        "channels": null,
-        "country": null,
-        "favLists": [
-          "Blues"
-        ],
-        "metadata": {
-          "duration": null,
-          "statusText": "playing"
-        },
-        "ref": {
-          "currentRDList": {
-            "listId": "Art",
-            "name": "Muddy Waters",
-            "$item": {
-              "0": {},
-              "length": 1
-            }
-          },
-          "currentTab": {
-            "listId": "Art",
-            "tabId": "btn_wrp_art_list"
-          }
-        }
-      },
-      {
-        "id": "18495",
-        "name": "Marvin Gaye",
-        "description": null,
-        "groupTitle": null,
-        "groups": [
-          "Artists"
-        ],
-        "url": "https://streaming.exclusive.radio/er/marvingaye/icecast.audio",
-        "logo": "https://manager.uber.radio/static/uploads/station/6bb0927d-f160-4b1b-adc6-288290c30f44.jpg",
-        "artist": "Marvin Gaye",
-        "lang": null,
-        "channels": null,
-        "country": null,
-        "favLists": [],
-        "metadata": {
-          "duration": null,
-          "statusText": "playing"
-        },
-        "ref": {
-          "currentRDList": {
-            "listId": "Art",
-            "name": "Marvin Gaye",
-            "$item": {
-              "0": {},
-              "length": 1
-            }
-          },
-          "currentTab": {
-            "listId": "Art",
-            "tabId": "btn_wrp_art_list"
-          }
-        }
-      },
-      {
-        "id": "18479",
-        "name": "Little Mix",
-        "description": null,
-        "groupTitle": null,
-        "groups": [
-          "Artists"
-        ],
-        "url": "https://streaming.exclusive.radio/er/littlemix/icecast.audio",
-        "logo": "https://manager.uber.radio/static/uploads/station/b7415ea9-9e6e-4b5f-9902-a0bd602f643a.jpg",
-        "artist": "Little Mix",
-        "lang": null,
-        "channels": null,
-        "country": null,
-        "favLists": [],
-        "metadata": {
-          "duration": null,
-          "statusText": "playing"
-        },
-        "ref": {
-          "currentRDList": {
-            "listId": "Art",
-            "name": "Little Mix",
-            "$item": {
-              "0": {},
-              "length": 1
-            }
-          },
-          "currentTab": {
-            "listId": "Art",
-            "tabId": "btn_wrp_art_list"
-          }
-        }
-      },
-      {
-        "id": "18476",
-        "name": "Lionel Richie",
-        "description": null,
-        "groupTitle": null,
-        "groups": [
-          "Artists"
-        ],
-        "url": "https://streaming.exclusive.radio/er/lionelrichie/icecast.audio",
-        "logo": "https://manager.uber.radio/static/uploads/station/b2a16604-de3f-424a-ab0e-3d0e2461d645.jpg",
-        "artist": "Lionel Richie",
-        "lang": null,
-        "channels": null,
-        "country": null,
-        "favLists": [],
-        "metadata": {
-          "duration": null,
-          "statusText": "playing"
-        },
-        "ref": {
-          "currentRDList": {
-            "listId": "Art",
-            "name": "Lionel Richie",
-            "$item": {
-              "0": {},
-              "length": 1
-            }
-          },
-          "currentTab": {
-            "listId": "Viz",
-            "tabId": "btn_wrp_logo"
-          }
-        }
-      },
-      {
-        "id": "18428",
-        "name": "Johnny Mathis",
-        "description": null,
-        "groupTitle": null,
-        "groups": [
-          "Artists"
-        ],
-        "url": "https://streaming.exclusive.radio/er/johnnymathis/icecast.audio",
-        "logo": "https://manager.uber.radio/static/uploads/station/2c9bc8f4-8178-44ca-af7a-51817d18a5bc.jpg",
-        "artist": "Johnny Mathis",
-        "lang": null,
-        "channels": null,
-        "country": null,
-        "favLists": [],
-        "metadata": {
-          "duration": null,
-          "statusText": "playing"
-        },
-        "ref": {
-          "currentRDList": {
-            "listId": "Art",
-            "name": "Johnny Mathis",
-            "$item": {
-              "0": {},
-              "length": 1
-            }
-          },
-          "currentTab": {
-            "listId": "Art",
-            "tabId": "btn_wrp_art_list"
-          }
-        }
-      },
-      {
-        "id": "18421",
-        "name": "John Lee Hooker",
-        "description": null,
-        "groupTitle": null,
-        "groups": [
-          "Artists"
-        ],
-        "url": "https://streaming.exclusive.radio/er/johnleehooker/icecast.audio",
-        "logo": "https://manager.uber.radio/static/uploads/station/eba1aa86-22ec-459f-90ce-9c11eba339fa.jpg",
-        "artist": "John Lee Hooker",
-        "lang": null,
-        "channels": null,
-        "country": null,
-        "favLists": [
-          "Blues"
-        ],
-        "metadata": {
-          "duration": null,
-          "statusText": "playing"
-        },
-        "ref": {
-          "currentRDList": {
-            "listId": "Art",
-            "name": "John Lee Hooker",
-            "$item": {
-              "0": {},
-              "length": 1
-            }
-          },
-          "currentTab": {
-            "listId": "Art",
-            "tabId": "btn_wrp_art_list"
-          }
-        }
-      },
-      {
-        "id": "18204",
-        "name": "Bo Diddley",
-        "description": null,
-        "groupTitle": null,
-        "groups": [
-          "Artists"
-        ],
-        "url": "https://streaming.exclusive.radio/er/bodiddley/icecast.audio",
-        "logo": "https://manager.uber.radio/static/uploads/station/4b9e794d-70ce-484a-ae97-7627954c91d2.jpg",
-        "artist": "Bo Diddley",
-        "lang": null,
-        "channels": null,
-        "country": null,
-        "favLists": [
-          "Blues"
-        ],
-        "metadata": {
-          "duration": null,
-          "statusText": "playing"
-        },
-        "ref": {
-          "currentRDList": {
-            "listId": "List",
-            "name": "Blues",
-            "$item": {
-              "0": {},
-              "length": 1
-            }
-          },
-          "currentTab": {
-            "listId": "Viz",
-            "tabId": "btn_wrp_logo"
-          }
-        }
-      },
-      {
-        "id": "18380",
-        "name": "Hank Williams",
-        "description": null,
-        "groupTitle": null,
-        "groups": [
-          "Artists"
-        ],
-        "url": "https://streaming.exclusive.radio/er/hankwilliams/icecast.audio",
-        "logo": "https://manager.uber.radio/static/uploads/station/fa06e3de-8d13-424e-88f3-8a0c2197cb6d.jpg",
-        "artist": "Hank Williams",
-        "lang": null,
-        "channels": null,
-        "country": null,
-        "favLists": [
-          "Country"
-        ],
-        "metadata": {
-          "duration": null,
-          "statusText": "playing"
-        },
-        "ref": {
-          "currentRDList": {
-            "listId": "List",
-            "name": "Country",
-            "$item": {
-              "0": {},
-              "length": 1
-            }
-          },
-          "currentTab": {
-            "listId": "List",
-            "tabId": "btn_wrp_play_list"
-          }
-        }
-      },
-      {
-        "id": "10341",
-        "name": "Antenne Bayern 70er Hits",
-        "description": null,
-        "groupTitle": null,
-        "groups": [
+          "Love",
           "Radio",
-          "Deutsch",
+          "Songs",
           "70s",
-          "Hits"
+          "80s",
+          "90s"
         ],
-        "url": "http://s3-webradio.antenne.de/70er-hits/stream/aacp",
-        "logo": "https://ca.radio.net/images/broadcasts/57/c5/127918/1/c300.png",
-        "artist": null,
-        "lang": "Deutsch",
-        "channels": null,
-        "country": null,
-        "favLists": [
-          "Années 70"
-        ],
-        "metadata": {
-          "duration": null,
-          "statusText": "pause"
-        },
-        "ref": {
-          "currentRDList": {
-            "listId": "List",
-            "name": "Années 70",
-            "$item": {
-              "0": {},
-              "length": 1
-            }
-          },
-          "currentTab": {
-            "listId": "Viz",
-            "tabId": "btn_wrp_logo"
-          }
-        }
-      },
-      {
-        "id": "17787",
-        "name": "1.FM Absolute 70's Pop Radio",
-        "description": null,
-        "groupTitle": null,
-        "groups": [
-          "Radio",
-          "70s",
-          "Pop"
-        ],
-        "url": "http://strm112.1.fm/70s_mobile_mp3",
-        "logo": "http://liveradio.de/media/cache/station_detail/18f08aee-f06b-4965-b607-3f25a581619c.jpg",
+        "url": "https://loveradio.streamingmedia.it/usa",
+        "logo": "https://love.radio/loveradio_logo.png",
         "artist": null,
         "lang": null,
         "channels": null,
         "country": null,
         "favLists": [
-          "History",
-          "Années 70"
+          "Slows & Love Songs"
         ],
         "metadata": {
           "duration": null,
-          "statusText": "playing"
-        },
-        "ref": {
-          "currentRDList": {
-            "listId": "List",
-            "name": "Années 70",
-            "$item": {
-              "0": {},
-              "length": 1
-            }
-          },
-          "currentTab": {
-            "listId": "Viz",
-            "tabId": "btn_wrp_logo"
-          }
-        }
-      },
-      {
-        "id": "16830",
-        "name": "Nation 70s",
-        "description": null,
-        "groupTitle": null,
-        "groups": [
-          "70s"
-        ],
-        "url": "http://listen-nation.sharp-stream.com/nationradio70s.mp3?ref=RF",
-        "logo": "https://static.mytuner.mobi/media/tvos_radios/KLFgFRrzAV.png",
-        "artist": null,
-        "lang": null,
-        "channels": null,
-        "country": null,
-        "favLists": [
-          "Années 70"
-        ],
-        "metadata": {
-          "duration": null,
-          "statusText": "playing"
-        },
-        "ref": {
-          "currentRDList": {
-            "listId": "List",
-            "name": "Années 70",
-            "$item": {
-              "0": {},
-              "length": 1
-            }
-          },
-          "currentTab": {
-            "listId": "Viz",
-            "tabId": "btn_wrp_logo"
-          }
+          "stereo": null,
+          "encoding": null,
+          "sampleFrq": null,
+          "sampleRes": null,
+          "country": null,
+          "statusText": null
         }
       },
       {
@@ -527,21 +282,400 @@
         ],
         "metadata": {
           "duration": null,
-          "statusText": "playing"
-        },
-        "ref": {
-          "currentRDList": {
-            "listId": "List",
-            "name": "History",
-            "$item": {
-              "0": {},
-              "length": 1
-            }
-          },
-          "currentTab": {
-            "listId": "List",
-            "tabId": "btn_wrp_play_list"
-          }
+          "stereo": null,
+          "encoding": null,
+          "sampleFrq": null,
+          "sampleRes": null,
+          "country": null,
+          "statusText": null
+        }
+      },
+      {
+        "id": "3274",
+        "name": "181.FM Reggae Roots",
+        "description": null,
+        "groupTitle": null,
+        "groups": [
+          "Radio",
+          "Reggae",
+          "Roots",
+          "French"
+        ],
+        "url": "http://listen.181fm.com/181-reggae_128k.mp3",
+        "logo": "http://www.181.fm/images/playerlanding/181.FM.jpg",
+        "artist": null,
+        "lang": "French",
+        "channels": null,
+        "country": null,
+        "favLists": [
+          "History",
+          "Reggae"
+        ],
+        "metadata": {
+          "duration": null,
+          "stereo": null,
+          "encoding": null,
+          "sampleFrq": null,
+          "sampleRes": null,
+          "country": null,
+          "statusText": null
+        }
+      },
+      {
+        "id": "18511",
+        "name": "Mike Oldfield",
+        "description": null,
+        "groupTitle": null,
+        "groups": [
+          "Artists"
+        ],
+        "url": "https://streaming.exclusive.radio/er/mikeoldfield/icecast.audio",
+        "logo": "https://manager.uber.radio/static/uploads/station/e10b5af0-38e5-4592-9343-aa75bdc05fb7.jpg",
+        "artist": "Mike Oldfield",
+        "lang": null,
+        "channels": null,
+        "country": null,
+        "favLists": [
+          "Exotique"
+        ],
+        "metadata": {
+          "duration": null,
+          "stereo": null,
+          "encoding": null,
+          "sampleFrq": null,
+          "sampleRes": null,
+          "country": null,
+          "statusText": null
+        }
+      },
+      {
+        "id": "18523",
+        "name": "Nat King Cole",
+        "description": null,
+        "groupTitle": null,
+        "groups": [
+          "Artists"
+        ],
+        "url": "https://streaming.exclusive.radio/er/natkingcole/icecast.audio",
+        "logo": "https://manager.uber.radio/static/uploads/station/2d5fbc1d-dd34-4170-b68e-17dac50384e5.jpg",
+        "artist": "Nat King Cole",
+        "lang": null,
+        "channels": null,
+        "country": null,
+        "favLists": [
+          "Crooners"
+        ],
+        "metadata": {
+          "duration": null,
+          "stereo": null,
+          "encoding": null,
+          "sampleFrq": null,
+          "sampleRes": null,
+          "country": null,
+          "statusText": null
+        }
+      },
+      {
+        "id": "18520",
+        "name": "Muddy Waters",
+        "description": null,
+        "groupTitle": null,
+        "groups": [
+          "Artists"
+        ],
+        "url": "https://streaming.exclusive.radio/er/muddywaters/icecast.audio",
+        "logo": "https://manager.uber.radio/static/uploads/station/89b7545c-2e75-4e7a-a265-029d934da2b5.png",
+        "artist": "Muddy Waters",
+        "lang": null,
+        "channels": null,
+        "country": null,
+        "favLists": [
+          "Blues"
+        ],
+        "metadata": {
+          "duration": null,
+          "stereo": null,
+          "encoding": null,
+          "sampleFrq": null,
+          "sampleRes": null,
+          "country": null,
+          "statusText": null
+        }
+      },
+      {
+        "id": "18495",
+        "name": "Marvin Gaye",
+        "description": null,
+        "groupTitle": null,
+        "groups": [
+          "Artists"
+        ],
+        "url": "https://streaming.exclusive.radio/er/marvingaye/icecast.audio",
+        "logo": "https://manager.uber.radio/static/uploads/station/6bb0927d-f160-4b1b-adc6-288290c30f44.jpg",
+        "artist": "Marvin Gaye",
+        "lang": null,
+        "channels": null,
+        "country": null,
+        "favLists": [
+          "History"
+        ],
+        "metadata": {
+          "duration": null,
+          "stereo": null,
+          "encoding": null,
+          "sampleFrq": null,
+          "sampleRes": null,
+          "country": null,
+          "statusText": null
+        }
+      },
+      {
+        "id": "18479",
+        "name": "Little Mix",
+        "description": null,
+        "groupTitle": null,
+        "groups": [
+          "Artists"
+        ],
+        "url": "https://streaming.exclusive.radio/er/littlemix/icecast.audio",
+        "logo": "https://manager.uber.radio/static/uploads/station/b7415ea9-9e6e-4b5f-9902-a0bd602f643a.jpg",
+        "artist": "Little Mix",
+        "lang": null,
+        "channels": null,
+        "country": null,
+        "favLists": [
+          "History"
+        ],
+        "metadata": {
+          "duration": null,
+          "stereo": null,
+          "encoding": null,
+          "sampleFrq": null,
+          "sampleRes": null,
+          "country": null,
+          "statusText": null
+        }
+      },
+      {
+        "id": "18476",
+        "name": "Lionel Richie",
+        "description": null,
+        "groupTitle": null,
+        "groups": [
+          "Artists"
+        ],
+        "url": "https://streaming.exclusive.radio/er/lionelrichie/icecast.audio",
+        "logo": "https://manager.uber.radio/static/uploads/station/b2a16604-de3f-424a-ab0e-3d0e2461d645.jpg",
+        "artist": "Lionel Richie",
+        "lang": null,
+        "channels": null,
+        "country": null,
+        "favLists": [
+          "History"
+        ],
+        "metadata": {
+          "duration": null,
+          "stereo": null,
+          "encoding": null,
+          "sampleFrq": null,
+          "sampleRes": null,
+          "country": null,
+          "statusText": null
+        }
+      },
+      {
+        "id": "18428",
+        "name": "Johnny Mathis",
+        "description": null,
+        "groupTitle": null,
+        "groups": [
+          "Artists"
+        ],
+        "url": "https://streaming.exclusive.radio/er/johnnymathis/icecast.audio",
+        "logo": "https://manager.uber.radio/static/uploads/station/2c9bc8f4-8178-44ca-af7a-51817d18a5bc.jpg",
+        "artist": "Johnny Mathis",
+        "lang": null,
+        "channels": null,
+        "country": null,
+        "favLists": [
+          "History"
+        ],
+        "metadata": {
+          "duration": null,
+          "stereo": null,
+          "encoding": null,
+          "sampleFrq": null,
+          "sampleRes": null,
+          "country": null,
+          "statusText": null
+        }
+      },
+      {
+        "id": "18421",
+        "name": "John Lee Hooker",
+        "description": null,
+        "groupTitle": null,
+        "groups": [
+          "Artists"
+        ],
+        "url": "https://streaming.exclusive.radio/er/johnleehooker/icecast.audio",
+        "logo": "https://manager.uber.radio/static/uploads/station/eba1aa86-22ec-459f-90ce-9c11eba339fa.jpg",
+        "artist": "John Lee Hooker",
+        "lang": null,
+        "channels": null,
+        "country": null,
+        "favLists": [
+          "Blues"
+        ],
+        "metadata": {
+          "duration": null,
+          "stereo": null,
+          "encoding": null,
+          "sampleFrq": null,
+          "sampleRes": null,
+          "country": null,
+          "statusText": null
+        }
+      },
+      {
+        "id": "18204",
+        "name": "Bo Diddley",
+        "description": null,
+        "groupTitle": null,
+        "groups": [
+          "Artists"
+        ],
+        "url": "https://streaming.exclusive.radio/er/bodiddley/icecast.audio",
+        "logo": "https://manager.uber.radio/static/uploads/station/4b9e794d-70ce-484a-ae97-7627954c91d2.jpg",
+        "artist": "Bo Diddley",
+        "lang": null,
+        "channels": null,
+        "country": null,
+        "favLists": [
+          "Blues"
+        ],
+        "metadata": {
+          "duration": null,
+          "stereo": null,
+          "encoding": null,
+          "sampleFrq": null,
+          "sampleRes": null,
+          "country": null,
+          "statusText": null
+        }
+      },
+      {
+        "id": "18380",
+        "name": "Hank Williams",
+        "description": null,
+        "groupTitle": null,
+        "groups": [
+          "Artists"
+        ],
+        "url": "https://streaming.exclusive.radio/er/hankwilliams/icecast.audio",
+        "logo": "https://manager.uber.radio/static/uploads/station/fa06e3de-8d13-424e-88f3-8a0c2197cb6d.jpg",
+        "artist": "Hank Williams",
+        "lang": null,
+        "channels": null,
+        "country": null,
+        "favLists": [
+          "Country"
+        ],
+        "metadata": {
+          "duration": null,
+          "stereo": null,
+          "encoding": null,
+          "sampleFrq": null,
+          "sampleRes": null,
+          "country": null,
+          "statusText": null
+        }
+      },
+      {
+        "id": "10341",
+        "name": "Antenne Bayern 70er Hits",
+        "description": null,
+        "groupTitle": null,
+        "groups": [
+          "Radio",
+          "Deutsch",
+          "70s",
+          "Hits"
+        ],
+        "url": "http://s3-webradio.antenne.de/70er-hits/stream/aacp",
+        "logo": "https://ca.radio.net/images/broadcasts/57/c5/127918/1/c300.png",
+        "artist": null,
+        "lang": "Deutsch",
+        "channels": null,
+        "country": null,
+        "favLists": [
+          "Années 70"
+        ],
+        "metadata": {
+          "duration": null,
+          "stereo": null,
+          "encoding": null,
+          "sampleFrq": null,
+          "sampleRes": null,
+          "country": null,
+          "statusText": null
+        }
+      },
+      {
+        "id": "17787",
+        "name": "1.FM Absolute 70's Pop Radio",
+        "description": null,
+        "groupTitle": null,
+        "groups": [
+          "Radio",
+          "70s",
+          "Pop"
+        ],
+        "url": "http://strm112.1.fm/70s_mobile_mp3",
+        "logo": "http://liveradio.de/media/cache/station_detail/18f08aee-f06b-4965-b607-3f25a581619c.jpg",
+        "artist": null,
+        "lang": null,
+        "channels": null,
+        "country": null,
+        "favLists": [
+          "History",
+          "Années 70"
+        ],
+        "metadata": {
+          "duration": null,
+          "stereo": null,
+          "encoding": null,
+          "sampleFrq": null,
+          "sampleRes": null,
+          "country": null,
+          "statusText": null
+        }
+      },
+      {
+        "id": "16830",
+        "name": "Nation 70s",
+        "description": null,
+        "groupTitle": null,
+        "groups": [
+          "70s"
+        ],
+        "url": "http://listen-nation.sharp-stream.com/nationradio70s.mp3?ref=RF",
+        "logo": "https://static.mytuner.mobi/media/tvos_radios/KLFgFRrzAV.png",
+        "artist": null,
+        "lang": null,
+        "channels": null,
+        "country": null,
+        "favLists": [
+          "Années 70"
+        ],
+        "metadata": {
+          "duration": null,
+          "stereo": null,
+          "encoding": null,
+          "sampleFrq": null,
+          "sampleRes": null,
+          "country": null,
+          "statusText": null
         }
       },
       {
@@ -564,21 +698,12 @@
         ],
         "metadata": {
           "duration": null,
-          "statusText": "playing"
-        },
-        "ref": {
-          "currentRDList": {
-            "listId": "List",
-            "name": "Infos",
-            "$item": {
-              "0": {},
-              "length": 1
-            }
-          },
-          "currentTab": {
-            "listId": "List",
-            "tabId": "btn_wrp_play_list"
-          }
+          "stereo": null,
+          "encoding": null,
+          "sampleFrq": null,
+          "sampleRes": null,
+          "country": null,
+          "statusText": null
         }
       },
       {
@@ -2170,36 +2295,6 @@
         }
       },
       {
-        "id": "17837",
-        "name": "1.FM Movie Soundtrack",
-        "description": null,
-        "groupTitle": null,
-        "groups": [
-          "Radio",
-          "Movie",
-          "Electro"
-        ],
-        "url": "http://strm112.1.fm/moviesoundtracks_mobile_mp3",
-        "logo": "http://liveradio.de/media/cache/station_detail/18f08aee-f06b-4965-b607-3f25a581619c.jpg",
-        "artist": null,
-        "lang": null,
-        "channels": null,
-        "country": null,
-        "favLists": [
-          "History",
-          "Sound Track"
-        ],
-        "metadata": {
-          "duration": null,
-          "stereo": null,
-          "encoding": null,
-          "sampleFrq": null,
-          "sampleRes": null,
-          "country": null,
-          "statusText": null
-        }
-      },
-      {
         "id": "13505",
         "name": "RDMIX Love Songs",
         "description": null,
@@ -2681,37 +2776,6 @@
         }
       },
       {
-        "id": "3274",
-        "name": "181.FM Reggae Roots",
-        "description": null,
-        "groupTitle": null,
-        "groups": [
-          "Radio",
-          "Reggae",
-          "Roots",
-          "French"
-        ],
-        "url": "http://listen.181fm.com/181-reggae_128k.mp3",
-        "logo": "http://www.181.fm/images/playerlanding/181.FM.jpg",
-        "artist": null,
-        "lang": "French",
-        "channels": null,
-        "country": null,
-        "favLists": [
-          "History",
-          "Reggae"
-        ],
-        "metadata": {
-          "duration": null,
-          "stereo": null,
-          "encoding": null,
-          "sampleFrq": null,
-          "sampleRes": null,
-          "country": null,
-          "statusText": null
-        }
-      },
-      {
         "id": "3403",
         "name": "KCVM 93.5 The Mix",
         "description": null,
@@ -2864,38 +2928,6 @@
         "country": null,
         "favLists": [
           "Crooners"
-        ],
-        "metadata": {
-          "duration": null,
-          "stereo": null,
-          "encoding": null,
-          "sampleFrq": null,
-          "sampleRes": null,
-          "country": null,
-          "statusText": null
-        }
-      },
-      {
-        "id": "4917",
-        "name": "Love Radio Only Love Songs 70s 80s 90s",
-        "description": null,
-        "groupTitle": null,
-        "groups": [
-          "Love",
-          "Radio",
-          "Songs",
-          "70s",
-          "80s",
-          "90s"
-        ],
-        "url": "https://loveradio.streamingmedia.it/usa",
-        "logo": "https://love.radio/loveradio_logo.png",
-        "artist": null,
-        "lang": null,
-        "channels": null,
-        "country": null,
-        "favLists": [
-          "Slows & Love Songs"
         ],
         "metadata": {
           "duration": null,
@@ -3266,21 +3298,12 @@
         ],
         "metadata": {
           "duration": null,
-          "statusText": "playing"
-        },
-        "ref": {
-          "currentRDList": {
-            "listId": "List",
-            "name": "Infos",
-            "$item": {
-              "0": {},
-              "length": 1
-            }
-          },
-          "currentTab": {
-            "listId": "Viz",
-            "tabId": "btn_wrp_logo"
-          }
+          "stereo": null,
+          "encoding": null,
+          "sampleFrq": null,
+          "sampleRes": null,
+          "country": null,
+          "statusText": null
         }
       },
       {
@@ -4874,35 +4897,6 @@
         }
       },
       {
-        "id": "11055",
-        "name": "Klassik Radio Smooth Jazz",
-        "description": null,
-        "groupTitle": null,
-        "groups": [
-          "Radio",
-          "Smooth",
-          "Jazz"
-        ],
-        "url": "http://klassikr.streamabc.net/klr-smooth-mp3-128-7968529?sABC=61p12qn4%230%23r4880qrn6s01nn6n263q843o4n00pqq9%23enqvbfher&amsparams=playerid:radiosure;skey:1640050084",
-        "logo": "http://cdn-radiotime-logos.tunein.com/s25028q.png",
-        "artist": null,
-        "lang": null,
-        "channels": null,
-        "country": null,
-        "favLists": [
-          "Jazz"
-        ],
-        "metadata": {
-          "duration": null,
-          "stereo": null,
-          "encoding": null,
-          "sampleFrq": null,
-          "sampleRes": null,
-          "country": null,
-          "statusText": null
-        }
-      },
-      {
         "id": "18536",
         "name": "Norah Jones",
         "description": null,
@@ -5040,33 +5034,6 @@
         }
       },
       {
-        "id": "10707",
-        "name": "egoFM Soundtrack",
-        "description": null,
-        "groupTitle": null,
-        "groups": [
-          "Electro"
-        ],
-        "url": "https://cast.egofm.de/egofmsoundtrack.mp3",
-        "logo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQVtM_L5NZ91Vr8aymRSb4uwNzfcMMeGQ9lzDxt1lG8Ig&s",
-        "artist": null,
-        "lang": null,
-        "channels": null,
-        "country": null,
-        "favLists": [
-          "Sound Track"
-        ],
-        "metadata": {
-          "duration": null,
-          "stereo": null,
-          "encoding": null,
-          "sampleFrq": null,
-          "sampleRes": null,
-          "country": null,
-          "statusText": null
-        }
-      },
-      {
         "id": "10182",
         "name": "1000 Oldies",
         "description": null,
@@ -5179,36 +5146,6 @@
         }
       },
       {
-        "id": "10299",
-        "name": "Acid Jazz Radio",
-        "description": null,
-        "groupTitle": null,
-        "groups": [
-          "Acid",
-          "Jazz",
-          "Radio"
-        ],
-        "url": "http://acidjazz.stream.laut.fm/acidjazz?t302=2021-12-21_16-16-36&uuid=e92aae83-3ae3-44b5-8d29-dd1dee29262c",
-        "logo": "http://www.acid-jazz-radio.de/logo-gruen.jpg",
-        "artist": null,
-        "lang": null,
-        "channels": null,
-        "country": null,
-        "favLists": [
-          "History",
-          "Jazz"
-        ],
-        "metadata": {
-          "duration": null,
-          "stereo": null,
-          "encoding": null,
-          "sampleFrq": null,
-          "sampleRes": null,
-          "country": null,
-          "statusText": null
-        }
-      },
-      {
         "id": "781",
         "name": "Blues Radio",
         "description": null,
@@ -5228,21 +5165,12 @@
         ],
         "metadata": {
           "duration": null,
-          "statusText": "playing"
-        },
-        "ref": {
-          "currentRDList": {
-            "listId": "List",
-            "name": "Blues",
-            "$item": {
-              "0": {},
-              "length": 1
-            }
-          },
-          "currentTab": {
-            "listId": "List",
-            "tabId": "btn_wrp_play_list"
-          }
+          "stereo": null,
+          "encoding": null,
+          "sampleFrq": null,
+          "sampleRes": null,
+          "country": null,
+          "statusText": null
         }
       },
       {
@@ -6498,21 +6426,12 @@
         ],
         "metadata": {
           "duration": null,
-          "statusText": "playing"
-        },
-        "ref": {
-          "currentRDList": {
-            "listId": "List",
-            "name": "Années 70",
-            "$item": {
-              "0": {},
-              "length": 1
-            }
-          },
-          "currentTab": {
-            "listId": "Viz",
-            "tabId": "btn_wrp_logo"
-          }
+          "stereo": null,
+          "encoding": null,
+          "sampleFrq": null,
+          "sampleRes": null,
+          "country": null,
+          "statusText": null
         }
       },
       {
@@ -6537,21 +6456,12 @@
         ],
         "metadata": {
           "duration": null,
-          "statusText": "pause"
-        },
-        "ref": {
-          "currentRDList": {
-            "listId": "List",
-            "name": "Années 70",
-            "$item": {
-              "0": {},
-              "length": 1
-            }
-          },
-          "currentTab": {
-            "listId": "Viz",
-            "tabId": "btn_wrp_logo"
-          }
+          "stereo": null,
+          "encoding": null,
+          "sampleFrq": null,
+          "sampleRes": null,
+          "country": null,
+          "statusText": null
         }
       },
       {
@@ -6604,21 +6514,12 @@
         ],
         "metadata": {
           "duration": null,
-          "statusText": "playing"
-        },
-        "ref": {
-          "currentRDList": {
-            "listId": "List",
-            "name": "Années 70",
-            "$item": {
-              "0": {},
-              "length": 1
-            }
-          },
-          "currentTab": {
-            "listId": "Viz",
-            "tabId": "btn_wrp_logo"
-          }
+          "stereo": null,
+          "encoding": null,
+          "sampleFrq": null,
+          "sampleRes": null,
+          "country": null,
+          "statusText": null
         }
       },
       {
@@ -6640,21 +6541,12 @@
         ],
         "metadata": {
           "duration": null,
-          "statusText": "playing"
-        },
-        "ref": {
-          "currentRDList": {
-            "listId": "List",
-            "name": "Années 70",
-            "$item": {
-              "0": {},
-              "length": 1
-            }
-          },
-          "currentTab": {
-            "listId": "Viz",
-            "tabId": "btn_wrp_logo"
-          }
+          "stereo": null,
+          "encoding": null,
+          "sampleFrq": null,
+          "sampleRes": null,
+          "country": null,
+          "statusText": null
         }
       },
       {
@@ -7018,21 +6910,12 @@
         ],
         "metadata": {
           "duration": null,
-          "statusText": "playing"
-        },
-        "ref": {
-          "currentRDList": {
-            "listId": "Art",
-            "name": "Nat King Cole",
-            "$item": {
-              "0": {},
-              "length": 1
-            }
-          },
-          "currentTab": {
-            "listId": "Viz",
-            "tabId": "btn_wrp_logo"
-          }
+          "stereo": null,
+          "encoding": null,
+          "sampleFrq": null,
+          "sampleRes": null,
+          "country": null,
+          "statusText": null
         }
       },
       {
@@ -7240,79 +7123,6 @@
         "country": null,
         "favLists": [
           "Crooners"
-        ],
-        "metadata": {
-          "duration": null,
-          "statusText": "playing"
-        },
-        "ref": {
-          "currentRDList": {
-            "listId": "Art",
-            "name": "Nat King Cole",
-            "$item": {
-              "0": {},
-              "length": 1
-            }
-          },
-          "currentTab": {
-            "listId": "Viz",
-            "tabId": "btn_wrp_logo"
-          }
-        }
-      }
-    ],
-    "isSystem": false
-  },
-  "Sound Track": {
-    "listId": "List",
-    "name": "Sound Track",
-    "items": [
-      {
-        "id": "10707",
-        "name": "egoFM Soundtrack",
-        "description": null,
-        "groupTitle": null,
-        "groups": [
-          "Electro"
-        ],
-        "url": "https://cast.egofm.de/egofmsoundtrack.mp3",
-        "logo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQVtM_L5NZ91Vr8aymRSb4uwNzfcMMeGQ9lzDxt1lG8Ig&s",
-        "artist": null,
-        "lang": null,
-        "channels": null,
-        "country": null,
-        "favLists": [
-          "Sound Track"
-        ],
-        "metadata": {
-          "duration": null,
-          "stereo": null,
-          "encoding": null,
-          "sampleFrq": null,
-          "sampleRes": null,
-          "country": null,
-          "statusText": null
-        }
-      },
-      {
-        "id": "17837",
-        "name": "1.FM Movie Soundtrack",
-        "description": null,
-        "groupTitle": null,
-        "groups": [
-          "Radio",
-          "Movie",
-          "Electro"
-        ],
-        "url": "http://strm112.1.fm/moviesoundtracks_mobile_mp3",
-        "logo": "http://liveradio.de/media/cache/station_detail/18f08aee-f06b-4965-b607-3f25a581619c.jpg",
-        "artist": null,
-        "lang": null,
-        "channels": null,
-        "country": null,
-        "favLists": [
-          "History",
-          "Sound Track"
         ],
         "metadata": {
           "duration": null,
@@ -7984,21 +7794,12 @@
         ],
         "metadata": {
           "duration": null,
-          "statusText": "playing"
-        },
-        "ref": {
-          "currentRDList": {
-            "listId": "List",
-            "name": "Blues",
-            "$item": {
-              "0": {},
-              "length": 1
-            }
-          },
-          "currentTab": {
-            "listId": "List",
-            "tabId": "btn_wrp_play_list"
-          }
+          "stereo": null,
+          "encoding": null,
+          "sampleFrq": null,
+          "sampleRes": null,
+          "country": null,
+          "statusText": null
         }
       },
       {
@@ -8020,21 +7821,12 @@
         ],
         "metadata": {
           "duration": null,
-          "statusText": "playing"
-        },
-        "ref": {
-          "currentRDList": {
-            "listId": "List",
-            "name": "Blues",
-            "$item": {
-              "0": {},
-              "length": 1
-            }
-          },
-          "currentTab": {
-            "listId": "Viz",
-            "tabId": "btn_wrp_logo"
-          }
+          "stereo": null,
+          "encoding": null,
+          "sampleFrq": null,
+          "sampleRes": null,
+          "country": null,
+          "statusText": null
         }
       },
       {
@@ -8056,21 +7848,12 @@
         ],
         "metadata": {
           "duration": null,
-          "statusText": "playing"
-        },
-        "ref": {
-          "currentRDList": {
-            "listId": "Art",
-            "name": "John Lee Hooker",
-            "$item": {
-              "0": {},
-              "length": 1
-            }
-          },
-          "currentTab": {
-            "listId": "Art",
-            "tabId": "btn_wrp_art_list"
-          }
+          "stereo": null,
+          "encoding": null,
+          "sampleFrq": null,
+          "sampleRes": null,
+          "country": null,
+          "statusText": null
         }
       },
       {
@@ -8092,21 +7875,12 @@
         ],
         "metadata": {
           "duration": null,
-          "statusText": "playing"
-        },
-        "ref": {
-          "currentRDList": {
-            "listId": "Art",
-            "name": "Muddy Waters",
-            "$item": {
-              "0": {},
-              "length": 1
-            }
-          },
-          "currentTab": {
-            "listId": "Art",
-            "tabId": "btn_wrp_art_list"
-          }
+          "stereo": null,
+          "encoding": null,
+          "sampleFrq": null,
+          "sampleRes": null,
+          "country": null,
+          "statusText": null
         }
       }
     ],
@@ -8181,21 +7955,7 @@
           "sampleFrq": null,
           "sampleRes": null,
           "country": null,
-          "statusText": "no connection"
-        },
-        "ref": {
-          "currentRDList": {
-            "listId": "List",
-            "name": "Test Liste Avec Un Nom Long",
-            "$item": {
-              "0": {},
-              "length": 1
-            }
-          },
-          "currentTab": {
-            "listId": "List",
-            "tabId": "btn_wrp_play_list"
-          }
+          "statusText": null
         }
       }
     ],
@@ -8787,6 +8547,42 @@
           "country": null,
           "statusText": null
         }
+      },
+      {
+        "id": "10707",
+        "name": "egoFM Soundtrack",
+        "description": null,
+        "groupTitle": null,
+        "groups": [
+          "Electro"
+        ],
+        "url": "https://cast.egofm.de/egofmsoundtrack.mp3",
+        "logo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQVtM_L5NZ91Vr8aymRSb4uwNzfcMMeGQ9lzDxt1lG8Ig&s",
+        "artist": null,
+        "lang": null,
+        "channels": null,
+        "country": null,
+        "favLists": [
+          "Pop"
+        ],
+        "metadata": {
+          "duration": null,
+          "statusText": "playing"
+        },
+        "ref": {
+          "currentRDList": {
+            "listId": "Tag",
+            "name": "Electro",
+            "$item": {
+              "0": {},
+              "length": 1
+            }
+          },
+          "currentTab": {
+            "listId": "Tag",
+            "tabId": "btn_wrp_tag_list"
+          }
+        }
       }
     ],
     "isSystem": false
@@ -8817,21 +8613,12 @@
         ],
         "metadata": {
           "duration": null,
-          "statusText": "playing"
-        },
-        "ref": {
-          "currentRDList": {
-            "listId": "List",
-            "name": "History",
-            "$item": {
-              "0": {},
-              "length": 1
-            }
-          },
-          "currentTab": {
-            "listId": "List",
-            "tabId": "btn_wrp_play_list"
-          }
+          "stereo": null,
+          "encoding": null,
+          "sampleFrq": null,
+          "sampleRes": null,
+          "country": null,
+          "statusText": null
         }
       },
       {
@@ -9625,21 +9412,12 @@
         ],
         "metadata": {
           "duration": null,
-          "statusText": "playing"
-        },
-        "ref": {
-          "currentRDList": {
-            "listId": "Art",
-            "name": "Mike Oldfield",
-            "$item": {
-              "0": {},
-              "length": 1
-            }
-          },
-          "currentTab": {
-            "listId": "Art",
-            "tabId": "btn_wrp_art_list"
-          }
+          "stereo": null,
+          "encoding": null,
+          "sampleFrq": null,
+          "sampleRes": null,
+          "country": null,
+          "statusText": null
         }
       }
     ],
@@ -10125,21 +9903,12 @@
         ],
         "metadata": {
           "duration": null,
-          "statusText": "pause"
-        },
-        "ref": {
-          "currentRDList": {
-            "listId": "Art",
-            "name": "Nina Simone",
-            "$item": {
-              "0": {},
-              "length": 1
-            }
-          },
-          "currentTab": {
-            "listId": "Art",
-            "tabId": "btn_wrp_art_list"
-          }
+          "stereo": null,
+          "encoding": null,
+          "sampleFrq": null,
+          "sampleRes": null,
+          "country": null,
+          "statusText": null
         }
       },
       {
@@ -11075,21 +10844,12 @@
         ],
         "metadata": {
           "duration": null,
-          "statusText": "playing"
-        },
-        "ref": {
-          "currentRDList": {
-            "listId": "List",
-            "name": "Infos",
-            "$item": {
-              "0": {},
-              "length": 1
-            }
-          },
-          "currentTab": {
-            "listId": "List",
-            "tabId": "btn_wrp_play_list"
-          }
+          "stereo": null,
+          "encoding": null,
+          "sampleFrq": null,
+          "sampleRes": null,
+          "country": null,
+          "statusText": null
         }
       },
       {
@@ -11167,12 +10927,12 @@
         ],
         "metadata": {
           "duration": null,
-          "statusText": "playing"
+          "statusText": "pause"
         },
         "ref": {
           "currentRDList": {
             "listId": "List",
-            "name": "Infos",
+            "name": "History",
             "$item": {
               "0": {},
               "length": 1
@@ -11232,21 +10992,12 @@
         ],
         "metadata": {
           "duration": null,
-          "statusText": "playing"
-        },
-        "ref": {
-          "currentRDList": {
-            "listId": "List",
-            "name": "Infos",
-            "$item": {
-              "0": {},
-              "length": 1
-            }
-          },
-          "currentTab": {
-            "listId": "Viz",
-            "tabId": "btn_wrp_logo"
-          }
+          "stereo": null,
+          "encoding": null,
+          "sampleFrq": null,
+          "sampleRes": null,
+          "country": null,
+          "statusText": null
         }
       },
       {
@@ -11439,21 +11190,12 @@
         ],
         "metadata": {
           "duration": null,
-          "statusText": "playing"
-        },
-        "ref": {
-          "currentRDList": {
-            "listId": "List",
-            "name": "Country",
-            "$item": {
-              "0": {},
-              "length": 1
-            }
-          },
-          "currentTab": {
-            "listId": "List",
-            "tabId": "btn_wrp_play_list"
-          }
+          "stereo": null,
+          "encoding": null,
+          "sampleFrq": null,
+          "sampleRes": null,
+          "country": null,
+          "statusText": null
         }
       },
       {
@@ -11616,6 +11358,52 @@
           "sampleRes": null,
           "country": null,
           "statusText": null
+        }
+      }
+    ],
+    "isSystem": false
+  },
+  "Musiques de films": {
+    "listId": "List",
+    "name": "Musiques de films",
+    "items": [
+      {
+        "id": "17837",
+        "name": "1.FM Movie Soundtrack",
+        "description": null,
+        "groupTitle": null,
+        "groups": [
+          "Radio",
+          "Movie",
+          "Electro"
+        ],
+        "url": "http://strm112.1.fm/moviesoundtracks_mobile_mp3",
+        "logo": "http://liveradio.de/media/cache/station_detail/18f08aee-f06b-4965-b607-3f25a581619c.jpg",
+        "artist": null,
+        "lang": null,
+        "channels": null,
+        "country": null,
+        "favLists": [
+          "History",
+          "Musiques de films"
+        ],
+        "metadata": {
+          "duration": null,
+          "statusText": "playing"
+        },
+        "ref": {
+          "currentRDList": {
+            "listId": "List",
+            "name": "Sound Track",
+            "$item": {
+              "0": {},
+              "length": 1
+            }
+          },
+          "currentTab": {
+            "listId": "List",
+            "tabId": "btn_wrp_play_list"
+          }
         }
       }
     ],

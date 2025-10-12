@@ -398,11 +398,14 @@ class UIState {
     }
 
     setPathButtonsState(enabled) {
-        const $items = $('.fav-path-button')
+        const $items = $('.fav-path-button[class]')
+            .not('[class*="selected"]')
         if (!enabled)
             $items.addClass('but-icon-disabled')
+                .addClass('menu-item-disabled')
         else
             $items.removeClass('but-icon-disabled')
+                .removeClass('menu-item-disabled')
     }
 
     setSelectedListItemButtonsState(enabled) {

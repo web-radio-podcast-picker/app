@@ -435,13 +435,13 @@ class WebRadioPickerModule extends ModuleBase {
         const $e = $(element)
         if (selectIt)
             $e.addClass('item-selected')
+        radsItems.setTitleIconsVisibility($e, false)
         element.scrollIntoView(ScrollIntoViewProps)
     }
 
     setCurrentRDList(currentRDList) {
         uiState.updateCurrentRDList(currentRDList)
     }
-
 
     clearRadioView() {
         this.clearAppStatus()

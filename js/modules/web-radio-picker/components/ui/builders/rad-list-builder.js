@@ -21,8 +21,19 @@ class RadListBuilder {
         $item.removeClass('hidden')
         this.#setRowStyle(j, $item)
 
+        // radio name
         const $textBox = $('<div class="wrp-list-item-text-container">' + text + '</div>')
         $item.append($textBox)
+
+        // eventually fav icon
+        if ((listId != RadioList_List || listName == RadioList_History)
+            && rdItem != null) {
+            const favs = favorites.getItemFavoritesFiltered(rdItem)
+            if (favs.length > 0) {
+                const $favIcon = $('<img name="heart_on" src="./img/icons8-heart-fill-48.png" width="24" height="24" alt="favorite" class="gr1 gc1 icon-rad-fav">')
+                $item.append($favIcon)
+            }
+        }
 
         if (opts != null) {
 
@@ -162,6 +173,8 @@ class RadListBuilder {
             $prevItem.removeClass('item-selected')
             radsItems.unbuildFoldableItem($prevItem)
             $item.addClass('item-selected')
+            radsItems.setTitleIconsVisibility($prevItem, true)
+            radsItems.setTitleIconsVisibility($item, false)
 
             // update radio view with new current item
             wrpp.setupRadioView(o)

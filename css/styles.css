@@ -905,11 +905,11 @@ code {
 }
 
 .menu-item-disabled,.menu-item-disabled:hover  {
-    color: lightblue;
+    color: lightblue !important;
     background-color: #444444;
     /* border: skyblue solid 1px; */
     cursor: default !important;
-    opacity: 0.4;
+    opacity: 0.4 !important;
 }
 
 #pop_settings {
@@ -1552,6 +1552,11 @@ div.dialog-bbar-container span
 {
     padding-left: 0.5em;
     padding-right: 0.5em;
+}
+
+.dialog-btn-yes,
+.dialog-btn-no {
+    border-radius: 0.5em;
 }
 
 .dialog-btn-yes

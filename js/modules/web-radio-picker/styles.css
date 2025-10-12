@@ -358,6 +358,14 @@ div#btn_wrp_infos.selected > img {
     padding: 4px !important;
 }
 
+.icon-rad-fav {
+    justify-self: end;    
+    width: 24px;
+    height: 24px;
+    align-self: center;
+    margin-right: 0.5em;
+}
+
 .wrp-inf-pane {
     background-color: rgba(0,0,129,1); /* cf. .module-full-pane */
     padding: 1em;

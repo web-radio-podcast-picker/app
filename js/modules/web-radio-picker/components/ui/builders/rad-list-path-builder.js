@@ -60,7 +60,7 @@ class RadListPathBuilder {
 
     buildHistorybutton() {
         const w = 24
-        const $img = $(`<img name="histo_but" class="hover-icon small-tag-icon margin-right" src="./img/icons8-list-50.png" width="${w}" height="${w}" alt="histo_but">`)
+        const $img = $(`<img name="histo_but" class="hover-icon small-tag-icon fav-path-button margin-right" src="./img/icons8-list-50.png" width="${w}" height="${w}" alt="histo_but">`)
         $img.on('click', e => {
             this.favButtonOnClick(e, RadioList_List, RadioList_History, true, null)
         })
@@ -97,7 +97,7 @@ class RadListPathBuilder {
                 // artists list
                 this.selectArtistPath(item, item.artist)
             } else {
-                if (wrpp.isGroupALang(item.lang) && item.lang==grp)
+                if (wrpp.isGroupALang(item.lang) && item.lang == grp)
                     // langs
                     this.selectLangPath(grp)
                 else

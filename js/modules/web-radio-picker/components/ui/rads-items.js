@@ -27,6 +27,14 @@ class RadsItems {
         }
     }
 
+    setTitleIconsVisibility($item, visible) {
+        const $p = $item.find('.icon-rad-fav')
+        if (visible)
+            $p.removeClass(Class_Hidden)
+        else
+            $p.addClass(Class_Hidden)
+    }
+
     updateLoadingRadItem(statusText, item, $item) {
         $item ||= this.$loadingRDItem
         item ||= this.loadingRDItem
@@ -42,6 +50,7 @@ class RadsItems {
         $item.attr('data-status-text', statusText)
         $statusText.text(statusText)
         $subit.removeClass('hidden')
+        this.setTitleIconsVisibility($item, false)
 
         return this
     }
@@ -55,6 +64,7 @@ class RadsItems {
             $butOn.addClass('hidden')
             $butOff.removeClass('hidden')
         }
+        this.setTitleIconsVisibility($item, false)
     }
 
     updateRadItemView(item, $item) {
