@@ -552,6 +552,10 @@ background-color: #44AAffAA !important
     color: red;
 }
 
+.log-item-warning {
+    color: orange;
+}
+
 .action_pane {
     grid-row: 2;
     grid-column: 1;

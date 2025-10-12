@@ -36,6 +36,17 @@ class Logger {
         this.addLogItem(str1, str2, 'log-item-error')
     }
 
+    warn(s, o) {
+        if (o === undefined)
+            console.warn(s)
+        else
+            console.warn(s, o)
+        if (this.$pane == null) return
+        const str1 = this.toStr(s)
+        const str2 = o !== undefined ? this.toStr(o) : null
+        this.addLogItem(str1, str2, 'log-item-warning')
+    }
+
     addLogItem(s1, s2, cl) {
         const c = cl === undefined ? '' : cl
         const it = s => $('<div class="log-item ' + c + '">' + s + '</div>')
