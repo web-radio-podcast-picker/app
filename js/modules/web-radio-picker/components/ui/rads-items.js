@@ -55,6 +55,14 @@ class RadsItems {
         return this
     }
 
+    setLoadingItemMetadata(key, val, item) {
+        item ||= this.loadingRDItem
+        if (item == null) return
+        wrpp.checkMetaData(item)
+        item.metadata[key] = val
+        return this
+    }
+
     updateRadItem(item, $item, $butOn, $butOff) {
         const favs = favorites.getItemFavoritesFiltered(item)
         if (favs.length > 0) {

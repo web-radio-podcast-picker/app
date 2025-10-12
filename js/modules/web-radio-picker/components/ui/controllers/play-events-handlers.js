@@ -75,7 +75,9 @@ class PlayEventsHandlers {
         if (settings.debug.debug) {
             logger.log(st)
         }
-        radsItems.updateLoadingRadItem(st)
+        radsItems
+            .updateLoadingRadItem(st)
+            .setLoadingItemMetadata('startTime', Date.now())
     }
 
     onPauseStateChanged(updateRadItemStatusText, item, $item) {
@@ -84,8 +86,12 @@ class PlayEventsHandlers {
                 oscilloscope.pause ?
                     'pause' : 'playing',
                 null, $item)
-        if (oscilloscope.pause)
+        const pause = oscilloscope.pause
+        if (pause) {
             playHistory.clearHistoryTimer()
+            radsItems.setLoadingItemMetadata('endTime', Date.now())
+        } else
+            radsItems.setLoadingItemMetadata('startTime', Date.now())
         uiState.updatePauseView()
     }
 }

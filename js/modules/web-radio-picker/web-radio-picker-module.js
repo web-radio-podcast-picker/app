@@ -186,12 +186,18 @@ class WebRadioPickerModule extends ModuleBase {
 
         const readOnly = { readOnly: true, attr: 'text' };
 
-        $('#wrp_img').on('error', () => {
-            rdMediaImage.noImage()
-        })
-        $('#wrp_img').on('load', () => {
-            rdMediaImage.showImage()
-        })
+        const $img = $('#wrp_img')
+        $img
+            .on('error', () => {
+                rdMediaImage.noImage()
+            })
+            .on('load', () => {
+                const img = $('#wrp_img')[0]
+                if (img.width <= 1 || img.height <= 1)
+                    rdMediaImage.noImage()
+                else
+                    rdMediaImage.showImage()
+            })
 
         const thisPath = 'app.moduleLoader.getModuleById("' + this.id + '").'
         const listCountPath = thisPath + 'listCount'
@@ -544,7 +550,10 @@ class WebRadioPickerModule extends ModuleBase {
                 sampleFrq: null,
                 sampleRes: null,
                 country: null,
-                statusText: null
+                statusText: null,
+                startTime: null,
+                stopTime: null,
+                position: null
             }
     }
 
