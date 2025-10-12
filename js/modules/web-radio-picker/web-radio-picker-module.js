@@ -246,6 +246,7 @@ class WebRadioPickerModule extends ModuleBase {
         })
 
         $('#btn_wrp_infos').on('click', () => {
+            $('body').focus()
             if (uiState.favoriteInputState) return
             infosPane.toggleInfos()
         })
