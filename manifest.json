@@ -3,12 +3,12 @@
   "name": "Web Radio Podcast Picker",
   "icons": [
     {
-      "src": "./app/img/icon.ico",
+      "src": "/app/img/icon.ico",
       "type": "image/ico",
       "sizes": "256x256"
     },
     {
-      "src": "./app/rsc/icon-snap.png",
+      "src": "/app/rsc/icon-snap.png",
       "type": "image/png",
       "sizes": "546x546"
     }
@@ -26,18 +26,18 @@
       "short_name": "Web Radio Podcast Picker",
       "description": "Online web radios & podcasts",
       "url": "./app/index.html?flags=app",
-      "icons": [{ "src": "./rsc/icon-snap.png", "sizes": "546x546" }]
+      "icons": [{ "src": "/app/rsc/icon-snap.png", "sizes": "546x546" }]
     }
   ],
   "screenshots": [
     {
-      "src": "./img/screenshot.png",
+      "src": "/app/img/screenshot.png",
       "type": "image/png",
       "sizes": "1920x1080",
       "form_factor": "narrow"
     },
     {
-      "src": "./img/screenshot.png",
+      "src": "/app/img/screenshot.png",
       "type": "image/png",
       "sizes": "1920x1080",
       "form_factor": "wide"
