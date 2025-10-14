@@ -245,8 +245,8 @@ class WebRadioPickerModule extends ModuleBase {
             favorites.addNewFavoriteList()
         })
 
-        $('#btn_wrp_infos').on('click', () => {
-            this.loseFocus()
+        $('#btn_wrp_infos').on('click', e => {
+            this.removeHighlight(e.currentTarget)
             if (uiState.favoriteInputState) return
             infosPane.toggleInfos()
         })
@@ -438,8 +438,8 @@ class WebRadioPickerModule extends ModuleBase {
 
     // #region lists/items setters
 
-    loseFocus() {
-        $('#bt_bar')[0].click()
+    removeHighlight(e) {
+        // no impl found
     }
 
     focusListItem(element, selectIt) {
