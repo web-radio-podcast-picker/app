@@ -13,8 +13,8 @@
       "sizes": "546x546"
     }
   ],
-  "id": "./app/index.html",
-  "start_url": "./app/index.html?flags=app",
+  "id": "./index.html",
+  "start_url": "./index.html?flags=app",
   "background_color": "black",
   "display": "fullscreen",
   "scope": "./",
@@ -25,8 +25,8 @@
       "name": "Web Radio Podcast Picker",
       "short_name": "Web Radio Podcast Picker",
       "description": "Online web radios & podcasts",
-      "url": "./app/index.html?flags=app",
-      "icons": [{ "src": "/app/rsc/icon-snap.png", "sizes": "546x546" }]
+      "url": "./index.html?flags=app",
+      "icons": [{ "src": "./rsc/icon-snap.png", "sizes": "546x546" }]
     }
   ],
   "screenshots": [
