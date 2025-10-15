@@ -13,7 +13,7 @@
       "sizes": "546x546"
     }
   ],
-  "id": "./index.html",
+  "id": "/app/index.html",
   "start_url": "./index.html?flags=app",
   "background_color": "black",
   "display": "fullscreen",
@@ -27,7 +27,7 @@
       "description": "Online web radios & podcasts",
       "url": "./index.html?flags=app",
       "icons": [
-        { "src": "rsc/icon-snap.png", 
+        { "src": "/app/rsc/icon-snap.png", 
           "sizes": "546x546" }
         ]
     }
