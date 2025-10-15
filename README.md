@@ -5,7 +5,7 @@ ___
 web radio and podcast javascript application with visualizations
 
 - 22469 web radios
-- podcasts incoming
+- 400000 podcasts incoming
 
 listen here: [https://franck-gaspoz.github.io/web-radio-podcast-picker/](https://franck-gaspoz.github.io/web-radio-podcast-picker/)
 
