@@ -96,7 +96,7 @@ app = {
         feats.constraints.enableRotateYourDevicePopup = !flags.kiosk
             && !(flags.app && settings.sys.mobile && !settings.features.constraints.isIPhone)
 
-        feats.constraints.noIntroPopup = flags.kiosk || flags.app
+        feats.constraints.noIntroPopup = flags.kiosk || flags.app || true
 
         feats.constraints.useNavigatorOrientationProperty =
             feats.constraints.noVisualizers = feats.constraints.isIPhone
