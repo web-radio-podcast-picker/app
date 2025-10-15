@@ -7,6 +7,7 @@ lang = {
     langKeys: [],
 
     run: function () {
+        window.logger = new Logger()
         logger.log('run')
 
         // lang keys translations
@@ -23,20 +24,20 @@ lang = {
         })
         this.trs = trs
 
-        // lang name -> groups
+        // lang name -> lang groups
 
         langs.forEach(tn => {
 
-            var n = tn[0]
-            const q = tn[1]
+            var n = tn[0]       // lang name
+            const q = tn[1]     // quantity
             //logger.log(n)
 
             const lst = n.split(',')
             lst.forEach(x => {
 
                 // fix/translate lang key
-                x = this.normalizeName(x)
-                var trsl = null
+                x = this.normalizeName(x)       // normalized name (before translation)
+                var trsl = null                 // translated name if any (else null)
                 if (trsk.includes(x)) {
                     x = langTrs[x]
                     trsl = x
@@ -67,8 +68,10 @@ lang = {
             })
         })
 
+        logger.log(this.gl)
+
         // langs -> unclassified
-        const u = []
+        const unknownLang = []
         gl2 = []
 
         for (tnk in this.gl) {
@@ -84,15 +87,16 @@ lang = {
             })
             if (k == 0) {
                 // lang unknown
-                u[tnk] = tn
+                logger.warn(tnk)
+                unknownLang[tnk] = tn
             } else {
                 tn.push(lang)
             }
         }
 
         // remove unclassified
-        for (tnk in u) {
-            const tn = u[tnk]
+        for (tnk in unknownLang) {
+            const tn = unknownLang[tnk]
             delete this.gl[tnk]
         }
 
@@ -103,8 +107,8 @@ lang = {
         }
         this.gl = gl2
 
-        logger.log(Object.getOwnPropertyNames(u).length)
-        logger.log(u)
+        logger.log(Object.getOwnPropertyNames(unknownLang).length)
+        logger.log(unknownLang)
 
         logger.log('')
 
@@ -164,7 +168,7 @@ lang = {
     },
 
     async loadJSON() {
-        const r = await fetch('./data/iso-639-2.json')
+        const r = await fetch('../data/iso-639-2.json')
         this.langRef = await r.json()
     }
 }
