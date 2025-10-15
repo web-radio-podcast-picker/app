@@ -12,6 +12,17 @@ OOO     OOOO
 OOO     OOOO
         0000
 
+---------------------------------------------------------------------
+DBS
+
+podcasts
+https://podcastindex.org/
+
+radios
+all_stations.m3u    ?
+---------------------------------------------------------------------
+
+
 rsc:
 
 - power button
