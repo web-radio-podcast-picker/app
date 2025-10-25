@@ -62,6 +62,7 @@ class RadListPathBuilder {
         const w = 24
         const $img = $(`<img name="histo_but" class="hover-icon small-tag-icon fav-path-button margin-right" src="./img/icons8-list-50.png" width="${w}" height="${w}" alt="histo_but">`)
         $img.on('click', e => {
+            infosPane.hideInfoPane()
             this.favButtonOnClick(e, RadioList_List, RadioList_History, true, null)
         })
         return $img
@@ -95,6 +96,8 @@ class RadListPathBuilder {
         const $but = $(`<span data-id="${grp}" class="fav-path-button menu-item menu-item-blue onoff-small-height2 no-width ${rm}">${grp}</span>`)
         $but.on('click', e => {
             if ($(e.currentTarget).hasClass('but-icon-disabled')) return
+            infosPane.hideInfoPane()
+
             if (grp == Group_Name_Artists
                 && item.artist != null) {
                 // artists list
