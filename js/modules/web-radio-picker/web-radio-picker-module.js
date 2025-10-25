@@ -259,6 +259,10 @@ class WebRadioPickerModule extends ModuleBase {
             await this.importRadiosListsFromClipboard()
         })
 
+        $('#btn_wrp_del_allfav').on('click', async () => {
+            favorites.deleteAllFavoritesLists()
+        })
+
         infosPane.initEventsHandlers()
 
         if (settings.features.swype.enableArrowsButtonsOverScrollPanes) {

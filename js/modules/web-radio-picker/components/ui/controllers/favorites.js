@@ -237,6 +237,26 @@ class Favorites {
         )
     }
 
+    deleteAllFavoritesLists() {
+        if (settings.debug.debug)
+            logger.log('delete all favorites lists')
+        playHistory.clearHistoryTimer()
+        dialogs.showDialogConfirm(
+            dialogs.dialogConfirm(
+                'Confirm delete all ?', null,
+                res => this.confirmDeleteAllFavoritesLists(res)
+            )
+        )
+    }
+
+    confirmDeleteAllFavoritesLists(res) {
+        dialogs.hideDialogConfirm()
+        if (!res.confirm) return
+
+        //radiosLists.deleteAllLists()
+        settings.dataStore.saveAll()
+    }
+
     confirmDeleteFavoriteList(res, listName) {
 
         dialogs.hideDialogConfirm()
