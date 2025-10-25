@@ -39,6 +39,9 @@ const RadioList_All = 'All'
 const RadioList_Art = 'Art'
 const RadioList_Lang = 'Lang'
 const RadioList_Tag = 'Tag'
+
+const RadioList_Podcast = 'Podcast'
+
 // pseudo lists
 const RadioList_Info = 'Info'
 const RadioList_Viz = 'Viz'

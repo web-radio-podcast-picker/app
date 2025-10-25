@@ -88,6 +88,11 @@ var radiosLists = null
  */
 var uiState = null
 
+/**
+ * @type {Podcasts}
+ */
+var podcasts = null
+
 //#endregion
 
 // module: web radio picker
@@ -169,6 +174,7 @@ class WebRadioPickerModule extends ModuleBase {
         infosPane = new InfosPane()
         tabsController = new TabsController()
         radiosLists = new RadiosLists()
+        podcasts = new Podcasts()
         uiState = new UIState()
 
         radiosLists.addList(RadioList_List, RadioList_History, true)

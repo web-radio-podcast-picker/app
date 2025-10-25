@@ -49,6 +49,10 @@ window.settings = {
         }
     },
 
+    datastores: {
+        stationsStoreIndex: 50
+    },
+
     sys: {
         platform: '?',
         platformText: '?',

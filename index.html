@@ -126,6 +126,7 @@
     <script src="./js/modules/web-radio-picker/components/ui/controllers/tabs-controller.js?hash=q"></script>
     <script src="./js/modules/web-radio-picker/components/ui/controllers/play-events-handlers.js?hash=q"></script>
     <script src="./js/modules/web-radio-picker/components/ui/controllers/favorites.js?hash=q"></script>
+    <script src="./js/modules/web-radio-picker/components/ui/controllers/podcasts.js?hash=q"></script>
     <script src="./js/modules/web-radio-picker/components/ui/controllers/play-history.js?hash=q"></script>
     <script src="./js/modules/web-radio-picker/components/ui/builders/lists-builder.js?hash=q"></script>
     <script src="./js/modules/web-radio-picker/components/ui/builders/rad-list-path-builder.js?hash=q"></script>
@@ -295,8 +296,18 @@
                             class="gr1 menu-item menu-item-blue onoff-small-height no-width spc-left">Langs</span>
                         <span id="btn_wrp_art_list"
                             class="gr1 menu-item menu-item-blue onoff-small-height no-width spc-left">Artists</span>
+
                         <span id="btn_wrp_podcast"
-                            class="gr1 nowrap menu-item menu-item-blue onoff-small-height no-width menu-item-disabled spc-left">Podcasts</span>
+                            class="gr1 nowrap menu-item menu-item-blue onoff-small-height no-width spc-left">Podcasts</span>
+                        <span id="btn_wrp_podcast_lang"
+                            class="gr1 nowrap menu-item menu-item-blue onoff-small-height no-width spc-left hidden">Lang</span>
+                        <span id="btn_wrp_podcast_tag"
+                            class="gr1 nowrap menu-item menu-item-blue onoff-small-height no-width spc-left hidden">Tags</span>
+                        <span id="btn_wrp_podcast_alpha"
+                            class="gr1 nowrap menu-item menu-item-blue onoff-small-height no-width spc-left hidden">Letters</span>
+                        <span id="btn_wrp_podcast_page"
+                            class="gr1 nowrap menu-item menu-item-blue onoff-small-height no-width spc-left hidden">Pages</span>
+
                         <span id="btn_wrp_play_list"
                             class="gr1 nowrap menu-item menu-item-blue onoff-small-height no-width spc-left">Favs</span>
                     </div>
@@ -304,17 +315,27 @@
 
                 <!-- left pane content -->
                 <div id="left-pane" class="gr2 gc1 border-light margin-top gridh100p lim-height">
+
                     <div id="opts_wrp_tag_list" class="wrp-scroll-pane">
                     </div>
+
                     <div id="opts_wrp_art_list" class="wrp-scroll-pane hidden">
                     </div>
+
                     <div id="opts_wrp_lang_list" class="wrp-scroll-pane hidden">
                     </div>
+
+                    <div id="opts_wrp_podcast" class="wrp-scroll-pane hidden">
+
+                    </div>
+
                     <div id="opts_wrp_play_list" class="wrp-scroll-pane hidden">
                     </div>
+
                     <div id="opts_wrp_logo" class="wrp-img-holder hidden">
                         <img id="wrp_img" alt="radio image" src="" class="gr1 gc1 hidden">
                     </div>
+
                     <div id="opts_add_favorite_action_pane" class="action_pane hidden">
                         <img src="./img/icons8-arrow-50.png" class="topFavArrow" alt="top arrow" width="32" height="32">
                         <span class="gr1 gc2 addFavText">Pick a list or add one</span>
