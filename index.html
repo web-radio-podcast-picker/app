@@ -456,18 +456,18 @@
                 <div id="wrp_inf_pane" class="hidden gr2 gc1 border-light margin-top gridh100p lim-height">
                     <div id="wrp_info_but_bar" class="gr1 gc1 padding-small border-light grid">
 
-                        <!-- info -->
-
-                        <div class="gr1 gc1">
-                            <span id="btn_wrp_inf" class="menu-item menu-item-blue 
-                                onoff-small-height no-width selected">About...</span>
-                        </div>
-
                         <!-- settings -->
 
-                        <div class="gr1 gc2">
+                        <div class="gr1 gc1">
                             <span id="btn_wrp_set" class="no-margin-left menu-item menu-item-blue 
-                                onoff-small-height no-width">Settings</span>
+                                                        onoff-small-height no-width selected">Settings</span>
+                        </div>
+
+                        <!-- info -->
+
+                        <div class="gr1 gc2">
+                            <span id="btn_wrp_inf" class="menu-item menu-item-blue 
+                                onoff-small-height no-width">About...</span>
                         </div>
 
                         <!-- log -->
@@ -479,9 +479,10 @@
 
                     </div>
 
-                    <div id="opts_wrp_inf" class="wrp-scroll-pane wrp-inf-pane">
+                    <div id="opts_wrp_inf" class="wrp-scroll-pane wrp-inf-pane hidden">
                     </div>
-                    <div id="opts_wrp_set" class="wrp-scroll-pane wrp-inf-pane hidden">
+
+                    <div id="opts_wrp_set" class="wrp-scroll-pane wrp-inf-pane">
                         <h1>Favorites</h1>
                         <div class="flex gap margin-bottom">
                             <span id="btn_wrp_exp_fav" class="no-margin-left menu-item menu-item-blue 
@@ -494,6 +495,7 @@
                                 onoff-small-height no-width">Delete all</span>
                         </div>
                     </div>
+
                     <div id="opts_log_pane" class="wrp-scroll-pane wrp-inf-pane hidden">
                     </div>
                 </div>
