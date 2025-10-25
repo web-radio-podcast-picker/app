@@ -265,8 +265,12 @@ class Favorites {
                 RadioList_List, null
             )
         }
-        // refresh bottom path
         if (uiState.currentRDItem != null) {
+            // refresh current rd list
+            radListBuilder.updateCurrentRDList(
+                uiState.currentRDItem,
+                uiState.currentRDList_Back)
+            // refresh bottom path
             radListBuilder.pathBuilder.buildRadioViewTagPath(
                 uiState.currentRDItem
             )

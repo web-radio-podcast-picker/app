@@ -246,9 +246,10 @@ class RadListBuilder {
     }
 
     // update the rdList view for the current rdList and the given item
-    updateCurrentRDList(item) {
+    updateCurrentRDList(item, radList) {
         // find the list item / button
-        const rdList = uiState.currentRDList
+        const rdList = (radList !== undefined && radList != null)
+            ? radList : uiState.currentRDList
         if (rdList == null) return
         const itemRef = wrpp.getListItem(rdList)
         if (itemRef == null || itemRef.item == null) return
