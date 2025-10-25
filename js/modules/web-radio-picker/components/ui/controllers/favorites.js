@@ -254,14 +254,23 @@ class Favorites {
         if (!res.confirm) return
 
         radiosLists.deleteAllLists()
-        // cleanup views
+        // cleanup history view
         listsBuilder
             .clearFavoritesView()
             .buildListsItems()
+        // refresh top path
         if (uiState.currentRDList_Back?.listId == RadioList_List) {
             radListBuilder.clearRadList()
             radListBuilder.pathBuilder.buildTopFavPath(
                 RadioList_List, null
+            )
+        }
+        // refresh bottom path
+        if (uiState.currentRDItem != null
+            && favorites.getFavName(uiState.currentRDItem) != null
+        ) {
+            radListBuilder.pathBuilder.buildRadioViewTagPath(
+                uiState.currentRDItem
             )
         }
 

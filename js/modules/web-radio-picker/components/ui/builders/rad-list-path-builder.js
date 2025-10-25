@@ -138,7 +138,7 @@ class RadListPathBuilder {
     }
 
     selectTagPath(grp) {
-        uiState.setTab(RadioList_Tag)   // /!\ do not set currentRDList
+        uiState.setTab(RadioList_Tag)   // /!\ this doesn't set currentRDList
         const cLst = uiState.currentRDList
         if (cLst == null
             || (cLst.listId != RadioList_Tag || cLst.name != grp)) {
@@ -152,7 +152,7 @@ class RadListPathBuilder {
     }
 
     selectLangPath(grp) {
-        uiState.setTab(RadioList_Lang)   // /!\ do not set currentRDList
+        uiState.setTab(RadioList_Lang)   // /!\ this doesn't set currentRDList
         const cLst = uiState.currentRDList
         if (cLst == null
             || (cLst.listId != RadioList_Lang || cLst.name != grp)) {

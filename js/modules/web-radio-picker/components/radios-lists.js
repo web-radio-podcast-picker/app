@@ -78,9 +78,11 @@ class RadiosLists {
     }
 
     deleteAllLists() {
-        const hlst = this.lists[RadioList_History]
-        this.lists = {}
-        this.lists[RadioList_History] = hlst
+        const ids = Object.getOwnPropertyNames(this.lists)
+        ids.forEach(id => {
+            if (id != [RadioList_History])
+                this.deleteList(id)
+        })
     }
 
     removeFavFromList(rdItem, favName) {
