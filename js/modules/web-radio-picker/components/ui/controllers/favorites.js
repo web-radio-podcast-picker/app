@@ -253,7 +253,18 @@ class Favorites {
         dialogs.hideDialogConfirm()
         if (!res.confirm) return
 
-        //radiosLists.deleteAllLists()
+        radiosLists.deleteAllLists()
+        // cleanup views
+        listsBuilder
+            .clearFavoritesView()
+            .buildListsItems()
+        if (uiState.currentRDList_Back?.listId == RadioList_List) {
+            radListBuilder.clearRadList()
+            radListBuilder.pathBuilder.buildTopFavPath(
+                RadioList_List, null
+            )
+        }
+
         settings.dataStore.saveAll()
     }
 

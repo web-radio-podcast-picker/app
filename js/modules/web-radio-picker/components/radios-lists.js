@@ -77,6 +77,12 @@ class RadiosLists {
         delete this.lists[name]
     }
 
+    deleteAllLists() {
+        const hlst = this.lists[RadioList_History]
+        this.lists = {}
+        this.lists[RadioList_History] = hlst
+    }
+
     removeFavFromList(rdItem, favName) {
         rdItem.favLists = rdItem.favLists.filter(x => x != favName)
     }

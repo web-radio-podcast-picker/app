@@ -42,6 +42,12 @@ class ListsBuilder {
         return { count: lst.length }
     }
 
+    clearFavoritesView() {
+        const $pl = $('#opts_wrp_play_list')
+        $pl[0].innerHTML = ''
+        return this
+    }
+
     buildListsItems() {
         const $pl = $('#opts_wrp_play_list')
         const t = radiosLists.lists

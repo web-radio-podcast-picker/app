@@ -74,12 +74,15 @@ class RadListPathBuilder {
         const $p2 = $('#wrp_rad_list_ref_name')
         $p2[0].innerHTML = ''
         if (listId == RadioList_All) return
-        if (listId == null || listName == null) return
-        const $listIdBut = this.buildFavPathButton(listId, listId, id, true, false)
-        const $listNameBut = this.buildFavPathButton(listId, listName, listName, false, false, null, null, true)
-        $p.append($listIdBut)
+        if (listId != null) {
+            const $listIdBut = this.buildFavPathButton(listId, listId, id, true, false)
+            $p.append($listIdBut)
+        }
         $p.append(this.buildRightChevron().addClass('right-chevron-extended'))
-        $p2.append($listNameBut)
+        if (listName != null) {
+            const $listNameBut = this.buildFavPathButton(listId, listName, listName, false, false, null, null, true)
+            $p2.append($listNameBut)
+        }
     }
 
     buildRightChevron() {
