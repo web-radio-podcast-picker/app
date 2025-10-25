@@ -17,7 +17,7 @@ class TabsController {
         'btn_wrp_podcast_lang',
         'btn_wrp_podcast_tag',
         'btn_wrp_podcast_alpha',
-        'btn_wrp_podcast_page'
+        'btn_wrp_podcast_pdc'
     ]
 
     infTabs = ['btn_wrp_inf', 'btn_wrp_set', 'btn_log_pane']
@@ -37,6 +37,9 @@ class TabsController {
                 this.onTabChanged($c)
             }
         })
+
+        ui.tabs.initTabs(this.pdcTabs)
+
         ui.tabs.initTabs(this.infTabs, {
             onPostChange: ($c) => {
                 this.onInfTabChanged($c)
@@ -76,13 +79,14 @@ class TabsController {
                 // go back to tabBeforeOpenPdc
                 ui.tabs.selectTab(this.tabBeforeOpenPdc, this.tabs)
                 cid = this.tabBeforeOpenPdc
+                uiState.updateCurrentTab(cid, true)
+                // restore viz
                 if (this.tabBeforeOpenPdc == 'btn_wrp_logo')
                     ui.vizTabActivated = true
             }
             else {
                 this.pdcTabSelected = true
             }
-
         } else
             this.pdcTabSelected = false
 
@@ -91,7 +95,7 @@ class TabsController {
         else {
             if (cid != 'btn_wrp_podcast')
                 this.tabBeforeOpenPdc = cid
-            this.showNonPDCListsTabs()
+            this.showNonPDCListsTabs(cid)
         }
 
         // #endregion
@@ -105,7 +109,7 @@ class TabsController {
             ui.vizTabActivated = false
         }
 
-        uiState.updateCurrentTab(c.id)
+        //uiState.updateCurrentTab(c.id)
 
         return this
     }
@@ -127,7 +131,7 @@ class TabsController {
         return this
     }
 
-    showNonPDCListsTabs() {
+    showNonPDCListsTabs(cid) {
         this.tabs.forEach(tabId => {
             $('#' + tabId).removeClass('hidden')
         })
@@ -135,6 +139,10 @@ class TabsController {
             $('#' + tabId).addClass('hidden')
         })
         $('#btn_wrp_podcast').removeClass('selected')
+        $('#opts_wrp_podcast').addClass('hidden')       // fix for tag path button not hidding pdc pane
+
+        uiState.updateCurrentTab(cid)
+        //settings.dataStore.saveUIState()
     }
 
     showPDCTabs() {
@@ -149,6 +157,8 @@ class TabsController {
             .removeClass('selected')
         $('#btn_wrp_logo').removeClass('hidden')
 
+        uiState.updateCurrentTab('btn_wrp_podcast')
+        podcasts.openPodcasts()
     }
 
     // #endregion

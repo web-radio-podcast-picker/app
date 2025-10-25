@@ -4,6 +4,262 @@
     "name": "History",
     "items": [
       {
+        "id": "9193",
+        "name": "Hunter Pop 2K",
+        "description": null,
+        "groupTitle": null,
+        "groups": [
+          "00s",
+          "Pop"
+        ],
+        "url": "https://live.hunter.fm/pop2k_high",
+        "logo": "https://cdn.hunter.fm/image/thumb/station/pop2k-first/1000x1000ht.jpg",
+        "artist": null,
+        "lang": null,
+        "channels": null,
+        "country": null,
+        "favLists": [
+          "History",
+          "Pop"
+        ],
+        "metadata": {
+          "duration": null,
+          "statusText": "playing",
+          "startTime": 1761434589246
+        },
+        "ref": {
+          "currentRDList": {
+            "listId": "Tag",
+            "name": "00s"
+          },
+          "currentTab": {
+            "listId": "Tag",
+            "tabId": "btn_wrp_tag_list"
+          }
+        }
+      },
+      {
+        "id": "13593",
+        "name": "AsiaFM Asia Sky",
+        "description": null,
+        "groupTitle": null,
+        "groups": [
+          "Asia"
+        ],
+        "url": "https://lhttp.qingting.fm/live/4581/64k.mp3",
+        "logo": "https://cdn-profiles.tunein.com/s201534/images/logog.jpg?t=1671762322000",
+        "artist": null,
+        "lang": "Asia",
+        "channels": null,
+        "country": null,
+        "favLists": [
+          "History"
+        ],
+        "metadata": {
+          "duration": null,
+          "stereo": null,
+          "encoding": null,
+          "sampleFrq": null,
+          "sampleRes": null,
+          "country": null,
+          "statusText": null,
+          "startTime": null,
+          "stopTime": null,
+          "position": null
+        }
+      },
+      {
+        "id": "13623",
+        "name": "Chinese Music World",
+        "description": null,
+        "groupTitle": null,
+        "groups": [
+          "Chinese",
+          "Music",
+          "World"
+        ],
+        "url": "https://radio.chinesemusicworld.com/chinesemusic.ogg",
+        "logo": "https://cdn.chinesemusicworld.com/wp-content/uploads/2012/03/logo.png",
+        "artist": null,
+        "lang": "Chinese",
+        "channels": null,
+        "country": null,
+        "favLists": [
+          "Exotique"
+        ],
+        "metadata": {
+          "duration": null,
+          "stereo": null,
+          "encoding": null,
+          "sampleFrq": null,
+          "sampleRes": null,
+          "country": null,
+          "statusText": null,
+          "startTime": null,
+          "stopTime": null,
+          "position": null
+        }
+      },
+      {
+        "id": "18288",
+        "name": "Diana Krall",
+        "description": null,
+        "groupTitle": null,
+        "groups": [
+          "Artists"
+        ],
+        "url": "https://streaming.exclusive.radio/er/dianakrall/icecast.audio",
+        "logo": "https://manager.uber.radio/static/uploads/station/64da41ad-3742-4f62-907d-96f1cf11d81a.jpg",
+        "artist": "Diana Krall",
+        "lang": null,
+        "channels": null,
+        "country": null,
+        "favLists": [
+          "History",
+          "Jazz"
+        ],
+        "metadata": {
+          "duration": null,
+          "stereo": null,
+          "encoding": null,
+          "sampleFrq": null,
+          "sampleRes": null,
+          "country": null,
+          "statusText": null,
+          "startTime": null,
+          "stopTime": null,
+          "position": null
+        }
+      },
+      {
+        "id": "1942",
+        "name": "101.ru French Chanson",
+        "description": null,
+        "groupTitle": null,
+        "groups": [
+          "Radio",
+          "French",
+          "Songs"
+        ],
+        "url": "http://ic6.101.ru:8000/stream/pro/aac/64/146",
+        "logo": "https://kuasark.com/files/stations-logos/101ru-french-chanson.png",
+        "artist": null,
+        "lang": "French",
+        "channels": null,
+        "country": null,
+        "favLists": [
+          "History",
+          "Chanson Française"
+        ],
+        "metadata": {
+          "duration": null,
+          "stereo": null,
+          "encoding": null,
+          "sampleFrq": null,
+          "sampleRes": null,
+          "country": null,
+          "statusText": null,
+          "startTime": null,
+          "stopTime": null,
+          "position": null
+        }
+      },
+      {
+        "id": "20919",
+        "name": "MyNoise Drone Zone",
+        "description": null,
+        "groupTitle": null,
+        "groups": [
+          "Ambient",
+          "Relaxation"
+        ],
+        "url": "http://dronezone-mynoise.radioca.st/stream",
+        "logo": "https://mynoise.net/apple-touch-icon.png",
+        "artist": null,
+        "lang": null,
+        "channels": null,
+        "country": null,
+        "favLists": [
+          "History",
+          "Bizarre"
+        ],
+        "metadata": {
+          "duration": null,
+          "stereo": null,
+          "encoding": null,
+          "sampleFrq": null,
+          "sampleRes": null,
+          "country": null,
+          "statusText": null,
+          "startTime": null,
+          "stopTime": null,
+          "position": null
+        }
+      },
+      {
+        "id": "20889",
+        "name": "Halloween Radio Main",
+        "description": null,
+        "groupTitle": null,
+        "groups": [
+          "Ambient"
+        ],
+        "url": "http://radio1.streamserver.link/radio/8000/hrm-aac",
+        "logo": "https://www.halloweenradio.net/images/channel_main.png",
+        "artist": null,
+        "lang": null,
+        "channels": null,
+        "country": null,
+        "favLists": [
+          "History",
+          "Bizarre"
+        ],
+        "metadata": {
+          "duration": null,
+          "stereo": null,
+          "encoding": null,
+          "sampleFrq": null,
+          "sampleRes": null,
+          "country": null,
+          "statusText": null,
+          "startTime": null,
+          "stopTime": null,
+          "position": null
+        }
+      },
+      {
+        "id": "3335",
+        "name": "70s Style Live",
+        "description": null,
+        "groupTitle": null,
+        "groups": [
+          "70s",
+          "Live"
+        ],
+        "url": "http://stream.zeno.fm/bc2sfc6qeg0uv?rj-ttl=5&rj-tok=AAABfd1UXpUAkDYS7KZ86TEpdQ",
+        "logo": "https://cdn1.jigidi.com/thumbs/HZE8HVAC/l",
+        "artist": null,
+        "lang": null,
+        "channels": null,
+        "country": null,
+        "favLists": [
+          "History",
+          "Années 70"
+        ],
+        "metadata": {
+          "duration": null,
+          "stereo": null,
+          "encoding": null,
+          "sampleFrq": null,
+          "sampleRes": null,
+          "country": null,
+          "statusText": null,
+          "startTime": null,
+          "stopTime": null,
+          "position": null
+        }
+      },
+      {
         "id": "8457",
         "name": "France Info",
         "description": null,
@@ -23,23 +279,15 @@
         ],
         "metadata": {
           "duration": null,
-          "statusText": "pause",
-          "startTime": 1761411169632,
-          "endTime": 1761411179182
-        },
-        "ref": {
-          "currentRDList": {
-            "listId": "List",
-            "name": "Infos",
-            "$item": {
-              "0": {},
-              "length": 1
-            }
-          },
-          "currentTab": {
-            "listId": "List",
-            "tabId": "btn_wrp_play_list"
-          }
+          "stereo": null,
+          "encoding": null,
+          "sampleFrq": null,
+          "sampleRes": null,
+          "country": null,
+          "statusText": null,
+          "startTime": null,
+          "stopTime": null,
+          "position": null
         }
       },
       {
@@ -59,6 +307,7 @@
         "channels": null,
         "country": null,
         "favLists": [
+          "History",
           "Lounge"
         ],
         "metadata": {
@@ -89,6 +338,7 @@
         "channels": null,
         "country": null,
         "favLists": [
+          "History",
           "Lounge"
         ],
         "metadata": {
@@ -119,6 +369,7 @@
         "channels": null,
         "country": null,
         "favLists": [
+          "History",
           "Techno"
         ],
         "metadata": {
@@ -149,6 +400,7 @@
         "channels": null,
         "country": null,
         "favLists": [
+          "History",
           "Techno"
         ],
         "metadata": {
@@ -181,6 +433,7 @@
         "channels": null,
         "country": null,
         "favLists": [
+          "History",
           "Techno"
         ],
         "metadata": {
@@ -211,6 +464,7 @@
         "channels": null,
         "country": null,
         "favLists": [
+          "History",
           "Infos"
         ],
         "metadata": {
@@ -241,6 +495,7 @@
         "channels": null,
         "country": null,
         "favLists": [
+          "History",
           "Infos"
         ],
         "metadata": {
@@ -397,6 +652,7 @@
         "channels": null,
         "country": null,
         "favLists": [
+          "History",
           "Exotique"
         ],
         "metadata": {
@@ -521,6 +777,7 @@
         "channels": null,
         "country": null,
         "favLists": [
+          "History",
           "Infos EN"
         ],
         "metadata": {
@@ -552,6 +809,7 @@
         "channels": null,
         "country": null,
         "favLists": [
+          "History",
           "Infos EN"
         ],
         "metadata": {
@@ -583,6 +841,7 @@
         "channels": null,
         "country": null,
         "favLists": [
+          "History",
           "Infos EN"
         ],
         "metadata": {
@@ -615,6 +874,7 @@
         "channels": null,
         "country": null,
         "favLists": [
+          "History",
           "Infos EN"
         ],
         "metadata": {
@@ -645,6 +905,7 @@
         "channels": null,
         "country": null,
         "favLists": [
+          "History",
           "Infos EN"
         ],
         "metadata": {
@@ -737,6 +998,7 @@
         "channels": null,
         "country": null,
         "favLists": [
+          "History",
           "Indien"
         ],
         "metadata": {
@@ -830,6 +1092,7 @@
         "channels": null,
         "country": null,
         "favLists": [
+          "History",
           "Pop"
         ],
         "metadata": {
@@ -1018,6 +1281,7 @@
         "channels": null,
         "country": null,
         "favLists": [
+          "History",
           "Pop"
         ],
         "metadata": {
@@ -1262,6 +1526,7 @@
         "channels": null,
         "country": null,
         "favLists": [
+          "History",
           "Exotique"
         ],
         "metadata": {
@@ -1293,6 +1558,7 @@
         "channels": null,
         "country": null,
         "favLists": [
+          "History",
           "Lounge"
         ],
         "metadata": {
@@ -1323,6 +1589,7 @@
         "channels": null,
         "country": null,
         "favLists": [
+          "History",
           "Lounge"
         ],
         "metadata": {
@@ -1355,6 +1622,7 @@
         "channels": null,
         "country": null,
         "favLists": [
+          "History",
           "Lounge"
         ],
         "metadata": {
@@ -1386,6 +1654,7 @@
         "channels": null,
         "country": null,
         "favLists": [
+          "History",
           "Lounge"
         ],
         "metadata": {
@@ -1417,6 +1686,7 @@
         "channels": null,
         "country": null,
         "favLists": [
+          "History",
           "Lounge"
         ],
         "metadata": {
@@ -1447,6 +1717,7 @@
         "channels": null,
         "country": null,
         "favLists": [
+          "History",
           "Groove"
         ],
         "metadata": {
@@ -1477,6 +1748,7 @@
         "channels": null,
         "country": null,
         "favLists": [
+          "History",
           "Groove"
         ],
         "metadata": {
@@ -1507,6 +1779,7 @@
         "channels": null,
         "country": null,
         "favLists": [
+          "History",
           "Groove"
         ],
         "metadata": {
@@ -1538,6 +1811,7 @@
         "channels": null,
         "country": null,
         "favLists": [
+          "History",
           "Exotique"
         ],
         "metadata": {
@@ -1569,6 +1843,7 @@
         "channels": null,
         "country": null,
         "favLists": [
+          "History",
           "Exotique"
         ],
         "metadata": {
@@ -1600,6 +1875,7 @@
         "channels": null,
         "country": null,
         "favLists": [
+          "History",
           "Exotique"
         ],
         "metadata": {
@@ -1724,6 +2000,7 @@
         "channels": null,
         "country": null,
         "favLists": [
+          "History",
           "Pop"
         ],
         "metadata": {
@@ -1788,6 +2065,7 @@
         "channels": null,
         "country": null,
         "favLists": [
+          "History",
           "Jazz"
         ],
         "metadata": {
@@ -1823,6 +2101,7 @@
         "channels": null,
         "country": null,
         "favLists": [
+          "History",
           "Slows & Love Songs"
         ],
         "metadata": {
@@ -1854,6 +2133,7 @@
         "channels": null,
         "country": null,
         "favLists": [
+          "History",
           "Jazz"
         ],
         "metadata": {
@@ -1950,40 +2230,8 @@
         "channels": null,
         "country": null,
         "favLists": [
-          "Jazz"
-        ],
-        "metadata": {
-          "duration": null,
-          "stereo": null,
-          "encoding": null,
-          "sampleFrq": null,
-          "sampleRes": null,
-          "country": null,
-          "statusText": null,
-          "startTime": null,
-          "stopTime": null,
-          "position": null
-        }
-      },
-      {
-        "id": "1942",
-        "name": "101.ru French Chanson",
-        "description": null,
-        "groupTitle": null,
-        "groups": [
-          "Radio",
-          "French",
-          "Songs"
-        ],
-        "url": "http://ic6.101.ru:8000/stream/pro/aac/64/146",
-        "logo": "https://kuasark.com/files/stations-logos/101ru-french-chanson.png",
-        "artist": null,
-        "lang": "French",
-        "channels": null,
-        "country": null,
-        "favLists": [
           "History",
-          "Chanson Française"
+          "Jazz"
         ],
         "metadata": {
           "duration": null,
@@ -2047,6 +2295,7 @@
         "channels": null,
         "country": null,
         "favLists": [
+          "History",
           "Crooners"
         ],
         "metadata": {
@@ -2077,6 +2326,7 @@
         "channels": null,
         "country": null,
         "favLists": [
+          "History",
           "Blues"
         ],
         "metadata": {
@@ -2227,6 +2477,7 @@
         "channels": null,
         "country": null,
         "favLists": [
+          "History",
           "Blues"
         ],
         "metadata": {
@@ -2257,6 +2508,7 @@
         "channels": null,
         "country": null,
         "favLists": [
+          "History",
           "Blues"
         ],
         "metadata": {
@@ -2287,6 +2539,7 @@
         "channels": null,
         "country": null,
         "favLists": [
+          "History",
           "Country"
         ],
         "metadata": {
@@ -2320,6 +2573,7 @@
         "channels": null,
         "country": null,
         "favLists": [
+          "History",
           "Années 70"
         ],
         "metadata": {
@@ -2383,6 +2637,7 @@
         "channels": null,
         "country": null,
         "favLists": [
+          "History",
           "Années 70"
         ],
         "metadata": {
@@ -2540,6 +2795,7 @@
         "channels": null,
         "country": null,
         "favLists": [
+          "History",
           "Groove"
         ],
         "metadata": {
@@ -2572,6 +2828,7 @@
         "channels": null,
         "country": null,
         "favLists": [
+          "History",
           "Techno"
         ],
         "metadata": {
@@ -2602,6 +2859,7 @@
         "channels": null,
         "country": null,
         "favLists": [
+          "History",
           "Techno"
         ],
         "metadata": {
@@ -2633,6 +2891,7 @@
         "channels": null,
         "country": null,
         "favLists": [
+          "History",
           "Techno"
         ],
         "metadata": {
@@ -2665,6 +2924,7 @@
         "channels": null,
         "country": null,
         "favLists": [
+          "History",
           "Techno"
         ],
         "metadata": {
@@ -2727,6 +2987,7 @@
         "channels": null,
         "country": null,
         "favLists": [
+          "History",
           "Chanson Française"
         ],
         "metadata": {
@@ -2757,6 +3018,7 @@
         "channels": null,
         "country": null,
         "favLists": [
+          "History",
           "Chanson Française"
         ],
         "metadata": {
@@ -2787,6 +3049,7 @@
         "channels": null,
         "country": null,
         "favLists": [
+          "History",
           "Chanson Française"
         ],
         "metadata": {
@@ -2817,6 +3080,7 @@
         "channels": null,
         "country": null,
         "favLists": [
+          "History",
           "Slows & Love Songs"
         ],
         "metadata": {
@@ -2847,6 +3111,7 @@
         "channels": null,
         "country": null,
         "favLists": [
+          "History",
           "Slows & Love Songs"
         ],
         "metadata": {
@@ -2877,6 +3142,7 @@
         "channels": null,
         "country": null,
         "favLists": [
+          "History",
           "Disco & Funk"
         ],
         "metadata": {
@@ -2907,6 +3173,7 @@
         "channels": null,
         "country": null,
         "favLists": [
+          "History",
           "Disco & Funk"
         ],
         "metadata": {
@@ -2937,6 +3204,7 @@
         "channels": null,
         "country": null,
         "favLists": [
+          "History",
           "Country"
         ],
         "metadata": {
@@ -2967,6 +3235,7 @@
         "channels": null,
         "country": null,
         "favLists": [
+          "History",
           "Guitare électrique"
         ],
         "metadata": {
@@ -2997,6 +3266,7 @@
         "channels": null,
         "country": null,
         "favLists": [
+          "History",
           "Guitare électrique"
         ],
         "metadata": {
@@ -3027,6 +3297,7 @@
         "channels": null,
         "country": null,
         "favLists": [
+          "History",
           "Guitare électrique"
         ],
         "metadata": {
@@ -3057,6 +3328,7 @@
         "channels": null,
         "country": null,
         "favLists": [
+          "History",
           "Pop"
         ],
         "metadata": {
@@ -3087,6 +3359,7 @@
         "channels": null,
         "country": null,
         "favLists": [
+          "History",
           "Pop"
         ],
         "metadata": {
@@ -3119,6 +3392,7 @@
         "channels": null,
         "country": null,
         "favLists": [
+          "History",
           "Groove"
         ],
         "metadata": {
@@ -3150,6 +3424,7 @@
         "channels": null,
         "country": null,
         "favLists": [
+          "History",
           "Groove"
         ],
         "metadata": {
@@ -3177,36 +3452,6 @@
         "url": "https://0n-smoothjazz.radionetz.de/0n-smoothjazz.mp3",
         "logo": "https://www.0nradio.com/images/favicon/favicon.ico",
         "artist": null,
-        "lang": null,
-        "channels": null,
-        "country": null,
-        "favLists": [
-          "Jazz"
-        ],
-        "metadata": {
-          "duration": null,
-          "stereo": null,
-          "encoding": null,
-          "sampleFrq": null,
-          "sampleRes": null,
-          "country": null,
-          "statusText": null,
-          "startTime": null,
-          "stopTime": null,
-          "position": null
-        }
-      },
-      {
-        "id": "18288",
-        "name": "Diana Krall",
-        "description": null,
-        "groupTitle": null,
-        "groups": [
-          "Artists"
-        ],
-        "url": "https://streaming.exclusive.radio/er/dianakrall/icecast.audio",
-        "logo": "https://manager.uber.radio/static/uploads/station/64da41ad-3742-4f62-907d-96f1cf11d81a.jpg",
-        "artist": "Diana Krall",
         "lang": null,
         "channels": null,
         "country": null,
@@ -3242,6 +3487,7 @@
         "channels": null,
         "country": null,
         "favLists": [
+          "History",
           "Jazz"
         ],
         "metadata": {
@@ -3273,6 +3519,7 @@
         "channels": null,
         "country": null,
         "favLists": [
+          "History",
           "Reggae"
         ],
         "metadata": {
@@ -3305,6 +3552,7 @@
         "channels": null,
         "country": null,
         "favLists": [
+          "History",
           "Lounge"
         ],
         "metadata": {
@@ -3398,6 +3646,7 @@
         "channels": null,
         "country": null,
         "favLists": [
+          "History",
           "Electro"
         ],
         "metadata": {
@@ -3429,6 +3678,7 @@
         "channels": null,
         "country": null,
         "favLists": [
+          "History",
           "Oldies but goodies"
         ],
         "metadata": {
@@ -3491,6 +3741,7 @@
         "channels": null,
         "country": null,
         "favLists": [
+          "History",
           "Lounge"
         ],
         "metadata": {
@@ -3522,6 +3773,7 @@
         "channels": null,
         "country": null,
         "favLists": [
+          "History",
           "Classique"
         ],
         "metadata": {
@@ -3709,6 +3961,7 @@
         "channels": null,
         "country": null,
         "favLists": [
+          "History",
           "Pop"
         ],
         "metadata": {
@@ -3741,6 +3994,7 @@
         "channels": null,
         "country": null,
         "favLists": [
+          "History",
           "Opéra"
         ],
         "metadata": {
@@ -3771,6 +4025,7 @@
         "channels": null,
         "country": null,
         "favLists": [
+          "History",
           "Pop"
         ],
         "metadata": {
@@ -3803,6 +4058,7 @@
         "channels": null,
         "country": null,
         "favLists": [
+          "History",
           "Opéra"
         ],
         "metadata": {
@@ -3834,6 +4090,7 @@
         "channels": null,
         "country": null,
         "favLists": [
+          "History",
           "Slows & Love Songs"
         ],
         "metadata": {
@@ -3865,6 +4122,7 @@
         "channels": null,
         "country": null,
         "favLists": [
+          "History",
           "Lounge"
         ],
         "metadata": {
@@ -3897,6 +4155,7 @@
         "channels": null,
         "country": null,
         "favLists": [
+          "History",
           "Lounge"
         ],
         "metadata": {
@@ -3906,24 +4165,10 @@
           "sampleFrq": null,
           "sampleRes": null,
           "country": null,
-          "statusText": "connecting...",
-          "startTime": 1761411150543,
+          "statusText": null,
+          "startTime": null,
           "stopTime": null,
           "position": null
-        },
-        "ref": {
-          "currentRDList": {
-            "listId": "List",
-            "name": "Lounge",
-            "$item": {
-              "0": {},
-              "length": 1
-            }
-          },
-          "currentTab": {
-            "listId": "Viz",
-            "tabId": "btn_wrp_logo"
-          }
         }
       },
       {
@@ -4101,6 +4346,7 @@
         "channels": null,
         "country": null,
         "favLists": [
+          "History",
           "Exotique"
         ],
         "metadata": {
@@ -4132,6 +4378,7 @@
         "channels": null,
         "country": null,
         "favLists": [
+          "History",
           "Années 80"
         ],
         "metadata": {
@@ -4288,6 +4535,7 @@
         "channels": null,
         "country": null,
         "favLists": [
+          "History",
           "Electro"
         ],
         "metadata": {
@@ -4318,6 +4566,7 @@
         "channels": null,
         "country": null,
         "favLists": [
+          "History",
           "Pop"
         ],
         "metadata": {
@@ -4348,6 +4597,7 @@
         "channels": null,
         "country": null,
         "favLists": [
+          "History",
           "Pop"
         ],
         "metadata": {
@@ -4380,6 +4630,7 @@
         "channels": null,
         "country": null,
         "favLists": [
+          "History",
           "Groove"
         ],
         "metadata": {
@@ -4440,6 +4691,7 @@
         "channels": null,
         "country": null,
         "favLists": [
+          "History",
           "Crooners"
         ],
         "metadata": {
@@ -4472,6 +4724,7 @@
         "channels": null,
         "country": null,
         "favLists": [
+          "History",
           "Pop"
         ],
         "metadata": {
@@ -4502,6 +4755,7 @@
         "channels": null,
         "country": null,
         "favLists": [
+          "History",
           "Indien"
         ],
         "metadata": {
@@ -4564,6 +4818,7 @@
         "channels": null,
         "country": null,
         "favLists": [
+          "History",
           "Jazz"
         ],
         "metadata": {
@@ -4626,6 +4881,7 @@
         "channels": null,
         "country": null,
         "favLists": [
+          "History",
           "Instrumental"
         ],
         "metadata": {
@@ -4657,6 +4913,7 @@
         "channels": null,
         "country": null,
         "favLists": [
+          "History",
           "Instrumental"
         ],
         "metadata": {
@@ -4687,6 +4944,7 @@
         "channels": null,
         "country": null,
         "favLists": [
+          "History",
           "Instrumental"
         ],
         "metadata": {
@@ -4717,6 +4975,7 @@
         "channels": null,
         "country": null,
         "favLists": [
+          "History",
           "Country"
         ],
         "metadata": {
@@ -4846,6 +5105,7 @@
         "channels": null,
         "country": null,
         "favLists": [
+          "History",
           "Infos"
         ],
         "metadata": {
@@ -4878,6 +5138,7 @@
         "channels": null,
         "country": null,
         "favLists": [
+          "History",
           "Pop"
         ],
         "metadata": {
@@ -4909,6 +5170,7 @@
         "channels": null,
         "country": null,
         "favLists": [
+          "History",
           "Slows & Love Songs"
         ],
         "metadata": {
@@ -4971,6 +5233,7 @@
         "channels": null,
         "country": null,
         "favLists": [
+          "History",
           "Bizarre"
         ],
         "metadata": {
@@ -5001,68 +5264,8 @@
         "channels": null,
         "country": null,
         "favLists": [
+          "History",
           "Slows & Love Songs"
-        ],
-        "metadata": {
-          "duration": null,
-          "stereo": null,
-          "encoding": null,
-          "sampleFrq": null,
-          "sampleRes": null,
-          "country": null,
-          "statusText": null,
-          "startTime": null,
-          "stopTime": null,
-          "position": null
-        }
-      },
-      {
-        "id": "20919",
-        "name": "MyNoise Drone Zone",
-        "description": null,
-        "groupTitle": null,
-        "groups": [
-          "Ambient",
-          "Relaxation"
-        ],
-        "url": "http://dronezone-mynoise.radioca.st/stream",
-        "logo": "https://mynoise.net/apple-touch-icon.png",
-        "artist": null,
-        "lang": null,
-        "channels": null,
-        "country": null,
-        "favLists": [
-          "Bizarre"
-        ],
-        "metadata": {
-          "duration": null,
-          "stereo": null,
-          "encoding": null,
-          "sampleFrq": null,
-          "sampleRes": null,
-          "country": null,
-          "statusText": null,
-          "startTime": null,
-          "stopTime": null,
-          "position": null
-        }
-      },
-      {
-        "id": "20889",
-        "name": "Halloween Radio Main",
-        "description": null,
-        "groupTitle": null,
-        "groups": [
-          "Ambient"
-        ],
-        "url": "http://radio1.streamserver.link/radio/8000/hrm-aac",
-        "logo": "https://www.halloweenradio.net/images/channel_main.png",
-        "artist": null,
-        "lang": null,
-        "channels": null,
-        "country": null,
-        "favLists": [
-          "Bizarre"
         ],
         "metadata": {
           "duration": null,
@@ -5275,6 +5478,7 @@
         "channels": null,
         "country": null,
         "favLists": [
+          "History",
           "Jazz"
         ],
         "metadata": {
@@ -5337,6 +5541,7 @@
         "channels": null,
         "country": null,
         "favLists": [
+          "History",
           "Electro"
         ],
         "metadata": {
@@ -5465,6 +5670,7 @@
         "channels": null,
         "country": null,
         "favLists": [
+          "History",
           "Lounge"
         ],
         "metadata": {
@@ -5496,6 +5702,7 @@
         "channels": null,
         "country": null,
         "favLists": [
+          "History",
           "Groove"
         ],
         "metadata": {
@@ -5528,6 +5735,7 @@
         "channels": null,
         "country": null,
         "favLists": [
+          "History",
           "Années 70"
         ],
         "metadata": {
@@ -5589,6 +5797,7 @@
         "channels": null,
         "country": null,
         "favLists": [
+          "History",
           "Années 70"
         ],
         "metadata": {
@@ -5621,6 +5830,7 @@
         "channels": null,
         "country": null,
         "favLists": [
+          "History",
           "Jazz"
         ],
         "metadata": {
@@ -5651,6 +5861,7 @@
         "channels": null,
         "country": null,
         "favLists": [
+          "History",
           "Jazz"
         ],
         "metadata": {
@@ -5681,6 +5892,7 @@
         "channels": null,
         "country": null,
         "favLists": [
+          "History",
           "Jazz"
         ],
         "metadata": {
@@ -5743,6 +5955,7 @@
         "channels": null,
         "country": null,
         "favLists": [
+          "History",
           "Oldies but goodies"
         ],
         "metadata": {
@@ -5928,6 +6141,7 @@
         "channels": null,
         "country": null,
         "favLists": [
+          "History",
           "Groove"
         ],
         "metadata": {
@@ -6112,6 +6326,7 @@
         "channels": null,
         "country": null,
         "favLists": [
+          "History",
           "Pop"
         ],
         "metadata": {
@@ -6236,6 +6451,7 @@
         "channels": null,
         "country": null,
         "favLists": [
+          "History",
           "Pop"
         ],
         "metadata": {
@@ -6360,6 +6576,7 @@
         "channels": null,
         "country": null,
         "favLists": [
+          "History",
           "Rock"
         ],
         "metadata": {
@@ -6421,6 +6638,7 @@
         "channels": null,
         "country": null,
         "favLists": [
+          "History",
           "Jazz"
         ],
         "metadata": {
@@ -6453,6 +6671,7 @@
         "channels": null,
         "country": null,
         "favLists": [
+          "History",
           "Oldies but goodies"
         ],
         "metadata": {
@@ -6483,6 +6702,7 @@
         "channels": null,
         "country": null,
         "favLists": [
+          "History",
           "Infos"
         ],
         "metadata": {
@@ -6544,6 +6764,7 @@
         "channels": null,
         "country": null,
         "favLists": [
+          "History",
           "Jazz"
         ],
         "metadata": {
@@ -6574,8 +6795,8 @@
         "channels": null,
         "country": null,
         "favLists": [
-          "Jazz",
-          "History"
+          "History",
+          "Jazz"
         ],
         "metadata": {
           "duration": null,
@@ -6696,6 +6917,7 @@
         "channels": null,
         "country": null,
         "favLists": [
+          "History",
           "Oldies but goodies"
         ],
         "metadata": {
@@ -6821,6 +7043,7 @@
         "channels": null,
         "country": null,
         "favLists": [
+          "History",
           "Blues"
         ],
         "metadata": {
@@ -7049,6 +7272,7 @@
         "channels": null,
         "country": null,
         "favLists": [
+          "History",
           "Classique"
         ],
         "metadata": {
@@ -7439,6 +7663,7 @@
         "channels": null,
         "country": null,
         "favLists": [
+          "History",
           "Indien"
         ],
         "metadata": {
@@ -7501,6 +7726,7 @@
         "channels": null,
         "country": null,
         "favLists": [
+          "History",
           "Indien"
         ],
         "metadata": {
@@ -7540,6 +7766,7 @@
         "channels": null,
         "country": null,
         "favLists": [
+          "History",
           "Groove"
         ],
         "metadata": {
@@ -7571,6 +7798,7 @@
         "channels": null,
         "country": null,
         "favLists": [
+          "History",
           "Groove"
         ],
         "metadata": {
@@ -7601,6 +7829,7 @@
         "channels": null,
         "country": null,
         "favLists": [
+          "History",
           "Groove"
         ],
         "metadata": {
@@ -7631,6 +7860,7 @@
         "channels": null,
         "country": null,
         "favLists": [
+          "History",
           "Groove"
         ],
         "metadata": {
@@ -7662,6 +7892,7 @@
         "channels": null,
         "country": null,
         "favLists": [
+          "History",
           "Groove"
         ],
         "metadata": {
@@ -7694,6 +7925,7 @@
         "channels": null,
         "country": null,
         "favLists": [
+          "History",
           "Groove"
         ],
         "metadata": {
@@ -7724,6 +7956,7 @@
         "channels": null,
         "country": null,
         "favLists": [
+          "History",
           "Groove"
         ],
         "metadata": {
@@ -7755,6 +7988,7 @@
         "channels": null,
         "country": null,
         "favLists": [
+          "History",
           "Groove"
         ],
         "metadata": {
@@ -7785,6 +8019,7 @@
         "channels": null,
         "country": null,
         "favLists": [
+          "History",
           "Groove"
         ],
         "metadata": {
@@ -7991,6 +8226,7 @@
         "channels": null,
         "country": null,
         "favLists": [
+          "History",
           "Années 70"
         ],
         "metadata": {
@@ -8085,6 +8321,7 @@
         "channels": null,
         "country": null,
         "favLists": [
+          "History",
           "Années 70"
         ],
         "metadata": {
@@ -8116,6 +8353,7 @@
         "channels": null,
         "country": null,
         "favLists": [
+          "History",
           "Années 70"
         ],
         "metadata": {
@@ -8178,6 +8416,7 @@
         "channels": null,
         "country": null,
         "favLists": [
+          "History",
           "Années 70"
         ],
         "metadata": {
@@ -8215,6 +8454,7 @@
         "channels": null,
         "country": null,
         "favLists": [
+          "History",
           "Guitare électrique"
         ],
         "metadata": {
@@ -8426,6 +8666,7 @@
         "channels": null,
         "country": null,
         "favLists": [
+          "History",
           "Guitare électrique"
         ],
         "metadata": {
@@ -8456,6 +8697,7 @@
         "channels": null,
         "country": null,
         "favLists": [
+          "History",
           "Guitare électrique"
         ],
         "metadata": {
@@ -8583,6 +8825,7 @@
         "channels": null,
         "country": null,
         "favLists": [
+          "History",
           "Crooners"
         ],
         "metadata": {
@@ -8733,6 +8976,7 @@
         "channels": null,
         "country": null,
         "favLists": [
+          "History",
           "Crooners"
         ],
         "metadata": {
@@ -8837,6 +9081,7 @@
         "channels": null,
         "country": null,
         "favLists": [
+          "History",
           "Oldies but goodies"
         ],
         "metadata": {
@@ -8868,6 +9113,7 @@
         "channels": null,
         "country": null,
         "favLists": [
+          "History",
           "Oldies but goodies"
         ],
         "metadata": {
@@ -8900,6 +9146,7 @@
         "channels": null,
         "country": null,
         "favLists": [
+          "History",
           "Oldies but goodies"
         ],
         "metadata": {
@@ -8931,6 +9178,7 @@
         "channels": null,
         "country": null,
         "favLists": [
+          "History",
           "Oldies but goodies"
         ],
         "metadata": {
@@ -9031,6 +9279,7 @@
         "channels": null,
         "country": null,
         "favLists": [
+          "History",
           "Années 80"
         ],
         "metadata": {
@@ -9299,6 +9548,7 @@
         "channels": null,
         "country": null,
         "favLists": [
+          "History",
           "Reggae"
         ],
         "metadata": {
@@ -9368,6 +9618,7 @@
         "channels": null,
         "country": null,
         "favLists": [
+          "History",
           "Instrumental"
         ],
         "metadata": {
@@ -9399,6 +9650,7 @@
         "channels": null,
         "country": null,
         "favLists": [
+          "History",
           "Instrumental"
         ],
         "metadata": {
@@ -9429,6 +9681,7 @@
         "channels": null,
         "country": null,
         "favLists": [
+          "History",
           "Instrumental"
         ],
         "metadata": {
@@ -9467,6 +9720,7 @@
         "channels": null,
         "country": null,
         "favLists": [
+          "History",
           "Blues"
         ],
         "metadata": {
@@ -9497,6 +9751,7 @@
         "channels": null,
         "country": null,
         "favLists": [
+          "History",
           "Blues"
         ],
         "metadata": {
@@ -9527,6 +9782,7 @@
         "channels": null,
         "country": null,
         "favLists": [
+          "History",
           "Blues"
         ],
         "metadata": {
@@ -9557,6 +9813,7 @@
         "channels": null,
         "country": null,
         "favLists": [
+          "History",
           "Blues"
         ],
         "metadata": {
@@ -9714,6 +9971,7 @@
         "channels": null,
         "country": null,
         "favLists": [
+          "History",
           "Rock"
         ],
         "metadata": {
@@ -9781,6 +10039,7 @@
         "channels": null,
         "country": null,
         "favLists": [
+          "History",
           "Bizarre"
         ],
         "metadata": {
@@ -9811,6 +10070,7 @@
         "channels": null,
         "country": null,
         "favLists": [
+          "History",
           "Bizarre"
         ],
         "metadata": {
@@ -9842,6 +10102,7 @@
         "channels": null,
         "country": null,
         "favLists": [
+          "History",
           "Bizarre"
         ],
         "metadata": {
@@ -9918,6 +10179,7 @@
         "channels": null,
         "country": null,
         "favLists": [
+          "History",
           "Pop"
         ],
         "metadata": {
@@ -9948,6 +10210,7 @@
         "channels": null,
         "country": null,
         "favLists": [
+          "History",
           "Pop"
         ],
         "metadata": {
@@ -9979,6 +10242,7 @@
         "channels": null,
         "country": null,
         "favLists": [
+          "History",
           "Pop"
         ],
         "metadata": {
@@ -10011,6 +10275,7 @@
         "channels": null,
         "country": null,
         "favLists": [
+          "History",
           "Pop"
         ],
         "metadata": {
@@ -10041,6 +10306,7 @@
         "channels": null,
         "country": null,
         "favLists": [
+          "History",
           "Pop"
         ],
         "metadata": {
@@ -10073,6 +10339,7 @@
         "channels": null,
         "country": null,
         "favLists": [
+          "History",
           "Pop"
         ],
         "metadata": {
@@ -10103,6 +10370,7 @@
         "channels": null,
         "country": null,
         "favLists": [
+          "History",
           "Pop"
         ],
         "metadata": {
@@ -10227,6 +10495,7 @@
         "channels": null,
         "country": null,
         "favLists": [
+          "History",
           "Pop"
         ],
         "metadata": {
@@ -10258,6 +10527,7 @@
         "channels": null,
         "country": null,
         "favLists": [
+          "History",
           "Pop"
         ],
         "metadata": {
@@ -10288,6 +10558,7 @@
         "channels": null,
         "country": null,
         "favLists": [
+          "History",
           "Pop"
         ],
         "metadata": {
@@ -10318,6 +10589,7 @@
         "channels": null,
         "country": null,
         "favLists": [
+          "History",
           "Pop"
         ],
         "metadata": {
@@ -10380,6 +10652,7 @@
         "channels": null,
         "country": null,
         "favLists": [
+          "History",
           "Pop"
         ],
         "metadata": {
@@ -10443,6 +10716,7 @@
         "channels": null,
         "country": null,
         "favLists": [
+          "History",
           "Pop"
         ],
         "metadata": {
@@ -10456,6 +10730,41 @@
           "startTime": null,
           "stopTime": null,
           "position": null
+        }
+      },
+      {
+        "id": "9193",
+        "name": "Hunter Pop 2K",
+        "description": null,
+        "groupTitle": null,
+        "groups": [
+          "00s",
+          "Pop"
+        ],
+        "url": "https://live.hunter.fm/pop2k_high",
+        "logo": "https://cdn.hunter.fm/image/thumb/station/pop2k-first/1000x1000ht.jpg",
+        "artist": null,
+        "lang": null,
+        "channels": null,
+        "country": null,
+        "favLists": [
+          "History",
+          "Pop"
+        ],
+        "metadata": {
+          "duration": null,
+          "statusText": "playing",
+          "startTime": 1761434589246
+        },
+        "ref": {
+          "currentRDList": {
+            "listId": "Tag",
+            "name": "00s"
+          },
+          "currentTab": {
+            "listId": "Tag",
+            "tabId": "btn_wrp_tag_list"
+          }
         }
       }
     ],
@@ -10513,6 +10822,7 @@
         "channels": null,
         "country": null,
         "favLists": [
+          "History",
           "Chanson Française"
         ],
         "metadata": {
@@ -10606,6 +10916,7 @@
         "channels": null,
         "country": null,
         "favLists": [
+          "History",
           "Chanson Française"
         ],
         "metadata": {
@@ -10636,6 +10947,7 @@
         "channels": null,
         "country": null,
         "favLists": [
+          "History",
           "Chanson Française"
         ],
         "metadata": {
@@ -10735,6 +11047,7 @@
         "channels": null,
         "country": null,
         "favLists": [
+          "History",
           "Lounge"
         ],
         "metadata": {
@@ -10766,6 +11079,7 @@
         "channels": null,
         "country": null,
         "favLists": [
+          "History",
           "Lounge"
         ],
         "metadata": {
@@ -10796,6 +11110,7 @@
         "channels": null,
         "country": null,
         "favLists": [
+          "History",
           "Lounge"
         ],
         "metadata": {
@@ -10826,6 +11141,7 @@
         "channels": null,
         "country": null,
         "favLists": [
+          "History",
           "Lounge"
         ],
         "metadata": {
@@ -10858,6 +11174,7 @@
         "channels": null,
         "country": null,
         "favLists": [
+          "History",
           "Lounge"
         ],
         "metadata": {
@@ -10890,6 +11207,7 @@
         "channels": null,
         "country": null,
         "favLists": [
+          "History",
           "Lounge"
         ],
         "metadata": {
@@ -10922,6 +11240,7 @@
         "channels": null,
         "country": null,
         "favLists": [
+          "History",
           "Lounge"
         ],
         "metadata": {
@@ -10931,24 +11250,10 @@
           "sampleFrq": null,
           "sampleRes": null,
           "country": null,
-          "statusText": "connecting...",
-          "startTime": 1761411150543,
+          "statusText": null,
+          "startTime": null,
           "stopTime": null,
           "position": null
-        },
-        "ref": {
-          "currentRDList": {
-            "listId": "List",
-            "name": "Lounge",
-            "$item": {
-              "0": {},
-              "length": 1
-            }
-          },
-          "currentTab": {
-            "listId": "Viz",
-            "tabId": "btn_wrp_logo"
-          }
         }
       },
       {
@@ -10967,6 +11272,7 @@
         "channels": null,
         "country": null,
         "favLists": [
+          "History",
           "Lounge"
         ],
         "metadata": {
@@ -11000,6 +11306,7 @@
         "channels": null,
         "country": null,
         "favLists": [
+          "History",
           "Lounge"
         ],
         "metadata": {
@@ -11032,6 +11339,7 @@
         "channels": null,
         "country": null,
         "favLists": [
+          "History",
           "Lounge"
         ],
         "metadata": {
@@ -11093,6 +11401,7 @@
         "channels": null,
         "country": null,
         "favLists": [
+          "History",
           "Lounge"
         ],
         "metadata": {
@@ -11156,6 +11465,7 @@
         "channels": null,
         "country": null,
         "favLists": [
+          "History",
           "Lounge"
         ],
         "metadata": {
@@ -11194,6 +11504,7 @@
         "channels": null,
         "country": null,
         "favLists": [
+          "History",
           "Exotique"
         ],
         "metadata": {
@@ -11287,6 +11598,7 @@
         "channels": null,
         "country": null,
         "favLists": [
+          "History",
           "Exotique"
         ],
         "metadata": {
@@ -11319,6 +11631,7 @@
         "channels": null,
         "country": null,
         "favLists": [
+          "History",
           "Exotique"
         ],
         "metadata": {
@@ -11350,6 +11663,7 @@
         "channels": null,
         "country": null,
         "favLists": [
+          "History",
           "Exotique"
         ],
         "metadata": {
@@ -11380,6 +11694,7 @@
         "channels": null,
         "country": null,
         "favLists": [
+          "History",
           "Exotique"
         ],
         "metadata": {
@@ -11444,6 +11759,7 @@
         "channels": null,
         "country": null,
         "favLists": [
+          "History",
           "Exotique"
         ],
         "metadata": {
@@ -11483,6 +11799,7 @@
         "channels": null,
         "country": null,
         "favLists": [
+          "History",
           "Opéra"
         ],
         "metadata": {
@@ -11515,6 +11832,7 @@
         "channels": null,
         "country": null,
         "favLists": [
+          "History",
           "Opéra"
         ],
         "metadata": {
@@ -11711,6 +12029,7 @@
         "channels": null,
         "country": null,
         "favLists": [
+          "History",
           "Jazz"
         ],
         "metadata": {
@@ -11773,6 +12092,7 @@
         "channels": null,
         "country": null,
         "favLists": [
+          "History",
           "Jazz"
         ],
         "metadata": {
@@ -11805,6 +12125,7 @@
         "channels": null,
         "country": null,
         "favLists": [
+          "History",
           "Jazz"
         ],
         "metadata": {
@@ -11835,8 +12156,8 @@
         "channels": null,
         "country": null,
         "favLists": [
-          "Jazz",
-          "History"
+          "History",
+          "Jazz"
         ],
         "metadata": {
           "duration": null,
@@ -11866,6 +12187,7 @@
         "channels": null,
         "country": null,
         "favLists": [
+          "History",
           "Jazz"
         ],
         "metadata": {
@@ -11956,6 +12278,7 @@
         "channels": null,
         "country": null,
         "favLists": [
+          "History",
           "Jazz"
         ],
         "metadata": {
@@ -11986,6 +12309,7 @@
         "channels": null,
         "country": null,
         "favLists": [
+          "History",
           "Jazz"
         ],
         "metadata": {
@@ -12136,6 +12460,7 @@
         "channels": null,
         "country": null,
         "favLists": [
+          "History",
           "Jazz"
         ],
         "metadata": {
@@ -12166,6 +12491,7 @@
         "channels": null,
         "country": null,
         "favLists": [
+          "History",
           "Jazz"
         ],
         "metadata": {
@@ -12288,6 +12614,7 @@
         "channels": null,
         "country": null,
         "favLists": [
+          "History",
           "Jazz"
         ],
         "metadata": {
@@ -12318,6 +12645,7 @@
         "channels": null,
         "country": null,
         "favLists": [
+          "History",
           "Jazz"
         ],
         "metadata": {
@@ -12379,6 +12707,7 @@
         "channels": null,
         "country": null,
         "favLists": [
+          "History",
           "Jazz"
         ],
         "metadata": {
@@ -12410,6 +12739,7 @@
         "channels": null,
         "country": null,
         "favLists": [
+          "History",
           "Jazz"
         ],
         "metadata": {
@@ -12447,6 +12777,7 @@
         "channels": null,
         "country": null,
         "favLists": [
+          "History",
           "Disco & Funk"
         ],
         "metadata": {
@@ -12477,6 +12808,7 @@
         "channels": null,
         "country": null,
         "favLists": [
+          "History",
           "Disco & Funk"
         ],
         "metadata": {
@@ -12516,6 +12848,7 @@
         "channels": null,
         "country": null,
         "favLists": [
+          "History",
           "Techno"
         ],
         "metadata": {
@@ -12548,6 +12881,7 @@
         "channels": null,
         "country": null,
         "favLists": [
+          "History",
           "Techno"
         ],
         "metadata": {
@@ -12578,6 +12912,7 @@
         "channels": null,
         "country": null,
         "favLists": [
+          "History",
           "Techno"
         ],
         "metadata": {
@@ -12610,6 +12945,7 @@
         "channels": null,
         "country": null,
         "favLists": [
+          "History",
           "Techno"
         ],
         "metadata": {
@@ -12640,6 +12976,7 @@
         "channels": null,
         "country": null,
         "favLists": [
+          "History",
           "Techno"
         ],
         "metadata": {
@@ -12671,6 +13008,7 @@
         "channels": null,
         "country": null,
         "favLists": [
+          "History",
           "Techno"
         ],
         "metadata": {
@@ -12701,6 +13039,7 @@
         "channels": null,
         "country": null,
         "favLists": [
+          "History",
           "Techno"
         ],
         "metadata": {
@@ -12738,6 +13077,7 @@
         "channels": null,
         "country": null,
         "favLists": [
+          "History",
           "Slows & Love Songs"
         ],
         "metadata": {
@@ -12768,6 +13108,7 @@
         "channels": null,
         "country": null,
         "favLists": [
+          "History",
           "Slows & Love Songs"
         ],
         "metadata": {
@@ -12798,6 +13139,7 @@
         "channels": null,
         "country": null,
         "favLists": [
+          "History",
           "Slows & Love Songs"
         ],
         "metadata": {
@@ -12833,6 +13175,7 @@
         "channels": null,
         "country": null,
         "favLists": [
+          "History",
           "Slows & Love Songs"
         ],
         "metadata": {
@@ -12895,6 +13238,7 @@
         "channels": null,
         "country": null,
         "favLists": [
+          "History",
           "Slows & Love Songs"
         ],
         "metadata": {
@@ -12926,6 +13270,7 @@
         "channels": null,
         "country": null,
         "favLists": [
+          "History",
           "Slows & Love Songs"
         ],
         "metadata": {
@@ -13030,23 +13375,15 @@
         ],
         "metadata": {
           "duration": null,
-          "statusText": "pause",
-          "startTime": 1761411169632,
-          "endTime": 1761411179182
-        },
-        "ref": {
-          "currentRDList": {
-            "listId": "List",
-            "name": "Infos",
-            "$item": {
-              "0": {},
-              "length": 1
-            }
-          },
-          "currentTab": {
-            "listId": "List",
-            "tabId": "btn_wrp_play_list"
-          }
+          "stereo": null,
+          "encoding": null,
+          "sampleFrq": null,
+          "sampleRes": null,
+          "country": null,
+          "statusText": null,
+          "startTime": null,
+          "stopTime": null,
+          "position": null
         }
       },
       {
@@ -13096,6 +13433,7 @@
         "channels": null,
         "country": null,
         "favLists": [
+          "History",
           "Infos"
         ],
         "metadata": {
@@ -13126,6 +13464,7 @@
         "channels": null,
         "country": null,
         "favLists": [
+          "History",
           "Infos"
         ],
         "metadata": {
@@ -13156,6 +13495,7 @@
         "channels": null,
         "country": null,
         "favLists": [
+          "History",
           "Infos"
         ],
         "metadata": {
@@ -13188,6 +13528,7 @@
         "channels": null,
         "country": null,
         "favLists": [
+          "History",
           "Infos"
         ],
         "metadata": {
@@ -13347,6 +13688,7 @@
         "channels": null,
         "country": null,
         "favLists": [
+          "History",
           "Country"
         ],
         "metadata": {
@@ -13407,6 +13749,7 @@
         "channels": null,
         "country": null,
         "favLists": [
+          "History",
           "Country"
         ],
         "metadata": {
@@ -13557,6 +13900,7 @@
         "channels": null,
         "country": null,
         "favLists": [
+          "History",
           "Country"
         ],
         "metadata": {
@@ -13755,6 +14099,7 @@
         "channels": null,
         "country": null,
         "favLists": [
+          "History",
           "Electro"
         ],
         "metadata": {
@@ -13818,6 +14163,7 @@
         "channels": null,
         "country": null,
         "favLists": [
+          "History",
           "Electro"
         ],
         "metadata": {
@@ -13849,6 +14195,7 @@
         "channels": null,
         "country": null,
         "favLists": [
+          "History",
           "Electro"
         ],
         "metadata": {
@@ -13951,6 +14298,7 @@
         "channels": null,
         "country": null,
         "favLists": [
+          "History",
           "Infos EN"
         ],
         "metadata": {
@@ -13982,6 +14330,7 @@
         "channels": null,
         "country": null,
         "favLists": [
+          "History",
           "Infos EN"
         ],
         "metadata": {
@@ -14014,6 +14363,7 @@
         "channels": null,
         "country": null,
         "favLists": [
+          "History",
           "Infos EN"
         ],
         "metadata": {
@@ -14044,6 +14394,7 @@
         "channels": null,
         "country": null,
         "favLists": [
+          "History",
           "Infos EN"
         ],
         "metadata": {
@@ -14075,6 +14426,7 @@
         "channels": null,
         "country": null,
         "favLists": [
+          "History",
           "Infos EN"
         ],
         "metadata": {

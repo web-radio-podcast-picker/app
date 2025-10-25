@@ -23,6 +23,7 @@ class UIState {
         'Art': 'btn_wrp_art_list',
         'Lang': 'btn_wrp_lang_list',
         'Tag': 'btn_wrp_tag_list',
+        'Podcast': 'btn_wrp_podcast',
         'Viz': 'btn_wrp_logo'         // not a tab
         // RadioList_Info
     }
@@ -43,6 +44,16 @@ class UIState {
 
     //#endregion
 
+    tabIdToListId(tabId) {
+        var res = null
+        for (var listId in this.listIdToTabId) {
+            const ltabId = this.listIdToTabId[listId]
+            if (tabId == ltabId)
+                res = listId
+        }
+        return res
+    }
+
     setTab(listId) {
         if (this.listIdToTabId[listId]) {
             const tabId = this.listIdToTabId[listId]
@@ -52,6 +63,8 @@ class UIState {
             tabsController.focusTabSelectedItem($tab)
 
             logger.log('set tab: ' + tabId)
+            uiState.updateCurrentTab($tab[0].id)
+
             return tabId
         }
         return null
