@@ -266,9 +266,7 @@ class Favorites {
             )
         }
         // refresh bottom path
-        if (uiState.currentRDItem != null
-            && favorites.getFavName(uiState.currentRDItem) != null
-        ) {
+        if (uiState.currentRDItem != null) {
             radListBuilder.pathBuilder.buildRadioViewTagPath(
                 uiState.currentRDItem
             )
