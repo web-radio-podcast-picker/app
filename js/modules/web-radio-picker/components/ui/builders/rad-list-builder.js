@@ -9,7 +9,7 @@ class RadListBuilder {
     pathBuilder = new RadListPathBuilder()
 
     // build a playable item
-    buildListItem(text, id, j, opts, rdItem, listId, listName) {
+    buildListItem(text, id, j, opts, rdItem, listId, listName, textViewFunc) {
         if (opts === undefined) opts = null
 
         const item = document.createElement('div')
@@ -21,8 +21,11 @@ class RadListBuilder {
         $item.removeClass('hidden')
         this.#setRowStyle(j, $item)
 
+        const str = (textViewFunc !== undefined && textViewFunc != null) ?
+            textViewFunc(text) : text
+
         // radio name
-        const $textBox = $('<div class="wrp-list-item-text-container">' + text + '</div>')
+        const $textBox = $('<div class="wrp-list-item-text-container">' + str + '</div>')
         $item.append($textBox)
 
         // eventually fav icon

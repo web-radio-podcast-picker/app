@@ -124,6 +124,12 @@ function toUpperCaseWorldsFirstLetters(g) {
     return g.replace(/(?:^\w|[A-Z]|\b\w)/g, (word, index) => word.toUpperCase())
 }
 
+function firstCharToUpper(str) {
+    if (str === undefined || str == null) return
+    const c = str.charAt(0)
+    return c.toUpperCase() + str.slice(1)
+}
+
 function remove(t, e) {
     const i = index(t, e)
     if (i == -1) return

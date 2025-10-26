@@ -46,7 +46,8 @@ class PodcastsLists {
                     this.podcasts.tagItems,
                     RadioList_Podcast,
                     this.openTag,
-                    (name, data) => data.qty
+                    (name, data) => data.qty,
+                    firstCharToUpper
                 )
                 break;
             default:
@@ -92,16 +93,10 @@ class PodcastsLists {
         podcasts
             .resetSelectionsById()
             .updateSelectionSubListsIds(selection)
+
         // switch to tab
         const targetTabId = podcasts.listIdToTabId[selection.langSubListId]
         $('#' + targetTabId).click()
-
-        // redo tab
-        /*podcasts
-            .selectTab(
-                selection,
-                selection.lang.subListId
-            )*/
 
         settings.dataStore.saveUIState()
     }

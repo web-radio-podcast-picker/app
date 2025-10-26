@@ -119,7 +119,7 @@ class ListsBuilder {
         return { $panel: $pl, $selected: $selected, id: id, it: null }
     }
 
-    buildNamesItems(containerId, itemsByName, listId, onClick, countFunc) {
+    buildNamesItems(containerId, itemsByName, listId, onClick, countFunc, textViewFunc) {
         const $container = $('#' + containerId)
         var i = 0
         const btns = []
@@ -135,7 +135,8 @@ class ListsBuilder {
                 },
                 null,
                 null,
-                null)
+                null,
+                textViewFunc)
             j++
             btns[name] = $item
             this.initListItem($container, item, $item, itemsByName[name],
