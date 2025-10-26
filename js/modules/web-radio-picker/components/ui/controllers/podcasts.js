@@ -106,6 +106,38 @@ class Podcasts {
         return null
     }
 
+    updateInitializedStatusFromSelection() {
+        const s = this.selection
+        if (s.tag == null)
+            this.initializedLists[Pdc_List_Tag] = false
+        if (s.letter == null)
+            this.initializedLists[Pdc_List_Letter] = false
+        if (s.pdc == null)
+            this.initializedLists[Pdc_List_Pdc] = false
+        // TODO: pdc sublist
+        return this
+    }
+
+    resetSelectionsById(listId) {
+        const s = this.selection
+        switch (listId) {
+            case Pdc_List_Lang:
+                s.tag = s.letter = s.pdc = null
+                break
+            case Pdc_List_Tag:
+                s.letter = s.pdc = null
+                break
+            case Pdc_List_Letter:
+                s.pdc = null
+                break
+            case Pdc_List_Pdc:
+                // TODO: pdc sublist
+                break
+        }
+        this.updateInitializedStatusFromSelection()
+        return this
+    }
+
     getMoreFocusableListId() {
         const selection = this.selection
         const slistId =

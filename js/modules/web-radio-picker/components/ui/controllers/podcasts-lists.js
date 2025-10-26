@@ -55,6 +55,7 @@ class PodcastsLists {
 
         if (!this.podcasts.initializedLists[listId])
             this.podcasts.initializedLists[listId] = true
+
     }
 
     openLang(e, $item) {
@@ -67,6 +68,8 @@ class PodcastsLists {
 
         const { $e, isDisabled, isSelected, isAccepted } = self.getItemProps(e, $item)
         if (isDisabled) return
+
+        // select item
         wrpp.clearContainerSelection(self.paneId)
         // fold any unfolded list item
         radsItems.unbuildFoldedItems(self.paneId)
@@ -82,17 +85,23 @@ class PodcastsLists {
         )*/
         $item.addClass('item-selected')
 
+        // update selection
         const selection = podcasts.selection
-        selection.lang = {
-            item: item
-        }
+        selection.lang.item = item
 
         podcasts
+            .resetSelectionsById()
             .updateSelectionSubListsIds(selection)
+        // switch to tab
+        const targetTabId = podcasts.listIdToTabId[selection.langSubListId]
+        $('#' + targetTabId).click()
+
+        // redo tab
+        /*podcasts
             .selectTab(
                 selection,
                 selection.lang.subListId
-            )
+            )*/
 
         settings.dataStore.saveUIState()
     }
