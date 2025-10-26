@@ -71,7 +71,7 @@ class Podcasts {
         if (settings.debug.debug)
             console.log(podcasts.index)
 
-        podcasts.langItems = podcasts.podcastsLists.buildLangItems(podcasts.index)
+        //podcasts.langItems = podcasts.podcastsLists.buildLangItems(podcasts.index)
         podcasts.indexInitialized = true
 
         podcasts.onReadyFuncs.forEach(func => func())
@@ -151,28 +151,38 @@ class Podcasts {
             if (selection.pdcSubListId != null)
                 this.availableLists.push(selection.pdcSubListId)
 
+            var slistId = this.getMoreFocusableListId()
+            if (targetListId !== undefined && targetListId != null)
+                slistId = targetListId
 
             this.availableLists.forEach(listId => {
 
                 if (settings.debug.debug)
                     logger.log('add pdc list: ' + listId)
 
-                if (!this.initializedLists[listId])
-                    // load and init listId view
-                    this.onReady(() => this.podcastsLists.updateListView(listId))
+                if (!this.initializedLists[listId]) {
+
+                    this.onReady(() => {
+                        if (slistId == listId) {
+                            // only if visible
+                            // build items
+                            this.podcastsLists.buildItems(listId)
+                            // load and init listId view
+                            this.podcastsLists.updateListView(listId)
+                        }
+                    })
+                }
             })
 
-            this.initTabs(targetListId)
+            this.initTabs(slistId)
+
+            settings.dataStore.saveUIState()
         })
     }
 
-    initTabs(targetListId) {
+    initTabs(slistId) {
         const self = podcasts
         const selection = self.selection
-
-        var slistId = self.getMoreFocusableListId()
-        if (targetListId !== undefined && targetListId != null)
-            slistId = targetListId
 
         ui.tabs
             .setTabVisiblity(self.listIdToTabId[Pdc_List_Tag],
@@ -199,6 +209,10 @@ class Podcasts {
             if (settings.debug.debug)
                 logger.log('select item: ' + sitem?.name)
             self.podcastsLists.selectItem(slistId, sitem)
+        } else {
+            // default scroll top
+            const $pp = this.podcastsLists.$getPanel(slistId).parent()
+            $pp[0].scrollTop = 0
         }
     }
 

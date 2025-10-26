@@ -18,6 +18,10 @@ class PodcastsLists {
         this.listIdToPaneId[Pdc_List_Pdc] = 'opts_wrp_podcast_pdc'
     }
 
+    $getPanel(listId) {
+        return $('#' + this.listIdToPaneId[listId])
+    }
+
     updateListView(listId) {
         if (settings.debug.info)
             logger.log('update list view: ' + listId)
@@ -36,11 +40,21 @@ class PodcastsLists {
                     (name, data) => data.qty
                 )
                 break;
+            case Pdc_List_Tag:
+                listsBuilder.buildNamesItems(
+                    paneId,
+                    this.podcasts.tagItems,
+                    RadioList_Podcast,
+                    this.openTag,
+                    (name, data) => data.qty
+                )
+                break;
             default:
                 break;
         }
 
-        this.podcasts.initializedLists[listId] = true
+        if (!this.podcasts.initializedLists[listId])
+            this.podcasts.initializedLists[listId] = true
     }
 
     openLang(e, $item) {
@@ -70,6 +84,12 @@ class PodcastsLists {
         podcasts.selection.lang = {
             item: item
         }
+
+        settings.dataStore.saveUIState()
+    }
+
+    openTag(e, $item) {
+
     }
 
     findListItemInView(paneId, item) {
@@ -146,9 +166,30 @@ class PodcastsLists {
         return o
     }
 
+    buildItems(listId) {
+        if (settings.debug.debug)
+            logger.log('build items: ' + listId)
+
+        const index = this.podcasts.index
+        switch (listId) {
+            case Pdc_List_Lang: this.buildLangItems(index)
+                return
+            case Pdc_List_Tag: this.buildTagsItems(index)
+                return
+            case Pdc_List_Letter: this.buildLettersItems(index)
+                break
+            case Pdc_List_Pdc: this.buildPdcItems(index)
+                break
+            default:
+                break
+        }
+    }
+
     buildLangItems(index) {
         const langItems = {}
-        index.props.langs.forEach(lang => {
+        const t = index.props.langs
+        for (const langk in t) {
+            const lang = t[langk]
             const langItem =
                 this.podcastItem(
                     lang.code,
@@ -156,15 +197,37 @@ class PodcastsLists {
                     lang.count
                 )
             langItems[lang.name] = langItem
+        }
+        this.podcasts.langItems = langItems
+    }
+
+    buildLettersItems(index) {
+
+    }
+
+    buildTagsItems(index) {
+        const tagItems = {}
+        const langk = this.podcasts.selection.lang.item.name
+        const langRef = index.props.langs[langk]
+        const langTags = index.langs[langRef.code]
+        const tagsk = Object.getOwnPropertyNames(langTags)
+            .filter(x => x != settings.dataProvider.countPropName
+                && x != settings.dataProvider.storesPropName
+            )
+        tagsk.forEach(tagk => {
+            const tag = langTags[tagk]
+            const tagItem =
+                this.podcastItem(
+                    null,
+                    tagk,
+                    0
+                )
+            tagItems[tagItem.name] = tagItem
         })
-        return langItems
+        this.podcasts.tagItems = tagItems
     }
 
-    buildLettersItems() {
-
-    }
-
-    buildTagsItems() {
+    buildPdcItems(index) {
 
     }
 }

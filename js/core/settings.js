@@ -62,7 +62,8 @@ window.settings = {
         unknownName: '?',
         listSeparator: ',',
 
-        countPropName: '_count'
+        countPropName: '_count',
+        storesPropName: '_stores'
     },
 
     sys: {
