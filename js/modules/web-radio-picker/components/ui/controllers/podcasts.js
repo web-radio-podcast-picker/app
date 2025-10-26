@@ -11,6 +11,9 @@ const Pdc_List_Pdc = 'pdc'
 
 class Podcasts {
 
+    indexInitialized = false
+    onReadyFuncs = []
+
     listIdToTabId = {}
 
     // selection values
@@ -22,11 +25,68 @@ class Podcasts {
         noPage: 1,
     }
 
+    langItems = []
+
     constructor() {
         this.listIdToTabId[Pdc_List_Lang] = 'btn_wrp_podcast_lang'
         this.listIdToTabId[Pdc_List_Tag] = 'btn_wrp_podcast_tag'
         this.listIdToTabId[Pdc_List_Letter] = 'btn_wrp_podcast_alpha'
         this.listIdToTabId[Pdc_List_Pdc] = 'btn_wrp_podcast_pdc'
+
+        const r = remoteDataStore.getPodcastsIndex(
+            this.initPodcastIndex)
+    }
+
+    initPodcastIndex(data) {
+        const parser = new FlatIndexTextExportParser()
+        podcasts.index = parser.parse(data)
+        logger.log('podcast index initialized')
+        console.log(podcasts.index)
+        podcasts.buildLangItems()
+        podcasts.indexInitialized = true
+
+        podcasts.onReadyFuncs.forEach(func => func())
+    }
+
+    buildLangItems() {
+        this.langItems = []
+        this.index.props.langs.forEach(lang => {
+            const langItem = {
+                code: lang.code,
+                name: lang.name
+            }
+            this.langItems[lang.name] = langItem
+        })
+    }
+
+    updateListView(listId) {
+        logger.log('update list view: ' + listId)
+        const containerId = 'opts_wrp_podcast'
+        const $pl = $('#' + containerId)
+        $pl[0].innerHTML = ''
+
+        switch (listId) {
+            case Pdc_List_Lang:
+                listsBuilder.buildNamesItems(
+                    containerId,
+                    this.langItems,
+                    RadioList_Podcast,
+                    this.openLang
+                )
+                break;
+            default:
+                break;
+        }
+    }
+
+    openLang(e) {
+
+    }
+
+    onReady(func) {
+        if (this.indexInitialized) func()
+        else
+            this.onReadyFuncs.push(func)
     }
 
     selectTab(selection) {
@@ -52,9 +112,13 @@ class Podcasts {
             .setTabVisiblity(this.listIdToTabId[Pdc_List_Pdc],
                 selection.list != null)
 
+        logger.log('select podcast tab: ' + listId)
+
         ui.tabs.selectTab(
             this.listIdToTabId[listId],
             tabsController.pdcTabs)
+
+        this.onReady(() => this.updateListView(listId))
     }
 
     openPodcasts(selection) {

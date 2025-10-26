@@ -119,7 +119,7 @@ class ListsBuilder {
         return { $panel: $pl, $selected: $selected, id: id, it: null }
     }
 
-    buildNamesItems(containerId, itemsByName, listId) {
+    buildNamesItems(containerId, itemsByName, listId, onClick, countFunc) {
         const $container = $('#' + containerId)
         var i = 0
         const btns = []
@@ -139,12 +139,15 @@ class ListsBuilder {
             j++
             btns[name] = $item
             this.initListItem($container, item, $item, itemsByName[name],
-                uiState.RDList(listId, name, $item))
+                uiState.RDList(listId, name, $item), onClick)
             $container.append($item)
         })
 
         keys.forEach(name => {
-            const cnt = itemsByName[name].length
+            const cnt =
+                countFunc === undefined ?
+                    itemsByName[name].length
+                    : countFunc(name)
             this.setupItemOptions(
                 btns[name],
                 {
@@ -161,64 +164,67 @@ class ListsBuilder {
         $n.text(opts.count)
     }
 
-    initListItem($container, item, $item, t, currentRDList) {
+    initListItem($container, item, $item, t, currentRDList, onClick) {
         const $textContainer = $item.find('.wrp-list-item-text-container')
 
-        $textContainer.on('click', e => {
-            const $e = $(e.currentTarget)
-            if ($e.hasClass(Class_Icon_Disabled)) return
-            const isDisabled = $item.hasClass(Class_Icon_Disabled)
-            const isSelected = $item.hasClass(Class_Item_Selected)
-            const isAccepted = !isDisabled && !isSelected
+        if (onClick !== undefined)
+            $textContainer.on('click', e => onClick(e))
+        else
+            $textContainer.on('click', e => {
+                const $e = $(e.currentTarget)
+                if ($e.hasClass(Class_Icon_Disabled)) return
+                const isDisabled = $item.hasClass(Class_Icon_Disabled)
+                const isSelected = $item.hasClass(Class_Item_Selected)
+                const isAccepted = !isDisabled && !isSelected
 
-            if (currentRDList.listId == RadioList_List
-                && uiState.favoriteInputState
-                && isAccepted
-            )
-                // favorite select
-                favorites.endAddFavorite($item, currentRDList, false)
+                if (currentRDList.listId == RadioList_List
+                    && uiState.favoriteInputState
+                    && isAccepted
+                )
+                    // favorite select
+                    favorites.endAddFavorite($item, currentRDList, false)
 
-            else {
+                else {
 
-                if (!isAccepted) return
+                    if (!isAccepted) return
 
-                var listName = currentRDList.name
+                    var listName = currentRDList.name
 
-                // clear selections & unbuild folded items
-                wrpp.clearListsSelection()
+                    // clear selections & unbuild folded items
+                    wrpp.clearListsSelection()
 
-                if (currentRDList.listId == RadioList_List) {
+                    if (currentRDList.listId == RadioList_List) {
 
-                    // upd list name
-                    listName = $item.attr('data-text')
+                        // upd list name
+                        listName = $item.attr('data-text')
 
-                    radsItems
+                        radsItems
 
-                        // unfold
-                        .buildFoldableItem(
-                            null,
-                            $item,
+                            // unfold
+                            .buildFoldableItem(
+                                null,
+                                $item,
+                                currentRDList.listId,
+                                currentRDList.name,
+                                this.favoriteListItemOpts(
+                                    radiosLists.getList(currentRDList.name)
+                                ),
+                                true
+                            )
+                    }
+
+                    // select
+                    infosPane.hideInfoPane()
+                    $item.addClass('item-selected')
+                    radListBuilder
+                        .updateRadList(
+                            t,
                             currentRDList.listId,
-                            currentRDList.name,
-                            this.favoriteListItemOpts(
-                                radiosLists.getList(currentRDList.name)
-                            ),
-                            true
-                        )
+                            listName)
+                    wrpp.setCurrentRDList(currentRDList)
+
                 }
-
-                // select
-                infosPane.hideInfoPane()
-                $item.addClass('item-selected')
-                radListBuilder
-                    .updateRadList(
-                        t,
-                        currentRDList.listId,
-                        listName)
-                wrpp.setCurrentRDList(currentRDList)
-
-            }
-        })
+            })
     }
 
     clickListItem($item) {

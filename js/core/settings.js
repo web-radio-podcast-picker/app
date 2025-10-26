@@ -49,8 +49,18 @@ window.settings = {
         }
     },
 
-    datastores: {
-        stationsStoreIndex: 50
+    dataProvider: {
+        stationsStoreIndex: 50,
+        baseUrl: 'https://web-radio-podcast-picker.github.io/',
+
+        txtExportLineSeparator: '-----!@-----++-----@!-----',
+        dataPropSeparator: '\t',
+        breakSeparator: '_',
+        columnSeparator: '📚|📚',
+        endOfTagList: '_!_',
+        endOfAlphaList: '',
+        unknownName: '?',
+        listSeparator: ','
     },
 
     sys: {

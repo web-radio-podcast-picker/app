@@ -93,6 +93,11 @@ var uiState = null
  */
 var podcasts = null
 
+/**
+ * @type {RemoteDataStore}
+ */
+var remoteDataStore = null
+
 //#endregion
 
 // module: web radio picker
@@ -163,6 +168,7 @@ class WebRadioPickerModule extends ModuleBase {
             this.radioDataParser = new RadioDataParser().init(this)
 
         wrpp = this
+        remoteDataStore = new RemoteDataStore()
         dialogs = new Dialogs()
         radsItems = new RadsItems()
         rdMediaImage = new RdMediaImage()
