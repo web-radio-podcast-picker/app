@@ -213,6 +213,16 @@ class UIState {
         }
     }
 
+    toJSON() {
+        const state = this.getCurrentUIState()
+        return JSON.stringify(state)
+    }
+
+    fromJSON(s) {
+        const state = JSON.parse(s)
+        this.restoreUIState(state)
+    }
+
     // ----- UI states updaters -----
 
     setPlayPauseButtonFreezeState(freezed) {
