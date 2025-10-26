@@ -152,24 +152,14 @@ class Podcasts {
             this.availableLists.push(clistId)
         }
 
+        if (this.availableLists.length == 0)
+            this.availableLists.push(clistId)   // put the default
+
         this.availableLists.forEach(listId => {
 
             if (!this.initializedLists[listId])
                 // load and init listId view
                 this.onReady(() => this.podcastsLists.updateListView(listId))
-
-            /*this.onReady(() => {
-
-                // current list
-                const list = this.getListById(listId)
-
-                // selected item
-                var item = this.getSelectionById(listId)
-
-                if (item != null) {     // TODO CHECK IF HERE (or else selectTab)
-                    // restore selection
-                    this.podcastsLists.selectItem(clistId, cItem)
-                /*/
         })
 
         this.onReady(() => this.initTabs())
@@ -191,7 +181,8 @@ class Podcasts {
         // select current tab & item
         const slistId = this.availableLists[this.availableLists.length - 1]
         const slist = this.getListById(slistId)
-        var sitem = this.getSelectionById(slistId)
+        const sel = this.getSelectionById(slistId)
+        const sitem = sel?.item
 
         logger.log('select podcast tab: ' + slistId)
 

@@ -67,7 +67,9 @@ class PodcastsLists {
             true,
         )*/
         $item.addClass('item-selected')
-        podcasts.selection.lang = item
+        podcasts.selection.lang = {
+            item: item
+        }
     }
 
     findListItemInView(paneId, item) {
@@ -93,5 +95,9 @@ class PodcastsLists {
         const isAccepted = !isDisabled && !isSelected
         if (isDisabled) return { $e: $e, isDisabled: true, isSelected: isSelected, isAccepted: isAccepted }
         return { $e: $e, isDisabled: isDisabled, isSelected: isSelected, isAccepted: isAccepted }
+    }
+
+    getAvailableSubList(listId, item) {
+
     }
 }
