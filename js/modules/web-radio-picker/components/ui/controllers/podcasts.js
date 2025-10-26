@@ -13,8 +13,9 @@ class Podcasts {
 
     listIdToTabId = {}
 
+    // selection values
     selection = {
-        lang: Pdc_List_Lang,
+        lang: null,
         tag: null,
         letter: null,
         list: null,
@@ -29,15 +30,28 @@ class Podcasts {
     }
 
     selectTab(selection) {
-        var listId = null
+        var listId = Pdc_List_Lang  // default
+
         if (selection.lang != null)
             listId = Pdc_List_Lang
+
         if (selection.tag != null)
             listId = Pdc_List_Tag
+
         if (selection.letter != null)
             listId = Pdc_List_Letter
+
         if (selection.list != null)
             listId = Pdc_List_Lang
+
+        ui.tabs
+            .setTabVisiblity(this.listIdToTabId[Pdc_List_Tag],
+                selection.tag != null)
+            .setTabVisiblity(this.listIdToTabId[Pdc_List_Letter],
+                selection.letter != null)
+            .setTabVisiblity(this.listIdToTabId[Pdc_List_Pdc],
+                selection.list != null)
+
         ui.tabs.selectTab(
             this.listIdToTabId[listId],
             tabsController.pdcTabs)

@@ -70,6 +70,14 @@ class Tabs {
         this.setTabPaneVisibility(tabId, vis)
     }
 
+    setTabVisiblity(tabId, isVisible) {
+        if (isVisible)
+            $('#' + tabId).removeClass('hidden')
+        else
+            $('#' + tabId).addClass('hidden')
+        return this
+    }
+
     selectedTabId(tabs) {
         var r = null
         tabs.forEach(e => {

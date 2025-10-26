@@ -188,8 +188,8 @@ class UIState {
     restoreUIState(state) {
         this.disableSave = true
 
-        if (podcasts.selection != null)
-            podcasts.selection = state.selection
+        if (state.podcastSelection != null)
+            podcasts.selection = state.podcastSelection
 
         if (state.currentRDList_Back != null)
             this.#setRDList(state.currentRDList_Back)
