@@ -11,6 +11,11 @@ const Pdc_List_Pdc = 'pdc'
 
 class Podcasts {
 
+    /**
+     * @type {Podcasts}
+     */
+    podcastsLists = null
+
     indexInitialized = false
     onReadyFuncs = []
 
@@ -22,17 +27,22 @@ class Podcasts {
         lang: null,
         tag: null,
         letter: null,
-        list: null,
+        pdc: null,
         noPage: 1,
     }
 
     langItems = []
+    tagItems = []
+    letterItems = []
+    pdcItems = []
 
     constructor() {
         this.listIdToTabId[Pdc_List_Lang] = 'btn_wrp_podcast_lang'
         this.listIdToTabId[Pdc_List_Tag] = 'btn_wrp_podcast_tag'
         this.listIdToTabId[Pdc_List_Letter] = 'btn_wrp_podcast_alpha'
         this.listIdToTabId[Pdc_List_Pdc] = 'btn_wrp_podcast_pdc'
+
+        this.podcastsLists = new PodcastsLists(this)
 
         const r = remoteDataStore.getPodcastsIndex(
             this.initPodcastIndex)
@@ -41,56 +51,49 @@ class Podcasts {
     initPodcastIndex(data) {
         const parser = new FlatIndexTextExportParser()
         podcasts.index = parser.parse(data)
-        logger.log('podcast index initialized')
-        console.log(podcasts.index)
+
+        if (settings.debug.info)
+            logger.log('podcast index initialized')
+        if (settings.debug.debug)
+            console.log(podcasts.index)
+
         podcasts.buildLangItems()
         podcasts.indexInitialized = true
 
         podcasts.onReadyFuncs.forEach(func => func())
+        podcasts.onReadyFuncs = []
+    }
+
+    // podcast item model
+    podcastItem(code, name, qty, favorites) {
+        const o = {
+            code: code,
+            name: name,
+            qty: qty,
+        }
+        if (favorites)
+            o.favLists = favorites
+        return o
     }
 
     buildLangItems() {
         this.langItems = []
         this.index.props.langs.forEach(lang => {
-            const langItem = {
-                code: lang.code,
-                name: lang.name,
-                qty: lang.count
-            }
+            const langItem =
+                this.podcastItem(
+                    lang.code,
+                    lang.name,
+                    lang.count
+                )
             this.langItems[lang.name] = langItem
         })
     }
 
-    updateListView(listId) {
-        logger.log('update list view: ' + listId)
-        const containerId = 'opts_wrp_podcast'
-        const $pl = $('#' + containerId)
-        $pl[0].innerHTML = ''
+    buildLettersItems() {
 
-        switch (listId) {
-            case Pdc_List_Lang:
-                listsBuilder.buildNamesItems(
-                    containerId,
-                    this.langItems,
-                    RadioList_Podcast,
-                    this.openLang,
-                    this.getCountByLang
-                )
-                break;
-            default:
-                break;
-        }
-
-        this.initializedLists[listId] = true
     }
 
-    getCountByLang(name, data) {
-        console.log(name)
-        console.log(data)
-        return data.qty
-    }
-
-    openLang(e) {
+    buildTagsItems() {
 
     }
 
@@ -100,37 +103,74 @@ class Podcasts {
             this.onReadyFuncs.push(func)
     }
 
+    getListById(listId) {
+        switch (listId) {
+            case Pdc_List_Lang: return this.langItems
+            case Pdc_List_Tag: return this.tagItems
+            case Pdc_List_Letter: return this.letterItems
+            case Pdc_List_Pdc: return this.pdcItems
+        }
+        return null
+    }
+
+    getSelectionById(listId) {
+        switch (listId) {
+            case Pdc_List_Lang: return this.selection.lang
+            case Pdc_List_Tag: return this.selection.tag
+            case Pdc_List_Letter: return this.selection.letter
+            case Pdc_List_Pdc: return this.selection.pdc
+        }
+        return null
+    }
+
     selectTab(selection) {
-        var listId = Pdc_List_Lang  // default
+        // current list id
+        var clistId = Pdc_List_Lang  // default
 
         if (selection.lang != null)
-            listId = Pdc_List_Lang
+            clistId = Pdc_List_Lang
 
         if (selection.tag != null)
-            listId = Pdc_List_Tag
+            clistId = Pdc_List_Tag
 
         if (selection.letter != null)
-            listId = Pdc_List_Letter
+            clistId = Pdc_List_Letter
 
-        if (selection.list != null)
-            listId = Pdc_List_Lang
+        if (selection.pdc != null)
+            clistId = Pdc_List_Lang
 
-        ui.tabs
-            .setTabVisiblity(this.listIdToTabId[Pdc_List_Tag],
-                selection.tag != null)
-            .setTabVisiblity(this.listIdToTabId[Pdc_List_Letter],
-                selection.letter != null)
-            .setTabVisiblity(this.listIdToTabId[Pdc_List_Pdc],
-                selection.list != null)
+        if (!this.initializedLists[clistId])
+            this.onReady(() => this.podcastsLists.updateListView(clistId))
 
-        logger.log('select podcast tab: ' + listId)
+        this.onReady(() => {
 
-        ui.tabs.selectTab(
-            this.listIdToTabId[listId],
-            tabsController.pdcTabs)
+            // current list
+            const list = this.getListById(clistId)
 
-        if (!this.initializedLists[listId])
-            this.onReady(() => this.updateListView(listId))
+            // selected list id
+            var slistId = clistId
+            // selected item
+            var cItem = this.getSelectionById(clistId)
+
+            ui.tabs
+                .setTabVisiblity(this.listIdToTabId[Pdc_List_Tag],
+                    selection.tag != null)
+                .setTabVisiblity(this.listIdToTabId[Pdc_List_Letter],
+                    selection.letter != null)
+                .setTabVisiblity(this.listIdToTabId[Pdc_List_Pdc],
+                    selection.list != null)
+
+            logger.log('select podcast tab: ' + clistId)
+
+            ui.tabs.selectTab(
+                this.listIdToTabId[slistId],
+                tabsController.pdcTabs)
+
+            if (cItem != null) {
+                // restore selection
+                this.podcastsLists.selectItem(clistId, cItem)
+            }
+        })
     }
 
     openPodcasts(selection) {

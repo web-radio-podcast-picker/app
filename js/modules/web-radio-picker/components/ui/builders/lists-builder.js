@@ -168,7 +168,7 @@ class ListsBuilder {
         const $textContainer = $item.find('.wrp-list-item-text-container')
 
         if (onClick !== undefined)
-            $textContainer.on('click', e => onClick(e))
+            $textContainer.on('click', e => onClick(e, $item))
         else
             $textContainer.on('click', e => {
                 const $e = $(e.currentTarget)

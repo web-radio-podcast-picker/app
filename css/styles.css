@@ -1576,3 +1576,6 @@ div.dialog-bbar-container span
 
 /*#endregion */
 
+.no-vscroll {
+    overflow-y: auto !important;
+}
