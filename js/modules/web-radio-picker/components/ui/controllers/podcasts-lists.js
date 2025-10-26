@@ -339,7 +339,7 @@ class PodcastsLists {
         if (settings.debug.debug) {
             console.log(pItem)
             console.log('store = ' + store + ', page = ' + page)
-            console.log(data)
+            //console.log(data)
         }
         const t = data.split('\n')
         t.forEach(row => {
