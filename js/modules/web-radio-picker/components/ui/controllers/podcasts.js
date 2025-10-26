@@ -28,6 +28,7 @@ class Podcasts {
         tag: null,
         letter: null,
         pdc: null,
+        availableLists: [],
         noPage: 1,
     }
 
@@ -127,53 +128,80 @@ class Podcasts {
         // current list id
         var clistId = Pdc_List_Lang  // default
 
-        if (selection.lang != null)
-            clistId = Pdc_List_Lang
+        this.availableLists = []
 
-        if (selection.tag != null)
+        // find availables lists
+
+        if (selection.lang != null) {
+            clistId = Pdc_List_Lang
+            this.availableLists.push(clistId)
+        }
+
+        if (selection.tag != null) {
             clistId = Pdc_List_Tag
+            this.availableLists.push(clistId)
+        }
 
-        if (selection.letter != null)
+        if (selection.letter != null) {
             clistId = Pdc_List_Letter
+            this.availableLists.push(clistId)
+        }
 
-        if (selection.pdc != null)
-            clistId = Pdc_List_Lang
+        if (selection.pdc != null) {
+            clistId = Pdc_List_Pdc
+            this.availableLists.push(clistId)
+        }
 
-        if (!this.initializedLists[clistId])
-            this.onReady(() => this.podcastsLists.updateListView(clistId))
+        this.availableLists.forEach(listId => {
 
-        this.onReady(() => {
+            if (!this.initializedLists[listId])
+                // load and init listId view
+                this.onReady(() => this.podcastsLists.updateListView(listId))
 
-            // current list
-            const list = this.getListById(clistId)
+            /*this.onReady(() => {
 
-            // selected list id
-            var slistId = clistId
-            // selected item
-            var cItem = this.getSelectionById(clistId)
+                // current list
+                const list = this.getListById(listId)
 
-            ui.tabs
-                .setTabVisiblity(this.listIdToTabId[Pdc_List_Tag],
-                    selection.tag != null)
-                .setTabVisiblity(this.listIdToTabId[Pdc_List_Letter],
-                    selection.letter != null)
-                .setTabVisiblity(this.listIdToTabId[Pdc_List_Pdc],
-                    selection.list != null)
+                // selected item
+                var item = this.getSelectionById(listId)
 
-            logger.log('select podcast tab: ' + clistId)
-
-            ui.tabs.selectTab(
-                this.listIdToTabId[slistId],
-                tabsController.pdcTabs)
-
-            if (cItem != null) {
-                // restore selection
-                this.podcastsLists.selectItem(clistId, cItem)
-            }
+                if (item != null) {     // TODO CHECK IF HERE (or else selectTab)
+                    // restore selection
+                    this.podcastsLists.selectItem(clistId, cItem)
+                /*/
         })
+
+        this.onReady(() => this.initTabs())
     }
 
+    initTabs() {
+        const self = podcasts
+        const selection = self.selection
 
+        // find available tabs
+        ui.tabs
+            .setTabVisiblity(this.listIdToTabId[Pdc_List_Tag],
+                selection.tag != null)
+            .setTabVisiblity(this.listIdToTabId[Pdc_List_Letter],
+                selection.letter != null)
+            .setTabVisiblity(this.listIdToTabId[Pdc_List_Pdc],
+                selection.list != null)
+
+        // select current tab & item
+        const slistId = this.availableLists[this.availableLists.length - 1]
+        const slist = this.getListById(slistId)
+        var sitem = this.getSelectionById(slistId)
+
+        logger.log('select podcast tab: ' + slistId)
+
+        ui.tabs.selectTab(
+            this.listIdToTabId[slistId],
+            tabsController.pdcTabs)
+
+        if (sitem != null)
+            this.podcastsLists.selectItem(slistId, sitem)
+    }
 
     openPodcasts(selection) {
         if (selection === undefined || selection == null)
