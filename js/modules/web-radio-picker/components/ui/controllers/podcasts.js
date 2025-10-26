@@ -52,6 +52,16 @@ class Podcasts {
             this.initPodcastIndex)
     }
 
+    getListIdByTabId(tabId) {
+        var res = null
+        for (const listId in this.listIdToTabId) {
+            const ltabId = this.listIdToTabId[listId]
+            if (tabId == ltabId)
+                res = listId
+        }
+        return res
+    }
+
     initPodcastIndex(data) {
         const parser = new FlatIndexTextExportParser()
         podcasts.index = parser.parse(data)
@@ -105,11 +115,12 @@ class Podcasts {
         return slistId
     }
 
-    selectTab(selection) {
-        this.availableLists = []
+    selectTab(selection, targetListId) {
 
         this.onReady(() => {
             // find available tabs
+
+            this.availableLists = []
 
             selection.langSubListId = selection.lang == null ? null
                 : this.podcastsLists.getSubListId(selection, Pdc_List_Lang)
@@ -121,7 +132,8 @@ class Podcasts {
             selection.pdcSubListId = selection.pdc == null ? null
                 : this.podcastsLists.getSubListId(selection, Pdc_List_Pdc)
 
-            console.log(selection)
+            if (settings.debug.debug)
+                console.log(selection)
 
             // get availables lists
 
@@ -142,23 +154,25 @@ class Podcasts {
 
             this.availableLists.forEach(listId => {
 
-                logger.log('add pdc list: ' + listId)
+                if (settings.debug.debug)
+                    logger.log('add pdc list: ' + listId)
 
                 if (!this.initializedLists[listId])
                     // load and init listId view
                     this.onReady(() => this.podcastsLists.updateListView(listId))
             })
 
-            //this.onReady(() => this.initTabs())
-            this.initTabs()
+            this.initTabs(targetListId)
         })
     }
 
-    initTabs() {
+    initTabs(targetListId) {
         const self = podcasts
         const selection = self.selection
 
-        const slistId = self.getMoreFocusableListId()
+        var slistId = self.getMoreFocusableListId()
+        if (targetListId !== undefined && targetListId != null)
+            slistId = targetListId
 
         ui.tabs
             .setTabVisiblity(self.listIdToTabId[Pdc_List_Tag],
@@ -181,8 +195,11 @@ class Podcasts {
             self.listIdToTabId[slistId],
             tabsController.pdcTabs)
 
-        if (sitem != null)
+        if (sitem != null) {
+            if (settings.debug.debug)
+                logger.log('select item: ' + sitem?.name)
             self.podcastsLists.selectItem(slistId, sitem)
+        }
     }
 
     openPodcasts(selection) {

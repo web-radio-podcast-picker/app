@@ -38,7 +38,16 @@ class TabsController {
             }
         })
 
-        ui.tabs.initTabs(this.pdcTabs)
+        ui.tabs.initTabs(this.pdcTabs, {
+            onPostChange: $c => {
+                const tabId = $c.attr('id')
+                const listId = podcasts.getListIdByTabId(tabId)
+                podcasts.selectTab(
+                    podcasts.selection,
+                    listId
+                )
+            }
+        })
 
         ui.tabs.initTabs(this.infTabs, {
             onPostChange: ($c) => {
