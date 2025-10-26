@@ -49,4 +49,12 @@ class Podcasts {
         this.selectTab(selection)
     }
 
+    toJSON(applyFormat) {
+        return !applyFormat ? JSON.stringify(this.selection)
+            : JSON.stringify(this.selection, null, 2)
+    }
+
+    fromJSON(str) {
+        this.selection = JSON.parse(str)
+    }
 }

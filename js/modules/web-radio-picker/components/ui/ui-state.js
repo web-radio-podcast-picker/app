@@ -180,12 +180,17 @@ class UIState {
                 listId: this.currentTab?.listId || null,
                 name: this.currentTab?.tabId || null
             },
-            currentRDItem: this.currentRDItem
+            currentRDItem: this.currentRDItem,
+            podcastSelection: podcasts.selection
         }
     }
 
     restoreUIState(state) {
         this.disableSave = true
+
+        if (podcasts.selection != null)
+            podcasts.selection = state.selection
+
         if (state.currentRDList_Back != null)
             this.#setRDList(state.currentRDList_Back)
         if (state.currentRDList != null)
@@ -196,6 +201,7 @@ class UIState {
         // ---
         if (state.currentRDItem != null)
             this.#setRDItem(state.currentRDItem)
+
         this.disableSave = false
     }
 
@@ -205,16 +211,6 @@ class UIState {
             currentRDList: this.currentRDList,
             currentTab: this.currentTab
         }
-    }
-
-    toJSON() {
-        const state = this.getCurrentUIState()
-        return JSON.stringify(state,)
-    }
-
-    fromJSON(s) {
-        const state = JSON.parse(s)
-        this.restoreUIState(state)
     }
 
     // ----- UI states updaters -----
