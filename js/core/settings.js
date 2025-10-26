@@ -60,7 +60,9 @@ window.settings = {
         endOfTagList: '_!_',
         endOfAlphaList: '',
         unknownName: '?',
-        listSeparator: ','
+        listSeparator: ',',
+
+        countPropName: '_count'
     },
 
     sys: {

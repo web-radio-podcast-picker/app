@@ -25,10 +25,13 @@ class Podcasts {
     // selection values
     selection = {
         lang: null,
+        langSubListId: null,
         tag: null,
+        tagSubListId: null,
         letter: null,
+        letterSubListId: null,
         pdc: null,
-        availableLists: [],
+        pdcSubListId: null,
         noPage: 1,
     }
 
@@ -58,44 +61,11 @@ class Podcasts {
         if (settings.debug.debug)
             console.log(podcasts.index)
 
-        podcasts.buildLangItems()
+        podcasts.langItems = podcasts.podcastsLists.buildLangItems(podcasts.index)
         podcasts.indexInitialized = true
 
         podcasts.onReadyFuncs.forEach(func => func())
         podcasts.onReadyFuncs = []
-    }
-
-    // podcast item model
-    podcastItem(code, name, qty, favorites) {
-        const o = {
-            code: code,
-            name: name,
-            qty: qty,
-        }
-        if (favorites)
-            o.favLists = favorites
-        return o
-    }
-
-    buildLangItems() {
-        this.langItems = []
-        this.index.props.langs.forEach(lang => {
-            const langItem =
-                this.podcastItem(
-                    lang.code,
-                    lang.name,
-                    lang.count
-                )
-            this.langItems[lang.name] = langItem
-        })
-    }
-
-    buildLettersItems() {
-
-    }
-
-    buildTagsItems() {
-
     }
 
     onReady(func) {
@@ -124,74 +94,95 @@ class Podcasts {
         return null
     }
 
-    selectTab(selection) {
-        // current list id
-        var clistId = Pdc_List_Lang  // default
+    getMoreFocusableListId() {
+        const selection = this.selection
+        const slistId =
+            // TODO: add pdc sub list
+            (selection.pdc != null ? Pdc_List_Pdc : null)
+            || (selection.letter != null ? Pdc_List_Letter : null)
+            || (selection.tag != null ? Pdc_List_Tag : null)
+            || (selection.lang != null ? Pdc_List_Lang : null)
+        return slistId
+    }
 
+    selectTab(selection) {
         this.availableLists = []
 
-        // find availables lists
+        this.onReady(() => {
+            // find available tabs
 
-        if (selection.lang != null) {
-            clistId = Pdc_List_Lang
-            this.availableLists.push(clistId)
-        }
+            selection.langSubListId = selection.lang == null ? null
+                : this.podcastsLists.getSubListId(selection, Pdc_List_Lang)
+            selection.tagSubListId = selection.tag == null ? null
+                : this.podcastsLists.getSubListId(selection, Pdc_List_Tag)
+            selection.letterSubListId = selection.letter == null ? null
+                : this.podcastsLists.getSubListId(selection, Pdc_List_Letter)
+            // TODO: sub list of pdc
+            selection.pdcSubListId = selection.pdc == null ? null
+                : this.podcastsLists.getSubListId(selection, Pdc_List_Pdc)
 
-        if (selection.tag != null) {
-            clistId = Pdc_List_Tag
-            this.availableLists.push(clistId)
-        }
+            console.log(selection)
 
-        if (selection.letter != null) {
-            clistId = Pdc_List_Letter
-            this.availableLists.push(clistId)
-        }
+            // get availables lists
 
-        if (selection.pdc != null) {
-            clistId = Pdc_List_Pdc
-            this.availableLists.push(clistId)
-        }
+            this.availableLists.push(Pdc_List_Lang)   // put the default
 
-        if (this.availableLists.length == 0)
-            this.availableLists.push(clistId)   // put the default
+            if (selection.langSubListId != null)
+                this.availableLists.push(selection.langSubListId)
 
-        this.availableLists.forEach(listId => {
+            if (selection.tagSubListId != null)
+                this.availableLists.push(selection.tagSubListId)
 
-            if (!this.initializedLists[listId])
-                // load and init listId view
-                this.onReady(() => this.podcastsLists.updateListView(listId))
+            if (selection.letterSubListId != null)
+                this.availableLists.push(selection.letterSubListId)
+
+            if (selection.pdcSubListId != null)
+                this.availableLists.push(selection.pdcSubListId)
+
+
+            this.availableLists.forEach(listId => {
+
+                logger.log('add pdc list: ' + listId)
+
+                if (!this.initializedLists[listId])
+                    // load and init listId view
+                    this.onReady(() => this.podcastsLists.updateListView(listId))
+            })
+
+            //this.onReady(() => this.initTabs())
+            this.initTabs()
         })
-
-        this.onReady(() => this.initTabs())
     }
 
     initTabs() {
         const self = podcasts
         const selection = self.selection
 
-        // find available tabs
+        const slistId = self.getMoreFocusableListId()
+
         ui.tabs
-            .setTabVisiblity(this.listIdToTabId[Pdc_List_Tag],
-                selection.tag != null)
-            .setTabVisiblity(this.listIdToTabId[Pdc_List_Letter],
-                selection.letter != null)
-            .setTabVisiblity(this.listIdToTabId[Pdc_List_Pdc],
-                selection.list != null)
+            .setTabVisiblity(self.listIdToTabId[Pdc_List_Tag],
+                selection.langSubListId != null)
+            .setTabVisiblity(self.listIdToTabId[Pdc_List_Letter],
+                selection.tagSubListId == Pdc_List_Lang)
+            .setTabVisiblity(self.listIdToTabId[Pdc_List_Pdc],
+                selection.tagSubListId == Pdc_List_Pdc
+                || selection.langSubListId == Pdc_List_Pdc)
 
         // select current tab & item
-        const slistId = this.availableLists[this.availableLists.length - 1]
-        const slist = this.getListById(slistId)
-        const sel = this.getSelectionById(slistId)
+
+        const slist = self.getListById(slistId)
+        const sel = self.getSelectionById(slistId)
         const sitem = sel?.item
 
         logger.log('select podcast tab: ' + slistId)
 
         ui.tabs.selectTab(
-            this.listIdToTabId[slistId],
+            self.listIdToTabId[slistId],
             tabsController.pdcTabs)
 
         if (sitem != null)
-            this.podcastsLists.selectItem(slistId, sitem)
+            self.podcastsLists.selectItem(slistId, sitem)
     }
 
     openPodcasts(selection) {

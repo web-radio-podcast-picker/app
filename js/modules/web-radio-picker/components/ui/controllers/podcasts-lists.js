@@ -97,7 +97,72 @@ class PodcastsLists {
         return { $e: $e, isDisabled: isDisabled, isSelected: isSelected, isAccepted: isAccepted }
     }
 
-    getAvailableSubList(listId, item) {
+    getSubListId(selection, listId) {
+        var subListId = null
+        const index = this.podcasts.index.langs
+        const countProp = settings.dataProvider.countPropName
+
+        switch (listId) {
+            case Pdc_List_Lang:
+                subListId = selection.lang != null ?
+                    Pdc_List_Tag : null
+                break
+            case Pdc_List_Tag:
+                if (selection.tag != null) {
+                    //if (selection.tag.item)
+                    const tagItem = selection.tag.item
+                    const ref = index[tagItem.code]
+                    if (ref[countProp]) {
+                        // no letters
+                        subListId = Pdc_List_Pdc
+                    } else {
+                        // letters
+                        subListId = Pdc_List_Letter
+                    }
+                }
+                break
+            case Pdc_List_Letter:
+                if (selection.letter != null)
+                    subListId = Pdc_List_Pdc
+                break
+            // TODO: no subs for pdc at the moment. later must add the parsed emission list by podcast
+            case Pdc_List_Pdc:
+                break
+        }
+        return subListId
+    }
+
+    // podcast item model
+    podcastItem(code, name, qty, favorites) {
+        const o = {
+            code: code,
+            name: name,
+            qty: qty
+        }
+        if (favorites)
+            o.favLists = favorites
+        return o
+    }
+
+    buildLangItems(index) {
+        const langItems = {}
+        index.props.langs.forEach(lang => {
+            const langItem =
+                this.podcastItem(
+                    lang.code,
+                    lang.name,
+                    lang.count
+                )
+            langItems[lang.name] = langItem
+        })
+        return langItems
+    }
+
+    buildLettersItems() {
+
+    }
+
+    buildTagsItems() {
 
     }
 }
