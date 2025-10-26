@@ -195,3 +195,31 @@ function unquote(s) {
 function toUpperCaseWorldsFirstLetters(g) {
     return g.replace(/(?:^\w|[A-Z]|\b\w)/g, (word, index) => word.toUpperCase())
 }
+
+function toHex0(str) {
+    var hex = ''
+    for (let i = 0; i < str.length; i++) {
+        const charCode = str.charCodeAt(i)
+        hex += charCode.toString(16).padStart(2, '0') // Ensures two-digit representation
+    }
+    return hex
+}
+
+const toHex = str => {
+    const encoder = new TextEncoder();
+    const bytes = encoder.encode(str);
+    return Array.from(bytes).map(byte => byte.toString(16).padStart(2, '0')).join('');
+}
+
+function fromHex(hex) {
+    if (hex.length % 2 !== 0) {
+        throw new Error("Chaîne hex invalide (longueur impaire)");
+    }
+
+    const bytes = new Uint8Array(
+        hex.match(/.{1,2}/g).map(byte => parseInt(byte, 16))
+    );
+
+    const decoder = new TextDecoder();
+    return decoder.decode(bytes);
+}

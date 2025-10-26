@@ -65,7 +65,8 @@ window.settings = {
         propsPropName: 'props',
         countPropName: 'count',
         storesPropName: 'stores',
-        //qtyPropName: 'qty'
+
+        podcastStoreRootFolder: 'podcasts'
     },
 
     sys: {

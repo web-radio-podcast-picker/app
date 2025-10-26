@@ -25,8 +25,10 @@ class PodcastsLists {
     updateListView(listId) {
         if (settings.debug.info)
             logger.log('update list view: ' + listId)
+        const self = podcasts.podcastsLists
+        const sel = self.podcasts.selection
 
-        const paneId = this.listIdToPaneId[listId]
+        const paneId = self.listIdToPaneId[listId]
         const $pl = $('#' + paneId)
         $pl[0].innerHTML = ''
 
@@ -34,29 +36,37 @@ class PodcastsLists {
             case Pdc_List_Lang:
                 listsBuilder.buildNamesItems(
                     paneId,
-                    this.podcasts.langItems,
+                    self.podcasts.langItems,
                     RadioList_Podcast,
-                    this.openLang,
+                    self.openLang,
                     (name, data) => data.qty
                 )
                 break;
             case Pdc_List_Tag:
                 listsBuilder.buildNamesItems(
                     paneId,
-                    this.podcasts.tagItems,
+                    self.podcasts.tagItems,
                     RadioList_Podcast,
-                    this.openTag,
+                    self.openTag,
                     (name, data) => data.qty,
                     firstCharToUpper
                 )
                 break;
+            case Pdc_List_Pdc:
+                listsBuilder.buildNamesItems(
+                    paneId,
+                    self.podcasts.pdcItems,
+                    RadioList_Podcast,
+                    self.openPdc,
+                    (name, data) => ''
+                )
+                break
             default:
-                break;
+                break
         }
 
-        if (!this.podcasts.initializedLists[listId])
-            this.podcasts.initializedLists[listId] = true
-
+        if (!self.podcasts.initializedLists[listId])
+            self.podcasts.initializedLists[listId] = true
     }
 
     openLang(e, $item) {
@@ -79,6 +89,12 @@ class PodcastsLists {
             (selection, item) => selection.tag = { item: item },
             selection => selection.tagSubListId
         )
+    }
+
+    openPdc(e, $item) {
+        const name = $item.attr('data-text')
+        if (settings.debug.debug)
+            logger.log('open pdc: ' + name)
     }
 
     openList(e, $item, listId, getItemFunc, updateSelectionFunc, getSubListIdFunc) {
@@ -202,16 +218,17 @@ class PodcastsLists {
     buildItems(listId) {
         if (settings.debug.debug)
             logger.log('build items: ' + listId)
+        const self = this//podcasts.podcastsLists
 
-        const index = this.podcasts.index
+        const index = self.podcasts.index
         switch (listId) {
-            case Pdc_List_Lang: this.buildLangItems(index)
+            case Pdc_List_Lang: self.buildLangItems(index)
                 return
-            case Pdc_List_Tag: this.buildTagsItems(index)
+            case Pdc_List_Tag: self.buildTagsItems(index)
                 return
-            case Pdc_List_Letter: this.buildLettersItems(index)
+            case Pdc_List_Letter: self.buildLettersItems(index)
                 break
-            case Pdc_List_Pdc: this.buildPdcItems(index)
+            case Pdc_List_Pdc: self.getAndBuildPdcItems(index)
                 break
             default:
                 break
@@ -281,7 +298,22 @@ class PodcastsLists {
         this.podcasts.tagItems = tagItems
     }
 
-    buildPdcItems(index) {
+    getAndBuildPdcItems(index) {
+        const sel = podcasts.selection
+        const langk = sel.lang.item.code
+        const tagk = sel.tag.item.name
+        const letterk = sel.letter?.item?.name
+        remoteDataStore.getPodcastsList(
+            langk,
+            tagk,
+            letterk,
+            (data) => {
+                podcasts.podcastsLists.buildPdcItems(index, data)
+            }
+        )
+    }
 
+    buildPdcItems(index, data) {
+        console.log(data)
     }
 }
