@@ -204,17 +204,18 @@ class PodcastsLists {
     }
 
     // podcast item model
-    podcastItem(code, name, qty, favorites) {
+    podcastItem(code, name, qty, stores, favorites) {
         const o = {
             code: code,
             name: name,
             qty: qty
         }
-        if (favorites)
-            o.favLists = favorites
+        if (favorites) o.favLists = favorites
+        if (stores) o.stores = stores
         return o
     }
 
+    // returns true if async
     buildItems(listId) {
         if (settings.debug.debug)
             logger.log('build items: ' + listId)
@@ -229,10 +230,11 @@ class PodcastsLists {
             case Pdc_List_Letter: self.buildLettersItems(index)
                 break
             case Pdc_List_Pdc: self.getAndBuildPdcItems(index)
-                break
+                return true
             default:
                 break
         }
+        return false
     }
 
     buildLangItems(index) {
@@ -291,9 +293,12 @@ class PodcastsLists {
                 this.podcastItem(
                     null,
                     tagk,
-                    count
+                    count,
+                    null
                 )
             tagItems[tagItem.name] = tagItem
+            if (tag[propsPropName])
+                tagItem.stores = tag[propsPropName][storesPropName]
         })
         this.podcasts.tagItems = tagItems
     }
@@ -303,17 +308,58 @@ class PodcastsLists {
         const langk = sel.lang.item.code
         const tagk = sel.tag.item.name
         const letterk = sel.letter?.item?.name
+        //const tagOrLetterk = letterk || tagk
+        const item = letterk != null ? sel.letter : sel.tag
+        const store = letterk != null
+            ? sel.letter.item.stores
+            : sel.tag.item.stores
+
+        const storeIndex = sel.tag.item.stores[0]
+
+        // erase list before async get
+        // TODO: add a wait load/init message ...
+        const $pane = $('#' + this.listIdToPaneId[Pdc_List_Pdc])
+        $pane[0].innerHTML = ''
+
         remoteDataStore.getPodcastsList(
+            storeIndex,
             langk,
             tagk,
             letterk,
             (data) => {
-                podcasts.podcastsLists.buildPdcItems(index, data)
+                podcasts.podcastsLists.buildPdcItems(
+                    item, storeIndex, sel.noPage, data)
             }
         )
     }
 
-    buildPdcItems(index, data) {
-        console.log(data)
+    buildPdcItems(pItem, store, page, data) {
+        const pdcItems = {}
+
+        if (settings.debug.debug) {
+            console.log(pItem)
+            console.log('store = ' + store + ', page = ' + page)
+            console.log(data)
+        }
+        const t = data.split('\n')
+        t.forEach(row => {
+            const c = row.split(settings.dataProvider.columnSeparator)
+            const tagItem =
+                this.podcastItem(
+                    null,
+                    c[0],
+                    '',
+                    pItem.stores,
+                    null
+                )
+            tagItem.store = store
+            tagItem.page = page
+            tagItem.pItem = pItem
+            pdcItems[tagItem.name] = tagItem
+
+            this.podcasts.pdcItems = pdcItems
+        })
+
+        this.updateListView(Pdc_List_Pdc)   // do here coz async from caller
     }
 }

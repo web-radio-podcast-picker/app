@@ -13,13 +13,15 @@ class RemoteDataStore {
     }
 
     getPodcastsList(store, langCode, tagName, letterName, callback) {
-        var url = this.storeUrl(settings.dataProvider.stationsStoreIndex)
+
+        var url = this.storeUrl(store)
             + settings.dataProvider.podcastStoreRootFolder + '/'
             + toHex(langCode) + '/'
             + toHex(tagName) + '/'
         if (letterName != null)
             url += toHex(letterName) + '/'
         url += 'list.txt'
+
         this.get(url, callback)
     }
 

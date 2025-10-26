@@ -204,9 +204,11 @@ class Podcasts {
                         if (slistId == listId) {
                             // only if visible
                             // build items
-                            this.podcastsLists.buildItems(listId)
-                            // load and init listId view
-                            this.podcastsLists.updateListView(listId)
+                            const isBuildAsync = this.podcastsLists.buildItems(listId)
+                            if (!isBuildAsync) {
+                                // load and init listId view
+                                this.podcastsLists.updateListView(listId)
+                            }
                         }
                     })
                 }
