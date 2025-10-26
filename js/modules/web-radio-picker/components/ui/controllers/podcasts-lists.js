@@ -220,20 +220,41 @@ class PodcastsLists {
 
     buildTagsItems(index) {
         const tagItems = {}
+        const countPropName = settings.dataProvider.countPropName
+        const storesPropName = settings.dataProvider.storesPropName
+        const propsPropName = settings.dataProvider.propsPropName
         const langk = this.podcasts.selection.lang.item.name
         const langRef = index.props.langs[langk]
         const langTags = index.langs[langRef.code]
+
         const tagsk = Object.getOwnPropertyNames(langTags)
-            .filter(x => x != settings.dataProvider.countPropName
-                && x != settings.dataProvider.storesPropName
-            )
+            .filter(x => x != countPropName && x != propsPropName)
+
         tagsk.forEach(tagk => {
             const tag = langTags[tagk]
+            var count = 0
+
+            var props = Object.getOwnPropertyNames(tag)
+            if (props.includes(propsPropName)) {
+                // no letters
+                count += tag[propsPropName][countPropName]
+            }
+
+            props = props
+                .filter(x => x != countPropName && x != propsPropName)
+
+            if (props.length > 0) {
+                // letters
+                props.forEach(prop => {
+                    count += tag[prop][propsPropName][countPropName]
+                })
+            }
+
             const tagItem =
                 this.podcastItem(
                     null,
                     tagk,
-                    0
+                    count
                 )
             tagItems[tagItem.name] = tagItem
         })
