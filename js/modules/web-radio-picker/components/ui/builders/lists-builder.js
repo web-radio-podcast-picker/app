@@ -136,7 +136,8 @@ class ListsBuilder {
                 null,
                 null,
                 null,
-                textViewFunc)
+                textViewFunc
+            )
             j++
             btns[name] = $item
             this.initListItem($container, item, $item, itemsByName[name],
