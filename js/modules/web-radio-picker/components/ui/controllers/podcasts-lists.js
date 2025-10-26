@@ -41,7 +41,7 @@ class PodcastsLists {
                     self.openLang,
                     (name, data) => data.qty
                 )
-                break;
+                break
             case Pdc_List_Tag:
                 listsBuilder.buildNamesItems(
                     paneId,
@@ -51,7 +51,16 @@ class PodcastsLists {
                     (name, data) => data.qty,
                     firstCharToUpper
                 )
-                break;
+                break
+            case Pdc_List_Letter:
+                listsBuilder.buildNamesItems(
+                    paneId,
+                    self.podcasts.letterItems,
+                    RadioList_Podcast,
+                    self.openLetter,
+                    (name, data) => data.qty
+                )
+                break
             case Pdc_List_Pdc:
                 listsBuilder.buildNamesItems(
                     paneId,
@@ -88,6 +97,17 @@ class PodcastsLists {
             name => podcasts.tagItems[name],
             (selection, item) => selection.tag = { item: item },
             selection => selection.tagSubListId
+        )
+    }
+
+    openLetter(e, $item) {
+        podcasts.podcastsLists.openList(
+            e,
+            $item,
+            Pdc_List_Letter,
+            name => podcasts.langItems[name],
+            (selection, item) => selection.letter = { item: item },
+            selection => selection.letterSubListId
         )
     }
 
@@ -254,7 +274,33 @@ class PodcastsLists {
     }
 
     buildLettersItems(index) {
+        const letterItems = {}
+        const countPropName = settings.dataProvider.countPropName
+        const storesPropName = settings.dataProvider.storesPropName
+        const propsPropName = settings.dataProvider.propsPropName
+        const sel = this.podcasts.selection
+        const langk = sel.lang.item.name
+        const langRef = index.props.langs[langk]
+        const langTags = index.langs[langRef.code]
+        const langTag = langTags[sel.tag.item.name]
 
+        const lettersk = Object.getOwnPropertyNames(langTag)
+            .filter(x => x != countPropName && x != propsPropName)
+
+        lettersk.forEach(letterk => {
+            const letter = langTag[letterk]
+            var count = 0
+
+            const letterItem =
+                this.podcastItem(
+                    null,
+                    letterk,
+                    letter[propsPropName][countPropName],
+                    letter[propsPropName][storesPropName]
+                )
+            letterItems[letterItem.name] = letterItem
+        })
+        this.podcasts.letterItems = letterItems
     }
 
     buildTagsItems(index) {
