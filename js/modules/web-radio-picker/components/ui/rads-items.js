@@ -107,7 +107,7 @@ class RadsItems {
             (rdItem.favLists.length == 0 ? false :
                 (rdItem.favLists.length == 1 && rdItem.favLists[0] != RadioList_History)
                 || rdItem.favLists.length > 1)
-        const favName = rdItem != null ? (favorites.getFavName(rdItem) || null) : null
+        const favName = rdItem != null ? (favorites.getFavName(rdItem) || '') : ''
 
         // remove favorite
         const butHeartOnVis = existsInFavorites ? '' : 'hidden'
