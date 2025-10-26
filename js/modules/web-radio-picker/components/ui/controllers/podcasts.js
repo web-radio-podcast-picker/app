@@ -35,6 +35,8 @@ class Podcasts {
         noPage: 1,
     }
 
+    previousListId = null
+
     langItems = []
     tagItems = []
     letterItems = []
@@ -115,22 +117,27 @@ class Podcasts {
         return slistId
     }
 
+    updateSelectionSubListsIds(selection) {
+        this.availableLists = []
+
+        selection.langSubListId = selection.lang == null ? null
+            : this.podcastsLists.getSubListId(selection, Pdc_List_Lang)
+        selection.tagSubListId = selection.tag == null ? null
+            : this.podcastsLists.getSubListId(selection, Pdc_List_Tag)
+        selection.letterSubListId = selection.letter == null ? null
+            : this.podcastsLists.getSubListId(selection, Pdc_List_Letter)
+        // TODO: sub list of pdc
+        selection.pdcSubListId = selection.pdc == null ? null
+            : this.podcastsLists.getSubListId(selection, Pdc_List_Pdc)
+        return this
+    }
+
     selectTab(selection, targetListId) {
 
         this.onReady(() => {
             // find available tabs
 
-            this.availableLists = []
-
-            selection.langSubListId = selection.lang == null ? null
-                : this.podcastsLists.getSubListId(selection, Pdc_List_Lang)
-            selection.tagSubListId = selection.tag == null ? null
-                : this.podcastsLists.getSubListId(selection, Pdc_List_Tag)
-            selection.letterSubListId = selection.letter == null ? null
-                : this.podcastsLists.getSubListId(selection, Pdc_List_Letter)
-            // TODO: sub list of pdc
-            selection.pdcSubListId = selection.pdc == null ? null
-                : this.podcastsLists.getSubListId(selection, Pdc_List_Pdc)
+            this.updateSelectionSubListsIds(selection)
 
             if (settings.debug.debug)
                 console.log(selection)
@@ -205,15 +212,18 @@ class Podcasts {
             self.listIdToTabId[slistId],
             tabsController.pdcTabs)
 
-        if (sitem != null) {
-            if (settings.debug.debug)
-                logger.log('select item: ' + sitem?.name)
-            self.podcastsLists.selectItem(slistId, sitem)
-        } else {
-            // default scroll top
-            const $pp = this.podcastsLists.$getPanel(slistId).parent()
-            $pp[0].scrollTop = 0
-        }
+        if (this.previousListId != slistId)
+            if (sitem != null) {
+                if (settings.debug.debug)
+                    logger.log('select item: ' + sitem?.name)
+                self.podcastsLists.selectItem(slistId, sitem)
+            } else {
+                // default scroll top
+                const $pp = this.podcastsLists.$getPanel(slistId).parent()
+                $pp[0].scrollTop = 0
+            }
+
+        this.previousListId = slistId
     }
 
     openPodcasts(selection) {

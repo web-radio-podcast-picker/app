@@ -81,9 +81,18 @@ class PodcastsLists {
             true,
         )*/
         $item.addClass('item-selected')
-        podcasts.selection.lang = {
+
+        const selection = podcasts.selection
+        selection.lang = {
             item: item
         }
+
+        podcasts
+            .updateSelectionSubListsIds(selection)
+            .selectTab(
+                selection,
+                selection.lang.subListId
+            )
 
         settings.dataStore.saveUIState()
     }
