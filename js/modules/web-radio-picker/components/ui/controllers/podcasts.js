@@ -15,6 +15,7 @@ class Podcasts {
     onReadyFuncs = []
 
     listIdToTabId = {}
+    initializedLists = {}
 
     // selection values
     selection = {
@@ -77,6 +78,8 @@ class Podcasts {
             default:
                 break;
         }
+
+        this.initializedLists[listId] = true
     }
 
     openLang(e) {
@@ -118,7 +121,8 @@ class Podcasts {
             this.listIdToTabId[listId],
             tabsController.pdcTabs)
 
-        this.onReady(() => this.updateListView(listId))
+        if (!this.initializedLists[listId])
+            this.onReady(() => this.updateListView(listId))
     }
 
     openPodcasts(selection) {
