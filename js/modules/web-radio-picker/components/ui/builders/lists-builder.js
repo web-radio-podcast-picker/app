@@ -147,7 +147,7 @@ class ListsBuilder {
             const cnt =
                 countFunc === undefined ?
                     itemsByName[name].length
-                    : countFunc(name)
+                    : countFunc(name, itemsByName[name])
             this.setupItemOptions(
                 btns[name],
                 {

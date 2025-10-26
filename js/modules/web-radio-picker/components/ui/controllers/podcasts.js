@@ -54,7 +54,8 @@ class Podcasts {
         this.index.props.langs.forEach(lang => {
             const langItem = {
                 code: lang.code,
-                name: lang.name
+                name: lang.name,
+                qty: lang.count
             }
             this.langItems[lang.name] = langItem
         })
@@ -72,7 +73,8 @@ class Podcasts {
                     containerId,
                     this.langItems,
                     RadioList_Podcast,
-                    this.openLang
+                    this.openLang,
+                    this.getCountByLang
                 )
                 break;
             default:
@@ -80,6 +82,12 @@ class Podcasts {
         }
 
         this.initializedLists[listId] = true
+    }
+
+    getCountByLang(name, data) {
+        console.log(name)
+        console.log(data)
+        return data.qty
     }
 
     openLang(e) {
