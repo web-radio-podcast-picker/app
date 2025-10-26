@@ -63,8 +63,9 @@ class PodcastsLists {
         podcasts.podcastsLists.openList(
             e,
             $item,
+            Pdc_List_Lang,
             name => podcasts.langItems[name],
-            (selection, item) => selection.lang.item = item,
+            (selection, item) => selection.lang = { item: item },
             selection => selection.langSubListId
         )
     }
@@ -73,13 +74,14 @@ class PodcastsLists {
         podcasts.podcastsLists.openList(
             e,
             $item,
+            Pdc_List_Tag,
             name => podcasts.tagItems[name],
-            (selection, item) => selection.tag.item = item,
+            (selection, item) => selection.tag = { item: item },
             selection => selection.tagSubListId
         )
     }
 
-    openList(e, $item, getItemFunc, updateSelectionFunc, getSubListIdFunc) {
+    openList(e, $item, listId, getItemFunc, updateSelectionFunc, getSubListIdFunc) {
         const name = $item.attr('data-text')
         const item = getItemFunc(name)
 
@@ -112,7 +114,7 @@ class PodcastsLists {
         updateSelectionFunc(selection, item)
 
         podcasts
-            .resetSelectionsById()
+            .resetSelectionsById(listId)
             .updateSelectionSubListsIds(selection)
 
         // switch to tab
@@ -153,7 +155,7 @@ class PodcastsLists {
     getSubListId(selection, listId) {
         var subListId = null
         const index = this.podcasts.index.langs
-        const countProp = settings.dataProvider.countPropName
+        const propsPropName = settings.dataProvider.propsPropName
 
         switch (listId) {
             case Pdc_List_Lang:
@@ -164,8 +166,8 @@ class PodcastsLists {
                 if (selection.tag != null) {
                     //if (selection.tag.item)
                     const tagItem = selection.tag.item
-                    const ref = index[tagItem.code]
-                    if (ref[countProp]) {
+                    const ref = index[selection.lang.item.code][tagItem.name]
+                    if (ref[propsPropName]) {
                         // no letters
                         subListId = Pdc_List_Pdc
                     } else {

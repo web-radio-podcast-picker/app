@@ -150,8 +150,6 @@ class Podcasts {
     }
 
     updateSelectionSubListsIds(selection) {
-        this.availableLists = []
-
         selection.langSubListId = selection.lang == null ? null
             : this.podcastsLists.getSubListId(selection, Pdc_List_Lang)
         selection.tagSubListId = selection.tag == null ? null
@@ -175,6 +173,7 @@ class Podcasts {
                 console.log(selection)
 
             // get availables lists
+            this.availableLists = []
 
             this.availableLists.push(Pdc_List_Lang)   // put the default
 
