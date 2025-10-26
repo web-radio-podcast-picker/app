@@ -60,17 +60,37 @@ class PodcastsLists {
     }
 
     openLang(e, $item) {
+        podcasts.podcastsLists.openList(
+            e,
+            $item,
+            name => podcasts.langItems[name],
+            (selection, item) => selection.lang.item = item,
+            selection => selection.langSubListId
+        )
+    }
+
+    openTag(e, $item) {
+        podcasts.podcastsLists.openList(
+            e,
+            $item,
+            name => podcasts.tagItems[name],
+            (selection, item) => selection.tag.item = item,
+            selection => selection.tagSubListId
+        )
+    }
+
+    openList(e, $item, getItemFunc, updateSelectionFunc, getSubListIdFunc) {
         const name = $item.attr('data-text')
+        const item = getItemFunc(name)
+
         if (settings.debug.debug)
             console.log('select lang item: ' + name)
 
         const self = podcasts.podcastsLists
-        const item = podcasts.langItems[name]
-
         const { $e, isDisabled, isSelected, isAccepted } = self.getItemProps(e, $item)
         if (isDisabled) return
 
-        // select item
+        // #region select item
         wrpp.clearContainerSelection(self.paneId)
         // fold any unfolded list item
         radsItems.unbuildFoldedItems(self.paneId)
@@ -85,25 +105,23 @@ class PodcastsLists {
             true,
         )*/
         $item.addClass('item-selected')
+        // #endregion
 
         // update selection
         const selection = podcasts.selection
-        selection.lang.item = item
+        updateSelectionFunc(selection, item)
 
         podcasts
             .resetSelectionsById()
             .updateSelectionSubListsIds(selection)
 
         // switch to tab
-        const targetTabId = podcasts.listIdToTabId[selection.langSubListId]
+        const targetTabId = podcasts.listIdToTabId[getSubListIdFunc(selection)]
         $('#' + targetTabId).click()
 
         settings.dataStore.saveUIState()
     }
 
-    openTag(e, $item) {
-
-    }
 
     findListItemInView(paneId, item) {
         const $panel = $('#' + paneId)
