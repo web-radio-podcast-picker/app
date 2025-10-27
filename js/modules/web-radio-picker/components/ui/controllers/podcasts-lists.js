@@ -170,8 +170,10 @@ class PodcastsLists {
             $('#' + targetTabId).click()
         }
         else {
-            // simply focus selection
-            $item[0].scrollIntoView(ScrollIntoViewProps)
+            const slistId = podcasts.getMoreFocusableListId()
+            if (slistId != listId)
+                // simply focus selection if different list
+                $item[0].scrollIntoView(ScrollIntoViewProps)
         }
 
         settings.dataStore.saveUIState()
