@@ -81,14 +81,15 @@ class TabsController {
 
         // #region close or activate podcast menu
 
+        // hide pdc channel preview in case of
+        podcasts.setPdcPreviewVisible(false)
+
         if (cid == 'btn_wrp_podcast') {
             // reclick on 'podcast' -> close podcast menu
             if (this.pdcTabSelected) {
                 this.pdcTabSelected = false
                 // go back to tabBeforeOpenPdc
                 ui.tabs.selectTab(this.tabBeforeOpenPdc, this.tabs)
-                // hide pdc channel preview
-                podcasts.setPdcPreviewVisible(false)
                 cid = this.tabBeforeOpenPdc
                 uiState.updateCurrentTab(cid, true)
                 // restore viz
