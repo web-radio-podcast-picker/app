@@ -4,16 +4,89 @@
     "name": "History",
     "items": [
       {
-        "id": "20619",
-        "name": "Hits 100FM 100.9",
+        "id": "18358",
+        "name": "George Benson",
         "description": null,
         "groupTitle": null,
         "groups": [
-          "80s",
-          "News"
+          "Artists"
         ],
-        "url": "https://audio-edge-ey5nr.ams.s.radiomast.io/f4b2dcfb-399c-4650-a64a-e4fb5b32717e",
-        "logo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTdRQkYX4s2e1Kw47pFd0NuPY6Y6ZXKj-L3qQ&s",
+        "url": "https://streaming.exclusive.radio/er/georgebenson/icecast.audio",
+        "logo": "https://manager.uber.radio/static/uploads/station/177497f5-373f-4b07-9e4a-767fc43de994.jpg",
+        "artist": "George Benson",
+        "lang": null,
+        "channels": null,
+        "country": null,
+        "favLists": [],
+        "metadata": {
+          "duration": null,
+          "statusText": "pause",
+          "startTime": 1761533201530,
+          "endTime": 1761533236840
+        },
+        "ref": {
+          "currentRDList": {
+            "listId": "Art",
+            "name": "George Benson",
+            "$item": {
+              "0": {},
+              "length": 1
+            }
+          },
+          "currentTab": {
+            "listId": "Art",
+            "tabId": "btn_wrp_art_list"
+          }
+        }
+      },
+      {
+        "id": "12887",
+        "name": "100 Greatest of The 80s",
+        "description": null,
+        "groupTitle": null,
+        "groups": [
+          "80s"
+        ],
+        "url": "https://maggie.torontocast.com:2020/stream/100greatestofthe80s",
+        "logo": "https://100-greatest-network.torontocast.stream/wp-content/uploads/2021/07/100-GREATEST-80S_LOGO_512-300x300.jpg",
+        "artist": null,
+        "lang": null,
+        "channels": null,
+        "country": null,
+        "favLists": [
+          "History",
+          "Années 80"
+        ],
+        "metadata": {
+          "duration": null,
+          "statusText": "playing",
+          "startTime": 1761533292760
+        },
+        "ref": {
+          "currentRDList": {
+            "listId": "List",
+            "name": "History",
+            "$item": {
+              "0": {},
+              "length": 1
+            }
+          },
+          "currentTab": {
+            "listId": "List",
+            "tabId": "btn_wrp_play_list"
+          }
+        }
+      },
+      {
+        "id": "10475",
+        "name": "Best of 80s",
+        "description": null,
+        "groupTitle": null,
+        "groups": [
+          "80s"
+        ],
+        "url": "https://bestof80s.stream.laut.fm/best_of_80s",
+        "logo": "https://cdn.onlineradiobox.com/img/l/0/42610.v1.png",
         "artist": null,
         "lang": null,
         "channels": null,
@@ -23,22 +96,15 @@
         ],
         "metadata": {
           "duration": null,
-          "statusText": "playing",
-          "startTime": 1761530637083
-        },
-        "ref": {
-          "currentRDList": {
-            "listId": "Tag",
-            "name": "80s",
-            "$item": {
-              "0": {},
-              "length": 1
-            }
-          },
-          "currentTab": {
-            "listId": "Viz",
-            "tabId": "btn_wrp_logo"
-          }
+          "stereo": null,
+          "encoding": null,
+          "sampleFrq": null,
+          "sampleRes": null,
+          "country": null,
+          "statusText": null,
+          "startTime": null,
+          "stopTime": null,
+          "position": null
         }
       },
       {
@@ -62,22 +128,268 @@
         ],
         "metadata": {
           "duration": null,
-          "statusText": "playing",
-          "startTime": 1761530615885
-        },
-        "ref": {
-          "currentRDList": {
-            "listId": "Tag",
-            "name": "80s",
-            "$item": {
-              "0": {},
-              "length": 1
-            }
-          },
-          "currentTab": {
-            "listId": "Viz",
-            "tabId": "btn_wrp_logo"
-          }
+          "stereo": null,
+          "encoding": null,
+          "sampleFrq": null,
+          "sampleRes": null,
+          "country": null,
+          "statusText": null,
+          "startTime": null,
+          "stopTime": null,
+          "position": null
+        }
+      },
+      {
+        "id": "3335",
+        "name": "70s Style Live",
+        "description": null,
+        "groupTitle": null,
+        "groups": [
+          "70s",
+          "Live"
+        ],
+        "url": "http://stream.zeno.fm/bc2sfc6qeg0uv?rj-ttl=5&rj-tok=AAABfd1UXpUAkDYS7KZ86TEpdQ",
+        "logo": "https://cdn1.jigidi.com/thumbs/HZE8HVAC/l",
+        "artist": null,
+        "lang": null,
+        "channels": null,
+        "country": null,
+        "favLists": [
+          "History",
+          "Années 80"
+        ],
+        "metadata": {
+          "duration": null,
+          "stereo": null,
+          "encoding": null,
+          "sampleFrq": null,
+          "sampleRes": null,
+          "country": null,
+          "statusText": null,
+          "startTime": null,
+          "stopTime": null,
+          "position": null
+        }
+      },
+      {
+        "id": "19864",
+        "name": "1 Slow-Radio laut.fm",
+        "description": null,
+        "groupTitle": null,
+        "groups": [
+          "Radio"
+        ],
+        "url": "https://1slowradio.stream.laut.fm/1_slowradio",
+        "logo": "https://assets.laut.fm/9670c7c141ede546101df1cdfe18e0b4?t=_640x640",
+        "artist": null,
+        "lang": null,
+        "channels": null,
+        "country": null,
+        "favLists": [
+          "History",
+          "Slows & Love Songs"
+        ],
+        "metadata": {
+          "duration": null,
+          "stereo": null,
+          "encoding": null,
+          "sampleFrq": null,
+          "sampleRes": null,
+          "country": null,
+          "statusText": null,
+          "startTime": null,
+          "stopTime": null,
+          "position": null
+        }
+      },
+      {
+        "id": "12804",
+        "name": "Oxygen Love Songs",
+        "description": null,
+        "groupTitle": null,
+        "groups": [
+          "Love",
+          "Songs"
+        ],
+        "url": "https://oxygenmusic.hu:8443/oxygenlovesongs",
+        "logo": "https://oxygenmusic.hu/wp-content/uploads/2021/02/love_songs_web_cover.jpg",
+        "artist": null,
+        "lang": null,
+        "channels": null,
+        "country": null,
+        "favLists": [
+          "Slows & Love Songs"
+        ],
+        "metadata": {
+          "duration": null,
+          "stereo": null,
+          "encoding": null,
+          "sampleFrq": null,
+          "sampleRes": null,
+          "country": null,
+          "statusText": null,
+          "startTime": null,
+          "stopTime": null,
+          "position": null
+        }
+      },
+      {
+        "id": "4917",
+        "name": "Love Radio Only Love Songs 70s 80s 90s",
+        "description": null,
+        "groupTitle": null,
+        "groups": [
+          "Love",
+          "Radio",
+          "Songs",
+          "70s",
+          "80s",
+          "90s"
+        ],
+        "url": "https://loveradio.streamingmedia.it/usa",
+        "logo": "https://love.radio/loveradio_logo.png",
+        "artist": null,
+        "lang": null,
+        "channels": null,
+        "country": null,
+        "favLists": [
+          "History",
+          "Slows & Love Songs"
+        ],
+        "metadata": {
+          "duration": null,
+          "stereo": null,
+          "encoding": null,
+          "sampleFrq": null,
+          "sampleRes": null,
+          "country": null,
+          "statusText": null,
+          "startTime": null,
+          "stopTime": null,
+          "position": null
+        }
+      },
+      {
+        "id": "17601",
+        "name": "Sky Radio Lovesongs",
+        "description": null,
+        "groupTitle": null,
+        "groups": [
+          "Radio",
+          "Love"
+        ],
+        "url": "https://playerservices.streamtheworld.com/api/livestream-redirect/SRGSTR03AAC_SC",
+        "logo": "http://www.skyradio.nl/icons/apple-icon-120x120.png",
+        "artist": null,
+        "lang": null,
+        "channels": null,
+        "country": null,
+        "favLists": [
+          "Slows & Love Songs"
+        ],
+        "metadata": {
+          "duration": null,
+          "stereo": null,
+          "encoding": null,
+          "sampleFrq": null,
+          "sampleRes": null,
+          "country": null,
+          "statusText": null,
+          "startTime": null,
+          "stopTime": null,
+          "position": null
+        }
+      },
+      {
+        "id": "10255",
+        "name": "80er",
+        "description": null,
+        "groupTitle": null,
+        "groups": [
+          "80s"
+        ],
+        "url": "http://tuner.m1.fm/80er.mp3",
+        "logo": "http://m1.fm/favicon.ico",
+        "artist": null,
+        "lang": null,
+        "channels": null,
+        "country": null,
+        "favLists": [
+          "History",
+          "Années 80"
+        ],
+        "metadata": {
+          "duration": null,
+          "stereo": null,
+          "encoding": null,
+          "sampleFrq": null,
+          "sampleRes": null,
+          "country": null,
+          "statusText": null,
+          "startTime": null,
+          "stopTime": null,
+          "position": null
+        }
+      },
+      {
+        "id": "16572",
+        "name": "80s Eagle 107.0",
+        "description": null,
+        "groupTitle": null,
+        "groups": [
+          "80s"
+        ],
+        "url": "https://playerservices.streamtheworld.com/api/livestream-redirect/SAM03AAC226_SC",
+        "logo": "https://static.mytuner.mobi/media/tvos_radios/JMbavdXun6.jpg",
+        "artist": null,
+        "lang": null,
+        "channels": null,
+        "country": null,
+        "favLists": [
+          "Années 80"
+        ],
+        "metadata": {
+          "duration": null,
+          "stereo": null,
+          "encoding": null,
+          "sampleFrq": null,
+          "sampleRes": null,
+          "country": null,
+          "statusText": null,
+          "startTime": null,
+          "stopTime": null,
+          "position": null
+        }
+      },
+      {
+        "id": "20619",
+        "name": "Hits 100FM 100.9",
+        "description": null,
+        "groupTitle": null,
+        "groups": [
+          "80s",
+          "News"
+        ],
+        "url": "https://audio-edge-ey5nr.ams.s.radiomast.io/f4b2dcfb-399c-4650-a64a-e4fb5b32717e",
+        "logo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTdRQkYX4s2e1Kw47pFd0NuPY6Y6ZXKj-L3qQ&s",
+        "artist": null,
+        "lang": null,
+        "channels": null,
+        "country": null,
+        "favLists": [
+          "Années 80"
+        ],
+        "metadata": {
+          "duration": null,
+          "stereo": null,
+          "encoding": null,
+          "sampleFrq": null,
+          "sampleRes": null,
+          "country": null,
+          "statusText": null,
+          "startTime": null,
+          "stopTime": null,
+          "position": null
         }
       },
       {
@@ -101,22 +413,15 @@
         ],
         "metadata": {
           "duration": null,
-          "statusText": "playing",
-          "startTime": 1761530568275
-        },
-        "ref": {
-          "currentRDList": {
-            "listId": "Tag",
-            "name": "80s",
-            "$item": {
-              "0": {},
-              "length": 1
-            }
-          },
-          "currentTab": {
-            "listId": "Viz",
-            "tabId": "btn_wrp_logo"
-          }
+          "stereo": null,
+          "encoding": null,
+          "sampleFrq": null,
+          "sampleRes": null,
+          "country": null,
+          "statusText": null,
+          "startTime": null,
+          "stopTime": null,
+          "position": null
         }
       },
       {
@@ -139,22 +444,15 @@
         ],
         "metadata": {
           "duration": null,
-          "statusText": "playing",
-          "startTime": 1761530505848
-        },
-        "ref": {
-          "currentRDList": {
-            "listId": "Tag",
-            "name": "80s",
-            "$item": {
-              "0": {},
-              "length": 1
-            }
-          },
-          "currentTab": {
-            "listId": "Viz",
-            "tabId": "btn_wrp_logo"
-          }
+          "stereo": null,
+          "encoding": null,
+          "sampleFrq": null,
+          "sampleRes": null,
+          "country": null,
+          "statusText": null,
+          "startTime": null,
+          "stopTime": null,
+          "position": null
         }
       },
       {
@@ -175,100 +473,20 @@
         "lang": null,
         "channels": null,
         "country": null,
-        "favLists": [],
-        "metadata": {
-          "duration": null,
-          "statusText": "playing",
-          "startTime": 1761530459222
-        },
-        "ref": {
-          "currentRDList": {
-            "listId": "Tag",
-            "name": "80s",
-            "$item": {
-              "0": {},
-              "length": 1
-            }
-          },
-          "currentTab": {
-            "listId": "Tag",
-            "tabId": "btn_wrp_tag_list"
-          }
-        }
-      },
-      {
-        "id": "10475",
-        "name": "Best of 80s",
-        "description": null,
-        "groupTitle": null,
-        "groups": [
-          "80s"
-        ],
-        "url": "https://bestof80s.stream.laut.fm/best_of_80s",
-        "logo": "https://cdn.onlineradiobox.com/img/l/0/42610.v1.png",
-        "artist": null,
-        "lang": null,
-        "channels": null,
-        "country": null,
         "favLists": [
-          "Années 80"
+          "History"
         ],
         "metadata": {
           "duration": null,
-          "statusText": "playing",
-          "startTime": 1761530446415
-        },
-        "ref": {
-          "currentRDList": {
-            "listId": "Tag",
-            "name": "80s",
-            "$item": {
-              "0": {},
-              "length": 1
-            }
-          },
-          "currentTab": {
-            "listId": "Viz",
-            "tabId": "btn_wrp_logo"
-          }
-        }
-      },
-      {
-        "id": "10255",
-        "name": "80er",
-        "description": null,
-        "groupTitle": null,
-        "groups": [
-          "80s"
-        ],
-        "url": "http://tuner.m1.fm/80er.mp3",
-        "logo": "http://m1.fm/favicon.ico",
-        "artist": null,
-        "lang": null,
-        "channels": null,
-        "country": null,
-        "favLists": [
-          "History",
-          "Années 80"
-        ],
-        "metadata": {
-          "duration": null,
-          "statusText": "playing",
-          "startTime": 1761530323929
-        },
-        "ref": {
-          "currentRDList": {
-            "listId": "Tag",
-            "name": "80s",
-            "$item": {
-              "0": {},
-              "length": 1
-            }
-          },
-          "currentTab": {
-            "listId": "Viz",
-            "tabId": "btn_wrp_logo"
-          }
+          "stereo": null,
+          "encoding": null,
+          "sampleFrq": null,
+          "sampleRes": null,
+          "country": null,
+          "statusText": null,
+          "startTime": null,
+          "stopTime": null,
+          "position": null
         }
       },
       {
@@ -290,22 +508,15 @@
         ],
         "metadata": {
           "duration": null,
-          "statusText": "playing",
-          "startTime": 1761530307869
-        },
-        "ref": {
-          "currentRDList": {
-            "listId": "Tag",
-            "name": "80s",
-            "$item": {
-              "0": {},
-              "length": 1
-            }
-          },
-          "currentTab": {
-            "listId": "Viz",
-            "tabId": "btn_wrp_logo"
-          }
+          "stereo": null,
+          "encoding": null,
+          "sampleFrq": null,
+          "sampleRes": null,
+          "country": null,
+          "statusText": null,
+          "startTime": null,
+          "stopTime": null,
+          "position": null
         }
       },
       {
@@ -327,22 +538,15 @@
         ],
         "metadata": {
           "duration": null,
-          "statusText": "playing",
-          "startTime": 1761530283795
-        },
-        "ref": {
-          "currentRDList": {
-            "listId": "Tag",
-            "name": "80s",
-            "$item": {
-              "0": {},
-              "length": 1
-            }
-          },
-          "currentTab": {
-            "listId": "Viz",
-            "tabId": "btn_wrp_logo"
-          }
+          "stereo": null,
+          "encoding": null,
+          "sampleFrq": null,
+          "sampleRes": null,
+          "country": null,
+          "statusText": null,
+          "startTime": null,
+          "stopTime": null,
+          "position": null
         }
       },
       {
@@ -364,22 +568,15 @@
         ],
         "metadata": {
           "duration": null,
-          "statusText": "playing",
-          "startTime": 1761530244753
-        },
-        "ref": {
-          "currentRDList": {
-            "listId": "Tag",
-            "name": "80s",
-            "$item": {
-              "0": {},
-              "length": 1
-            }
-          },
-          "currentTab": {
-            "listId": "Viz",
-            "tabId": "btn_wrp_logo"
-          }
+          "stereo": null,
+          "encoding": null,
+          "sampleFrq": null,
+          "sampleRes": null,
+          "country": null,
+          "statusText": null,
+          "startTime": null,
+          "stopTime": null,
+          "position": null
         }
       },
       {
@@ -397,62 +594,20 @@
         "lang": null,
         "channels": null,
         "country": null,
-        "favLists": [],
-        "metadata": {
-          "duration": null,
-          "statusText": "playing",
-          "startTime": 1761530234573
-        },
-        "ref": {
-          "currentRDList": {
-            "listId": "Tag",
-            "name": "80s",
-            "$item": {
-              "0": {},
-              "length": 1
-            }
-          },
-          "currentTab": {
-            "listId": "Viz",
-            "tabId": "btn_wrp_logo"
-          }
-        }
-      },
-      {
-        "id": "16572",
-        "name": "80s Eagle 107.0",
-        "description": null,
-        "groupTitle": null,
-        "groups": [
-          "80s"
-        ],
-        "url": "https://playerservices.streamtheworld.com/api/livestream-redirect/SAM03AAC226_SC",
-        "logo": "https://static.mytuner.mobi/media/tvos_radios/JMbavdXun6.jpg",
-        "artist": null,
-        "lang": null,
-        "channels": null,
-        "country": null,
         "favLists": [
-          "Années 80"
+          "History"
         ],
         "metadata": {
           "duration": null,
-          "statusText": "playing",
-          "startTime": 1761530180351
-        },
-        "ref": {
-          "currentRDList": {
-            "listId": "Tag",
-            "name": "80s",
-            "$item": {
-              "0": {},
-              "length": 1
-            }
-          },
-          "currentTab": {
-            "listId": "Viz",
-            "tabId": "btn_wrp_logo"
-          }
+          "stereo": null,
+          "encoding": null,
+          "sampleFrq": null,
+          "sampleRes": null,
+          "country": null,
+          "statusText": null,
+          "startTime": null,
+          "stopTime": null,
+          "position": null
         }
       },
       {
@@ -477,61 +632,15 @@
         ],
         "metadata": {
           "duration": null,
-          "statusText": "playing",
-          "startTime": 1761529985218
-        },
-        "ref": {
-          "currentRDList": {
-            "listId": "Tag",
-            "name": "70s",
-            "$item": {
-              "0": {},
-              "length": 1
-            }
-          },
-          "currentTab": {
-            "listId": "Viz",
-            "tabId": "btn_wrp_logo"
-          }
-        }
-      },
-      {
-        "id": "3335",
-        "name": "70s Style Live",
-        "description": null,
-        "groupTitle": null,
-        "groups": [
-          "70s",
-          "Live"
-        ],
-        "url": "http://stream.zeno.fm/bc2sfc6qeg0uv?rj-ttl=5&rj-tok=AAABfd1UXpUAkDYS7KZ86TEpdQ",
-        "logo": "https://cdn1.jigidi.com/thumbs/HZE8HVAC/l",
-        "artist": null,
-        "lang": null,
-        "channels": null,
-        "country": null,
-        "favLists": [
-          "History",
-          "Années 80"
-        ],
-        "metadata": {
-          "duration": null,
-          "statusText": "playing",
-          "startTime": 1761530072087
-        },
-        "ref": {
-          "currentRDList": {
-            "listId": "List",
-            "name": "Années 70",
-            "$item": {
-              "0": {},
-              "length": 1
-            }
-          },
-          "currentTab": {
-            "listId": "List",
-            "tabId": "btn_wrp_play_list"
-          }
+          "stereo": null,
+          "encoding": null,
+          "sampleFrq": null,
+          "sampleRes": null,
+          "country": null,
+          "statusText": null,
+          "startTime": null,
+          "stopTime": null,
+          "position": null
         }
       },
       {
@@ -611,73 +720,6 @@
         "channels": null,
         "country": null,
         "favLists": [
-          "Slows & Love Songs"
-        ],
-        "metadata": {
-          "duration": null,
-          "stereo": null,
-          "encoding": null,
-          "sampleFrq": null,
-          "sampleRes": null,
-          "country": null,
-          "statusText": null,
-          "startTime": null,
-          "stopTime": null,
-          "position": null
-        }
-      },
-      {
-        "id": "19864",
-        "name": "1 Slow-Radio laut.fm",
-        "description": null,
-        "groupTitle": null,
-        "groups": [
-          "Radio"
-        ],
-        "url": "https://1slowradio.stream.laut.fm/1_slowradio",
-        "logo": "https://assets.laut.fm/9670c7c141ede546101df1cdfe18e0b4?t=_640x640",
-        "artist": null,
-        "lang": null,
-        "channels": null,
-        "country": null,
-        "favLists": [
-          "History",
-          "Slows & Love Songs"
-        ],
-        "metadata": {
-          "duration": null,
-          "stereo": null,
-          "encoding": null,
-          "sampleFrq": null,
-          "sampleRes": null,
-          "country": null,
-          "statusText": null,
-          "startTime": null,
-          "stopTime": null,
-          "position": null
-        }
-      },
-      {
-        "id": "4917",
-        "name": "Love Radio Only Love Songs 70s 80s 90s",
-        "description": null,
-        "groupTitle": null,
-        "groups": [
-          "Love",
-          "Radio",
-          "Songs",
-          "70s",
-          "80s",
-          "90s"
-        ],
-        "url": "https://loveradio.streamingmedia.it/usa",
-        "logo": "https://love.radio/loveradio_logo.png",
-        "artist": null,
-        "lang": null,
-        "channels": null,
-        "country": null,
-        "favLists": [
-          "History",
           "Slows & Love Songs"
         ],
         "metadata": {
@@ -5550,36 +5592,6 @@
         }
       },
       {
-        "id": "12887",
-        "name": "100 Greatest of The 80s",
-        "description": null,
-        "groupTitle": null,
-        "groups": [
-          "80s"
-        ],
-        "url": "https://maggie.torontocast.com:2020/stream/100greatestofthe80s",
-        "logo": "https://100-greatest-network.torontocast.stream/wp-content/uploads/2021/07/100-GREATEST-80S_LOGO_512-300x300.jpg",
-        "artist": null,
-        "lang": null,
-        "channels": null,
-        "country": null,
-        "favLists": [
-          "History"
-        ],
-        "metadata": {
-          "duration": null,
-          "stereo": null,
-          "encoding": null,
-          "sampleFrq": null,
-          "sampleRes": null,
-          "country": null,
-          "statusText": null,
-          "startTime": null,
-          "stopTime": null,
-          "position": null
-        }
-      },
-      {
         "id": "4052",
         "name": "60s Hits",
         "description": null,
@@ -8949,22 +8961,15 @@
         ],
         "metadata": {
           "duration": null,
-          "statusText": "playing",
-          "startTime": 1761529976920
-        },
-        "ref": {
-          "currentRDList": {
-            "listId": "Tag",
-            "name": "70s",
-            "$item": {
-              "0": {},
-              "length": 1
-            }
-          },
-          "currentTab": {
-            "listId": "Viz",
-            "tabId": "btn_wrp_logo"
-          }
+          "stereo": null,
+          "encoding": null,
+          "sampleFrq": null,
+          "sampleRes": null,
+          "country": null,
+          "statusText": null,
+          "startTime": null,
+          "stopTime": null,
+          "position": null
         }
       },
       {
@@ -8989,22 +8994,15 @@
         ],
         "metadata": {
           "duration": null,
-          "statusText": "playing",
-          "startTime": 1761529985218
-        },
-        "ref": {
-          "currentRDList": {
-            "listId": "Tag",
-            "name": "70s",
-            "$item": {
-              "0": {},
-              "length": 1
-            }
-          },
-          "currentTab": {
-            "listId": "Viz",
-            "tabId": "btn_wrp_logo"
-          }
+          "stereo": null,
+          "encoding": null,
+          "sampleFrq": null,
+          "sampleRes": null,
+          "country": null,
+          "statusText": null,
+          "startTime": null,
+          "stopTime": null,
+          "position": null
         }
       }
     ],
@@ -9823,19 +9821,27 @@
         "channels": null,
         "country": null,
         "favLists": [
-          "History"
+          "History",
+          "Années 80"
         ],
         "metadata": {
           "duration": null,
-          "stereo": null,
-          "encoding": null,
-          "sampleFrq": null,
-          "sampleRes": null,
-          "country": null,
-          "statusText": null,
-          "startTime": null,
-          "stopTime": null,
-          "position": null
+          "statusText": "playing",
+          "startTime": 1761533292760
+        },
+        "ref": {
+          "currentRDList": {
+            "listId": "List",
+            "name": "History",
+            "$item": {
+              "0": {},
+              "length": 1
+            }
+          },
+          "currentTab": {
+            "listId": "List",
+            "tabId": "btn_wrp_play_list"
+          }
         }
       },
       {
@@ -9891,22 +9897,15 @@
         ],
         "metadata": {
           "duration": null,
-          "statusText": "playing",
-          "startTime": 1761530072087
-        },
-        "ref": {
-          "currentRDList": {
-            "listId": "List",
-            "name": "Années 70",
-            "$item": {
-              "0": {},
-              "length": 1
-            }
-          },
-          "currentTab": {
-            "listId": "List",
-            "tabId": "btn_wrp_play_list"
-          }
+          "stereo": null,
+          "encoding": null,
+          "sampleFrq": null,
+          "sampleRes": null,
+          "country": null,
+          "statusText": null,
+          "startTime": null,
+          "stopTime": null,
+          "position": null
         }
       },
       {
@@ -9929,22 +9928,15 @@
         ],
         "metadata": {
           "duration": null,
-          "statusText": "playing",
-          "startTime": 1761530323929
-        },
-        "ref": {
-          "currentRDList": {
-            "listId": "Tag",
-            "name": "80s",
-            "$item": {
-              "0": {},
-              "length": 1
-            }
-          },
-          "currentTab": {
-            "listId": "Viz",
-            "tabId": "btn_wrp_logo"
-          }
+          "stereo": null,
+          "encoding": null,
+          "sampleFrq": null,
+          "sampleRes": null,
+          "country": null,
+          "statusText": null,
+          "startTime": null,
+          "stopTime": null,
+          "position": null
         }
       },
       {
@@ -9966,22 +9958,15 @@
         ],
         "metadata": {
           "duration": null,
-          "statusText": "playing",
-          "startTime": 1761530180351
-        },
-        "ref": {
-          "currentRDList": {
-            "listId": "Tag",
-            "name": "80s",
-            "$item": {
-              "0": {},
-              "length": 1
-            }
-          },
-          "currentTab": {
-            "listId": "Viz",
-            "tabId": "btn_wrp_logo"
-          }
+          "stereo": null,
+          "encoding": null,
+          "sampleFrq": null,
+          "sampleRes": null,
+          "country": null,
+          "statusText": null,
+          "startTime": null,
+          "stopTime": null,
+          "position": null
         }
       },
       {
@@ -10004,22 +9989,15 @@
         ],
         "metadata": {
           "duration": null,
-          "statusText": "playing",
-          "startTime": 1761530209558
-        },
-        "ref": {
-          "currentRDList": {
-            "listId": "Tag",
-            "name": "80s",
-            "$item": {
-              "0": {},
-              "length": 1
-            }
-          },
-          "currentTab": {
-            "listId": "Viz",
-            "tabId": "btn_wrp_logo"
-          }
+          "stereo": null,
+          "encoding": null,
+          "sampleFrq": null,
+          "sampleRes": null,
+          "country": null,
+          "statusText": null,
+          "startTime": null,
+          "stopTime": null,
+          "position": null
         }
       },
       {
@@ -10041,22 +10019,15 @@
         ],
         "metadata": {
           "duration": null,
-          "statusText": "playing",
-          "startTime": 1761530244753
-        },
-        "ref": {
-          "currentRDList": {
-            "listId": "Tag",
-            "name": "80s",
-            "$item": {
-              "0": {},
-              "length": 1
-            }
-          },
-          "currentTab": {
-            "listId": "Viz",
-            "tabId": "btn_wrp_logo"
-          }
+          "stereo": null,
+          "encoding": null,
+          "sampleFrq": null,
+          "sampleRes": null,
+          "country": null,
+          "statusText": null,
+          "startTime": null,
+          "stopTime": null,
+          "position": null
         }
       },
       {
@@ -10078,22 +10049,15 @@
         ],
         "metadata": {
           "duration": null,
-          "statusText": "playing",
-          "startTime": 1761530283795
-        },
-        "ref": {
-          "currentRDList": {
-            "listId": "Tag",
-            "name": "80s",
-            "$item": {
-              "0": {},
-              "length": 1
-            }
-          },
-          "currentTab": {
-            "listId": "Viz",
-            "tabId": "btn_wrp_logo"
-          }
+          "stereo": null,
+          "encoding": null,
+          "sampleFrq": null,
+          "sampleRes": null,
+          "country": null,
+          "statusText": null,
+          "startTime": null,
+          "stopTime": null,
+          "position": null
         }
       },
       {
@@ -10115,22 +10079,15 @@
         ],
         "metadata": {
           "duration": null,
-          "statusText": "playing",
-          "startTime": 1761530446415
-        },
-        "ref": {
-          "currentRDList": {
-            "listId": "Tag",
-            "name": "80s",
-            "$item": {
-              "0": {},
-              "length": 1
-            }
-          },
-          "currentTab": {
-            "listId": "Viz",
-            "tabId": "btn_wrp_logo"
-          }
+          "stereo": null,
+          "encoding": null,
+          "sampleFrq": null,
+          "sampleRes": null,
+          "country": null,
+          "statusText": null,
+          "startTime": null,
+          "stopTime": null,
+          "position": null
         }
       },
       {
@@ -10153,22 +10110,15 @@
         ],
         "metadata": {
           "duration": null,
-          "statusText": "playing",
-          "startTime": 1761530505848
-        },
-        "ref": {
-          "currentRDList": {
-            "listId": "Tag",
-            "name": "80s",
-            "$item": {
-              "0": {},
-              "length": 1
-            }
-          },
-          "currentTab": {
-            "listId": "Viz",
-            "tabId": "btn_wrp_logo"
-          }
+          "stereo": null,
+          "encoding": null,
+          "sampleFrq": null,
+          "sampleRes": null,
+          "country": null,
+          "statusText": null,
+          "startTime": null,
+          "stopTime": null,
+          "position": null
         }
       },
       {
@@ -10192,22 +10142,15 @@
         ],
         "metadata": {
           "duration": null,
-          "statusText": "playing",
-          "startTime": 1761530615885
-        },
-        "ref": {
-          "currentRDList": {
-            "listId": "Tag",
-            "name": "80s",
-            "$item": {
-              "0": {},
-              "length": 1
-            }
-          },
-          "currentTab": {
-            "listId": "Viz",
-            "tabId": "btn_wrp_logo"
-          }
+          "stereo": null,
+          "encoding": null,
+          "sampleFrq": null,
+          "sampleRes": null,
+          "country": null,
+          "statusText": null,
+          "startTime": null,
+          "stopTime": null,
+          "position": null
         }
       },
       {
@@ -10229,22 +10172,15 @@
         ],
         "metadata": {
           "duration": null,
-          "statusText": "playing",
-          "startTime": 1761530623124
-        },
-        "ref": {
-          "currentRDList": {
-            "listId": "Tag",
-            "name": "80s",
-            "$item": {
-              "0": {},
-              "length": 1
-            }
-          },
-          "currentTab": {
-            "listId": "Viz",
-            "tabId": "btn_wrp_logo"
-          }
+          "stereo": null,
+          "encoding": null,
+          "sampleFrq": null,
+          "sampleRes": null,
+          "country": null,
+          "statusText": null,
+          "startTime": null,
+          "stopTime": null,
+          "position": null
         }
       },
       {
@@ -10267,22 +10203,15 @@
         ],
         "metadata": {
           "duration": null,
-          "statusText": "playing",
-          "startTime": 1761530637083
-        },
-        "ref": {
-          "currentRDList": {
-            "listId": "Tag",
-            "name": "80s",
-            "$item": {
-              "0": {},
-              "length": 1
-            }
-          },
-          "currentTab": {
-            "listId": "Viz",
-            "tabId": "btn_wrp_logo"
-          }
+          "stereo": null,
+          "encoding": null,
+          "sampleFrq": null,
+          "sampleRes": null,
+          "country": null,
+          "statusText": null,
+          "startTime": null,
+          "stopTime": null,
+          "position": null
         }
       }
     ],
@@ -10343,22 +10272,15 @@
         ],
         "metadata": {
           "duration": null,
-          "statusText": "playing",
-          "startTime": 1761530307869
-        },
-        "ref": {
-          "currentRDList": {
-            "listId": "Tag",
-            "name": "80s",
-            "$item": {
-              "0": {},
-              "length": 1
-            }
-          },
-          "currentTab": {
-            "listId": "Viz",
-            "tabId": "btn_wrp_logo"
-          }
+          "stereo": null,
+          "encoding": null,
+          "sampleFrq": null,
+          "sampleRes": null,
+          "country": null,
+          "statusText": null,
+          "startTime": null,
+          "stopTime": null,
+          "position": null
         }
       }
     ],
@@ -11918,24 +11840,10 @@
           "sampleFrq": null,
           "sampleRes": null,
           "country": null,
-          "statusText": "no connection",
-          "startTime": 1761530031342,
+          "statusText": null,
+          "startTime": null,
           "stopTime": null,
           "position": null
-        },
-        "ref": {
-          "currentRDList": {
-            "listId": "Tag",
-            "name": "70s",
-            "$item": {
-              "0": {},
-              "length": 1
-            }
-          },
-          "currentTab": {
-            "listId": "Viz",
-            "tabId": "btn_wrp_logo"
-          }
         }
       },
       {
@@ -15270,22 +15178,15 @@
         ],
         "metadata": {
           "duration": null,
-          "statusText": "playing",
-          "startTime": 1761530568275
-        },
-        "ref": {
-          "currentRDList": {
-            "listId": "Tag",
-            "name": "80s",
-            "$item": {
-              "0": {},
-              "length": 1
-            }
-          },
-          "currentTab": {
-            "listId": "Viz",
-            "tabId": "btn_wrp_logo"
-          }
+          "stereo": null,
+          "encoding": null,
+          "sampleFrq": null,
+          "sampleRes": null,
+          "country": null,
+          "statusText": null,
+          "startTime": null,
+          "stopTime": null,
+          "position": null
         }
       },
       {
