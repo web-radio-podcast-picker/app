@@ -144,7 +144,7 @@ class PodcastsLists {
 
         if (item.selCnt == 0) {
             // open preview : at first select
-            podcasts.openPdcPreview(item)   // open & show
+            podcasts.openPdcPreview(item, $item)   // open & show
         }
         else
             item.selCnt++
@@ -478,6 +478,7 @@ class PodcastsLists {
             tagItem.favLists = []   // TODO: keep favorites in store and réinit here
 
             // compat with favorites & rdItem management
+            tagItem.metadata = {}
             tagItem.pdc = true      // indicates it's a pdc, not a station
 
             pdcItems[tagItem.name] = tagItem

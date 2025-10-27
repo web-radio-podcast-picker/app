@@ -281,16 +281,23 @@ class Podcasts {
             logger.log('open pdc preview: ' + item.name + ' | ' + item.url)
             console.log(item)
         }
-        // TODO: show loading state anywhere
+
+        ui.hideError()
+        item.metadata.statusText = 'opening...'
+        radsItems.updateRadItemView(item, $item)
+
         remoteDataStore.getPodcastChannelRss(
             item.url,
             data => this.buildPdcPreview(item, $item, data),
-            this.openPdcPreviewError
+            (err, response) => this.openPdcPreviewError(item, $item, err, response)
         )
     }
 
-    openPdcPreviewError(err, response) {
-        ui.showError('channel not found')
+    openPdcPreviewError(item, $item, err, response) {
+        const text = 'channel not found'
+        ui.showError(text)
+        item.metadata.statusText = text
+        radsItems.updateRadItemView(item, $item)
     }
 
     setPdcPreviewVisible(isVisible) {
@@ -313,6 +320,8 @@ class Podcasts {
     // build pdc preview
     buildPdcPreview(item, $item, data) {
         ui.hideError()
+        item.metadata.statusText = ''
+        radsItems.updateRadItemView(item, $item)
 
         item.selCnt++   // only if preview is ok
 
