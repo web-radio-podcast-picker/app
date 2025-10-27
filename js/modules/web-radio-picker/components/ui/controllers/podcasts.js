@@ -228,10 +228,10 @@ class Podcasts {
             .setTabVisiblity(self.listIdToTabId[Pdc_List_Tag],
                 selection.langSubListId != null)
             .setTabVisiblity(self.listIdToTabId[Pdc_List_Letter],
-                selection.tagSubListId == Pdc_List_Lang)
+                selection.tagSubListId == Pdc_List_Letter)
             .setTabVisiblity(self.listIdToTabId[Pdc_List_Pdc],
                 selection.tagSubListId == Pdc_List_Pdc
-                || selection.langSubListId == Pdc_List_Pdc)
+                || selection.letterSubListId == Pdc_List_Pdc)
 
         // select current tab & item
 

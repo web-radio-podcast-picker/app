@@ -105,7 +105,7 @@ class PodcastsLists {
             e,
             $item,
             Pdc_List_Letter,
-            name => podcasts.langItems[name],
+            name => podcasts.letterItems[name],
             (selection, item) => selection.letter = { item: item },
             selection => selection.letterSubListId
         )
@@ -122,7 +122,7 @@ class PodcastsLists {
         const item = getItemFunc(name)
 
         if (settings.debug.debug)
-            console.log('select lang item: ' + name)
+            console.log('select \'' + listId + '\' item: ' + name)
 
         const self = podcasts.podcastsLists
         const { $e, isDisabled, isSelected, isAccepted } = self.getItemProps(e, $item)
@@ -356,11 +356,11 @@ class PodcastsLists {
         const letterk = sel.letter?.item?.name
         //const tagOrLetterk = letterk || tagk
         const item = letterk != null ? sel.letter : sel.tag
-        const store = letterk != null
+        const stores = letterk != null
             ? sel.letter.item.stores
             : sel.tag.item.stores
 
-        const storeIndex = sel.tag.item.stores[0]
+        const storeIndex = stores[0]
 
         // erase list before async get
         // TODO: add a wait load/init message ...
@@ -381,13 +381,17 @@ class PodcastsLists {
 
     buildPdcItems(pItem, store, page, data) {
         const pdcItems = {}
+        if (settings.debug.debug)
+            window.data = data
 
         if (settings.debug.debug) {
             console.log(pItem)
             console.log('store = ' + store + ', page = ' + page)
             //console.log(data)
         }
-        const t = data.split('\n')
+        const t = data.trim()       // coz there is empty lines
+            .split('\n')
+
         t.forEach(row => {
             const c = row.split(settings.dataProvider.columnSeparator)
             const tagItem =
@@ -398,6 +402,7 @@ class PodcastsLists {
                     pItem.stores,
                     null
                 )
+            tagItem.url = c[1].trim()       // coz see \r in results
             tagItem.store = store
             tagItem.page = page
             tagItem.pItem = pItem
