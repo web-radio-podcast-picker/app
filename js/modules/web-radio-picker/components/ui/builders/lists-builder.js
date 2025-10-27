@@ -120,6 +120,7 @@ class ListsBuilder {
     }
 
     buildNamesItems(containerId, itemsByName, listId, onClick, countFunc, textViewFunc) {
+
         const $container = $('#' + containerId)
         var i = 0
         const btns = []

@@ -76,6 +76,8 @@ class PodcastsLists {
 
         if (!self.podcasts.initializedLists[listId])
             self.podcasts.initializedLists[listId] = true
+        podcasts.asyncInitTab()
+
     }
 
     openLang(e, $item) {
@@ -167,6 +169,10 @@ class PodcastsLists {
             const targetTabId = podcasts.listIdToTabId[getSubListIdFunc(selection)]
             $('#' + targetTabId).click()
         }
+        else {
+            // simply focus selection
+            $item[0].scrollIntoView(ScrollIntoViewProps)
+        }
 
         settings.dataStore.saveUIState()
     }
@@ -187,7 +193,8 @@ class PodcastsLists {
         // TODO: also if add a text under the name for some particular purpose (eg. description)
         const $item = this.findListItemInView(paneId, item)
         $item.addClass('item-selected')
-        $item[0].scrollIntoView(ScrollIntoViewProps)
+        if ($item.length > 0)
+            $item[0].scrollIntoView(ScrollIntoViewProps)
     }
 
     getItemProps(e, $item) {
@@ -423,5 +430,6 @@ class PodcastsLists {
         })
 
         this.updateListView(Pdc_List_Pdc)   // do here coz async from caller
+        this.podcasts.asyncInitTab()
     }
 }
