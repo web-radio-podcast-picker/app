@@ -145,13 +145,14 @@ class PodcastsLists {
         // unfold selection
         if (unfoldSelection)
             radsItems.buildFoldableItem(
-                null,
+                item,
                 $item,
                 RadioList_Podcast,
                 Pdc_List_Pdc,
                 '',
                 true,
-                true
+                true,
+                listId
             )
         $item.addClass('item-selected')
         // #endregion
@@ -440,6 +441,7 @@ class PodcastsLists {
             tagItem.store = store
             tagItem.page = page
             tagItem.pItem = pItem
+            tagItem.favLists = []   // TODO: keep favorites in store and réinit here
             pdcItems[tagItem.name] = tagItem
 
             this.podcasts.pdcItems = pdcItems

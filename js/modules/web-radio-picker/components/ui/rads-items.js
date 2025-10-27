@@ -91,18 +91,19 @@ class RadsItems {
         this.updateRadItem(item, $item, $butOn, $butOff)
     }
 
-    buildFoldableItem(rdItem, $item, listId, listName, opts, unfolded, noList) {
+    buildFoldableItem(rdItem, $item, listId, listName, opts, unfolded, noList, pdcList) {
         // rad item or list item : control box
         // -- only foldable: listId==RadioList_List items OR any rad item
 
         const list = noList == true ? null : radiosLists.getList(listName)
-        const isFavList = listId == RadioList_List
+        const isFavList = listId == RadioList_List || pdcList == Pdc_List_Pdc
         const isHistoryList = listId == RadioList_List && listName == RadioList_History
         const isRdItem = rdItem != null
         const hasTrash = (rdItem != null && isHistoryList) || (!isRdItem && !list?.isSystem && !noList)
         const isEditable = (!isRdItem && !list?.isSystem && !noList)
         const canEmpty = !isRdItem && isFavList
 
+        // TODO: manage an internal and stored favlists of pdc
         const existsInFavorites = isRdItem &&
             (rdItem.favLists.length == 0 ? false :
                 (rdItem.favLists.length == 1 && rdItem.favLists[0] != RadioList_History)
