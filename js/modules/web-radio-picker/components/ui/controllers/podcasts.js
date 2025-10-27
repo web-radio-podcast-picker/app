@@ -335,9 +335,53 @@ class Podcasts {
         radListBuilder.pathBuilder.buildPdcTopPath(item, $item)
 
         // get rss datas
-        this.rssParser.parse(data)
+        const o = this.rssParser.parse(data)
+
+        this.populatePdcPreview(item, $item, o)
 
         this.setPdcPreviewVisible(true)
+    }
+
+    populatePdcPreview(item, $item, o) {
+        // bg image
+        const $bgImg = $('#wrp_pdc_prv_img')
+        if (o.image) {
+            // immediately hide image before other loads
+            $bgImg.addClass('ptransparent')
+            $bgImg[0].src = o.image
+            /*setTimeout(() => {
+                
+            }, 10)*/
+        }
+        else
+            pdcPrvImage.noImage()
+
+
+        var author = (o.itunes.author || o.copyright)?.trim()
+        var title = o.title
+        if (author != null && author != '') {
+            author = '<div class="wrp_pdc_prv_author_text">' + author + '</div>'
+            title += author
+        }
+
+        const t = [
+            // target id, js path
+            ['name', 'title'],
+            ['desc', 'o.description'],
+            ['author', 'author']
+        ]
+
+        t.forEach(d => {
+            const targetId = 'wrp_pdc_prv_' + d[0]
+            const $e = $('#' + targetId)
+            var txt = eval(d[1])
+            $e.html(txt)
+        })
+
+        /*if (!author)
+            $('#wrp_pdc_prv_author').addClass('hidden')
+        else
+            $('#wrp_pdc_prv_author').removeClass('hidden')*/
     }
 
 }

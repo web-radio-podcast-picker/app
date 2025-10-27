@@ -109,7 +109,7 @@ button {
 }
 
 .ptransparent {
-    opacity: 0.1 !important;
+    opacity: 0 !important; /* 0.1 */
 }
 
 .value {

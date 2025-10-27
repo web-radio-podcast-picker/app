@@ -56,6 +56,10 @@ find license and copyright informations in files /COPYRIGHT and /LICENCE
     align-self: center;
 }
 
+/*wrp_pdc_st_list {
+    align-self: center;
+}*/
+
 .bt-bar-img-but {
     vertical-align: baseline;
     margin-top: 0.7em;
@@ -128,7 +132,7 @@ find license and copyright informations in files /COPYRIGHT and /LICENCE
 }
 
 .wrp-scroll-pane {
-    overflow-y: scroll;
+    overflow-y: auto; /* scroll;*/
     overflow-x: hidden;
     /* max-height: 300px; */
     /* min-height: 300px; */
@@ -258,7 +262,69 @@ find license and copyright informations in files /COPYRIGHT and /LICENCE
 }
 
 #wrp_pdc_st_list {
-    /*background-color: black*/
+    /*display: flex;
+    flex-direction: column;*/
+    padding: 2em;
+    display: grid;
+    grid-template-rows: 50% 50%;
+    /* align-content: space-between; */
+}
+
+#wrp_pdc_prv_img_container {
+    background-color: darkblue !important;
+}
+
+.wrp_pdc_prv_row {
+    background-color: #000000BF;
+    padding: 1em;
+    /* padding-bottom: 0em; */
+    padding-left: 2em;
+    padding-right:2em;
+}
+
+.wrp_pdc_prv_row_d {
+    padding-bottom: 1rem;
+    display: block;
+}
+
+.wrp_pdc_prv_row_sep_dw {
+    padding-bottom: 1em;
+    /* margin-top: 1em; */
+    padding-top: 1em;
+}
+
+#wrp_pdc_prv_name {
+    font-size: 1.7em;
+    padding-left: 1.3em;
+    padding-bottom: 1rem;
+    padding-top: 1rem;
+    margin-bottom: 1rem;
+    line-height: 1.4rem;
+    display: block;
+}
+
+#wrp_pdc_prv_desc {
+    line-height: 1.6em;
+    padding-top: 1rem;
+    overflow-wrap: anywhere;
+}
+
+#wrp_pdc_prv_author {
+    
+}
+
+.wrp_pdc_prv_author_text {
+    font-size: 1.2rem;
+    /* padding-bottom: 0em; */
+    position: relative;
+    /* top: -1.5rem; */
+    color: #FFFF00AA;
+    /* line-height: 0.5rem; */
+    padding-top: 0.5rem;
+}
+
+#wrp_pdc_prv_img_container {
+
 }
 
 #wrp_pdc_btn_bar {

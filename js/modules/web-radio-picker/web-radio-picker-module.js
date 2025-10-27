@@ -44,6 +44,11 @@ var radsItems = null
 var rdMediaImage = null
 
 /**
+ * @type {RdMediaImage}
+ */
+var pdcPrvImage = null
+
+/**
  * @type {ListsBuilder}
  */
 var listsBuilder = null
@@ -171,7 +176,20 @@ class WebRadioPickerModule extends ModuleBase {
         remoteDataStore = new RemoteDataStore()
         dialogs = new Dialogs()
         radsItems = new RadsItems()
-        rdMediaImage = new RdMediaImage()
+
+        rdMediaImage = new RdMediaImage(
+            'wrp_img',
+            'left-pane',
+            './img/icon.ico',
+            'btn_wrp_logo'
+        )
+        pdcPrvImage = new RdMediaImage(
+            'wrp_pdc_prv_img',
+            'wrp_pdc_st_list_container',
+            transparentPixel,
+            null
+        )
+
         listsBuilder = new ListsBuilder()
         radListBuilder = new RadListBuilder()
         playHistory = new PlayHistory()
@@ -209,6 +227,20 @@ class WebRadioPickerModule extends ModuleBase {
                     rdMediaImage.noImage()
                 else
                     rdMediaImage.showImage()
+            })
+
+        $('#wrp_pdc_prv_img')
+            .on('error', () => {
+                pdcPrvImage.noImage()
+            })
+            .on('load', () => {
+                const img = $('#wrp_pdc_prv_img')[0]
+                if (img.width < 1 || img.height < 1)
+                    pdcPrvImage.noImage()
+                else {
+                    pdcPrvImage.resetImage()
+                    pdcPrvImage.showImage()
+                }
             })
 
         const thisPath = 'app.moduleLoader.getModuleById("' + this.id + '").'

@@ -6,9 +6,23 @@
 
 class RdMediaImage {
 
+    constructor(
+        imgId,
+        paneId,
+        noImgSrc,
+        tabId,
+        onImageUpdatedFunc
+    ) {
+        this.imgId = imgId
+        this.paneId = paneId
+        this.noImgSrc = noImgSrc
+        this.tabId = tabId
+        this.onImageUpdatedFunc = onImageUpdatedFunc
+    }
+
     noImage() {
-        const $i = $('#wrp_img')
-        $i[0].src = './img/icon.ico'
+        const $i = $('#' + this.imgId)
+        $i[0].src = this.noImgSrc
         $i.attr('data-noimg', '1')
         $i.attr('width', null)
         $i.attr('height', null)
@@ -16,13 +30,22 @@ class RdMediaImage {
         $i.attr('data-h', null)
     }
 
+    resetImage() {
+        const $i = $('#' + this.imgId)
+        $i.attr('data-noimg', null)
+        $i.attr('width', null)
+        $i.attr('height', null)
+        $i.attr('data-w', null)
+        $i.attr('data-h', null)
+        $i.addClass('ptransparent')
+    }
+
     showImage() {
-        const $i = $('#wrp_img')
+        const $i = $('#' + this.imgId)
         const noimg = $i.attr('data-noimg') != null
         if (noimg)
             $i.addClass('wrp-img-half')
 
-        $i.removeClass('ptransparent')
         $i.removeClass('hidden')
 
         var iw = $i[0].width
@@ -39,7 +62,7 @@ class RdMediaImage {
         }
         var r = iw / ih
 
-        const $c = $('#left-pane')
+        const $c = $('#' + this.paneId)
         const cw = $c.width()
         const ch = $c.height()
         var rw = iw / cw
@@ -76,6 +99,8 @@ class RdMediaImage {
         $i.attr('width', iw + 'px')
         $i.attr('height', ih + 'px')
 
+        $i.removeClass('ptransparent')
+
         //this.ignoreNextShowImage = false
 
         if (!wrpp.resizeEventInitialized) {
@@ -85,12 +110,12 @@ class RdMediaImage {
             wrpp.resizeEventInitialized = true
         }
 
-        if (!tabsController.preserveCurrentTab
-            && !uiState.favoriteInputState
+        if ((!tabsController.preserveCurrentTab
+            && !uiState.favoriteInputState) && this.tabId
         ) {
             tabsController
-                .selectTab('btn_wrp_logo')
-                .onTabChanged($('#btn_wrp_logo'))
+                .selectTab(this.tabId)
+                .onTabChanged($('#' + this.tabId))
         }
         else
             tabsController.preserveCurrentTab = false
