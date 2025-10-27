@@ -113,6 +113,14 @@ class PodcastsLists {
         )
     }
 
+    resetPdcItemsClickState(exceptItem) {
+        for (const pdcKey in podcasts.pdcItems) {
+            const pdcItem = podcasts.pdcItems[pdcKey]
+            if (pdcItem != exceptItem)
+                pdcItem.selCnt = 0
+        }
+    }
+
     // pdc preview / open list
     openPdc(e, $item) {
 
@@ -120,6 +128,9 @@ class PodcastsLists {
 
         const name = $item.attr('data-text')
         const item = podcasts.pdcItems[name]
+
+        // reset all other pdc items click state
+        self.resetPdcItemsClickState(item)
 
         self.openList(
             e,

@@ -87,6 +87,8 @@ class TabsController {
                 this.pdcTabSelected = false
                 // go back to tabBeforeOpenPdc
                 ui.tabs.selectTab(this.tabBeforeOpenPdc, this.tabs)
+                // hide pdc channel preview
+                podcasts.setPdcPreviewVisible(false)
                 cid = this.tabBeforeOpenPdc
                 uiState.updateCurrentTab(cid, true)
                 // restore viz

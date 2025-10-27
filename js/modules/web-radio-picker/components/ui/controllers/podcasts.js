@@ -304,11 +304,16 @@ class Podcasts {
             $('#wrp_radio_list_container').removeClass('hidden')
             $('#wrp_pdc_btn_bar').addClass('hidden')
             $('#wrp_pdc_st_list_container').addClass('hidden')
+            // reset click count
+            if (this.selection.pdc)
+                this.selection.pdc.selCnt = 0
         }
     }
 
     // build pdc preview
     buildPdcPreview(item, $item, data) {
+        ui.hideError()
+
         item.selCnt++   // only if preview is ok
 
         // update the top path bar
