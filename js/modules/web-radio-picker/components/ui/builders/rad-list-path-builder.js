@@ -82,7 +82,7 @@ class RadListPathBuilder {
         const $langBut = this.buildPdcPathButton(Pdc_List_Lang, sel.lang.item.name, sel.lang.item.name, true, true)
         $p2.append($langBut)
         if (sel.tag) {
-            const $tagBut = this.buildPdcPathButton(Pdc_List_Tag, sel.tag.item.name, sel.tag.item.name, true, true)
+            const $tagBut = this.buildPdcPathButton(Pdc_List_Tag, sel.tag.item.name, firstCharToUpper(sel.tag.item.name), true, true)
             $p2.append($tagBut)
         }
         if (sel.letter) {
