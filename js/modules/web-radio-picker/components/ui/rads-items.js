@@ -95,7 +95,7 @@ class RadsItems {
         // rad item or list item : control box
         // -- only foldable: listId==RadioList_List items OR any rad item
 
-        const list = noList == true ? noList : radiosLists.getList(listName)
+        const list = noList == true ? null : radiosLists.getList(listName)
         const isFavList = listId == RadioList_List
         const isHistoryList = listId == RadioList_List && listName == RadioList_History
         const isRdItem = rdItem != null
