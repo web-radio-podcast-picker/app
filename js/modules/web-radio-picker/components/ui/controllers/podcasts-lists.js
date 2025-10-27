@@ -112,12 +112,20 @@ class PodcastsLists {
     }
 
     openPdc(e, $item) {
-        const name = $item.attr('data-text')
-        if (settings.debug.debug)
-            logger.log('open pdc: ' + name)
+        podcasts.podcastsLists.openList(
+            e,
+            $item,
+            Pdc_List_Pdc,
+            name => podcasts.pdcItems[name],
+            (selection, item) => selection.pdc = { item: item },
+            selection => selection.pdcSubListId,
+            true, true
+        )
     }
 
-    openList(e, $item, listId, getItemFunc, updateSelectionFunc, getSubListIdFunc) {
+    openList(e, $item, listId, getItemFunc, updateSelectionFunc, getSubListIdFunc,
+        noList, unfoldSelection
+    ) {
         const name = $item.attr('data-text')
         const item = getItemFunc(name)
 
@@ -133,15 +141,16 @@ class PodcastsLists {
         // fold any unfolded list item
         radsItems.unbuildFoldedItems(self.paneId)
         // unfold selection
-        /*radsItems.buildFoldableItem(
-            null,
-            $item,
-            RadioList_Podcast,
-            Pdc_List_Lang,
-            item.qty,
-            true,
-            true,
-        )*/
+        if (unfoldSelection)
+            radsItems.buildFoldableItem(
+                null,
+                $item,
+                RadioList_Podcast,
+                Pdc_List_Pdc,
+                '',
+                true,
+                true
+            )
         $item.addClass('item-selected')
         // #endregion
 
@@ -153,9 +162,11 @@ class PodcastsLists {
             .resetSelectionsById(listId)
             .updateSelectionSubListsIds(selection)
 
-        // switch to tab
-        const targetTabId = podcasts.listIdToTabId[getSubListIdFunc(selection)]
-        $('#' + targetTabId).click()
+        if (noList !== true) {
+            // switch to tab
+            const targetTabId = podcasts.listIdToTabId[getSubListIdFunc(selection)]
+            $('#' + targetTabId).click()
+        }
 
         settings.dataStore.saveUIState()
     }
