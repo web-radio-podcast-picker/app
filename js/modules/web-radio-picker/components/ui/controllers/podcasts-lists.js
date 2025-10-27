@@ -113,8 +113,15 @@ class PodcastsLists {
         )
     }
 
+    // pdc preview / open list
     openPdc(e, $item) {
-        podcasts.podcastsLists.openList(
+
+        const self = podcasts.podcastsLists
+
+        const name = $item.attr('data-text')
+        const item = podcasts.pdcItems[name]
+
+        self.openList(
             e,
             $item,
             Pdc_List_Pdc,
@@ -123,6 +130,13 @@ class PodcastsLists {
             selection => selection.pdcSubListId,
             true, true
         )
+
+        if (item.selCnt == 0) {
+            // open preview : at first select
+            podcasts.openPdcPreview(item)   // open & show
+        }
+        else
+            item.selCnt++
     }
 
     openList(e, $item, listId, getItemFunc, updateSelectionFunc, getSubListIdFunc,
@@ -438,13 +452,21 @@ class PodcastsLists {
                     pItem.stores,
                     null
                 )
-            tagItem.id = c[0]   // here id == title (no id in podcasts)
+
+            // pdc item props
             tagItem.url = c[1].trim()       // coz see \r in results
             tagItem.store = store
             tagItem.page = page
             tagItem.pItem = pItem
+
+            // state datas
+            tagItem.selCnt = 0
+
             // make it compatible with favorites management
+            tagItem.id = c[0]   // here id == title (no id in podcasts)
             tagItem.favLists = []   // TODO: keep favorites in store and réinit here
+
+            // compat with favorites & rdItem management
             tagItem.pdc = true      // indicates it's a pdc, not a station
 
             pdcItems[tagItem.name] = tagItem

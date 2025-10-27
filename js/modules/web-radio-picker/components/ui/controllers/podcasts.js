@@ -268,9 +268,52 @@ class Podcasts {
         this.previousListId = slistId
     }
 
+    // restore from ui state
     openPodcasts(selection) {
         if (selection === undefined || selection == null)
             selection = this.selection
         this.selectTab(selection)
+    }
+
+    // pdc channel rss & show pdc preview
+    openPdcPreview(item, $item) {
+        if (settings.debug.debug) {
+            logger.log('open pdc preview: ' + item.name + ' | ' + item.url)
+            console.log(item)
+        }
+        // TODO: show loading state anywhere
+        remoteDataStore.getPodcastChannelRss(
+            item.url,
+            data => this.buildPdcPreview(item, $item, data),
+            this.openPdcPreviewError
+        )
+    }
+
+    openPdcPreviewError(err, response) {
+        ui.showError('channel not found')
+    }
+
+    setPdcPreviewVisible(isVisible) {
+        if (isVisible) {
+            $('#wrp_radio_list_btn_bar').addClass('hidden')
+            $('#wrp_radio_list_container').addClass('hidden')
+            $('#wrp_pdc_btn_bar').removeClass('hidden')
+            $('#wrp_pdc_st_list_container').removeClass('hidden')
+        } else {
+            $('#wrp_radio_list_btn_bar').removeClass('hidden')
+            $('#wrp_radio_list_container').removeClass('hidden')
+            $('#wrp_pdc_btn_bar').addClass('hidden')
+            $('#wrp_pdc_st_list_container').addClass('hidden')
+        }
+    }
+
+    // build pdc preview
+    buildPdcPreview(item, $item, data) {
+        item.selCnt++   // only if preview is ok
+
+        // update the top path bar
+        radListBuilder.pathBuilder.buildPdcTopPath(item, $item)
+
+        this.setPdcPreviewVisible(true)
     }
 }

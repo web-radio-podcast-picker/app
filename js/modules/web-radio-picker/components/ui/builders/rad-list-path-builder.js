@@ -68,6 +68,29 @@ class RadListPathBuilder {
         return $img
     }
 
+    buildPdcTopPath(item, $item) {
+        const $p = $('#wrp_pdc_list_ref')
+        $p[0].innerHTML = ''
+        const $p2 = $('#wrp_pdc_list_ref_name')
+        $p2[0].innerHTML = ''
+
+        const $pdcBut = this.buildPdcPathButton(Pdc_List_Pdc, item.name, 'Podcast', true, false)
+        $p.append($pdcBut)
+        $p.append(this.buildRightChevron().addClass('right-chevron-extended'))
+        const sel = podcasts.selection
+
+        const $langBut = this.buildPdcPathButton(Pdc_List_Lang, sel.lang.item.name, sel.lang.item.name, true, true)
+        $p2.append($langBut)
+        if (sel.tag) {
+            const $tagBut = this.buildPdcPathButton(Pdc_List_Tag, sel.tag.item.name, sel.tag.item.name, true, true)
+            $p2.append($tagBut)
+        }
+        if (sel.letter) {
+            const $letterBut = this.buildPdcPathButton(Pdc_List_Letter, sel.letter.item.name, sel.letter.item.name, true, true)
+            $p2.append($letterBut)
+        }
+    }
+
     buildTopFavPath(listId, listName) {
         const id = this.listIdToLabel(listId)
         const $p = $('#wrp_rad_list_ref')
@@ -199,9 +222,29 @@ class RadListPathBuilder {
         return $but
     }
 
+    buildPdcPathButton(listId, id, text, isTab, hasRightMargin, cl, onClick, noClick) {
+        cl = (cl == null || cl === undefined) ? 'onoff-small-height' : cl
+        const rm = hasRightMargin ? ' margin-right' : ''
+        const selected = !isTab ? 'selected' : ''
+        const butcl = noClick == true ? '' : 'menu-item-blue'
+        const $but = $(`<span data-id="${id}" class="${butcl} fav-path-button menu-item ${cl} no-width ${rm} ${selected}">${text}</span>`)
+        if (noClick != true)
+            $but.on('click', e => {
+                this.pdcButtonOnClick(e, listId, id, isTab, onClick)
+            })
+        return $but
+    }
+
     favButtonOnClick(e, listId, id, isTab, onClick) {
         if ($(e.currentTarget).hasClass('but-icon-disabled')) return
         this.selectFavPath(listId, id, isTab)
+        if (onClick !== undefined && onClick != null)
+            onClick()
+    }
+
+    pdcButtonOnClick(e, listId, id, isTab, onClick) {
+        if ($(e.currentTarget).hasClass('but-icon-disabled')) return
+        ////this.selectFavPath(listId, id, isTab)
         if (onClick !== undefined && onClick != null)
             onClick()
     }

@@ -257,7 +257,19 @@ find license and copyright informations in files /COPYRIGHT and /LICENCE
     /* align-content: space-around; */
 }
 
-#wrp_rad_list_ref {
+#wrp_pdc_st_list {
+    /*background-color: black*/
+}
+
+#wrp_pdc_btn_bar {
+    align-content: center;
+    grid-template-columns: min-content auto min-content min-content min-content;
+    align-items: unset;
+    /*background-color: black;*/
+}
+
+#wrp_rad_list_ref,
+#wrp_pdc_list_ref {
     text-wrap: nowrap;
     text-wrap-mode: nowrap;
     /*text-wrap-mode: wrap;
@@ -266,7 +278,8 @@ find license and copyright informations in files /COPYRIGHT and /LICENCE
     align-content: space-around;
 }
 
-#wrp_rad_list_ref_name {
+#wrp_rad_list_ref_name,
+#wrp_pdc_list_ref_name {
     text-wrap: wrap;
     text-wrap-mode: wrap;
     word-break: break-word;
