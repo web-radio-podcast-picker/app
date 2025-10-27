@@ -16,6 +16,11 @@ class Podcasts {
      */
     podcastsLists = null
 
+    /**
+     * @type {PodcastRSSParser}
+     */
+    rssParser = null
+
     indexInitialized = false
     onReadyFuncs = []
 
@@ -48,7 +53,8 @@ class Podcasts {
         this.listIdToTabId[Pdc_List_Letter] = 'btn_wrp_podcast_alpha'
         this.listIdToTabId[Pdc_List_Pdc] = 'btn_wrp_podcast_pdc'
 
-        this.podcastsLists = new PodcastsLists(this)
+        this.podcastsLists = new PodcastsLists(this)    // TODO: bad link practice (to be removed - not reproduce)
+        this.rssParser = new PodcastRSSParser()
 
         const r = remoteDataStore.getPodcastsIndex(
             this.initPodcastIndex)
@@ -328,6 +334,10 @@ class Podcasts {
         // update the top path bar
         radListBuilder.pathBuilder.buildPdcTopPath(item, $item)
 
+        // get rss datas
+        this.rssParser.parse(data)
+
         this.setPdcPreviewVisible(true)
     }
+
 }
