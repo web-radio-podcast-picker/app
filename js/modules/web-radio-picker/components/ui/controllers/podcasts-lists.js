@@ -201,13 +201,14 @@ class PodcastsLists {
         const unfold = listId == Pdc_List_Pdc
         if (unfold)
             radsItems.buildFoldableItem(
-                null,
+                item,
                 $item,
                 RadioList_Podcast,
                 Pdc_List_Pdc,
                 '',
                 true,
-                true
+                true,
+                listId
             )
 
         if ($item.length > 0)
