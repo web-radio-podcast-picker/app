@@ -220,8 +220,8 @@ class Podcasts {
         })
     }
 
-    asyncInitTab() {
-        var slistId = this.getMoreFocusableListId()
+    asyncInitTab(slistId) {
+        //var slistId = this.getMoreFocusableListId()
         this.initTabs(slistId)
         const item = this.getSelectionById(slistId)?.item
         this.podcastsLists.selectItem(slistId, item)

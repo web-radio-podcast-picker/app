@@ -76,7 +76,7 @@ class PodcastsLists {
 
         if (!self.podcasts.initializedLists[listId])
             self.podcasts.initializedLists[listId] = true
-        podcasts.asyncInitTab()
+        podcasts.asyncInitTab(listId)
 
     }
 
@@ -430,6 +430,6 @@ class PodcastsLists {
         })
 
         this.updateListView(Pdc_List_Pdc)   // do here coz async from caller
-        this.podcasts.asyncInitTab()
+        this.podcasts.asyncInitTab(Pdc_List_Pdc)
     }
 }
