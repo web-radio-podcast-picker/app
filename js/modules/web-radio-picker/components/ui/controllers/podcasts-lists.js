@@ -189,10 +189,24 @@ class PodcastsLists {
         wrpp.clearContainerSelection(paneId)
         // fold any unfolded list item
         radsItems.unbuildFoldedItems(paneId)
+        if (item == null) return
         // TODO: if emmission item, should be foldable
         // TODO: also if add a text under the name for some particular purpose (eg. description)
         const $item = this.findListItemInView(paneId, item)
         $item.addClass('item-selected')
+
+        const unfold = listId == Pdc_List_Pdc
+        if (unfold)
+            radsItems.buildFoldableItem(
+                null,
+                $item,
+                RadioList_Podcast,
+                Pdc_List_Pdc,
+                '',
+                true,
+                true
+            )
+
         if ($item.length > 0)
             $item[0].scrollIntoView(ScrollIntoViewProps)
     }
