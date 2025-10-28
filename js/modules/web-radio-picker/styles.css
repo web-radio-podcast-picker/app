@@ -291,6 +291,11 @@ find license and copyright informations in files /COPYRIGHT and /LICENCE
     /*max-height: 50%;*/
 }
 
+.wrp_pdc_prv_noimg {
+    background-image: url('../../../img/bgbleu.webp');
+    background-size: cover;
+}
+
 .wrp_pdc_prv_row {
     background-color: #000000BF;
     padding: 1em;

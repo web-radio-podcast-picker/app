@@ -11,13 +11,17 @@ class RdMediaImage {
         paneId,
         noImgSrc,
         tabId,
-        onImageUpdatedFunc
+        onImageUpdatedFunc,
+        noImageClass,
+        noImageContainer
     ) {
         this.imgId = imgId
         this.paneId = paneId
         this.noImgSrc = noImgSrc
         this.tabId = tabId
         this.onImageUpdatedFunc = onImageUpdatedFunc
+        this.noImageClass = noImageClass
+        this.noImageContainer = noImageContainer
 
         ui.onResize.push(() => {
             this.showImage()
@@ -26,17 +30,17 @@ class RdMediaImage {
 
     noImage() {
         const $i = $('#' + this.imgId)
-        $i[0].src = this.noImgSrc
         $i.attr('data-noimg', '1')
         $i.attr('width', null)
         $i.attr('height', null)
         $i.attr('data-w', null)
         $i.attr('data-h', null)
+        $i[0].src = this.noImgSrc
     }
 
     resetImage() {
         const $i = $('#' + this.imgId)
-        $i.attr('data-noimg', null)
+        //$i.attr('data-noimg', null)
         $i.attr('width', null)
         $i.attr('height', null)
         $i.attr('data-w', null)
@@ -44,11 +48,22 @@ class RdMediaImage {
         $i.addClass('ptransparent')
     }
 
-    showImage() {
+    showImage(imageExists) {
         const $i = $('#' + this.imgId)
-        const noimg = $i.attr('data-noimg') != null
-        if (noimg)
-            $i.addClass('wrp-img-half')
+        var noimg = $i[0].src == this.noImgSrc //= $i.attr('data-noimg') != null
+
+        //if (noimg)
+        //    $i.addClass('wrp-img-half')   // TODO: parameter case station media noimg
+
+        if (noimg) {
+            // no image
+            if (this.noImageClass)
+                $('#' + this.noImageContainer).addClass(this.noImageClass)
+        } else {
+            // image
+            if (this.noImageClass)
+                $('#' + this.noImageContainer).removeClass(this.noImageClass)
+        }
 
         $i.removeClass('hidden')
 

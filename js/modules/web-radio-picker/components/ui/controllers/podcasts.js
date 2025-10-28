@@ -322,6 +322,8 @@ class Podcasts {
     }
 
     setPdcPreviewVisible(isVisible) {
+        if (isVisible && !this.previewInitizalized)
+            return
         if (isVisible) {
             $('#wrp_radio_list_btn_bar').addClass('hidden')
             $('#wrp_radio_list_container').addClass('hidden')
@@ -400,6 +402,11 @@ class Podcasts {
             .text(o.episodes.length + ' episode'
                 + (o.episodes.length > 1 ? 's' : '')
             )
+
+        this.previewInitizalized = true
+        this.setPdcPreviewVisible(true)
+        //// prevent first switch to view visible when not initialized
+        ////$('#wrp_pdc_st_list').removeClass('ptransparent')
     }
 
 }
