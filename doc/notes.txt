@@ -138,7 +138,6 @@ Get-ChildItem -Path "./" -Recurse -File | Select-String -CaseSensitive -Pattern 
 
 ----------------------------------------
 
-inverion URL / NOM non corrigée !! --> podcast perdu
 6421270📚|📚https://feeds.acast.com/public/shows/646cbb0bb160e00011df3980📚|📚LEGEND📚|
 
 output_all.csv:3715611:6421270📚|📚https://feeds.acast.com/public/shows/646cbb0bb160e00011df3980📚|📚LEGEND📚|📚1757071375📚|📚https://shows.acast.com/legend📚|📚200📚|📚0📚|📚""📚|📚1691740320📚|📚https://fee
@@ -151,3 +150,5 @@ https://www.facebook.com/legendmediafr</p><p>Instagram : https://www.instagram.c
 rel=""noopener noreferrer"" target=""_blank"">https://twitter.com/legendmediafr</a></p><p>Snapchat : https://t.snapchat.com/CgEvsbWV</p><hr><p style='color:grey; font-size:0.75em;'> Hébergé par Acast. Visitez
 <a style='color:grey;' target='_blank' rel='noopener noreferrer'
 href='https://acast.com/privacy'>acast.com/privacy</a>"📚|📚news📚|📚society📚|📚culture📚|📚tv📚|📚film📚|📚""📚|📚""📚|📚""📚|📚""📚|📚""📚|📚4571
+
+wrpp\--temp\lists> cls ; Get-ChildItem -Path "./" -Recurse -File | Select-String -Pattern "646cbb0bb160e00011df3980"
