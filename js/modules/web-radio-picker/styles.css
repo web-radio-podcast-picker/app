@@ -272,6 +272,9 @@ find license and copyright informations in files /COPYRIGHT and /LICENCE
     display: grid;
     grid-template-rows: min-content min-content auto;
     /* align-content: space-between; */
+    /*padding-bottom: 200%;*/
+    grid-row: 1;
+    grid-column: 1;
 }
 
 .wrp_pdc_prv_button {
@@ -283,6 +286,9 @@ find license and copyright informations in files /COPYRIGHT and /LICENCE
 
 #wrp_pdc_prv_img_container {
     background-color: darkblue !important;
+    grid-row: 1;
+    grid-column: 1;
+    /*max-height: 50%;*/
 }
 
 .wrp_pdc_prv_row {
@@ -295,7 +301,11 @@ find license and copyright informations in files /COPYRIGHT and /LICENCE
 
 .wrp_pdc_prv_row_d {
     padding-bottom: 1rem;
-    display: block;
+    display: block;    
+}
+
+.wrp_pdc_prv_slider {
+    margin-bottom: Calc(100% + 10em);
 }
 
 .wrp_pdc_prv_row_sep_dw {

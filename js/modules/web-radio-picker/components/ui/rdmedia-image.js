@@ -18,6 +18,10 @@ class RdMediaImage {
         this.noImgSrc = noImgSrc
         this.tabId = tabId
         this.onImageUpdatedFunc = onImageUpdatedFunc
+
+        ui.onResize.push(() => {
+            this.showImage()
+        })
     }
 
     noImage() {
@@ -103,21 +107,28 @@ class RdMediaImage {
 
         //this.ignoreNextShowImage = false
 
-        if (!wrpp.resizeEventInitialized) {
+        /*if (!wrpp.resizeEventInitialized) {
             ui.onResize.push(() => {
                 this.showImage()
             })
             wrpp.resizeEventInitialized = true
+        }*/
+
+        if (this.tabId) {
+            if ((!tabsController.preserveCurrentTab
+                && !uiState.favoriteInputState)
+            ) {
+                /*tabsController
+                    .selectTab(this.tabId)
+                    .onTabChanged($('#' + this.tabId))
+                tabsController
+                    .onTabChanged($('#' + this.tabId))*/
+            }
+            else
+                tabsController.preserveCurrentTab = false
         }
 
-        if ((!tabsController.preserveCurrentTab
-            && !uiState.favoriteInputState) && this.tabId
-        ) {
-            tabsController
-                .selectTab(this.tabId)
-                .onTabChanged($('#' + this.tabId))
-        }
-        else
-            tabsController.preserveCurrentTab = false
+        if (this.onImageUpdatedFunc)
+            this.onImageUpdatedFunc()
     }
 }

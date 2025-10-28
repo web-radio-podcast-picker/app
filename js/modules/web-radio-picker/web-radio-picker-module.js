@@ -181,7 +181,10 @@ class WebRadioPickerModule extends ModuleBase {
             'wrp_img',
             'left-pane',
             './img/icon.ico',
-            'btn_wrp_logo'
+            'btn_wrp_logo',
+            /*() => {
+                $('#wrp_pdc_prv_desc').addClass('wrp_pdc_prv_slider')
+            }*/
         )
         pdcPrvImage = new RdMediaImage(
             'wrp_pdc_prv_img',
