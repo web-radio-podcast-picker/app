@@ -6,22 +6,37 @@
 
 class RdMediaImage {
 
-    constructor(
+    opts(
         imgId,
         paneId,
         noImgSrc,
         tabId,
         onImageUpdatedFunc,
         noImageClass,
-        noImageContainer
+        noImageContainer,
+        noImageSelfClass
     ) {
-        this.imgId = imgId
-        this.paneId = paneId
-        this.noImgSrc = noImgSrc
-        this.tabId = tabId
-        this.onImageUpdatedFunc = onImageUpdatedFunc
-        this.noImageClass = noImageClass
-        this.noImageContainer = noImageContainer
+        o = {}
+        o.imgId = imgId
+        o.paneId = paneId
+        o.noImgSrc = noImgSrc
+        o.tabId = tabId
+        o.onImageUpdatedFunc = onImageUpdatedFunc
+        o.noImageClass = noImageClass
+        o.noImageContainer = noImageContainer
+        o.noImageSelfClass = noImageSelfClass
+        return o
+    }
+
+    constructor(opts) {
+        this.imgId = opts.imgId || null
+        this.paneId = opts.paneId || null
+        this.noImgSrc = opts.noImgSrc || null
+        this.tabId = opts.tabId || null
+        this.onImageUpdatedFunc = opts.onImageUpdatedFunc || null
+        this.noImageClass = opts.noImageClass || null
+        this.noImageContainer = opts.noImageContainer || null
+        this.noImageSelfClass = opts.noImageSelfClass || null
 
         ui.onResize.push(() => {
             this.showImage()
@@ -50,10 +65,10 @@ class RdMediaImage {
 
     showImage(imageExists) {
         const $i = $('#' + this.imgId)
-        var noimg = $i[0].src == this.noImgSrc //= $i.attr('data-noimg') != null
+        var noimg = $i[0].src?.includes(this.noImgSrc)
 
-        //if (noimg)
-        //    $i.addClass('wrp-img-half')   // TODO: parameter case station media noimg
+        if (noimg && this.noImageSelfClass)
+            $i.addClass(this.noImageSelfClass)
 
         if (noimg) {
             // no image
@@ -63,6 +78,8 @@ class RdMediaImage {
             // image
             if (this.noImageClass)
                 $('#' + this.noImageContainer).removeClass(this.noImageClass)
+            if (this.noImageSelfClass)
+                $i.removeClass(this.noImageSelfClass)
         }
 
         $i.removeClass('hidden')

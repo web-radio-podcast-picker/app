@@ -178,24 +178,20 @@ class WebRadioPickerModule extends ModuleBase {
         radsItems = new RadsItems()
 
         rdMediaImage = new RdMediaImage(
-            'wrp_img',
-            'left-pane',
-            './img/icon.ico',
-            'btn_wrp_logo',
-
-            null,
-            null,
-            null
+            {
+                imgId: 'wrp_img',
+                paneId: 'left-pane',
+                noImgSrc: './img/icon.ico',
+                tabId: 'btn_wrp_logo',
+                noImageSelfClass: 'wrp-img-half'
+            }
         )
         pdcPrvImage = new RdMediaImage(
-            'wrp_pdc_prv_img',
-            'wrp_pdc_st_list_container',
-            transparentPixel,
-            null,
-
-            null,
-            null,
-            null
+            {
+                imgId: 'wrp_pdc_prv_img',
+                paneId: 'wrp_pdc_st_list_container',
+                noImgSrc: transparentPixel
+            }
         )
 
         listsBuilder = new ListsBuilder()

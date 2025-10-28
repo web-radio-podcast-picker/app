@@ -154,6 +154,8 @@ class TabsController {
         $('#btn_wrp_podcast').removeClass('selected')
         $('#opts_wrp_podcast').addClass('hidden')       // fix for tag path button not hidding pdc pane
 
+        $('#btn_wrp_podcast').text('Podcasts')
+
         uiState.updateCurrentTab(cid)
         //settings.dataStore.saveUIState()
     }
@@ -169,6 +171,8 @@ class TabsController {
             .removeClass('hidden')
             .removeClass('selected')
         $('#btn_wrp_logo').removeClass('hidden')
+
+        $('#btn_wrp_podcast').text('<<<')
 
         uiState.updateCurrentTab('btn_wrp_podcast')
         podcasts.openPodcasts()
