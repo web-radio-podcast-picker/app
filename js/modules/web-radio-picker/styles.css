@@ -275,7 +275,7 @@ find license and copyright informations in files /COPYRIGHT and /LICENCE
 }
 
 .wrp_pdc_prv_button {
-    border: black solid 2px !important;
+    border: #000000A0 solid 2px !important;
     padding-left: 0.5em;
     padding-right: 0.5em;
     margin-bottom: 1rem;

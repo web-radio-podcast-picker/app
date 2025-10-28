@@ -225,8 +225,10 @@ class PodcastsLists {
         // fold any unfolded list item
         radsItems.unbuildFoldedItems(paneId)
         if (item == null) return
+
         // TODO: if emmission item, should be foldable
         // TODO: also if add a text under the name for some particular purpose (eg. description)
+
         const $item = this.findListItemInView(paneId, item)
         $item.addClass('item-selected')
 
@@ -245,6 +247,12 @@ class PodcastsLists {
 
         if ($item.length > 0)
             $item[0].scrollIntoView(ScrollIntoViewProps)
+
+        // if must show prv
+        if (listId == Pdc_List_Pdc) {
+            const $b = $item.find('.wrp-list-item-text-container')
+            $b.click()
+        }
     }
 
     getItemProps(e, $item) {

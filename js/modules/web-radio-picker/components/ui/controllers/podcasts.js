@@ -235,12 +235,12 @@ class Podcasts {
 
     asyncInitTab(slistId) {
         //var slistId = this.getMoreFocusableListId()
-        this.initTabs(slistId)
+        this.initTabs(slistId, true)
         const item = this.getSelectionById(slistId)?.item
         this.podcastsLists.selectItem(slistId, item)
     }
 
-    initTabs(slistId) {
+    initTabs(slistId, skipSelectItem) {
         const self = podcasts
         const selection = self.selection
 
@@ -277,6 +277,12 @@ class Podcasts {
             }
 
         this.previousListId = slistId
+
+        if (skipSelectItem !== true)
+            // if must show prv
+            if (slistId == Pdc_List_Pdc) {
+                this.setPdcPreviewVisible(true)
+            }
     }
 
     // restore from ui state
@@ -309,6 +315,10 @@ class Podcasts {
         ui.showError(text)
         item.metadata.statusText = text
         radsItems.updateRadItemView(item, $item)
+    }
+
+    isPdcPreviewVisible() {
+        return !$('#wrp_pdc_btn_bar').hasClass('hidden')
     }
 
     setPdcPreviewVisible(isVisible) {
