@@ -261,13 +261,23 @@ find license and copyright informations in files /COPYRIGHT and /LICENCE
     /* align-content: space-around; */
 }
 
+.align-bottom {
+    align-content: end;
+}
+
 #wrp_pdc_st_list {
     /*display: flex;
     flex-direction: column;*/
     padding: 2em;
     display: grid;
-    grid-template-rows: 50% 50%;
+    grid-template-rows: min-content min-content auto;
     /* align-content: space-between; */
+}
+
+.wrp_pdc_prv_button {
+    border: black solid 2px !important;
+    padding-left: 0.5em;
+    padding-right: 0.5em;
 }
 
 #wrp_pdc_prv_img_container {

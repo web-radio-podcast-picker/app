@@ -378,6 +378,9 @@ class Podcasts {
             $e.html(txt)
         })
 
+        $('#wrp_pdc_prv_em_button')
+            .text(o.episodes.length + ' episodes')
+
         /*if (!author)
             $('#wrp_pdc_prv_author').addClass('hidden')
         else
