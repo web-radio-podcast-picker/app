@@ -265,6 +265,10 @@ find license and copyright informations in files /COPYRIGHT and /LICENCE
     align-content: end;
 }
 
+#wrp_pdc_prv_em_button {
+    padding: 0.5em;
+}
+
 #wrp_pdc_st_list {
     /*display: flex;
     flex-direction: column;*/
