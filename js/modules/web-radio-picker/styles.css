@@ -266,9 +266,9 @@ find license and copyright informations in files /COPYRIGHT and /LICENCE
 }
 
 #wrp_pdc_prv_em_button {
-    padding: 0.5em;
-    padding-left: 1em;
-    padding-right: 1em;
+    padding: 1em;
+    padding-left: 1.5em;
+    padding-right: 1.5em;
 }
 
 #wrp_pdc_st_list {
