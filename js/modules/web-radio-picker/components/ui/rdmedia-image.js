@@ -65,7 +65,7 @@ class RdMediaImage {
 
     showImage(imageExists) {
         const $i = $('#' + this.imgId)
-        var noimg = $i[0].src?.includes(this.noImgSrc)
+        var noimg = $i[0].src?.includes(this.noImgSrc?.replace('./', ''))
 
         if (noimg && this.noImageSelfClass)
             $i.addClass(this.noImageSelfClass)
