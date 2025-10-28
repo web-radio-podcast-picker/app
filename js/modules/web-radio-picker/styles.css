@@ -278,6 +278,7 @@ find license and copyright informations in files /COPYRIGHT and /LICENCE
     border: black solid 2px !important;
     padding-left: 0.5em;
     padding-right: 0.5em;
+    margin-bottom: 1rem;
 }
 
 #wrp_pdc_prv_img_container {

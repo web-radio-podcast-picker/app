@@ -8,6 +8,7 @@ const Pdc_List_Lang = 'lang'
 const Pdc_List_Tag = 'tag'
 const Pdc_List_Letter = 'letter'
 const Pdc_List_Pdc = 'pdc'
+const Pdc_List_Epi = 'epi'
 
 class Podcasts {
 
@@ -55,6 +56,10 @@ class Podcasts {
 
         this.podcastsLists = new PodcastsLists(this)    // TODO: bad link practice (to be removed - not reproduce)
         this.rssParser = new PodcastRSSParser()
+
+        $('#wrp_pdc_prv_em_button').on('click', (e) => {
+            this.podcastsLists.openEpiList()
+        })
 
         const r = remoteDataStore.getPodcastsIndex(
             this.initPodcastIndex)
@@ -343,6 +348,9 @@ class Podcasts {
     }
 
     populatePdcPreview(item, $item, o) {
+
+        $('#wrp_pdc_st_list')[0].scrollTop = 0
+
         // bg image
         const $bgImg = $('#wrp_pdc_prv_img')
         if (o.image) {
@@ -379,12 +387,9 @@ class Podcasts {
         })
 
         $('#wrp_pdc_prv_em_button')
-            .text(o.episodes.length + ' episodes')
-
-        /*if (!author)
-            $('#wrp_pdc_prv_author').addClass('hidden')
-        else
-            $('#wrp_pdc_prv_author').removeClass('hidden')*/
+            .text(o.episodes.length + ' episode'
+                + (o.episodes.length > 1 ? 's' : '')
+            )
     }
 
 }

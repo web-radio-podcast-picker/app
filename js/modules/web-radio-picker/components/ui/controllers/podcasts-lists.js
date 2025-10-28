@@ -125,7 +125,6 @@ class PodcastsLists {
     openPdc(e, $item) {
 
         const self = podcasts.podcastsLists
-
         const name = $item.attr('data-text')
         const item = podcasts.pdcItems[name]
 
@@ -148,6 +147,14 @@ class PodcastsLists {
         }
         else
             item.selCnt++
+    }
+
+    // open episods list
+    openEpiList() {
+        const self = podcasts.podcastsLists
+        const item = podcasts.selection.pdc.item
+        if (settings.debug.debug)
+            logger.log('open episode list: ' + item.name)
     }
 
     openList(e, $item, listId, getItemFunc, updateSelectionFunc, getSubListIdFunc,
