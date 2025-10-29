@@ -96,6 +96,12 @@ class RadsItems {
             $tbox.text(opts.countFunc(item))
         }
 
+        if (item.subText) {
+            const $subTextBox = $item.find('.wrp-list-item-subtext-container')
+            if (item.subText && item.subText != '')
+                $subTextBox.text(item.subText)
+        }
+
         this.updateRadItem(item, $item, $butOn, $butOff)
     }
 

@@ -24,13 +24,21 @@ class RadListBuilder {
         const str = (textViewFunc !== undefined && textViewFunc != null) ?
             textViewFunc(text) : text
 
+        // eventually sub text
+        if (listId == RadioList_Podcast && listName == Pdc_List_Pdc) {
+            const $subTextBox = $('<div class="wrp-list-item-subtext-container"></div>')
+            if (rdItem.subText && item.rdItem != '')
+                $subTextBox.text(item.subText)
+            $item.append($subTextBox)
+        }
+
         // radio name
         const $textBox = $('<div class="wrp-list-item-text-container">' + str + '</div>')
         $item.append($textBox)
 
         // eventually fav icon
         if ((listId != RadioList_List || listName == RadioList_History)
-            && rdItem != null) {
+            && rdItem != null && rdItem.favLists) {
             const favs = favorites.getItemFavoritesFiltered(rdItem)
             if (favs.length > 0) {
                 const $favIcon = $('<img name="heart_on" src="./img/icons8-heart-fill-48.png" width="24" height="24" alt="favorite" class="gr1 gc1 icon-rad-fav">')

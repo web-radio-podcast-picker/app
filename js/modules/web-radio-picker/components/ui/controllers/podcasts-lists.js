@@ -37,7 +37,7 @@ class PodcastsLists {
                 listsBuilder.buildNamesItems(
                     paneId,
                     self.podcasts.langItems,
-                    RadioList_Podcast,
+                    listId,
                     self.openLang,
                     (name, data) => data.qty
                 )
@@ -46,7 +46,7 @@ class PodcastsLists {
                 listsBuilder.buildNamesItems(
                     paneId,
                     self.podcasts.tagItems,
-                    RadioList_Podcast,
+                    listId,
                     self.openTag,
                     (name, data) => data.qty,
                     firstCharToUpper
@@ -56,7 +56,7 @@ class PodcastsLists {
                 listsBuilder.buildNamesItems(
                     paneId,
                     self.podcasts.letterItems,
-                    RadioList_Podcast,
+                    listId,
                     self.openLetter,
                     (name, data) => data.qty
                 )
@@ -65,7 +65,7 @@ class PodcastsLists {
                 listsBuilder.buildNamesItems(
                     paneId,
                     self.podcasts.pdcItems,
-                    RadioList_Podcast,
+                    listId,
                     self.openPdc,
                     (name, data) => data.qty
                 )

@@ -195,6 +195,17 @@ find license and copyright informations in files /COPYRIGHT and /LICENCE
     overflow-wrap: anywhere;
 }
 
+.wrp-list-item-subtext-container {
+    grid-row: 1;
+    grid-column: 1;
+    font-size: 0.8rem;
+    padding: 0.5em;
+    overflow-wrap: anywhere;
+    margin-top: 2em;
+    margin-left: 0.2em;
+    color: #FFFF00DD;
+}
+
 .wrp-list-item-history-favs {
     
 }

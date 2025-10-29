@@ -381,6 +381,7 @@ class Podcasts {
 
         var author = (o.itunes.author || o.copyright)?.trim()
         var title = o.title
+        const finalAuthor = author
         if (author != null && author != '') {
             author = '<div class="wrp_pdc_prv_author_text">' + author + '</div>'
             title += author
@@ -407,8 +408,8 @@ class Podcasts {
 
         // update item with new datas
         item.qty = o.episodes.length
-        if (author != null && author != '')
-            item.subText = author
+        if (finalAuthor != null && finalAuthor != '')
+            item.subText = finalAuthor
         radsItems.updateRadItemView(item, $item,
             {
                 countFunc: item => item.qty
