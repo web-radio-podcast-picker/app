@@ -67,7 +67,7 @@ class PodcastsLists {
                     self.podcasts.pdcItems,
                     RadioList_Podcast,
                     self.openPdc,
-                    (name, data) => ''
+                    (name, data) => data.qty
                 )
                 break
             default:

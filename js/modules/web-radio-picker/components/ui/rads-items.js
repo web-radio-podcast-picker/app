@@ -75,9 +75,11 @@ class RadsItems {
         this.setTitleIconsVisibility($item, false)
     }
 
-    updateRadItemView(item, $item) {
+    updateRadItemView(item, $item, opts) {
         if (item === undefined || item == null) return
         if ($item === undefined || $item == null) return
+        if (opts === undefined) opts = null
+
         const $butOn = $item.find('img[name="heart_on"]')
         const $butOff = $item.find('img[name="heart_off"]')
         const $text2 = $item.find('.wrp-item-info-text2')
@@ -88,6 +90,12 @@ class RadsItems {
         $statusText.text(item.metadata.statusText)
         const favName = favorites.getFavName(item) || ''
         $text2.text(favName)
+
+        if (opts?.countFunc) {
+            const $tbox = $item.find('.wrp-list-item-box')
+            $tbox.text(opts.countFunc(item))
+        }
+
         this.updateRadItem(item, $item, $butOn, $butOff)
     }
 

@@ -353,6 +353,8 @@ class Podcasts {
 
         // get rss datas
         const o = this.rssParser.parse(data)
+        if (settings.debug.debug)
+            window.rss = o
 
         this.populatePdcPreview(item, $item, o)
 
@@ -402,6 +404,16 @@ class Podcasts {
             .text(o.episodes.length + ' episode'
                 + (o.episodes.length > 1 ? 's' : '')
             )
+
+        // update item with new datas
+        item.qty = o.episodes.length
+        if (author != null && author != '')
+            item.subText = author
+        radsItems.updateRadItemView(item, $item,
+            {
+                countFunc: item => item.qty
+            }
+        )
 
         this.previewInitizalized = true
         this.setPdcPreviewVisible(true)
