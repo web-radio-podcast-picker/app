@@ -176,10 +176,17 @@ class PodcastsLists {
     // open episods list
     clickOpenEpiList(e) {
         const self = podcasts.podcastsLists
-        const item = podcasts.selection.pdc.item
+        if (this.pdcPreviewItem == null) {
+            this.pdcPreviewItem = podcasts.selection.pdc.item
+
+        }
+        const item = this.pdcPreviewItem
+
         const fitem = wrpp.getPdcListItem(item)
-        const $item = $(fitem.item)
-        //podcasts.selectTab(podcasts.selection, Pdc_List_Epi)
+        if (this.$pdcPreviewItem == null)
+            this.$pdcPreviewItem = $(fitem.item)
+        const $item = this.$pdcPreviewItem
+
         self.openList(
             e,
             $item,
@@ -507,7 +514,7 @@ class PodcastsLists {
 
     buildEpiItems(index) {
         const self = podcasts.podcastsLists
-        const item = podcasts.selection.pdc.item
+        const item = this.pdcPreviewItem //podcasts.selection.pdc.item
         const epiItems = {}
         item.rss.episodes.forEach(rssItem => {
 

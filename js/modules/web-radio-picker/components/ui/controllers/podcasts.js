@@ -304,8 +304,7 @@ class Podcasts {
                 this.setPdcPreviewVisible(true)
             }
 
-        if (slistId == Pdc_List_Epi)
-            this.setEpiListVisible(true)
+        this.setEpiListVisible(slistId == Pdc_List_Epi)
     }
 
     // restore from ui state
@@ -354,6 +353,9 @@ class Podcasts {
             $('#wrp_pdc_st_list_container').removeClass('hidden')
             this.setEpiListVisible(false)
         } else {
+            this.podcastsLists.pdcPreviewItem =
+                this.podcastsLists.$pdcPreviewItem = null
+
             $('#wrp_radio_list_btn_bar').removeClass('hidden')
             $('#wrp_radio_list_container').removeClass('hidden')
             $('#wrp_pdc_btn_bar').addClass('hidden')
@@ -369,10 +371,15 @@ class Podcasts {
             $('#wrp_pdc_epi_list_container').removeClass('hidden')
             $('#opts_wrp_podcast_epi_media').removeClass('hidden')
 
+            this.epiHideStListContainer = true
             $('#wrp_pdc_st_list_container').addClass('hidden')
         } else {
             $('#wrp_pdc_epi_list_container').addClass('hidden')
             $('#opts_wrp_podcast_epi_media').addClass('hidden')
+            if (this.epiHideStListContainer) {
+                $('#wrp_pdc_st_list_container').removeClass('hidden')
+                this.epiHideStListContainer = false
+            }
         }
     }
 
