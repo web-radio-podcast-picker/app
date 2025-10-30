@@ -38,6 +38,8 @@ class Podcasts {
         letterSubListId: null,
         pdc: null,
         pdcSubListId: null,
+        epi: null,
+        epiSubListId: null,
         noPage: 1,
     }
 
@@ -47,18 +49,21 @@ class Podcasts {
     tagItems = []
     letterItems = []
     pdcItems = []
+    epiItems = []
 
     constructor() {
         this.listIdToTabId[Pdc_List_Lang] = 'btn_wrp_podcast_lang'
         this.listIdToTabId[Pdc_List_Tag] = 'btn_wrp_podcast_tag'
         this.listIdToTabId[Pdc_List_Letter] = 'btn_wrp_podcast_alpha'
         this.listIdToTabId[Pdc_List_Pdc] = 'btn_wrp_podcast_pdc'
+        this.listIdToTabId[Pdc_List_Epi] = 'btn_wrp_podcast_epi'      // npt a tab
+        //this.listIdToTabId[Pdc_List_Epi] = 'wrp_radio_list_container'
 
         this.podcastsLists = new PodcastsLists(this)    // TODO: bad link practice (to be removed - not reproduce)
         this.rssParser = new PodcastRSSParser()
 
         $('#wrp_pdc_prv_em_button').on('click', (e) => {
-            this.podcastsLists.openEpiList()
+            this.podcastsLists.clickOpenEpiList(e)
         })
 
         const r = remoteDataStore.getPodcastsIndex(
@@ -91,6 +96,7 @@ class Podcasts {
         podcasts.onReadyFuncs = []
     }
 
+    // TODO: case index never initialized: never call (case no network)
     onReady(func) {
         if (this.indexInitialized) func()
         else
@@ -103,6 +109,7 @@ class Podcasts {
             case Pdc_List_Tag: return this.tagItems
             case Pdc_List_Letter: return this.letterItems
             case Pdc_List_Pdc: return this.pdcItems
+            case Pdc_List_Epi: return this.epiItems
         }
         return null
     }
@@ -113,6 +120,7 @@ class Podcasts {
             case Pdc_List_Tag: return this.selection.tag
             case Pdc_List_Letter: return this.selection.letter
             case Pdc_List_Pdc: return this.selection.pdc
+            case Pdc_List_Epi: return this.selection.epi
         }
         return null
     }
@@ -125,7 +133,8 @@ class Podcasts {
             this.initializedLists[Pdc_List_Letter] = false
         if (s.pdc == null)
             this.initializedLists[Pdc_List_Pdc] = false
-        // TODO: pdc sublist
+        if (s.epi == null)
+            this.initializedLists[Pdc_List_Epi] = false
         return this
     }
 
@@ -142,7 +151,10 @@ class Podcasts {
                 s.pdc = null
                 break
             case Pdc_List_Pdc:
-                // TODO: pdc sublist
+                s.epi = null
+                break
+            case Pdc_List_Epi:
+                s.epi = null
                 break
         }
         this.updateInitializedStatusFromSelection()
@@ -152,8 +164,8 @@ class Podcasts {
     getMoreFocusableListId() {
         const selection = this.selection
         const slistId =
-            // TODO: add pdc sub list
-            (selection.pdc != null ? Pdc_List_Pdc : null)
+            (selection.epi != null ? Pdc_List_Epi : null)
+            || (selection.pdc != null ? Pdc_List_Pdc : null)
             || (selection.letter != null ? Pdc_List_Letter : null)
             || (selection.tag != null ? Pdc_List_Tag : null)
             || (selection.lang != null ? Pdc_List_Lang : null)
@@ -168,9 +180,10 @@ class Podcasts {
             : this.podcastsLists.getSubListId(selection, Pdc_List_Tag)
         selection.letterSubListId = selection.letter == null ? null
             : this.podcastsLists.getSubListId(selection, Pdc_List_Letter)
-        // TODO: sub list of pdc
         selection.pdcSubListId = selection.pdc == null ? null
             : this.podcastsLists.getSubListId(selection, Pdc_List_Pdc)
+        selection.epiSubListId = selection.epi == null ? null
+            : this.podcastsLists.getSubListId(selection, Pdc_List_Epi)
         return this
     }
 
@@ -200,6 +213,9 @@ class Podcasts {
 
             if (selection.pdcSubListId != null)
                 this.availableLists.push(selection.pdcSubListId)
+
+            if (selection.epiSubListId != null)
+                this.availableLists.push(selection.epiSubListId)
 
             var slistId = this.getMoreFocusableListId()
 
@@ -252,6 +268,10 @@ class Podcasts {
             .setTabVisiblity(self.listIdToTabId[Pdc_List_Pdc],
                 selection.tagSubListId == Pdc_List_Pdc
                 || selection.letterSubListId == Pdc_List_Pdc)
+            // no need
+            .setTabVisiblity(self.listIdToTabId[Pdc_List_Epi],
+                selection.pdcSubListId == Pdc_List_Epi)
+
 
         // select current tab & item
 
@@ -353,6 +373,8 @@ class Podcasts {
 
         // get rss datas
         const o = this.rssParser.parse(data)
+        item.rss = o
+
         if (settings.debug.debug)
             window.rss = o
 
@@ -377,7 +399,6 @@ class Podcasts {
         }
         else
             pdcPrvImage.noImage()
-
 
         var author = (o.itunes.author || o.copyright)?.trim()
         var title = o.title

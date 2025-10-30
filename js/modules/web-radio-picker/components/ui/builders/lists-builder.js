@@ -149,7 +149,7 @@ class ListsBuilder {
 
         keys.forEach(name => {
             const cnt =
-                countFunc === undefined ?
+                (countFunc === undefined || countFunc == null) ?
                     itemsByName[name].length
                     : countFunc(name, itemsByName[name])
             this.setupItemOptions(

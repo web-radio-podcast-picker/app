@@ -16,6 +16,8 @@ class PodcastsLists {
         this.listIdToPaneId[Pdc_List_Tag] = 'opts_wrp_podcast_tag'
         this.listIdToPaneId[Pdc_List_Letter] = 'opts_wrp_podcast_alpha'
         this.listIdToPaneId[Pdc_List_Pdc] = 'opts_wrp_podcast_pdc'
+        //this.listIdToPaneId[Pdc_List_Epi] = 'wrp_radio_list'
+        this.listIdToPaneId[Pdc_List_Epi] = 'opts_wrp_podcast_epi'
     }
 
     $getPanel(listId) {
@@ -68,6 +70,15 @@ class PodcastsLists {
                     listId,
                     self.openPdc,
                     (name, data) => data.qty
+                )
+                break
+            case Pdc_List_Epi:
+                listsBuilder.buildNamesItems(
+                    paneId,
+                    self.podcasts.epiItems,
+                    listId,
+                    self.openEpiList,
+                    null
                 )
                 break
             default:
@@ -149,16 +160,46 @@ class PodcastsLists {
             item.selCnt++
     }
 
-    // open episods list
-    openEpiList() {
+    openEpiList(e) {
         const self = podcasts.podcastsLists
         const item = podcasts.selection.pdc.item
-        if (settings.debug.debug)
+        if (settings.debug.debug) {
             logger.log('open episode list: ' + item.name)
+            console.log(item)
+        }
+        const fitem = wrpp.getPdcListItem(item)
+        const $item = fitem.item
+        if (settings.debug.debug)
+            console.log($item)
     }
 
-    openList(e, $item, listId, getItemFunc, updateSelectionFunc, getSubListIdFunc,
-        noList, unfoldSelection
+    // open episods list
+    clickOpenEpiList(e) {
+        const self = podcasts.podcastsLists
+        const item = podcasts.selection.pdc.item
+        const fitem = wrpp.getPdcListItem(item)
+        const $item = $(fitem.item)
+        //podcasts.selectTab(podcasts.selection, Pdc_List_Epi)
+        self.openList(
+            e,
+            $item,
+            Pdc_List_Epi,
+            name => podcasts.pdcItems[name],
+            (selection, item) => { /*selection.epi = { item: item } */ },
+            selection => Pdc_List_Epi
+            //, true, true
+        )
+    }
+
+    openList(
+        e,
+        $item,
+        listId,
+        getItemFunc,
+        updateSelectionFunc,
+        getSubListIdFunc,
+        noList,
+        unfoldSelection
     ) {
         const name = $item.attr('data-text')
         const item = getItemFunc(name)
@@ -186,6 +227,7 @@ class PodcastsLists {
                 true,
                 listId
             )
+        // TODO: favorite icon lost after that ...
         $item.addClass('item-selected')
         // #endregion
 
@@ -292,8 +334,13 @@ class PodcastsLists {
                 if (selection.letter != null)
                     subListId = Pdc_List_Pdc
                 break
-            // TODO: no subs for pdc at the moment. later must add the parsed emission list by podcast
             case Pdc_List_Pdc:
+                if (selection.pdc != null)
+                    subListId = Pdc_List_Epi
+                break
+            case Pdc_List_Epi:
+                //if (selection.epi != null)
+                subListId = null
                 break
         }
         return subListId
@@ -320,13 +367,15 @@ class PodcastsLists {
         const index = self.podcasts.index
         switch (listId) {
             case Pdc_List_Lang: self.buildLangItems(index)
-                return
+                break
             case Pdc_List_Tag: self.buildTagsItems(index)
-                return
+                break
             case Pdc_List_Letter: self.buildLettersItems(index)
                 break
             case Pdc_List_Pdc: self.getAndBuildPdcItems(index)
                 return true
+            case Pdc_List_Epi: self.buildEpiItems(index)
+                break
             default:
                 break
         }
@@ -453,6 +502,47 @@ class PodcastsLists {
                     item, storeIndex, sel.noPage, data)
             }
         )
+    }
+
+    buildEpiItems(index) {
+        const self = podcasts.podcastsLists
+        const item = podcasts.selection.pdc.item
+        const epiItems = {}
+        item.rss.episodes.forEach(rssItem => {
+
+            const epiItem = this.podcastItem(
+                null,
+                rssItem.title,
+                '',
+                null,
+                null
+            )
+
+            // epi items props
+            epiItem.url = rssItem.audioUrl
+            epiItem.pItem = item
+
+            // state datas
+            //epiItem.selCnt = 0
+
+            // make it compatible with favorites management
+            epiItem.id = epiItem.name   // here id == title (no id in podcasts)
+            epiItem.favLists = []   // TODO: keep favorites in store and réinit here
+
+            // compat with favorites & rdItem management
+            epiItem.metadata = {}
+            epiItem.pdc = true      // indicates it's a pdc, not a station
+
+            epiItems[epiItem.name] = epiItem
+
+        })
+
+        self.podcasts.epiItems = {}
+        const keys = Object.getOwnPropertyNames(epiItems)
+        keys.sort((a, b) => a.localeCompare(b))
+        keys.forEach(k => {
+            self.podcasts.epiItems[k] = epiItems[k]
+        })
     }
 
     buildPdcItems(pItem, store, page, data) {

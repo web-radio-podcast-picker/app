@@ -17,7 +17,8 @@ class TabsController {
         'btn_wrp_podcast_lang',
         'btn_wrp_podcast_tag',
         'btn_wrp_podcast_alpha',
-        'btn_wrp_podcast_pdc'
+        'btn_wrp_podcast_pdc',
+        'btn_wrp_podcast_epi'
     ]
 
     infTabs = ['btn_wrp_inf', 'btn_wrp_set', 'btn_log_pane']
