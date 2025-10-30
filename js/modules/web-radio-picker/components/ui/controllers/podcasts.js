@@ -392,11 +392,18 @@ class Podcasts {
     }
 
     buildEpiMediaView(item) {
-        const $panel = $('#opts_wrp_podcast_epi_media').clone()
-        $('#wrp_pdc_epim_img')[0].src = $('#wrp_pdc_prv_img')[0].src
+
+        // TODO: use a rdMediaImage
+        $('#wrp_pdc_epim_img')[0].src = item.rss.image == null ?
+            transparentPixel
+            : item.rss.image
+
         const title = $('#wrp_pdc_prv_name').html()
         $('#wrp_pdc_epim_name').html(title)
         $('#wrp_pdc_epim_desc').addClass('hidden')
+
+        this.podcastsLists.pdcPreviewItem =
+            this.podcastsLists.$pdcPreviewItem = null
     }
 
     // build pdc preview
