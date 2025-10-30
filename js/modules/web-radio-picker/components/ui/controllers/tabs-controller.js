@@ -51,7 +51,9 @@ class TabsController {
         })
 
         ui.tabs.initTabs(this.infTabs, {
+
             onPostChange: ($c) => {
+                podcasts.setEpiListVisible(false)
                 this.onInfTabChanged($c)
             }
         })
@@ -70,6 +72,7 @@ class TabsController {
     // #region ----- lists tabs -----
 
     onTabChange($tab) {
+        podcasts.setEpiListVisible(false)
         const tabId = ui.tabs.selectedTabId(this.tabs)
         if (tabId != null && tabId != 'btn_wrp_podcast')
             this.tabBeforeOpenPdc = tabId

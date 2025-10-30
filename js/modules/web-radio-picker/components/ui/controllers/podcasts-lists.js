@@ -526,6 +526,8 @@ class PodcastsLists {
                 null
             )
 
+            epiItem.subText = 'test'
+
             // epi items props
             epiItem.url = rssItem.audioUrl
             epiItem.pItem = item

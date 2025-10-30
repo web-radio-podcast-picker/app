@@ -25,7 +25,9 @@ class RadListBuilder {
             textViewFunc(text) : text
 
         // eventually sub text
-        if (listId == RadioList_Podcast && listName == Pdc_List_Pdc) {
+        if (listId == RadioList_Podcast && (listName == Pdc_List_Pdc
+            || listName == Pdc_List_Epi)
+        ) {
             const $subTextBox = $('<div class="wrp-list-item-subtext-container"></div>')
             if (rdItem.subText && item.rdItem != '')
                 $subTextBox.text(item.subText)

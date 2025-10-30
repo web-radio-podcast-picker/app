@@ -305,6 +305,9 @@ class Podcasts {
             }
 
         this.setEpiListVisible(slistId == Pdc_List_Epi)
+        if (infosPane.isVisibleInfosPane())
+            // hide preview if infos pane is opened
+            infosPane.toggleInfos()
     }
 
     // restore from ui state
@@ -316,6 +319,7 @@ class Podcasts {
 
     // pdc channel rss & show pdc preview
     openPdcPreview(item, $item) {
+
         if (settings.debug.debug) {
             logger.log('open pdc preview: ' + item.name + ' | ' + item.url)
             console.log(item)
@@ -383,6 +387,10 @@ class Podcasts {
         }
     }
 
+    isEpiListVisible() {
+        return !$('#wrp_pdc_epi_list_container').hasClass('hidden')
+    }
+
     buildEpiMediaView(item) {
         const $panel = $('#opts_wrp_podcast_epi_media').clone()
         $('#wrp_pdc_epim_img')[0].src = $('#wrp_pdc_prv_img')[0].src
@@ -411,7 +419,12 @@ class Podcasts {
 
         this.populatePdcPreview(item, $item, o)
 
-        this.setPdcPreviewVisible(true)
+        if (infosPane.isVisibleInfosPane())
+            // hide preview if infos pane is opened
+            infosPane.toggleInfos()
+
+        if (!this.isEpiListVisible())
+            this.setPdcPreviewVisible(true)
     }
 
     populatePdcPreview(item, $item, o) {
