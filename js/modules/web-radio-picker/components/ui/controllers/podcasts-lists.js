@@ -189,6 +189,7 @@ class PodcastsLists {
             selection => Pdc_List_Epi
             //, true, true
         )
+        podcasts.buildEpiMediaView(item)
     }
 
     openList(

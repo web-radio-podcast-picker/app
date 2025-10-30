@@ -270,7 +270,7 @@ class Podcasts {
                 || selection.letterSubListId == Pdc_List_Pdc)
             // no need
             .setTabVisiblity(self.listIdToTabId[Pdc_List_Epi],
-                selection.pdcSubListId == Pdc_List_Epi)
+                false) //selection.pdcSubListId == Pdc_List_Epi)
 
 
         // select current tab & item
@@ -352,6 +352,7 @@ class Podcasts {
             $('#wrp_radio_list_container').addClass('hidden')
             $('#wrp_pdc_btn_bar').removeClass('hidden')
             $('#wrp_pdc_st_list_container').removeClass('hidden')
+            this.setEpiListVisible(false)
         } else {
             $('#wrp_radio_list_btn_bar').removeClass('hidden')
             $('#wrp_radio_list_container').removeClass('hidden')
@@ -366,10 +367,21 @@ class Podcasts {
     setEpiListVisible(isVisible) {
         if (isVisible) {
             $('#wrp_pdc_epi_list_container').removeClass('hidden')
+            $('#opts_wrp_podcast_epi_media').removeClass('hidden')
+
             $('#wrp_pdc_st_list_container').addClass('hidden')
         } else {
             $('#wrp_pdc_epi_list_container').addClass('hidden')
+            $('#opts_wrp_podcast_epi_media').addClass('hidden')
         }
+    }
+
+    buildEpiMediaView(item) {
+        const $panel = $('#opts_wrp_podcast_epi_media').clone()
+        $('#wrp_pdc_epim_img')[0].src = $('#wrp_pdc_prv_img')[0].src
+        const title = $('#wrp_pdc_prv_name').html()
+        $('#wrp_pdc_epim_name').html(title)
+        $('#wrp_pdc_epim_desc').addClass('hidden')
     }
 
     // build pdc preview

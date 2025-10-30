@@ -294,7 +294,7 @@ find license and copyright informations in files /COPYRIGHT and /LICENCE
     font-size: 1.3em;
 }
 
-#wrp_pdc_st_list {
+#wrp_pdc_st_list, #wrp_pdc_epim_list {
     /*display: flex;
     flex-direction: column;*/
     padding: 2em;
@@ -313,7 +313,7 @@ find license and copyright informations in files /COPYRIGHT and /LICENCE
     margin-bottom: 1rem;
 }
 
-#wrp_pdc_prv_img_container {
+#wrp_pdc_prv_img_container, #wrp_pdc_epim_img_container {
     background-color: darkblue !important;
     grid-row: 1;
     grid-column: 1;
@@ -348,7 +348,7 @@ find license and copyright informations in files /COPYRIGHT and /LICENCE
     padding-top: 1em;
 }
 
-#wrp_pdc_prv_name {
+#wrp_pdc_prv_name, #wrp_pdc_epim_name {
     font-size: 1.7em;
     padding-left: 1.3em;
     padding-bottom: 1rem;
@@ -358,7 +358,7 @@ find license and copyright informations in files /COPYRIGHT and /LICENCE
     display: block;
 }
 
-#wrp_pdc_prv_desc {
+#wrp_pdc_prv_desc,#wrp_pdc_epim_desc {
     line-height: 1.6em;
     padding-top: 1rem;
     overflow-wrap: anywhere;
