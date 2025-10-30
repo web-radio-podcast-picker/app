@@ -84,6 +84,7 @@ class TabsController {
 
         // hide pdc channel preview in case of
         podcasts.setPdcPreviewVisible(false)
+        podcasts.setEpiListVisible(false)
         podcasts.podcastsLists.resetPdcItemsClickState()
 
         if (cid == 'btn_wrp_podcast') {
