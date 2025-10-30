@@ -29,8 +29,8 @@ class RadListBuilder {
             || listName == Pdc_List_Epi)
         ) {
             const $subTextBox = $('<div class="wrp-list-item-subtext-container"></div>')
-            if (rdItem.subText && item.rdItem != '')
-                $subTextBox.text(item.subText)
+            if (rdItem.subText && rdItem.subText != '')
+                $subTextBox.text(rdItem.subText)
             $item.append($subTextBox)
         }
 

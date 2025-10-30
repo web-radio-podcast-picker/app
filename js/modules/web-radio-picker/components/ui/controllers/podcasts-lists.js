@@ -519,14 +519,14 @@ class PodcastsLists {
         item.rss.episodes.forEach(rssItem => {
 
             const epiItem = this.podcastItem(
-                null,
+                item,
                 rssItem.title,
                 '',
                 null,
                 null
             )
 
-            epiItem.subText = 'test'
+            epiItem.subText = rssItem.image
 
             // epi items props
             epiItem.url = rssItem.audioUrl

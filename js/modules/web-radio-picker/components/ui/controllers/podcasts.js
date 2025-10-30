@@ -317,6 +317,9 @@ class Podcasts {
         this.selectTab(selection)
     }
 
+    backPdcPreviewItem = null
+    back$pdcPreviewItem = null
+
     // pdc channel rss & show pdc preview
     openPdcPreview(item, $item) {
 
@@ -329,6 +332,9 @@ class Podcasts {
         item.metadata.statusText = 'opening...'
         radsItems.updateRadItemView(item, $item)
 
+        this.backPdcPreviewItem = this.podcastsLists.pdcPreviewItem
+        this.back$pdcPreviewItem = this.podcastsLists.$pdcPreviewItem
+
         remoteDataStore.getPodcastChannelRss(
             item.url,
             data => this.buildPdcPreview(item, $item, data),
@@ -337,6 +343,8 @@ class Podcasts {
     }
 
     openPdcPreviewError(item, $item, err, response) {
+        this.podcastsLists.pdcPreviewItem = this.backPdcPreviewItem
+        this.podcastsLists.$pdcPreviewItem = this.back$pdcPreviewItem
         const text = 'channel not found'
         ui.showError(text)
         item.metadata.statusText = text
@@ -401,13 +409,13 @@ class Podcasts {
         const title = $('#wrp_pdc_prv_name').html()
         $('#wrp_pdc_epim_name').html(title)
         $('#wrp_pdc_epim_desc').addClass('hidden')
-
-        this.podcastsLists.pdcPreviewItem =
-            this.podcastsLists.$pdcPreviewItem = null
     }
 
     // build pdc preview
     buildPdcPreview(item, $item, data) {
+        this.podcastsLists.pdcPreviewItem =
+            this.podcastsLists.$pdcPreviewItem = null
+
         ui.hideError()
         item.metadata.statusText = ''
         radsItems.updateRadItemView(item, $item)
