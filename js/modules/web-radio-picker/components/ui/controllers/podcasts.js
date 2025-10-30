@@ -335,6 +335,7 @@ class Podcasts {
         this.backPdcPreviewItem = this.podcastsLists.pdcPreviewItem
         this.back$pdcPreviewItem = this.podcastsLists.$pdcPreviewItem
 
+        // TODO: avoid ops after receipt if other request started after this one
         remoteDataStore.getPodcastChannelRss(
             item.url,
             data => this.buildPdcPreview(item, $item, data),
