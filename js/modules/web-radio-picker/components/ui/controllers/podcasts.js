@@ -486,13 +486,13 @@ class Podcasts {
 
         // bg image
         const $bgImg = $('#wrp_pdc_prv_img')
-        if (o.image) {
+
+        const img = o.image || o.itunes.image
+
+        if (img) {
             // immediately hide image before other loads
             $bgImg.addClass('ptransparent')
-            $bgImg[0].src = o.image
-            /*setTimeout(() => {
-                
-            }, 10)*/
+            $bgImg[0].src = img
         }
         else
             pdcPrvImage.noImage()
