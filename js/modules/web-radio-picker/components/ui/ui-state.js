@@ -167,7 +167,12 @@ class UIState {
     }
 
     getCurrentUIState() {
-        return {
+        const hasRss = podcasts.selection.pdc?.item?.rss
+        const rss = hasRss ? podcasts.selection.pdc?.item?.rss : null
+        if (hasRss)
+            podcasts.selection.pdc.item.rss = null
+
+        const r = {
             currentRDList: {
                 listId: this.currentRDList?.listId || null,
                 name: this.currentRDList?.name || null
@@ -183,6 +188,13 @@ class UIState {
             currentRDItem: this.currentRDItem,
             podcastSelection: podcasts.selection
         }
+
+        const str = JSON.stringify(r)
+
+        if (hasRss)
+            podcasts.selection.pdc.item.rss = rss
+
+        return str
     }
 
     restoreUIState(state) {
@@ -215,7 +227,8 @@ class UIState {
 
     toJSON() {
         const state = this.getCurrentUIState()
-        return JSON.stringify(state)
+        ////return JSON.stringify(state)
+        return state
     }
 
     fromJSON(s) {
