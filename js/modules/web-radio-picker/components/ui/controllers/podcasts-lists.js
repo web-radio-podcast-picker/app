@@ -141,7 +141,7 @@ class PodcastsLists {
 
         if (!self.fromSelectItem /*&& !self.isOpenPdcFromTabSelect*/)   // avoid double call
         {
-            podcasts.shouldRestoreEpiVisibleState = item == podcasts.selection.pdc.item
+            podcasts.shouldRestoreEpiVisibleState = item == podcasts.selection.pdc?.item
         }
         self.fromSelectItem = false
         self.isOpenPdcFromTabSelect = false
