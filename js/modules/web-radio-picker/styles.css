@@ -209,6 +209,8 @@ find license and copyright informations in files /COPYRIGHT and /LICENCE
     padding-bottom: 0.2em;
     margin-bottom: 0em;
     padding-top: 0em;
+    display: grid;
+    grid-template-columns: 50% 50%;
 }
 
 .wrp-list-item.item-selected > div.wrp-list-item-subtext-container {
@@ -216,6 +218,18 @@ find license and copyright informations in files /COPYRIGHT and /LICENCE
     padding-bottom: 1.5em;
     margin-top: 2.8em;
     padding-left: 0.6em;
+}
+
+.wrp-list-item-subtext1 {
+    grid-row: 1;
+    grid-column: 1;
+    text-align: left;
+}
+
+.wrp-list-item-subtext2 {
+    grid-row: 1;
+    grid-column: 2;
+    text-align: right;
 }
 
 .wrp-list-item-history-favs {

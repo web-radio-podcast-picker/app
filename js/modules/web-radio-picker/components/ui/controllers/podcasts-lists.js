@@ -525,6 +525,7 @@ class PodcastsLists {
         const item = this.pdcPreviewItem //podcasts.selection.pdc.item
         const epiItems = {}
         var index = 1
+        var prfx = ''
 
         item.rss.episodes.forEach(rssItem => {
 
@@ -538,11 +539,21 @@ class PodcastsLists {
 
             if (epiItems[epiItem.name]) {
                 // duplicated name
-                epiItem.name += ' ' + index
+                epiItem.name += ' ' + prfx + index
                 index++
+                if (index > 9) {
+                    prfx += '9.'
+                    index = 1
+                }
             }
 
-            epiItem.subText = rssItem.duration
+            // item details
+            epiItem.subText2 = rssItem.duration
+            try {
+                const d = new Date(rssItem.pubDate)
+                epiItem.subText =
+                    d.toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' })
+            } catch { }
 
             // epi items props
             epiItem.url = rssItem.audioUrl

@@ -31,14 +31,29 @@ class RadListBuilder {
         if (listId == RadioList_Podcast && (listName == Pdc_List_Pdc
             || listName == Pdc_List_Epi)
         ) {
+            const $subt1 = $('<div class="wrp-list-item-subtext1"></div>')
+            const $subt2 = $('<div class="wrp-list-item-subtext2"></div>')
+
             const $subTextBox = $('<div class="wrp-list-item-subtext-container"></div>')
-            //if (rdItem.subText && rdItem.subText != '')
-            $subTextBox.text(rdItem.subText)
-            $textBox.append($subTextBox)
+            $subTextBox.append($subt1)
+            $subTextBox.append($subt2)
+
             if (rdItem.subText && rdItem.subText != '')
-                $subTextBox.removeClass('hidden')
+                $subt1.text(rdItem.subText)
+            if (rdItem.subText2 && rdItem.subText2 != '')
+                $subt2.text(rdItem.subText2)
+
+            $textBox.append($subTextBox)
+
+            if (rdItem.subText && rdItem.subText != '')
+                $subt1.removeClass('hidden')
             else
-                $subTextBox.addClass('hidden')
+                $subt1.addClass('hidden')
+
+            if (rdItem.subText2 && rdItem.subText2 != '')
+                $subt2.removeClass('hidden')
+            else
+                $subt2.addClass('hidden')
         }
 
         $item.append($textBox)

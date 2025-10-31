@@ -88,13 +88,17 @@ class RadsItems {
 
         // ----
         const $subTextBox = $item.find('.wrp-list-item-subtext-container')
+        const $subt1 = $subTextBox.find('.wrp-list-item-subtext1')
+        const $subt2 = $subTextBox.find('.wrp-list-item-subtext2')
 
         $text.text(item.name)
         $text.append($subTextBox)
         // ----
 
         wrpp.checkMetaData(item)
+
         $statusText.text(item.metadata.statusText)
+
         const favName = favorites.getFavName(item) || ''
         $text2.text(favName)
 
@@ -103,15 +107,18 @@ class RadsItems {
             $tbox.text(opts.countFunc(item))
         }
 
-        //if (item.subText) {
-        //if (item.subText && item.subText != '')
-        $subTextBox.text(item.subText)
-        //}
+        $subt1.text(item.subText)
+        $subt2.text(item.subText2)
 
         if (item.subText && item.subText != '')
-            $subTextBox.removeClass('hidden')
+            $subt1.removeClass('hidden')
         else
-            $subTextBox.addClass('hidden')
+            $subt1.addClass('hidden')
+
+        if (item.subText2 && item.subText2 != '')
+            $subt2.removeClass('hidden')
+        else
+            $subt2.addClass('hidden')
 
         this.updateRadItem(item, $item, $butOn, $butOff)
     }
