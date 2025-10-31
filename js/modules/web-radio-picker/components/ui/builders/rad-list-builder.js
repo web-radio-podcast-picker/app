@@ -24,18 +24,23 @@ class RadListBuilder {
         const str = (textViewFunc !== undefined && textViewFunc != null) ?
             textViewFunc(text) : text
 
+        // radio name
+        const $textBox = $('<div class="wrp-list-item-text-container">' + str + '</div>')
+
         // eventually sub text
         if (listId == RadioList_Podcast && (listName == Pdc_List_Pdc
             || listName == Pdc_List_Epi)
         ) {
             const $subTextBox = $('<div class="wrp-list-item-subtext-container"></div>')
+            //if (rdItem.subText && rdItem.subText != '')
+            $subTextBox.text(rdItem.subText)
+            $textBox.append($subTextBox)
             if (rdItem.subText && rdItem.subText != '')
-                $subTextBox.text(rdItem.subText)
-            $item.append($subTextBox)
+                $subTextBox.removeClass('hidden')
+            else
+                $subTextBox.addClass('hidden')
         }
 
-        // radio name
-        const $textBox = $('<div class="wrp-list-item-text-container">' + str + '</div>')
         $item.append($textBox)
 
         // eventually fav icon

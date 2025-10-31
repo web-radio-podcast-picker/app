@@ -85,7 +85,14 @@ class RadsItems {
         const $text2 = $item.find('.wrp-item-info-text2')
         const $text = $item.find('.wrp-list-item-text-container')
         const $statusText = $item.find('.wrp-item-info-text')
+
+        // ----
+        const $subTextBox = $item.find('.wrp-list-item-subtext-container')
+
         $text.text(item.name)
+        $text.append($subTextBox)
+        // ----
+
         wrpp.checkMetaData(item)
         $statusText.text(item.metadata.statusText)
         const favName = favorites.getFavName(item) || ''
@@ -96,11 +103,15 @@ class RadsItems {
             $tbox.text(opts.countFunc(item))
         }
 
-        if (item.subText) {
-            const $subTextBox = $item.find('.wrp-list-item-subtext-container')
-            if (item.subText && item.subText != '')
-                $subTextBox.text(item.subText)
-        }
+        //if (item.subText) {
+        //if (item.subText && item.subText != '')
+        $subTextBox.text(item.subText)
+        //}
+
+        if (item.subText && item.subText != '')
+            $subTextBox.removeClass('hidden')
+        else
+            $subTextBox.addClass('hidden')
 
         this.updateRadItem(item, $item, $butOn, $butOff)
     }
