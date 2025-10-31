@@ -82,13 +82,17 @@ class RadListPathBuilder {
         const $langBut = this.buildPdcPathButton(Pdc_List_Lang, sel.lang.item.name, sel.lang.item.name, true, true)
         $p2.append($langBut)
         if (sel.tag) {
-            const $tagBut = this.buildPdcPathButton(Pdc_List_Tag, sel.tag.item.name, firstCharToUpper(sel.tag.item.name), true, true)
+            const $tagBut = this.buildPdcPathButton(Pdc_List_Tag, sel.tag.item.name, firstCharToUpper(sel.tag.item.name), true, sel.letter)
             $p2.append($tagBut)
         }
         if (sel.letter) {
-            const $letterBut = this.buildPdcPathButton(Pdc_List_Letter, sel.letter.item.name, sel.letter.item.name, true, true)
+            const $letterBut = this.buildPdcPathButton(Pdc_List_Letter, sel.letter.item.name, sel.letter.item.name, true, false)
             $p2.append($letterBut)
         }
+        $p2.append(this.buildRightChevron().addClass('right-chevron-extended'))
+        const $nameBut = this.buildPdcPathButton(Pdc_List_Pdc, item.name, item.name, true, false)
+        $nameBut.addClass('selected')
+        $p2.append($nameBut)
     }
 
     buildTopFavPath(listId, listName) {
