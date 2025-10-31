@@ -94,7 +94,7 @@ class TabsController {
         // #region close or activate podcast menu
 
         // hide pdc channel preview in case of
-        if (podcasts.isPdcVisible() && cid != 'btn_wrp_logo') {
+        if (podcasts.isPdcVisible() /*&& cid != 'btn_wrp_logo'*/) {
             podcasts.setPdcPreviewVisible(false)
             podcasts.setEpiListVisible(false)
             podcasts.podcastsLists.resetPdcItemsClickState()
