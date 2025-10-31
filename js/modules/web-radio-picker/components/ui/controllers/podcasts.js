@@ -440,9 +440,11 @@ class Podcasts {
     buildEpiMediaView(item) {
 
         // TODO: use a rdMediaImage
-        $('#wrp_pdc_epim_img')[0].src = item.rss.image == null ?
+        const img = item.rss.image || item.rss.itunes.image
+
+        $('#wrp_pdc_epim_img')[0].src = img == null ?
             transparentPixel
-            : item.rss.image
+            : img
 
         const title = $('#wrp_pdc_prv_name').html()
         $('#wrp_pdc_epim_name').html(title)
