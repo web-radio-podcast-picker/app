@@ -21,29 +21,62 @@ class PodcastRSSParser {
 
         // channel global data
 
+        const $items = $(channel).find('*')
+        window.$items = $items
+
+        const get = name => {
+            var res = null
+            $items.each((i, e) => {
+                if (e.tagName == name)
+                    res = e
+            })
+            //if (res != null)
+            //    res = res.htmlContent
+            return res
+        }
+
+        const iget = ($item, name) => {
+            var res = null
+            $item.each((i, e) => {
+                if (e.tagName == name)
+                    res = e
+            })
+            //if (res != null)
+            //    res = res.htmlContent
+            return res
+        }
+
+        const owner = get('itunes:owner')
+        var ownerName = null
+        var ownerEmail = null
+        if (owner != null) {
+            const $childs = $(owner.childNodes)
+            ownerName = iget($childs, 'itunes:name')
+            ownerEmail = iget($childs, 'itunes:email')
+        }
+
         const podcast = {
-            title: channel.querySelector('title')?.textContent || e,
-            link: channel.querySelector('link')?.textContent || e,
-            description: channel.querySelector('description')?.textContent || e,
-            language: channel.querySelector('language')?.textContent || e,
-            copyright: channel.querySelector('copyright')?.textContent || e,
-            lastBuildDate: channel.querySelector('lastBuildDate')?.textContent || e,
-            generator: channel.querySelector('generator')?.textContent || e,
-            managingEditor: channel.querySelector('managingEditor')?.textContent || e,
-            webMaster: channel.querySelector('webMaster')?.textContent || e,
+            title: get('title')?.textContent || e,
+            link: get('link')?.textContent || e,
+            description: get('description')?.textContent || e,
+            language: get('language')?.textContent || e,
+            copyright: get('copyright')?.textContent || e,
+            lastBuildDate: get('lastBuildDate')?.textContent || e,
+            generator: get('generator')?.textContent || e,
+            ////managingEditor: get('managingEditor')?.textContent || e,
+            webMaster: get('webMaster')?.textContent || e,
             itunes: {
-                author: channel.querySelector('itunes\\:author')?.textContent || e,
-                subtitle: channel.querySelector('itunes\\:subtitle')?.textContent || e,
-                summary: channel.querySelector('itunes\\:summary')?.textContent || e,
-                explicit: channel.querySelector('itunes\\:explicit')?.textContent || e,
-                type: channel.querySelector('itunes\\:type')?.textContent || e,
+                author: get('itunes:author')?.textContent || e,
+                subtitle: get('itunes:subtitle')?.textContent || e,
+                summary: get('itunes:summary')?.textContent || e,
+                explicit: get('itunes:explicit')?.textContent || e,
+                type: get('itunes:type')?.textContent || e,
                 owner: {
-                    name: channel.querySelector('itunes\\:owner itunes\\:name')?.textContent || e,
-                    email: channel.querySelector('itunes\\:owner itunes\\:email')?.textContent || e
+                    name: ownerName || e,
+                    email: ownerEmail || e
                 },
-                image: channel.querySelector('itunes\\:image')?.getAttribute('href') || e,
-                categories: Array.from(channel.querySelectorAll('itunes\\:category'))
-                    .map(cat => cat.getAttribute('text'))
+                image: get('itunes:image')?.getAttribute('href') || e,
+                keywords: get('itunes:keywords')?.textContent || e
             },
             image: channel.querySelector('image > url')?.textContent || e,
             episodes: []
@@ -53,18 +86,27 @@ class PodcastRSSParser {
 
         const items = channel.querySelectorAll('item')
 
-        podcast.episodes = Array.from(items).map(item => ({
-            title: item.querySelector('title')?.textContent || e,
-            pubDate: item.querySelector('pubDate')?.textContent || e,
-            guid: item.querySelector('guid')?.textContent || e,
-            audioUrl: item.querySelector('enclosure')?.getAttribute('url') || e,
-            duration: item.querySelector('itunes\\:duration')?.textContent || e,
-            summary: item.querySelector('itunes\\:summary, summary')?.textContent || e,
-            description: item.querySelector('description')?.textContent || e,
-            explicit: item.querySelector('itunes\\:explicit')?.textContent || e,
-            episodeType: item.querySelector('itunes\\:episodeType')?.textContent || e,
-            image: item.querySelector('itunes\\:image')?.getAttribute('href') || e
-        }))
+        podcast.episodes = Array.from(items).map(item => {
+
+            const $item = $(item.childNodes)
+
+            return {
+                title: iget($item, 'title')?.textContent || e,
+                season: iget($item, 'itunes:season')?.textContent || e,
+                episode: iget($item, 'itunes:episode')?.textContent || e,
+                pubDate: iget($item, 'pubDate')?.textContent || e,
+                guid: iget($item, 'guid')?.textContent || e,
+                audioUrl: iget($item, 'enclosure')?.getAttribute('url') || e,
+                audioType: iget($item, 'enclosure')?.getAttribute('type') || e,
+                audioLength: iget($item, 'enclosure')?.getAttribute('length') || e,
+                duration: iget($item, 'itunes:duration')?.textContent || e,
+                summary: iget($item, 'itunes:summary')?.textContent || e,
+                description: iget($item, 'description')?.textContent || e,
+                explicit: iget($item, 'itunes:explicit')?.textContent || e,
+                episodeType: iget($item, 'itunes:episodeType')?.textContent || e,
+                image: iget($item, 'itunes:image')?.getAttribute('href') || e
+            };
+        })
 
         if (settings.debug.debug)
             console.log(podcast)

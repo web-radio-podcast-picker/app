@@ -48,7 +48,10 @@ class RemoteDataStore {
                         throw new Error(response.statusText + ' ' + response.url)
                 }
             })
-            .then(data => callback(data)) // you can use response body here
+            .then(data => {
+                window.rssData = data
+                callback(data)
+            }) // you can use response body here
             .catch(error => {
                 logger.error(error)
                 if (errCallback)
