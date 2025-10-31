@@ -523,14 +523,14 @@ class PodcastsLists {
     buildEpiItems(index) {
         const self = podcasts.podcastsLists
         const item = this.pdcPreviewItem //podcasts.selection.pdc.item
-        const epiItems = {}
+        var epiItems = {}
         var index = 1
         var prfx = ''
 
         item.rss.episodes.forEach(rssItem => {
 
             const epiItem = this.podcastItem(
-                item,
+                null,
                 rssItem.title,
                 '',
                 null,
@@ -558,6 +558,7 @@ class PodcastsLists {
             // epi items props
             epiItem.url = rssItem.audioUrl
             epiItem.pItem = item
+            epiItem.rss = rssItem
 
             // state datas
             //epiItem.selCnt = 0
@@ -576,7 +577,21 @@ class PodcastsLists {
 
         self.podcasts.epiItems = {}
         const keys = Object.getOwnPropertyNames(epiItems)
-        keys.sort((a, b) => a.localeCompare(b))
+        // alpha sort
+        keys.sort((a, b) => {
+            var r = a.localeCompare(b)
+            const o1 = epiItems[a]
+            const o2 = epiItems[b]
+            if (o1?.rss.pubDate && o2?.rss.pubDate) {
+                try {
+                    const d1 = new Date(o1.rss.pubDate)
+                    const d2 = new Date(o2.rss.pubDate)
+                    r = d1 <= d2
+                }
+                catch { }
+            }
+            return r
+        })
         keys.forEach(k => {
             self.podcasts.epiItems[k] = epiItems[k]
         })

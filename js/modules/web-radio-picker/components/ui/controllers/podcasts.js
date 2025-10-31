@@ -305,14 +305,13 @@ class Podcasts {
             // hide preview if infos pane is opened
             infosPane.toggleInfos()
 
-        if (skipSelectItem !== true)
-        {            // if must show prv
+        if (skipSelectItem !== true) {            // if must show prv
             if (slistId == Pdc_List_Pdc) {
                 this.setPdcPreviewVisible(true)
             }
-                this.setEpiListMediaVisible(slistId==Pdc_List_Epi)
         }
-        
+        this.setEpiListMediaVisible(slistId == Pdc_List_Epi)
+
         if (tabsController.openingVizWithEpiListVisible === true)
             $('#btn_wrp_podcast_pdc')
                 .removeClass('selected')
