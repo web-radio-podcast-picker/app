@@ -176,9 +176,8 @@ class PodcastsLists {
     // open episods list
     clickOpenEpiList(e) {
         const self = podcasts.podcastsLists
-        if (this.pdcPreviewItem == null) {
+            if (this.pdcPreviewItem == null) { // better: memorize in the pane (serialization)
             this.pdcPreviewItem = podcasts.selection.pdc.item
-
         }
         const item = this.pdcPreviewItem
 
@@ -219,6 +218,7 @@ class PodcastsLists {
         const { $e, isDisabled, isSelected, isAccepted } = self.getItemProps(e, $item)
         if (isDisabled) return
 
+        // TODO: do not rebuild selected item in case of opening epi list
         // #region select item
         wrpp.clearContainerSelection(self.paneId)
         // fold any unfolded list item

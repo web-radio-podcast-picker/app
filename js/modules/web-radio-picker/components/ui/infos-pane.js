@@ -106,8 +106,11 @@ You should have received a copy of the GNU General Public License along with thi
         var rd = null
         if (!$pane.hasClass('hidden')) {
 
+            // is visible
+
             this.lastPdcPreviewVisibleState = podcasts.isPdcPreviewVisible()
             this.lastEpiListVisibleState = podcasts.isEpiListVisible()
+
             podcasts.setPdcPreviewVisible(false)
 
             $('#opts_wrp_inf').empty()
@@ -116,6 +119,8 @@ You should have received a copy of the GNU General Public License along with thi
             rd = uiState.RDList(RadioList_Info, null, null)
         }
         else {
+
+            // is hidden
 
             if (uiState.currentTab.listId == RadioList_Podcast
                 && !this.lastEpiListVisibleState

@@ -72,10 +72,14 @@ class TabsController {
     // #region ----- lists tabs -----
 
     onTabChange($tab) {
-        podcasts.setEpiListVisible(false)
         const tabId = ui.tabs.selectedTabId(this.tabs)
+        const newTabId = $tab.attr('id')
+
         if (tabId != null && tabId != 'btn_wrp_podcast')
             this.tabBeforeOpenPdc = tabId
+
+        if (podcasts.isEpiListVisible() && newTabId != 'btn_wrp_logo')
+            podcasts.setEpiListVisible(false)
     }
 
     onTabChanged($tab) {
@@ -86,9 +90,11 @@ class TabsController {
         // #region close or activate podcast menu
 
         // hide pdc channel preview in case of
-        podcasts.setPdcPreviewVisible(false)
-        podcasts.setEpiListVisible(false)
-        podcasts.podcastsLists.resetPdcItemsClickState()
+        if (podcasts.isPdcVisible() && cid != 'btn_wrp_logo') {
+            podcasts.setPdcPreviewVisible(false)
+            podcasts.setEpiListVisible(false)
+            podcasts.podcastsLists.resetPdcItemsClickState()
+        }
 
         if (cid == 'btn_wrp_podcast') {
             // reclick on 'podcast' -> close podcast menu
