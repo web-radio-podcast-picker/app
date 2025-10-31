@@ -524,6 +524,8 @@ class PodcastsLists {
         const self = podcasts.podcastsLists
         const item = this.pdcPreviewItem //podcasts.selection.pdc.item
         const epiItems = {}
+        var index = 1
+
         item.rss.episodes.forEach(rssItem => {
 
             const epiItem = this.podcastItem(
@@ -533,6 +535,12 @@ class PodcastsLists {
                 null,
                 null
             )
+
+            if (epiItems[epiItem.name]) {
+                // duplicated name
+                epiItem.name += ' ' + index
+                index++
+            }
 
             epiItem.subText = rssItem.duration
 
