@@ -43,6 +43,16 @@ class TabsController {
             onPostChange: $c => {
                 const tabId = $c.attr('id')
                 const listId = podcasts.getListIdByTabId(tabId)
+
+                // flip back from epi list visible and viz tab opened
+                if (this.openingVizWithEpiListVisible) {
+                    $('#opts_wrp_logo').addClass('hidden')
+                    $('#cnv_oscillo').addClass('hidden')
+                    $('#btn_wrp_logo').removeClass('selected')
+                    ui.vizTabActivated = false
+                    this.openingVizWithEpiListVisible = false
+                }
+
                 podcasts.selectTab(
                     podcasts.selection,
                     listId
@@ -79,10 +89,10 @@ class TabsController {
             this.tabBeforeOpenPdc = tabId
 
         if (podcasts.isEpiListVisible() && newTabId != 'btn_wrp_logo'
-           && newTabId != 'btn_wrp_podcast')
+            && newTabId != 'btn_wrp_podcast')
             podcasts.setEpiListVisible(false)
 
-        if (newTabId == 'btn_wrp_podcast' )
+        if (newTabId == 'btn_wrp_podcast')
             podcasts.podcastsLists.isOpenPdcFromTabSelect = true
     }
 
@@ -93,11 +103,19 @@ class TabsController {
 
         // #region close or activate podcast menu
 
+        this.openingVizWithEpiListVisible = false
+
         // hide pdc channel preview in case of
-        if (podcasts.isPdcVisible() /*&& cid != 'btn_wrp_logo'*/) {
+        if (podcasts.isPdcPreviewVisible() /*&& cid != 'btn_wrp_logo'*/) {
             podcasts.setPdcPreviewVisible(false)
-            podcasts.setEpiListVisible(false)
             podcasts.podcastsLists.resetPdcItemsClickState()
+        }
+        if (podcasts.isEpiListVisible()) {
+            if (cid != 'btn_wrp_logo') {
+                podcasts.setEpiListVisible(false)
+            }
+            else
+                this.openingVizWithEpiListVisible = true
         }
 
         if (cid == 'btn_wrp_podcast') {
@@ -116,7 +134,7 @@ class TabsController {
                 this.pdcTabSelected = true
             }
         } else
-            this.pdcTabSelected = false
+            this.pdcTabSelected = this.openingVizWithEpiListVisible
 
         if (this.pdcTabSelected)
             this.showPDCTabs()

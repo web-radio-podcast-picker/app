@@ -310,6 +310,10 @@ class Podcasts {
         if (infosPane.isVisibleInfosPane())
             // hide preview if infos pane is opened
             infosPane.toggleInfos()
+
+        if (tabsController.openingVizWithEpiListVisible === true)
+            $('#btn_wrp_podcast_pdc')
+                .removeClass('selected')
     }
 
     // restore from ui state
