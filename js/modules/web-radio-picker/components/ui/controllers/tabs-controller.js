@@ -198,8 +198,9 @@ class TabsController {
             $('#' + tabId).addClass('hidden')
         })
         this.pdcTabs.forEach(tabId => {
-            $('#' + tabId).removeClass('hidden')
+            $('#' + tabId).addClass('hidden')
         })
+        $('#btn_wrp_podcast_lang').removeClass('hidden')
         $('#btn_wrp_podcast')
             .removeClass('hidden')
             .removeClass('selected')
