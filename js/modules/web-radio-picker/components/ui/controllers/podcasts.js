@@ -304,7 +304,9 @@ class Podcasts {
                 this.setPdcPreviewVisible(true)
             }
 
-        this.setEpiListVisible(slistId == Pdc_List_Epi)
+        this.setEpiListVisible(slistId == Pdc_List_Epi
+            || this.shouldRestoreEpiVisibleState)
+
         if (infosPane.isVisibleInfosPane())
             // hide preview if infos pane is opened
             infosPane.toggleInfos()
@@ -366,7 +368,12 @@ class Podcasts {
             }
             $('#wrp_radio_list_container').addClass('hidden')
             $('#wrp_pdc_st_list_container').removeClass('hidden')
-            this.setEpiListVisible(false)
+
+            if (!this.shouldRestoreEpiVisibleState)
+                this.setEpiListVisible(false)
+            else
+                this.setEpiListVisible(true)
+
         } else {
             this.podcastsLists.pdcPreviewItem =
                 this.podcastsLists.$pdcPreviewItem = null
@@ -391,17 +398,28 @@ class Podcasts {
         }
     }
 
+    shouldRestoreEpiVisibleState = false
+
     setEpiListVisible(isVisible) {
+
+        //if (!this.podcastsLists.isOpenPdcFromTabSelect)
+        this.shouldRestoreEpiVisibleState = isVisible
+
         if (isVisible) {
             $('#wrp_pdc_epi_list_container').removeClass('hidden')
             this.epiHideStListContainer = true
             $('#wrp_pdc_st_list_container').addClass('hidden')
+
+            $('#opts_wrp_podcast_epi').removeClass('hidden')
+
         } else {
             $('#wrp_pdc_epi_list_container').addClass('hidden')
             if (this.epiHideStListContainer) {
-                $('#wrp_pdc_st_list_container').removeClass('hidden')
+                //$('#wrp_pdc_st_list_container').removeClass('hidden')
                 this.epiHideStListContainer = false
             }
+
+            $('#opts_wrp_podcast_epi').addClass('hidden')
         }
         this.setEpiListMediaVisible(isVisible)
     }

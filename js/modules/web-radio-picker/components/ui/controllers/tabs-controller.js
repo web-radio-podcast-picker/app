@@ -78,8 +78,12 @@ class TabsController {
         if (tabId != null && tabId != 'btn_wrp_podcast')
             this.tabBeforeOpenPdc = tabId
 
-        if (podcasts.isEpiListVisible() && newTabId != 'btn_wrp_logo')
+        if (podcasts.isEpiListVisible() && newTabId != 'btn_wrp_logo'
+           && newTabId != 'btn_wrp_podcast')
             podcasts.setEpiListVisible(false)
+
+        if (newTabId == 'btn_wrp_podcast' )
+            podcasts.podcastsLists.isOpenPdcFromTabSelect = true
     }
 
     onTabChanged($tab) {

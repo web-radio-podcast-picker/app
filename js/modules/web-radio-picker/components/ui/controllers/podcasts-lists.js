@@ -139,6 +139,13 @@ class PodcastsLists {
         const name = $item.attr('data-text')
         const item = podcasts.pdcItems[name]
 
+        if (!self.fromSelectItem /*&& !self.isOpenPdcFromTabSelect*/)   // avoid double call
+        {
+            podcasts.shouldRestoreEpiVisibleState = item == podcasts.selection.pdc.item
+        }
+        self.fromSelectItem = false
+        self.isOpenPdcFromTabSelect = false
+
         // reset all other pdc items click state
         self.resetPdcItemsClickState(item)
 
@@ -176,7 +183,7 @@ class PodcastsLists {
     // open episods list
     clickOpenEpiList(e) {
         const self = podcasts.podcastsLists
-            if (this.pdcPreviewItem == null) { // better: memorize in the pane (serialization)
+        if (this.pdcPreviewItem == null) { // better: memorize in the pane (serialization)
             this.pdcPreviewItem = podcasts.selection.pdc.item
         }
         const item = this.pdcPreviewItem
@@ -301,6 +308,7 @@ class PodcastsLists {
         // if must show prv
         if (listId == Pdc_List_Pdc) {
             const $b = $item.find('.wrp-list-item-text-container')
+            this.fromSelectItem = true
             $b.click()
         }
     }
