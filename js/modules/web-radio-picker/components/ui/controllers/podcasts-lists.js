@@ -269,7 +269,6 @@ class PodcastsLists {
         settings.dataStore.saveUIState()
     }
 
-
     findListItemInView(paneId, item) {
         const $panel = $('#' + paneId)
         const $item = $panel.find('[data-text="' + item.name + '"]')

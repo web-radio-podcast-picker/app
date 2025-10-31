@@ -27,6 +27,7 @@ class Podcasts {
 
     listIdToTabId = {}
     initializedLists = {}
+    initializingPodcasts = null
 
     // selection values
     selection = {
@@ -40,6 +41,8 @@ class Podcasts {
         pdcSubListId: null,
         epi: null,
         epiSubListId: null,
+        epiOpen: false,
+        epiOpening: false,
         noPage: 1,
     }
 
@@ -63,6 +66,7 @@ class Podcasts {
         this.rssParser = new PodcastRSSParser()
 
         $('#wrp_pdc_prv_em_button').on('click', (e) => {
+            podcasts.selection.epiOpen = true
             this.podcastsLists.clickOpenEpiList(e)
         })
 
@@ -189,6 +193,9 @@ class Podcasts {
 
     selectTab(selection, targetListId) {
 
+        if (settings.debug.debug)
+            console.log('targetListId= ' + targetListId + 'selection= ' + selection)
+
         this.onReady(() => {
             // find available tabs
 
@@ -222,6 +229,8 @@ class Podcasts {
             if (targetListId !== undefined && targetListId != null)
                 slistId = targetListId
 
+            var initTabDone = false
+
             this.availableLists.forEach(listId => {
 
                 if (settings.debug.debug)
@@ -231,21 +240,22 @@ class Podcasts {
 
                     this.onReady(() => {
                         if (slistId == listId) {
+                            this.initializedLists[listId] = true
                             // only if visible
                             // build items
                             const isBuildAsync = this.podcastsLists.buildItems(listId)
                             if (!isBuildAsync) {
                                 // load and init listId view
                                 this.podcastsLists.updateListView(listId)
-                            }
+                            } else initTabDone = true
                         }
                     })
                 }
             })
 
-            this.initTabs(slistId)
-
-            settings.dataStore.saveUIState()
+            if (!initTabDone) {
+                this.initTabs(slistId)
+            }
         })
     }
 
@@ -253,12 +263,19 @@ class Podcasts {
         //var slistId = this.getMoreFocusableListId()
         this.initTabs(slistId, true)
         const item = this.getSelectionById(slistId)?.item
-        this.podcastsLists.selectItem(slistId, item)
+
+        if (item != null) {
+            const paneId = this.podcastsLists.listIdToPaneId[slistId]
+            const $item = this.podcastsLists.findListItemInView(paneId, item)
+            if ($item.length > 0 && !$item.hasClass('item-selected'))
+                this.podcastsLists.selectItem(slistId, item)
+        }
     }
 
     initTabs(slistId, skipSelectItem) {
         const self = podcasts
         const selection = self.selection
+        const epiOpenOriginal = selection.epiOpen
 
         ui.tabs
             .setTabVisiblity(self.listIdToTabId[Pdc_List_Tag],
@@ -315,10 +332,17 @@ class Podcasts {
         if (tabsController.openingVizWithEpiListVisible === true)
             $('#btn_wrp_podcast_pdc')
                 .removeClass('selected')
+
+        this.initializingPodcasts--
+        if (settings.debug.debug)
+            console.log('initializingPodcasts = ' + this.initializingPodcasts + ' -- ' + this.selection.epiOpen)
+        settings.dataStore.saveUIState()
     }
 
     // restore from ui state
     openPodcasts(selection) {
+        if (this.initializingPodcasts == null)
+            this.initializingPodcasts = 1
         if (selection === undefined || selection == null)
             selection = this.selection
         this.selectTab(selection)
@@ -427,6 +451,14 @@ class Podcasts {
             $('#opts_wrp_podcast_epi').addClass('hidden')
         }
         this.setEpiListMediaVisible(isVisible)
+
+        if (settings.debug.debug)
+            console.log('setEpiListVisible= ' + isVisible + ' -- initializingPodcasts= ' + this.initializingPodcasts)
+
+        if (!isVisible && this.initializingPodcasts < -2) {
+            this.selection.epiOpen = false
+            settings.dataStore.saveUIState()
+        }
     }
 
     isPdcVisible() {
@@ -450,6 +482,10 @@ class Podcasts {
         const title = $('#wrp_pdc_prv_name').html()
         $('#wrp_pdc_epim_name').html(title)
         $('#wrp_pdc_epim_desc').addClass('hidden')
+
+        this.selection.epiOpen = true
+        //this.selection.epiOpening = false
+        settings.dataStore.saveUIState()
     }
 
     // build pdc preview
@@ -479,9 +515,19 @@ class Podcasts {
             // hide preview if infos pane is opened
             infosPane.toggleInfos()
 
-        if (!this.isEpiListVisible())
+        if (!this.isEpiListVisible()) {
             this.setPdcPreviewVisible(true)
+            if (this.selection.epiOpen && this.buildPdcPreviewCount < 1) {
+                //this.selection.epiOpening = true
+                // case on start
+                $('#wrp_pdc_prv_em_button').click()
+            }
+        }
+
+        this.buildPdcPreviewCount++
     }
+
+    buildPdcPreviewCount = 0
 
     populatePdcPreview(item, $item, o) {
 
