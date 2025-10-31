@@ -526,7 +526,7 @@ class PodcastsLists {
                 null
             )
 
-            epiItem.subText = rssItem.image
+            epiItem.subText = rssItem.duration
 
             // epi items props
             epiItem.url = rssItem.audioUrl
