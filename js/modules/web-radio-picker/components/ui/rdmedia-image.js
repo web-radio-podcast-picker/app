@@ -63,7 +63,7 @@ class RdMediaImage {
         $i.addClass('ptransparent')
     }
 
-    showImage(imageExists) {
+    showImage() {
         const $i = $('#' + this.imgId)
         var noimg = $i[0].src?.includes(this.noImgSrc?.replace('./', ''))
 
@@ -74,12 +74,16 @@ class RdMediaImage {
             // no image
             if (this.noImageClass)
                 $('#' + this.noImageContainer).addClass(this.noImageClass)
+            if (settings.debug.debug)
+                console.warn('no image: ' + $i[0].src)
         } else {
             // image
             if (this.noImageClass)
                 $('#' + this.noImageContainer).removeClass(this.noImageClass)
             if (this.noImageSelfClass)
                 $i.removeClass(this.noImageSelfClass)
+            if (settings.debug.debug)
+                console.warn('image ok ' + $i[0].src)
         }
 
         $i.removeClass('hidden')

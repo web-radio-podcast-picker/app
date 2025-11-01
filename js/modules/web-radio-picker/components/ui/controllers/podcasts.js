@@ -565,7 +565,8 @@ class Podcasts {
             if (settings.debug.debug)
                 console.warn('load pdc media image: ' + img)
             // immediately hide image before other loads
-            $bgImg.addClass('ptransparent')
+            //$bgImg.addClass('ptransparent')
+            $bgImg.addClass('hidden')
             $bgImg[0].src = img
         }
         else {
