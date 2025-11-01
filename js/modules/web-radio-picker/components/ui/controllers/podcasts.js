@@ -202,7 +202,7 @@ class Podcasts {
 
             if (settings.debug.debug) {
                 console.clear()
-                console.log('---------------SELECT TAB-----------')
+                console.log('---------------SELECT TAB----------- targetListId=' + targetListId)
             }
 
             this.updateSelectionSubListsIds(selection)
