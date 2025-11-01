@@ -194,7 +194,7 @@ class UIState {
         }
 
         if (settings.debug.debug) {
-            console.warn('save ui state: currentRDItem=' + this.currentRDItem.name)
+            console.warn('save ui state: currentRDItem=' + this.currentRDItem?.name)
         }
 
         const str = JSON.stringify(r)
@@ -223,6 +223,13 @@ class UIState {
         // ---
         if (state.currentRDItem != null)
             this.#setRDItem(state.currentRDItem)
+
+        if (settings.debug.debug) {
+            console.warn('restore UI state: ')
+            console.warn(state)
+            console.warn(this)
+            window.state = state
+        }
 
         this.disableSave = false
     }
