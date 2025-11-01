@@ -590,7 +590,7 @@ class Podcasts {
         )
 
         this.previewInitizalized = true
-        //this.setPdcPreviewVisible(true)
+        this.setPdcPreviewVisible(true)
         //this.setEpiListVisible(false)
 
         //// prevent first switch to view visible when not initialized
