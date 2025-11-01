@@ -122,8 +122,8 @@ class UIState {
         this.currentRDList = newList
         if (skipSave !== true && !this.disableSave)
             settings.dataStore.saveUIState()
-        if (settings.debug.trace)
-            logger.log('currentRDList=' + JSON.stringify(this.currentRDList))
+        if (settings.debug.debug)
+            console.log('currentRDList=' + JSON.stringify(this.currentRDList))
     }
 
     getCurrentRDLists() {
@@ -171,6 +171,10 @@ class UIState {
         const rss = hasRss ? podcasts.selection.pdc?.item?.rss : null
         if (hasRss)
             podcasts.selection.pdc.item.rss = null
+        const hasCRDIRss = uiState.currentRDItem?.pItem
+        const crdiRss = hasCRDIRss ? uiState.currentRDItem?.pItem : null
+        if (hasCRDIRss)
+            uiState.currentRDItem.pItem = null
 
         const r = {
             currentRDList: {
@@ -193,6 +197,8 @@ class UIState {
 
         if (hasRss)
             podcasts.selection.pdc.item.rss = rss
+        if (hasCRDIRss)
+            uiState.currentRDItem.pItem = crdiRss
 
         return str
     }

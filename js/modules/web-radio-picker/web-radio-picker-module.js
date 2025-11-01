@@ -457,6 +457,11 @@ class WebRadioPickerModule extends ModuleBase {
     }
 
     // { domElement, id }
+    getEpiListItem(item) {
+        return radiosLists.findListItemByName(item.name, 'opts_wrp_podcast_epi')
+    }
+
+    // { domElement, id }
     getRadListItem(item) {
         return radiosLists.findListItemById(item.id, 'wrp_radio_list')
     }

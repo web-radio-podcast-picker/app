@@ -155,10 +155,11 @@ class Podcasts {
                 s.pdc = null
                 break
             case Pdc_List_Pdc:
+                // TODO: ok after startup, no good at startup (current lost)
                 s.epi = null
                 break
             case Pdc_List_Epi:
-                s.epi = null
+                //s.epi = null
                 break
         }
         this.updateInitializedStatusFromSelection()
@@ -168,8 +169,8 @@ class Podcasts {
     getMoreFocusableListId() {
         const selection = this.selection
         const slistId =
-            (selection.epi != null ? Pdc_List_Epi : null)
-            || (selection.pdc != null ? Pdc_List_Pdc : null)
+            /*(selection.epi != null ? Pdc_List_Epi : null)
+            || */(selection.pdc != null ? Pdc_List_Pdc : null)
             || (selection.letter != null ? Pdc_List_Letter : null)
             || (selection.tag != null ? Pdc_List_Tag : null)
             || (selection.lang != null ? Pdc_List_Lang : null)
@@ -275,7 +276,6 @@ class Podcasts {
     initTabs(slistId, skipSelectItem) {
         const self = podcasts
         const selection = self.selection
-        const epiOpenOriginal = selection.epiOpen
 
         ui.tabs
             .setTabVisiblity(self.listIdToTabId[Pdc_List_Tag],
@@ -519,7 +519,13 @@ class Podcasts {
             this.setPdcPreviewVisible(true)
             if (this.selection.epiOpen && this.buildPdcPreviewCount < 1) {
                 //this.selection.epiOpening = true
+
                 // case on start
+
+                if (settings.debug.debug)
+                    logger.log('opening epi list')
+
+                this.autoOpenedEpiList = true
                 $('#wrp_pdc_prv_em_button').click()
             }
         }

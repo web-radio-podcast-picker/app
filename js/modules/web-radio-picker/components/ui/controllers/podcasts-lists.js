@@ -77,7 +77,7 @@ class PodcastsLists {
                     paneId,
                     self.podcasts.epiItems,
                     listId,
-                    self.openEpiList,
+                    self.openEpi,
                     null
                 )
                 break
@@ -167,17 +167,26 @@ class PodcastsLists {
             item.selCnt++
     }
 
-    openEpiList(e) {
+    openEpi(e) {
         const self = podcasts.podcastsLists
         const item = podcasts.selection.pdc.item
+
+        const $epiItem = $(e.currentTarget).parent()
+        const name = $epiItem.attr('data-text')
+        const epiItem = podcasts.epiItems[name]
+
         if (settings.debug.debug) {
-            logger.log('open episode list: ' + item.name)
-            console.log(item)
+            logger.log('open episode: ' + epiItem.name)
+            console.log(epiItem)
         }
-        const fitem = wrpp.getPdcListItem(item)
-        const $item = fitem.item
-        if (settings.debug.debug)
-            console.log($item)
+
+        const list = uiState.RDList(RadioList_Podcast, Pdc_List_Epi, $epiItem)
+        if (uiState.currentRDList?.listId != RadioList_Podcast)
+            uiState.updateCurrentRDList(list)
+
+        const $rad = $('#opts_wrp_podcast_epi')
+        podcasts.selection.epi = { item: epiItem }
+        radListBuilder.onClickItemRad($rad, $epiItem, epiItem)
     }
 
     // open episods list
@@ -203,6 +212,21 @@ class PodcastsLists {
             //, true, true
         )
         podcasts.buildEpiMediaView(item)
+
+        if (podcasts.autoOpenedEpiList) {
+            podcasts.autoOpenedEpiList = false
+
+            const epiItem = self.podcasts.selection.epi?.item
+            if (settings.debug.debug)
+                logger.log('auto open epi: ' + epiItem.name)
+
+            if (epiItem != null) {
+                const $epiItem = $(wrpp.getEpiListItem(epiItem)?.item)
+                const $clkb = $epiItem
+                    .find('.wrp-list-item-text-container')
+                $clkb.click()
+            }
+        }
     }
 
     openList(
@@ -250,9 +274,11 @@ class PodcastsLists {
         const selection = podcasts.selection
         updateSelectionFunc(selection, item)
 
-        podcasts
-            .resetSelectionsById(listId)
-            .updateSelectionSubListsIds(selection)
+        if (podcasts.initializingPodcasts < 0) {
+            podcasts
+                .resetSelectionsById(listId)
+                .updateSelectionSubListsIds(selection)
+        }
 
         if (noList !== true) {
             // switch to tab
@@ -521,7 +547,7 @@ class PodcastsLists {
 
     buildEpiItems(index) {
         const self = podcasts.podcastsLists
-        const item = this.pdcPreviewItem //podcasts.selection.pdc.item
+        const item = this.pdcPreviewItem || podcasts.selection.pdc.item //podcasts.selection.pdc.item
         var epiItems = {}
         var index = 1
         var prfx = ''

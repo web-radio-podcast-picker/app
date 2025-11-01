@@ -197,85 +197,89 @@ class RadListBuilder {
     // init a playable item
     initItemRad($rad, $item, o) {
         const $textContainer = $item.find('.wrp-list-item-text-container')
+        const t = this
         $textContainer.on('click', async () => {
+            t.onClickItemRad($rad, $item, o)
+        })
+    }
 
-            if (uiState.isRadOpenDisabled()) return
+    async onClickItemRad($rad, $item, o) {
+        if (uiState.isRadOpenDisabled()) return
 
-            // unselect & fold last current item
-            const $prevItem = $rad.find('.item-selected')
-            $prevItem.removeClass('item-selected')
-            radsItems.unbuildFoldableItem($prevItem)
-            $item.addClass('item-selected')
-            radsItems.setTitleIconsVisibility($prevItem, true)
-            radsItems.setTitleIconsVisibility($item, false)
+        // unselect & fold last current item
+        const $prevItem = $rad.find('.item-selected')
+        $prevItem.removeClass('item-selected')
+        radsItems.unbuildFoldableItem($prevItem)
+        $item.addClass('item-selected')
+        radsItems.setTitleIconsVisibility($prevItem, true)
+        radsItems.setTitleIconsVisibility($item, false)
 
-            // update radio view with new current item
-            wrpp.setupRadioView(o)
-            const $i = $('#wrp_img')
-            $i.attr('data-w', null)
-            $i.attr('data-h', null)
+        // update radio view with new current item
+        wrpp.setupRadioView(o)
+        const $i = $('#wrp_img')
+        $i.attr('data-w', null)
+        $i.attr('data-h', null)
 
-            // setup up media image
-            if (o.logo != null && o.logo !== undefined && o.logo != '') {
-                // get img
-                $i.addClass('hidden')
-                $i.attr('width', null)
-                $i.attr('height', null)
-                $i.attr('data-noimg', null)
-                $i.removeClass('wrp-img-half')
-                var url = o.logo
-                if (settings.net.enforceHttps)
-                    url = url.replace('http://', 'https://')
-                $i.attr('src', url)
+        // setup up media image
+        if (o.logo != null && o.logo !== undefined && o.logo != '') {
+            // get img
+            $i.addClass('hidden')
+            $i.attr('width', null)
+            $i.attr('height', null)
+            $i.attr('data-noimg', null)
+            $i.removeClass('wrp-img-half')
+            var url = o.logo
+            if (settings.net.enforceHttps)
+                url = url.replace('http://', 'https://')
+            $i.attr('src', url)
 
-            } else {
-                // no img
-                $i.addClass('hidden')
-                rdMediaImage.noImage()
-            }
+        } else {
+            // no img
+            $i.addClass('hidden')
+            rdMediaImage.noImage()
+        }
 
-            const channel = ui.getCurrentChannel()
-            if (channel != null && channel !== undefined) {
+        const channel = ui.getCurrentChannel()
+        if (channel != null && channel !== undefined) {
 
-                radsItems.setLoadingItem(o, $item)
+            radsItems.setLoadingItem(o, $item)
 
-                // build foldable item + unfold it
-                radsItems.buildFoldableItem(
-                    o, $item,
-                    uiState.currentRDList?.listId,
-                    uiState.currentRDList?.name,
-                    {},
-                    true
+            // build foldable item + unfold it
+            radsItems.buildFoldableItem(
+                o, $item,
+                uiState.currentRDList?.listId,
+                uiState.currentRDList?.name,
+                {},
+                true
+            )
+
+            wrpp.clearAppStatus()
+            playEventsHandlers.initAudioSourceHandlers()
+            playEventsHandlers.onLoading(o)
+
+            // plays the item
+            const pl = async () => {
+
+                // turn on channel
+
+                // update pause state
+                playEventsHandlers.onPauseStateChanged(false)
+
+                // setup channel media
+                await app.updateChannelMedia(
+                    ui.getCurrentChannel(),
+                    o.url
                 )
 
-                wrpp.clearAppStatus()
-                playEventsHandlers.initAudioSourceHandlers()
-                playEventsHandlers.onLoading(o)
-
-                // plays the item
-                const pl = async () => {
-
-                    // turn on channel
-
-                    // update pause state
-                    playEventsHandlers.onPauseStateChanged(false)
-
-                    // setup channel media
-                    await app.updateChannelMedia(
-                        ui.getCurrentChannel(),
-                        o.url
-                    )
-
-                    // update ui state
-                    uiState.updateCurrentRDItem(o)
-                }
-
-                if (oscilloscope.pause)
-                    app.toggleOPause(async () => await pl())
-                else
-                    await pl()
+                // update ui state
+                uiState.updateCurrentRDItem(o)
             }
-        })
+
+            if (oscilloscope.pause)
+                app.toggleOPause(async () => await pl())
+            else
+                await pl()
+        }
     }
 
     // update the rdList view for the current rdList and the given item
