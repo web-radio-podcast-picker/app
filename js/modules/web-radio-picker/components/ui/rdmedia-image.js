@@ -44,6 +44,8 @@ class RdMediaImage {
     }
 
     noImage() {
+        if (settings.debug.debug)
+            console.warn('no image src')
         const $i = $('#' + this.imgId)
         $i.attr('data-noimg', '1')
         $i.attr('width', null)
