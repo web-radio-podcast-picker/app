@@ -200,6 +200,11 @@ class Podcasts {
         this.onReady(() => {
             // find available tabs
 
+            if (settings.debug.debug) {
+                console.clear()
+                console.log('---------------SELECT TAB-----------')
+            }
+
             this.updateSelectionSubListsIds(selection)
 
             if (settings.debug.debug)
@@ -274,6 +279,10 @@ class Podcasts {
     }
 
     initTabs(slistId, skipSelectItem) {
+
+        if (settings.debug.debug)
+            console.log('---------------INIT TABS-----------')
+
         const self = podcasts
         const selection = self.selection
 
@@ -327,6 +336,8 @@ class Podcasts {
                 this.setPdcPreviewVisible(true)
             }
         }
+
+        // TODO: race condition. can applied too late (pdc async, epi sync before pdc)
         this.setEpiListMediaVisible(slistId == Pdc_List_Epi)
 
         if (tabsController.openingVizWithEpiListVisible === true)
@@ -334,8 +345,10 @@ class Podcasts {
                 .removeClass('selected')
 
         this.initializingPodcasts--
-        if (settings.debug.debug)
+        if (settings.debug.debug) {
             console.log('initializingPodcasts = ' + this.initializingPodcasts + ' -- ' + this.selection.epiOpen)
+            console.log('--------------------------')
+        }
         settings.dataStore.saveUIState()
     }
 
@@ -545,12 +558,17 @@ class Podcasts {
         const img = o.image || o.itunes.image
 
         if (img) {
+            if (settings.debug.debug)
+                console.warn('load pdc media image: ' + img)
             // immediately hide image before other loads
             $bgImg.addClass('ptransparent')
             $bgImg[0].src = img
         }
-        else
+        else {
+            if (settings.debug.debug)
+                console.warn('pdc media no image')
             pdcPrvImage.noImage()
+        }
 
         var author = (o.itunes.author || o.copyright)?.trim()
         var title = o.title
