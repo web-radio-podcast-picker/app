@@ -193,6 +193,10 @@ class UIState {
             podcastSelection: podcasts.selection
         }
 
+        if (settings.debug.debug) {
+            console.warn('save ui state: currentRDItem=' + this.currentRDItem.name)
+        }
+
         const str = JSON.stringify(r)
 
         if (hasRss)
