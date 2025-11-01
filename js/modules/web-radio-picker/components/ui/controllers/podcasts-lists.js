@@ -593,6 +593,9 @@ class PodcastsLists {
             epiItem.favLists = []   // TODO: keep favorites in store and réinit here
 
             // compat with favorites & rdItem management
+            //epiItem.logo = item.rss.image || item.rss.itunes.image
+            epiItem.logo = rssItem.image ||
+                item.rss.image || item.rss.itunes.image
             epiItem.metadata = {}
             epiItem.pdc = true      // indicates it's a pdc, not a station
 
