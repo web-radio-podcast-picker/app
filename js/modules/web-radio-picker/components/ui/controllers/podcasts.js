@@ -476,7 +476,7 @@ class Podcasts {
         const img = item.rss.image || item.rss.itunes.image
 
         $('#wrp_pdc_epim_img')[0].src = img == null ?
-            transparentPixel
+            transparentPixel        // TODO: this have councerns: image resetted, never reinitialized
             : img
 
         const title = $('#wrp_pdc_prv_name').html()

@@ -27,7 +27,7 @@ class PodcastRSSParser {
         const get = name => {
             var res = null
             $items.each((i, e) => {
-                if (e.tagName == name)
+                if (e.tagName == name && res == null)
                     res = e
             })
             //if (res != null)
@@ -38,7 +38,7 @@ class PodcastRSSParser {
         const iget = ($item, name) => {
             var res = null
             $item.each((i, e) => {
-                if (e.tagName == name)
+                if (e.tagName == name && res == null)
                     res = e
             })
             //if (res != null)
@@ -51,8 +51,8 @@ class PodcastRSSParser {
         var ownerEmail = null
         if (owner != null) {
             const $childs = $(owner.childNodes)
-            ownerName = iget($childs, 'itunes:name')
-            ownerEmail = iget($childs, 'itunes:email')
+            ownerName = iget($childs, 'itunes:name')?.textContent || e
+            ownerEmail = iget($childs, 'itunes:email')?.textContent || e
         }
 
         const podcast = {
