@@ -56,13 +56,19 @@ class RdMediaImage {
     }
 
     resetImage() {
+        if (settings.debug.debug)
+            console.warn('reset image src')
         const $i = $('#' + this.imgId)
         //$i.attr('data-noimg', null)
         $i.attr('width', null)
         $i.attr('height', null)
         $i.attr('data-w', null)
         $i.attr('data-h', null)
-        //$i.addClass('ptransparent')
+        ////$i.addClass('ptransparent')
+    }
+
+    changeImage(url) {
+
     }
 
     showImage() {
