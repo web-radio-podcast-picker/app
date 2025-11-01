@@ -239,9 +239,9 @@ class WebRadioPickerModule extends ModuleBase {
             })
             .on('load', () => {
                 const img = $('#wrp_pdc_prv_img')[0]
-                if (img.width < 1 || img.height < 1)
+                /*if (img.width < 1 || img.height < 1)
                     pdcPrvImage.noImage()
-                else {
+                else*/ {
                     pdcPrvImage.resetImage()
                     pdcPrvImage.showImage()
                 }

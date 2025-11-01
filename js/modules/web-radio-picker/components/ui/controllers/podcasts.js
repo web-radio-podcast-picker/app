@@ -358,6 +358,10 @@ class Podcasts {
 
     // restore from ui state
     openPodcasts(selection) {
+
+        if (settings.debug.debug)
+            console.clear()
+
         if (this.initializingPodcasts == null)
             this.initializingPodcasts = 1
         if (selection === undefined || selection == null)

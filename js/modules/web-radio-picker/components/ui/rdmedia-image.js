@@ -62,7 +62,7 @@ class RdMediaImage {
         $i.attr('height', null)
         $i.attr('data-w', null)
         $i.attr('data-h', null)
-        $i.addClass('ptransparent')
+        //$i.addClass('ptransparent')
     }
 
     showImage() {
