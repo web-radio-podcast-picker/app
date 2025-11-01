@@ -266,6 +266,10 @@ class Podcasts {
     }
 
     asyncInitTab(slistId) {
+
+        if (settings.debug.debug)
+            console.log('---------------ASYNC INIT TABS-----------')
+
         //var slistId = this.getMoreFocusableListId()
         this.initTabs(slistId, true)
         const item = this.getSelectionById(slistId)?.item
@@ -281,7 +285,7 @@ class Podcasts {
     initTabs(slistId, skipSelectItem) {
 
         if (settings.debug.debug)
-            console.log('---------------INIT TABS-----------')
+            console.log('---------------INIT TABS----------- slistId=' + slistId + ' skipSel=' + skipSelectItem)
 
         const self = podcasts
         const selection = self.selection
