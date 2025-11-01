@@ -159,7 +159,7 @@ class PodcastsLists {
             true, true
         )
 
-        if (item.selCnt == 0) {
+        if (/*true ||*/ item.selCnt == 0) {
             // open preview : at first select
             podcasts.openPdcPreview(item, $item)   // open & show
         }
