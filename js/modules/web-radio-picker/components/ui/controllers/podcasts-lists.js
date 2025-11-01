@@ -217,10 +217,10 @@ class PodcastsLists {
             podcasts.autoOpenedEpiList = false
 
             const epiItem = self.podcasts.selection.epi?.item
-            if (settings.debug.debug)
-                logger.log('auto open epi: ' + epiItem.name)
 
             if (epiItem != null) {
+                if (settings.debug.debug)
+                    logger.log('auto open epi: ' + epiItem.name)
                 const $epiItem = $(wrpp.getEpiListItem(epiItem)?.item)
                 const $clkb = $epiItem
                     .find('.wrp-list-item-text-container')
