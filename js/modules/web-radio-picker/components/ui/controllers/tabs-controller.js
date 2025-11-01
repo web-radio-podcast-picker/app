@@ -212,5 +212,9 @@ class TabsController {
         podcasts.openPodcasts()
     }
 
+    showPlayingRdItemViz() {
+        $('#btn_wrp_logo').click()
+    }
+
     // #endregion
 }
