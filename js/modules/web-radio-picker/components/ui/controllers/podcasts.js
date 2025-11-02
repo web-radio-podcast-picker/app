@@ -391,11 +391,12 @@ class Podcasts {
         remoteDataStore.getPodcastChannelRss(
             item.url,
             data => this.buildPdcPreview(item, $item, data),
-            (err, response) => this.openPdcPreviewError(item, $item, err, response)
+            (mess, response) => this.openPdcPreviewError(item, $item, mess, response)
         )
     }
 
-    openPdcPreviewError(item, $item, err, response) {
+    openPdcPreviewError(item, $item, mess, response) {
+        console.log(response)
         this.podcastsLists.pdcPreviewItem = this.backPdcPreviewItem
         this.podcastsLists.$pdcPreviewItem = this.back$pdcPreviewItem
         const text = 'channel not found'
