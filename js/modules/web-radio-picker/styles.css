@@ -210,7 +210,7 @@ find license and copyright informations in files /COPYRIGHT and /LICENCE
     margin-bottom: 0em;
     padding-top: 0em;
     display: grid;
-    grid-template-columns: 50% 50%;
+    grid-template-columns: auto auto;
 }
 
 .wrp-list-item.item-selected > div.wrp-list-item-subtext-container {
