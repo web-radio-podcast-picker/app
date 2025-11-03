@@ -142,16 +142,23 @@ class RadListBuilder {
             const it = wrpp.getRadListItem(citem)
             const $item = $(it?.item)
             if ($item.length > 0) {
-                const item = wrpp.findRadItem(citem)
-                this.restorePlayingRDItemInView(
-                    radsItems.$loadingRDItem,   // last known current
-                    item,
-                    $item,
-                    listId,
-                    listName,
-                    {},
-                    true
-                )
+                // currentRDItem might be a clone (coming from history)
+                const item =
+                    citem.pdc ? citem    // not foundable if pdc
+                        : wrpp.findRadItem(citem)   // TODO: should avoid use of allItems : here find from wrpp.allItems
+
+                if (item != null) {
+                    // restore current playing rd item in view
+                    this.restorePlayingRDItemInView(
+                        radsItems.$loadingRDItem,   // last known current
+                        item,
+                        $item,
+                        listId,
+                        listName,
+                        {},
+                        true
+                    )
+                }
             }
         }
         else

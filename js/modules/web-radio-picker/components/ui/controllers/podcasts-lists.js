@@ -616,7 +616,7 @@ class PodcastsLists {
             var r = a.localeCompare(b)
             const o1 = epiItems[a]
             const o2 = epiItems[b]
-            if (o1?./*rss.*/pubDate && o2 ?/*.rss*/pubDate) {
+            if (o1?./*rss.*/pubDate && o2?./*.rss*/pubDate) {
                 try {
                     const d1 = new Date(/*o1.rss*/pubDate)
                     const d2 = new Date(/*o2.rss*/pubDate)
