@@ -35,6 +35,7 @@ class RadListPathBuilder {
         $p[0].innerHTML = ''
         $p.append(this.buildHistorybutton())
         if (item == null || item.groups == null) return
+
         // fav button
         const favs = favorites.getItemFavoritesFiltered(item)
         if (favs.length > 0) {
