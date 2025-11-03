@@ -27,10 +27,12 @@ class RadListBuilder {
         // radio name
         const $textBox = $('<div class="wrp-list-item-text-container">' + str + '</div>')
 
+        // TODO: FIX :: listId == listName == null on startup ?!
         // eventually sub text
-        if (listId == RadioList_Podcast && (listName == Pdc_List_Pdc
-            || listName == Pdc_List_Epi)
-        ) {
+        if ((listId == RadioList_Podcast
+            && (listName == Pdc_List_Pdc
+                || listName == Pdc_List_Epi))
+            || listId == RadioList_List) {
             const $subt1 = $('<div class="wrp-list-item-subtext1"></div>')
             const $subt2 = $('<div class="wrp-list-item-subtext2"></div>')
 
