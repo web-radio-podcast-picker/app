@@ -223,13 +223,18 @@ class RadListBuilder {
         radsItems.setTitleIconsVisibility($prevItem, true)
         radsItems.setTitleIconsVisibility($item, false)
 
+        if (o.pdc && !o.epi) {
+            podcasts.changePodcasts(o.sel)
+            return
+        }
+
         // update radio view with new current item
         wrpp.setupRadioView(o)
+
+        // setup up media image
         const $i = $('#wrp_img')
         $i.attr('data-w', null)
         $i.attr('data-h', null)
-
-        // setup up media image
         if (o.logo != null && o.logo !== undefined && o.logo != '') {
             // get img
             $i.addClass('hidden')
