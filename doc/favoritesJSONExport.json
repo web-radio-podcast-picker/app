@@ -27,7 +27,98 @@
               ]
             }
           },
-          "sel": null,
+          "sel": {
+            "lang": {
+              "item": {
+                "code": "fra",
+                "name": "French",
+                "qty": 64492
+              }
+            },
+            "langSubListId": "tag",
+            "tag": {
+              "item": {
+                "code": null,
+                "name": "true crime",
+                "qty": 80,
+                "stores": [
+                  1
+                ]
+              }
+            },
+            "tagSubListId": "pdc",
+            "letter": null,
+            "letterSubListId": null,
+            "pdc": {
+              "item": {
+                "code": null,
+                "name": "Scènes de Crime",
+                "qty": 54,
+                "url": "https://feeds.360.audion.fm/EXKpQ_GdQ1PlZ0dD1pQaF",
+                "store": 1,
+                "page": 1,
+                "pItem": {
+                  "item": {
+                    "code": null,
+                    "name": "true crime",
+                    "qty": 80,
+                    "stores": [
+                      1
+                    ]
+                  }
+                },
+                "sel": {
+                  "lang": {
+                    "item": {
+                      "code": "fra",
+                      "name": "French",
+                      "qty": 64492
+                    }
+                  },
+                  "langSubListId": "tag",
+                  "tag": {
+                    "item": {
+                      "code": null,
+                      "name": "true crime",
+                      "qty": 80,
+                      "stores": [
+                        1
+                      ]
+                    }
+                  },
+                  "tagSubListId": "pdc",
+                  "letter": null,
+                  "letterSubListId": null,
+                  "pdc": null,
+                  "pdcSubListId": null,
+                  "epi": null,
+                  "epiSubListId": null,
+                  "noPage": 1,
+                  "epiOpen": false,
+                  "epiOpening": true
+                },
+                "selCnt": 0,
+                "id": "Scènes de Crime",
+                "favLists": [
+                  "Podcasts"
+                ],
+                "metadata": {
+                  "statusText": ""
+                },
+                "pdc": true,
+                "rss": null,
+                "logo": "https://artworks.360.audion.fm/3c192d8a-5c9c-451a-8465-dfa614a4d677.jpg?width=3000&height=3000",
+                "subText": "Prisma Media"
+              },
+              "selCnt": 0
+            },
+            "pdcSubListId": "epi",
+            "epi": null,
+            "epiSubListId": null,
+            "noPage": 1,
+            "epiOpen": false,
+            "epiOpening": true
+          },
           "selCnt": 0,
           "id": "Scènes de Crime",
           "favLists": [],
@@ -39,17 +130,107 @@
           "logo": "https://artworks.360.audion.fm/3c192d8a-5c9c-451a-8465-dfa614a4d677.jpg?width=3000&height=3000",
           "subText": "Prisma Media"
         },
-        "sel": null,
+        "sel": {
+          "lang": {
+            "item": {
+              "code": "fra",
+              "name": "French",
+              "qty": 64492
+            }
+          },
+          "langSubListId": "tag",
+          "tag": {
+            "item": {
+              "code": null,
+              "name": "true crime",
+              "qty": 80,
+              "stores": [
+                1
+              ]
+            }
+          },
+          "tagSubListId": "pdc",
+          "letter": null,
+          "letterSubListId": null,
+          "pdc": {
+            "item": {
+              "code": null,
+              "name": "Scènes de Crime",
+              "qty": 54,
+              "url": "https://feeds.360.audion.fm/EXKpQ_GdQ1PlZ0dD1pQaF",
+              "store": 1,
+              "page": 1,
+              "pItem": {
+                "item": {
+                  "code": null,
+                  "name": "true crime",
+                  "qty": 80,
+                  "stores": [
+                    1
+                  ]
+                }
+              },
+              "sel": {
+                "lang": {
+                  "item": {
+                    "code": "fra",
+                    "name": "French",
+                    "qty": 64492
+                  }
+                },
+                "langSubListId": "tag",
+                "tag": {
+                  "item": {
+                    "code": null,
+                    "name": "true crime",
+                    "qty": 80,
+                    "stores": [
+                      1
+                    ]
+                  }
+                },
+                "tagSubListId": "pdc",
+                "letter": null,
+                "letterSubListId": null,
+                "pdc": null,
+                "pdcSubListId": null,
+                "epi": null,
+                "epiSubListId": null,
+                "noPage": 1,
+                "epiOpen": false,
+                "epiOpening": true
+              },
+              "selCnt": 0,
+              "id": "Scènes de Crime",
+              "favLists": [
+                "Podcasts"
+              ],
+              "metadata": {
+                "statusText": ""
+              },
+              "pdc": true,
+              "rss": null,
+              "logo": "https://artworks.360.audion.fm/3c192d8a-5c9c-451a-8465-dfa614a4d677.jpg?width=3000&height=3000",
+              "subText": "Prisma Media"
+            },
+            "selCnt": 0
+          },
+          "pdcSubListId": "epi",
+          "epi": null,
+          "epiSubListId": null,
+          "noPage": 1,
+          "epiOpen": false,
+          "epiOpening": true
+        },
         "id": "L'ordre du temple solaire : transit macabre en direction de Sirius",
         "favLists": [
-          "Test Liste Avec Un Nom Long"
+          "Podcasts"
         ],
         "logo": "https://artworks.360.audion.fm/3c192d8a-5c9c-451a-8465-dfa614a4d677.jpg?width=3000&height=3000",
         "metadata": {
-          "duration": 1099.937875,
+          "duration": 1096.698688,
           "statusText": "playing",
-          "startTime": 1762202515851,
-          "endTime": 1762202229797
+          "startTime": 1762207111055
         },
         "pdc": true,
         "epi": true,
@@ -63,13 +244,13 @@
               "length": 1,
               "prevObject": {
                 "0": {
-                  "jQuery371055611683136375771": {
+                  "jQuery371028044684041973811": {
                     "events": {
                       "click": [
                         {
                           "type": "click",
                           "origType": "click",
-                          "guid": 3862,
+                          "guid": 2822,
                           "namespace": ""
                         }
                       ]
@@ -83,88 +264,6 @@
           "currentTab": {
             "listId": "Podcast",
             "tabId": "btn_wrp_podcast"
-          }
-        }
-      },
-      {
-        "code": null,
-        "name": "Les dames blanches",
-        "qty": "",
-        "subText2": "301",
-        "subText": "February 8, 2021",
-        "url": "https://audio1.redcircle.com/episodes/87b621a0-ae75-45fa-b028-76a2d20c93dc/stream.mp3",
-        "pItem": {
-          "code": null,
-          "name": "LES DOSSIERS DE L'ÉTRANGE",
-          "qty": 16,
-          "url": "https://feeds.redcircle.com/0a58fba4-5f87-463a-999c-81c9f941e96b",
-          "store": 1,
-          "page": 1,
-          "pItem": {
-            "item": {
-              "code": null,
-              "name": "L",
-              "qty": 66,
-              "stores": [
-                1
-              ]
-            }
-          },
-          "sel": null,
-          "selCnt": 0,
-          "id": "LES DOSSIERS DE L'ÉTRANGE",
-          "favLists": [],
-          "metadata": {
-            "statusText": ""
-          },
-          "pdc": true,
-          "rss": null,
-          "logo": "https://media.redcircle.com/images/2024/12/20/19/b8128d7c-eb4b-43c0-be61-85123d7bfb43_688d_7762e1de-7746-4d1a-96a9-aa976819822a_blob.jpg",
-          "subText": "biboomagazine.net"
-        },
-        "sel": null,
-        "id": "Les dames blanches",
-        "favLists": [
-          "Test Liste Avec Un Nom Long"
-        ],
-        "logo": "https://media.redcircle.com/images/2021/2/8/14/045bf113-d538-4997-8169-5c5b06186de0_lddle_2k21__09_dames_blanches.jpg",
-        "metadata": {
-          "duration": 470.04725,
-          "statusText": "playing",
-          "startTime": 1762201946424
-        },
-        "pdc": true,
-        "epi": true,
-        "pubDate": "Mon, 08 Feb 2021 14:31:10 +0000",
-        "ref": {
-          "currentRDList": {
-            "listId": "Podcast",
-            "name": "epi",
-            "$item": {
-              "0": {},
-              "length": 1,
-              "prevObject": {
-                "0": {
-                  "jQuery371055611683136375771": {
-                    "events": {
-                      "click": [
-                        {
-                          "type": "click",
-                          "origType": "click",
-                          "guid": 3862,
-                          "namespace": ""
-                        }
-                      ]
-                    }
-                  }
-                },
-                "length": 1
-              }
-            }
-          },
-          "currentTab": {
-            "listId": "Viz",
-            "tabId": "btn_wrp_logo"
           }
         }
       },
@@ -192,7 +291,175 @@
               ]
             }
           },
-          "sel": null,
+          "sel": {
+            "lang": {
+              "item": {
+                "code": "fra",
+                "name": "French",
+                "qty": 64492
+              }
+            },
+            "langSubListId": "tag",
+            "tag": {
+              "item": {
+                "code": null,
+                "name": "documentary",
+                "qty": 213
+              }
+            },
+            "tagSubListId": "letter",
+            "letter": {
+              "item": {
+                "code": null,
+                "name": "T",
+                "qty": 11,
+                "stores": [
+                  1
+                ]
+              }
+            },
+            "letterSubListId": "pdc",
+            "pdc": {
+              "item": {
+                "code": null,
+                "name": "Transmission",
+                "qty": 38,
+                "url": "https://feed.ausha.co/bYrWFLRaGLEB",
+                "store": 1,
+                "page": 1,
+                "pItem": {
+                  "item": {
+                    "code": null,
+                    "name": "T",
+                    "qty": 11,
+                    "stores": [
+                      1
+                    ]
+                  }
+                },
+                "sel": {
+                  "lang": {
+                    "item": {
+                      "code": "fra",
+                      "name": "French",
+                      "qty": 64492
+                    }
+                  },
+                  "langSubListId": "tag",
+                  "tag": {
+                    "item": {
+                      "code": null,
+                      "name": "documentary",
+                      "qty": 213
+                    }
+                  },
+                  "tagSubListId": "letter",
+                  "letter": {
+                    "item": {
+                      "code": null,
+                      "name": "T",
+                      "qty": 11,
+                      "stores": [
+                        1
+                      ]
+                    }
+                  },
+                  "letterSubListId": "pdc",
+                  "pdc": {
+                    "item": {
+                      "code": null,
+                      "name": "Transmission",
+                      "qty": 38,
+                      "url": "https://feed.ausha.co/bYrWFLRaGLEB",
+                      "store": 1,
+                      "page": 1,
+                      "pItem": {
+                        "item": {
+                          "code": null,
+                          "name": "T",
+                          "qty": 11,
+                          "stores": [
+                            1
+                          ]
+                        }
+                      },
+                      "sel": {
+                        "lang": {
+                          "item": {
+                            "code": "fra",
+                            "name": "French",
+                            "qty": 64492
+                          }
+                        },
+                        "langSubListId": "tag",
+                        "tag": {
+                          "item": {
+                            "code": null,
+                            "name": "documentary",
+                            "qty": 213
+                          }
+                        },
+                        "tagSubListId": "letter",
+                        "letter": {
+                          "item": {
+                            "code": null,
+                            "name": "T",
+                            "qty": 11,
+                            "stores": [
+                              1
+                            ]
+                          }
+                        },
+                        "letterSubListId": "pdc",
+                        "pdc": null,
+                        "pdcSubListId": null,
+                        "epi": null,
+                        "epiSubListId": null,
+                        "noPage": 1,
+                        "epiOpen": false,
+                        "epiOpening": true
+                      },
+                      "selCnt": 1,
+                      "id": "Transmission",
+                      "favLists": [],
+                      "metadata": {
+                        "statusText": ""
+                      },
+                      "pdc": true,
+                      "rss": null,
+                      "logo": "https://image.ausha.co/Nj7zt2QMrAxMqHjMWzbOWoG49noXqIQyF4kuD1Vs_1400x1400.jpeg?t=1568889519",
+                      "subText": "Collectif Transmission"
+                    }
+                  },
+                  "pdcSubListId": "epi",
+                  "epi": null,
+                  "epiSubListId": null,
+                  "noPage": 1,
+                  "epiOpen": true,
+                  "epiOpening": true
+                },
+                "selCnt": 0,
+                "id": "Transmission",
+                "favLists": [
+                  "Podcasts"
+                ],
+                "metadata": {
+                  "statusText": ""
+                },
+                "pdc": true,
+                "rss": null,
+                "logo": "https://image.ausha.co/Nj7zt2QMrAxMqHjMWzbOWoG49noXqIQyF4kuD1Vs_1400x1400.jpeg?t=1568889519",
+                "subText": "Collectif Transmission"
+              },
+              "selCnt": 0
+            },
+            "pdcSubListId": "epi",
+            "epi": null,
+            "epiSubListId": null,
+            "noPage": 1,
+            "epiOpen": false,
+            "epiOpening": true
+          },
           "selCnt": 0,
           "id": "Transmission",
           "favLists": [],
@@ -204,16 +471,184 @@
           "logo": "https://image.ausha.co/Nj7zt2QMrAxMqHjMWzbOWoG49noXqIQyF4kuD1Vs_1400x1400.jpeg?t=1568889519",
           "subText": "Collectif Transmission"
         },
-        "sel": null,
+        "sel": {
+          "lang": {
+            "item": {
+              "code": "fra",
+              "name": "French",
+              "qty": 64492
+            }
+          },
+          "langSubListId": "tag",
+          "tag": {
+            "item": {
+              "code": null,
+              "name": "documentary",
+              "qty": 213
+            }
+          },
+          "tagSubListId": "letter",
+          "letter": {
+            "item": {
+              "code": null,
+              "name": "T",
+              "qty": 11,
+              "stores": [
+                1
+              ]
+            }
+          },
+          "letterSubListId": "pdc",
+          "pdc": {
+            "item": {
+              "code": null,
+              "name": "Transmission",
+              "qty": 38,
+              "url": "https://feed.ausha.co/bYrWFLRaGLEB",
+              "store": 1,
+              "page": 1,
+              "pItem": {
+                "item": {
+                  "code": null,
+                  "name": "T",
+                  "qty": 11,
+                  "stores": [
+                    1
+                  ]
+                }
+              },
+              "sel": {
+                "lang": {
+                  "item": {
+                    "code": "fra",
+                    "name": "French",
+                    "qty": 64492
+                  }
+                },
+                "langSubListId": "tag",
+                "tag": {
+                  "item": {
+                    "code": null,
+                    "name": "documentary",
+                    "qty": 213
+                  }
+                },
+                "tagSubListId": "letter",
+                "letter": {
+                  "item": {
+                    "code": null,
+                    "name": "T",
+                    "qty": 11,
+                    "stores": [
+                      1
+                    ]
+                  }
+                },
+                "letterSubListId": "pdc",
+                "pdc": {
+                  "item": {
+                    "code": null,
+                    "name": "Transmission",
+                    "qty": 38,
+                    "url": "https://feed.ausha.co/bYrWFLRaGLEB",
+                    "store": 1,
+                    "page": 1,
+                    "pItem": {
+                      "item": {
+                        "code": null,
+                        "name": "T",
+                        "qty": 11,
+                        "stores": [
+                          1
+                        ]
+                      }
+                    },
+                    "sel": {
+                      "lang": {
+                        "item": {
+                          "code": "fra",
+                          "name": "French",
+                          "qty": 64492
+                        }
+                      },
+                      "langSubListId": "tag",
+                      "tag": {
+                        "item": {
+                          "code": null,
+                          "name": "documentary",
+                          "qty": 213
+                        }
+                      },
+                      "tagSubListId": "letter",
+                      "letter": {
+                        "item": {
+                          "code": null,
+                          "name": "T",
+                          "qty": 11,
+                          "stores": [
+                            1
+                          ]
+                        }
+                      },
+                      "letterSubListId": "pdc",
+                      "pdc": null,
+                      "pdcSubListId": null,
+                      "epi": null,
+                      "epiSubListId": null,
+                      "noPage": 1,
+                      "epiOpen": false,
+                      "epiOpening": true
+                    },
+                    "selCnt": 1,
+                    "id": "Transmission",
+                    "favLists": [],
+                    "metadata": {
+                      "statusText": ""
+                    },
+                    "pdc": true,
+                    "rss": null,
+                    "logo": "https://image.ausha.co/Nj7zt2QMrAxMqHjMWzbOWoG49noXqIQyF4kuD1Vs_1400x1400.jpeg?t=1568889519",
+                    "subText": "Collectif Transmission"
+                  }
+                },
+                "pdcSubListId": "epi",
+                "epi": null,
+                "epiSubListId": null,
+                "noPage": 1,
+                "epiOpen": true,
+                "epiOpening": true
+              },
+              "selCnt": 0,
+              "id": "Transmission",
+              "favLists": [
+                "Podcasts"
+              ],
+              "metadata": {
+                "statusText": ""
+              },
+              "pdc": true,
+              "rss": null,
+              "logo": "https://image.ausha.co/Nj7zt2QMrAxMqHjMWzbOWoG49noXqIQyF4kuD1Vs_1400x1400.jpeg?t=1568889519",
+              "subText": "Collectif Transmission"
+            },
+            "selCnt": 0
+          },
+          "pdcSubListId": "epi",
+          "epi": null,
+          "epiSubListId": null,
+          "noPage": 1,
+          "epiOpen": false,
+          "epiOpening": true
+        },
         "id": "Jardins défendus - épisode 1",
         "favLists": [
-          "Test Liste Avec Un Nom Long"
+          "Podcasts"
         ],
         "logo": "https://image.ausha.co/tdpPy5HW7NHceFzsbX5V6vyVjrzWgWPkZjjUq4sU_1400x1400.jpeg?t=1719218088",
         "metadata": {
           "duration": 1405.778625,
           "statusText": "playing",
-          "startTime": 1762201925978
+          "startTime": 1762206993406
         },
         "pdc": true,
         "epi": true,
@@ -227,93 +662,13 @@
               "length": 1,
               "prevObject": {
                 "0": {
-                  "jQuery371055611683136375771": {
+                  "jQuery371028044684041973811": {
                     "events": {
                       "click": [
                         {
                           "type": "click",
                           "origType": "click",
-                          "guid": 3862,
-                          "namespace": ""
-                        }
-                      ]
-                    }
-                  }
-                },
-                "length": 1
-              }
-            }
-          },
-          "currentTab": {
-            "listId": "Viz",
-            "tabId": "btn_wrp_logo"
-          }
-        }
-      },
-      {
-        "code": null,
-        "name": "L'exorciste, une histoire vraie",
-        "qty": "",
-        "subText2": "389",
-        "subText": "January 13, 2021",
-        "url": "https://audio1.redcircle.com/episodes/54cebd3a-1405-4458-885e-b4e34a8d4531/stream.mp3",
-        "pItem": {
-          "code": null,
-          "name": "LES DOSSIERS DE L'ÉTRANGE",
-          "qty": 16,
-          "url": "https://feeds.redcircle.com/0a58fba4-5f87-463a-999c-81c9f941e96b",
-          "store": 1,
-          "page": 1,
-          "pItem": {
-            "item": {
-              "code": null,
-              "name": "L",
-              "qty": 66,
-              "stores": [
-                1
-              ]
-            }
-          },
-          "sel": null,
-          "selCnt": 0,
-          "id": "LES DOSSIERS DE L'ÉTRANGE",
-          "favLists": [],
-          "metadata": {
-            "statusText": ""
-          },
-          "pdc": true,
-          "rss": null,
-          "logo": "https://media.redcircle.com/images/2024/12/20/19/b8128d7c-eb4b-43c0-be61-85123d7bfb43_688d_7762e1de-7746-4d1a-96a9-aa976819822a_blob.jpg",
-          "subText": "biboomagazine.net"
-        },
-        "sel": null,
-        "id": "L'exorciste, une histoire vraie",
-        "favLists": [],
-        "logo": "https://media.redcircle.com/images/2021/1/13/10/1e339731-be23-4859-af67-272763e1f6b0_lddle_2k20__08_l_exorciste_une_histoire_vraie.jpg",
-        "metadata": {
-          "duration": 539.846375,
-          "statusText": "playing",
-          "startTime": 1762201728063
-        },
-        "pdc": true,
-        "epi": true,
-        "pubDate": "Wed, 13 Jan 2021 09:53:17 +0000",
-        "ref": {
-          "currentRDList": {
-            "listId": "Podcast",
-            "name": "epi",
-            "$item": {
-              "0": {},
-              "length": 1,
-              "prevObject": {
-                "0": {
-                  "jQuery371055611683136375771": {
-                    "events": {
-                      "click": [
-                        {
-                          "type": "click",
-                          "origType": "click",
-                          "guid": 3862,
+                          "guid": 1998,
                           "namespace": ""
                         }
                       ]
@@ -354,7 +709,109 @@
               ]
             }
           },
-          "sel": null,
+          "sel": {
+            "lang": {
+              "item": {
+                "code": "fra",
+                "name": "French",
+                "qty": 64492
+              }
+            },
+            "langSubListId": "tag",
+            "tag": {
+              "item": {
+                "code": null,
+                "name": "documentary",
+                "qty": 213
+              }
+            },
+            "tagSubListId": "letter",
+            "letter": {
+              "item": {
+                "code": null,
+                "name": "U",
+                "qty": 2,
+                "stores": [
+                  1
+                ]
+              }
+            },
+            "letterSubListId": "pdc",
+            "pdc": {
+              "item": {
+                "code": null,
+                "name": "Une lettre d'Amérique",
+                "qty": 101,
+                "url": "https://feeds.audiomeans.fr/feed/d9f89da8-ed1c-4b97-abe8-597fabb10eff.xml",
+                "store": 1,
+                "page": 1,
+                "pItem": {
+                  "item": {
+                    "code": null,
+                    "name": "U",
+                    "qty": 2,
+                    "stores": [
+                      1
+                    ]
+                  }
+                },
+                "sel": {
+                  "lang": {
+                    "item": {
+                      "code": "fra",
+                      "name": "French",
+                      "qty": 64492
+                    }
+                  },
+                  "langSubListId": "tag",
+                  "tag": {
+                    "item": {
+                      "code": null,
+                      "name": "documentary",
+                      "qty": 213
+                    }
+                  },
+                  "tagSubListId": "letter",
+                  "letter": {
+                    "item": {
+                      "code": null,
+                      "name": "U",
+                      "qty": 2,
+                      "stores": [
+                        1
+                      ]
+                    }
+                  },
+                  "letterSubListId": "pdc",
+                  "pdc": null,
+                  "pdcSubListId": null,
+                  "epi": null,
+                  "epiSubListId": null,
+                  "noPage": 1,
+                  "epiOpen": false,
+                  "epiOpening": true
+                },
+                "selCnt": 0,
+                "id": "Une lettre d'Amérique",
+                "favLists": [
+                  "Podcasts"
+                ],
+                "metadata": {
+                  "statusText": ""
+                },
+                "pdc": true,
+                "rss": null,
+                "logo": "https://static.audiomeans.fr/img/podcast/cdf1f21c-e0b4-4c01-a0b4-d7115186a063.jpg",
+                "subText": "RTL"
+              }
+            },
+            "pdcSubListId": "epi",
+            "epi": null,
+            "epiSubListId": null,
+            "noPage": 1,
+            "epiOpen": false,
+            "epiOpening": true
+          },
           "selCnt": 0,
           "id": "Une lettre d'Amérique",
           "favLists": [],
@@ -366,16 +823,118 @@
           "logo": "https://static.audiomeans.fr/img/podcast/cdf1f21c-e0b4-4c01-a0b4-d7115186a063.jpg",
           "subText": "RTL"
         },
-        "sel": null,
+        "sel": {
+          "lang": {
+            "item": {
+              "code": "fra",
+              "name": "French",
+              "qty": 64492
+            }
+          },
+          "langSubListId": "tag",
+          "tag": {
+            "item": {
+              "code": null,
+              "name": "documentary",
+              "qty": 213
+            }
+          },
+          "tagSubListId": "letter",
+          "letter": {
+            "item": {
+              "code": null,
+              "name": "U",
+              "qty": 2,
+              "stores": [
+                1
+              ]
+            }
+          },
+          "letterSubListId": "pdc",
+          "pdc": {
+            "item": {
+              "code": null,
+              "name": "Une lettre d'Amérique",
+              "qty": 101,
+              "url": "https://feeds.audiomeans.fr/feed/d9f89da8-ed1c-4b97-abe8-597fabb10eff.xml",
+              "store": 1,
+              "page": 1,
+              "pItem": {
+                "item": {
+                  "code": null,
+                  "name": "U",
+                  "qty": 2,
+                  "stores": [
+                    1
+                  ]
+                }
+              },
+              "sel": {
+                "lang": {
+                  "item": {
+                    "code": "fra",
+                    "name": "French",
+                    "qty": 64492
+                  }
+                },
+                "langSubListId": "tag",
+                "tag": {
+                  "item": {
+                    "code": null,
+                    "name": "documentary",
+                    "qty": 213
+                  }
+                },
+                "tagSubListId": "letter",
+                "letter": {
+                  "item": {
+                    "code": null,
+                    "name": "U",
+                    "qty": 2,
+                    "stores": [
+                      1
+                    ]
+                  }
+                },
+                "letterSubListId": "pdc",
+                "pdc": null,
+                "pdcSubListId": null,
+                "epi": null,
+                "epiSubListId": null,
+                "noPage": 1,
+                "epiOpen": false,
+                "epiOpening": true
+              },
+              "selCnt": 0,
+              "id": "Une lettre d'Amérique",
+              "favLists": [
+                "Podcasts"
+              ],
+              "metadata": {
+                "statusText": ""
+              },
+              "pdc": true,
+              "rss": null,
+              "logo": "https://static.audiomeans.fr/img/podcast/cdf1f21c-e0b4-4c01-a0b4-d7115186a063.jpg",
+              "subText": "RTL"
+            }
+          },
+          "pdcSubListId": "epi",
+          "epi": null,
+          "epiSubListId": null,
+          "noPage": 1,
+          "epiOpen": false,
+          "epiOpening": true
+        },
         "id": "Trump fait entrer les bulldozers à la Maison Blanche : pourquoi son grand chantier fait polémique",
         "favLists": [
-          "Test Liste Avec Un Nom Long"
+          "Podcasts"
         ],
         "logo": "https://static.audiomeans.fr/img/episode/0e1afc4c-49d1-464f-8b71-bdce3a4deb18.jpg",
         "metadata": {
-          "duration": 1238.857143,
+          "duration": 1228.805782,
           "statusText": "playing",
-          "startTime": 1762201944000
+          "startTime": 1762206911488
         },
         "pdc": true,
         "epi": true,
@@ -389,13 +948,13 @@
               "length": 1,
               "prevObject": {
                 "0": {
-                  "jQuery371055611683136375771": {
+                  "jQuery371028044684041973811": {
                     "events": {
                       "click": [
                         {
                           "type": "click",
                           "origType": "click",
-                          "guid": 3862,
+                          "guid": 1560,
                           "namespace": ""
                         }
                       ]
@@ -407,61 +966,587 @@
             }
           },
           "currentTab": {
-            "listId": "Viz",
-            "tabId": "btn_wrp_logo"
+            "listId": "Podcast",
+            "tabId": "btn_wrp_podcast"
           }
         }
       },
       {
         "code": null,
-        "name": "Céline, taxi PMR : “Je me suis révélée dans ce métier !”",
+        "name": "Entretiens avec les défunts",
         "qty": "",
-        "subText2": "00:20:21",
-        "subText": "November 14, 2023",
-        "url": "https://track.podcastics.com/196/264411.mp3",
+        "subText2": "334",
+        "subText": "February 22, 2024",
+        "url": "https://audio1.redcircle.com/episodes/a82d293f-c9b9-4dca-bad4-e270dcb8760d/stream.mp3",
         "pItem": {
           "code": null,
-          "name": "Travail soigné",
-          "qty": 33,
-          "url": "https://feeds.podcastics.com/podcastics/podcasts/rss/196_398767ee4c42f820d24066ebc859a1a5.rss",
+          "name": "LES DOSSIERS DE L'ÉTRANGE",
+          "qty": 16,
+          "url": "https://feeds.redcircle.com/0a58fba4-5f87-463a-999c-81c9f941e96b",
           "store": 1,
           "page": 1,
           "pItem": {
             "item": {
               "code": null,
-              "name": "T",
-              "qty": 11,
+              "name": "L",
+              "qty": 66,
               "stores": [
                 1
               ]
             }
           },
-          "sel": null,
+          "sel": {
+            "lang": {
+              "item": {
+                "code": "fra",
+                "name": "French",
+                "qty": 64492
+              }
+            },
+            "langSubListId": "tag",
+            "tag": {
+              "item": {
+                "code": null,
+                "name": "documentary",
+                "qty": 213
+              }
+            },
+            "tagSubListId": "letter",
+            "letter": {
+              "item": {
+                "code": null,
+                "name": "L",
+                "qty": 66,
+                "stores": [
+                  1
+                ]
+              }
+            },
+            "letterSubListId": "pdc",
+            "pdc": {
+              "item": {
+                "code": null,
+                "name": "LES DOSSIERS DE L'ÉTRANGE",
+                "qty": 16,
+                "url": "https://feeds.redcircle.com/0a58fba4-5f87-463a-999c-81c9f941e96b",
+                "store": 1,
+                "page": 1,
+                "pItem": {
+                  "item": {
+                    "code": null,
+                    "name": "L",
+                    "qty": 66,
+                    "stores": [
+                      1
+                    ]
+                  }
+                },
+                "sel": {
+                  "lang": {
+                    "item": {
+                      "code": "fra",
+                      "name": "French",
+                      "qty": 64492
+                    }
+                  },
+                  "langSubListId": "tag",
+                  "tag": {
+                    "item": {
+                      "code": null,
+                      "name": "documentary",
+                      "qty": 213
+                    }
+                  },
+                  "tagSubListId": "letter",
+                  "letter": {
+                    "item": {
+                      "code": null,
+                      "name": "L",
+                      "qty": 66,
+                      "stores": [
+                        1
+                      ]
+                    }
+                  },
+                  "letterSubListId": "pdc",
+                  "pdc": {
+                    "item": {
+                      "code": null,
+                      "name": "LES DOSSIERS DE L'ÉTRANGE",
+                      "qty": 16,
+                      "url": "https://feeds.redcircle.com/0a58fba4-5f87-463a-999c-81c9f941e96b",
+                      "store": 1,
+                      "page": 1,
+                      "pItem": {
+                        "item": {
+                          "code": null,
+                          "name": "L",
+                          "qty": 66,
+                          "stores": [
+                            1
+                          ]
+                        }
+                      },
+                      "sel": {
+                        "lang": {
+                          "item": {
+                            "code": "fra",
+                            "name": "French",
+                            "qty": 64492
+                          }
+                        },
+                        "langSubListId": "tag",
+                        "tag": {
+                          "item": {
+                            "code": null,
+                            "name": "documentary",
+                            "qty": 213
+                          }
+                        },
+                        "tagSubListId": "letter",
+                        "letter": {
+                          "item": {
+                            "code": null,
+                            "name": "L",
+                            "qty": 66,
+                            "stores": [
+                              1
+                            ]
+                          }
+                        },
+                        "letterSubListId": "pdc",
+                        "pdc": {
+                          "item": {
+                            "code": null,
+                            "name": "LES DOSSIERS DE L'ÉTRANGE",
+                            "qty": 16,
+                            "url": "https://feeds.redcircle.com/0a58fba4-5f87-463a-999c-81c9f941e96b",
+                            "store": 1,
+                            "page": 1,
+                            "pItem": {
+                              "item": {
+                                "code": null,
+                                "name": "L",
+                                "qty": 66,
+                                "stores": [
+                                  1
+                                ]
+                              }
+                            },
+                            "sel": {
+                              "lang": {
+                                "item": {
+                                  "code": "fra",
+                                  "name": "French",
+                                  "qty": 64492
+                                }
+                              },
+                              "langSubListId": "tag",
+                              "tag": {
+                                "item": {
+                                  "code": null,
+                                  "name": "documentary",
+                                  "qty": 213
+                                }
+                              },
+                              "tagSubListId": "letter",
+                              "letter": {
+                                "item": {
+                                  "code": null,
+                                  "name": "L",
+                                  "qty": 66,
+                                  "stores": [
+                                    1
+                                  ]
+                                }
+                              },
+                              "letterSubListId": "pdc",
+                              "pdc": {
+                                "item": {
+                                  "code": null,
+                                  "name": "LES DOSSIERS DE L'ÉTRANGE",
+                                  "qty": 16,
+                                  "url": "https://feeds.redcircle.com/0a58fba4-5f87-463a-999c-81c9f941e96b",
+                                  "store": 1,
+                                  "page": 1,
+                                  "pItem": {
+                                    "item": {
+                                      "code": null,
+                                      "name": "L",
+                                      "qty": 66,
+                                      "stores": [
+                                        1
+                                      ]
+                                    }
+                                  },
+                                  "sel": null,
+                                  "selCnt": 1,
+                                  "id": "LES DOSSIERS DE L'ÉTRANGE",
+                                  "favLists": [],
+                                  "metadata": {
+                                    "statusText": ""
+                                  },
+                                  "pdc": true,
+                                  "rss": null,
+                                  "logo": "https://media.redcircle.com/images/2024/12/20/19/b8128d7c-eb4b-43c0-be61-85123d7bfb43_688d_7762e1de-7746-4d1a-96a9-aa976819822a_blob.jpg",
+                                  "subText": "biboomagazine.net"
+                                }
+                              },
+                              "pdcSubListId": "epi",
+                              "epi": null,
+                              "epiSubListId": null,
+                              "noPage": 1,
+                              "epiOpen": false,
+                              "epiOpening": true
+                            },
+                            "selCnt": 1,
+                            "id": "LES DOSSIERS DE L'ÉTRANGE",
+                            "favLists": [],
+                            "metadata": {
+                              "statusText": ""
+                            },
+                            "pdc": true,
+                            "rss": null,
+                            "logo": "https://media.redcircle.com/images/2024/12/20/19/b8128d7c-eb4b-43c0-be61-85123d7bfb43_688d_7762e1de-7746-4d1a-96a9-aa976819822a_blob.jpg",
+                            "subText": "biboomagazine.net"
+                          }
+                        },
+                        "pdcSubListId": "epi",
+                        "epi": null,
+                        "epiSubListId": null,
+                        "noPage": 1,
+                        "epiOpen": true,
+                        "epiOpening": true
+                      },
+                      "selCnt": 0,
+                      "id": "LES DOSSIERS DE L'ÉTRANGE",
+                      "favLists": [],
+                      "metadata": {
+                        "statusText": ""
+                      },
+                      "pdc": true,
+                      "rss": null,
+                      "logo": "https://media.redcircle.com/images/2024/12/20/19/b8128d7c-eb4b-43c0-be61-85123d7bfb43_688d_7762e1de-7746-4d1a-96a9-aa976819822a_blob.jpg",
+                      "subText": "biboomagazine.net"
+                    },
+                    "selCnt": 0
+                  },
+                  "pdcSubListId": "epi",
+                  "epi": null,
+                  "epiSubListId": null,
+                  "noPage": 1,
+                  "epiOpen": false,
+                  "epiOpening": true
+                },
+                "selCnt": 0,
+                "id": "LES DOSSIERS DE L'ÉTRANGE",
+                "favLists": [
+                  "Podcasts"
+                ],
+                "metadata": {
+                  "statusText": ""
+                },
+                "pdc": true,
+                "rss": null,
+                "logo": "https://media.redcircle.com/images/2024/12/20/19/b8128d7c-eb4b-43c0-be61-85123d7bfb43_688d_7762e1de-7746-4d1a-96a9-aa976819822a_blob.jpg",
+                "subText": "biboomagazine.net"
+              }
+            },
+            "pdcSubListId": "epi",
+            "epi": null,
+            "epiSubListId": null,
+            "noPage": 1,
+            "epiOpen": false,
+            "epiOpening": true
+          },
           "selCnt": 0,
-          "id": "Travail soigné",
+          "id": "LES DOSSIERS DE L'ÉTRANGE",
           "favLists": [],
           "metadata": {
             "statusText": ""
           },
           "pdc": true,
           "rss": null,
-          "logo": "https://medias.podcastics.com/podcastics/podcasts/artwork/travail-soigne.png.5c28712221cd95b8b863295933e1c904.png",
-          "subText": "stereolab"
+          "logo": "https://media.redcircle.com/images/2024/12/20/19/b8128d7c-eb4b-43c0-be61-85123d7bfb43_688d_7762e1de-7746-4d1a-96a9-aa976819822a_blob.jpg",
+          "subText": "biboomagazine.net"
         },
-        "sel": null,
-        "id": "Céline, taxi PMR : “Je me suis révélée dans ce métier !”",
+        "sel": {
+          "lang": {
+            "item": {
+              "code": "fra",
+              "name": "French",
+              "qty": 64492
+            }
+          },
+          "langSubListId": "tag",
+          "tag": {
+            "item": {
+              "code": null,
+              "name": "documentary",
+              "qty": 213
+            }
+          },
+          "tagSubListId": "letter",
+          "letter": {
+            "item": {
+              "code": null,
+              "name": "L",
+              "qty": 66,
+              "stores": [
+                1
+              ]
+            }
+          },
+          "letterSubListId": "pdc",
+          "pdc": {
+            "item": {
+              "code": null,
+              "name": "LES DOSSIERS DE L'ÉTRANGE",
+              "qty": 16,
+              "url": "https://feeds.redcircle.com/0a58fba4-5f87-463a-999c-81c9f941e96b",
+              "store": 1,
+              "page": 1,
+              "pItem": {
+                "item": {
+                  "code": null,
+                  "name": "L",
+                  "qty": 66,
+                  "stores": [
+                    1
+                  ]
+                }
+              },
+              "sel": {
+                "lang": {
+                  "item": {
+                    "code": "fra",
+                    "name": "French",
+                    "qty": 64492
+                  }
+                },
+                "langSubListId": "tag",
+                "tag": {
+                  "item": {
+                    "code": null,
+                    "name": "documentary",
+                    "qty": 213
+                  }
+                },
+                "tagSubListId": "letter",
+                "letter": {
+                  "item": {
+                    "code": null,
+                    "name": "L",
+                    "qty": 66,
+                    "stores": [
+                      1
+                    ]
+                  }
+                },
+                "letterSubListId": "pdc",
+                "pdc": {
+                  "item": {
+                    "code": null,
+                    "name": "LES DOSSIERS DE L'ÉTRANGE",
+                    "qty": 16,
+                    "url": "https://feeds.redcircle.com/0a58fba4-5f87-463a-999c-81c9f941e96b",
+                    "store": 1,
+                    "page": 1,
+                    "pItem": {
+                      "item": {
+                        "code": null,
+                        "name": "L",
+                        "qty": 66,
+                        "stores": [
+                          1
+                        ]
+                      }
+                    },
+                    "sel": {
+                      "lang": {
+                        "item": {
+                          "code": "fra",
+                          "name": "French",
+                          "qty": 64492
+                        }
+                      },
+                      "langSubListId": "tag",
+                      "tag": {
+                        "item": {
+                          "code": null,
+                          "name": "documentary",
+                          "qty": 213
+                        }
+                      },
+                      "tagSubListId": "letter",
+                      "letter": {
+                        "item": {
+                          "code": null,
+                          "name": "L",
+                          "qty": 66,
+                          "stores": [
+                            1
+                          ]
+                        }
+                      },
+                      "letterSubListId": "pdc",
+                      "pdc": {
+                        "item": {
+                          "code": null,
+                          "name": "LES DOSSIERS DE L'ÉTRANGE",
+                          "qty": 16,
+                          "url": "https://feeds.redcircle.com/0a58fba4-5f87-463a-999c-81c9f941e96b",
+                          "store": 1,
+                          "page": 1,
+                          "pItem": {
+                            "item": {
+                              "code": null,
+                              "name": "L",
+                              "qty": 66,
+                              "stores": [
+                                1
+                              ]
+                            }
+                          },
+                          "sel": {
+                            "lang": {
+                              "item": {
+                                "code": "fra",
+                                "name": "French",
+                                "qty": 64492
+                              }
+                            },
+                            "langSubListId": "tag",
+                            "tag": {
+                              "item": {
+                                "code": null,
+                                "name": "documentary",
+                                "qty": 213
+                              }
+                            },
+                            "tagSubListId": "letter",
+                            "letter": {
+                              "item": {
+                                "code": null,
+                                "name": "L",
+                                "qty": 66,
+                                "stores": [
+                                  1
+                                ]
+                              }
+                            },
+                            "letterSubListId": "pdc",
+                            "pdc": {
+                              "item": {
+                                "code": null,
+                                "name": "LES DOSSIERS DE L'ÉTRANGE",
+                                "qty": 16,
+                                "url": "https://feeds.redcircle.com/0a58fba4-5f87-463a-999c-81c9f941e96b",
+                                "store": 1,
+                                "page": 1,
+                                "pItem": {
+                                  "item": {
+                                    "code": null,
+                                    "name": "L",
+                                    "qty": 66,
+                                    "stores": [
+                                      1
+                                    ]
+                                  }
+                                },
+                                "sel": null,
+                                "selCnt": 1,
+                                "id": "LES DOSSIERS DE L'ÉTRANGE",
+                                "favLists": [],
+                                "metadata": {
+                                  "statusText": ""
+                                },
+                                "pdc": true,
+                                "rss": null,
+                                "logo": "https://media.redcircle.com/images/2024/12/20/19/b8128d7c-eb4b-43c0-be61-85123d7bfb43_688d_7762e1de-7746-4d1a-96a9-aa976819822a_blob.jpg",
+                                "subText": "biboomagazine.net"
+                              }
+                            },
+                            "pdcSubListId": "epi",
+                            "epi": null,
+                            "epiSubListId": null,
+                            "noPage": 1,
+                            "epiOpen": false,
+                            "epiOpening": true
+                          },
+                          "selCnt": 1,
+                          "id": "LES DOSSIERS DE L'ÉTRANGE",
+                          "favLists": [],
+                          "metadata": {
+                            "statusText": ""
+                          },
+                          "pdc": true,
+                          "rss": null,
+                          "logo": "https://media.redcircle.com/images/2024/12/20/19/b8128d7c-eb4b-43c0-be61-85123d7bfb43_688d_7762e1de-7746-4d1a-96a9-aa976819822a_blob.jpg",
+                          "subText": "biboomagazine.net"
+                        }
+                      },
+                      "pdcSubListId": "epi",
+                      "epi": null,
+                      "epiSubListId": null,
+                      "noPage": 1,
+                      "epiOpen": true,
+                      "epiOpening": true
+                    },
+                    "selCnt": 0,
+                    "id": "LES DOSSIERS DE L'ÉTRANGE",
+                    "favLists": [],
+                    "metadata": {
+                      "statusText": ""
+                    },
+                    "pdc": true,
+                    "rss": null,
+                    "logo": "https://media.redcircle.com/images/2024/12/20/19/b8128d7c-eb4b-43c0-be61-85123d7bfb43_688d_7762e1de-7746-4d1a-96a9-aa976819822a_blob.jpg",
+                    "subText": "biboomagazine.net"
+                  },
+                  "selCnt": 0
+                },
+                "pdcSubListId": "epi",
+                "epi": null,
+                "epiSubListId": null,
+                "noPage": 1,
+                "epiOpen": false,
+                "epiOpening": true
+              },
+              "selCnt": 0,
+              "id": "LES DOSSIERS DE L'ÉTRANGE",
+              "favLists": [
+                "Podcasts"
+              ],
+              "metadata": {
+                "statusText": ""
+              },
+              "pdc": true,
+              "rss": null,
+              "logo": "https://media.redcircle.com/images/2024/12/20/19/b8128d7c-eb4b-43c0-be61-85123d7bfb43_688d_7762e1de-7746-4d1a-96a9-aa976819822a_blob.jpg",
+              "subText": "biboomagazine.net"
+            }
+          },
+          "pdcSubListId": "epi",
+          "epi": null,
+          "epiSubListId": null,
+          "noPage": 1,
+          "epiOpen": false,
+          "epiOpening": true
+        },
+        "id": "Entretiens avec les défunts",
         "favLists": [
-          "Test Liste Avec Un Nom Long"
+          "History"
         ],
-        "logo": "https://medias.podcastics.com/podcastics/podcasts/artwork/travail-soigne.png.5c28712221cd95b8b863295933e1c904.png",
+        "logo": "https://media.redcircle.com/images/2024/2/22/7/a80e3724-ba4d-4052-8daa-6355263baebc_lddle_2k24__14_entretiens_avec_les_defunts.jpg",
         "metadata": {
-          "duration": 1221.444286,
+          "duration": 537.88725,
           "statusText": "playing",
-          "startTime": 1762201919875
+          "startTime": 1762206536328
         },
         "pdc": true,
         "epi": true,
-        "pubDate": "Tue, 14 Nov 2023 05:00:00 +0000",
+        "pubDate": "Thu, 22 Feb 2024 08:00:00 +0000",
         "ref": {
           "currentRDList": {
             "listId": "Podcast",
@@ -471,93 +1556,13 @@
               "length": 1,
               "prevObject": {
                 "0": {
-                  "jQuery371055611683136375771": {
+                  "jQuery3710175090255320894171": {
                     "events": {
                       "click": [
                         {
                           "type": "click",
                           "origType": "click",
-                          "guid": 3862,
-                          "namespace": ""
-                        }
-                      ]
-                    }
-                  }
-                },
-                "length": 1
-              }
-            }
-          },
-          "currentTab": {
-            "listId": "Viz",
-            "tabId": "btn_wrp_logo"
-          }
-        }
-      },
-      {
-        "code": null,
-        "name": "Adhan, le chant des Muezzins",
-        "qty": "",
-        "subText2": "26:06",
-        "subText": "March 31, 2025",
-        "url": "https://dts.podtrac.com/redirect.mp3/audio.ausha.co/odGwUN1m6O8B.mp3?t=1743434372",
-        "pItem": {
-          "code": null,
-          "name": "Transmission",
-          "qty": 38,
-          "url": "https://feed.ausha.co/bYrWFLRaGLEB",
-          "store": 1,
-          "page": 1,
-          "pItem": {
-            "item": {
-              "code": null,
-              "name": "T",
-              "qty": 11,
-              "stores": [
-                1
-              ]
-            }
-          },
-          "sel": null,
-          "selCnt": 0,
-          "id": "Transmission",
-          "favLists": [],
-          "metadata": {
-            "statusText": ""
-          },
-          "pdc": true,
-          "rss": null,
-          "logo": "https://image.ausha.co/Nj7zt2QMrAxMqHjMWzbOWoG49noXqIQyF4kuD1Vs_1400x1400.jpeg?t=1568889519",
-          "subText": "Collectif Transmission"
-        },
-        "sel": null,
-        "id": "Adhan, le chant des Muezzins",
-        "favLists": [],
-        "logo": "https://image.ausha.co/z00D5kJGh3979W5R3x7K4VqeQs7BaIitjgYkgwoL_1400x1400.jpeg?t=1743434594",
-        "metadata": {
-          "duration": 1566.598005,
-          "statusText": "playing",
-          "startTime": 1762201161907
-        },
-        "pdc": true,
-        "epi": true,
-        "pubDate": "Mon, 31 Mar 2025 15:23:13 +0000",
-        "ref": {
-          "currentRDList": {
-            "listId": "Podcast",
-            "name": "epi",
-            "$item": {
-              "0": {},
-              "length": 1,
-              "prevObject": {
-                "0": {
-                  "jQuery371055611683136375771": {
-                    "events": {
-                      "click": [
-                        {
-                          "type": "click",
-                          "origType": "click",
-                          "guid": 1181,
+                          "guid": 941,
                           "namespace": ""
                         }
                       ]
@@ -576,161 +1581,595 @@
       },
       {
         "code": null,
-        "name": "[INÉDIT] Star du baseball et espion : l’énigmatique Moe Berg • L'Intégrale",
+        "name": "L'homme d'une autre dimension",
         "qty": "",
-        "subText2": "00:18:25",
-        "subText": "November 2, 2025",
-        "url": "https://traffic.360.audion.fm/650b933a-0ca3-4bee-92f4-16ce48c5df8d.mp3",
+        "subText2": "391",
+        "subText": "August 30, 2021",
+        "url": "https://audio1.redcircle.com/episodes/4e171317-ba17-4422-95d6-3fcac1f3eafd/stream.mp3",
         "pItem": {
           "code": null,
-          "name": "SECRETS D'AGENTS • Histoires Vraies",
-          "qty": 194,
-          "url": "https://feeds.360.audion.fm/JbVRchkpzkMIocVu2urJV",
+          "name": "LES DOSSIERS DE L'ÉTRANGE",
+          "qty": 16,
+          "url": "https://feeds.redcircle.com/0a58fba4-5f87-463a-999c-81c9f941e96b",
           "store": 1,
           "page": 1,
           "pItem": {
             "item": {
               "code": null,
-              "name": "S",
-              "qty": 9,
+              "name": "L",
+              "qty": 66,
               "stores": [
                 1
               ]
             }
           },
-          "sel": null,
+          "sel": {
+            "lang": {
+              "item": {
+                "code": "fra",
+                "name": "French",
+                "qty": 64492
+              }
+            },
+            "langSubListId": "tag",
+            "tag": {
+              "item": {
+                "code": null,
+                "name": "documentary",
+                "qty": 213
+              }
+            },
+            "tagSubListId": "letter",
+            "letter": {
+              "item": {
+                "code": null,
+                "name": "L",
+                "qty": 66,
+                "stores": [
+                  1
+                ]
+              }
+            },
+            "letterSubListId": "pdc",
+            "pdc": {
+              "item": {
+                "code": null,
+                "name": "LES DOSSIERS DE L'ÉTRANGE",
+                "qty": 16,
+                "url": "https://feeds.redcircle.com/0a58fba4-5f87-463a-999c-81c9f941e96b",
+                "store": 1,
+                "page": 1,
+                "pItem": {
+                  "item": {
+                    "code": null,
+                    "name": "L",
+                    "qty": 66,
+                    "stores": [
+                      1
+                    ]
+                  }
+                },
+                "sel": {
+                  "lang": {
+                    "item": {
+                      "code": "fra",
+                      "name": "French",
+                      "qty": 64492
+                    }
+                  },
+                  "langSubListId": "tag",
+                  "tag": {
+                    "item": {
+                      "code": null,
+                      "name": "documentary",
+                      "qty": 213
+                    }
+                  },
+                  "tagSubListId": "letter",
+                  "letter": {
+                    "item": {
+                      "code": null,
+                      "name": "L",
+                      "qty": 66,
+                      "stores": [
+                        1
+                      ]
+                    }
+                  },
+                  "letterSubListId": "pdc",
+                  "pdc": {
+                    "item": {
+                      "code": null,
+                      "name": "LES DOSSIERS DE L'ÉTRANGE",
+                      "qty": 16,
+                      "url": "https://feeds.redcircle.com/0a58fba4-5f87-463a-999c-81c9f941e96b",
+                      "store": 1,
+                      "page": 1,
+                      "pItem": {
+                        "item": {
+                          "code": null,
+                          "name": "L",
+                          "qty": 66,
+                          "stores": [
+                            1
+                          ]
+                        }
+                      },
+                      "sel": {
+                        "lang": {
+                          "item": {
+                            "code": "fra",
+                            "name": "French",
+                            "qty": 64492
+                          }
+                        },
+                        "langSubListId": "tag",
+                        "tag": {
+                          "item": {
+                            "code": null,
+                            "name": "documentary",
+                            "qty": 213
+                          }
+                        },
+                        "tagSubListId": "letter",
+                        "letter": {
+                          "item": {
+                            "code": null,
+                            "name": "L",
+                            "qty": 66,
+                            "stores": [
+                              1
+                            ]
+                          }
+                        },
+                        "letterSubListId": "pdc",
+                        "pdc": {
+                          "item": {
+                            "code": null,
+                            "name": "LES DOSSIERS DE L'ÉTRANGE",
+                            "qty": 16,
+                            "url": "https://feeds.redcircle.com/0a58fba4-5f87-463a-999c-81c9f941e96b",
+                            "store": 1,
+                            "page": 1,
+                            "pItem": {
+                              "item": {
+                                "code": null,
+                                "name": "L",
+                                "qty": 66,
+                                "stores": [
+                                  1
+                                ]
+                              }
+                            },
+                            "sel": {
+                              "lang": {
+                                "item": {
+                                  "code": "fra",
+                                  "name": "French",
+                                  "qty": 64492
+                                }
+                              },
+                              "langSubListId": "tag",
+                              "tag": {
+                                "item": {
+                                  "code": null,
+                                  "name": "documentary",
+                                  "qty": 213
+                                }
+                              },
+                              "tagSubListId": "letter",
+                              "letter": {
+                                "item": {
+                                  "code": null,
+                                  "name": "L",
+                                  "qty": 66,
+                                  "stores": [
+                                    1
+                                  ]
+                                }
+                              },
+                              "letterSubListId": "pdc",
+                              "pdc": {
+                                "item": {
+                                  "code": null,
+                                  "name": "LES DOSSIERS DE L'ÉTRANGE",
+                                  "qty": 16,
+                                  "url": "https://feeds.redcircle.com/0a58fba4-5f87-463a-999c-81c9f941e96b",
+                                  "store": 1,
+                                  "page": 1,
+                                  "pItem": {
+                                    "item": {
+                                      "code": null,
+                                      "name": "L",
+                                      "qty": 66,
+                                      "stores": [
+                                        1
+                                      ]
+                                    }
+                                  },
+                                  "sel": null,
+                                  "selCnt": 1,
+                                  "id": "LES DOSSIERS DE L'ÉTRANGE",
+                                  "favLists": [],
+                                  "metadata": {
+                                    "statusText": ""
+                                  },
+                                  "pdc": true,
+                                  "rss": null,
+                                  "logo": "https://media.redcircle.com/images/2024/12/20/19/b8128d7c-eb4b-43c0-be61-85123d7bfb43_688d_7762e1de-7746-4d1a-96a9-aa976819822a_blob.jpg",
+                                  "subText": "biboomagazine.net"
+                                }
+                              },
+                              "pdcSubListId": "epi",
+                              "epi": null,
+                              "epiSubListId": null,
+                              "noPage": 1,
+                              "epiOpen": false,
+                              "epiOpening": true
+                            },
+                            "selCnt": 1,
+                            "id": "LES DOSSIERS DE L'ÉTRANGE",
+                            "favLists": [],
+                            "metadata": {
+                              "statusText": ""
+                            },
+                            "pdc": true,
+                            "rss": null,
+                            "logo": "https://media.redcircle.com/images/2024/12/20/19/b8128d7c-eb4b-43c0-be61-85123d7bfb43_688d_7762e1de-7746-4d1a-96a9-aa976819822a_blob.jpg",
+                            "subText": "biboomagazine.net"
+                          }
+                        },
+                        "pdcSubListId": "epi",
+                        "epi": null,
+                        "epiSubListId": null,
+                        "noPage": 1,
+                        "epiOpen": true,
+                        "epiOpening": true
+                      },
+                      "selCnt": 0,
+                      "id": "LES DOSSIERS DE L'ÉTRANGE",
+                      "favLists": [],
+                      "metadata": {
+                        "statusText": ""
+                      },
+                      "pdc": true,
+                      "rss": null,
+                      "logo": "https://media.redcircle.com/images/2024/12/20/19/b8128d7c-eb4b-43c0-be61-85123d7bfb43_688d_7762e1de-7746-4d1a-96a9-aa976819822a_blob.jpg",
+                      "subText": "biboomagazine.net"
+                    },
+                    "selCnt": 0
+                  },
+                  "pdcSubListId": "epi",
+                  "epi": null,
+                  "epiSubListId": null,
+                  "noPage": 1,
+                  "epiOpen": false,
+                  "epiOpening": true
+                },
+                "selCnt": 0,
+                "id": "LES DOSSIERS DE L'ÉTRANGE",
+                "favLists": [
+                  "Podcasts"
+                ],
+                "metadata": {
+                  "statusText": ""
+                },
+                "pdc": true,
+                "rss": null,
+                "logo": "https://media.redcircle.com/images/2024/12/20/19/b8128d7c-eb4b-43c0-be61-85123d7bfb43_688d_7762e1de-7746-4d1a-96a9-aa976819822a_blob.jpg",
+                "subText": "biboomagazine.net"
+              },
+              "selCnt": 0
+            },
+            "pdcSubListId": "epi",
+            "epi": null,
+            "epiSubListId": null,
+            "noPage": 1,
+            "epiOpen": false,
+            "epiOpening": true
+          },
           "selCnt": 0,
-          "id": "SECRETS D'AGENTS • Histoires Vraies",
+          "id": "LES DOSSIERS DE L'ÉTRANGE",
           "favLists": [],
           "metadata": {
             "statusText": ""
           },
           "pdc": true,
           "rss": null,
-          "logo": "https://artworks.360.audion.fm/92d90891-50c0-4f06-9279-72ff1b248ce6.png?width=3000&height=3000",
-          "subText": "Minuit"
+          "logo": "https://media.redcircle.com/images/2024/12/20/19/b8128d7c-eb4b-43c0-be61-85123d7bfb43_688d_7762e1de-7746-4d1a-96a9-aa976819822a_blob.jpg",
+          "subText": "biboomagazine.net"
         },
-        "sel": null,
-        "id": "[INÉDIT] Star du baseball et espion : l’énigmatique Moe Berg • L'Intégrale",
-        "favLists": [],
-        "logo": "https://artworks.360.audion.fm/92d90891-50c0-4f06-9279-72ff1b248ce6.png?width=3000&height=3000",
-        "metadata": {
-          "duration": 1187.735375,
-          "statusText": "playing",
-          "startTime": 1762201112567
-        },
-        "pdc": true,
-        "epi": true,
-        "pubDate": "Sun, 02 Nov 2025 08:30:01 GMT",
-        "ref": {
-          "currentRDList": {
-            "listId": "Podcast",
-            "name": "epi",
-            "$item": {
-              "0": {},
-              "length": 1,
-              "prevObject": {
-                "0": {
-                  "jQuery371055611683136375771": {
-                    "events": {
-                      "click": [
-                        {
-                          "type": "click",
-                          "origType": "click",
-                          "guid": 1181,
-                          "namespace": ""
-                        }
-                      ]
-                    }
-                  }
-                },
-                "length": 1
-              }
+        "sel": {
+          "lang": {
+            "item": {
+              "code": "fra",
+              "name": "French",
+              "qty": 64492
             }
           },
-          "currentTab": {
-            "listId": "Podcast",
-            "tabId": "btn_wrp_podcast"
-          }
-        }
-      },
-      {
-        "code": null,
-        "name": "📣 VOUS L’AVEZ MANQUÉ ? l CRIMES PARANORMAUX :  Un fantôme à la barre des témoins : l’affaire Zona Shue • L'Intégrale disponible👇",
-        "qty": "",
-        "subText2": "00:39:49",
-        "subText": "November 2, 2025",
-        "url": "https://traffic.360.audion.fm/redirect.mp3?r=v3CkZodHRwczovL3RyYWZmaWMuMzYwLmF1ZGlvbi5mbS9hMWM5ZTcyMi0yMmMwLTQ5Y2QtOGZhOS0wNjgxZTk3YWZjOTEubXAzEiRkYTJhMTJkMC1hMGI2LTQ3YWMtOGM0ZC01ZjJhMjkyNDYzNmUaJGRkYWI0ZTgzLWIwYjgtNDg2Zi1iZTA4LWJkNjk2ZDg3ODAzOSoDcnNzOgx2UUxRSDZidWtFWGJCE3B1Ymxpc2hlcl9mZWVkX2Ryb3A%253D&t=publisher",
-        "pItem": {
-          "code": null,
-          "name": "SECRETS D'AGENTS • Histoires Vraies",
-          "qty": 194,
-          "url": "https://feeds.360.audion.fm/JbVRchkpzkMIocVu2urJV",
-          "store": 1,
-          "page": 1,
-          "pItem": {
+          "langSubListId": "tag",
+          "tag": {
             "item": {
               "code": null,
-              "name": "S",
-              "qty": 9,
+              "name": "documentary",
+              "qty": 213
+            }
+          },
+          "tagSubListId": "letter",
+          "letter": {
+            "item": {
+              "code": null,
+              "name": "L",
+              "qty": 66,
               "stores": [
                 1
               ]
             }
           },
-          "sel": null,
-          "selCnt": 0,
-          "id": "SECRETS D'AGENTS • Histoires Vraies",
-          "favLists": [],
-          "metadata": {
-            "statusText": ""
+          "letterSubListId": "pdc",
+          "pdc": {
+            "item": {
+              "code": null,
+              "name": "LES DOSSIERS DE L'ÉTRANGE",
+              "qty": 16,
+              "url": "https://feeds.redcircle.com/0a58fba4-5f87-463a-999c-81c9f941e96b",
+              "store": 1,
+              "page": 1,
+              "pItem": {
+                "item": {
+                  "code": null,
+                  "name": "L",
+                  "qty": 66,
+                  "stores": [
+                    1
+                  ]
+                }
+              },
+              "sel": {
+                "lang": {
+                  "item": {
+                    "code": "fra",
+                    "name": "French",
+                    "qty": 64492
+                  }
+                },
+                "langSubListId": "tag",
+                "tag": {
+                  "item": {
+                    "code": null,
+                    "name": "documentary",
+                    "qty": 213
+                  }
+                },
+                "tagSubListId": "letter",
+                "letter": {
+                  "item": {
+                    "code": null,
+                    "name": "L",
+                    "qty": 66,
+                    "stores": [
+                      1
+                    ]
+                  }
+                },
+                "letterSubListId": "pdc",
+                "pdc": {
+                  "item": {
+                    "code": null,
+                    "name": "LES DOSSIERS DE L'ÉTRANGE",
+                    "qty": 16,
+                    "url": "https://feeds.redcircle.com/0a58fba4-5f87-463a-999c-81c9f941e96b",
+                    "store": 1,
+                    "page": 1,
+                    "pItem": {
+                      "item": {
+                        "code": null,
+                        "name": "L",
+                        "qty": 66,
+                        "stores": [
+                          1
+                        ]
+                      }
+                    },
+                    "sel": {
+                      "lang": {
+                        "item": {
+                          "code": "fra",
+                          "name": "French",
+                          "qty": 64492
+                        }
+                      },
+                      "langSubListId": "tag",
+                      "tag": {
+                        "item": {
+                          "code": null,
+                          "name": "documentary",
+                          "qty": 213
+                        }
+                      },
+                      "tagSubListId": "letter",
+                      "letter": {
+                        "item": {
+                          "code": null,
+                          "name": "L",
+                          "qty": 66,
+                          "stores": [
+                            1
+                          ]
+                        }
+                      },
+                      "letterSubListId": "pdc",
+                      "pdc": {
+                        "item": {
+                          "code": null,
+                          "name": "LES DOSSIERS DE L'ÉTRANGE",
+                          "qty": 16,
+                          "url": "https://feeds.redcircle.com/0a58fba4-5f87-463a-999c-81c9f941e96b",
+                          "store": 1,
+                          "page": 1,
+                          "pItem": {
+                            "item": {
+                              "code": null,
+                              "name": "L",
+                              "qty": 66,
+                              "stores": [
+                                1
+                              ]
+                            }
+                          },
+                          "sel": {
+                            "lang": {
+                              "item": {
+                                "code": "fra",
+                                "name": "French",
+                                "qty": 64492
+                              }
+                            },
+                            "langSubListId": "tag",
+                            "tag": {
+                              "item": {
+                                "code": null,
+                                "name": "documentary",
+                                "qty": 213
+                              }
+                            },
+                            "tagSubListId": "letter",
+                            "letter": {
+                              "item": {
+                                "code": null,
+                                "name": "L",
+                                "qty": 66,
+                                "stores": [
+                                  1
+                                ]
+                              }
+                            },
+                            "letterSubListId": "pdc",
+                            "pdc": {
+                              "item": {
+                                "code": null,
+                                "name": "LES DOSSIERS DE L'ÉTRANGE",
+                                "qty": 16,
+                                "url": "https://feeds.redcircle.com/0a58fba4-5f87-463a-999c-81c9f941e96b",
+                                "store": 1,
+                                "page": 1,
+                                "pItem": {
+                                  "item": {
+                                    "code": null,
+                                    "name": "L",
+                                    "qty": 66,
+                                    "stores": [
+                                      1
+                                    ]
+                                  }
+                                },
+                                "sel": null,
+                                "selCnt": 1,
+                                "id": "LES DOSSIERS DE L'ÉTRANGE",
+                                "favLists": [],
+                                "metadata": {
+                                  "statusText": ""
+                                },
+                                "pdc": true,
+                                "rss": null,
+                                "logo": "https://media.redcircle.com/images/2024/12/20/19/b8128d7c-eb4b-43c0-be61-85123d7bfb43_688d_7762e1de-7746-4d1a-96a9-aa976819822a_blob.jpg",
+                                "subText": "biboomagazine.net"
+                              }
+                            },
+                            "pdcSubListId": "epi",
+                            "epi": null,
+                            "epiSubListId": null,
+                            "noPage": 1,
+                            "epiOpen": false,
+                            "epiOpening": true
+                          },
+                          "selCnt": 1,
+                          "id": "LES DOSSIERS DE L'ÉTRANGE",
+                          "favLists": [],
+                          "metadata": {
+                            "statusText": ""
+                          },
+                          "pdc": true,
+                          "rss": null,
+                          "logo": "https://media.redcircle.com/images/2024/12/20/19/b8128d7c-eb4b-43c0-be61-85123d7bfb43_688d_7762e1de-7746-4d1a-96a9-aa976819822a_blob.jpg",
+                          "subText": "biboomagazine.net"
+                        }
+                      },
+                      "pdcSubListId": "epi",
+                      "epi": null,
+                      "epiSubListId": null,
+                      "noPage": 1,
+                      "epiOpen": true,
+                      "epiOpening": true
+                    },
+                    "selCnt": 0,
+                    "id": "LES DOSSIERS DE L'ÉTRANGE",
+                    "favLists": [],
+                    "metadata": {
+                      "statusText": ""
+                    },
+                    "pdc": true,
+                    "rss": null,
+                    "logo": "https://media.redcircle.com/images/2024/12/20/19/b8128d7c-eb4b-43c0-be61-85123d7bfb43_688d_7762e1de-7746-4d1a-96a9-aa976819822a_blob.jpg",
+                    "subText": "biboomagazine.net"
+                  },
+                  "selCnt": 0
+                },
+                "pdcSubListId": "epi",
+                "epi": null,
+                "epiSubListId": null,
+                "noPage": 1,
+                "epiOpen": false,
+                "epiOpening": true
+              },
+              "selCnt": 0,
+              "id": "LES DOSSIERS DE L'ÉTRANGE",
+              "favLists": [
+                "Podcasts"
+              ],
+              "metadata": {
+                "statusText": ""
+              },
+              "pdc": true,
+              "rss": null,
+              "logo": "https://media.redcircle.com/images/2024/12/20/19/b8128d7c-eb4b-43c0-be61-85123d7bfb43_688d_7762e1de-7746-4d1a-96a9-aa976819822a_blob.jpg",
+              "subText": "biboomagazine.net"
+            },
+            "selCnt": 0
           },
-          "pdc": true,
-          "rss": null,
-          "logo": "https://artworks.360.audion.fm/92d90891-50c0-4f06-9279-72ff1b248ce6.png?width=3000&height=3000",
-          "subText": "Minuit"
+          "pdcSubListId": "epi",
+          "epi": null,
+          "epiSubListId": null,
+          "noPage": 1,
+          "epiOpen": false,
+          "epiOpening": true
         },
-        "sel": null,
-        "id": "📣 VOUS L’AVEZ MANQUÉ ? l CRIMES PARANORMAUX :  Un fantôme à la barre des témoins : l’affaire Zona Shue • L'Intégrale disponible👇",
-        "favLists": [],
-        "logo": "https://artworks.360.audion.fm/459de65a-dd98-49d2-8257-450e7c6c45e8.png?width=3000&height=3000",
+        "id": "L'homme d'une autre dimension",
+        "favLists": [
+          "Podcasts",
+          "History"
+        ],
+        "logo": "https://media.redcircle.com/images/2021/8/30/16/9fe15a93-dd31-44b0-a2d6-ee1db31e0ea1_lddle-2k21-_11-multivers.jpg",
         "metadata": {
-          "duration": 2517.106625,
+          "duration": 563.095375,
           "statusText": "playing",
-          "startTime": 1762201081519
+          "startTime": 1762206496358
         },
         "pdc": true,
         "epi": true,
-        "pubDate": "Sun, 02 Nov 2025 08:29:01 GMT",
+        "pubDate": "Mon, 30 Aug 2021 16:19:50 +0000",
         "ref": {
           "currentRDList": {
-            "listId": "Podcast",
-            "name": "epi",
+            "listId": "List",
+            "name": "History",
             "$item": {
               "0": {},
-              "length": 1,
-              "prevObject": {
-                "0": {
-                  "jQuery371055611683136375771": {
-                    "events": {
-                      "click": [
-                        {
-                          "type": "click",
-                          "origType": "click",
-                          "guid": 1181,
-                          "namespace": ""
-                        }
-                      ]
-                    }
-                  }
-                },
-                "length": 1
-              }
+              "length": 1
             }
           },
           "currentTab": {
-            "listId": "Podcast",
-            "tabId": "btn_wrp_podcast"
+            "listId": "List",
+            "tabId": "btn_wrp_play_list"
           }
         }
       },
@@ -784,22 +2223,15 @@
         ],
         "metadata": {
           "duration": null,
-          "statusText": "playing",
-          "startTime": 1762201384662
-        },
-        "ref": {
-          "currentRDList": {
-            "listId": "List",
-            "name": "History",
-            "$item": {
-              "0": {},
-              "length": 1
-            }
-          },
-          "currentTab": {
-            "listId": "List",
-            "tabId": "btn_wrp_play_list"
-          }
+          "stereo": null,
+          "encoding": null,
+          "sampleFrq": null,
+          "sampleRes": null,
+          "country": null,
+          "statusText": null,
+          "startTime": null,
+          "stopTime": null,
+          "position": null
         }
       },
       {
@@ -4236,37 +5668,6 @@
       },
       {
         "code": null,
-        "name": "LES DOSSIERS DE L'ÉTRANGE",
-        "qty": 16,
-        "url": "https://feeds.redcircle.com/0a58fba4-5f87-463a-999c-81c9f941e96b",
-        "store": 1,
-        "page": 1,
-        "pItem": {
-          "item": {
-            "code": null,
-            "name": "L",
-            "qty": 66,
-            "stores": [
-              1
-            ]
-          }
-        },
-        "sel": null,
-        "selCnt": 0,
-        "id": "LES DOSSIERS DE L'ÉTRANGE",
-        "favLists": [
-          "Test Liste Avec Un Nom Long"
-        ],
-        "metadata": {
-          "statusText": ""
-        },
-        "pdc": true,
-        "rss": null,
-        "logo": "https://media.redcircle.com/images/2024/12/20/19/b8128d7c-eb4b-43c0-be61-85123d7bfb43_688d_7762e1de-7746-4d1a-96a9-aa976819822a_blob.jpg",
-        "subText": "biboomagazine.net"
-      },
-      {
-        "code": null,
         "name": "Les dames blanches",
         "qty": "",
         "subText2": "301",
@@ -4390,37 +5791,20 @@
         ],
         "logo": "https://static.audiomeans.fr/img/episode/0e1afc4c-49d1-464f-8b71-bdce3a4deb18.jpg",
         "metadata": {
-          "duration": 1238.857143,
+          "duration": 1228.805782,
           "statusText": "playing",
-          "startTime": 1762201944000
+          "startTime": 1762205441040
         },
         "pdc": true,
         "epi": true,
         "pubDate": "Fri, 31 Oct 2025 16:36:00 GMT",
         "ref": {
           "currentRDList": {
-            "listId": "Podcast",
-            "name": "epi",
+            "listId": "List",
+            "name": "Test Liste Avec Un Nom Long",
             "$item": {
               "0": {},
-              "length": 1,
-              "prevObject": {
-                "0": {
-                  "jQuery371055611683136375771": {
-                    "events": {
-                      "click": [
-                        {
-                          "type": "click",
-                          "origType": "click",
-                          "guid": 3862,
-                          "namespace": ""
-                        }
-                      ]
-                    }
-                  }
-                },
-                "length": 1
-              }
+              "length": 1
             }
           },
           "currentTab": {
@@ -4556,40 +5940,23 @@
         "metadata": {
           "duration": 1405.778625,
           "statusText": "playing",
-          "startTime": 1762201925978
+          "startTime": 1762206946226
         },
         "pdc": true,
         "epi": true,
         "pubDate": "Mon, 24 Jun 2024 08:34:45 +0000",
         "ref": {
           "currentRDList": {
-            "listId": "Podcast",
-            "name": "epi",
+            "listId": "List",
+            "name": "Test Liste Avec Un Nom Long",
             "$item": {
               "0": {},
-              "length": 1,
-              "prevObject": {
-                "0": {
-                  "jQuery371055611683136375771": {
-                    "events": {
-                      "click": [
-                        {
-                          "type": "click",
-                          "origType": "click",
-                          "guid": 3862,
-                          "namespace": ""
-                        }
-                      ]
-                    }
-                  }
-                },
-                "length": 1
-              }
+              "length": 1
             }
           },
           "currentTab": {
-            "listId": "Viz",
-            "tabId": "btn_wrp_logo"
+            "listId": "List",
+            "tabId": "btn_wrp_play_list"
           }
         }
       },
@@ -4636,43 +6003,25 @@
         ],
         "logo": "https://artworks.360.audion.fm/3c192d8a-5c9c-451a-8465-dfa614a4d677.jpg?width=3000&height=3000",
         "metadata": {
-          "duration": 1099.937875,
+          "duration": 1096.698688,
           "statusText": "playing",
-          "startTime": 1762202515851,
-          "endTime": 1762202229797
+          "startTime": 1762207010911
         },
         "pdc": true,
         "epi": true,
         "pubDate": "Tue, 30 Jul 2024 05:00:00 GMT",
         "ref": {
           "currentRDList": {
-            "listId": "Podcast",
-            "name": "epi",
+            "listId": "List",
+            "name": "Test Liste Avec Un Nom Long",
             "$item": {
               "0": {},
-              "length": 1,
-              "prevObject": {
-                "0": {
-                  "jQuery371055611683136375771": {
-                    "events": {
-                      "click": [
-                        {
-                          "type": "click",
-                          "origType": "click",
-                          "guid": 3862,
-                          "namespace": ""
-                        }
-                      ]
-                    }
-                  }
-                },
-                "length": 1
-              }
+              "length": 1
             }
           },
           "currentTab": {
-            "listId": "Podcast",
-            "tabId": "btn_wrp_podcast"
+            "listId": "List",
+            "tabId": "btn_wrp_play_list"
           }
         }
       }
@@ -8126,22 +9475,15 @@
         ],
         "metadata": {
           "duration": null,
-          "statusText": "playing",
-          "startTime": 1762201384662
-        },
-        "ref": {
-          "currentRDList": {
-            "listId": "List",
-            "name": "History",
-            "$item": {
-              "0": {},
-              "length": 1
-            }
-          },
-          "currentTab": {
-            "listId": "List",
-            "tabId": "btn_wrp_play_list"
-          }
+          "stereo": null,
+          "encoding": null,
+          "sampleFrq": null,
+          "sampleRes": null,
+          "country": null,
+          "statusText": null,
+          "startTime": null,
+          "stopTime": null,
+          "position": null
         }
       }
     ],
@@ -9267,6 +10609,1766 @@
           "stopTime": null,
           "position": null
         }
+      }
+    ],
+    "isSystem": false
+  },
+  "Podcasts": {
+    "listId": "List",
+    "name": "Podcasts",
+    "items": [
+      {
+        "code": null,
+        "name": "LES DOSSIERS DE L'ÉTRANGE",
+        "qty": 16,
+        "url": "https://feeds.redcircle.com/0a58fba4-5f87-463a-999c-81c9f941e96b",
+        "store": 1,
+        "page": 1,
+        "pItem": {
+          "item": {
+            "code": null,
+            "name": "L",
+            "qty": 66,
+            "stores": [
+              1
+            ]
+          }
+        },
+        "sel": {
+          "lang": {
+            "item": {
+              "code": "fra",
+              "name": "French",
+              "qty": 64492
+            }
+          },
+          "langSubListId": "tag",
+          "tag": {
+            "item": {
+              "code": null,
+              "name": "documentary",
+              "qty": 213
+            }
+          },
+          "tagSubListId": "letter",
+          "letter": {
+            "item": {
+              "code": null,
+              "name": "L",
+              "qty": 66,
+              "stores": [
+                1
+              ]
+            }
+          },
+          "letterSubListId": "pdc",
+          "pdc": {
+            "item": {
+              "code": null,
+              "name": "LES DOSSIERS DE L'ÉTRANGE",
+              "qty": 16,
+              "url": "https://feeds.redcircle.com/0a58fba4-5f87-463a-999c-81c9f941e96b",
+              "store": 1,
+              "page": 1,
+              "pItem": {
+                "item": {
+                  "code": null,
+                  "name": "L",
+                  "qty": 66,
+                  "stores": [
+                    1
+                  ]
+                }
+              },
+              "sel": {
+                "lang": {
+                  "item": {
+                    "code": "fra",
+                    "name": "French",
+                    "qty": 64492
+                  }
+                },
+                "langSubListId": "tag",
+                "tag": {
+                  "item": {
+                    "code": null,
+                    "name": "documentary",
+                    "qty": 213
+                  }
+                },
+                "tagSubListId": "letter",
+                "letter": {
+                  "item": {
+                    "code": null,
+                    "name": "L",
+                    "qty": 66,
+                    "stores": [
+                      1
+                    ]
+                  }
+                },
+                "letterSubListId": "pdc",
+                "pdc": {
+                  "item": {
+                    "code": null,
+                    "name": "LES DOSSIERS DE L'ÉTRANGE",
+                    "qty": 16,
+                    "url": "https://feeds.redcircle.com/0a58fba4-5f87-463a-999c-81c9f941e96b",
+                    "store": 1,
+                    "page": 1,
+                    "pItem": {
+                      "item": {
+                        "code": null,
+                        "name": "L",
+                        "qty": 66,
+                        "stores": [
+                          1
+                        ]
+                      }
+                    },
+                    "sel": {
+                      "lang": {
+                        "item": {
+                          "code": "fra",
+                          "name": "French",
+                          "qty": 64492
+                        }
+                      },
+                      "langSubListId": "tag",
+                      "tag": {
+                        "item": {
+                          "code": null,
+                          "name": "documentary",
+                          "qty": 213
+                        }
+                      },
+                      "tagSubListId": "letter",
+                      "letter": {
+                        "item": {
+                          "code": null,
+                          "name": "L",
+                          "qty": 66,
+                          "stores": [
+                            1
+                          ]
+                        }
+                      },
+                      "letterSubListId": "pdc",
+                      "pdc": {
+                        "item": {
+                          "code": null,
+                          "name": "LES DOSSIERS DE L'ÉTRANGE",
+                          "qty": 16,
+                          "url": "https://feeds.redcircle.com/0a58fba4-5f87-463a-999c-81c9f941e96b",
+                          "store": 1,
+                          "page": 1,
+                          "pItem": {
+                            "item": {
+                              "code": null,
+                              "name": "L",
+                              "qty": 66,
+                              "stores": [
+                                1
+                              ]
+                            }
+                          },
+                          "sel": null,
+                          "selCnt": 1,
+                          "id": "LES DOSSIERS DE L'ÉTRANGE",
+                          "favLists": [],
+                          "metadata": {
+                            "statusText": ""
+                          },
+                          "pdc": true,
+                          "rss": null,
+                          "logo": "https://media.redcircle.com/images/2024/12/20/19/b8128d7c-eb4b-43c0-be61-85123d7bfb43_688d_7762e1de-7746-4d1a-96a9-aa976819822a_blob.jpg",
+                          "subText": "biboomagazine.net"
+                        }
+                      },
+                      "pdcSubListId": "epi",
+                      "epi": null,
+                      "epiSubListId": null,
+                      "noPage": 1,
+                      "epiOpen": false,
+                      "epiOpening": true
+                    },
+                    "selCnt": 1,
+                    "id": "LES DOSSIERS DE L'ÉTRANGE",
+                    "favLists": [],
+                    "metadata": {
+                      "statusText": ""
+                    },
+                    "pdc": true,
+                    "rss": null,
+                    "logo": "https://media.redcircle.com/images/2024/12/20/19/b8128d7c-eb4b-43c0-be61-85123d7bfb43_688d_7762e1de-7746-4d1a-96a9-aa976819822a_blob.jpg",
+                    "subText": "biboomagazine.net"
+                  }
+                },
+                "pdcSubListId": "epi",
+                "epi": null,
+                "epiSubListId": null,
+                "noPage": 1,
+                "epiOpen": true,
+                "epiOpening": true
+              },
+              "selCnt": 0,
+              "id": "LES DOSSIERS DE L'ÉTRANGE",
+              "favLists": [],
+              "metadata": {
+                "statusText": ""
+              },
+              "pdc": true,
+              "rss": null,
+              "logo": "https://media.redcircle.com/images/2024/12/20/19/b8128d7c-eb4b-43c0-be61-85123d7bfb43_688d_7762e1de-7746-4d1a-96a9-aa976819822a_blob.jpg",
+              "subText": "biboomagazine.net"
+            },
+            "selCnt": 0
+          },
+          "pdcSubListId": "epi",
+          "epi": null,
+          "epiSubListId": null,
+          "noPage": 1,
+          "epiOpen": false,
+          "epiOpening": true
+        },
+        "selCnt": 0,
+        "id": "LES DOSSIERS DE L'ÉTRANGE",
+        "favLists": [
+          "Podcasts"
+        ],
+        "metadata": {
+          "statusText": ""
+        },
+        "pdc": true,
+        "rss": null,
+        "logo": "https://media.redcircle.com/images/2024/12/20/19/b8128d7c-eb4b-43c0-be61-85123d7bfb43_688d_7762e1de-7746-4d1a-96a9-aa976819822a_blob.jpg",
+        "subText": "biboomagazine.net"
+      },
+      {
+        "code": null,
+        "name": "Une lettre d'Amérique",
+        "qty": 101,
+        "url": "https://feeds.audiomeans.fr/feed/d9f89da8-ed1c-4b97-abe8-597fabb10eff.xml",
+        "store": 1,
+        "page": 1,
+        "pItem": {
+          "item": {
+            "code": null,
+            "name": "U",
+            "qty": 2,
+            "stores": [
+              1
+            ]
+          }
+        },
+        "sel": {
+          "lang": {
+            "item": {
+              "code": "fra",
+              "name": "French",
+              "qty": 64492
+            }
+          },
+          "langSubListId": "tag",
+          "tag": {
+            "item": {
+              "code": null,
+              "name": "documentary",
+              "qty": 213
+            }
+          },
+          "tagSubListId": "letter",
+          "letter": {
+            "item": {
+              "code": null,
+              "name": "U",
+              "qty": 2,
+              "stores": [
+                1
+              ]
+            }
+          },
+          "letterSubListId": "pdc",
+          "pdc": null,
+          "pdcSubListId": null,
+          "epi": null,
+          "epiSubListId": null,
+          "noPage": 1,
+          "epiOpen": false,
+          "epiOpening": true
+        },
+        "selCnt": 0,
+        "id": "Une lettre d'Amérique",
+        "favLists": [
+          "Podcasts"
+        ],
+        "metadata": {
+          "statusText": ""
+        },
+        "pdc": true,
+        "rss": null,
+        "logo": "https://static.audiomeans.fr/img/podcast/cdf1f21c-e0b4-4c01-a0b4-d7115186a063.jpg",
+        "subText": "RTL"
+      },
+      {
+        "code": null,
+        "name": "Travail soigné",
+        "qty": 33,
+        "url": "https://feeds.podcastics.com/podcastics/podcasts/rss/196_398767ee4c42f820d24066ebc859a1a5.rss",
+        "store": 1,
+        "page": 1,
+        "pItem": {
+          "item": {
+            "code": null,
+            "name": "T",
+            "qty": 11,
+            "stores": [
+              1
+            ]
+          }
+        },
+        "sel": {
+          "lang": {
+            "item": {
+              "code": "fra",
+              "name": "French",
+              "qty": 64492
+            }
+          },
+          "langSubListId": "tag",
+          "tag": {
+            "item": {
+              "code": null,
+              "name": "documentary",
+              "qty": 213
+            }
+          },
+          "tagSubListId": "letter",
+          "letter": {
+            "item": {
+              "code": null,
+              "name": "T",
+              "qty": 11,
+              "stores": [
+                1
+              ]
+            }
+          },
+          "letterSubListId": "pdc",
+          "pdc": null,
+          "pdcSubListId": null,
+          "epi": null,
+          "epiSubListId": null,
+          "noPage": 1,
+          "epiOpen": false,
+          "epiOpening": true
+        },
+        "selCnt": 0,
+        "id": "Travail soigné",
+        "favLists": [
+          "Podcasts"
+        ],
+        "metadata": {
+          "statusText": ""
+        },
+        "pdc": true,
+        "rss": null,
+        "logo": "https://medias.podcastics.com/podcastics/podcasts/artwork/travail-soigne.png.5c28712221cd95b8b863295933e1c904.png",
+        "subText": "stereolab"
+      },
+      {
+        "code": null,
+        "name": "Trump fait entrer les bulldozers à la Maison Blanche : pourquoi son grand chantier fait polémique",
+        "qty": "",
+        "subText2": "19:58",
+        "subText": "October 31, 2025",
+        "url": "https://audio.audiomeans.fr/file/uQzNZnSuzb/d669f90c-c7a3-4d71-b905-dceb296aef09.mp3?_=1761928683",
+        "pItem": {
+          "code": null,
+          "name": "Une lettre d'Amérique",
+          "qty": 101,
+          "url": "https://feeds.audiomeans.fr/feed/d9f89da8-ed1c-4b97-abe8-597fabb10eff.xml",
+          "store": 1,
+          "page": 1,
+          "pItem": {
+            "item": {
+              "code": null,
+              "name": "U",
+              "qty": 2,
+              "stores": [
+                1
+              ]
+            }
+          },
+          "sel": {
+            "lang": {
+              "item": {
+                "code": "fra",
+                "name": "French",
+                "qty": 64492
+              }
+            },
+            "langSubListId": "tag",
+            "tag": {
+              "item": {
+                "code": null,
+                "name": "documentary",
+                "qty": 213
+              }
+            },
+            "tagSubListId": "letter",
+            "letter": {
+              "item": {
+                "code": null,
+                "name": "U",
+                "qty": 2,
+                "stores": [
+                  1
+                ]
+              }
+            },
+            "letterSubListId": "pdc",
+            "pdc": {
+              "item": {
+                "code": null,
+                "name": "Une lettre d'Amérique",
+                "qty": 101,
+                "url": "https://feeds.audiomeans.fr/feed/d9f89da8-ed1c-4b97-abe8-597fabb10eff.xml",
+                "store": 1,
+                "page": 1,
+                "pItem": {
+                  "item": {
+                    "code": null,
+                    "name": "U",
+                    "qty": 2,
+                    "stores": [
+                      1
+                    ]
+                  }
+                },
+                "sel": {
+                  "lang": {
+                    "item": {
+                      "code": "fra",
+                      "name": "French",
+                      "qty": 64492
+                    }
+                  },
+                  "langSubListId": "tag",
+                  "tag": {
+                    "item": {
+                      "code": null,
+                      "name": "documentary",
+                      "qty": 213
+                    }
+                  },
+                  "tagSubListId": "letter",
+                  "letter": {
+                    "item": {
+                      "code": null,
+                      "name": "U",
+                      "qty": 2,
+                      "stores": [
+                        1
+                      ]
+                    }
+                  },
+                  "letterSubListId": "pdc",
+                  "pdc": null,
+                  "pdcSubListId": null,
+                  "epi": null,
+                  "epiSubListId": null,
+                  "noPage": 1,
+                  "epiOpen": false,
+                  "epiOpening": true
+                },
+                "selCnt": 0,
+                "id": "Une lettre d'Amérique",
+                "favLists": [
+                  "Podcasts"
+                ],
+                "metadata": {
+                  "statusText": ""
+                },
+                "pdc": true,
+                "rss": null,
+                "logo": "https://static.audiomeans.fr/img/podcast/cdf1f21c-e0b4-4c01-a0b4-d7115186a063.jpg",
+                "subText": "RTL"
+              }
+            },
+            "pdcSubListId": "epi",
+            "epi": null,
+            "epiSubListId": null,
+            "noPage": 1,
+            "epiOpen": false,
+            "epiOpening": true
+          },
+          "selCnt": 0,
+          "id": "Une lettre d'Amérique",
+          "favLists": [],
+          "metadata": {
+            "statusText": ""
+          },
+          "pdc": true,
+          "rss": null,
+          "logo": "https://static.audiomeans.fr/img/podcast/cdf1f21c-e0b4-4c01-a0b4-d7115186a063.jpg",
+          "subText": "RTL"
+        },
+        "sel": {
+          "lang": {
+            "item": {
+              "code": "fra",
+              "name": "French",
+              "qty": 64492
+            }
+          },
+          "langSubListId": "tag",
+          "tag": {
+            "item": {
+              "code": null,
+              "name": "documentary",
+              "qty": 213
+            }
+          },
+          "tagSubListId": "letter",
+          "letter": {
+            "item": {
+              "code": null,
+              "name": "U",
+              "qty": 2,
+              "stores": [
+                1
+              ]
+            }
+          },
+          "letterSubListId": "pdc",
+          "pdc": {
+            "item": {
+              "code": null,
+              "name": "Une lettre d'Amérique",
+              "qty": 101,
+              "url": "https://feeds.audiomeans.fr/feed/d9f89da8-ed1c-4b97-abe8-597fabb10eff.xml",
+              "store": 1,
+              "page": 1,
+              "pItem": {
+                "item": {
+                  "code": null,
+                  "name": "U",
+                  "qty": 2,
+                  "stores": [
+                    1
+                  ]
+                }
+              },
+              "sel": {
+                "lang": {
+                  "item": {
+                    "code": "fra",
+                    "name": "French",
+                    "qty": 64492
+                  }
+                },
+                "langSubListId": "tag",
+                "tag": {
+                  "item": {
+                    "code": null,
+                    "name": "documentary",
+                    "qty": 213
+                  }
+                },
+                "tagSubListId": "letter",
+                "letter": {
+                  "item": {
+                    "code": null,
+                    "name": "U",
+                    "qty": 2,
+                    "stores": [
+                      1
+                    ]
+                  }
+                },
+                "letterSubListId": "pdc",
+                "pdc": null,
+                "pdcSubListId": null,
+                "epi": null,
+                "epiSubListId": null,
+                "noPage": 1,
+                "epiOpen": false,
+                "epiOpening": true
+              },
+              "selCnt": 0,
+              "id": "Une lettre d'Amérique",
+              "favLists": [
+                "Podcasts"
+              ],
+              "metadata": {
+                "statusText": ""
+              },
+              "pdc": true,
+              "rss": null,
+              "logo": "https://static.audiomeans.fr/img/podcast/cdf1f21c-e0b4-4c01-a0b4-d7115186a063.jpg",
+              "subText": "RTL"
+            }
+          },
+          "pdcSubListId": "epi",
+          "epi": null,
+          "epiSubListId": null,
+          "noPage": 1,
+          "epiOpen": false,
+          "epiOpening": true
+        },
+        "id": "Trump fait entrer les bulldozers à la Maison Blanche : pourquoi son grand chantier fait polémique",
+        "favLists": [
+          "Podcasts"
+        ],
+        "logo": "https://static.audiomeans.fr/img/episode/0e1afc4c-49d1-464f-8b71-bdce3a4deb18.jpg",
+        "metadata": {
+          "duration": 1228.805782,
+          "statusText": "playing",
+          "startTime": 1762206911488
+        },
+        "pdc": true,
+        "epi": true,
+        "pubDate": "Fri, 31 Oct 2025 16:36:00 GMT",
+        "ref": {
+          "currentRDList": {
+            "listId": "Podcast",
+            "name": "epi",
+            "$item": {
+              "0": {},
+              "length": 1,
+              "prevObject": {
+                "0": {
+                  "jQuery371028044684041973811": {
+                    "events": {
+                      "click": [
+                        {
+                          "type": "click",
+                          "origType": "click",
+                          "guid": 1560,
+                          "namespace": ""
+                        }
+                      ]
+                    }
+                  }
+                },
+                "length": 1
+              }
+            }
+          },
+          "currentTab": {
+            "listId": "Podcast",
+            "tabId": "btn_wrp_podcast"
+          }
+        }
+      },
+      {
+        "code": null,
+        "name": "Transmission",
+        "qty": 38,
+        "url": "https://feed.ausha.co/bYrWFLRaGLEB",
+        "store": 1,
+        "page": 1,
+        "pItem": {
+          "item": {
+            "code": null,
+            "name": "T",
+            "qty": 11,
+            "stores": [
+              1
+            ]
+          }
+        },
+        "sel": {
+          "lang": {
+            "item": {
+              "code": "fra",
+              "name": "French",
+              "qty": 64492
+            }
+          },
+          "langSubListId": "tag",
+          "tag": {
+            "item": {
+              "code": null,
+              "name": "documentary",
+              "qty": 213
+            }
+          },
+          "tagSubListId": "letter",
+          "letter": {
+            "item": {
+              "code": null,
+              "name": "T",
+              "qty": 11,
+              "stores": [
+                1
+              ]
+            }
+          },
+          "letterSubListId": "pdc",
+          "pdc": {
+            "item": {
+              "code": null,
+              "name": "Transmission",
+              "qty": 38,
+              "url": "https://feed.ausha.co/bYrWFLRaGLEB",
+              "store": 1,
+              "page": 1,
+              "pItem": {
+                "item": {
+                  "code": null,
+                  "name": "T",
+                  "qty": 11,
+                  "stores": [
+                    1
+                  ]
+                }
+              },
+              "sel": {
+                "lang": {
+                  "item": {
+                    "code": "fra",
+                    "name": "French",
+                    "qty": 64492
+                  }
+                },
+                "langSubListId": "tag",
+                "tag": {
+                  "item": {
+                    "code": null,
+                    "name": "documentary",
+                    "qty": 213
+                  }
+                },
+                "tagSubListId": "letter",
+                "letter": {
+                  "item": {
+                    "code": null,
+                    "name": "T",
+                    "qty": 11,
+                    "stores": [
+                      1
+                    ]
+                  }
+                },
+                "letterSubListId": "pdc",
+                "pdc": null,
+                "pdcSubListId": null,
+                "epi": null,
+                "epiSubListId": null,
+                "noPage": 1,
+                "epiOpen": false,
+                "epiOpening": true
+              },
+              "selCnt": 1,
+              "id": "Transmission",
+              "favLists": [],
+              "metadata": {
+                "statusText": ""
+              },
+              "pdc": true,
+              "rss": null,
+              "logo": "https://image.ausha.co/Nj7zt2QMrAxMqHjMWzbOWoG49noXqIQyF4kuD1Vs_1400x1400.jpeg?t=1568889519",
+              "subText": "Collectif Transmission"
+            }
+          },
+          "pdcSubListId": "epi",
+          "epi": null,
+          "epiSubListId": null,
+          "noPage": 1,
+          "epiOpen": true,
+          "epiOpening": true
+        },
+        "selCnt": 0,
+        "id": "Transmission",
+        "favLists": [
+          "Podcasts"
+        ],
+        "metadata": {
+          "statusText": ""
+        },
+        "pdc": true,
+        "rss": null,
+        "logo": "https://image.ausha.co/Nj7zt2QMrAxMqHjMWzbOWoG49noXqIQyF4kuD1Vs_1400x1400.jpeg?t=1568889519",
+        "subText": "Collectif Transmission"
+      },
+      {
+        "code": null,
+        "name": "Jardins défendus - épisode 1",
+        "qty": "",
+        "subText2": "23:25",
+        "subText": "June 24, 2024",
+        "url": "https://dts.podtrac.com/redirect.mp3/audio.ausha.co/bjlLT2DE05Lo.mp3?t=1718969689",
+        "pItem": {
+          "code": null,
+          "name": "Transmission",
+          "qty": 38,
+          "url": "https://feed.ausha.co/bYrWFLRaGLEB",
+          "store": 1,
+          "page": 1,
+          "pItem": {
+            "item": {
+              "code": null,
+              "name": "T",
+              "qty": 11,
+              "stores": [
+                1
+              ]
+            }
+          },
+          "sel": {
+            "lang": {
+              "item": {
+                "code": "fra",
+                "name": "French",
+                "qty": 64492
+              }
+            },
+            "langSubListId": "tag",
+            "tag": {
+              "item": {
+                "code": null,
+                "name": "documentary",
+                "qty": 213
+              }
+            },
+            "tagSubListId": "letter",
+            "letter": {
+              "item": {
+                "code": null,
+                "name": "T",
+                "qty": 11,
+                "stores": [
+                  1
+                ]
+              }
+            },
+            "letterSubListId": "pdc",
+            "pdc": {
+              "item": {
+                "code": null,
+                "name": "Transmission",
+                "qty": 38,
+                "url": "https://feed.ausha.co/bYrWFLRaGLEB",
+                "store": 1,
+                "page": 1,
+                "pItem": {
+                  "item": {
+                    "code": null,
+                    "name": "T",
+                    "qty": 11,
+                    "stores": [
+                      1
+                    ]
+                  }
+                },
+                "sel": {
+                  "lang": {
+                    "item": {
+                      "code": "fra",
+                      "name": "French",
+                      "qty": 64492
+                    }
+                  },
+                  "langSubListId": "tag",
+                  "tag": {
+                    "item": {
+                      "code": null,
+                      "name": "documentary",
+                      "qty": 213
+                    }
+                  },
+                  "tagSubListId": "letter",
+                  "letter": {
+                    "item": {
+                      "code": null,
+                      "name": "T",
+                      "qty": 11,
+                      "stores": [
+                        1
+                      ]
+                    }
+                  },
+                  "letterSubListId": "pdc",
+                  "pdc": {
+                    "item": {
+                      "code": null,
+                      "name": "Transmission",
+                      "qty": 38,
+                      "url": "https://feed.ausha.co/bYrWFLRaGLEB",
+                      "store": 1,
+                      "page": 1,
+                      "pItem": {
+                        "item": {
+                          "code": null,
+                          "name": "T",
+                          "qty": 11,
+                          "stores": [
+                            1
+                          ]
+                        }
+                      },
+                      "sel": {
+                        "lang": {
+                          "item": {
+                            "code": "fra",
+                            "name": "French",
+                            "qty": 64492
+                          }
+                        },
+                        "langSubListId": "tag",
+                        "tag": {
+                          "item": {
+                            "code": null,
+                            "name": "documentary",
+                            "qty": 213
+                          }
+                        },
+                        "tagSubListId": "letter",
+                        "letter": {
+                          "item": {
+                            "code": null,
+                            "name": "T",
+                            "qty": 11,
+                            "stores": [
+                              1
+                            ]
+                          }
+                        },
+                        "letterSubListId": "pdc",
+                        "pdc": null,
+                        "pdcSubListId": null,
+                        "epi": null,
+                        "epiSubListId": null,
+                        "noPage": 1,
+                        "epiOpen": false,
+                        "epiOpening": true
+                      },
+                      "selCnt": 1,
+                      "id": "Transmission",
+                      "favLists": [],
+                      "metadata": {
+                        "statusText": ""
+                      },
+                      "pdc": true,
+                      "rss": null,
+                      "logo": "https://image.ausha.co/Nj7zt2QMrAxMqHjMWzbOWoG49noXqIQyF4kuD1Vs_1400x1400.jpeg?t=1568889519",
+                      "subText": "Collectif Transmission"
+                    }
+                  },
+                  "pdcSubListId": "epi",
+                  "epi": null,
+                  "epiSubListId": null,
+                  "noPage": 1,
+                  "epiOpen": true,
+                  "epiOpening": true
+                },
+                "selCnt": 0,
+                "id": "Transmission",
+                "favLists": [
+                  "Podcasts"
+                ],
+                "metadata": {
+                  "statusText": ""
+                },
+                "pdc": true,
+                "rss": null,
+                "logo": "https://image.ausha.co/Nj7zt2QMrAxMqHjMWzbOWoG49noXqIQyF4kuD1Vs_1400x1400.jpeg?t=1568889519",
+                "subText": "Collectif Transmission"
+              },
+              "selCnt": 0
+            },
+            "pdcSubListId": "epi",
+            "epi": null,
+            "epiSubListId": null,
+            "noPage": 1,
+            "epiOpen": false,
+            "epiOpening": true
+          },
+          "selCnt": 0,
+          "id": "Transmission",
+          "favLists": [],
+          "metadata": {
+            "statusText": ""
+          },
+          "pdc": true,
+          "rss": null,
+          "logo": "https://image.ausha.co/Nj7zt2QMrAxMqHjMWzbOWoG49noXqIQyF4kuD1Vs_1400x1400.jpeg?t=1568889519",
+          "subText": "Collectif Transmission"
+        },
+        "sel": {
+          "lang": {
+            "item": {
+              "code": "fra",
+              "name": "French",
+              "qty": 64492
+            }
+          },
+          "langSubListId": "tag",
+          "tag": {
+            "item": {
+              "code": null,
+              "name": "documentary",
+              "qty": 213
+            }
+          },
+          "tagSubListId": "letter",
+          "letter": {
+            "item": {
+              "code": null,
+              "name": "T",
+              "qty": 11,
+              "stores": [
+                1
+              ]
+            }
+          },
+          "letterSubListId": "pdc",
+          "pdc": {
+            "item": {
+              "code": null,
+              "name": "Transmission",
+              "qty": 38,
+              "url": "https://feed.ausha.co/bYrWFLRaGLEB",
+              "store": 1,
+              "page": 1,
+              "pItem": {
+                "item": {
+                  "code": null,
+                  "name": "T",
+                  "qty": 11,
+                  "stores": [
+                    1
+                  ]
+                }
+              },
+              "sel": {
+                "lang": {
+                  "item": {
+                    "code": "fra",
+                    "name": "French",
+                    "qty": 64492
+                  }
+                },
+                "langSubListId": "tag",
+                "tag": {
+                  "item": {
+                    "code": null,
+                    "name": "documentary",
+                    "qty": 213
+                  }
+                },
+                "tagSubListId": "letter",
+                "letter": {
+                  "item": {
+                    "code": null,
+                    "name": "T",
+                    "qty": 11,
+                    "stores": [
+                      1
+                    ]
+                  }
+                },
+                "letterSubListId": "pdc",
+                "pdc": {
+                  "item": {
+                    "code": null,
+                    "name": "Transmission",
+                    "qty": 38,
+                    "url": "https://feed.ausha.co/bYrWFLRaGLEB",
+                    "store": 1,
+                    "page": 1,
+                    "pItem": {
+                      "item": {
+                        "code": null,
+                        "name": "T",
+                        "qty": 11,
+                        "stores": [
+                          1
+                        ]
+                      }
+                    },
+                    "sel": {
+                      "lang": {
+                        "item": {
+                          "code": "fra",
+                          "name": "French",
+                          "qty": 64492
+                        }
+                      },
+                      "langSubListId": "tag",
+                      "tag": {
+                        "item": {
+                          "code": null,
+                          "name": "documentary",
+                          "qty": 213
+                        }
+                      },
+                      "tagSubListId": "letter",
+                      "letter": {
+                        "item": {
+                          "code": null,
+                          "name": "T",
+                          "qty": 11,
+                          "stores": [
+                            1
+                          ]
+                        }
+                      },
+                      "letterSubListId": "pdc",
+                      "pdc": null,
+                      "pdcSubListId": null,
+                      "epi": null,
+                      "epiSubListId": null,
+                      "noPage": 1,
+                      "epiOpen": false,
+                      "epiOpening": true
+                    },
+                    "selCnt": 1,
+                    "id": "Transmission",
+                    "favLists": [],
+                    "metadata": {
+                      "statusText": ""
+                    },
+                    "pdc": true,
+                    "rss": null,
+                    "logo": "https://image.ausha.co/Nj7zt2QMrAxMqHjMWzbOWoG49noXqIQyF4kuD1Vs_1400x1400.jpeg?t=1568889519",
+                    "subText": "Collectif Transmission"
+                  }
+                },
+                "pdcSubListId": "epi",
+                "epi": null,
+                "epiSubListId": null,
+                "noPage": 1,
+                "epiOpen": true,
+                "epiOpening": true
+              },
+              "selCnt": 0,
+              "id": "Transmission",
+              "favLists": [
+                "Podcasts"
+              ],
+              "metadata": {
+                "statusText": ""
+              },
+              "pdc": true,
+              "rss": null,
+              "logo": "https://image.ausha.co/Nj7zt2QMrAxMqHjMWzbOWoG49noXqIQyF4kuD1Vs_1400x1400.jpeg?t=1568889519",
+              "subText": "Collectif Transmission"
+            },
+            "selCnt": 0
+          },
+          "pdcSubListId": "epi",
+          "epi": null,
+          "epiSubListId": null,
+          "noPage": 1,
+          "epiOpen": false,
+          "epiOpening": true
+        },
+        "id": "Jardins défendus - épisode 1",
+        "favLists": [
+          "Podcasts"
+        ],
+        "logo": "https://image.ausha.co/tdpPy5HW7NHceFzsbX5V6vyVjrzWgWPkZjjUq4sU_1400x1400.jpeg?t=1719218088",
+        "metadata": {
+          "duration": 1405.778625,
+          "statusText": "playing",
+          "startTime": 1762206993406
+        },
+        "pdc": true,
+        "epi": true,
+        "pubDate": "Mon, 24 Jun 2024 08:34:45 +0000",
+        "ref": {
+          "currentRDList": {
+            "listId": "Podcast",
+            "name": "epi",
+            "$item": {
+              "0": {},
+              "length": 1,
+              "prevObject": {
+                "0": {
+                  "jQuery371028044684041973811": {
+                    "events": {
+                      "click": [
+                        {
+                          "type": "click",
+                          "origType": "click",
+                          "guid": 1998,
+                          "namespace": ""
+                        }
+                      ]
+                    }
+                  }
+                },
+                "length": 1
+              }
+            }
+          },
+          "currentTab": {
+            "listId": "Podcast",
+            "tabId": "btn_wrp_podcast"
+          }
+        }
+      },
+      {
+        "code": null,
+        "name": "Scènes de Crime",
+        "qty": 54,
+        "url": "https://feeds.360.audion.fm/EXKpQ_GdQ1PlZ0dD1pQaF",
+        "store": 1,
+        "page": 1,
+        "pItem": {
+          "item": {
+            "code": null,
+            "name": "true crime",
+            "qty": 80,
+            "stores": [
+              1
+            ]
+          }
+        },
+        "sel": {
+          "lang": {
+            "item": {
+              "code": "fra",
+              "name": "French",
+              "qty": 64492
+            }
+          },
+          "langSubListId": "tag",
+          "tag": {
+            "item": {
+              "code": null,
+              "name": "true crime",
+              "qty": 80,
+              "stores": [
+                1
+              ]
+            }
+          },
+          "tagSubListId": "pdc",
+          "letter": null,
+          "letterSubListId": null,
+          "pdc": null,
+          "pdcSubListId": null,
+          "epi": null,
+          "epiSubListId": null,
+          "noPage": 1,
+          "epiOpen": false,
+          "epiOpening": true
+        },
+        "selCnt": 0,
+        "id": "Scènes de Crime",
+        "favLists": [
+          "Podcasts"
+        ],
+        "metadata": {
+          "statusText": ""
+        },
+        "pdc": true,
+        "rss": null,
+        "logo": "https://artworks.360.audion.fm/3c192d8a-5c9c-451a-8465-dfa614a4d677.jpg?width=3000&height=3000",
+        "subText": "Prisma Media"
+      },
+      {
+        "code": null,
+        "name": "L'ordre du temple solaire : transit macabre en direction de Sirius",
+        "qty": "",
+        "subText2": "00:17:07",
+        "subText": "July 30, 2024",
+        "url": "https://traffic.360.audion.fm/f2a8321f-7361-43d1-983f-0fdb1b53e02a.mp3",
+        "pItem": {
+          "code": null,
+          "name": "Scènes de Crime",
+          "qty": 54,
+          "url": "https://feeds.360.audion.fm/EXKpQ_GdQ1PlZ0dD1pQaF",
+          "store": 1,
+          "page": 1,
+          "pItem": {
+            "item": {
+              "code": null,
+              "name": "true crime",
+              "qty": 80,
+              "stores": [
+                1
+              ]
+            }
+          },
+          "sel": {
+            "lang": {
+              "item": {
+                "code": "fra",
+                "name": "French",
+                "qty": 64492
+              }
+            },
+            "langSubListId": "tag",
+            "tag": {
+              "item": {
+                "code": null,
+                "name": "true crime",
+                "qty": 80,
+                "stores": [
+                  1
+                ]
+              }
+            },
+            "tagSubListId": "pdc",
+            "letter": null,
+            "letterSubListId": null,
+            "pdc": {
+              "item": {
+                "code": null,
+                "name": "Scènes de Crime",
+                "qty": 54,
+                "url": "https://feeds.360.audion.fm/EXKpQ_GdQ1PlZ0dD1pQaF",
+                "store": 1,
+                "page": 1,
+                "pItem": {
+                  "item": {
+                    "code": null,
+                    "name": "true crime",
+                    "qty": 80,
+                    "stores": [
+                      1
+                    ]
+                  }
+                },
+                "sel": {
+                  "lang": {
+                    "item": {
+                      "code": "fra",
+                      "name": "French",
+                      "qty": 64492
+                    }
+                  },
+                  "langSubListId": "tag",
+                  "tag": {
+                    "item": {
+                      "code": null,
+                      "name": "true crime",
+                      "qty": 80,
+                      "stores": [
+                        1
+                      ]
+                    }
+                  },
+                  "tagSubListId": "pdc",
+                  "letter": null,
+                  "letterSubListId": null,
+                  "pdc": null,
+                  "pdcSubListId": null,
+                  "epi": null,
+                  "epiSubListId": null,
+                  "noPage": 1,
+                  "epiOpen": false,
+                  "epiOpening": true
+                },
+                "selCnt": 0,
+                "id": "Scènes de Crime",
+                "favLists": [
+                  "Podcasts"
+                ],
+                "metadata": {
+                  "statusText": ""
+                },
+                "pdc": true,
+                "rss": null,
+                "logo": "https://artworks.360.audion.fm/3c192d8a-5c9c-451a-8465-dfa614a4d677.jpg?width=3000&height=3000",
+                "subText": "Prisma Media"
+              },
+              "selCnt": 0
+            },
+            "pdcSubListId": "epi",
+            "epi": null,
+            "epiSubListId": null,
+            "noPage": 1,
+            "epiOpen": false,
+            "epiOpening": true
+          },
+          "selCnt": 0,
+          "id": "Scènes de Crime",
+          "favLists": [],
+          "metadata": {
+            "statusText": ""
+          },
+          "pdc": true,
+          "rss": null,
+          "logo": "https://artworks.360.audion.fm/3c192d8a-5c9c-451a-8465-dfa614a4d677.jpg?width=3000&height=3000",
+          "subText": "Prisma Media"
+        },
+        "sel": {
+          "lang": {
+            "item": {
+              "code": "fra",
+              "name": "French",
+              "qty": 64492
+            }
+          },
+          "langSubListId": "tag",
+          "tag": {
+            "item": {
+              "code": null,
+              "name": "true crime",
+              "qty": 80,
+              "stores": [
+                1
+              ]
+            }
+          },
+          "tagSubListId": "pdc",
+          "letter": null,
+          "letterSubListId": null,
+          "pdc": {
+            "item": {
+              "code": null,
+              "name": "Scènes de Crime",
+              "qty": 54,
+              "url": "https://feeds.360.audion.fm/EXKpQ_GdQ1PlZ0dD1pQaF",
+              "store": 1,
+              "page": 1,
+              "pItem": {
+                "item": {
+                  "code": null,
+                  "name": "true crime",
+                  "qty": 80,
+                  "stores": [
+                    1
+                  ]
+                }
+              },
+              "sel": {
+                "lang": {
+                  "item": {
+                    "code": "fra",
+                    "name": "French",
+                    "qty": 64492
+                  }
+                },
+                "langSubListId": "tag",
+                "tag": {
+                  "item": {
+                    "code": null,
+                    "name": "true crime",
+                    "qty": 80,
+                    "stores": [
+                      1
+                    ]
+                  }
+                },
+                "tagSubListId": "pdc",
+                "letter": null,
+                "letterSubListId": null,
+                "pdc": null,
+                "pdcSubListId": null,
+                "epi": null,
+                "epiSubListId": null,
+                "noPage": 1,
+                "epiOpen": false,
+                "epiOpening": true
+              },
+              "selCnt": 0,
+              "id": "Scènes de Crime",
+              "favLists": [
+                "Podcasts"
+              ],
+              "metadata": {
+                "statusText": ""
+              },
+              "pdc": true,
+              "rss": null,
+              "logo": "https://artworks.360.audion.fm/3c192d8a-5c9c-451a-8465-dfa614a4d677.jpg?width=3000&height=3000",
+              "subText": "Prisma Media"
+            },
+            "selCnt": 0
+          },
+          "pdcSubListId": "epi",
+          "epi": null,
+          "epiSubListId": null,
+          "noPage": 1,
+          "epiOpen": false,
+          "epiOpening": true
+        },
+        "id": "L'ordre du temple solaire : transit macabre en direction de Sirius",
+        "favLists": [
+          "Podcasts"
+        ],
+        "logo": "https://artworks.360.audion.fm/3c192d8a-5c9c-451a-8465-dfa614a4d677.jpg?width=3000&height=3000",
+        "metadata": {
+          "duration": 1096.698688,
+          "statusText": "playing",
+          "startTime": 1762207111055
+        },
+        "pdc": true,
+        "epi": true,
+        "pubDate": "Tue, 30 Jul 2024 05:00:00 GMT",
+        "ref": {
+          "currentRDList": {
+            "listId": "Podcast",
+            "name": "epi",
+            "$item": {
+              "0": {},
+              "length": 1,
+              "prevObject": {
+                "0": {
+                  "jQuery371028044684041973811": {
+                    "events": {
+                      "click": [
+                        {
+                          "type": "click",
+                          "origType": "click",
+                          "guid": 2822,
+                          "namespace": ""
+                        }
+                      ]
+                    }
+                  }
+                },
+                "length": 1
+              }
+            }
+          },
+          "currentTab": {
+            "listId": "Podcast",
+            "tabId": "btn_wrp_podcast"
+          }
+        }
+      },
+      {
+        "code": null,
+        "name": "CHRONIQUES CRIMINELLES",
+        "qty": 142,
+        "url": "https://feeds.audiomeans.fr/feed/65e18b16-20cf-4a4b-8c2d-6ba7547671cf.xml",
+        "store": 1,
+        "page": 1,
+        "pItem": {
+          "item": {
+            "code": null,
+            "name": "true crime",
+            "qty": 80,
+            "stores": [
+              1
+            ]
+          }
+        },
+        "sel": {
+          "lang": {
+            "item": {
+              "code": "fra",
+              "name": "French",
+              "qty": 64492
+            }
+          },
+          "langSubListId": "tag",
+          "tag": {
+            "item": {
+              "code": null,
+              "name": "true crime",
+              "qty": 80,
+              "stores": [
+                1
+              ]
+            }
+          },
+          "tagSubListId": "pdc",
+          "letter": null,
+          "letterSubListId": null,
+          "pdc": {
+            "item": {
+              "code": null,
+              "name": "Scènes de Crime",
+              "qty": "",
+              "url": "https://feeds.360.audion.fm/EXKpQ_GdQ1PlZ0dD1pQaF",
+              "store": 1,
+              "page": 1,
+              "pItem": {
+                "item": {
+                  "code": null,
+                  "name": "true crime",
+                  "qty": 80,
+                  "stores": [
+                    1
+                  ]
+                }
+              },
+              "sel": {
+                "lang": {
+                  "item": {
+                    "code": "fra",
+                    "name": "French",
+                    "qty": 64492
+                  }
+                },
+                "langSubListId": "tag",
+                "tag": {
+                  "item": {
+                    "code": null,
+                    "name": "true crime",
+                    "qty": 80,
+                    "stores": [
+                      1
+                    ]
+                  }
+                },
+                "tagSubListId": "pdc",
+                "letter": null,
+                "letterSubListId": null,
+                "pdc": {
+                  "item": {
+                    "code": null,
+                    "name": "Scènes de Crime",
+                    "qty": "",
+                    "url": "https://feeds.360.audion.fm/EXKpQ_GdQ1PlZ0dD1pQaF",
+                    "store": 1,
+                    "page": 1,
+                    "pItem": {
+                      "item": {
+                        "code": null,
+                        "name": "true crime",
+                        "qty": 80,
+                        "stores": [
+                          1
+                        ]
+                      }
+                    },
+                    "sel": {
+                      "lang": {
+                        "item": {
+                          "code": "fra",
+                          "name": "French",
+                          "qty": 64492
+                        }
+                      },
+                      "langSubListId": "tag",
+                      "tag": {
+                        "item": {
+                          "code": null,
+                          "name": "true crime",
+                          "qty": 80,
+                          "stores": [
+                            1
+                          ]
+                        }
+                      },
+                      "tagSubListId": "pdc",
+                      "letter": null,
+                      "letterSubListId": null,
+                      "pdc": {
+                        "item": {
+                          "code": null,
+                          "name": "Scènes de Crime",
+                          "qty": 54,
+                          "url": "https://feeds.360.audion.fm/EXKpQ_GdQ1PlZ0dD1pQaF",
+                          "store": 1,
+                          "page": 1,
+                          "pItem": {
+                            "item": {
+                              "code": null,
+                              "name": "true crime",
+                              "qty": 80,
+                              "stores": [
+                                1
+                              ]
+                            }
+                          },
+                          "sel": {
+                            "lang": {
+                              "item": {
+                                "code": "fra",
+                                "name": "French",
+                                "qty": 64492
+                              }
+                            },
+                            "langSubListId": "tag",
+                            "tag": {
+                              "item": {
+                                "code": null,
+                                "name": "true crime",
+                                "qty": 80,
+                                "stores": [
+                                  1
+                                ]
+                              }
+                            },
+                            "tagSubListId": "pdc",
+                            "letter": null,
+                            "letterSubListId": null,
+                            "pdc": null,
+                            "pdcSubListId": null,
+                            "epi": null,
+                            "epiSubListId": null,
+                            "noPage": 1,
+                            "epiOpen": false,
+                            "epiOpening": true
+                          },
+                          "selCnt": 0,
+                          "id": "Scènes de Crime",
+                          "favLists": [
+                            "Podcasts"
+                          ],
+                          "metadata": {
+                            "statusText": ""
+                          },
+                          "pdc": true,
+                          "rss": null,
+                          "logo": "https://artworks.360.audion.fm/3c192d8a-5c9c-451a-8465-dfa614a4d677.jpg?width=3000&height=3000",
+                          "subText": "Prisma Media"
+                        }
+                      },
+                      "pdcSubListId": "epi",
+                      "epi": null,
+                      "epiSubListId": null,
+                      "noPage": 1,
+                      "epiOpen": false,
+                      "epiOpening": true
+                    },
+                    "selCnt": 1,
+                    "id": "Scènes de Crime",
+                    "favLists": [],
+                    "metadata": {
+                      "statusText": ""
+                    },
+                    "pdc": true
+                  },
+                  "selCnt": 0
+                },
+                "pdcSubListId": "epi",
+                "epi": null,
+                "epiSubListId": null,
+                "noPage": 1,
+                "epiOpen": false,
+                "epiOpening": true
+              },
+              "selCnt": 1,
+              "id": "Scènes de Crime",
+              "favLists": [],
+              "metadata": {
+                "statusText": ""
+              },
+              "pdc": true
+            },
+            "selCnt": 0
+          },
+          "pdcSubListId": "epi",
+          "epi": null,
+          "epiSubListId": null,
+          "noPage": 1,
+          "epiOpen": false,
+          "epiOpening": true
+        },
+        "selCnt": 0,
+        "id": "CHRONIQUES CRIMINELLES",
+        "favLists": [
+          "Podcasts"
+        ],
+        "metadata": {
+          "statusText": ""
+        },
+        "pdc": true,
+        "rss": null,
+        "logo": "https://static.audiomeans.fr/img/podcast/fea7706f-5e83-4aed-96bc-84cbda61f661.jpg",
+        "subText": "Jacques Pradel - TF1"
       }
     ],
     "isSystem": false
