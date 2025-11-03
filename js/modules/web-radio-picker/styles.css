@@ -797,3 +797,11 @@ h1 {
 .align-self-center {
     align-self: center;
 }
+
+.loading-list-pane {
+    display: grid;
+    align-items: center;
+    align-content: center;
+    justify-items: center;
+    font-size: 1.4em;
+}

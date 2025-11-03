@@ -32,6 +32,7 @@ class PodcastsLists {
 
         const paneId = self.listIdToPaneId[listId]
         const $pl = $('#' + paneId)
+        // clear pane, adds a loading info view
         $pl[0].innerHTML = ''
 
         switch (listId) {
@@ -87,6 +88,10 @@ class PodcastsLists {
 
         if (!self.podcasts.initializedLists[listId])
             self.podcasts.initializedLists[listId] = true
+
+        const $loadingPane = $('#opts_wrp_pane_loading')
+        $loadingPane.addClass('hidden')
+
         podcasts.asyncInitTab(listId)
 
     }
@@ -442,6 +447,10 @@ class PodcastsLists {
     }
 
     buildLettersItems(index) {
+
+        const $pane = $('#' + this.listIdToPaneId[Pdc_List_Letter])
+        this.setListPaneLoadingStateEnabled($pane)
+
         const letterItems = {}
         const countPropName = settings.dataProvider.countPropName
         const storesPropName = settings.dataProvider.storesPropName
@@ -472,6 +481,10 @@ class PodcastsLists {
     }
 
     buildTagsItems(index) {
+
+        const $pane = $('#' + this.listIdToPaneId[Pdc_List_Tag])
+        this.setListPaneLoadingStateEnabled($pane)
+
         const tagItems = {}
         const countPropName = settings.dataProvider.countPropName
         const storesPropName = settings.dataProvider.storesPropName
@@ -517,6 +530,12 @@ class PodcastsLists {
         this.podcasts.tagItems = tagItems
     }
 
+    setListPaneLoadingStateEnabled($pane) {
+        $pane[0].innerHTML = ''
+        const $loadingPane = $('#opts_wrp_pane_loading')
+        $loadingPane.removeClass('hidden')
+    }
+
     getAndBuildPdcItems(index) {
         const sel = podcasts.selection
         const langk = sel.lang.item.code
@@ -533,7 +552,9 @@ class PodcastsLists {
         // erase list before async get
         // TODO: add a wait load/init message ...
         const $pane = $('#' + this.listIdToPaneId[Pdc_List_Pdc])
-        $pane[0].innerHTML = ''
+
+        //$pane[0].innerHTML = ''
+        this.setListPaneLoadingStateEnabled($pane)
 
         remoteDataStore.getPodcastsList(
             storeIndex,
