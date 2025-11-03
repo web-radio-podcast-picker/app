@@ -68,15 +68,44 @@ class RadListPathBuilder {
         return $img
     }
 
+    goPdcPath(sel, tabId, listId) {
+        podcasts.changePodcasts(
+            sel,
+            {
+                onCompleted: () => {
+                    if (settings.debug.debug)
+                        console.log('## on completed')
+
+                    podcasts.openOpts = {
+                        onCompleted: () => {
+                            console.error('## RE ON COMPLETED')
+                            if (listId != null && listId !== undefined) {
+                                if (settings.debug.debug)
+                                    console.log('## restore selection')
+                                podcasts.podcastsLists.restoreSelection(listId, sel)
+                            }
+                        }
+                    }
+
+                    $('#' + tabId).click()
+                    //ui.tabs.selectTab(tabId, tabsController.pdcTabs)
+
+                    if (listId != null && listId !== undefined) {
+                        if (settings.debug.debug)
+                            console.log('## restore selection')
+                        podcasts.podcastsLists.restoreSelection(listId, sel)
+                    }
+                }
+            }
+        )
+    }
+
     buildPdcTopPath(item, $item) {
         const $p = $('#wrp_pdc_list_ref')
         $p[0].innerHTML = ''
         const $p2 = $('#wrp_pdc_list_ref_name')
         $p2[0].innerHTML = ''
 
-        /*const $pdcBut = this.buildPdcPathButton(Pdc_List_Pdc, item.name, 'Podcast', true, false)
-        $p.append($pdcBut)
-        $p.append(this.buildRightChevron().addClass('right-chevron-extended'))*/
         const sel = podcasts.selection
         const selclone = sclone(sel)
 
@@ -91,14 +120,7 @@ class RadListPathBuilder {
             $p2.append($tagBut)
 
             $tagBut.on('click', e => {
-                podcasts.changePodcasts(
-                    selclone,
-                    {
-                        onCompleted: () => {
-                            $('#btn_wrp_podcast_tag').click()
-                        }
-                    }
-                )
+                this.goPdcPath(selclone, 'btn_wrp_podcast_tag', Pdc_List_Tag)
             })
         }
         if (sel.letter) {
@@ -106,14 +128,7 @@ class RadListPathBuilder {
             $p2.append($letterBut)
 
             $letterBut.on('click', e => {
-                podcasts.changePodcasts(
-                    selclone,
-                    {
-                        onCompleted: () => {
-                            $('#btn_wrp_podcast_alpha').click()
-                        }
-                    }
-                )
+                this.goPdcPath(selclone, 'btn_wrp_podcast_alpha', Pdc_List_Letter)
             })
         }
         $p2.append(this.buildRightChevron().addClass('right-chevron-extended'))
@@ -122,7 +137,6 @@ class RadListPathBuilder {
         $p2.append($nameBut)
 
         $nameBut.on('click', e => {
-            //$('#btn_wrp_podcast_pdc').click()
             podcasts.changePodcasts(
                 selclone
             )

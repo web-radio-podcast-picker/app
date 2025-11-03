@@ -118,13 +118,14 @@ class Podcasts {
         return null
     }
 
-    getSelectionById(listId) {
+    getSelectionById(listId, sel) {
+        if (sel === undefined) sel = this.selection
         switch (listId) {
-            case Pdc_List_Lang: return this.selection.lang
-            case Pdc_List_Tag: return this.selection.tag
-            case Pdc_List_Letter: return this.selection.letter
-            case Pdc_List_Pdc: return this.selection.pdc
-            case Pdc_List_Epi: return this.selection.epi
+            case Pdc_List_Lang: return sel.lang
+            case Pdc_List_Tag: return sel.tag
+            case Pdc_List_Letter: return sel.letter
+            case Pdc_List_Pdc: return sel.pdc
+            case Pdc_List_Epi: return sel.epi
         }
         return null
     }
@@ -205,7 +206,7 @@ class Podcasts {
             this.initTabsCounter = 0
 
             if (settings.debug.debug) {
-                console.clear()
+                //console.clear()
                 console.log('## ---------------SELECT TAB----------- targetListId=' + targetListId)
             }
 
@@ -432,8 +433,9 @@ class Podcasts {
         /*this.openOpts = openOpts*/
 
         if (settings.debug.debug) {
-            console.clear()
+            //console.clear()
             console.log('## open podcasts')
+            console.log('## ' + JSON.stringify(this.openOpts, null, 2))
         }
 
         if (this.initializingPodcasts == null)
