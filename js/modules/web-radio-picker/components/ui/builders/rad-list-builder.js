@@ -224,7 +224,9 @@ class RadListBuilder {
         radsItems.setTitleIconsVisibility($item, false)
 
         if (o.pdc && !o.epi) {
-            podcasts.changePodcasts(o.sel)
+            const sel = sclone(o.sel)
+            sel.pdc = { item: o }
+            podcasts.changePodcasts(sel)
             return
         }
 

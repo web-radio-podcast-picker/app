@@ -641,7 +641,7 @@ class PodcastsLists {
         if (settings.debug.debug) {
             console.log(pItem)
             console.log('store = ' + store + ', page = ' + page)
-            //console.log(data)
+            console.log(sel)
         }
         const t = data.trim()       // coz there is empty lines
             .split('\n')
@@ -663,6 +663,7 @@ class PodcastsLists {
             pdcItem.page = page
             pdcItem.pItem = pItem
             pdcItem.sel = sclone(sel)
+            ////pdcItem.sel.pdc = { item: pdcItem }
 
             // state datas
             pdcItem.selCnt = 0
