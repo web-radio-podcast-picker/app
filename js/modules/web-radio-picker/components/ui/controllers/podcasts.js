@@ -283,7 +283,7 @@ class Podcasts {
         this.selection = selection
         this.resetInitializedLists()
         const $pdcBut = $('#btn_wrp_podcast')
-        if ($pdcBut.text() == '<<<')
+        if ($pdcBut.text() == '<<<')        // TODO : improve this way of checking
             $pdcBut.click()
         $pdcBut.click()
     }
