@@ -78,6 +78,7 @@ class RadListPathBuilder {
         $p.append($pdcBut)
         $p.append(this.buildRightChevron().addClass('right-chevron-extended'))*/
         const sel = podcasts.selection
+        const selclone = sclone(sel)
 
         const $langBut = this.buildPdcPathButton(Pdc_List_Lang, sel.lang.item.name, sel.lang.item.name, true, true)
         $p2.append($langBut)
@@ -88,15 +89,31 @@ class RadListPathBuilder {
         if (sel.tag) {
             const $tagBut = this.buildPdcPathButton(Pdc_List_Tag, sel.tag.item.name, firstCharToUpper(sel.tag.item.name), true, sel.letter)
             $p2.append($tagBut)
+
             $tagBut.on('click', e => {
-                $('#btn_wrp_podcast_tag').click()
+                podcasts.changePodcasts(
+                    selclone,
+                    {
+                        onCompleted: () => {
+                            $('#btn_wrp_podcast_tag').click()
+                        }
+                    }
+                )
             })
         }
         if (sel.letter) {
             const $letterBut = this.buildPdcPathButton(Pdc_List_Letter, sel.letter.item.name, sel.letter.item.name, true, false)
             $p2.append($letterBut)
+
             $letterBut.on('click', e => {
-                $('#btn_wrp_podcast_alpha').click()
+                podcasts.changePodcasts(
+                    selclone,
+                    {
+                        onCompleted: () => {
+                            $('#btn_wrp_podcast_alpha').click()
+                        }
+                    }
+                )
             })
         }
         $p2.append(this.buildRightChevron().addClass('right-chevron-extended'))
@@ -105,7 +122,10 @@ class RadListPathBuilder {
         $p2.append($nameBut)
 
         $nameBut.on('click', e => {
-            $('#btn_wrp_podcast_pdc').click()
+            //$('#btn_wrp_podcast_pdc').click()
+            podcasts.changePodcasts(
+                selclone
+            )
         })
     }
 
@@ -246,7 +266,7 @@ class RadListPathBuilder {
         const selected = !isTab ? 'selected' : ''
         const butcl = noClick == true ? '' : 'menu-item-blue'
         const $but = $(`<span data-id="${id}" class="${butcl} fav-path-button menu-item ${cl} no-width ${rm} ${selected}">${text}</span>`)
-        if (noClick != true)
+        if (noClick != true && onClick !== undefined && onClick != null)
             $but.on('click', e => {
                 this.pdcButtonOnClick(e, listId, id, isTab, onClick)
             })

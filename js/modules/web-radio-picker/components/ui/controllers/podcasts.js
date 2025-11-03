@@ -192,6 +192,8 @@ class Podcasts {
         return this
     }
 
+    initTabsCounter = null
+
     selectTab(selection, targetListId) {
 
         if (settings.debug.debug)
@@ -200,9 +202,11 @@ class Podcasts {
         this.onReady(() => {
             // find available tabs
 
+            this.initTabsCounter = 0
+
             if (settings.debug.debug) {
                 console.clear()
-                console.log('---------------SELECT TAB----------- targetListId=' + targetListId)
+                console.log('## ---------------SELECT TAB----------- targetListId=' + targetListId)
             }
 
             this.updateSelectionSubListsIds(selection)
@@ -273,10 +277,14 @@ class Podcasts {
         this.initializedLists[Pdc_List_Epi] = null
     }
 
-    changePodcasts(selection) {
+    changePodcasts(selection, openOpts) {
+        this.openOpts = openOpts
         this.selection = selection
         this.resetInitializedLists()
-        $('#btn_wrp_podcast').click()
+        const $pdcBut = $('#btn_wrp_podcast')
+        if ($pdcBut.text() == '<<<')
+            $pdcBut.click()
+        $pdcBut.click()
     }
 
     isListInitialized(listId, sel) {
@@ -310,8 +318,6 @@ class Podcasts {
         }*/
     }
 
-
-
     asyncInitTab(slistId) {
 
         if (settings.debug.debug)
@@ -332,7 +338,7 @@ class Podcasts {
     initTabs(slistId, skipSelectItem) {
 
         if (settings.debug.debug)
-            console.log('---------------INIT TABS----------- slistId=' + slistId + ' skipSel=' + skipSelectItem)
+            console.log('## ---------------INIT TABS----------- slistId=' + slistId + ' skipSel=' + skipSelectItem)
 
         const self = podcasts
         const selection = self.selection
@@ -349,7 +355,6 @@ class Podcasts {
             .setTabVisiblity(self.listIdToTabId[Pdc_List_Epi],
                 false) //selection.pdcSubListId == Pdc_List_Epi)
 
-
         // select current tab & item
 
         const slist = self.getListById(slistId)
@@ -358,9 +363,14 @@ class Podcasts {
 
         logger.log('select podcast tab: ' + slistId)
 
-        ui.tabs.selectTab(
-            self.listIdToTabId[slistId],
-            tabsController.pdcTabs)
+        if (this.openOpts == null
+            || this.openOpts.selectTab == slistId) {
+            ui.tabs.selectTab(
+                self.listIdToTabId[slistId],
+                tabsController.pdcTabs)
+            if (settings.debug.debug)
+                console.log('selected: ' + slistId)
+        }
 
         if (this.previousListId != slistId)
             if (sitem != null) {
@@ -400,20 +410,38 @@ class Podcasts {
             console.log('initializingPodcasts = ' + this.initializingPodcasts + ' -- ' + this.selection.epiOpen)
             console.log('--------------------------')
         }
+
+        this.initTabsCounter++
+        if (this.initTabsCounter == 2) {
+            if (settings.debug.debug)
+                console.log('## end init tabs')
+            if (this.openOpts && this.openOpts.onCompleted) {
+                if (settings.debug.debug)
+                    console.log('## onCompleted()')
+                this.openOpts.onCompleted()
+            }
+            this.openOpts = null
+        }
+
         settings.dataStore.saveUIState()
     }
 
     // restore from ui state
-    openPodcasts(selection) {
+    openPodcasts(selection/*, openOpts*/) {
 
-        if (settings.debug.debug)
+        /*this.openOpts = openOpts*/
+
+        if (settings.debug.debug) {
             console.clear()
+            console.log('## open podcasts')
+        }
 
         if (this.initializingPodcasts == null)
             this.initializingPodcasts = 1
         if (selection === undefined || selection == null)
             selection = this.selection
-        this.selectTab(selection)
+
+        this.selectTab(selection, null)
     }
 
     backPdcPreviewItem = null
