@@ -258,7 +258,9 @@ class Podcasts {
                             if (!isBuildAsync) {
                                 // load and init listId view
                                 this.podcastsLists.updateListView(listId)
-                            } else initTabDone = true
+                            } else
+                                // done async by the buildItems method
+                                initTabDone = true
                         }
                     })
                 }
