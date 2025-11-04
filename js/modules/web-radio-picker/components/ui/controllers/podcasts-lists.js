@@ -577,7 +577,7 @@ class PodcastsLists {
     }
 
     getAndBuildPdcItems(index) {
-        const sel = sclone(podcasts.selection)  // TODO: seems not valid ??? - maybe clone is the sol -
+        const sel = cloneSelection(podcasts.selection)  // TODO: seems not valid ??? - maybe clone is the sol -
         const langk = sel.lang.item.code
         const tagk = sel.tag.item.name
         const letterk = sel.letter?.item?.name
@@ -649,7 +649,7 @@ class PodcastsLists {
             // epi items props
             epiItem.url = rssItem.audioUrl
             epiItem.pItem = item
-            epiItem.sel = sclone(item.sel)
+            epiItem.sel = cloneSelection(item.sel)
             //epiItem.rss = rssItem       // TODO: avoid store RSS (too big)
 
             // state datas
@@ -726,7 +726,7 @@ class PodcastsLists {
             pdcItem.store = store
             pdcItem.page = page
             pdcItem.pItem = pItem
-            pdcItem.sel = sclone(sel)
+            pdcItem.sel = cloneSelection(sel)
             ////pdcItem.sel.pdc = { item: pdcItem }
 
             // state datas

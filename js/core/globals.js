@@ -124,6 +124,12 @@ const transparentPixel =
 
 // -----------
 
+const cloneSelection = sel => {
+    /*const o = cloneItem({ sel: sel })
+    return o.sel*/
+    return sclone(sel)
+}
+
 // cleanup & clone station/pdc item
 const cloneItem = item => {
     if (item.sel) {
