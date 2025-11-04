@@ -130,6 +130,12 @@ const cloneSelection = sel => {
     return sclone(sel)
 }
 
+const cloneCleanupSelection = sel => {
+    const o = cloneItem({ sel: sel })
+    return o.sel
+}
+
+
 // cleanup & clone station/pdc item
 const cloneItem = item => {
     if (item.sel) {
