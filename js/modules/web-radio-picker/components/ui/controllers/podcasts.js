@@ -460,7 +460,8 @@ class Podcasts {
         item.metadata.statusText = 'opening...'
         radsItems.updateRadItemView(item, $item)
 
-        const cItem = cloneItem(item)   // fix sel in item
+        // any clone here prevent any item update after loading! (buildPdcPreview)
+        const cItem = item //cloneItem(item)   // fix sel in item 
 
         // TODO: avoid ops after receipt if other request started after this one
         remoteDataStore.getPodcastChannelRss(
@@ -609,7 +610,7 @@ class Podcasts {
             this.populatePdcPreview(item, $item, o)
 
             // store opened item
-            this.podcastsLists.pdcPreviewItem = cloneItem(item)
+            this.podcastsLists.pdcPreviewItem = item = cloneItem(item)    // keep sel
             this.podcastsLists.$pdcPreviewItem = $item
 
             if (infosPane.isVisibleInfosPane())
@@ -707,6 +708,9 @@ class Podcasts {
         this.previewInitizalized = true
         this.setPdcPreviewVisible(true)
         //this.setEpiListVisible(false)
+
+        // update stored clone
+        //this.podcastsLists.pdcPreviewItem = cloneItem(item)
 
         //// prevent first switch to view visible when not initialized
         ////$('#wrp_pdc_st_list').removeClass('ptransparent')
