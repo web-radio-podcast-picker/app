@@ -73,7 +73,7 @@ class RadListPathBuilder {
     #buildEpiViewTagPath(item, $p) {
         const pdc = item.sel.pdc?.item?.name
         const selclone = sclone(item.sel)
-        this.#addLangLetterTagEpiPathButtons(item.sel, selclone, $p, true)
+        //this.#addLangLetterTagEpiPathButtons(item.sel, selclone, $p, true)
         if (pdc) this.#addPdcEpiPathButton(pdc, $p, selclone)
         const $ctxt = this.buildRightChevron().addClass('right-chevron-small')
 
