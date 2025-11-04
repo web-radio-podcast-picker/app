@@ -448,8 +448,8 @@ class Podcasts {
         this.selectTab(selection, null)
     }
 
-    backPdcPreviewItem = null
-    back$pdcPreviewItem = null
+    //backPdcPreviewItem = null
+    //back$pdcPreviewItem = null
 
     // pdc channel rss & show pdc preview
     openPdcPreview(item, $item) {
@@ -463,21 +463,22 @@ class Podcasts {
         item.metadata.statusText = 'opening...'
         radsItems.updateRadItemView(item, $item)
 
-        this.backPdcPreviewItem = this.podcastsLists.pdcPreviewItem
-        this.back$pdcPreviewItem = this.podcastsLists.$pdcPreviewItem
+        //this.backPdcPreviewItem = this.podcastsLists.pdcPreviewItem
+        //this.back$pdcPreviewItem = this.podcastsLists.$pdcPreviewItem
+        const cItem = cloneItem(item)   // fix sel in item
 
         // TODO: avoid ops after receipt if other request started after this one
         remoteDataStore.getPodcastChannelRss(
             item.url,
-            data => this.buildPdcPreview(item, $item, data),
+            data => this.buildPdcPreview(cItem, $item, data),
             (mess, response) => this.openPdcPreviewError(item, $item, mess, response)
         )
     }
 
     openPdcPreviewError(item, $item, mess, response) {
         console.log(response)
-        this.podcastsLists.pdcPreviewItem = this.backPdcPreviewItem
-        this.podcastsLists.$pdcPreviewItem = this.back$pdcPreviewItem
+        //this.podcastsLists.pdcPreviewItem = this.backPdcPreviewItem
+        //this.podcastsLists.$pdcPreviewItem = this.back$pdcPreviewItem
         const text = 'channel not found'
         ui.showError(text)
         item.metadata.statusText = text
@@ -505,8 +506,8 @@ class Podcasts {
                 this.setEpiListVisible(true)
 
         } else {
-            this.podcastsLists.pdcPreviewItem =
-                this.podcastsLists.$pdcPreviewItem = null
+            //this.podcastsLists.pdcPreviewItem =
+            //    this.podcastsLists.$pdcPreviewItem = null
 
             if (skipTogglePath !== true) {
                 $('#wrp_pdc_btn_bar').addClass('hidden')
@@ -591,8 +592,11 @@ class Podcasts {
 
     // build pdc preview
     buildPdcPreview(item, $item, data) {
-        this.podcastsLists.pdcPreviewItem =
-            this.podcastsLists.$pdcPreviewItem = null
+        //this.podcastsLists.pdcPreviewItem =
+        //    this.podcastsLists.$pdcPreviewItem = null
+
+        if (settings.debug.debug)
+            console.log('[##] build pdc preview: ' + item.name)
 
         ui.hideError()
         item.metadata.statusText = ''
@@ -614,6 +618,10 @@ class Podcasts {
                 window.rss = o
 
             this.populatePdcPreview(item, $item, o)
+
+            // store opened item
+            this.podcastsLists.pdcPreviewItem = cloneItem(item)
+            this.podcastsLists.$pdcPreviewItem = $item
 
             if (infosPane.isVisibleInfosPane())
                 // hide preview if infos pane is opened

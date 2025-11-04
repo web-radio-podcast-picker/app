@@ -198,14 +198,14 @@ class PodcastsLists {
     clickOpenEpiList(e) {
         const self = podcasts.podcastsLists
 
-        if (this.pdcPreviewItem == null) { // TODO: better: memorize in the pane (serialization)
-            this.pdcPreviewItem = podcasts.selection.pdc.item
-        }
+        //if (this.pdcPreviewItem == null) { // TODO: better: memorize in the pane (serialization)
+        //    this.pdcPreviewItem = podcasts.selection.pdc.item
+        //}
         const item = this.pdcPreviewItem
 
-        const fitem = wrpp.getPdcListItem(item)
+        /*const fitem = wrpp.getPdcListItem(item)     // TODO: can't with an old list ?
         if (this.$pdcPreviewItem == null)
-            this.$pdcPreviewItem = $(fitem.item)
+            this.$pdcPreviewItem = $(fitem.item)*/
         const $item = this.$pdcPreviewItem
 
         self.openList(
@@ -593,7 +593,7 @@ class PodcastsLists {
         const item = letterk != null ? sel.letter : sel.tag
         const stores = letterk != null
             ? sel.letter.item.stores
-            : sel.tag.item.stores  // TODO: default store ??
+            : sel.tag.item.stores
 
         const storeIndex = stores[0]
 
