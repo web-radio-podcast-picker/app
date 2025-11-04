@@ -184,7 +184,9 @@ class RadiosLists {
     exportToClipboard() {
         this.lists[FavoritesJSONExportValidatorTag]
             = FavoritesJSONExportValidatorTag
+
         const txt = this.toJSON(true)
+
         delete this.lists[FavoritesJSONExportValidatorTag]
         window.exportedFavorites = txt
         copyToClipboard(txt)
@@ -293,14 +295,17 @@ class RadiosLists {
     purgeItems() {
         for (const name in this.lists) {
             const list = this.lists[name]
-            list.items.forEach(item => {
-                if (item.sel) {
-                    if (item.sel.pdc?.item?.sel)
-                        item.sel.pdc.item.sel = null
-                    if (item.sel.epi?.item?.sel)
-                        item.sel.epi.item.sel = null
-                }
-            })
+            if (list.items)
+                list.items.forEach(item => {
+                    if (item.sel) {
+                        if (item.sel.pdc?.item?.sel)
+                            item.sel.pdc.item.sel = null
+                        if (item.sel.epi?.item?.sel)
+                            item.sel.epi.item.sel = null
+                    }
+                })
+            else
+                console.warn('list "'+name+'" has no items prop')
         }
     }
 
