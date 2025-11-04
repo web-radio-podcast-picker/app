@@ -71,6 +71,8 @@ class RadListPathBuilder {
     }
 
     #buildEpiViewTagPath(item, $p) {
+        if (settings.debug.debug)
+            console.log(item.sel)
         const pdc = item.sel.pdc?.item?.name
         const selclone = sclone(item.sel)
         //this.#addLangLetterTagEpiPathButtons(item.sel, selclone, $p, true)
@@ -80,7 +82,16 @@ class RadListPathBuilder {
         const $epiBut = this.buildPdcPathButton(Pdc_List_Epi, item.name, $ctxt[0].outerHTML, true, false)
         $p.append($epiBut)
         $epiBut.on('click', e => {
-            podcasts.changePodcasts(selclone)
+            const selclone = sclone(item.sel)
+            selclone.epi = { item: item }
+            selclone.epiOpen = false
+            selclone.epiOpening = false
+            podcasts.changePodcasts(selclone, {
+                onCompleted: () => {
+                    //$('#wrp_pdc_prv_em_button').click()     // too early
+                    //podcasts.setEpiListVisible(true)
+                }
+            })
         })
     }
 
