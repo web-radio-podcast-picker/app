@@ -197,15 +197,7 @@ class PodcastsLists {
     // open episods list
     clickOpenEpiList(e) {
         const self = podcasts.podcastsLists
-
-        //if (this.pdcPreviewItem == null) { // TODO: better: memorize in the pane (serialization)
-        //    this.pdcPreviewItem = podcasts.selection.pdc.item
-        //}
         const item = this.pdcPreviewItem
-
-        /*const fitem = wrpp.getPdcListItem(item)     // TODO: can't with an old list ?
-        if (this.$pdcPreviewItem == null)
-            this.$pdcPreviewItem = $(fitem.item)*/
         const $item = this.$pdcPreviewItem
 
         self.openList(

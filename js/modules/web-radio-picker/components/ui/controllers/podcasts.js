@@ -448,9 +448,6 @@ class Podcasts {
         this.selectTab(selection, null)
     }
 
-    //backPdcPreviewItem = null
-    //back$pdcPreviewItem = null
-
     // pdc channel rss & show pdc preview
     openPdcPreview(item, $item) {
 
@@ -463,8 +460,6 @@ class Podcasts {
         item.metadata.statusText = 'opening...'
         radsItems.updateRadItemView(item, $item)
 
-        //this.backPdcPreviewItem = this.podcastsLists.pdcPreviewItem
-        //this.back$pdcPreviewItem = this.podcastsLists.$pdcPreviewItem
         const cItem = cloneItem(item)   // fix sel in item
 
         // TODO: avoid ops after receipt if other request started after this one
@@ -477,8 +472,6 @@ class Podcasts {
 
     openPdcPreviewError(item, $item, mess, response) {
         console.log(response)
-        //this.podcastsLists.pdcPreviewItem = this.backPdcPreviewItem
-        //this.podcastsLists.$pdcPreviewItem = this.back$pdcPreviewItem
         const text = 'channel not found'
         ui.showError(text)
         item.metadata.statusText = text
@@ -506,8 +499,6 @@ class Podcasts {
                 this.setEpiListVisible(true)
 
         } else {
-            //this.podcastsLists.pdcPreviewItem =
-            //    this.podcastsLists.$pdcPreviewItem = null
 
             if (skipTogglePath !== true) {
                 $('#wrp_pdc_btn_bar').addClass('hidden')
@@ -592,8 +583,6 @@ class Podcasts {
 
     // build pdc preview
     buildPdcPreview(item, $item, data) {
-        //this.podcastsLists.pdcPreviewItem =
-        //    this.podcastsLists.$pdcPreviewItem = null
 
         if (settings.debug.debug)
             console.log('[##] build pdc preview: ' + item.name)
