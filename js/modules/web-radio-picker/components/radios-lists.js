@@ -271,9 +271,37 @@ class RadiosLists {
             else return null
         }
 
-        return !applyFormat ?
+        var js = !applyFormat ?
             JSON.stringify(this.lists, selFn)
             : JSON.stringify(this.lists, selFn, 2)
+
+        if (settings.debug.debug)
+            console.log('size=' + js.length)
+
+        this.purgeItems()
+
+        js = !applyFormat ?
+            JSON.stringify(this.lists, selFn)
+            : JSON.stringify(this.lists, selFn, 2)
+
+        if (settings.debug.debug)
+            console.log('purged.size=' + js.length)
+
+        return js
+    }
+
+    purgeItems() {
+        for (const name in this.lists) {
+            const list = this.lists[name]
+            list.items.forEach(item => {
+                if (item.sel) {
+                    if (item.sel.pdc?.item?.sel)
+                        item.sel.pdc.item.sel = null
+                    if (item.sel.epi?.item?.sel)
+                        item.sel.epi.item.sel = null
+                }
+            })
+        }
     }
 
     fromJSON(str) {
