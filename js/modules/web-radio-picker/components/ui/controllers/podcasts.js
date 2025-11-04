@@ -460,13 +460,18 @@ class Podcasts {
         item.metadata.statusText = 'opening...'
         radsItems.updateRadItemView(item, $item)
 
+        // fix sel
+        const sel = cloneSelection(item.sel)
+        sel.pdc = { item: item }
+
         // any clone here prevent any item update after loading! (buildPdcPreview)
-        const cItem = item //cloneItem(item)   // fix sel in item 
+        const cItem = item //cloneItem(item)   // fix sel in item
+        //cItem.sel = cloneSelection(cItem.sel)
 
         // TODO: avoid ops after receipt if other request started after this one
         remoteDataStore.getPodcastChannelRss(
             item.url,
-            data => this.buildPdcPreview(cItem, $item, data),
+            data => this.buildPdcPreview(cItem, $item, data, sel),
             (mess, response) => this.openPdcPreviewError(item, $item, mess, response)
         )
     }
@@ -583,10 +588,12 @@ class Podcasts {
     }
 
     // build pdc preview
-    buildPdcPreview(item, $item, data) {
+    buildPdcPreview(item, $item, data, sel) {
 
-        if (settings.debug.debug)
+        if (settings.debug.debug) {
             console.log('[##] build pdc preview: ' + item.name)
+            console.log('[##]', sel)
+        }
 
         ui.hideError()
         item.metadata.statusText = ''
@@ -607,10 +614,14 @@ class Podcasts {
             if (settings.debug.debug)
                 window.rss = o
 
-            this.populatePdcPreview(item, $item, o)
+            this.populatePdcPreview(item, $item, o, sel)
 
             // store opened item
-            this.podcastsLists.pdcPreviewItem = item = cloneItem(item)    // keep sel
+            //this.podcastsLists.pdcPreviewItem = item //= cloneItem(item)    // keep sel
+
+            if (settings.debug.debug)
+                console.log('[##]', this.podcastsLists.pdcPreviewItem)
+
             this.podcastsLists.$pdcPreviewItem = $item
 
             if (infosPane.isVisibleInfosPane())
@@ -645,7 +656,7 @@ class Podcasts {
 
     buildPdcPreviewCount = 0
 
-    populatePdcPreview(item, $item, o) {
+    populatePdcPreview(item, $item, o, sel) {
 
         $('#wrp_pdc_st_list')[0].scrollTop = 0
 
@@ -705,13 +716,13 @@ class Podcasts {
             }
         )
 
+        // update stored clone
+        this.podcastsLists.pdcPreviewItem = cloneItem(item)
+        this.podcastsLists.pdcPreviewItem.sel = sel
+
         this.previewInitizalized = true
         this.setPdcPreviewVisible(true)
-        //this.setEpiListVisible(false)
-
-        // update stored clone
-        //this.podcastsLists.pdcPreviewItem = cloneItem(item)
-
+        //this.setEpiListVisible(false)        
         //// prevent first switch to view visible when not initialized
         ////$('#wrp_pdc_st_list').removeClass('ptransparent')
     }
