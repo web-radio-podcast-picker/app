@@ -197,7 +197,8 @@ class PodcastsLists {
     // open episods list
     clickOpenEpiList(e) {
         const self = podcasts.podcastsLists
-        if (this.pdcPreviewItem == null) { // better: memorize in the pane (serialization)
+
+        if (this.pdcPreviewItem == null) { // TODO: better: memorize in the pane (serialization)
             this.pdcPreviewItem = podcasts.selection.pdc.item
         }
         const item = this.pdcPreviewItem
@@ -584,7 +585,7 @@ class PodcastsLists {
     }
 
     getAndBuildPdcItems(index) {
-        const sel = podcasts.selection
+        const sel = sclone(podcasts.selection)  // TODO: seems not valid ??? - maybe clone is the sol -
         const langk = sel.lang.item.code
         const tagk = sel.tag.item.name
         const letterk = sel.letter?.item?.name
@@ -592,7 +593,7 @@ class PodcastsLists {
         const item = letterk != null ? sel.letter : sel.tag
         const stores = letterk != null
             ? sel.letter.item.stores
-            : sel.tag.item.stores
+            : sel.tag.item.stores  // TODO: default store ??
 
         const storeIndex = stores[0]
 
@@ -617,7 +618,10 @@ class PodcastsLists {
 
     buildEpiItems(index) {
         const self = podcasts.podcastsLists
+
+        // TODO: pdcPreviewItem is not always valid !
         const item = this.pdcPreviewItem || podcasts.selection.pdc.item //podcasts.selection.pdc.item
+
         var epiItems = {}
         var index = 1
         var prfx = ''

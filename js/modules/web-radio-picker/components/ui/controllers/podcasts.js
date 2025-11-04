@@ -619,12 +619,13 @@ class Podcasts {
                 // hide preview if infos pane is opened
                 infosPane.toggleInfos()
 
+            // ----- AUTO OPEN EPI -----
             if (!this.isEpiListVisible()) {
                 this.setPdcPreviewVisible(true)
                 if (this.selection.epiOpen && this.buildPdcPreviewCount < 1) {
                     //this.selection.epiOpening = true
 
-                    // case on start
+                    // case on start TODO: ?? // why not generalize ???
 
                     if (settings.debug.debug)
                         logger.log('opening epi list')
