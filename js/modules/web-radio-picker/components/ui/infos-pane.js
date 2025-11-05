@@ -111,7 +111,7 @@ You should have received a copy of the GNU General Public License along with thi
             this.lastPdcPreviewVisibleState = podcasts.isPdcPreviewVisible()
             this.lastEpiListVisibleState = podcasts.isEpiListVisible()
 
-            podcasts.setPdcPreviewVisible(false)
+            podcasts.setPdcPreviewVisible(false, true)
 
             $('#opts_wrp_inf').empty()
             this.initInfoPane()
@@ -125,7 +125,10 @@ You should have received a copy of the GNU General Public License along with thi
             if (uiState.currentTab.listId == RadioList_Podcast
                 && !this.lastEpiListVisibleState
             )
-                podcasts.setPdcPreviewVisible(this.lastPdcPreviewVisibleState)
+                podcasts.setPdcPreviewVisible(
+                    this.lastPdcPreviewVisibleState,
+                    true
+                )
             scPane = 'wrp_radio_list'
             rd = uiState.currentRDList_Back
         }
