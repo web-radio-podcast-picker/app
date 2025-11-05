@@ -128,8 +128,10 @@ You should have received a copy of the GNU General Public License along with thi
                         this.lastPdcPreviewVisibleState,
                         true
                     )
-                else
+                else {
                     $('#wrp_radio_list_container').addClass('hidden')
+                    podcasts.setEpiListVisibility(true)
+                }
             }
 
             scPane = 'wrp_radio_list'
