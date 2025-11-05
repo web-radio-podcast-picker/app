@@ -82,10 +82,23 @@ class RadListPathBuilder {
         const $epiBut = this.buildPdcPathButton(Pdc_List_Epi, item.name, $ctxt[0].outerHTML, true, false)
         $p.append($epiBut)
         $epiBut.on('click', e => {
+
+            const $tabChannel = $('#btn_wrp_podcast_pdc')
+            //if ($tabChannel.hasClass('selected'))
+            //$tabChannel.removeClass('selected')
+
+            /*$('#opts_wrp_podcast_pdc').removeClass('hidden')
+            $('#wrp_pdc_epi_list_container').addClass('hidden')
+            $('#opts_wrp_podcast_epi_media').addClass('hidden')*/
+
             const selclone = cloneSelection(item.sel)
             selclone.epi = { item: item }
             selclone.epiOpen = true
             selclone.epiOpening = false
+
+            if (!$tabChannel.hasClass('selected'))
+                $tabChannel.click()
+
             podcasts.changePodcasts(selclone, {
                 onCompleted: () => {
                     //$('#wrp_pdc_prv_em_button').click()     // too early

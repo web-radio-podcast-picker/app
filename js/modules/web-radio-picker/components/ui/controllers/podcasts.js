@@ -41,7 +41,9 @@ class Podcasts {
         pdcSubListId: null,
         epi: null,
         epiSubListId: null,
+        // TODO: is the order to open epi enabled. is setted to false after execution
         epiOpen: false,
+        // TODO: Not usefull ??
         epiOpening: false,
         noPage: 1,
     }
@@ -159,7 +161,7 @@ class Podcasts {
                 break
             case Pdc_List_Pdc:
                 // TODO: ok after startup, no good at startup (current lost)
-                s.epi = null
+                //s.epi = null
                 break
             case Pdc_List_Epi:
                 //s.epi = null
@@ -637,7 +639,7 @@ class Podcasts {
                 infosPane.toggleInfos()
 
             // ----- AUTO OPEN EPI -----
-            if (!this.isEpiListVisible()) {
+            if (true/*!this.isEpiListVisible()*/) {
 
                 this.setPdcPreviewVisible(true)
 
@@ -647,12 +649,18 @@ class Podcasts {
                     ////this.selection.epiOpening = true
                     this.selection.epiOpen = false
 
+                    //$('#opts_wrp_podcast_pdc').removeClass('hidden')
+                    //$('#opts_wrp_podcast_pdc').removeClass('hidden')
+                    ////$('#wrp_pdc_st_list').removeClass('hidden')
+                    //$('#wrp_pdc_st_list_container').removeClass('hidden')
+
                     // case on start TODO: ?? // why not generalize ???
 
                     if (settings.debug.debug)
-                        logger.log('opening epi list')
+                        logger.log('[##] opening epi list')
 
                     this.autoOpenedEpiList = true
+                    // TODO: click fail if epi list was initially visible
                     $('#wrp_pdc_prv_em_button').click()
                 }
             }

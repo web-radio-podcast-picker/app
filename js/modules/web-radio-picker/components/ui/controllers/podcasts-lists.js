@@ -208,7 +208,9 @@ class PodcastsLists {
             $item,
             Pdc_List_Epi,
             name => podcasts.pdcItems[name],
-            (selection, item) => { /*selection.epi = { item: item } */ },
+            (selection, item) => {
+                /*selection.epi = { item: item } */
+            },
             selection => Pdc_List_Epi
             //, true, true
         )
@@ -222,7 +224,10 @@ class PodcastsLists {
             if (epiItem != null) {
                 if (settings.debug.debug)
                     logger.log('[##] auto open epi: ' + epiItem.name)
+
+                // TODO: ------ /!\ here not found if list not visible/constructed --------
                 const $epiItem = $(wrpp.getEpiListItem(epiItem)?.item)
+
                 const $clkb = $epiItem
                     .find('.wrp-list-item-text-container')
                 $clkb.click()
