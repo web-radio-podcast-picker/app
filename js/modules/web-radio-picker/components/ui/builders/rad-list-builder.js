@@ -271,7 +271,7 @@ class RadListBuilder {
                 true
             )
 
-            if (!isCurrent) {
+            if (!o.epi || !isCurrent) {
                 radsItems.setLoadingItem(o, $item)
                 wrpp.clearAppStatus()
                 playEventsHandlers.initAudioSourceHandlers()
