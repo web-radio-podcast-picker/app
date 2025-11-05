@@ -274,6 +274,8 @@ ui = {
     hideError() {
         const $e = $('#err_txt')
         $e.text('')
+        $('#err_holder').addClass('hidden')
+        $('#err_text').addClass('hidden')
     },
 
     showError(messOrEvent, src, line, col, err) {
@@ -301,11 +303,14 @@ ui = {
                 } catch (err) { }
             })
 
-            $('#err_holder')
-                .removeClass('hidden')
+            $('#err_holder').removeClass('hidden')
             const $e = $('#err_txt')
             $e.text(messOrEvent)
             $e.removeClass('hidden')
+            const self = this
+            setTimeout(() => {
+                self.hideError()
+            }, settings.ui.errDisplayTime)
         }
         logger.error(messOrEvent, err)
 
