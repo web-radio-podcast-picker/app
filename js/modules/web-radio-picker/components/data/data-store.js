@@ -7,6 +7,8 @@
 const ST_RadiosLists = 'RadiosLists'
 const ST_UIState = 'UIState'
 
+const DataStoreLogPfx = '[!!] '
+
 class DataStore {
 
     saveDisabled = false
@@ -34,7 +36,7 @@ class DataStore {
         if (this.saveDisabled) return
         try {
             if (settings.debug.info)
-                logger.log('save radio lists')
+                logger.log(DataStoreLogPfx + 'save radio lists')
             if (localStorage === undefined) {
                 if (settings.debug.info)
                     logger.warn('no local storage')
@@ -82,7 +84,7 @@ class DataStore {
         if (this.saveDisabled) return
         try {
             if (settings.debug.info)
-                logger.log('save UI state')
+                logger.log(DataStoreLogPfx + 'save UI state')
             if (localStorage === undefined) {
                 if (settings.debug.info)
                     logger.warn('no local storage')
