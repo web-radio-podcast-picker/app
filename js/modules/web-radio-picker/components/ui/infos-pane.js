@@ -106,7 +106,7 @@ You should have received a copy of the GNU General Public License along with thi
         var rd = null
         if (!$pane.hasClass('hidden')) {
 
-            // is visible
+            // becomes visible
 
             this.lastPdcPreviewVisibleState = podcasts.isPdcPreviewVisible()
             this.lastEpiListVisibleState = podcasts.isEpiListVisible()
@@ -120,15 +120,18 @@ You should have received a copy of the GNU General Public License along with thi
         }
         else {
 
-            // is hidden
+            // becomes hidden
 
-            if (uiState.currentTab.listId == RadioList_Podcast
-                && !this.lastEpiListVisibleState
-            )
-                podcasts.setPdcPreviewVisible(
-                    this.lastPdcPreviewVisibleState,
-                    true
-                )
+            if (uiState.currentTab.listId == RadioList_Podcast) {
+                if (!this.lastEpiListVisibleState)
+                    podcasts.setPdcPreviewVisible(
+                        this.lastPdcPreviewVisibleState,
+                        true
+                    )
+                else
+                    $('#wrp_radio_list_container').addClass('hidden')
+            }
+
             scPane = 'wrp_radio_list'
             rd = uiState.currentRDList_Back
         }
