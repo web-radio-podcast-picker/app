@@ -260,6 +260,7 @@ class RadListBuilder {
 
             const playingState = wrpp.isPlaying(o)
             const isCurrent = playingState.isCurrent
+            const isPaused = playingState.isPaused
 
             // build foldable item + unfold it
             radsItems.buildFoldableItem(
@@ -301,6 +302,12 @@ class RadListBuilder {
             }
 
             else {
+
+                if (isPaused) {
+                    // unpause if current and paused
+                    $('#wrp_btn_pause_onoff').click()
+                }
+
                 // show media view
                 $('#btn_wrp_logo').click()
             }
