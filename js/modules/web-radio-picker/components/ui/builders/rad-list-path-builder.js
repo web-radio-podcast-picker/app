@@ -84,7 +84,7 @@ class RadListPathBuilder {
         $epiBut.on('click', e => {
             const selclone = cloneSelection(item.sel)
             selclone.epi = { item: item }
-            selclone.epiOpen = false
+            selclone.epiOpen = true
             selclone.epiOpening = false
             podcasts.changePodcasts(selclone, {
                 onCompleted: () => {
@@ -126,11 +126,11 @@ class RadListPathBuilder {
             {
                 onCompleted: () => {
                     if (settings.debug.debug)
-                        console.log('## on completed')
+                        console.log('[##] on completed')
 
                     podcasts.openOpts = {
                         onCompleted: () => {
-                            console.error('## RE ON COMPLETED')
+                            console.error('[##] RE ON COMPLETED')
                             restoreSelection(listId, sel)
                         }
                     }

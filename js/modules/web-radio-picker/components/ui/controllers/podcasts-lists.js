@@ -200,6 +200,9 @@ class PodcastsLists {
         const item = this.pdcPreviewItem
         const $item = this.$pdcPreviewItem
 
+        if (settings.debug.debug)
+            console.log('[##] open epi list: ' + item.name)
+
         self.openList(
             e,
             $item,
@@ -218,7 +221,7 @@ class PodcastsLists {
 
             if (epiItem != null) {
                 if (settings.debug.debug)
-                    logger.log('auto open epi: ' + epiItem.name)
+                    logger.log('[##] auto open epi: ' + epiItem.name)
                 const $epiItem = $(wrpp.getEpiListItem(epiItem)?.item)
                 const $clkb = $epiItem
                     .find('.wrp-list-item-text-container')

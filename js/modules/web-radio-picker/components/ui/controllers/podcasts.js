@@ -66,7 +66,9 @@ class Podcasts {
         this.rssParser = new PodcastRSSParser()
 
         $('#wrp_pdc_prv_em_button').on('click', (e) => {
-            podcasts.selection.epiOpen = true
+
+            //TODO podcasts.selection.epiOpen = true
+
             this.podcastsLists.clickOpenEpiList(e)
         })
 
@@ -170,8 +172,9 @@ class Podcasts {
     getMoreFocusableListId() {
         const selection = this.selection
         const slistId =
-            /*(selection.epi != null ? Pdc_List_Epi : null)
-            || */(selection.pdc != null ? Pdc_List_Pdc : null)
+            //(selection.epi != null ? Pdc_List_Epi : null) ||
+
+            (selection.pdc != null ? Pdc_List_Pdc : null)
             || (selection.letter != null ? Pdc_List_Letter : null)
             || (selection.tag != null ? Pdc_List_Tag : null)
             || (selection.lang != null ? Pdc_List_Lang : null)
@@ -207,7 +210,7 @@ class Podcasts {
 
             if (settings.debug.debug) {
                 //console.clear()
-                console.log('## ---------------SELECT TAB----------- targetListId=' + targetListId)
+                console.log('[##] ---------------SELECT TAB----------- targetListId=' + targetListId)
             }
 
             this.updateSelectionSubListsIds(selection)
@@ -283,7 +286,7 @@ class Podcasts {
     changePodcasts(selection, openOpts) {
         this.openOpts = openOpts
         this.selection = selection
-        this.resetInitializedLists()
+        this.resetInitializedLists()        // TODO: cache management
         const $pdcBut = $('#btn_wrp_podcast')
         if ($pdcBut.text() == '<<<')        // TODO : improve this way of checking
             $pdcBut.click()
@@ -436,8 +439,8 @@ class Podcasts {
 
         if (settings.debug.debug) {
             //console.clear()
-            console.log('## open podcasts')
-            console.log('## ' + JSON.stringify(this.openOpts, null, 2))
+            console.log('[##] open podcasts')
+            console.log('[##] ', this.openOpts)
         }
 
         if (this.initializingPodcasts == null)
@@ -555,7 +558,11 @@ class Podcasts {
             console.log('setEpiListVisible= ' + isVisible + ' -- initializingPodcasts= ' + this.initializingPodcasts)
 
         if (!isVisible && this.initializingPodcasts < -2) {
-            this.selection.epiOpen = false
+
+            // TODO -------------------------------
+            // TODO this.selection.epiOpen = false
+            // TODO -------------------------------
+
             settings.dataStore.saveUIState()
         }
     }
@@ -582,7 +589,8 @@ class Podcasts {
         $('#wrp_pdc_epim_name').html(title)
         $('#wrp_pdc_epim_desc').addClass('hidden')
 
-        this.selection.epiOpen = true
+        // TODO this.selection.epiOpen = true
+
         //this.selection.epiOpening = false
         settings.dataStore.saveUIState()
     }
@@ -630,9 +638,14 @@ class Podcasts {
 
             // ----- AUTO OPEN EPI -----
             if (!this.isEpiListVisible()) {
+
                 this.setPdcPreviewVisible(true)
-                if (this.selection.epiOpen && this.buildPdcPreviewCount < 1) {
-                    //this.selection.epiOpening = true
+
+                if (this.selection.epiOpen
+
+                    /*&& this.buildPdcPreviewCount < 1*/) {
+                    ////this.selection.epiOpening = true
+                    this.selection.epiOpen = false
 
                     // case on start TODO: ?? // why not generalize ???
 
