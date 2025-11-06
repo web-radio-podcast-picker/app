@@ -819,6 +819,9 @@ h1 {
 
 .wrp-item-timeline-box {
     border: #A0DDffDD solid 2px;
+    max-width: 80%;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .wrp-item-timeline-box-cursor {
