@@ -221,7 +221,9 @@ class PodcastsLists {
 
         // epi item
 
-        const epiItem = self.podcasts.selection.epi?.item
+        //const epiItem = self.podcasts.selection.epi?.item
+        const epiItem = uiState.currentRDItem
+
         const paneId = 'opts_wrp_podcast_epi'
         const $pane = $('#' + paneId)
         // restore selection in view
