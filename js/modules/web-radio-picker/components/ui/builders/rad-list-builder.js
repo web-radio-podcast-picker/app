@@ -258,7 +258,7 @@ class RadListBuilder {
         const channel = ui.getCurrentChannel()
         if (channel != null && channel !== undefined) {
 
-            const playingState = wrpp.isPlaying(o)
+            const playingState = wrpp.playingState(o)
             const isCurrent = playingState.isCurrent
             const isPaused = playingState.isPaused
 
@@ -270,6 +270,10 @@ class RadListBuilder {
                 {},
                 true
             )
+
+            if (o.epi) {
+                podcasts.podcastsLists.updateEpiItemView(o, $item)
+            }
 
             if (!o.epi || !isCurrent) {
                 radsItems.setLoadingItem(o, $item)

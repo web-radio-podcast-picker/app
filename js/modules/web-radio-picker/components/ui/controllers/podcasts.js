@@ -29,6 +29,9 @@ class Podcasts {
     initializedLists = {}
     initializingPodcasts = null
 
+    // indicates should open selection.epi on 'open epi list'
+    autoOpenedEpiList = false
+
     // selection values
     selection = {
         lang: null,
@@ -435,12 +438,9 @@ class Podcasts {
     }
 
     // restore from ui state
-    openPodcasts(selection/*, openOpts*/) {
-
-        /*this.openOpts = openOpts*/
+    openPodcasts(selection) {
 
         if (settings.debug.debug) {
-            //console.clear()
             console.log('[##] open podcasts')
             console.log('[##] ', this.openOpts)
         }
@@ -470,8 +470,7 @@ class Podcasts {
         sel.pdc = { item: item }
 
         // any clone here prevent any item update after loading! (buildPdcPreview)
-        const cItem = item //cloneItem(item)   // fix sel in item
-        //cItem.sel = cloneSelection(cItem.sel)
+        const cItem = item
 
         // TODO: avoid ops after receipt if other request started after this one
         remoteDataStore.getPodcastChannelRss(

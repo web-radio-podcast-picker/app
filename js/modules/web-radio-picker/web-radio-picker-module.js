@@ -581,7 +581,7 @@ class WebRadioPickerModule extends ModuleBase {
             ;
     }
 
-    isPlaying(item) {
+    playingState(item) {
         const isCurrent = this.compareItems(
             uiState.currentRDItem,
             item)
