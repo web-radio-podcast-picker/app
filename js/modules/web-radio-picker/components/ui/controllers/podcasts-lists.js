@@ -235,6 +235,10 @@ class PodcastsLists {
                 const isCurrent = wrpp.playingState(epiItem).isCurrent
 
                 if (isCurrent) {
+
+                    // late update ----- UPDATE COZ DOM CHANGED
+                    radsItems.$loadingRDItem = $item
+
                     if (!$item.hasClass('wrp-list-item-foldable')) {
                         // re-unfold the items and uptate item view
                         this.selectEpiItem(Pdc_List_Epi, paneId, epiItem, $item, true)
