@@ -66,13 +66,13 @@ class Db {
 
         // favorites : items without key
         const favoritesStore = db.createObjectStore(
-            this.itemsListsStoreName, { keyPath: 'storeKey' })
+            this.itemsListsStoreName, { keyPath: StoreKeyName })
         // properties : items by key 'key' (key==name+url)
         const propertiesStoreName = db.createObjectStore(
-            this.propertiesStoreName, { keyPath: 'key' })
+            this.propertiesStoreName, { keyPath: StoreObjectKeyName })
         // uistate : items by key 'storeKey'
         const uiStateStore = db.createObjectStore(
-            this.uiStateStoreName, { keyPath: 'storeKey' })
+            this.uiStateStoreName, { keyPath: StoreKeyName })
 
         favoritesStore.transaction.oncomplete = e => checkReady()
         propertiesStoreName.transaction.oncomplete = e => checkReady()

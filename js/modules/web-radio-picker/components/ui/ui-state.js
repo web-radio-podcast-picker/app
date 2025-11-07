@@ -168,7 +168,8 @@ class UIState {
 
     getCurrentUIState() {
 
-        this.currentRDItem.ref.currentRDList.$item = null
+        if (this.currentRDItem!=null)
+            this.currentRDItem.ref.currentRDList.$item = null
 
         const r = {
             storeKey: 'uiState',

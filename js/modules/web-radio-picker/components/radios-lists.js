@@ -28,7 +28,7 @@ class RadiosLists {
     }
 
     init() {
-        this.lists['storeKey'] = 'itemsLists'
+        this.lists[StoreKeyName] = 'itemsLists'
     }
 
     addList(listId, name, isSystem) {
@@ -317,7 +317,7 @@ class RadiosLists {
         const t = {}
         const names = Object.keys(lists)
         names.forEach(name => {
-            if (name != 'storeKey') {
+            if (name != StoreKeyName) {
                 const srcList = lists[name]
                 t[name] = srcList
                 const substItems = []
