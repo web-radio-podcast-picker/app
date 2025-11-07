@@ -7,7 +7,7 @@
 const ST_RadiosLists = 'RadiosLists'
 const ST_UIState = 'UIState'
 
-const DataStoreLogPfx = '[!!] '
+const DataStoreLogPfx = '[--] '
 
 class DataStore {
 
@@ -18,15 +18,18 @@ class DataStore {
     saveDisabled = false
 
     rlDebouncer = new Debouncer('dbcSaveRadiosLists',
-        settings.dataStore.minSpanMs,
-        settings.dataStore.delayExec
+        settings.db.minSpanMs,
+        settings.db.delayExec
     )
     uisDebouncer = new Debouncer('dbcSaveUIState',
-        settings.dataStore.minSpanMs,
-        settings.dataStore.delayExec)
+        settings.db.minSpanMs,
+        settings.db.delayExec)
 
-    constructor() {
-
+    init(onDbReady) {
+        // init db
+        this.db = new Db(onDbReady)
+        this.db.openDb()
+        if (settings.debug.debug) window.db = this.db
     }
 
     saveAll() {
@@ -34,14 +37,29 @@ class DataStore {
         this.saveUIState()
     }
 
-    loadRadiosLists() {
-        if (localStorage === undefined) return
-        const str = localStorage.getItem(ST_RadiosLists)
-        if (str == null) {
-            this.#dbcSaveRadiosLists()
-            return
+    loadRadiosLists(onLoaded) {
+
+        // local storage
+        if (settings.dataStore.useLocalStorage) {
+            if (localStorage === undefined) return
+            const str = localStorage.getItem(ST_RadiosLists)
+            if (str == null) {
+                this.#dbcSaveRadiosLists()
+                return
+            }
+            radiosLists.fromJSON(str)
         }
-        radiosLists.fromJSON(str)
+
+        // db
+        this.db.loadItemsLists(o => {
+            if (o != null)
+                radiosLists.fromObject(o)
+            else {
+                logger.error('favorites not found')
+            }
+            onLoaded()
+        })
+
     }
 
     saveRadiosLists() {
@@ -53,6 +71,8 @@ class DataStore {
         try {
             if (settings.debug.info)
                 logger.log(DataStoreLogPfx + 'save radio lists')
+
+            // local storage
             if (localStorage === undefined) {
                 if (settings.debug.info)
                     logger.warn(DataStoreLogPfx + 'no local storage')
@@ -60,6 +80,11 @@ class DataStore {
             }
             const str = radiosLists.toJSON()
             localStorage.setItem(ST_RadiosLists, str)
+
+            // db
+            radiosLists.init()
+            this.db.saveItemsLists(radiosLists.lists)
+
         } catch (err) {
             this.saveDisabled = true
             ui.showError('save lists failed', null, null, null, err)
@@ -67,19 +92,13 @@ class DataStore {
     }
 
     initUIStateStorage(initFunc) {
-
-        // init db
-        this.db = new Db()
-        this.db.openDb()
-        if (settings.debug.debug) window.db = this.db
-
         // create storage if missing
         if (localStorage === undefined) return
         const str = localStorage.getItem(ST_UIState)
         if (str != null) return false // storage exists. do nothing
         initFunc()
         if (settings.debug.debug)
-            logger.log('UIState local storage initialized')
+            logger.log(DataStoreLogPfx + 'UIState local storage initialized')
         return true
     }
 
@@ -94,6 +113,7 @@ class DataStore {
     }
 
     loadUIState() {
+
         if (localStorage === undefined) return
         const str = localStorage.getItem(ST_UIState)
         if (str == null) {
