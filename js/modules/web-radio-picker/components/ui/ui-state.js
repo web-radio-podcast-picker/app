@@ -168,7 +168,7 @@ class UIState {
 
     getCurrentUIState() {
 
-        if (this.currentRDItem!=null)
+        if (this.currentRDItem != null)
             this.currentRDItem.ref.currentRDList.$item = null
 
         const r = {
@@ -241,7 +241,11 @@ class UIState {
 
     fromJSON(s) {
         const state = JSON.parse(s)
-        this.restoreUIState(state)
+        this.fromObject(state)
+    }
+
+    fromObject(o) {
+        this.restoreUIState(o)
     }
 
     // ----- UI states updaters -----
