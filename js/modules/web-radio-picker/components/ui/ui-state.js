@@ -169,6 +169,7 @@ class UIState {
     getCurrentUIState() {
 
         const r = {
+            storeKey: 'uistate',
             currentRDList: {
                 listId: this.currentRDList?.listId || null,
                 name: this.currentRDList?.name || null
@@ -191,7 +192,7 @@ class UIState {
             else return null
         })
 
-        return str
+        return { object: r, json: str }
     }
 
     restoreUIState(state) {
@@ -230,7 +231,7 @@ class UIState {
     }
 
     toJSON() {
-        const state = this.getCurrentUIState()
+        const state = this.getCurrentUIState().json
         ////return JSON.stringify(state)
         return state
     }

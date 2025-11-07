@@ -11,6 +11,10 @@ const DataStoreLogPfx = '[!!] '
 
 class DataStore {
 
+    /**
+     * @type {Db}
+     */
+    db = null
     saveDisabled = false
 
     rlDebouncer = new Debouncer('dbcSaveRadiosLists',
@@ -63,6 +67,13 @@ class DataStore {
     }
 
     initUIStateStorage(initFunc) {
+
+        // init db
+        this.db = new Db()
+        this.db.openDb()
+        if (settings.debug.debug) window.db = this.db
+
+        // create storage if missing
         if (localStorage === undefined) return
         const str = localStorage.getItem(ST_UIState)
         if (str != null) return false // storage exists. do nothing
@@ -101,6 +112,8 @@ class DataStore {
         try {
             if (settings.debug.info)
                 logger.log(DataStoreLogPfx + 'save UI state')
+
+            // local storage
             if (localStorage === undefined) {
                 if (settings.debug.info)
                     logger.warn(DataStoreLogPfx + 'no local storage')
@@ -108,6 +121,10 @@ class DataStore {
             }
             const str = uiState.toJSON()
             localStorage.setItem(ST_UIState, str)
+
+            // db
+            this.db.saveUIState(uiState.getCurrentUIState().object)
+
         } catch (err) {
             this.saveDisabled = true
             ui.showError('save UI failed', null, null, null, err)
