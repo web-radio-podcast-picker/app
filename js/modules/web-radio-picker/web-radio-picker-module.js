@@ -103,6 +103,11 @@ var podcasts = null
  */
 var remoteDataStore = null
 
+/**
+ * @type {PropertiesStore}
+ */
+var propertiesStore = null
+
 //#endregion
 
 // module: web radio picker
@@ -194,6 +199,7 @@ class WebRadioPickerModule extends ModuleBase {
             }
         )
 
+        propertiesStore = new PropertiesStore()
         listsBuilder = new ListsBuilder()
         radListBuilder = new RadListBuilder()
         playHistory = new PlayHistory()
@@ -598,6 +604,15 @@ class WebRadioPickerModule extends ModuleBase {
             isCurrent: isCurrent,
             isPlaying: isCurrent && !isPaused
         };
+    }
+
+    /**
+     * check if a playable item key is correclty initialized. fix it if possible
+     * @param {Object} item 
+     */
+    checkItemKey(item) {
+        if (item.key) return
+        item.key = item.name + item.url
     }
 
     toArtistFromtreamingExclusive(r) {

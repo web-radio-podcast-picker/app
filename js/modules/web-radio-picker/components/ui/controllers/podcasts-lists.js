@@ -311,12 +311,14 @@ class PodcastsLists {
         item.subText2 = subText2
         item.metadata.statusText = this.getEpiItemPlayStateText(item)
         radsItems.updateRadItemView(item, $item)
+        propertiesStore.save(item)
     }
 
     getEpiItemPlayStateText(item) {
         const status = this.getStatusText(item)
         if (item.metadata)
             item.metadata.statusText = status
+        propertiesStore.save(item)
         //item.metadata?.statusText
         return status
     }

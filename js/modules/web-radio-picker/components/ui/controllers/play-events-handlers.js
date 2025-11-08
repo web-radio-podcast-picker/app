@@ -151,6 +151,7 @@ class PlayEventsHandlers {
                 podcasts.podcastsLists.updateEpiItemView(item, cur.$item)
             }
 
+            propertiesStore.save(o)
             playHistory.setupAddToHistoryTimer(o)
         }
     }

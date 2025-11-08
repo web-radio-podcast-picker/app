@@ -80,12 +80,18 @@ class Db {
     }
 
     /**
+     * save properties
+     * @param {Object} o 
+     */
+    saveProperties(o) {
+        this.#saveSingleObject(o, this.propertiesStoreName, 'properties')
+    }
+
+    /**
      * save items lists
      * @param {Object} o 
      */
     saveItemsLists(o) {
-
-        //radiosLists.purgeItems()
 
         // fix bad datas
         if (o.currentRDItem &&
@@ -117,6 +123,14 @@ class Db {
                     logger.log(DbLogPfx + label + ' saved in db')
             }
         }
+    }
+
+    /**
+     * load properties
+     * @param {Function} onLoaded 
+     */
+    loadProperties(onLoaded) {
+        this.#loadSingleObject(this.propertiesStoreName, 'properties', 'properties', onLoaded)
     }
 
     /**
