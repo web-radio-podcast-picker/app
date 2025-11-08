@@ -203,7 +203,7 @@ class RadiosLists {
         // remove history
         delete o[RadioList_History]
 
-        const names = Object.keys(o)
+        const names = Object.keys(o).filter(x => x != StoreKeyName)
         if (settings.debug.info) {
             logger.log('favorites lists: ' + names.length)
             logger.log(names.join(','))
