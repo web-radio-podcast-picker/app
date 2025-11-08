@@ -39,6 +39,8 @@ find license and copyright informations in files /COPYRIGHT and /LICENCE
     position: relative;
     top: 0.8em;
     z-index: 100;
+    /* display: inline-block; */
+    justify-self: center;
 }
 
 #err_txt {
