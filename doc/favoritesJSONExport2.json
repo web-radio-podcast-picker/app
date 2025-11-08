@@ -1,15 +1,200 @@
 {
+  "storeKey": "itemsLists",
   "History": {
     "listId": "List",
     "name": "History",
     "items": [
       {
         "code": null,
-        "name": "Saison 9 - épisode 4 : Trois légendes urbaines sud-coréenne",
+        "name": "Adhan, le chant des Muezzins",
         "qty": "",
-        "subText2": "00:13 / 14:07",
-        "subText": "October 17, 2025",
-        "url": "https://audio.audiomeans.fr/file/uQzNZnSuzb/fbbbeb07-cf7b-4139-b769-82057d1dbcc9.mp3?_=1756114053",
+        "subText2": "02:38 / 01:02:06",
+        "subText": "March 31, 2025",
+        "url": "https://dts.podtrac.com/redirect.mp3/audio.ausha.co/odGwUN1m6O8B.mp3?t=1743434372",
+        "sel": {
+          "lang": {
+            "item": {
+              "code": "fra",
+              "name": "French",
+              "qty": 64492
+            }
+          },
+          "langSubListId": "tag",
+          "tag": {
+            "item": {
+              "code": null,
+              "name": "documentary",
+              "qty": 213
+            }
+          },
+          "tagSubListId": "letter",
+          "letter": {
+            "item": {
+              "code": null,
+              "name": "T",
+              "qty": 11,
+              "stores": [
+                1
+              ]
+            }
+          },
+          "letterSubListId": "pdc",
+          "pdc": {
+            "item": {
+              "code": null,
+              "name": "Transmission",
+              "qty": 38,
+              "url": "https://feed.ausha.co/bYrWFLRaGLEB",
+              "store": 1,
+              "page": 1,
+              "sel": null,
+              "selCnt": 1,
+              "id": "Transmission",
+              "favLists": [],
+              "metadata": {
+                "statusText": ""
+              },
+              "pdc": true,
+              "rss": null,
+              "logo": "https://image.ausha.co/Nj7zt2QMrAxMqHjMWzbOWoG49noXqIQyF4kuD1Vs_1400x1400.jpeg?t=1568889519",
+              "subText": "Collectif Transmission",
+              "pItem": null
+            }
+          },
+          "pdcSubListId": "epi",
+          "epi": {
+            "item": {
+              "code": null,
+              "name": "6. Le jour où Donald Trump a perdu la Maison-Blanche, Bible à la main",
+              "qty": "",
+              "subText2": "00:06 / 22:17",
+              "subText": "June 6, 2025",
+              "url": "https://audio.audiomeans.fr/file/uQzNZnSuzb/5c777356-d06c-4d6c-bd85-eb4d63e2eeaa.mp3?_=1749117611",
+              "sel": null,
+              "id": "6. Le jour où Donald Trump a perdu la Maison-Blanche, Bible à la main",
+              "favLists": [],
+              "logo": "https://static.audiomeans.fr/img/episode/5af24175-7cbc-4800-bd2c-6fc05b74da55.jpg",
+              "metadata": {
+                "statusText": "pause",
+                "playState": {
+                  "statusText": "pause",
+                  "loadingState": "pauseStateChanged",
+                  "playingState": {
+                    "isPaused": true,
+                    "isCurrent": true,
+                    "isPlaying": false
+                  },
+                  "events": {
+                    "connecting": true,
+                    "noConnection": false,
+                    "connected": true,
+                    "ended": false,
+                    "playing": true,
+                    "pauseStateChanged": true
+                  }
+                },
+                "startTime": 1762560846970,
+                "currentTime": {
+                  "h": 0,
+                  "m": 0,
+                  "s": 6,
+                  "error": false,
+                  "isInfinite": false
+                },
+                "duration": {
+                  "h": 0,
+                  "m": 22,
+                  "s": 17,
+                  "error": false,
+                  "isInfinite": false
+                },
+                "endTime": 1762560853496
+              },
+              "pdc": true,
+              "epi": true,
+              "pubDate": "Fri, 06 Jun 2025 00:10:00 GMT",
+              "groups": [],
+              "ref": {
+                "currentRDList": {
+                  "listId": "Podcast",
+                  "name": "epi",
+                  "$item": null
+                },
+                "currentTab": {
+                  "listId": "Podcast",
+                  "tabId": "btn_wrp_podcast"
+                }
+              },
+              "pItem": null
+            }
+          },
+          "epiSubListId": null,
+          "noPage": 1,
+          "epiOpen": false,
+          "epiOpening": true
+        },
+        "id": "Adhan, le chant des Muezzins",
+        "favLists": [],
+        "logo": "https://image.ausha.co/z00D5kJGh3979W5R3x7K4VqeQs7BaIitjgYkgwoL_1400x1400.jpeg?t=1743434594",
+        "metadata": {
+          "statusText": "playing",
+          "playState": {
+            "statusText": "playing",
+            "loadingState": "playing",
+            "playingState": {
+              "isPaused": false,
+              "isCurrent": true,
+              "isPlaying": true
+            },
+            "events": {
+              "connecting": true,
+              "noConnection": false,
+              "connected": true,
+              "ended": false,
+              "playing": true,
+              "pauseStateChanged": true
+            }
+          },
+          "startTime": 1762561008525,
+          "currentTime": {
+            "h": 0,
+            "m": 2,
+            "s": 38,
+            "error": false,
+            "isInfinite": false
+          },
+          "duration": {
+            "h": 1,
+            "m": 2,
+            "s": 6,
+            "error": false,
+            "isInfinite": false
+          }
+        },
+        "pdc": true,
+        "epi": true,
+        "pubDate": "Mon, 31 Mar 2025 15:23:13 +0000",
+        "groups": [],
+        "ref": {
+          "currentRDList": {
+            "listId": "Podcast",
+            "name": "epi",
+            "$item": null
+          },
+          "currentTab": {
+            "listId": "Podcast",
+            "tabId": "btn_wrp_podcast"
+          }
+        },
+        "listenDate": 1762561018530
+      },
+      {
+        "code": null,
+        "name": "2. Meurtre en haute mer : qui se cache derrière le naufrage du voilier \"l'Intermezzo\" ?",
+        "qty": "",
+        "subText2": "00:46 / 01:12:09",
+        "subText": "July 15, 2020",
+        "url": "https://audio.audiomeans.fr/file/uQzNZnSuzb/7f7f58b8-c4f9-462e-b4f3-8a7fcef65741.mp3?_=1609927538",
         "sel": {
           "lang": {
             "item": {
@@ -35,22 +220,22 @@
           "pdc": {
             "item": {
               "code": null,
-              "name": "Feu de camp",
-              "qty": 146,
-              "url": "https://feeds.audiomeans.fr/feed/278c8c9f-2297-44cc-8674-65e285cb80c1.xml",
+              "name": "Crimes solaires",
+              "qty": 8,
+              "url": "https://feeds.audiomeans.fr/feed/bd247514-2589-475b-bd92-e77947be1108.xml",
               "store": 1,
               "page": 1,
               "sel": null,
               "selCnt": 1,
-              "id": "Feu de camp",
+              "id": "Crimes solaires",
               "favLists": [],
               "metadata": {
                 "statusText": ""
               },
               "pdc": true,
               "rss": null,
-              "logo": "https://static.audiomeans.fr/img/podcast/2bee1e6b-2048-4338-bca8-c77b04a328d0.jpg",
-              "subText": "NRJ France",
+              "logo": "https://static.audiomeans.fr/img/podcast/8956266c-30bd-46cf-94ac-79d2009f2308.jpg",
+              "subText": "RTL",
               "pItem": null
             }
           },
@@ -82,11 +267,9 @@
           "epiOpen": false,
           "epiOpening": false
         },
-        "id": "Saison 9 - épisode 4 : Trois légendes urbaines sud-coréenne",
-        "favLists": [
-          "History"
-        ],
-        "logo": "https://static.audiomeans.fr/img/episode/6552a32f-bfb5-4ba5-ae72-7b0164bc433c.jpg",
+        "id": "2. Meurtre en haute mer : qui se cache derrière le naufrage du voilier \"l'Intermezzo\" ?",
+        "favLists": [],
+        "logo": "https://static.audiomeans.fr/img/podcast/8956266c-30bd-46cf-94ac-79d2009f2308.jpg",
         "metadata": {
           "statusText": "playing",
           "playState": {
@@ -106,25 +289,25 @@
               "pauseStateChanged": true
             }
           },
-          "startTime": 1762559915973,
+          "startTime": 1762560957962,
           "currentTime": {
             "h": 0,
             "m": 0,
-            "s": 13,
+            "s": 46,
             "error": false,
             "isInfinite": false
           },
           "duration": {
-            "h": 0,
-            "m": 14,
-            "s": 7,
+            "h": 1,
+            "m": 12,
+            "s": 9,
             "error": false,
             "isInfinite": false
           }
         },
         "pdc": true,
         "epi": true,
-        "pubDate": "Fri, 17 Oct 2025 00:21:00 GMT",
+        "pubDate": "Wed, 15 Jul 2020 10:00:00 GMT",
         "groups": [],
         "ref": {
           "currentRDList": {
@@ -137,13 +320,13 @@
             "tabId": "btn_wrp_podcast"
           }
         },
-        "listenDate": 1762559925179
+        "listenDate": 1762560967967
       },
       {
         "code": null,
         "name": "La petite Sallie 🎀 9.1",
         "qty": "",
-        "subText2": "00:13 / 21:49",
+        "subText2": "01:02 / 21:49",
         "subText": "April 27, 2021",
         "url": "https://audio.audiomeans.fr/file/uQzNZnSuzb/2925b1e2-c7f5-4ae8-b053-02958c9aca15.mp3?_=1723634142",
         "sel": {
@@ -222,11 +405,11 @@
               "pauseStateChanged": true
             }
           },
-          "startTime": 1762559310670,
+          "startTime": 1762560894371,
           "currentTime": {
             "h": 0,
-            "m": 0,
-            "s": 13,
+            "m": 1,
+            "s": 2,
             "error": false,
             "isInfinite": false
           },
@@ -245,7 +428,7 @@
         "ref": {
           "currentRDList": {
             "listId": "List",
-            "name": "History",
+            "name": "----- Podcasts ------",
             "$item": null
           },
           "currentTab": {
@@ -253,15 +436,15 @@
             "tabId": "btn_wrp_play_list"
           }
         },
-        "listenDate": 1762559312683
+        "listenDate": 1762560896691
       },
       {
         "code": null,
-        "name": "Jeune, démocrate et musulman : qui est Zohran Mamdani, le nouveau maire anti-Trump de New-York ?",
+        "name": "Bonus : Visite chez Noma avec Charlotte Juillard",
         "qty": "",
-        "subText2": "00:53 / 01:03:04",
-        "subText": "November 7, 2025",
-        "url": "https://audio.audiomeans.fr/file/uQzNZnSuzb/2f23a124-d77c-424f-9743-0deed2db267e.mp3?_=1762536783",
+        "subText2": "00:27 / 13:27",
+        "subText": "September 19, 2024",
+        "url": "https://track.podcastics.com/196/312222.mp3",
         "sel": {
           "lang": {
             "item": {
@@ -282,8 +465,8 @@
           "letter": {
             "item": {
               "code": null,
-              "name": "U",
-              "qty": 2,
+              "name": "T",
+              "qty": 11,
               "stores": [
                 1
               ]
@@ -293,22 +476,22 @@
           "pdc": {
             "item": {
               "code": null,
-              "name": "Une lettre d'Amérique",
-              "qty": 101,
-              "url": "https://feeds.audiomeans.fr/feed/d9f89da8-ed1c-4b97-abe8-597fabb10eff.xml",
+              "name": "Travail soigné",
+              "qty": 33,
+              "url": "https://feeds.podcastics.com/podcastics/podcasts/rss/196_398767ee4c42f820d24066ebc859a1a5.rss",
               "store": 1,
               "page": 1,
               "sel": null,
               "selCnt": 1,
-              "id": "Une lettre d'Amérique",
+              "id": "Travail soigné",
               "favLists": [],
               "metadata": {
                 "statusText": ""
               },
               "pdc": true,
               "rss": null,
-              "logo": "https://static.audiomeans.fr/img/podcast/cdf1f21c-e0b4-4c01-a0b4-d7115186a063.jpg",
-              "subText": "RTL",
+              "logo": "https://medias.podcastics.com/podcastics/podcasts/artwork/travail-soigne.png.5c28712221cd95b8b863295933e1c904.png",
+              "subText": "stereolab",
               "pItem": null
             }
           },
@@ -319,11 +502,9 @@
           "epiOpen": false,
           "epiOpening": true
         },
-        "id": "Jeune, démocrate et musulman : qui est Zohran Mamdani, le nouveau maire anti-Trump de New-York ?",
-        "favLists": [
-          "History"
-        ],
-        "logo": "https://static.audiomeans.fr/img/episode/2f008391-be8d-40c4-b566-54f187055ca2.jpg",
+        "id": "Bonus : Visite chez Noma avec Charlotte Juillard",
+        "favLists": [],
+        "logo": "https://medias.podcastics.com/podcastics/podcasts/artwork/travail-soigne.png.5c28712221cd95b8b863295933e1c904.png",
         "metadata": {
           "statusText": "playing",
           "playState": {
@@ -343,17 +524,374 @@
               "pauseStateChanged": true
             }
           },
-          "startTime": 1762558342998,
+          "startTime": 1762560815712,
           "currentTime": {
             "h": 0,
             "m": 0,
-            "s": 53,
+            "s": 27,
+            "error": false,
+            "isInfinite": false
+          },
+          "duration": {
+            "h": 0,
+            "m": 13,
+            "s": 27,
+            "error": false,
+            "isInfinite": false
+          }
+        },
+        "pdc": true,
+        "epi": true,
+        "pubDate": "Thu, 19 Sep 2024 05:20:00 +0000",
+        "groups": [],
+        "ref": {
+          "currentRDList": {
+            "listId": "Podcast",
+            "name": "epi",
+            "$item": null
+          },
+          "currentTab": {
+            "listId": "Podcast",
+            "tabId": "btn_wrp_podcast"
+          }
+        },
+        "listenDate": 1762560825712
+      },
+      {
+        "code": null,
+        "name": "Sabrina, pâtissière : “Bien faire son travail, c’est aussi prendre le temps”",
+        "qty": "",
+        "subText2": "00:52 / 01:03:55",
+        "subText": "December 3, 2024",
+        "url": "https://track.podcastics.com/196/327746.mp3",
+        "sel": {
+          "lang": {
+            "item": {
+              "code": "fra",
+              "name": "French",
+              "qty": 64492
+            }
+          },
+          "langSubListId": "tag",
+          "tag": {
+            "item": {
+              "code": null,
+              "name": "documentary",
+              "qty": 213
+            }
+          },
+          "tagSubListId": "letter",
+          "letter": {
+            "item": {
+              "code": null,
+              "name": "T",
+              "qty": 11,
+              "stores": [
+                1
+              ]
+            }
+          },
+          "letterSubListId": "pdc",
+          "pdc": {
+            "item": {
+              "code": null,
+              "name": "Travail soigné",
+              "qty": 33,
+              "url": "https://feeds.podcastics.com/podcastics/podcasts/rss/196_398767ee4c42f820d24066ebc859a1a5.rss",
+              "store": 1,
+              "page": 1,
+              "sel": null,
+              "selCnt": 1,
+              "id": "Travail soigné",
+              "favLists": [],
+              "metadata": {
+                "statusText": ""
+              },
+              "pdc": true,
+              "rss": null,
+              "logo": "https://medias.podcastics.com/podcastics/podcasts/artwork/travail-soigne.png.5c28712221cd95b8b863295933e1c904.png",
+              "subText": "stereolab",
+              "pItem": null
+            }
+          },
+          "pdcSubListId": "epi",
+          "epi": null,
+          "epiSubListId": null,
+          "noPage": 1,
+          "epiOpen": false,
+          "epiOpening": true
+        },
+        "id": "Sabrina, pâtissière : “Bien faire son travail, c’est aussi prendre le temps”",
+        "favLists": [],
+        "logo": "https://medias.podcastics.com/podcastics/podcasts/artwork/travail-soigne.png.5c28712221cd95b8b863295933e1c904.png",
+        "metadata": {
+          "statusText": "playing",
+          "playState": {
+            "statusText": "playing",
+            "loadingState": "playing",
+            "playingState": {
+              "isPaused": false,
+              "isCurrent": true,
+              "isPlaying": true
+            },
+            "events": {
+              "connecting": true,
+              "noConnection": false,
+              "connected": true,
+              "ended": false,
+              "playing": true,
+              "pauseStateChanged": true
+            }
+          },
+          "startTime": 1762560761631,
+          "currentTime": {
+            "h": 0,
+            "m": 0,
+            "s": 52,
             "error": false,
             "isInfinite": false
           },
           "duration": {
             "h": 1,
             "m": 3,
+            "s": 55,
+            "error": false,
+            "isInfinite": false
+          }
+        },
+        "pdc": true,
+        "epi": true,
+        "pubDate": "Tue, 03 Dec 2024 06:30:00 +0000",
+        "groups": [],
+        "ref": {
+          "currentRDList": {
+            "listId": "Podcast",
+            "name": "epi",
+            "$item": null
+          },
+          "currentTab": {
+            "listId": "Podcast",
+            "tabId": "btn_wrp_podcast"
+          }
+        },
+        "listenDate": 1762560771369
+      },
+      {
+        "code": null,
+        "name": "Brûlés de l'intérieur, le mystère de la combustion spontanée",
+        "qty": "",
+        "subText2": "00:58 / 07:16",
+        "subText": "January 17, 2025",
+        "url": "https://audio1.redcircle.com/episodes/1ddc8bbb-58a0-4eab-a500-43149a2156ac/stream.mp3",
+        "sel": {
+          "lang": {
+            "item": {
+              "code": "fra",
+              "name": "French",
+              "qty": 64492
+            }
+          },
+          "langSubListId": "tag",
+          "tag": {
+            "item": {
+              "code": null,
+              "name": "documentary",
+              "qty": 213
+            }
+          },
+          "tagSubListId": "letter",
+          "letter": {
+            "item": {
+              "code": null,
+              "name": "L",
+              "qty": 66,
+              "stores": [
+                1
+              ]
+            }
+          },
+          "letterSubListId": "pdc",
+          "pdc": {
+            "item": {
+              "code": null,
+              "name": "LES DOSSIERS DE L'ÉTRANGE",
+              "qty": 16,
+              "url": "https://feeds.redcircle.com/0a58fba4-5f87-463a-999c-81c9f941e96b",
+              "store": 1,
+              "page": 1,
+              "sel": null,
+              "selCnt": 1,
+              "id": "LES DOSSIERS DE L'ÉTRANGE",
+              "favLists": [],
+              "metadata": {
+                "statusText": ""
+              },
+              "pdc": true,
+              "rss": null,
+              "logo": "https://media.redcircle.com/images/2024/12/20/19/b8128d7c-eb4b-43c0-be61-85123d7bfb43_688d_7762e1de-7746-4d1a-96a9-aa976819822a_blob.jpg",
+              "subText": "biboomagazine.net",
+              "pItem": null
+            }
+          },
+          "pdcSubListId": "epi",
+          "epi": null,
+          "epiSubListId": null,
+          "noPage": 1,
+          "epiOpen": false,
+          "epiOpening": true
+        },
+        "id": "Brûlés de l'intérieur, le mystère de la combustion spontanée",
+        "favLists": [],
+        "logo": "https://media.redcircle.com/images/2025/1/17/21/5a0262f9-5546-49a4-8361-d6211a9e4029_ieur_-_le_myst_re_de_la_combustion_spontan_e.jpg",
+        "metadata": {
+          "statusText": "playing",
+          "playState": {
+            "statusText": "playing",
+            "loadingState": "playing",
+            "playingState": {
+              "isPaused": false,
+              "isCurrent": true,
+              "isPlaying": true
+            },
+            "events": {
+              "connecting": true,
+              "noConnection": false,
+              "connected": true,
+              "ended": false,
+              "playing": true,
+              "pauseStateChanged": true
+            }
+          },
+          "startTime": 1762560701217,
+          "currentTime": {
+            "h": 0,
+            "m": 0,
+            "s": 58,
+            "error": false,
+            "isInfinite": false
+          },
+          "duration": {
+            "h": 0,
+            "m": 7,
+            "s": 16,
+            "error": false,
+            "isInfinite": false
+          }
+        },
+        "pdc": true,
+        "epi": true,
+        "pubDate": "Fri, 17 Jan 2025 21:27:05 +0000",
+        "groups": [],
+        "ref": {
+          "currentRDList": {
+            "listId": "Podcast",
+            "name": "epi",
+            "$item": null
+          },
+          "currentTab": {
+            "listId": "Podcast",
+            "tabId": "btn_wrp_podcast"
+          }
+        },
+        "listenDate": 1762560711220
+      },
+      {
+        "code": null,
+        "name": "La Belle de Nainville, la mariée fantôme",
+        "qty": "",
+        "subText2": "00:14 / 08:04",
+        "subText": "October 29, 2025",
+        "url": "https://audio1.redcircle.com/episodes/35463c0d-d5e0-4487-92d6-3d95baa75f97/stream.mp3",
+        "sel": {
+          "lang": {
+            "item": {
+              "code": "fra",
+              "name": "French",
+              "qty": 64492
+            }
+          },
+          "langSubListId": "tag",
+          "tag": {
+            "item": {
+              "code": null,
+              "name": "documentary",
+              "qty": 213
+            }
+          },
+          "tagSubListId": "letter",
+          "letter": {
+            "item": {
+              "code": null,
+              "name": "L",
+              "qty": 66,
+              "stores": [
+                1
+              ]
+            }
+          },
+          "letterSubListId": "pdc",
+          "pdc": {
+            "item": {
+              "code": null,
+              "name": "LES DOSSIERS DE L'ÉTRANGE",
+              "qty": 16,
+              "url": "https://feeds.redcircle.com/0a58fba4-5f87-463a-999c-81c9f941e96b",
+              "store": 1,
+              "page": 1,
+              "sel": null,
+              "selCnt": 1,
+              "id": "LES DOSSIERS DE L'ÉTRANGE",
+              "favLists": [],
+              "metadata": {
+                "statusText": ""
+              },
+              "pdc": true,
+              "rss": null,
+              "logo": "https://media.redcircle.com/images/2024/12/20/19/b8128d7c-eb4b-43c0-be61-85123d7bfb43_688d_7762e1de-7746-4d1a-96a9-aa976819822a_blob.jpg",
+              "subText": "biboomagazine.net",
+              "pItem": null
+            }
+          },
+          "pdcSubListId": "epi",
+          "epi": null,
+          "epiSubListId": null,
+          "noPage": 1,
+          "epiOpen": false,
+          "epiOpening": true
+        },
+        "id": "La Belle de Nainville, la mariée fantôme",
+        "favLists": [],
+        "logo": "https://media.redcircle.com/images/2025/10/29/15/a4dd47ec-0ba6-401b-a224-db0a0f6a38be___trange_-_le_myst_re_de_la_mari_e_fant_me.jpg",
+        "metadata": {
+          "statusText": "playing",
+          "playState": {
+            "statusText": "playing",
+            "loadingState": "playing",
+            "playingState": {
+              "isPaused": false,
+              "isCurrent": true,
+              "isPlaying": true
+            },
+            "events": {
+              "connecting": true,
+              "noConnection": false,
+              "connected": true,
+              "ended": false,
+              "playing": true,
+              "pauseStateChanged": true
+            }
+          },
+          "startTime": 1762560678863,
+          "currentTime": {
+            "h": 0,
+            "m": 0,
+            "s": 14,
+            "error": false,
+            "isInfinite": false
+          },
+          "duration": {
+            "h": 0,
+            "m": 8,
             "s": 4,
             "error": false,
             "isInfinite": false
@@ -361,261 +899,7 @@
         },
         "pdc": true,
         "epi": true,
-        "pubDate": "Fri, 07 Nov 2025 17:29:00 GMT",
-        "groups": [],
-        "ref": {
-          "currentRDList": {
-            "listId": "Podcast",
-            "name": "epi",
-            "$item": null
-          },
-          "currentTab": {
-            "listId": "Viz",
-            "tabId": "btn_wrp_logo"
-          }
-        },
-        "listenDate": 1762558348790
-      },
-      {
-        "code": null,
-        "name": "Saison 9 - épisode 3 : Jeux dangereux Vol.5",
-        "qty": "",
-        "subText2": "00:02 / 11:36",
-        "subText": "October 3, 2025",
-        "url": "https://audio.audiomeans.fr/file/uQzNZnSuzb/cd725f1e-bba8-4027-8a85-639567d08cef.mp3?_=1756113935",
-        "sel": {
-          "lang": {
-            "item": {
-              "code": "fra",
-              "name": "French",
-              "qty": 64492
-            }
-          },
-          "langSubListId": "tag",
-          "tag": {
-            "item": {
-              "code": null,
-              "name": "true crime",
-              "qty": 80,
-              "stores": [
-                1
-              ]
-            }
-          },
-          "tagSubListId": "pdc",
-          "letter": null,
-          "letterSubListId": null,
-          "pdc": {
-            "item": {
-              "code": null,
-              "name": "Feu de camp",
-              "qty": 146,
-              "url": "https://feeds.audiomeans.fr/feed/278c8c9f-2297-44cc-8674-65e285cb80c1.xml",
-              "store": 1,
-              "page": 1,
-              "sel": null,
-              "selCnt": 1,
-              "id": "Feu de camp",
-              "favLists": [],
-              "metadata": {
-                "statusText": ""
-              },
-              "pdc": true,
-              "rss": null,
-              "logo": "https://static.audiomeans.fr/img/podcast/2bee1e6b-2048-4338-bca8-c77b04a328d0.jpg",
-              "subText": "NRJ France",
-              "pItem": null
-            }
-          },
-          "pdcSubListId": "epi",
-          "epi": {
-            "item": {
-              "code": null,
-              "name": "La petite Sallie 🎀 9.1",
-              "qty": "",
-              "subText2": "",
-              "subText": "April 27, 2021",
-              "url": "https://audio.audiomeans.fr/file/uQzNZnSuzb/2925b1e2-c7f5-4ae8-b053-02958c9aca15.mp3?_=1723634142",
-              "sel": null,
-              "id": "La petite Sallie 🎀 9.1",
-              "favLists": [],
-              "logo": "https://static.audiomeans.fr/img/podcast/2bee1e6b-2048-4338-bca8-c77b04a328d0.jpg",
-              "metadata": {},
-              "pdc": true,
-              "epi": true,
-              "pubDate": "Tue, 27 Apr 2021 05:01:00 GMT",
-              "groups": [],
-              "pItem": null
-            }
-          },
-          "epiSubListId": null,
-          "noPage": 1,
-          "epiOpen": false,
-          "epiOpening": false
-        },
-        "id": "Saison 9 - épisode 3 : Jeux dangereux Vol.5",
-        "favLists": [
-          "History"
-        ],
-        "logo": "https://static.audiomeans.fr/img/episode/39ca732f-f3b9-4877-ac24-14d893135d88.jpg",
-        "metadata": {
-          "statusText": "playing",
-          "playState": {
-            "statusText": "playing",
-            "loadingState": "playing",
-            "playingState": {
-              "isPaused": false,
-              "isCurrent": true,
-              "isPlaying": true
-            },
-            "events": {
-              "connecting": true,
-              "noConnection": false,
-              "connected": true,
-              "ended": false,
-              "playing": true,
-              "pauseStateChanged": true
-            }
-          },
-          "startTime": 1762558331805,
-          "currentTime": {
-            "h": 0,
-            "m": 0,
-            "s": 2,
-            "error": false,
-            "isInfinite": false
-          },
-          "duration": {
-            "h": 0,
-            "m": 11,
-            "s": 36,
-            "error": false,
-            "isInfinite": false
-          }
-        },
-        "pdc": true,
-        "epi": true,
-        "pubDate": "Fri, 03 Oct 2025 00:20:00 GMT",
-        "groups": [],
-        "ref": {
-          "currentRDList": {
-            "listId": "Podcast",
-            "name": "epi",
-            "$item": null
-          },
-          "currentTab": {
-            "listId": "List",
-            "tabId": "btn_wrp_play_list"
-          }
-        },
-        "listenDate": 1762557010493
-      },
-      {
-        "code": null,
-        "name": "HAARP",
-        "qty": "",
-        "subText2": "03:02 / 02:19:23",
-        "subText": "February 24, 2025",
-        "url": "https://track.podcastics.com/3735/348344.mp3",
-        "sel": {
-          "lang": {
-            "item": {
-              "code": "fra",
-              "name": "French",
-              "qty": 64492
-            }
-          },
-          "langSubListId": "tag",
-          "tag": {
-            "item": {
-              "code": null,
-              "name": "documentary",
-              "qty": 213
-            }
-          },
-          "tagSubListId": "letter",
-          "letter": {
-            "item": {
-              "code": null,
-              "name": "T",
-              "qty": 11,
-              "stores": [
-                1
-              ]
-            }
-          },
-          "letterSubListId": "pdc",
-          "pdc": {
-            "item": {
-              "code": null,
-              "name": "Tous Parano",
-              "qty": 56,
-              "url": "https://feeds.podcastics.com/podcastics/podcasts/rss/3735_58ead7f8566998862f14b7e2ec28af42.rss",
-              "store": 1,
-              "page": 1,
-              "sel": null,
-              "selCnt": 1,
-              "id": "Tous Parano",
-              "favLists": [],
-              "metadata": {
-                "statusText": ""
-              },
-              "pdc": true,
-              "rss": null,
-              "logo": "https://medias.podcastics.com/podcastics/podcasts/artwork/tous-parano.jpg.2d71cceb4f9c8ef04d0edd9cdd308720.jpg",
-              "subText": "Tous Parano",
-              "pItem": null
-            }
-          },
-          "pdcSubListId": "epi",
-          "epi": null,
-          "epiSubListId": null,
-          "noPage": 1,
-          "epiOpen": true,
-          "epiOpening": false
-        },
-        "id": "HAARP",
-        "favLists": [
-          "History"
-        ],
-        "logo": "https://medias.podcastics.com/podcastics/podcasts/artwork/tous-parano.jpg.2d71cceb4f9c8ef04d0edd9cdd308720.jpg",
-        "metadata": {
-          "playState": {
-            "statusText": "playing",
-            "loadingState": "playing",
-            "playingState": {
-              "isPaused": false,
-              "isCurrent": true,
-              "isPlayinng": true
-            },
-            "events": {
-              "connecting": true,
-              "noConnection": false,
-              "connected": true,
-              "ended": false,
-              "playing": true,
-              "pauseStateChanged": true
-            }
-          },
-          "startTime": 1762556464505,
-          "currentTime": {
-            "h": 0,
-            "m": 3,
-            "s": 2,
-            "error": false,
-            "isInfinite": false
-          },
-          "duration": {
-            "h": 2,
-            "m": 19,
-            "s": 23,
-            "error": false,
-            "isInfinite": false
-          }
-        },
-        "pdc": true,
-        "epi": true,
-        "pubDate": "Mon, 24 Feb 2025 05:00:00 +0000",
+        "pubDate": "Wed, 29 Oct 2025 15:14:52 +0000",
         "groups": [],
         "ref": {
           "currentRDList": {
@@ -628,1264 +912,7 @@
             "tabId": "btn_wrp_podcast"
           }
         },
-        "listenDate": 1762556474441
-      },
-      {
-        "id": "9193",
-        "name": "Hunter Pop 2K",
-        "description": null,
-        "groupTitle": null,
-        "groups": [
-          "00s",
-          "Pop"
-        ],
-        "url": "https://live.hunter.fm/pop2k_high",
-        "logo": "https://cdn.hunter.fm/image/thumb/station/pop2k-first/1000x1000ht.jpg",
-        "artist": null,
-        "lang": null,
-        "channels": null,
-        "country": null,
-        "favLists": [
-          "Pop"
-        ],
-        "metadata": {
-          "duration": null,
-          "stereo": null,
-          "encoding": null,
-          "sampleFrq": null,
-          "sampleRes": null,
-          "country": null,
-          "statusText": null,
-          "startTime": null,
-          "stopTime": null,
-          "position": null
-        }
-      },
-      {
-        "code": null,
-        "name": "Warren Jeffs",
-        "qty": "",
-        "subText2": "00:07 / 14:29",
-        "subText": "November 28, 2022",
-        "url": "https://audio.audiomeans.fr/file/uQzNZnSuzb/e88e5136-48a3-45e9-933f-12d3bc9ef2ee.mp3?_=1709306909",
-        "sel": {
-          "lang": {
-            "item": {
-              "code": "fra",
-              "name": "French",
-              "qty": 64492
-            }
-          },
-          "langSubListId": "tag",
-          "tag": {
-            "item": {
-              "code": null,
-              "name": "true crime",
-              "qty": 80,
-              "stores": [
-                1
-              ]
-            }
-          },
-          "tagSubListId": "pdc",
-          "letter": null,
-          "letterSubListId": null,
-          "pdc": {
-            "item": {
-              "code": null,
-              "name": "Gurus (Gourous)",
-              "qty": 12,
-              "url": "https://feeds.audiomeans.fr/feed/a96d7e81-75d8-404f-b976-eb5b8811ce08.xml",
-              "store": 1,
-              "page": 1,
-              "sel": null,
-              "selCnt": 1,
-              "id": "Gurus (Gourous)",
-              "favLists": [],
-              "metadata": {
-                "statusText": ""
-              },
-              "pdc": true,
-              "rss": null,
-              "logo": "https://static.audiomeans.fr/img/podcast/4a321c21-63ea-4da2-8eee-9749d2405cbf.jpg",
-              "subText": "Engle",
-              "pItem": null
-            }
-          },
-          "pdcSubListId": "epi",
-          "epi": {
-            "item": {
-              "code": null,
-              "name": "Warren Jeffs",
-              "qty": "",
-              "subText2": "",
-              "subText": "November 28, 2022",
-              "url": "https://audio.audiomeans.fr/file/uQzNZnSuzb/e88e5136-48a3-45e9-933f-12d3bc9ef2ee.mp3?_=1709306909",
-              "sel": null,
-              "id": "Warren Jeffs",
-              "favLists": [],
-              "logo": "https://static.audiomeans.fr/img/podcast/4a321c21-63ea-4da2-8eee-9749d2405cbf.jpg",
-              "metadata": {},
-              "pdc": true,
-              "epi": true,
-              "pubDate": "Mon, 28 Nov 2022 04:00:00 GMT",
-              "groups": [],
-              "pItem": null
-            }
-          },
-          "epiSubListId": null,
-          "noPage": 1,
-          "epiOpen": false,
-          "epiOpening": false
-        },
-        "id": "Warren Jeffs",
-        "favLists": [
-          "History"
-        ],
-        "logo": "https://static.audiomeans.fr/img/podcast/4a321c21-63ea-4da2-8eee-9749d2405cbf.jpg",
-        "metadata": {
-          "statusText": "playing",
-          "playState": {
-            "statusText": "playing",
-            "loadingState": "playing",
-            "playingState": {
-              "isPaused": false,
-              "isCurrent": true,
-              "isPlayinng": true
-            },
-            "events": {
-              "connecting": true,
-              "noConnection": false,
-              "connected": true,
-              "ended": false,
-              "playing": true,
-              "pauseStateChanged": true
-            }
-          },
-          "startTime": 1762556377948,
-          "duration": {
-            "h": 0,
-            "m": 14,
-            "s": 29,
-            "error": false,
-            "isInfinite": false
-          },
-          "currentTime": {
-            "h": 0,
-            "m": 0,
-            "s": 7,
-            "error": false,
-            "isInfinite": false
-          }
-        },
-        "pdc": true,
-        "epi": true,
-        "pubDate": "Mon, 28 Nov 2022 04:00:00 GMT",
-        "groups": [],
-        "ref": {
-          "currentRDList": {
-            "listId": "Podcast",
-            "name": "epi",
-            "$item": null
-          },
-          "currentTab": {
-            "listId": "Viz",
-            "tabId": "btn_wrp_logo"
-          }
-        },
-        "listenDate": 1762556387951
-      },
-      {
-        "id": "19865",
-        "name": "1000 HITS 80s",
-        "description": null,
-        "groupTitle": null,
-        "groups": [
-          "Hits",
-          "80s"
-        ],
-        "url": "http://c2.auracast.net:8048/stream",
-        "logo": "https://1000hits80s.eu/wp-content/uploads/2017/10/cropped-1000Hits80s_300x300-270x270.jpg",
-        "artist": null,
-        "lang": null,
-        "channels": null,
-        "country": null,
-        "favLists": [
-          "History",
-          "Années 80"
-        ],
-        "metadata": {
-          "duration": null,
-          "stereo": null,
-          "encoding": null,
-          "sampleFrq": null,
-          "sampleRes": null,
-          "country": null,
-          "statusText": null,
-          "startTime": null,
-          "stopTime": null,
-          "position": null
-        }
-      },
-      {
-        "id": "12887",
-        "name": "100 Greatest of The 80s",
-        "description": null,
-        "groupTitle": null,
-        "groups": [
-          "80s"
-        ],
-        "url": "https://maggie.torontocast.com:2020/stream/100greatestofthe80s",
-        "logo": "https://100-greatest-network.torontocast.stream/wp-content/uploads/2021/07/100-GREATEST-80S_LOGO_512-300x300.jpg",
-        "artist": null,
-        "lang": null,
-        "channels": null,
-        "country": null,
-        "favLists": [
-          "History",
-          "Années 80"
-        ],
-        "metadata": {
-          "duration": null,
-          "stereo": null,
-          "encoding": null,
-          "sampleFrq": null,
-          "sampleRes": null,
-          "country": null,
-          "statusText": null,
-          "startTime": null,
-          "stopTime": null,
-          "position": null
-        }
-      },
-      {
-        "code": null,
-        "name": "Otto Muehl et l'A.A.O",
-        "qty": "",
-        "subText2": "00:01 / 15:47",
-        "subText": "October 31, 2022",
-        "url": "https://audio.audiomeans.fr/file/uQzNZnSuzb/47583649-b1ff-41ab-a98d-2b394566e20a.mp3?_=1709306915",
-        "sel": {
-          "lang": {
-            "item": {
-              "code": "fra",
-              "name": "French",
-              "qty": 64492
-            }
-          },
-          "langSubListId": "tag",
-          "tag": {
-            "item": {
-              "code": null,
-              "name": "true crime",
-              "qty": 80,
-              "stores": [
-                1
-              ]
-            }
-          },
-          "tagSubListId": "pdc",
-          "letter": null,
-          "letterSubListId": null,
-          "pdc": {
-            "item": {
-              "code": null,
-              "name": "Gurus (Gourous)",
-              "qty": 12,
-              "url": "https://feeds.audiomeans.fr/feed/a96d7e81-75d8-404f-b976-eb5b8811ce08.xml",
-              "store": 1,
-              "page": 1,
-              "sel": null,
-              "selCnt": 1,
-              "id": "Gurus (Gourous)",
-              "favLists": [],
-              "metadata": {
-                "statusText": ""
-              },
-              "pdc": true,
-              "rss": null,
-              "logo": "https://static.audiomeans.fr/img/podcast/4a321c21-63ea-4da2-8eee-9749d2405cbf.jpg",
-              "subText": "Engle",
-              "pItem": null
-            }
-          },
-          "pdcSubListId": "epi",
-          "epi": {
-            "item": {
-              "code": null,
-              "name": "Claude Vorilhon alias Raël",
-              "qty": "",
-              "subText2": "00:04 / 14:59",
-              "subText": "November 21, 2022",
-              "url": "https://audio.audiomeans.fr/file/uQzNZnSuzb/49e41683-3423-46e1-911a-de405718b519.mp3?_=1709306910",
-              "sel": null,
-              "id": "Claude Vorilhon alias Raël",
-              "favLists": [],
-              "logo": "https://static.audiomeans.fr/img/podcast/4a321c21-63ea-4da2-8eee-9749d2405cbf.jpg",
-              "metadata": {
-                "statusText": "playing",
-                "playState": {
-                  "statusText": "playing",
-                  "loadingState": "playing",
-                  "playingState": {
-                    "isPaused": false,
-                    "isCurrent": true,
-                    "isPlayinng": true
-                  },
-                  "events": {
-                    "connecting": true,
-                    "noConnection": false,
-                    "connected": true,
-                    "ended": false,
-                    "playing": true,
-                    "pauseStateChanged": true
-                  }
-                },
-                "startTime": 1762555163186,
-                "currentTime": {
-                  "h": 0,
-                  "m": 0,
-                  "s": 4,
-                  "error": false,
-                  "isInfinite": false
-                },
-                "duration": {
-                  "h": 0,
-                  "m": 14,
-                  "s": 59,
-                  "error": false,
-                  "isInfinite": false
-                }
-              },
-              "pdc": true,
-              "epi": true,
-              "pubDate": "Mon, 21 Nov 2022 04:00:00 GMT",
-              "groups": [],
-              "ref": {
-                "currentRDList": {
-                  "listId": "Podcast",
-                  "name": "epi",
-                  "$item": null
-                },
-                "currentTab": {
-                  "listId": "Podcast",
-                  "tabId": "btn_wrp_podcast"
-                }
-              },
-              "pItem": null
-            }
-          },
-          "epiSubListId": null,
-          "noPage": 1,
-          "epiOpen": false,
-          "epiOpening": false
-        },
-        "id": "Otto Muehl et l'A.A.O",
-        "favLists": [
-          "History"
-        ],
-        "logo": "https://static.audiomeans.fr/img/podcast/4a321c21-63ea-4da2-8eee-9749d2405cbf.jpg",
-        "metadata": {
-          "statusText": "playing",
-          "playState": {
-            "statusText": "playing",
-            "loadingState": "playing",
-            "playingState": {
-              "isPaused": false,
-              "isCurrent": true,
-              "isPlayinng": true
-            },
-            "events": {
-              "connecting": true,
-              "noConnection": false,
-              "connected": true,
-              "ended": false,
-              "playing": true,
-              "pauseStateChanged": true
-            }
-          },
-          "startTime": 1762556395459,
-          "currentTime": {
-            "h": 0,
-            "m": 0,
-            "s": 1,
-            "error": false,
-            "isInfinite": false
-          },
-          "duration": {
-            "h": 0,
-            "m": 15,
-            "s": 47,
-            "error": false,
-            "isInfinite": false
-          }
-        },
-        "pdc": true,
-        "epi": true,
-        "pubDate": "Mon, 31 Oct 2022 04:00:00 GMT",
-        "groups": [],
-        "ref": {
-          "currentRDList": {
-            "listId": "Podcast",
-            "name": "epi",
-            "$item": null
-          },
-          "currentTab": {
-            "listId": "Viz",
-            "tabId": "btn_wrp_logo"
-          }
-        },
-        "listenDate": 1762555708330
-      },
-      {
-        "code": null,
-        "name": "Marshall Appelwhite",
-        "qty": "",
-        "subText2": "00:05 / 16:25",
-        "subText": "November 14, 2022",
-        "url": "https://audio.audiomeans.fr/file/uQzNZnSuzb/1a54eb92-717a-4ed9-9e6b-1dfa6e3d9df0.mp3?_=1709306912",
-        "sel": {
-          "lang": {
-            "item": {
-              "code": "fra",
-              "name": "French",
-              "qty": 64492
-            }
-          },
-          "langSubListId": "tag",
-          "tag": {
-            "item": {
-              "code": null,
-              "name": "true crime",
-              "qty": 80,
-              "stores": [
-                1
-              ]
-            }
-          },
-          "tagSubListId": "pdc",
-          "letter": null,
-          "letterSubListId": null,
-          "pdc": {
-            "item": {
-              "code": null,
-              "name": "Gurus (Gourous)",
-              "qty": 12,
-              "url": "https://feeds.audiomeans.fr/feed/a96d7e81-75d8-404f-b976-eb5b8811ce08.xml",
-              "store": 1,
-              "page": 1,
-              "sel": null,
-              "selCnt": 1,
-              "id": "Gurus (Gourous)",
-              "favLists": [],
-              "metadata": {
-                "statusText": ""
-              },
-              "pdc": true,
-              "rss": null,
-              "logo": "https://static.audiomeans.fr/img/podcast/4a321c21-63ea-4da2-8eee-9749d2405cbf.jpg",
-              "subText": "Engle",
-              "pItem": null
-            }
-          },
-          "pdcSubListId": "epi",
-          "epi": {
-            "item": {
-              "code": null,
-              "name": "Claude Vorilhon alias Raël",
-              "qty": "",
-              "subText2": "00:04 / 14:59",
-              "subText": "November 21, 2022",
-              "url": "https://audio.audiomeans.fr/file/uQzNZnSuzb/49e41683-3423-46e1-911a-de405718b519.mp3?_=1709306910",
-              "sel": null,
-              "id": "Claude Vorilhon alias Raël",
-              "favLists": [],
-              "logo": "https://static.audiomeans.fr/img/podcast/4a321c21-63ea-4da2-8eee-9749d2405cbf.jpg",
-              "metadata": {
-                "statusText": "playing",
-                "playState": {
-                  "statusText": "playing",
-                  "loadingState": "playing",
-                  "playingState": {
-                    "isPaused": false,
-                    "isCurrent": true,
-                    "isPlayinng": true
-                  },
-                  "events": {
-                    "connecting": true,
-                    "noConnection": false,
-                    "connected": true,
-                    "ended": false,
-                    "playing": true,
-                    "pauseStateChanged": true
-                  }
-                },
-                "startTime": 1762555163186,
-                "currentTime": {
-                  "h": 0,
-                  "m": 0,
-                  "s": 4,
-                  "error": false,
-                  "isInfinite": false
-                },
-                "duration": {
-                  "h": 0,
-                  "m": 14,
-                  "s": 59,
-                  "error": false,
-                  "isInfinite": false
-                }
-              },
-              "pdc": true,
-              "epi": true,
-              "pubDate": "Mon, 21 Nov 2022 04:00:00 GMT",
-              "groups": [],
-              "ref": {
-                "currentRDList": {
-                  "listId": "Podcast",
-                  "name": "epi",
-                  "$item": null
-                },
-                "currentTab": {
-                  "listId": "Podcast",
-                  "tabId": "btn_wrp_podcast"
-                }
-              },
-              "pItem": null
-            }
-          },
-          "epiSubListId": null,
-          "noPage": 1,
-          "epiOpen": false,
-          "epiOpening": false
-        },
-        "id": "Marshall Appelwhite",
-        "favLists": [
-          "History"
-        ],
-        "logo": "https://static.audiomeans.fr/img/podcast/4a321c21-63ea-4da2-8eee-9749d2405cbf.jpg",
-        "metadata": {
-          "statusText": "playing",
-          "playState": {
-            "statusText": "playing",
-            "loadingState": "playing",
-            "playingState": {
-              "isPaused": false,
-              "isCurrent": true,
-              "isPlayinng": true
-            },
-            "events": {
-              "connecting": true,
-              "noConnection": false,
-              "connected": true,
-              "ended": false,
-              "playing": true,
-              "pauseStateChanged": true
-            }
-          },
-          "startTime": 1762556400122,
-          "currentTime": {
-            "h": 0,
-            "m": 0,
-            "s": 5,
-            "error": false,
-            "isInfinite": false
-          },
-          "duration": {
-            "h": 0,
-            "m": 16,
-            "s": 25,
-            "error": false,
-            "isInfinite": false
-          }
-        },
-        "pdc": true,
-        "epi": true,
-        "pubDate": "Mon, 14 Nov 2022 04:00:00 GMT",
-        "groups": [],
-        "ref": {
-          "currentRDList": {
-            "listId": "Podcast",
-            "name": "epi",
-            "$item": null
-          },
-          "currentTab": {
-            "listId": "Viz",
-            "tabId": "btn_wrp_logo"
-          }
-        },
-        "listenDate": 1762555690283
-      },
-      {
-        "id": "8457",
-        "name": "France Info",
-        "description": null,
-        "groupTitle": null,
-        "groups": [
-          "French"
-        ],
-        "url": "https://icecast.radiofrance.fr/franceinfo-hifi.aac",
-        "logo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTTOrtJJ0l34GIjFRRUcl-X_GxOtNNRNT9rXw&s",
-        "artist": null,
-        "lang": "French",
-        "channels": null,
-        "country": null,
-        "favLists": [
-          "History",
-          "Infos"
-        ],
-        "metadata": {
-          "duration": null,
-          "stereo": null,
-          "encoding": null,
-          "sampleFrq": null,
-          "sampleRes": null,
-          "country": null,
-          "statusText": null,
-          "startTime": null,
-          "stopTime": null,
-          "position": null
-        }
-      },
-      {
-        "id": "10255",
-        "name": "80er",
-        "description": null,
-        "groupTitle": null,
-        "groups": [
-          "80s"
-        ],
-        "url": "http://tuner.m1.fm/80er.mp3",
-        "logo": "http://m1.fm/favicon.ico",
-        "artist": null,
-        "lang": null,
-        "channels": null,
-        "country": null,
-        "favLists": [
-          "History",
-          "Années 80"
-        ],
-        "metadata": {
-          "duration": null,
-          "stereo": null,
-          "encoding": null,
-          "sampleFrq": null,
-          "sampleRes": null,
-          "country": null,
-          "statusText": null,
-          "startTime": null,
-          "stopTime": null,
-          "position": null
-        }
-      },
-      {
-        "code": null,
-        "name": "Bob Marley",
-        "qty": "",
-        "subText2": "10:58 / 01:02:34",
-        "subText": "July 15, 2024",
-        "url": "https://track.podcastics.com/3735/305770.mp3",
-        "sel": {
-          "lang": {
-            "item": {
-              "code": "fra",
-              "name": "French",
-              "qty": 64492
-            }
-          },
-          "langSubListId": "tag",
-          "tag": {
-            "item": {
-              "code": null,
-              "name": "documentary",
-              "qty": 213
-            }
-          },
-          "tagSubListId": "letter",
-          "letter": {
-            "item": {
-              "code": null,
-              "name": "T",
-              "qty": 11,
-              "stores": [
-                1
-              ]
-            }
-          },
-          "letterSubListId": "pdc",
-          "pdc": {
-            "item": {
-              "code": null,
-              "name": "Tous Parano",
-              "qty": 56,
-              "url": "https://feeds.podcastics.com/podcastics/podcasts/rss/3735_58ead7f8566998862f14b7e2ec28af42.rss",
-              "store": 1,
-              "page": 1,
-              "sel": null,
-              "selCnt": 1,
-              "id": "Tous Parano",
-              "favLists": [],
-              "metadata": {
-                "statusText": ""
-              },
-              "pdc": true,
-              "rss": null,
-              "logo": "https://medias.podcastics.com/podcastics/podcasts/artwork/tous-parano.jpg.2d71cceb4f9c8ef04d0edd9cdd308720.jpg",
-              "subText": "Tous Parano",
-              "pItem": null
-            }
-          },
-          "pdcSubListId": "epi",
-          "epi": null,
-          "epiSubListId": null,
-          "noPage": 1,
-          "epiOpen": true,
-          "epiOpening": false
-        },
-        "id": "Bob Marley",
-        "favLists": [
-          "History"
-        ],
-        "logo": "https://medias.podcastics.com/podcastics/episodes/3735/artwork/bob-marley-tous-parano.png.2184cc29878648265c96191b3d6f342d.png",
-        "metadata": {
-          "playState": {
-            "statusText": "playing",
-            "loadingState": "playing",
-            "playingState": {
-              "isPaused": false,
-              "isCurrent": true,
-              "isPlayinng": true
-            },
-            "events": {
-              "connecting": true,
-              "noConnection": false,
-              "connected": true,
-              "ended": false,
-              "playing": true,
-              "pauseStateChanged": true
-            }
-          },
-          "startTime": 1762512156115,
-          "currentTime": {
-            "h": 0,
-            "m": 10,
-            "s": 58,
-            "error": false,
-            "isInfinite": false
-          },
-          "duration": {
-            "h": 1,
-            "m": 2,
-            "s": 34,
-            "error": false,
-            "isInfinite": false
-          }
-        },
-        "pdc": true,
-        "epi": true,
-        "pubDate": "Mon, 15 Jul 2024 04:00:00 +0000",
-        "groups": [],
-        "ref": {
-          "currentRDList": {
-            "listId": "Podcast",
-            "name": "epi",
-            "$item": {
-              "0": {},
-              "length": 1,
-              "prevObject": {
-                "0": {
-                  "jQuery371059428041050083011": {
-                    "events": {
-                      "click": [
-                        {
-                          "type": "click",
-                          "origType": "click",
-                          "guid": 1836,
-                          "namespace": ""
-                        }
-                      ]
-                    }
-                  }
-                },
-                "length": 1
-              }
-            }
-          },
-          "currentTab": {
-            "listId": "Podcast",
-            "tabId": "btn_wrp_podcast"
-          }
-        }
-      },
-      {
-        "code": null,
-        "name": "Marilyn Monroe",
-        "qty": "",
-        "subText2": "00:00 / 01:07:00",
-        "subText": "August 5, 2024",
-        "url": "https://track.podcastics.com/3735/307241.mp3",
-        "sel": {
-          "lang": {
-            "item": {
-              "code": "fra",
-              "name": "French",
-              "qty": 64492
-            }
-          },
-          "langSubListId": "tag",
-          "tag": {
-            "item": {
-              "code": null,
-              "name": "documentary",
-              "qty": 213
-            }
-          },
-          "tagSubListId": "letter",
-          "letter": {
-            "item": {
-              "code": null,
-              "name": "T",
-              "qty": 11,
-              "stores": [
-                1
-              ]
-            }
-          },
-          "letterSubListId": "pdc",
-          "pdc": {
-            "item": {
-              "code": null,
-              "name": "Tous Parano",
-              "qty": 56,
-              "url": "https://feeds.podcastics.com/podcastics/podcasts/rss/3735_58ead7f8566998862f14b7e2ec28af42.rss",
-              "store": 1,
-              "page": 1,
-              "sel": null,
-              "selCnt": 1,
-              "id": "Tous Parano",
-              "favLists": [],
-              "metadata": {
-                "statusText": ""
-              },
-              "pdc": true,
-              "rss": null,
-              "logo": "https://medias.podcastics.com/podcastics/podcasts/artwork/tous-parano.jpg.2d71cceb4f9c8ef04d0edd9cdd308720.jpg",
-              "subText": "Tous Parano",
-              "pItem": null
-            }
-          },
-          "pdcSubListId": "epi",
-          "epi": null,
-          "epiSubListId": null,
-          "noPage": 1,
-          "epiOpen": true,
-          "epiOpening": false
-        },
-        "id": "Marilyn Monroe",
-        "favLists": [
-          "History"
-        ],
-        "logo": "https://medias.podcastics.com/podcastics/episodes/3735/artwork/marilyn-monroe-tous-parano.png.a09523edc6a7668c29d835b2919dafec.png",
-        "metadata": {
-          "statusText": " not allowed (cors)",
-          "playState": {
-            "statusText": " not allowed (cors)",
-            "loadingState": "noConnection",
-            "playingState": {
-              "isPaused": false,
-              "isCurrent": true,
-              "isPlayinng": true
-            },
-            "events": {
-              "connecting": true,
-              "noConnection": true,
-              "connected": false,
-              "ended": false,
-              "playing": false,
-              "pauseStateChanged": true
-            }
-          },
-          "startTime": 1762539502865,
-          "currentTime": {
-            "h": 0,
-            "m": 0,
-            "s": 0,
-            "error": false,
-            "isInfinite": false
-          },
-          "duration": {
-            "h": 1,
-            "m": 7,
-            "s": 0,
-            "error": false,
-            "isInfinite": false
-          }
-        },
-        "pdc": true,
-        "epi": true,
-        "pubDate": "Mon, 05 Aug 2024 04:00:00 +0000",
-        "groups": [],
-        "ref": {
-          "currentRDList": {
-            "listId": "List",
-            "name": "History",
-            "$item": {
-              "0": {},
-              "length": 1
-            }
-          },
-          "currentTab": {
-            "listId": "Viz",
-            "tabId": "btn_wrp_logo"
-          }
-        }
-      },
-      {
-        "code": null,
-        "name": "令人震撼的Elsa Schiaparelli傳奇人生",
-        "qty": "",
-        "subText2": "00:00 / 01:02:21",
-        "subText": "April 29, 2020",
-        "url": "https://feeds.soundcloud.com/stream/809759944-yung-ning-kang-elsa-schiaparelli.mp3",
-        "sel": {
-          "lang": {
-            "item": {
-              "code": "zho",
-              "name": "Chinese",
-              "qty": 29110
-            }
-          },
-          "langSubListId": "tag",
-          "tag": {
-            "item": {
-              "code": null,
-              "name": "education",
-              "qty": 2170
-            }
-          },
-          "tagSubListId": "letter",
-          "letter": {
-            "item": {
-              "code": null,
-              "name": "T",
-              "qty": 55,
-              "stores": [
-                2
-              ]
-            }
-          },
-          "letterSubListId": "pdc",
-          "pdc": {
-            "item": {
-              "code": null,
-              "name": "TALKLESS 時尚真心話",
-              "qty": 5,
-              "url": "https://feeds.soundcloud.com/users/soundcloud:users:812886784/sounds.rss",
-              "store": 2,
-              "page": 1,
-              "sel": null,
-              "selCnt": 1,
-              "id": "TALKLESS 時尚真心話",
-              "favLists": [],
-              "metadata": {
-                "statusText": ""
-              },
-              "pdc": true,
-              "rss": null,
-              "logo": "https://i1.sndcdn.com/avatars-g3U3uDiLipzJ87GM-SrsuUQ-original.jpg",
-              "subText": "TALKLESS STUDIO 勿語堂",
-              "pItem": null
-            }
-          },
-          "pdcSubListId": "epi",
-          "epi": {
-            "item": {
-              "code": null,
-              "name": "130. 印度孟買(下) 6 Days in Mumbai: Part Two ",
-              "qty": "",
-              "subText2": "01:07 / 14:15",
-              "subText": "September 18, 2025",
-              "url": "https://rss.soundon.fm/rssf/8329ce3a-6cc8-4a3c-a12d-1a5b934060a0/feedurl/ab2eec77-93fc-47ba-8fae-4182e8f05747/rssFileVip.mp3?timestamp=1758184626851",
-              "sel": null,
-              "id": "130. 印度孟買(下) 6 Days in Mumbai: Part Two ",
-              "favLists": [],
-              "logo": "https://files.soundon.fm/1757580489881-77531b7d-717d-4e65-ac7a-2c6a8b635a59.jpeg",
-              "metadata": {
-                "statusText": "pause",
-                "playState": {
-                  "statusText": "pause",
-                  "loadingState": "pauseStateChanged",
-                  "playingState": {
-                    "isPaused": true,
-                    "isCurrent": true,
-                    "isPlayinng": false
-                  },
-                  "events": {
-                    "connecting": true,
-                    "noConnection": false,
-                    "connected": true,
-                    "ended": false,
-                    "playing": true,
-                    "pauseStateChanged": true
-                  }
-                },
-                "startTime": 1762510842915,
-                "currentTime": {
-                  "h": 0,
-                  "m": 1,
-                  "s": 7,
-                  "error": false,
-                  "isInfinite": false
-                },
-                "duration": {
-                  "h": 0,
-                  "m": 14,
-                  "s": 15,
-                  "error": false,
-                  "isInfinite": false
-                },
-                "endTime": 1762510910153
-              },
-              "pdc": true,
-              "epi": true,
-              "pubDate": "Thu, 18 Sep 2025 08:00:00 GMT",
-              "groups": [],
-              "ref": {
-                "currentRDList": {
-                  "listId": "Podcast",
-                  "name": "epi",
-                  "$item": {
-                    "0": {},
-                    "length": 1,
-                    "prevObject": {
-                      "0": {
-                        "jQuery371087314428103257641": {
-                          "events": {
-                            "click": [
-                              {
-                                "type": "click",
-                                "origType": "click",
-                                "guid": 711,
-                                "namespace": ""
-                              }
-                            ]
-                          }
-                        }
-                      },
-                      "length": 1
-                    }
-                  }
-                },
-                "currentTab": {
-                  "listId": "Podcast",
-                  "tabId": "btn_wrp_podcast"
-                }
-              },
-              "pItem": null
-            }
-          },
-          "epiSubListId": null,
-          "noPage": 1,
-          "epiOpen": false
-        },
-        "id": "令人震撼的Elsa Schiaparelli傳奇人生",
-        "favLists": [
-          "History"
-        ],
-        "logo": "https://i1.sndcdn.com/artworks-yAWhv7ZtYtdeCx3n-u4W8Cg-t3000x3000.jpg",
-        "metadata": {
-          "statusText": " not allowed (cors)",
-          "playState": {
-            "statusText": " not allowed (cors)",
-            "loadingState": "noConnection",
-            "playingState": {
-              "isPaused": false,
-              "isCurrent": true,
-              "isPlayinng": true
-            },
-            "events": {
-              "connecting": true,
-              "noConnection": true,
-              "connected": false,
-              "ended": false,
-              "playing": false,
-              "pauseStateChanged": true
-            }
-          },
-          "startTime": 1762539541440,
-          "currentTime": {
-            "h": 0,
-            "m": 0,
-            "s": 0,
-            "error": false,
-            "isInfinite": false
-          },
-          "duration": {
-            "h": 1,
-            "m": 2,
-            "s": 21,
-            "error": false,
-            "isInfinite": false
-          },
-          "endTime": 1762511121660
-        },
-        "pdc": true,
-        "epi": true,
-        "pubDate": "Wed, 29 Apr 2020 13:46:56 +0000",
-        "groups": [],
-        "ref": {
-          "currentRDList": {
-            "listId": "List",
-            "name": "History",
-            "$item": {
-              "0": {},
-              "length": 1
-            }
-          },
-          "currentTab": {
-            "listId": "Viz",
-            "tabId": "btn_wrp_logo"
-          }
-        }
-      },
-      {
-        "code": null,
-        "name": "130. 印度孟買(下) 6 Days in Mumbai: Part Two ",
-        "qty": "",
-        "subText2": "01:07 / 14:15",
-        "subText": "September 18, 2025",
-        "url": "https://rss.soundon.fm/rssf/8329ce3a-6cc8-4a3c-a12d-1a5b934060a0/feedurl/ab2eec77-93fc-47ba-8fae-4182e8f05747/rssFileVip.mp3?timestamp=1758184626851",
-        "sel": {
-          "lang": {
-            "item": {
-              "code": "zho",
-              "name": "Chinese",
-              "qty": 29110
-            }
-          },
-          "langSubListId": "tag",
-          "tag": {
-            "item": {
-              "code": null,
-              "name": "education",
-              "qty": 2170
-            }
-          },
-          "tagSubListId": "letter",
-          "letter": {
-            "item": {
-              "code": null,
-              "name": "T",
-              "qty": 55,
-              "stores": [
-                2
-              ]
-            }
-          },
-          "letterSubListId": "pdc",
-          "pdc": {
-            "item": {
-              "code": null,
-              "name": "Talk Taiwanese Mandarin with Abby",
-              "qty": 140,
-              "url": "https://feeds.soundon.fm/podcasts/8329ce3a-6cc8-4a3c-a12d-1a5b934060a0.xml",
-              "store": 2,
-              "page": 1,
-              "sel": null,
-              "selCnt": 1,
-              "id": "Talk Taiwanese Mandarin with Abby",
-              "favLists": [],
-              "metadata": {
-                "statusText": ""
-              },
-              "pdc": true,
-              "rss": null,
-              "logo": "https://files.soundon.fm/1744879294958-00d3a861-2b40-4b88-b231-b31303a153c6.jpeg",
-              "subText": "Abby T.",
-              "pItem": null
-            }
-          },
-          "pdcSubListId": "epi",
-          "epi": null,
-          "epiSubListId": null,
-          "noPage": 1
-        },
-        "id": "130. 印度孟買(下) 6 Days in Mumbai: Part Two ",
-        "favLists": [
-          "History"
-        ],
-        "logo": "https://files.soundon.fm/1757580489881-77531b7d-717d-4e65-ac7a-2c6a8b635a59.jpeg",
-        "metadata": {
-          "statusText": "pause",
-          "playState": {
-            "statusText": "pause",
-            "loadingState": "pauseStateChanged",
-            "playingState": {
-              "isPaused": true,
-              "isCurrent": true,
-              "isPlayinng": false
-            },
-            "events": {
-              "connecting": true,
-              "noConnection": false,
-              "connected": true,
-              "ended": false,
-              "playing": true,
-              "pauseStateChanged": true
-            }
-          },
-          "startTime": 1762510842915,
-          "currentTime": {
-            "h": 0,
-            "m": 1,
-            "s": 7,
-            "error": false,
-            "isInfinite": false
-          },
-          "duration": {
-            "h": 0,
-            "m": 14,
-            "s": 15,
-            "error": false,
-            "isInfinite": false
-          },
-          "endTime": 1762510910153
-        },
-        "pdc": true,
-        "epi": true,
-        "pubDate": "Thu, 18 Sep 2025 08:00:00 GMT",
-        "groups": [],
-        "ref": {
-          "currentRDList": {
-            "listId": "Podcast",
-            "name": "epi",
-            "$item": {
-              "0": {},
-              "length": 1,
-              "prevObject": {
-                "0": {
-                  "jQuery371087314428103257641": {
-                    "events": {
-                      "click": [
-                        {
-                          "type": "click",
-                          "origType": "click",
-                          "guid": 711,
-                          "namespace": ""
-                        }
-                      ]
-                    }
-                  }
-                },
-                "length": 1
-              }
-            }
-          },
-          "currentTab": {
-            "listId": "Podcast",
-            "tabId": "btn_wrp_podcast"
-          }
-        }
+        "listenDate": 1762560687138
       }
     ],
     "isSystem": true
@@ -13465,7 +12492,7 @@
         "code": null,
         "name": "La petite Sallie 🎀 9.1",
         "qty": "",
-        "subText2": "00:13 / 21:49",
+        "subText2": "01:02 / 21:49",
         "subText": "April 27, 2021",
         "url": "https://audio.audiomeans.fr/file/uQzNZnSuzb/2925b1e2-c7f5-4ae8-b053-02958c9aca15.mp3?_=1723634142",
         "sel": {
@@ -13544,11 +12571,11 @@
               "pauseStateChanged": true
             }
           },
-          "startTime": 1762559310670,
+          "startTime": 1762560894371,
           "currentTime": {
             "h": 0,
-            "m": 0,
-            "s": 13,
+            "m": 1,
+            "s": 2,
             "error": false,
             "isInfinite": false
           },
@@ -13567,7 +12594,7 @@
         "ref": {
           "currentRDList": {
             "listId": "List",
-            "name": "History",
+            "name": "----- Podcasts ------",
             "$item": null
           },
           "currentTab": {
@@ -13575,7 +12602,333 @@
             "tabId": "btn_wrp_play_list"
           }
         },
-        "listenDate": 1762559312683
+        "listenDate": 1762560896691
+      },
+      {
+        "code": null,
+        "name": "Transmission",
+        "qty": 38,
+        "url": "https://feed.ausha.co/bYrWFLRaGLEB",
+        "store": 1,
+        "page": 1,
+        "sel": {
+          "lang": {
+            "item": {
+              "code": "fra",
+              "name": "French",
+              "qty": 64492
+            }
+          },
+          "langSubListId": "tag",
+          "tag": {
+            "item": {
+              "code": null,
+              "name": "documentary",
+              "qty": 213
+            }
+          },
+          "tagSubListId": "letter",
+          "letter": {
+            "item": {
+              "code": null,
+              "name": "T",
+              "qty": 11,
+              "stores": [
+                1
+              ]
+            }
+          },
+          "letterSubListId": "pdc",
+          "pdc": {
+            "item": {
+              "code": null,
+              "name": "Transmission",
+              "qty": 38,
+              "url": "https://feed.ausha.co/bYrWFLRaGLEB",
+              "store": 1,
+              "page": 1,
+              "sel": null,
+              "selCnt": 1,
+              "id": "Transmission",
+              "favLists": [],
+              "metadata": {
+                "statusText": ""
+              },
+              "pdc": true,
+              "rss": null,
+              "logo": "https://image.ausha.co/Nj7zt2QMrAxMqHjMWzbOWoG49noXqIQyF4kuD1Vs_1400x1400.jpeg?t=1568889519",
+              "subText": "Collectif Transmission",
+              "pItem": null
+            }
+          },
+          "pdcSubListId": "epi",
+          "epi": {
+            "item": {
+              "code": null,
+              "name": "6. Le jour où Donald Trump a perdu la Maison-Blanche, Bible à la main",
+              "qty": "",
+              "subText2": "00:06 / 22:17",
+              "subText": "June 6, 2025",
+              "url": "https://audio.audiomeans.fr/file/uQzNZnSuzb/5c777356-d06c-4d6c-bd85-eb4d63e2eeaa.mp3?_=1749117611",
+              "sel": null,
+              "id": "6. Le jour où Donald Trump a perdu la Maison-Blanche, Bible à la main",
+              "favLists": [],
+              "logo": "https://static.audiomeans.fr/img/episode/5af24175-7cbc-4800-bd2c-6fc05b74da55.jpg",
+              "metadata": {
+                "statusText": "pause",
+                "playState": {
+                  "statusText": "pause",
+                  "loadingState": "pauseStateChanged",
+                  "playingState": {
+                    "isPaused": true,
+                    "isCurrent": true,
+                    "isPlaying": false
+                  },
+                  "events": {
+                    "connecting": true,
+                    "noConnection": false,
+                    "connected": true,
+                    "ended": false,
+                    "playing": true,
+                    "pauseStateChanged": true
+                  }
+                },
+                "startTime": 1762560846970,
+                "currentTime": {
+                  "h": 0,
+                  "m": 0,
+                  "s": 6,
+                  "error": false,
+                  "isInfinite": false
+                },
+                "duration": {
+                  "h": 0,
+                  "m": 22,
+                  "s": 17,
+                  "error": false,
+                  "isInfinite": false
+                },
+                "endTime": 1762560853496
+              },
+              "pdc": true,
+              "epi": true,
+              "pubDate": "Fri, 06 Jun 2025 00:10:00 GMT",
+              "groups": [],
+              "ref": {
+                "currentRDList": {
+                  "listId": "Podcast",
+                  "name": "epi",
+                  "$item": null
+                },
+                "currentTab": {
+                  "listId": "Podcast",
+                  "tabId": "btn_wrp_podcast"
+                }
+              },
+              "pItem": null
+            }
+          },
+          "epiSubListId": null,
+          "noPage": 1,
+          "epiOpen": false,
+          "epiOpening": true
+        },
+        "selCnt": 0,
+        "id": "Transmission",
+        "favLists": [
+          "----- Podcasts ------"
+        ],
+        "metadata": {
+          "statusText": ""
+        },
+        "pdc": true,
+        "rss": null,
+        "logo": "https://image.ausha.co/Nj7zt2QMrAxMqHjMWzbOWoG49noXqIQyF4kuD1Vs_1400x1400.jpeg?t=1568889519",
+        "subText": "Collectif Transmission"
+      },
+      {
+        "code": null,
+        "name": "Feu de camp",
+        "qty": 146,
+        "url": "https://feeds.audiomeans.fr/feed/278c8c9f-2297-44cc-8674-65e285cb80c1.xml",
+        "store": 1,
+        "page": 1,
+        "sel": {
+          "lang": {
+            "item": {
+              "code": "fra",
+              "name": "French",
+              "qty": 64492
+            }
+          },
+          "langSubListId": "tag",
+          "tag": {
+            "item": {
+              "code": null,
+              "name": "true crime",
+              "qty": 80,
+              "stores": [
+                1
+              ]
+            }
+          },
+          "tagSubListId": "pdc",
+          "letter": null,
+          "letterSubListId": null,
+          "pdc": {
+            "item": {
+              "code": null,
+              "name": "Feu de camp",
+              "qty": 146,
+              "url": "https://feeds.audiomeans.fr/feed/278c8c9f-2297-44cc-8674-65e285cb80c1.xml",
+              "store": 1,
+              "page": 1,
+              "sel": null,
+              "selCnt": 1,
+              "id": "Feu de camp",
+              "favLists": [],
+              "metadata": {
+                "statusText": ""
+              },
+              "pdc": true,
+              "rss": null,
+              "logo": "https://static.audiomeans.fr/img/podcast/2bee1e6b-2048-4338-bca8-c77b04a328d0.jpg",
+              "subText": "NRJ France",
+              "pItem": null
+            }
+          },
+          "pdcSubListId": "epi",
+          "epi": {
+            "item": {
+              "code": null,
+              "name": "La petite Sallie 🎀 9.1",
+              "qty": "",
+              "subText2": "",
+              "subText": "April 27, 2021",
+              "url": "https://audio.audiomeans.fr/file/uQzNZnSuzb/2925b1e2-c7f5-4ae8-b053-02958c9aca15.mp3?_=1723634142",
+              "sel": null,
+              "id": "La petite Sallie 🎀 9.1",
+              "favLists": [],
+              "logo": "https://static.audiomeans.fr/img/podcast/2bee1e6b-2048-4338-bca8-c77b04a328d0.jpg",
+              "metadata": {
+                "statusText": "?"
+              },
+              "pdc": true,
+              "epi": true,
+              "pubDate": "Tue, 27 Apr 2021 05:01:00 GMT",
+              "groups": [],
+              "pItem": null
+            }
+          },
+          "epiSubListId": null,
+          "noPage": 1,
+          "epiOpen": false,
+          "epiOpening": false
+        },
+        "selCnt": 0,
+        "id": "Feu de camp",
+        "favLists": [
+          "----- Podcasts ------"
+        ],
+        "metadata": {
+          "statusText": ""
+        },
+        "pdc": true,
+        "rss": null,
+        "logo": "https://static.audiomeans.fr/img/podcast/2bee1e6b-2048-4338-bca8-c77b04a328d0.jpg",
+        "subText": "NRJ France"
+      },
+      {
+        "code": null,
+        "name": "Crimes solaires",
+        "qty": 8,
+        "url": "https://feeds.audiomeans.fr/feed/bd247514-2589-475b-bd92-e77947be1108.xml",
+        "store": 1,
+        "page": 1,
+        "sel": {
+          "lang": {
+            "item": {
+              "code": "fra",
+              "name": "French",
+              "qty": 64492
+            }
+          },
+          "langSubListId": "tag",
+          "tag": {
+            "item": {
+              "code": null,
+              "name": "true crime",
+              "qty": 80,
+              "stores": [
+                1
+              ]
+            }
+          },
+          "tagSubListId": "pdc",
+          "letter": null,
+          "letterSubListId": null,
+          "pdc": {
+            "item": {
+              "code": null,
+              "name": "Feu de camp",
+              "qty": 146,
+              "url": "https://feeds.audiomeans.fr/feed/278c8c9f-2297-44cc-8674-65e285cb80c1.xml",
+              "store": 1,
+              "page": 1,
+              "sel": null,
+              "selCnt": 1,
+              "id": "Feu de camp",
+              "favLists": [],
+              "metadata": {
+                "statusText": ""
+              },
+              "pdc": true,
+              "rss": null,
+              "logo": "https://static.audiomeans.fr/img/podcast/2bee1e6b-2048-4338-bca8-c77b04a328d0.jpg",
+              "subText": "NRJ France",
+              "pItem": null
+            }
+          },
+          "pdcSubListId": "epi",
+          "epi": {
+            "item": {
+              "code": null,
+              "name": "La petite Sallie 🎀 9.1",
+              "qty": "",
+              "subText2": "",
+              "subText": "April 27, 2021",
+              "url": "https://audio.audiomeans.fr/file/uQzNZnSuzb/2925b1e2-c7f5-4ae8-b053-02958c9aca15.mp3?_=1723634142",
+              "sel": null,
+              "id": "La petite Sallie 🎀 9.1",
+              "favLists": [],
+              "logo": "https://static.audiomeans.fr/img/podcast/2bee1e6b-2048-4338-bca8-c77b04a328d0.jpg",
+              "metadata": {
+                "statusText": "?"
+              },
+              "pdc": true,
+              "epi": true,
+              "pubDate": "Tue, 27 Apr 2021 05:01:00 GMT",
+              "groups": [],
+              "pItem": null
+            }
+          },
+          "epiSubListId": null,
+          "noPage": 1,
+          "epiOpen": false,
+          "epiOpening": false
+        },
+        "selCnt": 0,
+        "id": "Crimes solaires",
+        "favLists": [
+          "----- Podcasts ------"
+        ],
+        "metadata": {
+          "statusText": ""
+        },
+        "pdc": true,
+        "rss": null,
+        "logo": "https://static.audiomeans.fr/img/podcast/8956266c-30bd-46cf-94ac-79d2009f2308.jpg",
+        "subText": "RTL"
       }
     ],
     "isSystem": false
@@ -15620,139 +14973,6 @@
         "epi": true,
         "pubDate": "Mon, 24 Feb 2025 05:00:00 +0000",
         "groups": []
-      },
-      {
-        "code": null,
-        "name": "Du bruit à mes oreilles productions",
-        "qty": "",
-        "url": "https://baladoquebec.ca/dubruitamesoreilles/rss",
-        "store": 1,
-        "page": 1,
-        "sel": {
-          "lang": {
-            "item": {
-              "code": "fra",
-              "name": "French",
-              "qty": 64492
-            }
-          },
-          "langSubListId": "tag",
-          "tag": {
-            "item": {
-              "code": null,
-              "name": "true crime",
-              "qty": 80,
-              "stores": [
-                1
-              ]
-            }
-          },
-          "tagSubListId": "pdc",
-          "letter": null,
-          "letterSubListId": null,
-          "pdc": {
-            "item": {
-              "code": null,
-              "name": "Du bruit à mes oreilles productions",
-              "qty": 734,
-              "url": "https://baladoquebec.ca/dubruitamesoreilles/rss",
-              "store": 1,
-              "page": 1,
-              "sel": null,
-              "selCnt": 1,
-              "id": "Du bruit à mes oreilles productions",
-              "favLists": [],
-              "metadata": {
-                "statusText": ""
-              },
-              "pdc": true,
-              "rss": null,
-              "logo": "https://cdn01.baladoquebec.ca/images/dubruitamesoreilles/2NdEjLPoQcBYXi3ImE8APsfyuPVzaaHLdu4ltPvc.jpg",
-              "subText": "Du bruit à mes oreilles productions",
-              "pItem": null
-            }
-          },
-          "pdcSubListId": "epi",
-          "epi": {
-            "item": {
-              "code": null,
-              "name": "La petite Sallie 🎀 9.1",
-              "qty": "",
-              "subText2": "00:48 / 21:49",
-              "subText": "April 27, 2021",
-              "url": "https://audio.audiomeans.fr/file/uQzNZnSuzb/2925b1e2-c7f5-4ae8-b053-02958c9aca15.mp3?_=1723634142",
-              "sel": null,
-              "id": "La petite Sallie 🎀 9.1",
-              "favLists": [],
-              "logo": "https://static.audiomeans.fr/img/podcast/2bee1e6b-2048-4338-bca8-c77b04a328d0.jpg",
-              "metadata": {
-                "statusText": "playing",
-                "playState": {
-                  "statusText": "playing",
-                  "loadingState": "playing",
-                  "playingState": {
-                    "isPaused": false,
-                    "isCurrent": true,
-                    "isPlayinng": true
-                  },
-                  "events": {
-                    "connecting": true,
-                    "noConnection": false,
-                    "connected": true,
-                    "ended": false,
-                    "playing": true,
-                    "pauseStateChanged": true
-                  }
-                },
-                "startTime": 1762556782833,
-                "currentTime": {
-                  "h": 0,
-                  "m": 0,
-                  "s": 48,
-                  "error": false,
-                  "isInfinite": false
-                },
-                "duration": {
-                  "h": 0,
-                  "m": 21,
-                  "s": 49,
-                  "error": false,
-                  "isInfinite": false
-                }
-              },
-              "pdc": true,
-              "epi": true,
-              "pubDate": "Tue, 27 Apr 2021 05:01:00 GMT",
-              "groups": [],
-              "ref": {
-                "currentRDList": {
-                  "listId": "Podcast",
-                  "name": "epi",
-                  "$item": null
-                },
-                "currentTab": {
-                  "listId": "Podcast",
-                  "tabId": "btn_wrp_podcast"
-                }
-              },
-              "listenDate": 1762556792835,
-              "pItem": null
-            }
-          },
-          "epiSubListId": null,
-          "noPage": 1,
-          "epiOpen": false,
-          "epiOpening": true
-        },
-        "selCnt": 0,
-        "id": "Du bruit à mes oreilles productions",
-        "favLists": [
-          "----- Podcasts 2 -----"
-        ],
-        "metadata": {
-          "statusText": "opening..."
-        },
-        "pdc": true
       }
     ],
     "isSystem": false
