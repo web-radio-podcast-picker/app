@@ -37,7 +37,8 @@ find license and copyright informations in files /COPYRIGHT and /LICENCE
     text-align: -webkit-center;
     align-content: center;
     position: relative;
-    top: 0.6em;
+    top: 0.8em;
+    z-index: 100;
 }
 
 #err_txt {
@@ -276,7 +277,7 @@ find license and copyright informations in files /COPYRIGHT and /LICENCE
     /* align-self: flex-start; */
     overflow-wrap: break-word;
     display: block;
-    border: red solid 1px;
+    /* border: red solid 1px; */
     /* width: 100%; */
 }
 
