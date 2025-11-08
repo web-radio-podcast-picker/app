@@ -48,6 +48,7 @@ class PlayEventsHandlers {
     onLoading(item) {
 
         this.resetEvents()
+        this.stopPlayTickTimer()
 
         uiState.setPlayPauseButtonFreezeState(true)
         const st = 'connecting...'
@@ -118,7 +119,7 @@ class PlayEventsHandlers {
 
         // enable save to history list
 
-        const o = uiState.currentRDItem
+        const o = uiState.currentRDItem     // TODO: why current item and not loading item ?
         if (o != null) {
 
             window.audio = audio
@@ -135,7 +136,7 @@ class PlayEventsHandlers {
             if (!o.metadata.duration) {
 
                 if (settings.debug.debug)
-                    console.warn('set duration: ' + dur)
+                    console.log(PlayEventsHandlersLogPfx + 'set duration: ' + DurationHMS.text(dur))
                 // store duration
                 o.metadata.duration = dur
             }
@@ -143,15 +144,27 @@ class PlayEventsHandlers {
 
                 if (dur != null) {
                     if (settings.debug.debug)
-                        console.warn('update duration: ' + dur)
+                        console.log(PlayEventsHandlersLogPfx + 'update duration: ' + DurationHMS.text(dur))
                     // upd duration
                     o.metadata.duration = dur
                 }
             }
 
+            // try restore last play position
+            if (o.metadata.currentTime) {
+                o.metadata.currentTime = DurationHMS.check(o.metadata.currentTime)
+
+                if (DurationHMS.isSeekable(o.metadata.currentTime)) {
+                    // restore playing position
+                    audio.currentTime = DurationHMS.toSeconds(o.metadata.currentTime)
+                    if (settings.debug.debug)
+                        console.log(PlayEventsHandlersLogPfx + 'restore position: ' + DurationHMS.text(o.metadata.currentTime))
+                }
+            }
+
             const cur = radsItems.getLoadingItem()
             const item = cur.item
-            if (item != null) {
+            if (item != null) {     // TODO: null here 
                 if (item.pdc && dur != null)
                     item.subText2 = o.metadata.duration?.text()
 
@@ -174,12 +187,19 @@ class PlayEventsHandlers {
             logger.log(PlayEventsHandlersLogPfx + st)
         }
 
+        const item = radsItems.loadingRDItem
         radsItems
             .updateLoadingRadItem(st)
             .setLoadingItemMetadata('startTime', Date.now())
 
-        this.storeEvent(st, st, radsItems.loadingRDItem)
+        this.storeEvent(st, st, item)
 
+        this.setupPlayTickTimer(false)
+
+        // auto save single item
+        propertiesStore.savePropsToDb(item)
+
+        // TODO: this should be optimized in epi cases (to be checked)
         tabsController.showPlayingRdItemViz()
     }
 
@@ -204,6 +224,16 @@ class PlayEventsHandlers {
         if (settings.debug.debug)
             logger.log(PlayEventsHandlersLogPfx + st + ' : ' + pauseText)
 
+        if (this.lastEvents['playing'] && pauseText != 'connected')
+            this.setupPlayTickTimer(pause)
+
+        // auto save single item
+        propertiesStore.savePropsToDb(item)
+
+        uiState.updatePauseView()
+    }
+
+    setupPlayTickTimer(pause) {
         if (pause) {
             this.stopPlayTickTimer()
             playHistory.clearHistoryTimer()
@@ -212,11 +242,6 @@ class PlayEventsHandlers {
             this.startPlayTickTimer()
             radsItems.setLoadingItemMetadata('startTime', Date.now())
         }
-
-        // auto save single item
-        propertiesStore.savePropsToDb(item)
-
-        uiState.updatePauseView()
     }
 
     onEnded(e, audio) {
@@ -234,7 +259,10 @@ class PlayEventsHandlers {
     tickTimer = null
 
     startPlayTickTimer() {
-        if (this.tickTimer == null)
+        if (this.tickTimer == null) {
+            if (settings.debug.debug)
+                console.log(PlayEventsHandlersLogPfx + 'start play tick timer')
+
             this.tickTimer = setInterval(() => {
                 const audio = window.audio
 
@@ -247,9 +275,13 @@ class PlayEventsHandlers {
                     cur.loadingRDItem, cur.$loadingRDItem
                 )
             }, 500)
+        }
     }
 
     stopPlayTickTimer() {
+        if (settings.debug.debug)
+            console.log(PlayEventsHandlersLogPfx + 'stop play tick timer')
+
         clearInterval(this.tickTimer)
         this.tickTimer = null
     }

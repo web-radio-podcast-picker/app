@@ -330,6 +330,7 @@ class WebRadioPickerModule extends ModuleBase {
 
         // initial datas & ui state
 
+        // TODO: remove local storage init
         const firstInit = settings.dataStore.initUIStateStorage(
             () => {
                 // first launch init
