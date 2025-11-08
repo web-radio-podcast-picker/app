@@ -341,6 +341,9 @@ class RadiosLists {
                         // fix history fav
                         if (name == RadioList_History && !newItem.favLists.includes(RadioList_History))
                             newItem.favLists.push(RadioList_History)
+
+                        wrpp.checkItemKey(newItem)
+
                         substItems.push(newItem)
                     }
                     else {
@@ -349,6 +352,10 @@ class RadiosLists {
                             // fix history fav
                             if (name == RadioList_History && !item.favLists.includes(RadioList_History))
                                 item.favLists.push(RadioList_History)
+
+                            // init properties from local db
+                            wrpp.checkItemKey(item)
+                            propertiesStore.load(item)
                         }
                     }
                 })

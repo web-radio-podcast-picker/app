@@ -15,15 +15,27 @@ class PropertiesStore {
         return this.data
     }
 
-    fromObject(o) {
-        this.data = o
+    /**
+     * from an array of objects
+     * @param {Array} o 
+     */
+    fromObject(t) {
+        const d = {}
+        ////this.data = o
+        if (t == null || t === undefined) return
+        t.forEach(o => {
+            d[o.key] = o
+        })
+        this.data = d
     }
 
     getProps(item) {
         const o = {
             key: item.key,
             metadata: item.metadata,
-            favLists: item.favLists
+            favLists: item.favLists,
+            subText: item.subText,
+            subText2: item.subText2
         }
         o[StoreObjectKeyName] = item.key
         return o
@@ -32,6 +44,8 @@ class PropertiesStore {
     setProps(item, props) {
         item.metadata = props.metadata
         item.favLists = props.favLists
+        item.subText = props.subText
+        item.subText2 = props.subText2
     }
 
     save(item) {
@@ -50,8 +64,8 @@ class PropertiesStore {
     load(item) {
         const key = item.key
         const props = this.data[key]
-        if (p)
-            setProps(item, props)
+        if (props)
+            this.setProps(item, props)
     }
 
     check(item) {
