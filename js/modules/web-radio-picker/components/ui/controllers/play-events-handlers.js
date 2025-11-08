@@ -250,6 +250,12 @@ class PlayEventsHandlers {
         const st = 'ended'
         this.storeEvent(st, st, cur.loadingRDItem)
 
+        if (settings.debug.debug) {
+            logger.log(PlayEventsHandlersLogPfx + st)
+        }
+
+        cur.loadingRDItem.statusText = st
+
         // auto save single item
         propertiesStore.savePropsToDb(cur.loadingRDItem)
 
@@ -274,6 +280,10 @@ class PlayEventsHandlers {
                 podcasts.podcastsLists.updateEpiItemView(
                     cur.loadingRDItem, cur.$loadingRDItem
                 )
+
+                if (cur.loadingRDItem.metadata.playState.ended)
+                    this.stopPlayTickTimer()
+
             }, 500)
         }
     }

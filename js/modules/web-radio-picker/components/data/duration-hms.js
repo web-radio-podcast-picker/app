@@ -122,6 +122,12 @@ class DurationHMS {
         return dur
     }
 
+    static fromZero() {
+        const d = new DurationHMS()
+        d.h = h.m = d.s = 0
+        return d
+    }
+
     // convert from [[hh:]mm:]ss
     static fromHMS(str) {
         var t = str.split(':')
