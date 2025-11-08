@@ -84,7 +84,12 @@ class Db {
      * @param {Object} o 
      */
     saveProperties(o) {
-        this.#saveSingleObject(o, this.propertiesStoreName, 'properties')
+        const label = 'properties'
+        for (const key in o) {
+            this.#saveSingleObject(o[key], this.propertiesStoreName, label, true)
+        }
+        if (settings.debug.debug)
+            logger.log(DbLogPfx + label + ' saved in db')
     }
 
     /**
@@ -109,7 +114,7 @@ class Db {
         this.#saveSingleObject(o, this.uiStateStoreName, 'ui state')
     }
 
-    #saveSingleObject(o, storeName, label) {
+    #saveSingleObject(o, storeName, label, nolog) {
         const tc = this.db.transaction(storeName, 'readwrite')
             .objectStore(storeName)
         const req = tc.clear()
@@ -119,7 +124,7 @@ class Db {
                 .objectStore(storeName)
             const req2 = ts.put(o)
             req2.onsuccess = e => {
-                if (settings.debug.debug)
+                if (nolog != true && settings.debug.debug)
                     logger.log(DbLogPfx + label + ' saved in db')
             }
         }

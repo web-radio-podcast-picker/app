@@ -11,28 +11,22 @@ class PropertiesStore {
 
     data = {}
 
-    constructor() {
-        this.init()
-    }
-
-    init() {
-        this.data[StoreObjectKeyName] = 'properties'
-    }
-
     toObject() {
         return this.data
     }
 
     fromObject(o) {
         this.data = o
-        this.init()
     }
 
     getProps(item) {
-        return {
+        const o = {
+            key: item.key,
             metadata: item.metadata,
             favLists: item.favLists
         }
+        o[StoreObjectKeyName] = item.key
+        return o
     }
 
     setProps(item, props) {

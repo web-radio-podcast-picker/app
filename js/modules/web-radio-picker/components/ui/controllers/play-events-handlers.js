@@ -221,7 +221,6 @@ class PlayEventsHandlers {
 
                 const position = audio?.currentTime
                 const pos = DurationHMS.fromSeconds(position)    ////console.log(pos.toString())
-                radsItems.setLoadingItemMetadata
                 radsItems.setLoadingItemMetadata('currentTime', pos)
 
                 const cur = radsItems.getLoadingItem()
