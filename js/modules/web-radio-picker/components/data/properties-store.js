@@ -37,7 +37,14 @@ class PropertiesStore {
     save(item) {
         wrpp.checkItemKey(item)
         const key = item.key
-        this.data[key] = this.getProps(item)
+        const props = this.getProps(item)
+        this.data[key] = props
+        return props
+    }
+
+    savePropsToDb(item) {
+        const props = this.save(item)
+        settings.dataStore.savePropertiesSingle(props)
     }
 
     load(item) {

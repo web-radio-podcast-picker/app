@@ -346,18 +346,22 @@ class WebRadioPickerModule extends ModuleBase {
         )
 
         settings.dataStore.init(() => {
-            settings.dataStore.loadRadiosLists(
-                () => {
 
-                    listsBuilder
-                        .buildTagItems()
-                        .buildArtItems()
-                        .buildLangItems()
-                        .buildListsItems()
+            settings.dataStore.loadProperties(() => {
 
-                    if (!firstInit)
-                        settings.dataStore.loadUIState()
-                })
+                settings.dataStore.loadRadiosLists(
+                    () => {
+
+                        listsBuilder
+                            .buildTagItems()
+                            .buildArtItems()
+                            .buildLangItems()
+                            .buildListsItems()
+
+                        if (!firstInit)
+                            settings.dataStore.loadUIState()
+                    })
+            })
         })
     }
 

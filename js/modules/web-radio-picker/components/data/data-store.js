@@ -95,6 +95,26 @@ class DataStore {
         }
     }
 
+    savePropertiesSingle(props) {
+        //this.prDebouncer.debounce(() => this.#dbcSavePropertiesSingle(props))
+        this.#dbcSavePropertiesSingle(props)
+    }
+
+    #dbcSavePropertiesSingle(props) {
+        if (this.saveDisabled) return
+
+        try {
+            if (settings.debug.info)
+                logger.log(DataStoreLogPfx + 'save properties single')
+
+            this.db.savePropertiesSingle(props)
+
+        } catch (err) {
+            this.saveDisabled = true
+            ui.showError('save properties single failed', null, null, null, err)
+        }
+    }
+
     saveRadiosLists() {
         this.rlDebouncer.debounce(() => this.#dbcSaveRadiosLists())
     }

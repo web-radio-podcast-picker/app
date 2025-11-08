@@ -58,6 +58,9 @@ class PlayEventsHandlers {
         radsItems.updateLoadingRadItem(st)
         this.storeEvent('connecting', st, item)
 
+        // auto save single item
+        propertiesStore.savePropsToDb(item)
+
         app.channel.connected = false
         $('#wrp_connected_icon').addClass('hidden')
         $('#wrp_connect_error_icon').addClass('hidden')
@@ -78,8 +81,12 @@ class PlayEventsHandlers {
             logger.log(PlayEventsHandlersLogPfx + st)
         }
 
+        const item = radsItems.loadingRDItem
         radsItems.updateLoadingRadItem(st)
-        this.storeEvent('noConnection', st, radsItems.loadingRDItem)
+        this.storeEvent('noConnection', st, item)
+
+        // auto save single item
+        propertiesStore.savePropsToDb(item)
 
         app.channel.connected = false
         $('#wrp_connected_icon').addClass('hidden')
@@ -151,7 +158,10 @@ class PlayEventsHandlers {
                 podcasts.podcastsLists.updateEpiItemView(item, cur.$item)
             }
 
-            propertiesStore.save(o)
+            ////propertiesStore.save(o)
+            // auto save single item
+            propertiesStore.savePropsToDb(o)
+
             playHistory.setupAddToHistoryTimer(o)
         }
     }
@@ -174,6 +184,9 @@ class PlayEventsHandlers {
     }
 
     onPauseStateChanged(updateRadItemStatusText, item, $item) {
+
+        // TODO: item null here, coz uiState.currentRDItem is null
+        if (item == null) item = radsItems.loadingRDItem
 
         const pause = oscilloscope.pause
         var pauseText = pause ? 'pause' : 'playing'   // TODO: could be connected not playing
@@ -200,6 +213,9 @@ class PlayEventsHandlers {
             radsItems.setLoadingItemMetadata('startTime', Date.now())
         }
 
+        // auto save single item
+        propertiesStore.savePropsToDb(item)
+
         uiState.updatePauseView()
     }
 
@@ -208,6 +224,9 @@ class PlayEventsHandlers {
 
         const st = 'ended'
         this.storeEvent(st, st, cur.loadingRDItem)
+
+        // auto save single item
+        propertiesStore.savePropsToDb(cur.loadingRDItem)
 
         podcasts.podcastsLists.updateEpiItemView(cur.loadingRDItem, cur.$loadingRDItem)
     }

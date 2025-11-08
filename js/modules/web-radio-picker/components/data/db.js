@@ -86,10 +86,19 @@ class Db {
     saveProperties(o) {
         const label = 'properties'
         for (const key in o) {
-            this.#saveSingleObject(o[key], this.propertiesStoreName, label, true)
+            this.#saveObject(o[key], this.propertiesStoreName, label, true)
         }
         if (settings.debug.debug)
             logger.log(DbLogPfx + label + ' saved in db')
+    }
+
+    /**
+     * save item properties
+     * @param {Object} props pdc/epi properties
+     */
+    savePropertiesSingle(props) {
+        const label = 'properties'
+        this.#saveObject(props, this.propertiesStoreName, label)
     }
 
     /**
@@ -130,12 +139,23 @@ class Db {
         }
     }
 
+    #saveObject(o, storeName, label, nolog) {
+        const ts = this.db.transaction(storeName, 'readwrite')
+            .objectStore(storeName)
+        const req2 = ts.put(o)
+        req2.onsuccess = e => {
+            if (nolog != true && settings.debug.debug)
+                logger.log(DbLogPfx + label + ' saved in db')
+        }
+    }
+
     /**
      * load properties
      * @param {Function} onLoaded 
      */
     loadProperties(onLoaded) {
-        this.#loadSingleObject(this.propertiesStoreName, 'properties', 'properties', onLoaded)
+        //this.#loadSingleObject(this.propertiesStoreName, 'properties', 'properties', onLoaded)
+        this.#loadAllObjects(this.propertiesStoreName, 'properties', onLoaded)
     }
 
     /**
@@ -152,6 +172,19 @@ class Db {
      */
     loadUIState(onLoaded) {
         this.#loadSingleObject(this.uiStateStoreName, 'uiState', 'ui state', onLoaded)
+    }
+
+    #loadAllObjects(storeName, label, onLoaded) {
+        const tc = this.db.transaction(storeName, 'readwrite')
+            .objectStore(storeName)
+        const req = tc.getAll()
+        req.onerror = e => this.dbError(e)
+        req.onsuccess = e => {
+            if (settings.debug.debug)
+                logger.log(DbLogPfx + label + ' loaded from db')
+            const o = req.result
+            onLoaded(o)
+        }
     }
 
     #loadSingleObject(storeName, key, label, onLoaded) {
