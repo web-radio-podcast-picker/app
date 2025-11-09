@@ -1,6 +1,8 @@
 11/09/2025  - progress bar not redim when window redim -> list out of bounds
             - names confusion in pdc lists. key must be used in list searches, data-text not suffisant ?
                 test case: French>True crime>Feu de camp (seams severals)
+            
             - open PDC from FAV do not show up pdc preview, rdlist pane is no more selectable
-
+            
+            - DONE -- recycled epi do not appears in epi list !!
             - DONE -- add to favorites : no visual update on pdc list for new pdc fav
