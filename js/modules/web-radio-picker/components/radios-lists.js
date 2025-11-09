@@ -39,11 +39,18 @@ class RadiosLists {
         return this.lists[name]
     }
 
-    addToList(name, radItem) {
+    addToList(listId, name, radItem) {
         const list = this.getList(name)
-        if (list == null) return
-        if (list.items.includes(radItem)) return
-        list.items.push(radItem)
+        if (list == null) return false
+        //if (list.items.includes(radItem)) return false // fix for clones
+        const exItem = list.items.filter(x => x.name == radItem.name
+            && x.url == radItem.url
+        )
+        if (exItem.length == 0) {
+            list.items.push(radItem)
+            return true
+        }
+        return false
     }
 
     getList(name) {
@@ -102,8 +109,28 @@ class RadiosLists {
         item.favLists = item.favLists.filter(x => x != listName)
         const list = this.getList(listName)
         if (list == null) return
-        // compare on id to support clones
-        list.items = list.items.filter(x => x.id != item.id)
+        // compare on name/url to support clones
+        list.items = list.items.filter(x => x.name != item.name
+            && x.url != item.url
+        )
+    }
+
+    removeFromAnyList(item) {
+        for (const listName in this.lists) {
+            const list = this.lists[listName]
+            const existsIn = list.items.filter(
+                x => x.name == item.name
+                    && x.url == item.url).length > 0
+            if (existsIn) {
+                this.lists[listName] =
+                    list.items.filter(
+                        x => x.name != item.name
+                            && x.url != item.url
+                    )
+                if (settings.debug.debug)
+                    console.log('remove item "' + item.name + '" from favList: ' + listName)
+            }
+        }
     }
 
     findItem(listId, itemId) {
@@ -224,12 +251,19 @@ class RadiosLists {
             }
             // update target list
             srcList.items.forEach(srcItem => {
+
                 const tgtItem = this.findItemByNameAndUrl(name, srcItem.name, srcItem.url)
+
                 if (tgtItem == null) {
                     // add favorite
                     // TODO: findRadItem will be removed
                     const newItem = wrpp.findRadItem(srcItem)
                     if (newItem != null) {
+
+                        /**
+                         * ------------ station -----------
+                         */
+
                         // merge favs lists
                         this.merge(srcItem.favLists, newItem.favLists)
                         // add to favlist
@@ -239,10 +273,18 @@ class RadiosLists {
                             logger.log('add to favorite list "' + name + '" : ' + srcItem.name)
                     }
                     else {
+
+                        /**
+                         * ---------- pdc/epi -----------
+                         */
+
                         if (srcItem.pdc) {
                             logger.log('add PDC to favorite list "' + name + '" : ' + srcItem.name)
                             tgtList.items.push(srcItem)
                             importedItems++
+
+                            // ------- persists in memory store ---------
+                            memoryItemsStore.put(srcItem)
                         }
                         else {
                             logger.warn('skip item not in db: ' + srcItem.name)
@@ -332,11 +374,18 @@ class RadiosLists {
                     srcList.isSystem = srcList.name == RadioList_History
                 // transfers props
                 srcList.items.forEach(item => {
+
                     // TODO: this search in allItems . thus loose pdcs & epis
+                    // TODO: will be removed with dynamic station list loading
                     const newItem = wrpp.findRadItem(item)
 
                     // copy dynamic properties from storage
                     if (newItem != null) {
+
+                        /**
+                        * ----------- station item  -------------
+                        **/
+
                         newItem.favLists = [...item.favLists]
                         // fix history fav
                         if (name == RadioList_History && !newItem.favLists.includes(RadioList_History))
@@ -347,8 +396,15 @@ class RadiosLists {
                         substItems.push(newItem)
                     }
                     else {
+
                         if (item.pdc) {
+
+                            /**
+                            * -----------  pdc/epi items  -------------
+                            **/
+
                             substItems.push(item)
+
                             // fix history fav
                             if (name == RadioList_History && !item.favLists.includes(RadioList_History))
                                 item.favLists.push(RadioList_History)
@@ -362,6 +418,9 @@ class RadiosLists {
                             // init properties from local db
                             wrpp.checkItemKey(item)
                             propertiesStore.load(item)
+                            // put item in memory store
+                            memoryItemsStore.put(item)
+
                         }
                     }
                 })
