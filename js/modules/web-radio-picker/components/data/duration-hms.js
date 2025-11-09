@@ -13,6 +13,10 @@ class DurationHMS {
     error = false
     isInfinite = false
 
+    static equals(x, y) {
+        return x.h == y.h && x.m == y.m && x.s == y.s
+    }
+
     static toSeconds(o) {
         return o.h * 60 * 24 + o.m * 60 + o.s
     }
@@ -124,7 +128,7 @@ class DurationHMS {
 
     static fromZero() {
         const d = new DurationHMS()
-        d.h = h.m = d.s = 0
+        d.h = d.m = d.s = 0
         return d
     }
 
