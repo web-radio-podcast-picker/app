@@ -1,0 +1,1 @@
+11/09/2025  progress bar not redim when window redim -> list out of bounds
