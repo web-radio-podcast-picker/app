@@ -108,7 +108,7 @@ class RadiosLists {
     removeFromList(item, listName) {
         item.favLists = item.favLists.filter(x => x != listName)
         const list = this.getList(listName)
-        if (list == null) return
+        if (list == null || !list.items) return
         // compare on name/url to support clones
         list.items = list.items.filter(x => x.name != item.name
             && x.url != item.url
@@ -118,17 +118,19 @@ class RadiosLists {
     removeFromAnyList(item) {
         for (const listName in this.lists) {
             const list = this.lists[listName]
-            const existsIn = list.items.filter(
-                x => x.name == item.name
-                    && x.url == item.url).length > 0
-            if (existsIn) {
-                this.lists[listName] =
-                    list.items.filter(
-                        x => x.name != item.name
-                            && x.url != item.url
-                    )
-                if (settings.debug.debug)
-                    console.log('remove item "' + item.name + '" from favList: ' + listName)
+            if (list.items) {
+                const existsIn = list.items.filter(
+                    x => x.name == item.name
+                        && x.url == item.url).length > 0
+                if (existsIn) {
+                    this.lists[listName] =
+                        list.items.filter(
+                            x => x.name != item.name
+                                && x.url != item.url
+                        )
+                    if (settings.debug.debug)
+                        console.log('remove item "' + item.name + '" from favList: ' + listName)
+                }
             }
         }
     }
@@ -137,13 +139,14 @@ class RadiosLists {
         const list = this.getList(listId)
         if (list == null) return null
         var res = null
-        list.items.some(o => {
-            if (o.id == itemId) {
-                res = o
-                return true
-            }
-            return false
-        })
+        if (list.items)
+            list.items.some(o => {
+                if (o.id == itemId) {
+                    res = o
+                    return true
+                }
+                return false
+            })
         return res
     }
 
@@ -151,13 +154,14 @@ class RadiosLists {
         const list = this.getList(listId)
         if (list == null) return null
         var res = null
-        list.items.some(o => {
-            if (o.name == name && o.url == url) {
-                res = o
-                return true
-            }
-            return false
-        })
+        if (list.items)
+            list.items.some(o => {
+                if (o.name == name && o.url == url) {
+                    res = o
+                    return true
+                }
+                return false
+            })
         return res
     }
 
