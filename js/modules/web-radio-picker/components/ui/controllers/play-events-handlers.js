@@ -209,8 +209,8 @@ class PlayEventsHandlers {
         item.metadata.playState.events.ended = false
         this.removeEnded = true
 
-        if (settings.debug.debug)
-            console.log(PlayEventsHandlersLogPfx, item.metadata.playState.events)
+        //if (settings.debug.debug)
+        //    console.log(PlayEventsHandlersLogPfx, item.metadata.playState.events)
 
         radsItems
             .updateLoadingRadItem(st)
@@ -232,7 +232,7 @@ class PlayEventsHandlers {
         // TODO: item null here, coz uiState.currentRDItem is null
         /*if (item == null)*/ item = radsItems.loadingRDItem
 
-        console.log(PlayEventsHandlersLogPfx, item.metadata.playState.events)
+        //console.log(PlayEventsHandlersLogPfx, item.metadata.playState.events)
 
         const pause = oscilloscope.pause
         var pauseText = pause ? 'pause' : 'playing'   // TODO: could be connected not playing
