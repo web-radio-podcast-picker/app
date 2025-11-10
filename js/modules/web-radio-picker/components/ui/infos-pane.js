@@ -14,6 +14,10 @@ class InfosPane {
         app.startFramePermanentOperations.push(() => {
             this.updateInfoPaneOnEndOfFrame()
         })
+
+        $('#btn_wrp_imp_fav_file').on('click', () => {
+            $('#inp_wrp_imp_fav_file').click()
+        })
     }
 
     initInfoPane() {

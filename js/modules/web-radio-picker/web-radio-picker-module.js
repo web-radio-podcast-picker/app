@@ -275,9 +275,10 @@ class WebRadioPickerModule extends ModuleBase {
                 listCountPath + '==' + filteredListCountPath + '?' + listCountPath + ' :  (' + filteredListCountPath + '+" / "+' + listCountPath + ')',
                 readOnly))
 
-        $('#btn_wrp_all_radios').on('click', () => {
-            this.allRadios()
-        })
+        if (false)  // not available/deprecated from 1.3.16.4
+            $('#btn_wrp_all_radios').on('click', () => {
+                this.allRadios()
+            })
 
         if (!settings.features.constraints.noFullscreenToggling) {
             $('#wrp_fullscreen_on').on('click', () => {
