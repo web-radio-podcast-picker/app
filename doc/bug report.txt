@@ -2,6 +2,8 @@
             - names confusion in pdc lists. key must be used in list searches, data-text not suffisant ?
                 test case: French>True crime>Feu de camp (seams severals)
 
+            - startup: pdc preview doesn't auto open, click on pdc not possible
+
             - after epi end: restore fail, click fail, status == '?'. workarround: open another and reopen
                 notice: top left tool bar all buttons visible
 
