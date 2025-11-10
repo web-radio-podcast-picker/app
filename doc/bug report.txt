@@ -2,6 +2,8 @@
             - names confusion in pdc lists. key must be used in list searches, data-text not suffisant ?
                 test case: French>True crime>Feu de camp (seams severals)
 
+            - progress time missing in station tag view list playing item
+
             - view lists of favorites not correclty updated
 
             - list swap on playing item: loose the current item update ($item null due to save to db ?)
