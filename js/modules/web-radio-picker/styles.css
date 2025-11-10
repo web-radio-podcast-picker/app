@@ -98,7 +98,7 @@ find license and copyright informations in files /COPYRIGHT and /LICENCE
     /* grid-template-columns: auto; */
 }
 
-#inp_wrp_imp_fav_file {
+#inp_wrp_inp_fav_file {
     grid-column: 1;
     grid-row: 1;
     opacity: 0;

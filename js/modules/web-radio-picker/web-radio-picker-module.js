@@ -417,17 +417,32 @@ class WebRadioPickerModule extends ModuleBase {
     async importRadiosListsFromClipboard() {
         try {
             const res = await radiosLists.importFromClipboard()
-            listsBuilder.updateListsItems()
-            settings.dataStore.saveRadiosLists()
-            const text = `&bull; imported lists: ${res.importedLists}<br>&bull; imported items: ${res.importedItems}`
-            dialogs.showInfoPopup(
-                dialogs.infoPopup('Favorites imported', text, null, null, true)
-            )
+            this.#updateFavsAfterImport(res)
         } catch (err) {
             dialogs.showInfoPopup(
                 dialogs.infoPopupError('Import failed', err)
             )
         }
+    }
+
+    importRadiosListsFromText(text) {
+        try {
+            const res = radiosLists.importFromText(text)
+            this.#updateFavsAfterImport(res)
+        } catch (err) {
+            dialogs.showInfoPopup(
+                dialogs.infoPopupError('Import failed', err)
+            )
+        }
+    }
+
+    #updateFavsAfterImport(res) {
+        listsBuilder.updateListsItems()
+        settings.dataStore.saveRadiosLists()
+        const text = `&bull; imported lists: ${res.importedLists}<br>&bull; imported items: ${res.importedItems}`
+        dialogs.showInfoPopup(
+            dialogs.infoPopup('Favorites imported', text, null, null, true)
+        )
     }
 
     /**
@@ -437,8 +452,9 @@ class WebRadioPickerModule extends ModuleBase {
     importRadiosListsFromFile(file) {
         try {
             const reader = new FileReader()
-            reader.onLoad = e => {
+            reader.onload = e => {
                 const text = e.target.result
+                this.importRadiosListsFromText(text)
             }
             reader.readAsText(file)
         } catch (err) {
