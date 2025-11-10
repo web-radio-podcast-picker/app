@@ -4,6 +4,8 @@
 
             - view lists of favorites not correclty updated
 
+            - list swap on playing item: loose the current item update ($item null due to save to db ?)
+
             - startup: pdc preview doesn't auto open, click on pdc not possible
 
             - after epi end: restore fail, click fail, status == '?'. workarround: open another and reopen
