@@ -43,7 +43,7 @@ class Db {
             this.db = e.target.result
             this.dbReady = true
             if (settings.debug.debug)
-                logger.log(DbLogPfx + 'db ready (no migration)')
+                logger.log(DbLogPfx + 'db ready (no migration) cur ver=' + settings.db.dbVer)
             if (this.onDbReady) this.onDbReady()
         }
         req.onupgradeneeded = e => this.createDb(e, e.target.result)
@@ -63,7 +63,8 @@ class Db {
             logger.log(DbLogPfx + 'db migration from version ' + e.oldVersion + ' to ' + e.newVersion)
         }
 
-        const checkReady = id => {
+        const checkReady = (id, cnt) => {
+            if (cnt == null || cnt === undefined) cnt = 1
             this.#count++
             this.dbReady = this.#count == 5
             if (settings.debug.debug)
@@ -96,7 +97,7 @@ class Db {
             const uiStateStore = db.createObjectStore(
                 this.uiStateStoreName, { keyPath: StoreKeyName })
             uiStateStore.transaction.oncomplete = e => checkReady(this.uiStateStoreName)
-        }
+        } else checkReady(this.uiStateStoreName, 3)
 
         if (noPrevVer || e.oldVersion == 1) {
 
@@ -107,9 +108,9 @@ class Db {
             const rssStore = db.createObjectStore(
                 this.rssStoreName, { keyPath: StoreObjectKeyName })
             rssStore.transaction.oncomplete = e => checkReady(this.rssStoreName)
-        }
+        } else checkReady(this.rssStoreName, 1)
 
-        if (noPrevVer || e.oldVersion == 1 || e.oldVersion == 2) {
+        if (noPrevVer || e.oldVersion <= 2) {
 
             if (settings.debug.debug) logger.log(DbLogPfx + 'migrate db to version 3')
 
@@ -118,7 +119,9 @@ class Db {
             const pdcListsStore = db.createObjectStore(
                 this.pdcListsStoreName, { keyPath: StoreObjectKeyName })
             pdcListsStore.transaction.oncomplete = e => checkReady(this.pdcListsStoreName)
-        }
+        } else checkReady(this.pdcListsStoreName, 1)
+
+        // version 4 - fix mig version 1 to 3
     }
 
     /**
