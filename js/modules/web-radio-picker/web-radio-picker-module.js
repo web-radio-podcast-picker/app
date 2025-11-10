@@ -430,6 +430,24 @@ class WebRadioPickerModule extends ModuleBase {
         }
     }
 
+    /**
+     * import favs from a json file
+     * @param {Object} file fileInput.files[0]
+     */
+    importRadiosListsFromFile(file) {
+        try {
+            const reader = new FileReader()
+            reader.onLoad = e => {
+                const text = e.target.result
+            }
+            reader.readAsText(file)
+        } catch (err) {
+            dialogs.showInfoPopup(
+                dialogs.infoPopupError('Import failed', err)
+            )
+        }
+    }
+
     exportRadiosListsToClipboard() {
         try {
             radiosLists.exportToClipboard()

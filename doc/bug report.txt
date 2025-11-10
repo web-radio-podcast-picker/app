@@ -4,7 +4,7 @@
 
             - progress time missing in station tag view list playing item
                 can occurs too on history
-                
+
             - view lists of favorites not correclty updated
 
             - list swap on playing item: loose the current item update ($item null due to save to db ?)
@@ -22,3 +22,10 @@
 
             - DONE -- recycled epi do not appears in epi list !!
             - DONE -- add to favorites : no visual update on pdc list for new pdc fav
+
+------------------------------------------------------------------------------------------------------------------------------------------
+TODO
+------------------------------------------------------------------------------------------------------------------------------------------
+
+    - showing state 'seeking' when setting audio stream position
+
