@@ -5,9 +5,206 @@
     "items": [
       {
         "code": null,
-        "name": "Comprendre l'infrastructure technique qui permet aux agents IA d'exister, Rémi Louf",
+        "name": "Construire un produit Open Source sans lever de fonds, Grégory Rocher",
         "qty": "",
-        "subText2": "01:24 / 02:03:33",
+        "subText2": "02:09:34 / 02:09:34",
+        "metadata": {
+          "statusText": "ended",
+          "playState": {
+            "statusText": "ended",
+            "loadingState": "ended",
+            "playingState": {
+              "isPaused": false,
+              "isCurrent": true,
+              "isPlaying": true
+            },
+            "events": {
+              "connecting": true,
+              "noConnection": false,
+              "connected": true,
+              "ended": true,
+              "playing": true,
+              "seeking": true,
+              "pauseStateChanged": true
+            }
+          },
+          "startTime": 1762872906780,
+          "duration": {
+            "h": 2,
+            "m": 9,
+            "s": 34,
+            "error": false,
+            "isInfinite": false
+          },
+          "currentTime": {
+            "h": 2,
+            "m": 9,
+            "s": 34,
+            "error": false,
+            "isInfinite": false
+          },
+          "endTime": 1762868774811
+        },
+        "subText": "April 28, 2025",
+        "url": "https://sphinx.acast.com/p/open/s/67a716499c6f7f7f280da15b/e/680ff01e6ac0e5213bfd0c74/media.mp3",
+        "sel": {
+          "lang": {
+            "item": {
+              "code": "fra",
+              "name": "French",
+              "qty": 64492
+            }
+          },
+          "langSubListId": "tag",
+          "tag": {
+            "item": {
+              "code": null,
+              "name": "technology",
+              "qty": 1390
+            }
+          },
+          "tagSubListId": "letter",
+          "letter": {
+            "item": {
+              "code": null,
+              "name": "J",
+              "qty": 9,
+              "stores": [
+                1
+              ]
+            }
+          },
+          "letterSubListId": "pdc",
+          "pdc": {
+            "item": {
+              "code": null,
+              "name": "Just a Click",
+              "qty": 111,
+              "url": "https://feeds.acast.com/public/shows/67a716499c6f7f7f280da15b",
+              "store": 1,
+              "page": 1,
+              "sel": null,
+              "selCnt": 1,
+              "id": "Just a Click",
+              "favLists": [
+                "----- Podcasts ------"
+              ],
+              "metadata": {
+                "statusText": ""
+              },
+              "pdc": true,
+              "key": "Just a Clickhttps://feeds.acast.com/public/shows/67a716499c6f7f7f280da15b",
+              "rss": null,
+              "logo": "https://assets.pippa.io/shows/67a716499c6f7f7f280da15b/show-cover.png",
+              "subText": "Terry Michel",
+              "pItem": null
+            }
+          },
+          "pdcSubListId": "epi",
+          "epi": {
+            "item": {
+              "code": null,
+              "name": "Construire un produit Open Source sans lever de fonds, Grégory Rocher",
+              "qty": "",
+              "subText2": "15:12 / 02:09:34",
+              "metadata": {
+                "statusText": "playing",
+                "playState": {
+                  "statusText": "playing",
+                  "loadingState": "pauseStateChanged",
+                  "playingState": {
+                    "isPaused": false,
+                    "isCurrent": true,
+                    "isPlaying": true
+                  },
+                  "events": {
+                    "connecting": true,
+                    "noConnection": false,
+                    "connected": true,
+                    "ended": false,
+                    "playing": true,
+                    "pauseStateChanged": true
+                  }
+                },
+                "startTime": 1762870263315,
+                "duration": {
+                  "h": 2,
+                  "m": 9,
+                  "s": 34,
+                  "error": false,
+                  "isInfinite": false
+                },
+                "currentTime": {
+                  "h": 0,
+                  "m": 15,
+                  "s": 12,
+                  "error": false,
+                  "isInfinite": false
+                },
+                "endTime": 1762868774811
+              },
+              "subText": "April 28, 2025",
+              "url": "https://sphinx.acast.com/p/open/s/67a716499c6f7f7f280da15b/e/680ff01e6ac0e5213bfd0c74/media.mp3",
+              "sel": null,
+              "id": "Construire un produit Open Source sans lever de fonds, Grégory Rocher",
+              "favLists": [
+                "----- Podcasts ------"
+              ],
+              "logo": "https://assets.pippa.io/shows/67a716499c6f7f7f280da15b/1745874469900-0e2fa7eb-ea5e-40ee-a6fc-b573c365dfb8.jpeg",
+              "pdc": true,
+              "epi": true,
+              "pubDate": "Mon, 28 Apr 2025 21:16:13 GMT",
+              "groups": [],
+              "key": "Construire un produit Open Source sans lever de fonds, Grégory Rocherhttps://sphinx.acast.com/p/open/s/67a716499c6f7f7f280da15b/e/680ff01e6ac0e5213bfd0c74/media.mp3",
+              "ref": {
+                "currentRDList": {
+                  "listId": "Podcast",
+                  "name": "epi",
+                  "$item": null
+                },
+                "currentTab": {
+                  "listId": "Podcast",
+                  "tabId": "btn_wrp_podcast"
+                }
+              },
+              "listenDate": 1762867926198,
+              "pItem": null
+            }
+          },
+          "epiSubListId": null,
+          "noPage": 1,
+          "epiOpen": false,
+          "epiOpening": false
+        },
+        "id": "Construire un produit Open Source sans lever de fonds, Grégory Rocher",
+        "favLists": [
+          "----- Podcasts ------"
+        ],
+        "logo": "https://assets.pippa.io/shows/67a716499c6f7f7f280da15b/1745874469900-0e2fa7eb-ea5e-40ee-a6fc-b573c365dfb8.jpeg",
+        "pdc": true,
+        "epi": true,
+        "pubDate": "Mon, 28 Apr 2025 21:16:13 GMT",
+        "groups": [],
+        "key": "Construire un produit Open Source sans lever de fonds, Grégory Rocherhttps://sphinx.acast.com/p/open/s/67a716499c6f7f7f280da15b/e/680ff01e6ac0e5213bfd0c74/media.mp3",
+        "ref": {
+          "currentRDList": {
+            "listId": "List",
+            "name": "History",
+            "$item": null
+          },
+          "currentTab": {
+            "listId": "Viz",
+            "tabId": "btn_wrp_logo"
+          }
+        },
+        "listenDate": 1762872913705,
+        "statusText": "ended"
+      },
+      {
+        "code": null,
+        "name": "Épisode 2 - Dans l’ombre de la lumière",
+        "qty": "",
+        "subText2": "01:43 / 16:22",
         "metadata": {
           "statusText": "playing",
           "playState": {
@@ -24,10 +221,238 @@
               "connected": true,
               "ended": false,
               "playing": true,
+              "seeking": true,
               "pauseStateChanged": true
             }
           },
-          "startTime": 1762807809820,
+          "startTime": 1762872897679,
+          "duration": {
+            "h": 0,
+            "m": 16,
+            "s": 22,
+            "error": false,
+            "isInfinite": false
+          },
+          "currentTime": {
+            "h": 0,
+            "m": 1,
+            "s": 43,
+            "error": false,
+            "isInfinite": false
+          },
+          "endTime": 1762750294165
+        },
+        "subText": "July 19, 2022",
+        "url": "https://dts.podtrac.com/redirect.mp3/audio.ausha.co/y8LeilmwKzqy.mp3?t=1658209135",
+        "sel": {
+          "lang": {
+            "item": {
+              "code": "fra",
+              "name": "French",
+              "qty": 64492
+            }
+          },
+          "langSubListId": "tag",
+          "tag": {
+            "item": {
+              "code": null,
+              "name": "documentary",
+              "qty": 213
+            }
+          },
+          "tagSubListId": "letter",
+          "letter": {
+            "item": {
+              "code": null,
+              "name": "T",
+              "qty": 11,
+              "stores": [
+                1
+              ]
+            }
+          },
+          "letterSubListId": "pdc",
+          "pdc": {
+            "item": {
+              "code": null,
+              "name": "Transmission",
+              "qty": 38,
+              "url": "https://feed.ausha.co/bYrWFLRaGLEB",
+              "store": 1,
+              "page": 1,
+              "pItem": null,
+              "sel": null,
+              "selCnt": 1,
+              "id": "Transmission",
+              "favLists": [
+                "----- Podcasts ------"
+              ],
+              "metadata": {
+                "statusText": ""
+              },
+              "pdc": true,
+              "rss": null,
+              "logo": "https://image.ausha.co/Nj7zt2QMrAxMqHjMWzbOWoG49noXqIQyF4kuD1Vs_1400x1400.jpeg?t=1568889519",
+              "subText": "Collectif Transmission",
+              "key": "Transmissionhttps://feed.ausha.co/bYrWFLRaGLEB"
+            }
+          },
+          "pdcSubListId": "epi",
+          "epi": {
+            "item": {
+              "code": null,
+              "name": "Épisode 2 - Dans l’ombre de la lumière",
+              "qty": "",
+              "subText2": "00:58 / 16:22",
+              "metadata": {
+                "statusText": "playing",
+                "playState": {
+                  "statusText": "playing",
+                  "loadingState": "playing",
+                  "playingState": {
+                    "isPaused": false,
+                    "isCurrent": true,
+                    "isPlaying": true
+                  },
+                  "events": {
+                    "connecting": true,
+                    "noConnection": false,
+                    "connected": true,
+                    "ended": false,
+                    "playing": true,
+                    "pauseStateChanged": true
+                  }
+                },
+                "startTime": 1762750257831,
+                "duration": {
+                  "h": 0,
+                  "m": 16,
+                  "s": 22,
+                  "error": false,
+                  "isInfinite": false
+                },
+                "currentTime": {
+                  "h": 0,
+                  "m": 0,
+                  "s": 58,
+                  "error": false,
+                  "isInfinite": false
+                }
+              },
+              "subText": "July 19, 2022",
+              "url": "https://dts.podtrac.com/redirect.mp3/audio.ausha.co/y8LeilmwKzqy.mp3?t=1658209135",
+              "sel": null,
+              "id": "Épisode 2 - Dans l’ombre de la lumière",
+              "favLists": [],
+              "logo": "https://image.ausha.co/GvuOm7qpTeFirWoigupqOF8Ewa1djZSTrfmZ4uvh_1400x1400.jpeg?t=1658209463",
+              "pdc": true,
+              "epi": true,
+              "pubDate": "Tue, 19 Jul 2022 05:44:30 +0000",
+              "groups": [],
+              "key": "Épisode 2 - Dans l’ombre de la lumièrehttps://dts.podtrac.com/redirect.mp3/audio.ausha.co/y8LeilmwKzqy.mp3?t=1658209135",
+              "ref": {
+                "currentRDList": {
+                  "listId": "List",
+                  "name": "History",
+                  "$item": {
+                    "0": {},
+                    "length": 1
+                  }
+                },
+                "currentTab": {
+                  "listId": "List",
+                  "tabId": "btn_wrp_play_list"
+                }
+              },
+              "listenDate": 1762736154278,
+              "pItem": null
+            }
+          },
+          "epiSubListId": null,
+          "noPage": 1,
+          "epiOpen": true,
+          "epiOpening": false
+        },
+        "id": "Épisode 2 - Dans l’ombre de la lumière",
+        "favLists": [],
+        "logo": "https://image.ausha.co/GvuOm7qpTeFirWoigupqOF8Ewa1djZSTrfmZ4uvh_1400x1400.jpeg?t=1658209463",
+        "pdc": true,
+        "epi": true,
+        "pubDate": "Tue, 19 Jul 2022 05:44:30 +0000",
+        "groups": [],
+        "key": "Épisode 2 - Dans l’ombre de la lumièrehttps://dts.podtrac.com/redirect.mp3/audio.ausha.co/y8LeilmwKzqy.mp3?t=1658209135",
+        "ref": {
+          "currentRDList": {
+            "listId": "List",
+            "name": "History",
+            "$item": null
+          },
+          "currentTab": {
+            "listId": "Viz",
+            "tabId": "btn_wrp_logo"
+          }
+        },
+        "listenDate": 1762872884591
+      },
+      {
+        "id": "2063",
+        "name": "Instrumental Jazz",
+        "description": null,
+        "groupTitle": null,
+        "groups": [
+          "Instrumental",
+          "Jazz"
+        ],
+        "url": "https://jfm1.hostingradio.ru:14536/ijstream.mp3",
+        "logo": "https://radiojazzfm.ru/favicons/apple-touch-icon.png",
+        "artist": null,
+        "lang": null,
+        "channels": null,
+        "country": null,
+        "favLists": [
+          "History",
+          "Jazz"
+        ],
+        "metadata": {
+          "duration": null,
+          "stereo": null,
+          "encoding": null,
+          "sampleFrq": null,
+          "sampleRes": null,
+          "country": null,
+          "statusText": null,
+          "startTime": null,
+          "stopTime": null,
+          "position": null
+        },
+        "key": "Instrumental Jazzhttps://jfm1.hostingradio.ru:14536/ijstream.mp3"
+      },
+      {
+        "code": null,
+        "name": "Comprendre l'infrastructure technique qui permet aux agents IA d'exister, Rémi Louf",
+        "qty": "",
+        "subText2": "00:04 / 02:03:33",
+        "metadata": {
+          "statusText": "playing",
+          "playState": {
+            "statusText": "playing",
+            "loadingState": "playing",
+            "playingState": {
+              "isPaused": false,
+              "isCurrent": true,
+              "isPlaying": true
+            },
+            "events": {
+              "connecting": true,
+              "noConnection": false,
+              "connected": true,
+              "ended": false,
+              "playing": true,
+              "seeking": true,
+              "pauseStateChanged": true
+            }
+          },
+          "startTime": 1762872548344,
           "duration": {
             "h": 2,
             "m": 3,
@@ -37,11 +462,12 @@
           },
           "currentTime": {
             "h": 0,
-            "m": 1,
-            "s": 24,
+            "m": 0,
+            "s": 4,
             "error": false,
             "isInfinite": false
-          }
+          },
+          "endTime": 1762810638838
         },
         "subText": "November 4, 2025",
         "url": "https://sphinx.acast.com/p/open/s/67a716499c6f7f7f280da15b/e/6907c88a17c1d64648c094fa/media.mp3",
@@ -102,9 +528,652 @@
           "epi": {
             "item": {
               "code": null,
+              "name": "Construire un produit Open Source sans lever de fonds, Grégory Rocher",
+              "qty": "",
+              "subText2": "15:12 / 02:09:34",
+              "metadata": {
+                "statusText": "playing",
+                "playState": {
+                  "statusText": "playing",
+                  "loadingState": "pauseStateChanged",
+                  "playingState": {
+                    "isPaused": false,
+                    "isCurrent": true,
+                    "isPlaying": true
+                  },
+                  "events": {
+                    "connecting": true,
+                    "noConnection": false,
+                    "connected": true,
+                    "ended": false,
+                    "playing": true,
+                    "pauseStateChanged": true
+                  }
+                },
+                "startTime": 1762870263315,
+                "duration": {
+                  "h": 2,
+                  "m": 9,
+                  "s": 34,
+                  "error": false,
+                  "isInfinite": false
+                },
+                "currentTime": {
+                  "h": 0,
+                  "m": 15,
+                  "s": 12,
+                  "error": false,
+                  "isInfinite": false
+                },
+                "endTime": 1762868774811
+              },
+              "subText": "April 28, 2025",
+              "url": "https://sphinx.acast.com/p/open/s/67a716499c6f7f7f280da15b/e/680ff01e6ac0e5213bfd0c74/media.mp3",
+              "sel": null,
+              "id": "Construire un produit Open Source sans lever de fonds, Grégory Rocher",
+              "favLists": [
+                "----- Podcasts ------"
+              ],
+              "logo": "https://assets.pippa.io/shows/67a716499c6f7f7f280da15b/1745874469900-0e2fa7eb-ea5e-40ee-a6fc-b573c365dfb8.jpeg",
+              "pdc": true,
+              "epi": true,
+              "pubDate": "Mon, 28 Apr 2025 21:16:13 GMT",
+              "groups": [],
+              "key": "Construire un produit Open Source sans lever de fonds, Grégory Rocherhttps://sphinx.acast.com/p/open/s/67a716499c6f7f7f280da15b/e/680ff01e6ac0e5213bfd0c74/media.mp3",
+              "ref": {
+                "currentRDList": {
+                  "listId": "Podcast",
+                  "name": "epi",
+                  "$item": null
+                },
+                "currentTab": {
+                  "listId": "Podcast",
+                  "tabId": "btn_wrp_podcast"
+                }
+              },
+              "listenDate": 1762867926198,
+              "pItem": null
+            }
+          },
+          "epiSubListId": null,
+          "noPage": 1,
+          "epiOpen": false,
+          "epiOpening": false
+        },
+        "id": "Comprendre l'infrastructure technique qui permet aux agents IA d'exister, Rémi Louf",
+        "favLists": [
+          "----- Podcasts ------"
+        ],
+        "logo": "https://assets.pippa.io/shows/67a716499c6f7f7f280da15b/1762117684157-d19cc72f-4d46-4470-bb60-91b63813756d.jpeg",
+        "pdc": true,
+        "epi": true,
+        "pubDate": "Mon, 03 Nov 2025 23:16:12 GMT",
+        "groups": [],
+        "key": "Comprendre l'infrastructure technique qui permet aux agents IA d'exister, Rémi Loufhttps://sphinx.acast.com/p/open/s/67a716499c6f7f7f280da15b/e/6907c88a17c1d64648c094fa/media.mp3",
+        "ref": {
+          "currentRDList": {
+            "listId": "List",
+            "name": "History",
+            "$item": null
+          },
+          "currentTab": {
+            "listId": "Viz",
+            "tabId": "btn_wrp_logo"
+          }
+        },
+        "listenDate": 1762867059458,
+        "statusText": "ended"
+      },
+      {
+        "id": "18291",
+        "name": "Dionne Warwick",
+        "description": null,
+        "groupTitle": null,
+        "groups": [
+          "Artists"
+        ],
+        "url": "https://streaming.exclusive.radio/er/dionnewarwick/icecast.audio",
+        "logo": "https://manager.uber.radio/static/uploads/station/3d7226ef-7d66-4a30-81a1-ea78f1800aea.jpg",
+        "artist": "Dionne Warwick",
+        "lang": null,
+        "channels": null,
+        "country": null,
+        "favLists": [
+          "History",
+          "Jazz"
+        ],
+        "metadata": {
+          "duration": null,
+          "stereo": null,
+          "encoding": null,
+          "sampleFrq": null,
+          "sampleRes": null,
+          "country": null,
+          "statusText": null,
+          "startTime": null,
+          "stopTime": null,
+          "position": null
+        },
+        "key": "Dionne Warwickhttps://streaming.exclusive.radio/er/dionnewarwick/icecast.audio"
+      },
+      {
+        "id": "18418",
+        "name": "John Coltrane",
+        "description": null,
+        "groupTitle": null,
+        "groups": [
+          "Artists"
+        ],
+        "url": "https://streaming.exclusive.radio/er/johncoltrane/icecast.audio",
+        "logo": "https://manager.uber.radio/static/uploads/station/a6338885-fc0b-4295-809b-f265446cbcc3.jpg",
+        "artist": "John Coltrane",
+        "lang": null,
+        "channels": null,
+        "country": null,
+        "favLists": [
+          "Jazz"
+        ],
+        "metadata": {
+          "duration": null,
+          "stereo": null,
+          "encoding": null,
+          "sampleFrq": null,
+          "sampleRes": null,
+          "country": null,
+          "statusText": null,
+          "startTime": null,
+          "stopTime": null,
+          "position": null
+        },
+        "key": "John Coltranehttps://streaming.exclusive.radio/er/johncoltrane/icecast.audio"
+      },
+      {
+        "id": "10120",
+        "name": "ON Smooth Jazz",
+        "description": null,
+        "groupTitle": null,
+        "groups": [
+          "Smooth",
+          "Jazz"
+        ],
+        "url": "https://0n-smoothjazz.radionetz.de/0n-smoothjazz.mp3",
+        "logo": "https://www.0nradio.com/images/favicon/favicon.ico",
+        "artist": null,
+        "lang": null,
+        "channels": null,
+        "country": null,
+        "favLists": [
+          "History",
+          "Jazz"
+        ],
+        "metadata": {
+          "duration": null,
+          "stereo": null,
+          "encoding": null,
+          "sampleFrq": null,
+          "sampleRes": null,
+          "country": null,
+          "statusText": null,
+          "startTime": null,
+          "stopTime": null,
+          "position": null
+        },
+        "key": "ON Smooth Jazzhttps://0n-smoothjazz.radionetz.de/0n-smoothjazz.mp3"
+      },
+      {
+        "id": "4055",
+        "name": "HitsRadio Smooth Jazz",
+        "description": null,
+        "groupTitle": null,
+        "groups": [
+          "Smooth",
+          "Jazz"
+        ],
+        "url": "https://playerservices.streamtheworld.com/api/livestream-redirect/977_SMOOJAZZ.mp3",
+        "logo": "https://www.hitsradio.com/img/default/hitsradio.png",
+        "artist": null,
+        "lang": null,
+        "channels": null,
+        "country": null,
+        "favLists": [
+          "Jazz"
+        ],
+        "metadata": {
+          "duration": null,
+          "stereo": null,
+          "encoding": null,
+          "sampleFrq": null,
+          "sampleRes": null,
+          "country": null,
+          "statusText": null,
+          "startTime": null,
+          "stopTime": null,
+          "position": null
+        },
+        "key": "HitsRadio Smooth Jazzhttps://playerservices.streamtheworld.com/api/livestream-redirect/977_SMOOJAZZ.mp3"
+      },
+      {
+        "id": "10728",
+        "name": "Euro Smooth Jazz",
+        "description": null,
+        "groupTitle": null,
+        "groups": [
+          "Smooth",
+          "Jazz"
+        ],
+        "url": "http://eurosmoothjazz.stream.laut.fm/eurosmoothjazz?t302=2021-12-21_03-04-14&uuid=aefa5532-59b1-4df2-a8b6-7d749280505b",
+        "logo": "http://eurosmoothjazz.com/wp-content/themes/twentytwelve-eurosmoothjazz/apple-touch-icon-76x76.png",
+        "artist": null,
+        "lang": null,
+        "channels": null,
+        "country": null,
+        "favLists": [
+          "History",
+          "Jazz"
+        ],
+        "metadata": {
+          "duration": null,
+          "stereo": null,
+          "encoding": null,
+          "sampleFrq": null,
+          "sampleRes": null,
+          "country": null,
+          "statusText": null,
+          "startTime": null,
+          "stopTime": null,
+          "position": null
+        },
+        "key": "Euro Smooth Jazzhttp://eurosmoothjazz.stream.laut.fm/eurosmoothjazz?t302=2021-12-21_03-04-14&uuid=aefa5532-59b1-4df2-a8b6-7d749280505b"
+      },
+      {
+        "id": "13575",
+        "name": "80 Houyinyuetai",
+        "description": null,
+        "groupTitle": null,
+        "groups": [
+          "80s"
+        ],
+        "url": "http://lhttp.qingting.fm/live/20207761/64k.mp3",
+        "logo": "https://media.radiodeck.com/stations/5f74f2b3664ee8400841a0df/profile/606edba09175373112bdb158/xl.jpg",
+        "artist": null,
+        "lang": null,
+        "channels": null,
+        "country": null,
+        "favLists": [
+          "History",
+          "Jazz"
+        ],
+        "metadata": {
+          "duration": null,
+          "stereo": null,
+          "encoding": null,
+          "sampleFrq": null,
+          "sampleRes": null,
+          "country": null,
+          "statusText": null,
+          "startTime": null,
+          "stopTime": null,
+          "position": null
+        },
+        "key": "80 Houyinyuetaihttp://lhttp.qingting.fm/live/20207761/64k.mp3"
+      },
+      {
+        "id": "18288",
+        "name": "Diana Krall",
+        "description": null,
+        "groupTitle": null,
+        "groups": [
+          "Artists"
+        ],
+        "url": "https://streaming.exclusive.radio/er/dianakrall/icecast.audio",
+        "logo": "https://manager.uber.radio/static/uploads/station/64da41ad-3742-4f62-907d-96f1cf11d81a.jpg",
+        "artist": "Diana Krall",
+        "lang": null,
+        "channels": null,
+        "country": null,
+        "favLists": [
+          "History",
+          "Jazz"
+        ],
+        "metadata": {
+          "duration": null,
+          "stereo": null,
+          "encoding": null,
+          "sampleFrq": null,
+          "sampleRes": null,
+          "country": null,
+          "statusText": null,
+          "startTime": null,
+          "stopTime": null,
+          "position": null
+        },
+        "key": "Diana Krallhttps://streaming.exclusive.radio/er/dianakrall/icecast.audio"
+      },
+      {
+        "id": "3094",
+        "name": "101 Smooth Jazz",
+        "description": null,
+        "groupTitle": null,
+        "groups": [
+          "Smooth",
+          "Jazz"
+        ],
+        "url": "https://edge1.peta.live365.net/b22139_128mp3",
+        "logo": "http://101smoothjazz.com/favicon.ico",
+        "artist": null,
+        "lang": null,
+        "channels": null,
+        "country": null,
+        "favLists": [
+          "History",
+          "Jazz"
+        ],
+        "metadata": {
+          "duration": null,
+          "stereo": null,
+          "encoding": null,
+          "sampleFrq": null,
+          "sampleRes": null,
+          "country": null,
+          "statusText": null,
+          "startTime": null,
+          "stopTime": null,
+          "position": null
+        },
+        "key": "101 Smooth Jazzhttps://edge1.peta.live365.net/b22139_128mp3"
+      },
+      {
+        "code": null,
+        "name": "Épisode 120 - Spécial Halloween - Les dystopies du présent",
+        "qty": "",
+        "subText2": "02:28 / 03:03:17",
+        "subText": "October 30, 2025",
+        "url": "https://www.buzzsprout.com/1431712/episodes/18107796-episode-120-special-halloween-les-dystopies-du-present.mp3",
+        "sel": {
+          "lang": {
+            "item": {
+              "code": "fra",
+              "name": "French",
+              "qty": 64492
+            }
+          },
+          "langSubListId": "tag",
+          "tag": {
+            "item": {
+              "code": null,
+              "name": "society",
+              "qty": 9159
+            }
+          },
+          "tagSubListId": "letter",
+          "letter": {
+            "item": {
+              "code": null,
+              "name": "I",
+              "qty": 206,
+              "stores": [
+                1
+              ]
+            }
+          },
+          "letterSubListId": "pdc",
+          "pdc": {
+            "item": {
+              "code": null,
+              "name": "I.A. Café - Enquête au cœur de la recherche sur l’intelligence artificielle",
+              "qty": 121,
+              "url": "https://feeds.buzzsprout.com/1431712.rss",
+              "store": 1,
+              "page": 1,
+              "sel": null,
+              "selCnt": 1,
+              "id": "I.A. Café - Enquête au cœur de la recherche sur l’intelligence artificielle",
+              "favLists": [
+                "History",
+                "----- Podcasts ------"
+              ],
+              "metadata": {
+                "statusText": ""
+              },
+              "pdc": true,
+              "key": "I.A. Café - Enquête au cœur de la recherche sur l’intelligence artificiellehttps://feeds.buzzsprout.com/1431712.rss",
+              "rss": null,
+              "logo": "https://storage.buzzsprout.com/x6ebtnmk3p24rw0ijsvaro4qu9dr?.jpg",
+              "subText": "Jean-François Sénéchal, Frédérick Plamondon, David Beauchemin, Ève Gaumond, Sylvain Munger, Shirley Plumerand, Véronique Tremblay et Stéphane Mineo.",
+              "pItem": null
+            }
+          },
+          "pdcSubListId": "epi",
+          "epi": {
+            "item": {
+              "code": null,
+              "name": "MCU Phase 3",
+              "qty": "",
+              "subText2": "00:49 / 01:09:13",
+              "metadata": {
+                "statusText": "playing",
+                "playState": {
+                  "statusText": "playing",
+                  "loadingState": "playing",
+                  "playingState": {
+                    "isPaused": false,
+                    "isCurrent": true,
+                    "isPlaying": true
+                  },
+                  "events": {
+                    "connecting": true,
+                    "noConnection": false,
+                    "connected": true,
+                    "ended": false,
+                    "playing": true,
+                    "pauseStateChanged": true
+                  }
+                },
+                "startTime": 1762732135784,
+                "duration": {
+                  "h": 1,
+                  "m": 9,
+                  "s": 13,
+                  "error": false,
+                  "isInfinite": false
+                },
+                "currentTime": {
+                  "h": 0,
+                  "m": 0,
+                  "s": 49,
+                  "error": false,
+                  "isInfinite": false
+                }
+              },
+              "subText": "May 17, 2019",
+              "url": "https://feeds.soundcloud.com/stream/622308897-inculture-mcu-phase-3.m4a",
+              "sel": null,
+              "id": "MCU Phase 3",
+              "favLists": [],
+              "logo": "https://i1.sndcdn.com/artworks-000536939385-cipwvb-t3000x3000.jpg",
+              "pdc": true,
+              "epi": true,
+              "pubDate": "Fri, 17 May 2019 20:48:57 +0000",
+              "groups": [],
+              "key": "MCU Phase 3https://feeds.soundcloud.com/stream/622308897-inculture-mcu-phase-3.m4a",
+              "ref": {
+                "currentRDList": {
+                  "listId": "Podcast",
+                  "name": "epi",
+                  "$item": null
+                },
+                "currentTab": {
+                  "listId": "Podcast",
+                  "tabId": "btn_wrp_podcast"
+                }
+              },
+              "listenDate": 1762732145774,
+              "pItem": null
+            }
+          },
+          "epiSubListId": null,
+          "noPage": 1,
+          "epiOpen": false,
+          "epiOpening": false
+        },
+        "id": "Épisode 120 - Spécial Halloween - Les dystopies du présent",
+        "favLists": [],
+        "logo": "https://storage.buzzsprout.com/x6ebtnmk3p24rw0ijsvaro4qu9dr?.jpg",
+        "metadata": {
+          "statusText": "playing",
+          "playState": {
+            "statusText": "playing",
+            "loadingState": "playing",
+            "playingState": {
+              "isPaused": false,
+              "isCurrent": true,
+              "isPlaying": true
+            },
+            "events": {
+              "connecting": true,
+              "noConnection": false,
+              "connected": true,
+              "ended": false,
+              "playing": true,
+              "pauseStateChanged": true
+            }
+          },
+          "startTime": 1762810368819,
+          "duration": {
+            "h": 3,
+            "m": 3,
+            "s": 17,
+            "error": false,
+            "isInfinite": false
+          },
+          "currentTime": {
+            "h": 0,
+            "m": 2,
+            "s": 28,
+            "error": false,
+            "isInfinite": false
+          }
+        },
+        "pdc": true,
+        "epi": true,
+        "pubDate": "Thu, 30 Oct 2025 17:00:00 -0400",
+        "groups": [],
+        "key": "Épisode 120 - Spécial Halloween - Les dystopies du présenthttps://www.buzzsprout.com/1431712/episodes/18107796-episode-120-special-halloween-les-dystopies-du-present.mp3",
+        "ref": {
+          "currentRDList": {
+            "listId": "Podcast",
+            "name": "epi",
+            "$item": null
+          },
+          "currentTab": {
+            "listId": "Podcast",
+            "tabId": "btn_wrp_podcast"
+          }
+        },
+        "listenDate": 1762810362237
+      },
+      {
+        "code": null,
+        "name": "ChatGPT, Claude, Mistral : Le DRH d'Orange Business, Laurent Aufils, révèle son usage des IA",
+        "qty": "",
+        "subText2": "00:46 / 01:10:38",
+        "metadata": {
+          "statusText": "playing",
+          "playState": {
+            "statusText": "playing",
+            "loadingState": "playing",
+            "playingState": {
+              "isPaused": false,
+              "isCurrent": true,
+              "isPlaying": true
+            },
+            "events": {
+              "connecting": true,
+              "noConnection": false,
+              "connected": true,
+              "ended": false,
+              "playing": true,
+              "pauseStateChanged": true
+            }
+          },
+          "startTime": 1762809932100,
+          "duration": {
+            "h": 1,
+            "m": 10,
+            "s": 38,
+            "error": false,
+            "isInfinite": false
+          },
+          "currentTime": {
+            "h": 0,
+            "m": 0,
+            "s": 46,
+            "error": false,
+            "isInfinite": false
+          }
+        },
+        "subText": "May 26, 2025",
+        "url": "https://anchor.fm/s/863b4d14/podcast/play/103213467/https%3A%2F%2Fd3ctxlq1ktw2nl.cloudfront.net%2Fstaging%2F2025-4-26%2F401011536-44100-2-b9e085eefb482.mp3",
+        "sel": {
+          "lang": {
+            "item": {
+              "code": "fra",
+              "name": "French",
+              "qty": 64492
+            }
+          },
+          "langSubListId": "tag",
+          "tag": {
+            "item": {
+              "code": null,
+              "name": "technology",
+              "qty": 1390
+            }
+          },
+          "tagSubListId": "letter",
+          "letter": {
+            "item": {
+              "code": null,
+              "name": "J",
+              "qty": 9,
+              "stores": [
+                1
+              ]
+            }
+          },
+          "letterSubListId": "pdc",
+          "pdc": {
+            "item": {
+              "code": null,
+              "name": "Jeanviet - L'informatique pour tous (podcast audio)",
+              "qty": 360,
+              "url": "https://anchor.fm/s/863b4d14/podcast/rss",
+              "store": 1,
+              "page": 1,
+              "sel": null,
+              "selCnt": 1,
+              "id": "Jeanviet - L'informatique pour tous (podcast audio)",
+              "favLists": [
+                "----- Podcasts ------"
+              ],
+              "metadata": {
+                "statusText": ""
+              },
+              "pdc": true,
+              "key": "Jeanviet - L'informatique pour tous (podcast audio)https://anchor.fm/s/863b4d14/podcast/rss",
+              "rss": null,
+              "logo": "https://d3t3ozftmdmh3i.cloudfront.net/staging/podcast_uploaded_nologo/22420333/af7c6208bedfda2b.jpeg",
+              "subText": "Jean-Baptiste Viet",
+              "pItem": null
+            }
+          },
+          "pdcSubListId": "epi",
+          "epi": {
+            "item": {
+              "code": null,
               "name": "Comprendre l'infrastructure technique qui permet aux agents IA d'exister, Rémi Louf",
               "qty": "",
-              "subText2": "01:04 / 02:03:33",
+              "subText2": "01:08:33 / 02:03:33",
               "metadata": {
                 "statusText": "playing",
                 "playState": {
@@ -133,9 +1202,9 @@
                   "isInfinite": false
                 },
                 "currentTime": {
-                  "h": 0,
-                  "m": 1,
-                  "s": 4,
+                  "h": 1,
+                  "m": 8,
+                  "s": 33,
                   "error": false,
                   "isInfinite": false
                 }
@@ -144,7 +1213,9 @@
               "url": "https://sphinx.acast.com/p/open/s/67a716499c6f7f7f280da15b/e/6907c88a17c1d64648c094fa/media.mp3",
               "sel": null,
               "id": "Comprendre l'infrastructure technique qui permet aux agents IA d'exister, Rémi Louf",
-              "favLists": [],
+              "favLists": [
+                "----- Podcasts ------"
+              ],
               "logo": "https://assets.pippa.io/shows/67a716499c6f7f7f280da15b/1762117684157-d19cc72f-4d46-4470-bb60-91b63813756d.jpeg",
               "pdc": true,
               "epi": true,
@@ -171,16 +1242,14 @@
           "epiOpen": false,
           "epiOpening": false
         },
-        "id": "Comprendre l'infrastructure technique qui permet aux agents IA d'exister, Rémi Louf",
-        "favLists": [
-          "----- Podcasts ------"
-        ],
-        "logo": "https://assets.pippa.io/shows/67a716499c6f7f7f280da15b/1762117684157-d19cc72f-4d46-4470-bb60-91b63813756d.jpeg",
+        "id": "ChatGPT, Claude, Mistral : Le DRH d'Orange Business, Laurent Aufils, révèle son usage des IA",
+        "favLists": [],
+        "logo": "https://d3t3ozftmdmh3i.cloudfront.net/staging/podcast_uploaded_episode/22420333/22420333-1748261201047-19953ede1a536.jpg",
         "pdc": true,
         "epi": true,
-        "pubDate": "Mon, 03 Nov 2025 23:16:12 GMT",
+        "pubDate": "Mon, 26 May 2025 12:10:12 GMT",
         "groups": [],
-        "key": "Comprendre l'infrastructure technique qui permet aux agents IA d'exister, Rémi Loufhttps://sphinx.acast.com/p/open/s/67a716499c6f7f7f280da15b/e/6907c88a17c1d64648c094fa/media.mp3",
+        "key": "ChatGPT, Claude, Mistral : Le DRH d'Orange Business, Laurent Aufils, révèle son usage des IAhttps://anchor.fm/s/863b4d14/podcast/play/103213467/https%3A%2F%2Fd3ctxlq1ktw2nl.cloudfront.net%2Fstaging%2F2025-4-26%2F401011536-44100-2-b9e085eefb482.mp3",
         "ref": {
           "currentRDList": {
             "listId": "Podcast",
@@ -192,7 +1261,198 @@
             "tabId": "btn_wrp_podcast"
           }
         },
-        "listenDate": 1762807819623
+        "listenDate": 1762809942088
+      },
+      {
+        "code": null,
+        "name": "Créer un clip vidéo Full IA : Le Making-Of de Coeur Galactique avec Etienne Auger (Vzeeble)",
+        "qty": "",
+        "subText2": "00:14 / 01:04:17",
+        "metadata": {
+          "statusText": "playing",
+          "playState": {
+            "statusText": "playing",
+            "loadingState": "playing",
+            "playingState": {
+              "isPaused": false,
+              "isCurrent": true,
+              "isPlaying": true
+            },
+            "events": {
+              "connecting": true,
+              "noConnection": false,
+              "connected": true,
+              "ended": false,
+              "playing": true,
+              "pauseStateChanged": true
+            }
+          },
+          "startTime": 1762809892898,
+          "duration": {
+            "h": 1,
+            "m": 4,
+            "s": 17,
+            "error": false,
+            "isInfinite": false
+          },
+          "currentTime": {
+            "h": 0,
+            "m": 0,
+            "s": 14,
+            "error": false,
+            "isInfinite": false
+          }
+        },
+        "subText": "September 28, 2025",
+        "url": "https://anchor.fm/s/863b4d14/podcast/play/108933143/https%3A%2F%2Fd3ctxlq1ktw2nl.cloudfront.net%2Fstaging%2F2025-8-28%2F408299167-44100-2-cab3e287c62aa.mp3",
+        "sel": {
+          "lang": {
+            "item": {
+              "code": "fra",
+              "name": "French",
+              "qty": 64492
+            }
+          },
+          "langSubListId": "tag",
+          "tag": {
+            "item": {
+              "code": null,
+              "name": "technology",
+              "qty": 1390
+            }
+          },
+          "tagSubListId": "letter",
+          "letter": {
+            "item": {
+              "code": null,
+              "name": "J",
+              "qty": 9,
+              "stores": [
+                1
+              ]
+            }
+          },
+          "letterSubListId": "pdc",
+          "pdc": {
+            "item": {
+              "code": null,
+              "name": "Jeanviet - L'informatique pour tous (podcast audio)",
+              "qty": 360,
+              "url": "https://anchor.fm/s/863b4d14/podcast/rss",
+              "store": 1,
+              "page": 1,
+              "sel": null,
+              "selCnt": 1,
+              "id": "Jeanviet - L'informatique pour tous (podcast audio)",
+              "favLists": [
+                "----- Podcasts ------"
+              ],
+              "metadata": {
+                "statusText": ""
+              },
+              "pdc": true,
+              "key": "Jeanviet - L'informatique pour tous (podcast audio)https://anchor.fm/s/863b4d14/podcast/rss",
+              "rss": null,
+              "logo": "https://d3t3ozftmdmh3i.cloudfront.net/staging/podcast_uploaded_nologo/22420333/af7c6208bedfda2b.jpeg",
+              "subText": "Jean-Baptiste Viet",
+              "pItem": null
+            }
+          },
+          "pdcSubListId": "epi",
+          "epi": {
+            "item": {
+              "code": null,
+              "name": "Comprendre l'infrastructure technique qui permet aux agents IA d'exister, Rémi Louf",
+              "qty": "",
+              "subText2": "01:08:33 / 02:03:33",
+              "metadata": {
+                "statusText": "playing",
+                "playState": {
+                  "statusText": "playing",
+                  "loadingState": "playing",
+                  "playingState": {
+                    "isPaused": false,
+                    "isCurrent": true,
+                    "isPlaying": true
+                  },
+                  "events": {
+                    "connecting": true,
+                    "noConnection": false,
+                    "connected": true,
+                    "ended": false,
+                    "playing": true,
+                    "pauseStateChanged": true
+                  }
+                },
+                "startTime": 1762807809820,
+                "duration": {
+                  "h": 2,
+                  "m": 3,
+                  "s": 33,
+                  "error": false,
+                  "isInfinite": false
+                },
+                "currentTime": {
+                  "h": 1,
+                  "m": 8,
+                  "s": 33,
+                  "error": false,
+                  "isInfinite": false
+                }
+              },
+              "subText": "November 4, 2025",
+              "url": "https://sphinx.acast.com/p/open/s/67a716499c6f7f7f280da15b/e/6907c88a17c1d64648c094fa/media.mp3",
+              "sel": null,
+              "id": "Comprendre l'infrastructure technique qui permet aux agents IA d'exister, Rémi Louf",
+              "favLists": [
+                "----- Podcasts ------"
+              ],
+              "logo": "https://assets.pippa.io/shows/67a716499c6f7f7f280da15b/1762117684157-d19cc72f-4d46-4470-bb60-91b63813756d.jpeg",
+              "pdc": true,
+              "epi": true,
+              "pubDate": "Mon, 03 Nov 2025 23:16:12 GMT",
+              "groups": [],
+              "key": "Comprendre l'infrastructure technique qui permet aux agents IA d'exister, Rémi Loufhttps://sphinx.acast.com/p/open/s/67a716499c6f7f7f280da15b/e/6907c88a17c1d64648c094fa/media.mp3",
+              "ref": {
+                "currentRDList": {
+                  "listId": "Podcast",
+                  "name": "epi",
+                  "$item": null
+                },
+                "currentTab": {
+                  "listId": "Podcast",
+                  "tabId": "btn_wrp_podcast"
+                }
+              },
+              "listenDate": 1762807819623,
+              "pItem": null
+            }
+          },
+          "epiSubListId": null,
+          "noPage": 1,
+          "epiOpen": false,
+          "epiOpening": false
+        },
+        "id": "Créer un clip vidéo Full IA : Le Making-Of de Coeur Galactique avec Etienne Auger (Vzeeble)",
+        "favLists": [],
+        "logo": "https://d3t3ozftmdmh3i.cloudfront.net/staging/podcast_uploaded_episode/22420333/22420333-1759092836866-105029b678a0f.jpg",
+        "pdc": true,
+        "epi": true,
+        "pubDate": "Sun, 28 Sep 2025 20:55:23 GMT",
+        "groups": [],
+        "key": "Créer un clip vidéo Full IA : Le Making-Of de Coeur Galactique avec Etienne Auger (Vzeeble)https://anchor.fm/s/863b4d14/podcast/play/108933143/https%3A%2F%2Fd3ctxlq1ktw2nl.cloudfront.net%2Fstaging%2F2025-8-28%2F408299167-44100-2-cab3e287c62aa.mp3",
+        "ref": {
+          "currentRDList": {
+            "listId": "Podcast",
+            "name": "epi",
+            "$item": null
+          },
+          "currentTab": {
+            "listId": "Podcast",
+            "tabId": "btn_wrp_podcast"
+          }
+        },
+        "listenDate": 1762809901952
       },
       {
         "code": null,
@@ -1969,199 +3229,6 @@
           "position": null
         },
         "key": "La Retro 80s Chilehttps://s2.radio.co:80/s9ecef4f68/listen"
-      },
-      {
-        "code": null,
-        "name": "Épisode 2 - Dans l’ombre de la lumière",
-        "qty": "",
-        "subText2": "01:32 / 16:22",
-        "metadata": {
-          "statusText": "playing",
-          "playState": {
-            "statusText": "pause",
-            "loadingState": "pauseStateChanged",
-            "playingState": {
-              "isPaused": true,
-              "isCurrent": true,
-              "isPlaying": false
-            },
-            "events": {
-              "connecting": true,
-              "noConnection": false,
-              "connected": true,
-              "ended": false,
-              "playing": true,
-              "pauseStateChanged": true
-            }
-          },
-          "startTime": 1762750257831,
-          "duration": {
-            "h": 0,
-            "m": 16,
-            "s": 22,
-            "error": false,
-            "isInfinite": false
-          },
-          "currentTime": {
-            "h": 0,
-            "m": 1,
-            "s": 32,
-            "error": false,
-            "isInfinite": false
-          },
-          "endTime": 1762750294165
-        },
-        "subText": "July 19, 2022",
-        "url": "https://dts.podtrac.com/redirect.mp3/audio.ausha.co/y8LeilmwKzqy.mp3?t=1658209135",
-        "sel": {
-          "lang": {
-            "item": {
-              "code": "fra",
-              "name": "French",
-              "qty": 64492
-            }
-          },
-          "langSubListId": "tag",
-          "tag": {
-            "item": {
-              "code": null,
-              "name": "documentary",
-              "qty": 213
-            }
-          },
-          "tagSubListId": "letter",
-          "letter": {
-            "item": {
-              "code": null,
-              "name": "T",
-              "qty": 11,
-              "stores": [
-                1
-              ]
-            }
-          },
-          "letterSubListId": "pdc",
-          "pdc": {
-            "item": {
-              "code": null,
-              "name": "Transmission",
-              "qty": 38,
-              "url": "https://feed.ausha.co/bYrWFLRaGLEB",
-              "store": 1,
-              "page": 1,
-              "pItem": null,
-              "sel": null,
-              "selCnt": 1,
-              "id": "Transmission",
-              "favLists": [
-                "----- Podcasts ------"
-              ],
-              "metadata": {
-                "statusText": ""
-              },
-              "pdc": true,
-              "rss": null,
-              "logo": "https://image.ausha.co/Nj7zt2QMrAxMqHjMWzbOWoG49noXqIQyF4kuD1Vs_1400x1400.jpeg?t=1568889519",
-              "subText": "Collectif Transmission",
-              "key": "Transmissionhttps://feed.ausha.co/bYrWFLRaGLEB"
-            }
-          },
-          "pdcSubListId": "epi",
-          "epi": {
-            "item": {
-              "code": null,
-              "name": "Épisode 2 - Dans l’ombre de la lumière",
-              "qty": "",
-              "subText2": "00:58 / 16:22",
-              "metadata": {
-                "statusText": "playing",
-                "playState": {
-                  "statusText": "playing",
-                  "loadingState": "playing",
-                  "playingState": {
-                    "isPaused": false,
-                    "isCurrent": true,
-                    "isPlaying": true
-                  },
-                  "events": {
-                    "connecting": true,
-                    "noConnection": false,
-                    "connected": true,
-                    "ended": false,
-                    "playing": true,
-                    "pauseStateChanged": true
-                  }
-                },
-                "startTime": 1762750257831,
-                "duration": {
-                  "h": 0,
-                  "m": 16,
-                  "s": 22,
-                  "error": false,
-                  "isInfinite": false
-                },
-                "currentTime": {
-                  "h": 0,
-                  "m": 0,
-                  "s": 58,
-                  "error": false,
-                  "isInfinite": false
-                }
-              },
-              "subText": "July 19, 2022",
-              "url": "https://dts.podtrac.com/redirect.mp3/audio.ausha.co/y8LeilmwKzqy.mp3?t=1658209135",
-              "sel": null,
-              "id": "Épisode 2 - Dans l’ombre de la lumière",
-              "favLists": [],
-              "logo": "https://image.ausha.co/GvuOm7qpTeFirWoigupqOF8Ewa1djZSTrfmZ4uvh_1400x1400.jpeg?t=1658209463",
-              "pdc": true,
-              "epi": true,
-              "pubDate": "Tue, 19 Jul 2022 05:44:30 +0000",
-              "groups": [],
-              "key": "Épisode 2 - Dans l’ombre de la lumièrehttps://dts.podtrac.com/redirect.mp3/audio.ausha.co/y8LeilmwKzqy.mp3?t=1658209135",
-              "ref": {
-                "currentRDList": {
-                  "listId": "List",
-                  "name": "History",
-                  "$item": {
-                    "0": {},
-                    "length": 1
-                  }
-                },
-                "currentTab": {
-                  "listId": "List",
-                  "tabId": "btn_wrp_play_list"
-                }
-              },
-              "listenDate": 1762736154278,
-              "pItem": null
-            }
-          },
-          "epiSubListId": null,
-          "noPage": 1,
-          "epiOpen": true,
-          "epiOpening": false
-        },
-        "id": "Épisode 2 - Dans l’ombre de la lumière",
-        "favLists": [],
-        "logo": "https://image.ausha.co/GvuOm7qpTeFirWoigupqOF8Ewa1djZSTrfmZ4uvh_1400x1400.jpeg?t=1658209463",
-        "pdc": true,
-        "epi": true,
-        "pubDate": "Tue, 19 Jul 2022 05:44:30 +0000",
-        "groups": [],
-        "key": "Épisode 2 - Dans l’ombre de la lumièrehttps://dts.podtrac.com/redirect.mp3/audio.ausha.co/y8LeilmwKzqy.mp3?t=1658209135",
-        "ref": {
-          "currentRDList": {
-            "listId": "List",
-            "name": "History",
-            "$item": null
-          },
-          "currentTab": {
-            "listId": "List",
-            "tabId": "btn_wrp_play_list"
-          }
-        },
-        "listenDate": 1762750267426
       },
       {
         "code": null,
@@ -10359,190 +11426,6 @@
       },
       {
         "code": null,
-        "name": "Épisode 120 - Spécial Halloween - Les dystopies du présent",
-        "qty": "",
-        "subText2": "01:59 / 03:03:17",
-        "subText": "October 30, 2025",
-        "url": "https://www.buzzsprout.com/1431712/episodes/18107796-episode-120-special-halloween-les-dystopies-du-present.mp3",
-        "sel": {
-          "lang": {
-            "item": {
-              "code": "fra",
-              "name": "French",
-              "qty": 64492
-            }
-          },
-          "langSubListId": "tag",
-          "tag": {
-            "item": {
-              "code": null,
-              "name": "social",
-              "qty": 184,
-              "stores": [
-                1
-              ]
-            }
-          },
-          "tagSubListId": "pdc",
-          "letter": null,
-          "letterSubListId": null,
-          "pdc": {
-            "item": {
-              "code": null,
-              "name": "I.A. Café - Enquête au cœur de la recherche sur l’intelligence artificielle",
-              "qty": 121,
-              "url": "https://feeds.buzzsprout.com/1431712.rss",
-              "store": 1,
-              "page": 1,
-              "sel": null,
-              "selCnt": 1,
-              "id": "I.A. Café - Enquête au cœur de la recherche sur l’intelligence artificielle",
-              "favLists": [
-                "History",
-                "----- Podcasts ------"
-              ],
-              "metadata": {
-                "statusText": ""
-              },
-              "pdc": true,
-              "key": "I.A. Café - Enquête au cœur de la recherche sur l’intelligence artificiellehttps://feeds.buzzsprout.com/1431712.rss",
-              "rss": null,
-              "logo": "https://storage.buzzsprout.com/x6ebtnmk3p24rw0ijsvaro4qu9dr?.jpg",
-              "subText": "Jean-François Sénéchal, Frédérick Plamondon, David Beauchemin, Ève Gaumond, Sylvain Munger, Shirley Plumerand, Véronique Tremblay et Stéphane Mineo.",
-              "pItem": null
-            }
-          },
-          "pdcSubListId": "epi",
-          "epi": {
-            "item": {
-              "code": null,
-              "name": "Le trouble bipolaire - L'errance ",
-              "qty": "",
-              "subText2": "01:19 / 01:00:39",
-              "subText": "March 17, 2020",
-              "url": "https://sphinx.acast.com/p/open/s/5e6a643396648a4359821fb0/e/5e70e9060e38830f7195c9e4/media.mp3",
-              "sel": null,
-              "id": "Le trouble bipolaire - L'errance ",
-              "favLists": [],
-              "logo": "https://assets.pippa.io/shows/5e6a643396648a4359821fb0/1584538849596-c744dbb791be6498a4c1a101c200ab3a.jpeg",
-              "metadata": {
-                "statusText": "playing",
-                "playState": {
-                  "statusText": "playing",
-                  "loadingState": "playing",
-                  "playingState": {
-                    "isPaused": false,
-                    "isCurrent": true,
-                    "isPlaying": true
-                  },
-                  "events": {
-                    "connecting": true,
-                    "noConnection": false,
-                    "connected": true,
-                    "ended": false,
-                    "playing": true,
-                    "pauseStateChanged": true
-                  }
-                },
-                "startTime": 1762727239906,
-                "duration": {
-                  "h": 1,
-                  "m": 0,
-                  "s": 39,
-                  "error": false,
-                  "isInfinite": false
-                },
-                "currentTime": {
-                  "h": 0,
-                  "m": 1,
-                  "s": 19,
-                  "error": false,
-                  "isInfinite": false
-                }
-              },
-              "pdc": true,
-              "epi": true,
-              "pubDate": "Tue, 17 Mar 2020 15:13:09 GMT",
-              "groups": [],
-              "key": "Le trouble bipolaire - L'errance https://sphinx.acast.com/p/open/s/5e6a643396648a4359821fb0/e/5e70e9060e38830f7195c9e4/media.mp3",
-              "ref": {
-                "currentRDList": {
-                  "listId": "Podcast",
-                  "name": "epi",
-                  "$item": null
-                },
-                "currentTab": {
-                  "listId": "Podcast",
-                  "tabId": "btn_wrp_podcast"
-                }
-              },
-              "listenDate": 1762727249906,
-              "pItem": null
-            }
-          },
-          "epiSubListId": null,
-          "noPage": 1,
-          "epiOpen": false,
-          "epiOpening": false
-        },
-        "id": "Épisode 120 - Spécial Halloween - Les dystopies du présent",
-        "favLists": [],
-        "logo": "https://storage.buzzsprout.com/x6ebtnmk3p24rw0ijsvaro4qu9dr?.jpg",
-        "metadata": {
-          "statusText": "playing",
-          "playState": {
-            "statusText": "playing",
-            "loadingState": "playing",
-            "playingState": {
-              "isPaused": false,
-              "isCurrent": true,
-              "isPlaying": true
-            },
-            "events": {
-              "connecting": true,
-              "noConnection": false,
-              "connected": true,
-              "ended": false,
-              "playing": true,
-              "pauseStateChanged": true
-            }
-          },
-          "startTime": 1762727330195,
-          "duration": {
-            "h": 3,
-            "m": 3,
-            "s": 17,
-            "error": false,
-            "isInfinite": false
-          },
-          "currentTime": {
-            "h": 0,
-            "m": 1,
-            "s": 59,
-            "error": false,
-            "isInfinite": false
-          }
-        },
-        "pdc": true,
-        "epi": true,
-        "pubDate": "Thu, 30 Oct 2025 17:00:00 -0400",
-        "groups": [],
-        "key": "Épisode 120 - Spécial Halloween - Les dystopies du présenthttps://www.buzzsprout.com/1431712/episodes/18107796-episode-120-special-halloween-les-dystopies-du-present.mp3",
-        "ref": {
-          "currentRDList": {
-            "listId": "Podcast",
-            "name": "epi",
-            "$item": null
-          },
-          "currentTab": {
-            "listId": "Podcast",
-            "tabId": "btn_wrp_podcast"
-          }
-        },
-        "listenDate": 1762727340192
-      },
-      {
-        "code": null,
         "name": "Le trouble bipolaire - L'errance ",
         "qty": "",
         "subText2": "01:29 / 01:00:39",
@@ -14636,33 +15519,43 @@
           "pdc": {
             "item": {
               "code": null,
-              "name": "Info Truffaut",
-              "qty": 8,
-              "url": "https://back-audioblog.arteradio.com/blog/97869/rss",
+              "name": "I.A. Café - Enquête au cœur de la recherche sur l’intelligence artificielle",
+              "qty": 121,
+              "url": "https://feeds.buzzsprout.com/1431712.rss",
               "store": 1,
               "page": 1,
               "sel": null,
-              "selCnt": 1,
-              "id": "Info Truffaut",
-              "favLists": [],
+              "selCnt": 0,
+              "id": "I.A. Café - Enquête au cœur de la recherche sur l’intelligence artificielle",
+              "favLists": [
+                "History",
+                "----- Podcasts ------"
+              ],
               "metadata": {
                 "statusText": ""
               },
               "pdc": true,
-              "key": "Info Truffauthttps://back-audioblog.arteradio.com/blog/97869/rss",
+              "key": "I.A. Café - Enquête au cœur de la recherche sur l’intelligence artificiellehttps://feeds.buzzsprout.com/1431712.rss",
               "rss": null,
-              "logo": "https://sons-audioblogs.arte.tv/test/user/default/avatar2.jpg",
-              "subText": "Collège Truffaut",
+              "logo": "https://storage.buzzsprout.com/x6ebtnmk3p24rw0ijsvaro4qu9dr?.jpg",
+              "subText": "Jean-François Sénéchal, Frédérick Plamondon, David Beauchemin, Ève Gaumond, Sylvain Munger, Shirley Plumerand, Véronique Tremblay et Stéphane Mineo.",
               "pItem": null
-            }
+            },
+            "selCnt": 0
           },
           "pdcSubListId": "epi",
           "epi": {
             "item": {
               "code": null,
-              "name": "MCU Phase 3",
+              "name": "Épisode 120 - Spécial Halloween - Les dystopies du présent",
               "qty": "",
-              "subText2": "00:49 / 01:09:13",
+              "subText2": "02:28 / 03:03:17",
+              "subText": "October 30, 2025",
+              "url": "https://www.buzzsprout.com/1431712/episodes/18107796-episode-120-special-halloween-les-dystopies-du-present.mp3",
+              "sel": null,
+              "id": "Épisode 120 - Spécial Halloween - Les dystopies du présent",
+              "favLists": [],
+              "logo": "https://storage.buzzsprout.com/x6ebtnmk3p24rw0ijsvaro4qu9dr?.jpg",
               "metadata": {
                 "statusText": "playing",
                 "playState": {
@@ -14682,33 +15575,27 @@
                     "pauseStateChanged": true
                   }
                 },
-                "startTime": 1762732135784,
+                "startTime": 1762810368819,
                 "duration": {
-                  "h": 1,
-                  "m": 9,
-                  "s": 13,
+                  "h": 3,
+                  "m": 3,
+                  "s": 17,
                   "error": false,
                   "isInfinite": false
                 },
                 "currentTime": {
                   "h": 0,
-                  "m": 0,
-                  "s": 49,
+                  "m": 2,
+                  "s": 28,
                   "error": false,
                   "isInfinite": false
                 }
               },
-              "subText": "May 17, 2019",
-              "url": "https://feeds.soundcloud.com/stream/622308897-inculture-mcu-phase-3.m4a",
-              "sel": null,
-              "id": "MCU Phase 3",
-              "favLists": [],
-              "logo": "https://i1.sndcdn.com/artworks-000536939385-cipwvb-t3000x3000.jpg",
               "pdc": true,
               "epi": true,
-              "pubDate": "Fri, 17 May 2019 20:48:57 +0000",
+              "pubDate": "Thu, 30 Oct 2025 17:00:00 -0400",
               "groups": [],
-              "key": "MCU Phase 3https://feeds.soundcloud.com/stream/622308897-inculture-mcu-phase-3.m4a",
+              "key": "Épisode 120 - Spécial Halloween - Les dystopies du présenthttps://www.buzzsprout.com/1431712/episodes/18107796-episode-120-special-halloween-les-dystopies-du-present.mp3",
               "ref": {
                 "currentRDList": {
                   "listId": "Podcast",
@@ -14720,7 +15607,7 @@
                   "tabId": "btn_wrp_podcast"
                 }
               },
-              "listenDate": 1762732145774,
+              "listenDate": 1762810362237,
               "pItem": null
             }
           },
@@ -32104,33 +32991,43 @@
           "pdc": {
             "item": {
               "code": null,
-              "name": "Info Truffaut",
-              "qty": 8,
-              "url": "https://back-audioblog.arteradio.com/blog/97869/rss",
+              "name": "I.A. Café - Enquête au cœur de la recherche sur l’intelligence artificielle",
+              "qty": 121,
+              "url": "https://feeds.buzzsprout.com/1431712.rss",
               "store": 1,
               "page": 1,
               "sel": null,
-              "selCnt": 1,
-              "id": "Info Truffaut",
-              "favLists": [],
+              "selCnt": 0,
+              "id": "I.A. Café - Enquête au cœur de la recherche sur l’intelligence artificielle",
+              "favLists": [
+                "History",
+                "----- Podcasts ------"
+              ],
               "metadata": {
                 "statusText": ""
               },
               "pdc": true,
-              "key": "Info Truffauthttps://back-audioblog.arteradio.com/blog/97869/rss",
+              "key": "I.A. Café - Enquête au cœur de la recherche sur l’intelligence artificiellehttps://feeds.buzzsprout.com/1431712.rss",
               "rss": null,
-              "logo": "https://sons-audioblogs.arte.tv/test/user/default/avatar2.jpg",
-              "subText": "Collège Truffaut",
+              "logo": "https://storage.buzzsprout.com/x6ebtnmk3p24rw0ijsvaro4qu9dr?.jpg",
+              "subText": "Jean-François Sénéchal, Frédérick Plamondon, David Beauchemin, Ève Gaumond, Sylvain Munger, Shirley Plumerand, Véronique Tremblay et Stéphane Mineo.",
               "pItem": null
-            }
+            },
+            "selCnt": 0
           },
           "pdcSubListId": "epi",
           "epi": {
             "item": {
               "code": null,
-              "name": "MCU Phase 3",
+              "name": "Épisode 120 - Spécial Halloween - Les dystopies du présent",
               "qty": "",
-              "subText2": "00:49 / 01:09:13",
+              "subText2": "02:28 / 03:03:17",
+              "subText": "October 30, 2025",
+              "url": "https://www.buzzsprout.com/1431712/episodes/18107796-episode-120-special-halloween-les-dystopies-du-present.mp3",
+              "sel": null,
+              "id": "Épisode 120 - Spécial Halloween - Les dystopies du présent",
+              "favLists": [],
+              "logo": "https://storage.buzzsprout.com/x6ebtnmk3p24rw0ijsvaro4qu9dr?.jpg",
               "metadata": {
                 "statusText": "playing",
                 "playState": {
@@ -32150,33 +33047,27 @@
                     "pauseStateChanged": true
                   }
                 },
-                "startTime": 1762732135784,
+                "startTime": 1762810368819,
                 "duration": {
-                  "h": 1,
-                  "m": 9,
-                  "s": 13,
+                  "h": 3,
+                  "m": 3,
+                  "s": 17,
                   "error": false,
                   "isInfinite": false
                 },
                 "currentTime": {
                   "h": 0,
-                  "m": 0,
-                  "s": 49,
+                  "m": 2,
+                  "s": 28,
                   "error": false,
                   "isInfinite": false
                 }
               },
-              "subText": "May 17, 2019",
-              "url": "https://feeds.soundcloud.com/stream/622308897-inculture-mcu-phase-3.m4a",
-              "sel": null,
-              "id": "MCU Phase 3",
-              "favLists": [],
-              "logo": "https://i1.sndcdn.com/artworks-000536939385-cipwvb-t3000x3000.jpg",
               "pdc": true,
               "epi": true,
-              "pubDate": "Fri, 17 May 2019 20:48:57 +0000",
+              "pubDate": "Thu, 30 Oct 2025 17:00:00 -0400",
               "groups": [],
-              "key": "MCU Phase 3https://feeds.soundcloud.com/stream/622308897-inculture-mcu-phase-3.m4a",
+              "key": "Épisode 120 - Spécial Halloween - Les dystopies du présenthttps://www.buzzsprout.com/1431712/episodes/18107796-episode-120-special-halloween-les-dystopies-du-present.mp3",
               "ref": {
                 "currentRDList": {
                   "listId": "Podcast",
@@ -32188,7 +33079,7 @@
                   "tabId": "btn_wrp_podcast"
                 }
               },
-              "listenDate": 1762732145774,
+              "listenDate": 1762810362237,
               "pItem": null
             }
           },
@@ -32542,33 +33433,43 @@
           "pdc": {
             "item": {
               "code": null,
-              "name": "Info Truffaut",
-              "qty": 8,
-              "url": "https://back-audioblog.arteradio.com/blog/97869/rss",
+              "name": "I.A. Café - Enquête au cœur de la recherche sur l’intelligence artificielle",
+              "qty": 121,
+              "url": "https://feeds.buzzsprout.com/1431712.rss",
               "store": 1,
               "page": 1,
               "sel": null,
-              "selCnt": 1,
-              "id": "Info Truffaut",
-              "favLists": [],
+              "selCnt": 0,
+              "id": "I.A. Café - Enquête au cœur de la recherche sur l’intelligence artificielle",
+              "favLists": [
+                "History",
+                "----- Podcasts ------"
+              ],
               "metadata": {
                 "statusText": ""
               },
               "pdc": true,
-              "key": "Info Truffauthttps://back-audioblog.arteradio.com/blog/97869/rss",
+              "key": "I.A. Café - Enquête au cœur de la recherche sur l’intelligence artificiellehttps://feeds.buzzsprout.com/1431712.rss",
               "rss": null,
-              "logo": "https://sons-audioblogs.arte.tv/test/user/default/avatar2.jpg",
-              "subText": "Collège Truffaut",
+              "logo": "https://storage.buzzsprout.com/x6ebtnmk3p24rw0ijsvaro4qu9dr?.jpg",
+              "subText": "Jean-François Sénéchal, Frédérick Plamondon, David Beauchemin, Ève Gaumond, Sylvain Munger, Shirley Plumerand, Véronique Tremblay et Stéphane Mineo.",
               "pItem": null
-            }
+            },
+            "selCnt": 0
           },
           "pdcSubListId": "epi",
           "epi": {
             "item": {
               "code": null,
-              "name": "MCU Phase 3",
+              "name": "Épisode 120 - Spécial Halloween - Les dystopies du présent",
               "qty": "",
-              "subText2": "00:49 / 01:09:13",
+              "subText2": "02:28 / 03:03:17",
+              "subText": "October 30, 2025",
+              "url": "https://www.buzzsprout.com/1431712/episodes/18107796-episode-120-special-halloween-les-dystopies-du-present.mp3",
+              "sel": null,
+              "id": "Épisode 120 - Spécial Halloween - Les dystopies du présent",
+              "favLists": [],
+              "logo": "https://storage.buzzsprout.com/x6ebtnmk3p24rw0ijsvaro4qu9dr?.jpg",
               "metadata": {
                 "statusText": "playing",
                 "playState": {
@@ -32588,33 +33489,27 @@
                     "pauseStateChanged": true
                   }
                 },
-                "startTime": 1762732135784,
+                "startTime": 1762810368819,
                 "duration": {
-                  "h": 1,
-                  "m": 9,
-                  "s": 13,
+                  "h": 3,
+                  "m": 3,
+                  "s": 17,
                   "error": false,
                   "isInfinite": false
                 },
                 "currentTime": {
                   "h": 0,
-                  "m": 0,
-                  "s": 49,
+                  "m": 2,
+                  "s": 28,
                   "error": false,
                   "isInfinite": false
                 }
               },
-              "subText": "May 17, 2019",
-              "url": "https://feeds.soundcloud.com/stream/622308897-inculture-mcu-phase-3.m4a",
-              "sel": null,
-              "id": "MCU Phase 3",
-              "favLists": [],
-              "logo": "https://i1.sndcdn.com/artworks-000536939385-cipwvb-t3000x3000.jpg",
               "pdc": true,
               "epi": true,
-              "pubDate": "Fri, 17 May 2019 20:48:57 +0000",
+              "pubDate": "Thu, 30 Oct 2025 17:00:00 -0400",
               "groups": [],
-              "key": "MCU Phase 3https://feeds.soundcloud.com/stream/622308897-inculture-mcu-phase-3.m4a",
+              "key": "Épisode 120 - Spécial Halloween - Les dystopies du présenthttps://www.buzzsprout.com/1431712/episodes/18107796-episode-120-special-halloween-les-dystopies-du-present.mp3",
               "ref": {
                 "currentRDList": {
                   "listId": "Podcast",
@@ -32626,7 +33521,7 @@
                   "tabId": "btn_wrp_podcast"
                 }
               },
-              "listenDate": 1762732145774,
+              "listenDate": 1762810362237,
               "pItem": null
             }
           },
@@ -32979,33 +33874,43 @@
           "pdc": {
             "item": {
               "code": null,
-              "name": "Info Truffaut",
-              "qty": 8,
-              "url": "https://back-audioblog.arteradio.com/blog/97869/rss",
+              "name": "I.A. Café - Enquête au cœur de la recherche sur l’intelligence artificielle",
+              "qty": 121,
+              "url": "https://feeds.buzzsprout.com/1431712.rss",
               "store": 1,
               "page": 1,
               "sel": null,
-              "selCnt": 1,
-              "id": "Info Truffaut",
-              "favLists": [],
+              "selCnt": 0,
+              "id": "I.A. Café - Enquête au cœur de la recherche sur l’intelligence artificielle",
+              "favLists": [
+                "History",
+                "----- Podcasts ------"
+              ],
               "metadata": {
                 "statusText": ""
               },
               "pdc": true,
-              "key": "Info Truffauthttps://back-audioblog.arteradio.com/blog/97869/rss",
+              "key": "I.A. Café - Enquête au cœur de la recherche sur l’intelligence artificiellehttps://feeds.buzzsprout.com/1431712.rss",
               "rss": null,
-              "logo": "https://sons-audioblogs.arte.tv/test/user/default/avatar2.jpg",
-              "subText": "Collège Truffaut",
+              "logo": "https://storage.buzzsprout.com/x6ebtnmk3p24rw0ijsvaro4qu9dr?.jpg",
+              "subText": "Jean-François Sénéchal, Frédérick Plamondon, David Beauchemin, Ève Gaumond, Sylvain Munger, Shirley Plumerand, Véronique Tremblay et Stéphane Mineo.",
               "pItem": null
-            }
+            },
+            "selCnt": 0
           },
           "pdcSubListId": "epi",
           "epi": {
             "item": {
               "code": null,
-              "name": "MCU Phase 3",
+              "name": "Épisode 120 - Spécial Halloween - Les dystopies du présent",
               "qty": "",
-              "subText2": "00:49 / 01:09:13",
+              "subText2": "02:28 / 03:03:17",
+              "subText": "October 30, 2025",
+              "url": "https://www.buzzsprout.com/1431712/episodes/18107796-episode-120-special-halloween-les-dystopies-du-present.mp3",
+              "sel": null,
+              "id": "Épisode 120 - Spécial Halloween - Les dystopies du présent",
+              "favLists": [],
+              "logo": "https://storage.buzzsprout.com/x6ebtnmk3p24rw0ijsvaro4qu9dr?.jpg",
               "metadata": {
                 "statusText": "playing",
                 "playState": {
@@ -33025,33 +33930,27 @@
                     "pauseStateChanged": true
                   }
                 },
-                "startTime": 1762732135784,
+                "startTime": 1762810368819,
                 "duration": {
-                  "h": 1,
-                  "m": 9,
-                  "s": 13,
+                  "h": 3,
+                  "m": 3,
+                  "s": 17,
                   "error": false,
                   "isInfinite": false
                 },
                 "currentTime": {
                   "h": 0,
-                  "m": 0,
-                  "s": 49,
+                  "m": 2,
+                  "s": 28,
                   "error": false,
                   "isInfinite": false
                 }
               },
-              "subText": "May 17, 2019",
-              "url": "https://feeds.soundcloud.com/stream/622308897-inculture-mcu-phase-3.m4a",
-              "sel": null,
-              "id": "MCU Phase 3",
-              "favLists": [],
-              "logo": "https://i1.sndcdn.com/artworks-000536939385-cipwvb-t3000x3000.jpg",
               "pdc": true,
               "epi": true,
-              "pubDate": "Fri, 17 May 2019 20:48:57 +0000",
+              "pubDate": "Thu, 30 Oct 2025 17:00:00 -0400",
               "groups": [],
-              "key": "MCU Phase 3https://feeds.soundcloud.com/stream/622308897-inculture-mcu-phase-3.m4a",
+              "key": "Épisode 120 - Spécial Halloween - Les dystopies du présenthttps://www.buzzsprout.com/1431712/episodes/18107796-episode-120-special-halloween-les-dystopies-du-present.mp3",
               "ref": {
                 "currentRDList": {
                   "listId": "Podcast",
@@ -33063,7 +33962,7 @@
                   "tabId": "btn_wrp_podcast"
                 }
               },
-              "listenDate": 1762732145774,
+              "listenDate": 1762810362237,
               "pItem": null
             }
           },
@@ -33314,33 +34213,43 @@
           "pdc": {
             "item": {
               "code": null,
-              "name": "Info Truffaut",
-              "qty": 8,
-              "url": "https://back-audioblog.arteradio.com/blog/97869/rss",
+              "name": "I.A. Café - Enquête au cœur de la recherche sur l’intelligence artificielle",
+              "qty": 121,
+              "url": "https://feeds.buzzsprout.com/1431712.rss",
               "store": 1,
               "page": 1,
               "sel": null,
-              "selCnt": 1,
-              "id": "Info Truffaut",
-              "favLists": [],
+              "selCnt": 0,
+              "id": "I.A. Café - Enquête au cœur de la recherche sur l’intelligence artificielle",
+              "favLists": [
+                "History",
+                "----- Podcasts ------"
+              ],
               "metadata": {
                 "statusText": ""
               },
               "pdc": true,
-              "key": "Info Truffauthttps://back-audioblog.arteradio.com/blog/97869/rss",
+              "key": "I.A. Café - Enquête au cœur de la recherche sur l’intelligence artificiellehttps://feeds.buzzsprout.com/1431712.rss",
               "rss": null,
-              "logo": "https://sons-audioblogs.arte.tv/test/user/default/avatar2.jpg",
-              "subText": "Collège Truffaut",
+              "logo": "https://storage.buzzsprout.com/x6ebtnmk3p24rw0ijsvaro4qu9dr?.jpg",
+              "subText": "Jean-François Sénéchal, Frédérick Plamondon, David Beauchemin, Ève Gaumond, Sylvain Munger, Shirley Plumerand, Véronique Tremblay et Stéphane Mineo.",
               "pItem": null
-            }
+            },
+            "selCnt": 0
           },
           "pdcSubListId": "epi",
           "epi": {
             "item": {
               "code": null,
-              "name": "MCU Phase 3",
+              "name": "Épisode 120 - Spécial Halloween - Les dystopies du présent",
               "qty": "",
-              "subText2": "00:49 / 01:09:13",
+              "subText2": "02:28 / 03:03:17",
+              "subText": "October 30, 2025",
+              "url": "https://www.buzzsprout.com/1431712/episodes/18107796-episode-120-special-halloween-les-dystopies-du-present.mp3",
+              "sel": null,
+              "id": "Épisode 120 - Spécial Halloween - Les dystopies du présent",
+              "favLists": [],
+              "logo": "https://storage.buzzsprout.com/x6ebtnmk3p24rw0ijsvaro4qu9dr?.jpg",
               "metadata": {
                 "statusText": "playing",
                 "playState": {
@@ -33360,33 +34269,27 @@
                     "pauseStateChanged": true
                   }
                 },
-                "startTime": 1762732135784,
+                "startTime": 1762810368819,
                 "duration": {
-                  "h": 1,
-                  "m": 9,
-                  "s": 13,
+                  "h": 3,
+                  "m": 3,
+                  "s": 17,
                   "error": false,
                   "isInfinite": false
                 },
                 "currentTime": {
                   "h": 0,
-                  "m": 0,
-                  "s": 49,
+                  "m": 2,
+                  "s": 28,
                   "error": false,
                   "isInfinite": false
                 }
               },
-              "subText": "May 17, 2019",
-              "url": "https://feeds.soundcloud.com/stream/622308897-inculture-mcu-phase-3.m4a",
-              "sel": null,
-              "id": "MCU Phase 3",
-              "favLists": [],
-              "logo": "https://i1.sndcdn.com/artworks-000536939385-cipwvb-t3000x3000.jpg",
               "pdc": true,
               "epi": true,
-              "pubDate": "Fri, 17 May 2019 20:48:57 +0000",
+              "pubDate": "Thu, 30 Oct 2025 17:00:00 -0400",
               "groups": [],
-              "key": "MCU Phase 3https://feeds.soundcloud.com/stream/622308897-inculture-mcu-phase-3.m4a",
+              "key": "Épisode 120 - Spécial Halloween - Les dystopies du présenthttps://www.buzzsprout.com/1431712/episodes/18107796-episode-120-special-halloween-les-dystopies-du-present.mp3",
               "ref": {
                 "currentRDList": {
                   "listId": "Podcast",
@@ -33398,7 +34301,7 @@
                   "tabId": "btn_wrp_podcast"
                 }
               },
-              "listenDate": 1762732145774,
+              "listenDate": 1762810362237,
               "pItem": null
             }
           },
@@ -36387,7 +37290,7 @@
         "store": 1,
         "page": 1,
         "sel": null,
-        "selCnt": 1,
+        "selCnt": 0,
         "id": "Just a Click",
         "favLists": [
           "----- Podcasts ------"
@@ -36405,7 +37308,7 @@
         "code": null,
         "name": "Comprendre l'infrastructure technique qui permet aux agents IA d'exister, Rémi Louf",
         "qty": "",
-        "subText2": "01:24 / 02:03:33",
+        "subText2": "00:04 / 02:03:33",
         "metadata": {
           "statusText": "playing",
           "playState": {
@@ -36422,10 +37325,11 @@
               "connected": true,
               "ended": false,
               "playing": true,
+              "seeking": true,
               "pauseStateChanged": true
             }
           },
-          "startTime": 1762807809820,
+          "startTime": 1762872548344,
           "duration": {
             "h": 2,
             "m": 3,
@@ -36435,11 +37339,12 @@
           },
           "currentTime": {
             "h": 0,
-            "m": 1,
-            "s": 24,
+            "m": 0,
+            "s": 4,
             "error": false,
             "isInfinite": false
-          }
+          },
+          "endTime": 1762810638838
         },
         "subText": "November 4, 2025",
         "url": "https://sphinx.acast.com/p/open/s/67a716499c6f7f7f280da15b/e/6907c88a17c1d64648c094fa/media.mp3",
@@ -36500,14 +37405,14 @@
           "epi": {
             "item": {
               "code": null,
-              "name": "Comprendre l'infrastructure technique qui permet aux agents IA d'exister, Rémi Louf",
+              "name": "Construire un produit Open Source sans lever de fonds, Grégory Rocher",
               "qty": "",
-              "subText2": "01:04 / 02:03:33",
+              "subText2": "15:12 / 02:09:34",
               "metadata": {
                 "statusText": "playing",
                 "playState": {
                   "statusText": "playing",
-                  "loadingState": "playing",
+                  "loadingState": "pauseStateChanged",
                   "playingState": {
                     "isPaused": false,
                     "isCurrent": true,
@@ -36522,33 +37427,36 @@
                     "pauseStateChanged": true
                   }
                 },
-                "startTime": 1762807809820,
+                "startTime": 1762870263315,
                 "duration": {
                   "h": 2,
-                  "m": 3,
-                  "s": 33,
+                  "m": 9,
+                  "s": 34,
                   "error": false,
                   "isInfinite": false
                 },
                 "currentTime": {
                   "h": 0,
-                  "m": 1,
-                  "s": 4,
+                  "m": 15,
+                  "s": 12,
                   "error": false,
                   "isInfinite": false
-                }
+                },
+                "endTime": 1762868774811
               },
-              "subText": "November 4, 2025",
-              "url": "https://sphinx.acast.com/p/open/s/67a716499c6f7f7f280da15b/e/6907c88a17c1d64648c094fa/media.mp3",
+              "subText": "April 28, 2025",
+              "url": "https://sphinx.acast.com/p/open/s/67a716499c6f7f7f280da15b/e/680ff01e6ac0e5213bfd0c74/media.mp3",
               "sel": null,
-              "id": "Comprendre l'infrastructure technique qui permet aux agents IA d'exister, Rémi Louf",
-              "favLists": [],
-              "logo": "https://assets.pippa.io/shows/67a716499c6f7f7f280da15b/1762117684157-d19cc72f-4d46-4470-bb60-91b63813756d.jpeg",
+              "id": "Construire un produit Open Source sans lever de fonds, Grégory Rocher",
+              "favLists": [
+                "----- Podcasts ------"
+              ],
+              "logo": "https://assets.pippa.io/shows/67a716499c6f7f7f280da15b/1745874469900-0e2fa7eb-ea5e-40ee-a6fc-b573c365dfb8.jpeg",
               "pdc": true,
               "epi": true,
-              "pubDate": "Mon, 03 Nov 2025 23:16:12 GMT",
+              "pubDate": "Mon, 28 Apr 2025 21:16:13 GMT",
               "groups": [],
-              "key": "Comprendre l'infrastructure technique qui permet aux agents IA d'exister, Rémi Loufhttps://sphinx.acast.com/p/open/s/67a716499c6f7f7f280da15b/e/6907c88a17c1d64648c094fa/media.mp3",
+              "key": "Construire un produit Open Source sans lever de fonds, Grégory Rocherhttps://sphinx.acast.com/p/open/s/67a716499c6f7f7f280da15b/e/680ff01e6ac0e5213bfd0c74/media.mp3",
               "ref": {
                 "currentRDList": {
                   "listId": "Podcast",
@@ -36560,7 +37468,7 @@
                   "tabId": "btn_wrp_podcast"
                 }
               },
-              "listenDate": 1762807819623,
+              "listenDate": 1762867926198,
               "pItem": null
             }
           },
@@ -36581,16 +37489,364 @@
         "key": "Comprendre l'infrastructure technique qui permet aux agents IA d'exister, Rémi Loufhttps://sphinx.acast.com/p/open/s/67a716499c6f7f7f280da15b/e/6907c88a17c1d64648c094fa/media.mp3",
         "ref": {
           "currentRDList": {
-            "listId": "Podcast",
-            "name": "epi",
+            "listId": "List",
+            "name": "History",
             "$item": null
           },
           "currentTab": {
-            "listId": "Podcast",
-            "tabId": "btn_wrp_podcast"
+            "listId": "Viz",
+            "tabId": "btn_wrp_logo"
           }
         },
-        "listenDate": 1762807819623
+        "listenDate": 1762867059458,
+        "statusText": "ended"
+      },
+      {
+        "code": null,
+        "name": "Jeanviet - L'informatique pour tous (podcast audio)",
+        "qty": 360,
+        "url": "https://anchor.fm/s/863b4d14/podcast/rss",
+        "store": 1,
+        "page": 1,
+        "sel": {
+          "lang": {
+            "item": {
+              "code": "fra",
+              "name": "French",
+              "qty": 64492
+            }
+          },
+          "langSubListId": "tag",
+          "tag": {
+            "item": {
+              "code": null,
+              "name": "technology",
+              "qty": 1390
+            }
+          },
+          "tagSubListId": "letter",
+          "letter": {
+            "item": {
+              "code": null,
+              "name": "J",
+              "qty": 9,
+              "stores": [
+                1
+              ]
+            }
+          },
+          "letterSubListId": "pdc",
+          "pdc": {
+            "item": {
+              "code": null,
+              "name": "Just a Click",
+              "qty": 111,
+              "url": "https://feeds.acast.com/public/shows/67a716499c6f7f7f280da15b",
+              "store": 1,
+              "page": 1,
+              "sel": null,
+              "selCnt": 1,
+              "id": "Just a Click",
+              "favLists": [
+                "----- Podcasts ------"
+              ],
+              "metadata": {
+                "statusText": ""
+              },
+              "pdc": true,
+              "key": "Just a Clickhttps://feeds.acast.com/public/shows/67a716499c6f7f7f280da15b",
+              "rss": null,
+              "logo": "https://assets.pippa.io/shows/67a716499c6f7f7f280da15b/show-cover.png",
+              "subText": "Terry Michel",
+              "pItem": null
+            }
+          },
+          "pdcSubListId": "epi",
+          "epi": {
+            "item": {
+              "code": null,
+              "name": "Construire un produit Open Source sans lever de fonds, Grégory Rocher",
+              "qty": "",
+              "subText2": "15:12 / 02:09:34",
+              "metadata": {
+                "statusText": "playing",
+                "playState": {
+                  "statusText": "playing",
+                  "loadingState": "pauseStateChanged",
+                  "playingState": {
+                    "isPaused": false,
+                    "isCurrent": true,
+                    "isPlaying": true
+                  },
+                  "events": {
+                    "connecting": true,
+                    "noConnection": false,
+                    "connected": true,
+                    "ended": false,
+                    "playing": true,
+                    "pauseStateChanged": true
+                  }
+                },
+                "startTime": 1762870263315,
+                "duration": {
+                  "h": 2,
+                  "m": 9,
+                  "s": 34,
+                  "error": false,
+                  "isInfinite": false
+                },
+                "currentTime": {
+                  "h": 0,
+                  "m": 15,
+                  "s": 12,
+                  "error": false,
+                  "isInfinite": false
+                },
+                "endTime": 1762868774811
+              },
+              "subText": "April 28, 2025",
+              "url": "https://sphinx.acast.com/p/open/s/67a716499c6f7f7f280da15b/e/680ff01e6ac0e5213bfd0c74/media.mp3",
+              "sel": null,
+              "id": "Construire un produit Open Source sans lever de fonds, Grégory Rocher",
+              "favLists": [
+                "----- Podcasts ------"
+              ],
+              "logo": "https://assets.pippa.io/shows/67a716499c6f7f7f280da15b/1745874469900-0e2fa7eb-ea5e-40ee-a6fc-b573c365dfb8.jpeg",
+              "pdc": true,
+              "epi": true,
+              "pubDate": "Mon, 28 Apr 2025 21:16:13 GMT",
+              "groups": [],
+              "key": "Construire un produit Open Source sans lever de fonds, Grégory Rocherhttps://sphinx.acast.com/p/open/s/67a716499c6f7f7f280da15b/e/680ff01e6ac0e5213bfd0c74/media.mp3",
+              "ref": {
+                "currentRDList": {
+                  "listId": "Podcast",
+                  "name": "epi",
+                  "$item": null
+                },
+                "currentTab": {
+                  "listId": "Podcast",
+                  "tabId": "btn_wrp_podcast"
+                }
+              },
+              "listenDate": 1762867926198,
+              "pItem": null
+            }
+          },
+          "epiSubListId": null,
+          "noPage": 1,
+          "epiOpen": false,
+          "epiOpening": false
+        },
+        "selCnt": 0,
+        "id": "Jeanviet - L'informatique pour tous (podcast audio)",
+        "favLists": [
+          "----- Podcasts ------"
+        ],
+        "metadata": {
+          "statusText": ""
+        },
+        "pdc": true,
+        "key": "Jeanviet - L'informatique pour tous (podcast audio)https://anchor.fm/s/863b4d14/podcast/rss",
+        "rss": null,
+        "logo": "https://d3t3ozftmdmh3i.cloudfront.net/staging/podcast_uploaded_nologo/22420333/af7c6208bedfda2b.jpeg",
+        "subText": "Jean-Baptiste Viet"
+      },
+      {
+        "code": null,
+        "name": "Construire un produit Open Source sans lever de fonds, Grégory Rocher",
+        "qty": "",
+        "subText2": "02:09:34 / 02:09:34",
+        "metadata": {
+          "statusText": "ended",
+          "playState": {
+            "statusText": "ended",
+            "loadingState": "ended",
+            "playingState": {
+              "isPaused": false,
+              "isCurrent": true,
+              "isPlaying": true
+            },
+            "events": {
+              "connecting": true,
+              "noConnection": false,
+              "connected": true,
+              "ended": true,
+              "playing": true,
+              "seeking": true,
+              "pauseStateChanged": true
+            }
+          },
+          "startTime": 1762872906780,
+          "duration": {
+            "h": 2,
+            "m": 9,
+            "s": 34,
+            "error": false,
+            "isInfinite": false
+          },
+          "currentTime": {
+            "h": 2,
+            "m": 9,
+            "s": 34,
+            "error": false,
+            "isInfinite": false
+          },
+          "endTime": 1762868774811
+        },
+        "subText": "April 28, 2025",
+        "url": "https://sphinx.acast.com/p/open/s/67a716499c6f7f7f280da15b/e/680ff01e6ac0e5213bfd0c74/media.mp3",
+        "sel": {
+          "lang": {
+            "item": {
+              "code": "fra",
+              "name": "French",
+              "qty": 64492
+            }
+          },
+          "langSubListId": "tag",
+          "tag": {
+            "item": {
+              "code": null,
+              "name": "technology",
+              "qty": 1390
+            }
+          },
+          "tagSubListId": "letter",
+          "letter": {
+            "item": {
+              "code": null,
+              "name": "J",
+              "qty": 9,
+              "stores": [
+                1
+              ]
+            }
+          },
+          "letterSubListId": "pdc",
+          "pdc": {
+            "item": {
+              "code": null,
+              "name": "Just a Click",
+              "qty": 111,
+              "url": "https://feeds.acast.com/public/shows/67a716499c6f7f7f280da15b",
+              "store": 1,
+              "page": 1,
+              "sel": null,
+              "selCnt": 1,
+              "id": "Just a Click",
+              "favLists": [
+                "----- Podcasts ------"
+              ],
+              "metadata": {
+                "statusText": ""
+              },
+              "pdc": true,
+              "key": "Just a Clickhttps://feeds.acast.com/public/shows/67a716499c6f7f7f280da15b",
+              "rss": null,
+              "logo": "https://assets.pippa.io/shows/67a716499c6f7f7f280da15b/show-cover.png",
+              "subText": "Terry Michel",
+              "pItem": null
+            }
+          },
+          "pdcSubListId": "epi",
+          "epi": {
+            "item": {
+              "code": null,
+              "name": "Construire un produit Open Source sans lever de fonds, Grégory Rocher",
+              "qty": "",
+              "subText2": "15:12 / 02:09:34",
+              "metadata": {
+                "statusText": "playing",
+                "playState": {
+                  "statusText": "playing",
+                  "loadingState": "pauseStateChanged",
+                  "playingState": {
+                    "isPaused": false,
+                    "isCurrent": true,
+                    "isPlaying": true
+                  },
+                  "events": {
+                    "connecting": true,
+                    "noConnection": false,
+                    "connected": true,
+                    "ended": false,
+                    "playing": true,
+                    "pauseStateChanged": true
+                  }
+                },
+                "startTime": 1762870263315,
+                "duration": {
+                  "h": 2,
+                  "m": 9,
+                  "s": 34,
+                  "error": false,
+                  "isInfinite": false
+                },
+                "currentTime": {
+                  "h": 0,
+                  "m": 15,
+                  "s": 12,
+                  "error": false,
+                  "isInfinite": false
+                },
+                "endTime": 1762868774811
+              },
+              "subText": "April 28, 2025",
+              "url": "https://sphinx.acast.com/p/open/s/67a716499c6f7f7f280da15b/e/680ff01e6ac0e5213bfd0c74/media.mp3",
+              "sel": null,
+              "id": "Construire un produit Open Source sans lever de fonds, Grégory Rocher",
+              "favLists": [
+                "----- Podcasts ------"
+              ],
+              "logo": "https://assets.pippa.io/shows/67a716499c6f7f7f280da15b/1745874469900-0e2fa7eb-ea5e-40ee-a6fc-b573c365dfb8.jpeg",
+              "pdc": true,
+              "epi": true,
+              "pubDate": "Mon, 28 Apr 2025 21:16:13 GMT",
+              "groups": [],
+              "key": "Construire un produit Open Source sans lever de fonds, Grégory Rocherhttps://sphinx.acast.com/p/open/s/67a716499c6f7f7f280da15b/e/680ff01e6ac0e5213bfd0c74/media.mp3",
+              "ref": {
+                "currentRDList": {
+                  "listId": "Podcast",
+                  "name": "epi",
+                  "$item": null
+                },
+                "currentTab": {
+                  "listId": "Podcast",
+                  "tabId": "btn_wrp_podcast"
+                }
+              },
+              "listenDate": 1762867926198,
+              "pItem": null
+            }
+          },
+          "epiSubListId": null,
+          "noPage": 1,
+          "epiOpen": false,
+          "epiOpening": false
+        },
+        "id": "Construire un produit Open Source sans lever de fonds, Grégory Rocher",
+        "favLists": [
+          "----- Podcasts ------"
+        ],
+        "logo": "https://assets.pippa.io/shows/67a716499c6f7f7f280da15b/1745874469900-0e2fa7eb-ea5e-40ee-a6fc-b573c365dfb8.jpeg",
+        "pdc": true,
+        "epi": true,
+        "pubDate": "Mon, 28 Apr 2025 21:16:13 GMT",
+        "groups": [],
+        "key": "Construire un produit Open Source sans lever de fonds, Grégory Rocherhttps://sphinx.acast.com/p/open/s/67a716499c6f7f7f280da15b/e/680ff01e6ac0e5213bfd0c74/media.mp3",
+        "ref": {
+          "currentRDList": {
+            "listId": "List",
+            "name": "History",
+            "$item": null
+          },
+          "currentTab": {
+            "listId": "Viz",
+            "tabId": "btn_wrp_logo"
+          }
+        },
+        "listenDate": 1762872913705,
+        "statusText": "ended"
       }
     ],
     "isSystem": false
