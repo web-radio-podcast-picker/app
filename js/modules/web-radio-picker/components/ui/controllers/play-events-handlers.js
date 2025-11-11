@@ -398,7 +398,7 @@ class PlayEventsHandlers {
         if (this.lastTimeChanged != null) {
             const delta = timeChanged - this.lastTimeChanged
             // min 1/2 sec
-            if (delta < 500) return
+            if (delta < settings.ui.updatePositionPerdiod) return
         }
         this.lastTimeChanged = timeChanged
 
@@ -410,7 +410,7 @@ class PlayEventsHandlers {
         if (item.epi && this.lastTimePositionSaved != null) {
             const dtime = timeChanged - this.lastTimePositionSaved
             // min 10 sec
-            if (dtime >= 10 * 1000) {
+            if (dtime >= settings.db.autoSavePositionPeriod) {
                 propertiesStore.savePropsToDb(item)
                 this.lastTimePositionSaved = timeChanged
             }

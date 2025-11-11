@@ -98,7 +98,8 @@ window.settings = {
         propertiesStoreName: 'properties',
         uiStateStoreName: 'uistate',
         rssStoreName: 'rss',
-        pdcListsStoreName: 'pdclists'
+        pdcListsStoreName: 'pdclists',
+        autoSavePositionPeriod: 10000
     },
 
     extInput: {
@@ -208,6 +209,8 @@ window.settings = {
         errDisplayTime: 4000,        // error display time ms
         longInfoDisplayTime: 6000,        // error display time ms
         longErrDisplayTime: 6000,        // error display time ms
+
+        updatePositionPerdiod: 500,
 
         themes: {
             default: {
