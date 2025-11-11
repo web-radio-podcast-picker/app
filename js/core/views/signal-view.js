@@ -16,15 +16,32 @@ class SignalView {
     renderers = []          // renderers . on sigview, before signal draw
     pointRenderers = []     // point renderers. on signal point, before signal point
 
+    constructor() {
+        ui.onResize.push(() => {
+            this.updateOnResize()
+        })
+    }
+
     init(canvas, channel) {
         this.canvas = canvas;
         this.channel = channel;
-        ///this.pointRenderers.push(new TempColorRenderer())
-        ///this.pointRenderers.push(new BrightRenderer())
     }
 
+    /**----- cached values -----*/
+
+    canvasHeight = null
+    chBoundingClientRect = null
+
+    updateOnResize() {
+        this.canvasHeight = null
+        this.chBoundingClientRect = null
+    }
+
+    /** ----------------------- */
+
     offsetToVolt(offset) {
-        const canvasHeight = this.canvas.height;
+        const canvasHeight = this.canvasHeight ||
+            (this.canvasHeight = this.canvas.height)   // avoid reflow
         const signalRange = settings.audioInput.vScale;
         const displayRange = this.getDisplayRange()
 
@@ -38,7 +55,8 @@ class SignalView {
     }
 
     voltOffset(value) {
-        const canvasHeight = this.canvas.height
+        const canvasHeight = this.canvasHeight ||
+            (this.canvasHeight = this.canvas.height)    // avoid reflow
         const signalRange = settings.audioInput.vScale
         const displayRange = this.getDisplayRange()
 
@@ -64,16 +82,18 @@ class SignalView {
         if (this.channel != null && !this.channel.connected) return
 
         const ch = $('#left-pane')[0]
-        const cnvSize = ch.getBoundingClientRect()
+        const cnvSize = this.chBoundingClientRect
+            || (this.chBoundingClientRect = ch.getBoundingClientRect())     // avoid reflow
+
         const canvasHeight = Math.trunc(cnvSize.height)
         const canvasWidth = Math.trunc(cnvSize.width)
         // auto size
-        if (this.canvas.width != canvasWidth) {
+        /*if (this.canvas.width != canvasWidth) {
             this.canvas.width = canvasWidth
         }
         if (this.canvas.height != canvasHeight) {
             this.canvas.height = canvasHeight
-        }
+        }*/
 
         const dataArray = this.channel?.getSamplesTask?.dataArray
 
