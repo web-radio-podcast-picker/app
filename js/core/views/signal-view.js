@@ -31,10 +31,13 @@ class SignalView {
 
     canvasHeight = null
     chBoundingClientRect = null
+    canvasWidth = null
+    canvasHeight = null
 
     updateOnResize() {
         this.canvasHeight = null
         this.chBoundingClientRect = null
+        this.canvasWidth = this.canvasHeight = null
     }
 
     /** ----------------------- */
@@ -87,13 +90,11 @@ class SignalView {
 
         const canvasHeight = Math.trunc(cnvSize.height)
         const canvasWidth = Math.trunc(cnvSize.width)
-        // auto size
-        /*if (this.canvas.width != canvasWidth) {
-            this.canvas.width = canvasWidth
+        // adjust canvas size if needed
+        if (this.canvasWidth != canvasWidth || this.canvasHeight != canvasHeight) {
+            this.canvasWidth = this.canvas.width = canvasWidth
+            this.canvasHeight = this.canvas.height = canvasHeight
         }
-        if (this.canvas.height != canvasHeight) {
-            this.canvas.height = canvasHeight
-        }*/
 
         const dataArray = this.channel?.getSamplesTask?.dataArray
 

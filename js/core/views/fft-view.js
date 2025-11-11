@@ -43,7 +43,7 @@ class FFTView {
 
     dbOffset(value) {
         const canvasHeight = this.canvasHeight ||
-            (this.canvasHeight == this.canvas.height)       // avoid reflow
+            (this.canvasHeight = this.canvas.height)       // avoid reflow
         const displayRange = this.getDisplayRange()
 
         // min  .. max
@@ -74,7 +74,7 @@ class FFTView {
 
     dbOffset2(value) {
         const canvasHeight = this.canvasHeight ||
-            (this.canvasHeight == this.canvas.height)       // avoid reflow
+            (this.canvasHeight = this.canvas.height)       // avoid reflow
         const displayRange = this.getDisplayRange()
 
         // min  .. max
@@ -105,7 +105,7 @@ class FFTView {
 
     offsetToDb(offset) {
         const canvasHeight = this.canvasHeight ||
-            (this.canvasHeight == this.canvas.height)       // avoid reflow
+            (this.canvasHeight = this.canvas.height)       // avoid reflow
         const displayRange = this.getDisplayRange()
         const vScale = this.getVScale()
         const minDb = this.channel.fft.minDb
