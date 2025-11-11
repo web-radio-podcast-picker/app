@@ -365,6 +365,13 @@ class WebRadioPickerModule extends ModuleBase {
             }
         )
 
+        $('#channel-menu-pane').addClass('drag-region')
+        $('#bt_bar').addClass('drag-region')
+        $('#wrp_radio_list_btn_bar').addClass('drag-region')
+        $('#wrp_pdc_btn_bar').addClass('drag-region')
+        $('#wrp_footer').addClass('drag-region')
+        $('#wrp_footer2').addClass('drag-region')
+
         this.initApp(firstInit)
     }
 
