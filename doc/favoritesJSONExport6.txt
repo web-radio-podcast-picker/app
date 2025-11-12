@@ -5,9 +5,699 @@
     "items": [
       {
         "code": null,
+        "name": "Des idées de cadeaux : Florence Foresti, Paul Mirabel, le Trio.",
+        "qty": "",
+        "subText2": "00:22 / 05:10",
+        "metadata": {
+          "statusText": "playing",
+          "playState": {
+            "statusText": "playing",
+            "loadingState": "playing",
+            "playingState": {
+              "isPaused": false,
+              "isCurrent": true,
+              "isPlaying": true
+            },
+            "events": {
+              "connecting": true,
+              "noConnection": false,
+              "connected": true,
+              "ended": false,
+              "playing": true,
+              "seeking": false,
+              "pauseStateChanged": true
+            }
+          },
+          "startTime": 1762921779343,
+          "duration": {
+            "h": 0,
+            "m": 5,
+            "s": 10,
+            "error": false,
+            "isInfinite": false
+          },
+          "currentTime": {
+            "h": 0,
+            "m": 0,
+            "s": 22,
+            "error": false,
+            "isInfinite": false
+          }
+        },
+        "subText": "December 20, 2024",
+        "url": "https://podcasts.nrjaudio.fm/podcasts/fr/3/16/558d6e44-1a3a-4f57-ad0a-dd1083b38fd6.mp3?awCollectionId=16&awEpisodeId=921877",
+        "sel": {
+          "lang": {
+            "item": {
+              "code": "fra",
+              "name": "French",
+              "qty": 64492
+            }
+          },
+          "langSubListId": "tag",
+          "tag": {
+            "item": {
+              "code": null,
+              "name": "comedy",
+              "qty": 1128
+            }
+          },
+          "tagSubListId": "letter",
+          "letter": {
+            "item": {
+              "code": null,
+              "name": "L",
+              "qty": 417,
+              "stores": [
+                1
+              ]
+            }
+          },
+          "letterSubListId": "pdc",
+          "pdc": {
+            "item": {
+              "code": null,
+              "name": "Le Journal du Rire",
+              "qty": 400,
+              "url": "https://aod.nrjaudio.fm/xml/16.xml",
+              "store": 1,
+              "page": 1,
+              "sel": null,
+              "selCnt": 1,
+              "id": "Le Journal du Rire",
+              "favLists": [
+                "------ Podcasts Humour"
+              ],
+              "metadata": {
+                "statusText": ""
+              },
+              "pdc": true,
+              "rss": null,
+              "logo": "https://cdn-img.nrjaudio.fm/podcasts/fr/3/16/3f6fddeb-8fc5-4b15-b489-932d41611ba9.jpg",
+              "subText": "Rire et Chansons France",
+              "key": "Le Journal du Rirehttps://aod.nrjaudio.fm/xml/16.xml",
+              "pItem": null
+            }
+          },
+          "pdcSubListId": "epi",
+          "epi": null,
+          "epiSubListId": null,
+          "noPage": 1,
+          "epiOpen": false,
+          "epiOpening": false
+        },
+        "id": "Des idées de cadeaux : Florence Foresti, Paul Mirabel, le Trio.",
+        "favLists": [],
+        "logo": "https://cdn-img.nrjaudio.fm/podcasts/fr/3/16/3f6fddeb-8fc5-4b15-b489-932d41611ba9.jpg",
+        "pdc": true,
+        "epi": true,
+        "pubDate": "Fri, 20 Dec 2024 17:40:00 +0000",
+        "groups": [],
+        "key": "Des idées de cadeaux : Florence Foresti, Paul Mirabel, le Trio.https://podcasts.nrjaudio.fm/podcasts/fr/3/16/558d6e44-1a3a-4f57-ad0a-dd1083b38fd6.mp3?awCollectionId=16&awEpisodeId=921877",
+        "ref": {
+          "currentRDList": {
+            "listId": "Podcast",
+            "name": "epi",
+            "$item": null
+          },
+          "currentTab": {
+            "listId": "Podcast",
+            "tabId": "btn_wrp_podcast"
+          }
+        },
+        "listenDate": 1762921789348
+      },
+      {
+        "code": null,
+        "name": "Introduction au livre de Jonas - entrevue avec Frédérique Caron",
+        "qty": "",
+        "subText2": "01:44 / 01:16:20",
+        "metadata": {
+          "statusText": "playing",
+          "playState": {
+            "statusText": "playing",
+            "loadingState": "playing",
+            "playingState": {
+              "isPaused": false,
+              "isCurrent": true,
+              "isPlaying": true
+            },
+            "events": {
+              "connecting": true,
+              "noConnection": false,
+              "connected": true,
+              "ended": false,
+              "playing": true,
+              "seeking": false,
+              "pauseStateChanged": true
+            }
+          },
+          "startTime": 1762921673047,
+          "duration": {
+            "h": 1,
+            "m": 16,
+            "s": 20,
+            "error": false,
+            "isInfinite": false
+          },
+          "currentTime": {
+            "h": 0,
+            "m": 1,
+            "s": 44,
+            "error": false,
+            "isInfinite": false
+          }
+        },
+        "subText": "March 10, 2022",
+        "url": "https://podcasts.captivate.fm/media/5f5a6254-e2a2-42f7-b719-4dc10c489fd0/entrevue-avec-fc.mp3",
+        "sel": {
+          "lang": {
+            "item": {
+              "code": "fra",
+              "name": "French",
+              "qty": 64492
+            }
+          },
+          "langSubListId": "tag",
+          "tag": {
+            "item": {
+              "code": null,
+              "name": "books",
+              "qty": 530
+            }
+          },
+          "tagSubListId": "letter",
+          "letter": {
+            "item": {
+              "code": null,
+              "name": "L",
+              "qty": 187,
+              "stores": [
+                1
+              ]
+            }
+          },
+          "letterSubListId": "pdc",
+          "pdc": {
+            "item": {
+              "code": null,
+              "name": "La Bible du peuple",
+              "qty": 218,
+              "url": "https://feeds.captivate.fm/labibledupeuple/",
+              "store": 1,
+              "page": 1,
+              "sel": null,
+              "selCnt": 1,
+              "id": "La Bible du peuple",
+              "favLists": [],
+              "metadata": {
+                "statusText": ""
+              },
+              "pdc": true,
+              "key": "La Bible du peuplehttps://feeds.captivate.fm/labibledupeuple/",
+              "rss": null,
+              "logo": "https://artwork.captivate.fm/7567c92a-3e4c-4a71-babc-642b673bf69e/dcd1lrqsy-ulxzwrdt58c29h.jpg",
+              "subText": "Convergence Québec",
+              "pItem": null
+            }
+          },
+          "pdcSubListId": "epi",
+          "epi": {
+            "item": {
+              "code": null,
+              "name": "Le Monde à Poils #14 - L'Ours et le Loup",
+              "qty": "",
+              "subText2": "00:09 / 02:27",
+              "metadata": {
+                "statusText": "playing",
+                "playState": {
+                  "statusText": "playing",
+                  "loadingState": "playing",
+                  "playingState": {
+                    "isPaused": false,
+                    "isCurrent": true,
+                    "isPlaying": true
+                  },
+                  "events": {
+                    "connecting": true,
+                    "noConnection": false,
+                    "connected": true,
+                    "ended": false,
+                    "playing": true,
+                    "seeking": false,
+                    "pauseStateChanged": true
+                  }
+                },
+                "startTime": 1762920990724,
+                "duration": {
+                  "h": 0,
+                  "m": 2,
+                  "s": 27,
+                  "error": false,
+                  "isInfinite": false
+                },
+                "currentTime": {
+                  "h": 0,
+                  "m": 0,
+                  "s": 9,
+                  "error": false,
+                  "isInfinite": false
+                }
+              },
+              "subText": "September 9, 2020",
+              "url": "https://anchor.fm/s/1c740498/podcast/play/19201381/https%3A%2F%2Fd3ctxlq1ktw2nl.cloudfront.net%2Fstaging%2F2020-8-7%2F9f778dfc-8721-e459-c5d8-669a7a1a92f2.mp3",
+              "sel": null,
+              "id": "Le Monde à Poils #14 - L'Ours et le Loup",
+              "favLists": [],
+              "logo": "https://d3t3ozftmdmh3i.cloudfront.net/production/podcast_uploaded_episode/4673654/4673654-1599478143714-6c39069feb58c.jpg",
+              "pdc": true,
+              "epi": true,
+              "pubDate": "Wed, 09 Sep 2020 08:00:00 GMT",
+              "groups": [],
+              "key": "Le Monde à Poils #14 - L'Ours et le Louphttps://anchor.fm/s/1c740498/podcast/play/19201381/https%3A%2F%2Fd3ctxlq1ktw2nl.cloudfront.net%2Fstaging%2F2020-8-7%2F9f778dfc-8721-e459-c5d8-669a7a1a92f2.mp3",
+              "ref": {
+                "currentRDList": {
+                  "listId": "Podcast",
+                  "name": "epi",
+                  "$item": null
+                },
+                "currentTab": {
+                  "listId": "Podcast",
+                  "tabId": "btn_wrp_podcast"
+                }
+              },
+              "pItem": null
+            }
+          },
+          "epiSubListId": null,
+          "noPage": 1,
+          "epiOpen": false,
+          "epiOpening": false
+        },
+        "id": "Introduction au livre de Jonas - entrevue avec Frédérique Caron",
+        "favLists": [],
+        "logo": "https://artwork.captivate.fm/7567c92a-3e4c-4a71-babc-642b673bf69e/dcd1lrqsy-ulxzwrdt58c29h.jpg",
+        "pdc": true,
+        "epi": true,
+        "pubDate": "Thu, 10 Mar 2022 00:00:00 -0500",
+        "groups": [],
+        "key": "Introduction au livre de Jonas - entrevue avec Frédérique Caronhttps://podcasts.captivate.fm/media/5f5a6254-e2a2-42f7-b719-4dc10c489fd0/entrevue-avec-fc.mp3",
+        "ref": {
+          "currentRDList": {
+            "listId": "Podcast",
+            "name": "epi",
+            "$item": null
+          },
+          "currentTab": {
+            "listId": "Podcast",
+            "tabId": "btn_wrp_podcast"
+          }
+        },
+        "listenDate": 1762921683044
+      },
+      {
+        "code": null,
+        "name": "Nahum 1",
+        "qty": "",
+        "subText2": "00:13 / 02:18",
+        "metadata": {
+          "statusText": "playing",
+          "playState": {
+            "statusText": "playing",
+            "loadingState": "playing",
+            "playingState": {
+              "isPaused": false,
+              "isCurrent": true,
+              "isPlaying": true
+            },
+            "events": {
+              "connecting": true,
+              "noConnection": false,
+              "connected": true,
+              "ended": false,
+              "playing": true,
+              "seeking": false,
+              "pauseStateChanged": true
+            }
+          },
+          "startTime": 1762921658579,
+          "duration": {
+            "h": 0,
+            "m": 2,
+            "s": 18,
+            "error": false,
+            "isInfinite": false
+          },
+          "currentTime": {
+            "h": 0,
+            "m": 0,
+            "s": 13,
+            "error": false,
+            "isInfinite": false
+          }
+        },
+        "subText": "June 2, 2023",
+        "url": "https://podcasts.captivate.fm/media/a48e9d7d-e970-46a3-854b-e18a1a4c0cf7/NAHUM-1.mp3",
+        "sel": {
+          "lang": {
+            "item": {
+              "code": "fra",
+              "name": "French",
+              "qty": 64492
+            }
+          },
+          "langSubListId": "tag",
+          "tag": {
+            "item": {
+              "code": null,
+              "name": "books",
+              "qty": 530
+            }
+          },
+          "tagSubListId": "letter",
+          "letter": {
+            "item": {
+              "code": null,
+              "name": "L",
+              "qty": 187,
+              "stores": [
+                1
+              ]
+            }
+          },
+          "letterSubListId": "pdc",
+          "pdc": {
+            "item": {
+              "code": null,
+              "name": "La Bible du peuple",
+              "qty": 218,
+              "url": "https://feeds.captivate.fm/labibledupeuple/",
+              "store": 1,
+              "page": 1,
+              "sel": null,
+              "selCnt": 1,
+              "id": "La Bible du peuple",
+              "favLists": [],
+              "metadata": {
+                "statusText": ""
+              },
+              "pdc": true,
+              "key": "La Bible du peuplehttps://feeds.captivate.fm/labibledupeuple/",
+              "rss": null,
+              "logo": "https://artwork.captivate.fm/7567c92a-3e4c-4a71-babc-642b673bf69e/dcd1lrqsy-ulxzwrdt58c29h.jpg",
+              "subText": "Convergence Québec",
+              "pItem": null
+            }
+          },
+          "pdcSubListId": "epi",
+          "epi": {
+            "item": {
+              "code": null,
+              "name": "Le Monde à Poils #14 - L'Ours et le Loup",
+              "qty": "",
+              "subText2": "00:09 / 02:27",
+              "metadata": {
+                "statusText": "playing",
+                "playState": {
+                  "statusText": "playing",
+                  "loadingState": "playing",
+                  "playingState": {
+                    "isPaused": false,
+                    "isCurrent": true,
+                    "isPlaying": true
+                  },
+                  "events": {
+                    "connecting": true,
+                    "noConnection": false,
+                    "connected": true,
+                    "ended": false,
+                    "playing": true,
+                    "seeking": false,
+                    "pauseStateChanged": true
+                  }
+                },
+                "startTime": 1762920990724,
+                "duration": {
+                  "h": 0,
+                  "m": 2,
+                  "s": 27,
+                  "error": false,
+                  "isInfinite": false
+                },
+                "currentTime": {
+                  "h": 0,
+                  "m": 0,
+                  "s": 9,
+                  "error": false,
+                  "isInfinite": false
+                }
+              },
+              "subText": "September 9, 2020",
+              "url": "https://anchor.fm/s/1c740498/podcast/play/19201381/https%3A%2F%2Fd3ctxlq1ktw2nl.cloudfront.net%2Fstaging%2F2020-8-7%2F9f778dfc-8721-e459-c5d8-669a7a1a92f2.mp3",
+              "sel": null,
+              "id": "Le Monde à Poils #14 - L'Ours et le Loup",
+              "favLists": [],
+              "logo": "https://d3t3ozftmdmh3i.cloudfront.net/production/podcast_uploaded_episode/4673654/4673654-1599478143714-6c39069feb58c.jpg",
+              "pdc": true,
+              "epi": true,
+              "pubDate": "Wed, 09 Sep 2020 08:00:00 GMT",
+              "groups": [],
+              "key": "Le Monde à Poils #14 - L'Ours et le Louphttps://anchor.fm/s/1c740498/podcast/play/19201381/https%3A%2F%2Fd3ctxlq1ktw2nl.cloudfront.net%2Fstaging%2F2020-8-7%2F9f778dfc-8721-e459-c5d8-669a7a1a92f2.mp3",
+              "ref": {
+                "currentRDList": {
+                  "listId": "Podcast",
+                  "name": "epi",
+                  "$item": null
+                },
+                "currentTab": {
+                  "listId": "Podcast",
+                  "tabId": "btn_wrp_podcast"
+                }
+              },
+              "pItem": null
+            }
+          },
+          "epiSubListId": null,
+          "noPage": 1,
+          "epiOpen": false,
+          "epiOpening": false
+        },
+        "id": "Nahum 1",
+        "favLists": [],
+        "logo": "https://artwork.captivate.fm/7567c92a-3e4c-4a71-babc-642b673bf69e/dcd1lrqsy-ulxzwrdt58c29h.jpg",
+        "pdc": true,
+        "epi": true,
+        "pubDate": "Fri, 02 Jun 2023 00:15:00 -0500",
+        "groups": [],
+        "key": "Nahum 1https://podcasts.captivate.fm/media/a48e9d7d-e970-46a3-854b-e18a1a4c0cf7/NAHUM-1.mp3",
+        "ref": {
+          "currentRDList": {
+            "listId": "Podcast",
+            "name": "epi",
+            "$item": null
+          },
+          "currentTab": {
+            "listId": "Podcast",
+            "tabId": "btn_wrp_podcast"
+          }
+        },
+        "listenDate": 1762921668587
+      },
+      {
+        "code": null,
+        "name": "Metaclassique #346 – Caractériser",
+        "qty": "",
+        "subText2": "00:21 / 02:12:01",
+        "metadata": {
+          "statusText": "playing",
+          "playState": {
+            "statusText": "playing",
+            "loadingState": "playing",
+            "playingState": {
+              "isPaused": false,
+              "isCurrent": true,
+              "isPlaying": true
+            },
+            "events": {
+              "connecting": true,
+              "noConnection": false,
+              "connected": true,
+              "ended": false,
+              "playing": true,
+              "seeking": false,
+              "pauseStateChanged": true
+            }
+          },
+          "startTime": 1762921636447,
+          "duration": {
+            "h": 2,
+            "m": 12,
+            "s": 1,
+            "error": false,
+            "isInfinite": false
+          },
+          "currentTime": {
+            "h": 0,
+            "m": 0,
+            "s": 21,
+            "error": false,
+            "isInfinite": false
+          }
+        },
+        "subText": "September 17, 2025",
+        "url": "https://metaclassique.com/pad/2025/09/Metaclassique_346_Caracteriser.mp3",
+        "sel": {
+          "lang": {
+            "item": {
+              "code": "fra",
+              "name": "French",
+              "qty": 64492
+            }
+          },
+          "langSubListId": "tag",
+          "tag": {
+            "item": {
+              "code": null,
+              "name": "books",
+              "qty": 530
+            }
+          },
+          "tagSubListId": "letter",
+          "letter": {
+            "item": {
+              "code": null,
+              "name": "M",
+              "qty": 32,
+              "stores": [
+                1
+              ]
+            }
+          },
+          "letterSubListId": "pdc",
+          "pdc": {
+            "item": {
+              "code": null,
+              "name": "METACLASSIQUE",
+              "qty": 362,
+              "url": "https://metaclassique.com/feed/",
+              "store": 1,
+              "page": 1,
+              "sel": null,
+              "selCnt": 1,
+              "id": "METACLASSIQUE",
+              "favLists": [
+                "----- Podcasts musique -----"
+              ],
+              "metadata": {
+                "statusText": ""
+              },
+              "pdc": true,
+              "key": "METACLASSIQUEhttps://metaclassique.com/feed/",
+              "rss": null,
+              "logo": "https://metaclassique.com/wp-content/uploads/2024/10/cropped-Favicon-32x32.png",
+              "subText": "METACLASSIQUE",
+              "pItem": null
+            }
+          },
+          "pdcSubListId": "epi",
+          "epi": {
+            "item": {
+              "code": null,
+              "name": "S.15 : « Poème jardinier » de Louise de Vilmorin",
+              "qty": "",
+              "subText2": "00:15 / 03:41",
+              "metadata": {
+                "statusText": "playing",
+                "playState": {
+                  "statusText": "playing",
+                  "loadingState": "playing",
+                  "playingState": {
+                    "isPaused": false,
+                    "isCurrent": true,
+                    "isPlaying": true
+                  },
+                  "events": {
+                    "connecting": true,
+                    "noConnection": false,
+                    "connected": true,
+                    "ended": false,
+                    "playing": true,
+                    "seeking": false,
+                    "pauseStateChanged": true
+                  }
+                },
+                "startTime": 1762921150884,
+                "duration": {
+                  "h": 0,
+                  "m": 3,
+                  "s": 41,
+                  "error": false,
+                  "isInfinite": false
+                },
+                "currentTime": {
+                  "h": 0,
+                  "m": 0,
+                  "s": 15,
+                  "error": false,
+                  "isInfinite": false
+                }
+              },
+              "subText": "July 13, 2020",
+              "url": "https://audio.ausha.co/oZLX2TzJxeZX.mp3?t=1651668042",
+              "sel": null,
+              "id": "S.15 : « Poème jardinier » de Louise de Vilmorin",
+              "favLists": [],
+              "logo": "https://image.ausha.co/d6WAUYc2LRSjSvxTo6QdRa8BueyyKq2VdgcgHknf_1400x1400.jpeg?t=1594639387",
+              "pdc": true,
+              "epi": true,
+              "pubDate": "Mon, 13 Jul 2020 09:14:56 +0000",
+              "groups": [],
+              "key": "S.15 : « Poème jardinier » de Louise de Vilmorinhttps://audio.ausha.co/oZLX2TzJxeZX.mp3?t=1651668042",
+              "ref": {
+                "currentRDList": {
+                  "listId": "Podcast",
+                  "name": "epi",
+                  "$item": null
+                },
+                "currentTab": {
+                  "listId": "Podcast",
+                  "tabId": "btn_wrp_podcast"
+                }
+              },
+              "pItem": null
+            }
+          },
+          "epiSubListId": null,
+          "noPage": 1,
+          "epiOpen": false,
+          "epiOpening": false
+        },
+        "id": "Metaclassique #346 – Caractériser",
+        "favLists": [],
+        "logo": "https://metaclassique.com/wp-content/uploads/2024/10/cropped-Favicon-32x32.png",
+        "pdc": true,
+        "epi": true,
+        "pubDate": "Wed, 17 Sep 2025 06:00:00 +0000",
+        "groups": [],
+        "key": "Metaclassique #346 – Caractériserhttps://metaclassique.com/pad/2025/09/Metaclassique_346_Caracteriser.mp3",
+        "ref": {
+          "currentRDList": {
+            "listId": "Podcast",
+            "name": "epi",
+            "$item": null
+          },
+          "currentTab": {
+            "listId": "Podcast",
+            "tabId": "btn_wrp_podcast"
+          }
+        },
+        "listenDate": 1762921646440
+      },
+      {
+        "code": null,
         "name": " \"J'aime votre style, mais il va falloir s'en méfier comme de la peste\"",
         "qty": "",
-        "subText2": "00:26 / 01:01:09",
+        "subText2": "00:46 / 01:01:09",
         "metadata": {
           "statusText": "playing",
           "playState": {
@@ -39,7 +729,7 @@
           "currentTime": {
             "h": 0,
             "m": 0,
-            "s": 26,
+            "s": 46,
             "error": false,
             "isInfinite": false
           }
@@ -13503,30 +14193,110 @@
           "pdc": {
             "item": {
               "code": null,
-              "name": "Les Précieuses ridicules by Molière",
-              "qty": 20,
-              "url": "http://www.loyalbooks.com/book/Les-Precieuses-ridicules/feed",
+              "name": "Le Journal du Rire",
+              "qty": 400,
+              "url": "https://aod.nrjaudio.fm/xml/16.xml",
               "store": 1,
               "page": 1,
               "sel": null,
               "selCnt": 0,
-              "id": "Les Précieuses ridicules by Molière",
+              "id": "Le Journal du Rire",
               "favLists": [
-                "----- Podcasts 2 -----"
+                "------ Podcasts Humour"
               ],
               "metadata": {
                 "statusText": ""
               },
               "pdc": true,
               "rss": null,
-              "logo": "http://www.loyalbooks.com/image/feed/Les-Precieuses-ridicules.jpg",
-              "subText": "Loyal Books",
-              "key": "Les Précieuses ridicules by Molièrehttp://www.loyalbooks.com/book/Les-Precieuses-ridicules/feed",
+              "logo": "https://cdn-img.nrjaudio.fm/podcasts/fr/3/16/3f6fddeb-8fc5-4b15-b489-932d41611ba9.jpg",
+              "subText": "Rire et Chansons France",
+              "key": "Le Journal du Rirehttps://aod.nrjaudio.fm/xml/16.xml",
+              "pItem": null
+            },
+            "selCnt": 0
+          },
+          "pdcSubListId": "epi",
+          "epi": {
+            "item": {
+              "code": null,
+              "name": "Des idées de cadeaux : Florence Foresti, Paul Mirabel, le Trio.",
+              "qty": "",
+              "subText2": "",
+              "metadata": {
+                "statusText": "playing",
+                "playState": {
+                  "statusText": "playing",
+                  "loadingState": "playing",
+                  "playingState": {
+                    "isPaused": false,
+                    "isCurrent": true,
+                    "isPlaying": true
+                  },
+                  "events": {
+                    "connecting": true,
+                    "noConnection": false,
+                    "connected": true,
+                    "ended": false,
+                    "playing": true,
+                    "seeking": false,
+                    "pauseStateChanged": true
+                  }
+                },
+                "startTime": 1762921779343,
+                "duration": {
+                  "h": 0,
+                  "m": 5,
+                  "s": 10,
+                  "error": false,
+                  "isInfinite": false
+                }
+              },
+              "subText": "December 20, 2024",
+              "url": "https://podcasts.nrjaudio.fm/podcasts/fr/3/16/558d6e44-1a3a-4f57-ad0a-dd1083b38fd6.mp3?awCollectionId=16&awEpisodeId=921877",
+              "sel": null,
+              "id": "Des idées de cadeaux : Florence Foresti, Paul Mirabel, le Trio.",
+              "favLists": [],
+              "logo": "https://cdn-img.nrjaudio.fm/podcasts/fr/3/16/3f6fddeb-8fc5-4b15-b489-932d41611ba9.jpg",
+              "pdc": true,
+              "epi": true,
+              "pubDate": "Fri, 20 Dec 2024 17:40:00 +0000",
+              "groups": [],
+              "key": "Des idées de cadeaux : Florence Foresti, Paul Mirabel, le Trio.https://podcasts.nrjaudio.fm/podcasts/fr/3/16/558d6e44-1a3a-4f57-ad0a-dd1083b38fd6.mp3?awCollectionId=16&awEpisodeId=921877",
+              "ref": {
+                "currentRDList": {
+                  "listId": "Podcast",
+                  "name": "epi",
+                  "$item": {
+                    "0": {},
+                    "length": 1,
+                    "prevObject": {
+                      "0": {
+                        "jQuery3710486476191790265361": {
+                          "events": {
+                            "click": [
+                              {
+                                "type": "click",
+                                "origType": "click",
+                                "guid": 24835,
+                                "namespace": ""
+                              }
+                            ]
+                          }
+                        }
+                      },
+                      "length": 1
+                    }
+                  }
+                },
+                "currentTab": {
+                  "listId": "Podcast",
+                  "tabId": "btn_wrp_podcast"
+                }
+              },
               "pItem": null
             }
           },
-          "pdcSubListId": "epi",
-          "epi": null,
           "epiSubListId": null,
           "noPage": 1,
           "epiOpen": false,
@@ -13584,30 +14354,110 @@
           "pdc": {
             "item": {
               "code": null,
-              "name": "Les Précieuses ridicules by Molière",
-              "qty": 20,
-              "url": "http://www.loyalbooks.com/book/Les-Precieuses-ridicules/feed",
+              "name": "Le Journal du Rire",
+              "qty": 400,
+              "url": "https://aod.nrjaudio.fm/xml/16.xml",
               "store": 1,
               "page": 1,
               "sel": null,
               "selCnt": 0,
-              "id": "Les Précieuses ridicules by Molière",
+              "id": "Le Journal du Rire",
               "favLists": [
-                "----- Podcasts 2 -----"
+                "------ Podcasts Humour"
               ],
               "metadata": {
                 "statusText": ""
               },
               "pdc": true,
               "rss": null,
-              "logo": "http://www.loyalbooks.com/image/feed/Les-Precieuses-ridicules.jpg",
-              "subText": "Loyal Books",
-              "key": "Les Précieuses ridicules by Molièrehttp://www.loyalbooks.com/book/Les-Precieuses-ridicules/feed",
+              "logo": "https://cdn-img.nrjaudio.fm/podcasts/fr/3/16/3f6fddeb-8fc5-4b15-b489-932d41611ba9.jpg",
+              "subText": "Rire et Chansons France",
+              "key": "Le Journal du Rirehttps://aod.nrjaudio.fm/xml/16.xml",
+              "pItem": null
+            },
+            "selCnt": 0
+          },
+          "pdcSubListId": "epi",
+          "epi": {
+            "item": {
+              "code": null,
+              "name": "Des idées de cadeaux : Florence Foresti, Paul Mirabel, le Trio.",
+              "qty": "",
+              "subText2": "",
+              "metadata": {
+                "statusText": "playing",
+                "playState": {
+                  "statusText": "playing",
+                  "loadingState": "playing",
+                  "playingState": {
+                    "isPaused": false,
+                    "isCurrent": true,
+                    "isPlaying": true
+                  },
+                  "events": {
+                    "connecting": true,
+                    "noConnection": false,
+                    "connected": true,
+                    "ended": false,
+                    "playing": true,
+                    "seeking": false,
+                    "pauseStateChanged": true
+                  }
+                },
+                "startTime": 1762921779343,
+                "duration": {
+                  "h": 0,
+                  "m": 5,
+                  "s": 10,
+                  "error": false,
+                  "isInfinite": false
+                }
+              },
+              "subText": "December 20, 2024",
+              "url": "https://podcasts.nrjaudio.fm/podcasts/fr/3/16/558d6e44-1a3a-4f57-ad0a-dd1083b38fd6.mp3?awCollectionId=16&awEpisodeId=921877",
+              "sel": null,
+              "id": "Des idées de cadeaux : Florence Foresti, Paul Mirabel, le Trio.",
+              "favLists": [],
+              "logo": "https://cdn-img.nrjaudio.fm/podcasts/fr/3/16/3f6fddeb-8fc5-4b15-b489-932d41611ba9.jpg",
+              "pdc": true,
+              "epi": true,
+              "pubDate": "Fri, 20 Dec 2024 17:40:00 +0000",
+              "groups": [],
+              "key": "Des idées de cadeaux : Florence Foresti, Paul Mirabel, le Trio.https://podcasts.nrjaudio.fm/podcasts/fr/3/16/558d6e44-1a3a-4f57-ad0a-dd1083b38fd6.mp3?awCollectionId=16&awEpisodeId=921877",
+              "ref": {
+                "currentRDList": {
+                  "listId": "Podcast",
+                  "name": "epi",
+                  "$item": {
+                    "0": {},
+                    "length": 1,
+                    "prevObject": {
+                      "0": {
+                        "jQuery3710486476191790265361": {
+                          "events": {
+                            "click": [
+                              {
+                                "type": "click",
+                                "origType": "click",
+                                "guid": 24835,
+                                "namespace": ""
+                              }
+                            ]
+                          }
+                        }
+                      },
+                      "length": 1
+                    }
+                  }
+                },
+                "currentTab": {
+                  "listId": "Podcast",
+                  "tabId": "btn_wrp_podcast"
+                }
+              },
               "pItem": null
             }
           },
-          "pdcSubListId": "epi",
-          "epi": null,
           "epiSubListId": null,
           "noPage": 1,
           "epiOpen": false,
@@ -13665,30 +14515,110 @@
           "pdc": {
             "item": {
               "code": null,
-              "name": "Les Précieuses ridicules by Molière",
-              "qty": 20,
-              "url": "http://www.loyalbooks.com/book/Les-Precieuses-ridicules/feed",
+              "name": "Le Journal du Rire",
+              "qty": 400,
+              "url": "https://aod.nrjaudio.fm/xml/16.xml",
               "store": 1,
               "page": 1,
               "sel": null,
               "selCnt": 0,
-              "id": "Les Précieuses ridicules by Molière",
+              "id": "Le Journal du Rire",
               "favLists": [
-                "----- Podcasts 2 -----"
+                "------ Podcasts Humour"
               ],
               "metadata": {
                 "statusText": ""
               },
               "pdc": true,
               "rss": null,
-              "logo": "http://www.loyalbooks.com/image/feed/Les-Precieuses-ridicules.jpg",
-              "subText": "Loyal Books",
-              "key": "Les Précieuses ridicules by Molièrehttp://www.loyalbooks.com/book/Les-Precieuses-ridicules/feed",
+              "logo": "https://cdn-img.nrjaudio.fm/podcasts/fr/3/16/3f6fddeb-8fc5-4b15-b489-932d41611ba9.jpg",
+              "subText": "Rire et Chansons France",
+              "key": "Le Journal du Rirehttps://aod.nrjaudio.fm/xml/16.xml",
+              "pItem": null
+            },
+            "selCnt": 0
+          },
+          "pdcSubListId": "epi",
+          "epi": {
+            "item": {
+              "code": null,
+              "name": "Des idées de cadeaux : Florence Foresti, Paul Mirabel, le Trio.",
+              "qty": "",
+              "subText2": "",
+              "metadata": {
+                "statusText": "playing",
+                "playState": {
+                  "statusText": "playing",
+                  "loadingState": "playing",
+                  "playingState": {
+                    "isPaused": false,
+                    "isCurrent": true,
+                    "isPlaying": true
+                  },
+                  "events": {
+                    "connecting": true,
+                    "noConnection": false,
+                    "connected": true,
+                    "ended": false,
+                    "playing": true,
+                    "seeking": false,
+                    "pauseStateChanged": true
+                  }
+                },
+                "startTime": 1762921779343,
+                "duration": {
+                  "h": 0,
+                  "m": 5,
+                  "s": 10,
+                  "error": false,
+                  "isInfinite": false
+                }
+              },
+              "subText": "December 20, 2024",
+              "url": "https://podcasts.nrjaudio.fm/podcasts/fr/3/16/558d6e44-1a3a-4f57-ad0a-dd1083b38fd6.mp3?awCollectionId=16&awEpisodeId=921877",
+              "sel": null,
+              "id": "Des idées de cadeaux : Florence Foresti, Paul Mirabel, le Trio.",
+              "favLists": [],
+              "logo": "https://cdn-img.nrjaudio.fm/podcasts/fr/3/16/3f6fddeb-8fc5-4b15-b489-932d41611ba9.jpg",
+              "pdc": true,
+              "epi": true,
+              "pubDate": "Fri, 20 Dec 2024 17:40:00 +0000",
+              "groups": [],
+              "key": "Des idées de cadeaux : Florence Foresti, Paul Mirabel, le Trio.https://podcasts.nrjaudio.fm/podcasts/fr/3/16/558d6e44-1a3a-4f57-ad0a-dd1083b38fd6.mp3?awCollectionId=16&awEpisodeId=921877",
+              "ref": {
+                "currentRDList": {
+                  "listId": "Podcast",
+                  "name": "epi",
+                  "$item": {
+                    "0": {},
+                    "length": 1,
+                    "prevObject": {
+                      "0": {
+                        "jQuery3710486476191790265361": {
+                          "events": {
+                            "click": [
+                              {
+                                "type": "click",
+                                "origType": "click",
+                                "guid": 24835,
+                                "namespace": ""
+                              }
+                            ]
+                          }
+                        }
+                      },
+                      "length": 1
+                    }
+                  }
+                },
+                "currentTab": {
+                  "listId": "Podcast",
+                  "tabId": "btn_wrp_podcast"
+                }
+              },
               "pItem": null
             }
           },
-          "pdcSubListId": "epi",
-          "epi": null,
           "epiSubListId": null,
           "noPage": 1,
           "epiOpen": false,
@@ -13746,30 +14676,110 @@
           "pdc": {
             "item": {
               "code": null,
-              "name": "Les Précieuses ridicules by Molière",
-              "qty": 20,
-              "url": "http://www.loyalbooks.com/book/Les-Precieuses-ridicules/feed",
+              "name": "Le Journal du Rire",
+              "qty": 400,
+              "url": "https://aod.nrjaudio.fm/xml/16.xml",
               "store": 1,
               "page": 1,
               "sel": null,
               "selCnt": 0,
-              "id": "Les Précieuses ridicules by Molière",
+              "id": "Le Journal du Rire",
               "favLists": [
-                "----- Podcasts 2 -----"
+                "------ Podcasts Humour"
               ],
               "metadata": {
                 "statusText": ""
               },
               "pdc": true,
               "rss": null,
-              "logo": "http://www.loyalbooks.com/image/feed/Les-Precieuses-ridicules.jpg",
-              "subText": "Loyal Books",
-              "key": "Les Précieuses ridicules by Molièrehttp://www.loyalbooks.com/book/Les-Precieuses-ridicules/feed",
+              "logo": "https://cdn-img.nrjaudio.fm/podcasts/fr/3/16/3f6fddeb-8fc5-4b15-b489-932d41611ba9.jpg",
+              "subText": "Rire et Chansons France",
+              "key": "Le Journal du Rirehttps://aod.nrjaudio.fm/xml/16.xml",
+              "pItem": null
+            },
+            "selCnt": 0
+          },
+          "pdcSubListId": "epi",
+          "epi": {
+            "item": {
+              "code": null,
+              "name": "Des idées de cadeaux : Florence Foresti, Paul Mirabel, le Trio.",
+              "qty": "",
+              "subText2": "",
+              "metadata": {
+                "statusText": "playing",
+                "playState": {
+                  "statusText": "playing",
+                  "loadingState": "playing",
+                  "playingState": {
+                    "isPaused": false,
+                    "isCurrent": true,
+                    "isPlaying": true
+                  },
+                  "events": {
+                    "connecting": true,
+                    "noConnection": false,
+                    "connected": true,
+                    "ended": false,
+                    "playing": true,
+                    "seeking": false,
+                    "pauseStateChanged": true
+                  }
+                },
+                "startTime": 1762921779343,
+                "duration": {
+                  "h": 0,
+                  "m": 5,
+                  "s": 10,
+                  "error": false,
+                  "isInfinite": false
+                }
+              },
+              "subText": "December 20, 2024",
+              "url": "https://podcasts.nrjaudio.fm/podcasts/fr/3/16/558d6e44-1a3a-4f57-ad0a-dd1083b38fd6.mp3?awCollectionId=16&awEpisodeId=921877",
+              "sel": null,
+              "id": "Des idées de cadeaux : Florence Foresti, Paul Mirabel, le Trio.",
+              "favLists": [],
+              "logo": "https://cdn-img.nrjaudio.fm/podcasts/fr/3/16/3f6fddeb-8fc5-4b15-b489-932d41611ba9.jpg",
+              "pdc": true,
+              "epi": true,
+              "pubDate": "Fri, 20 Dec 2024 17:40:00 +0000",
+              "groups": [],
+              "key": "Des idées de cadeaux : Florence Foresti, Paul Mirabel, le Trio.https://podcasts.nrjaudio.fm/podcasts/fr/3/16/558d6e44-1a3a-4f57-ad0a-dd1083b38fd6.mp3?awCollectionId=16&awEpisodeId=921877",
+              "ref": {
+                "currentRDList": {
+                  "listId": "Podcast",
+                  "name": "epi",
+                  "$item": {
+                    "0": {},
+                    "length": 1,
+                    "prevObject": {
+                      "0": {
+                        "jQuery3710486476191790265361": {
+                          "events": {
+                            "click": [
+                              {
+                                "type": "click",
+                                "origType": "click",
+                                "guid": 24835,
+                                "namespace": ""
+                              }
+                            ]
+                          }
+                        }
+                      },
+                      "length": 1
+                    }
+                  }
+                },
+                "currentTab": {
+                  "listId": "Podcast",
+                  "tabId": "btn_wrp_podcast"
+                }
+              },
               "pItem": null
             }
           },
-          "pdcSubListId": "epi",
-          "epi": null,
           "epiSubListId": null,
           "noPage": 1,
           "epiOpen": false,
@@ -13827,30 +14837,110 @@
           "pdc": {
             "item": {
               "code": null,
-              "name": "Les Précieuses ridicules by Molière",
-              "qty": 20,
-              "url": "http://www.loyalbooks.com/book/Les-Precieuses-ridicules/feed",
+              "name": "Le Journal du Rire",
+              "qty": 400,
+              "url": "https://aod.nrjaudio.fm/xml/16.xml",
               "store": 1,
               "page": 1,
               "sel": null,
               "selCnt": 0,
-              "id": "Les Précieuses ridicules by Molière",
+              "id": "Le Journal du Rire",
               "favLists": [
-                "----- Podcasts 2 -----"
+                "------ Podcasts Humour"
               ],
               "metadata": {
                 "statusText": ""
               },
               "pdc": true,
               "rss": null,
-              "logo": "http://www.loyalbooks.com/image/feed/Les-Precieuses-ridicules.jpg",
-              "subText": "Loyal Books",
-              "key": "Les Précieuses ridicules by Molièrehttp://www.loyalbooks.com/book/Les-Precieuses-ridicules/feed",
+              "logo": "https://cdn-img.nrjaudio.fm/podcasts/fr/3/16/3f6fddeb-8fc5-4b15-b489-932d41611ba9.jpg",
+              "subText": "Rire et Chansons France",
+              "key": "Le Journal du Rirehttps://aod.nrjaudio.fm/xml/16.xml",
+              "pItem": null
+            },
+            "selCnt": 0
+          },
+          "pdcSubListId": "epi",
+          "epi": {
+            "item": {
+              "code": null,
+              "name": "Des idées de cadeaux : Florence Foresti, Paul Mirabel, le Trio.",
+              "qty": "",
+              "subText2": "",
+              "metadata": {
+                "statusText": "playing",
+                "playState": {
+                  "statusText": "playing",
+                  "loadingState": "playing",
+                  "playingState": {
+                    "isPaused": false,
+                    "isCurrent": true,
+                    "isPlaying": true
+                  },
+                  "events": {
+                    "connecting": true,
+                    "noConnection": false,
+                    "connected": true,
+                    "ended": false,
+                    "playing": true,
+                    "seeking": false,
+                    "pauseStateChanged": true
+                  }
+                },
+                "startTime": 1762921779343,
+                "duration": {
+                  "h": 0,
+                  "m": 5,
+                  "s": 10,
+                  "error": false,
+                  "isInfinite": false
+                }
+              },
+              "subText": "December 20, 2024",
+              "url": "https://podcasts.nrjaudio.fm/podcasts/fr/3/16/558d6e44-1a3a-4f57-ad0a-dd1083b38fd6.mp3?awCollectionId=16&awEpisodeId=921877",
+              "sel": null,
+              "id": "Des idées de cadeaux : Florence Foresti, Paul Mirabel, le Trio.",
+              "favLists": [],
+              "logo": "https://cdn-img.nrjaudio.fm/podcasts/fr/3/16/3f6fddeb-8fc5-4b15-b489-932d41611ba9.jpg",
+              "pdc": true,
+              "epi": true,
+              "pubDate": "Fri, 20 Dec 2024 17:40:00 +0000",
+              "groups": [],
+              "key": "Des idées de cadeaux : Florence Foresti, Paul Mirabel, le Trio.https://podcasts.nrjaudio.fm/podcasts/fr/3/16/558d6e44-1a3a-4f57-ad0a-dd1083b38fd6.mp3?awCollectionId=16&awEpisodeId=921877",
+              "ref": {
+                "currentRDList": {
+                  "listId": "Podcast",
+                  "name": "epi",
+                  "$item": {
+                    "0": {},
+                    "length": 1,
+                    "prevObject": {
+                      "0": {
+                        "jQuery3710486476191790265361": {
+                          "events": {
+                            "click": [
+                              {
+                                "type": "click",
+                                "origType": "click",
+                                "guid": 24835,
+                                "namespace": ""
+                              }
+                            ]
+                          }
+                        }
+                      },
+                      "length": 1
+                    }
+                  }
+                },
+                "currentTab": {
+                  "listId": "Podcast",
+                  "tabId": "btn_wrp_podcast"
+                }
+              },
               "pItem": null
             }
           },
-          "pdcSubListId": "epi",
-          "epi": null,
           "epiSubListId": null,
           "noPage": 1,
           "epiOpen": false,
@@ -13908,30 +14998,110 @@
           "pdc": {
             "item": {
               "code": null,
-              "name": "Les Précieuses ridicules by Molière",
-              "qty": 20,
-              "url": "http://www.loyalbooks.com/book/Les-Precieuses-ridicules/feed",
+              "name": "Le Journal du Rire",
+              "qty": 400,
+              "url": "https://aod.nrjaudio.fm/xml/16.xml",
               "store": 1,
               "page": 1,
               "sel": null,
               "selCnt": 0,
-              "id": "Les Précieuses ridicules by Molière",
+              "id": "Le Journal du Rire",
               "favLists": [
-                "----- Podcasts 2 -----"
+                "------ Podcasts Humour"
               ],
               "metadata": {
                 "statusText": ""
               },
               "pdc": true,
               "rss": null,
-              "logo": "http://www.loyalbooks.com/image/feed/Les-Precieuses-ridicules.jpg",
-              "subText": "Loyal Books",
-              "key": "Les Précieuses ridicules by Molièrehttp://www.loyalbooks.com/book/Les-Precieuses-ridicules/feed",
+              "logo": "https://cdn-img.nrjaudio.fm/podcasts/fr/3/16/3f6fddeb-8fc5-4b15-b489-932d41611ba9.jpg",
+              "subText": "Rire et Chansons France",
+              "key": "Le Journal du Rirehttps://aod.nrjaudio.fm/xml/16.xml",
+              "pItem": null
+            },
+            "selCnt": 0
+          },
+          "pdcSubListId": "epi",
+          "epi": {
+            "item": {
+              "code": null,
+              "name": "Des idées de cadeaux : Florence Foresti, Paul Mirabel, le Trio.",
+              "qty": "",
+              "subText2": "",
+              "metadata": {
+                "statusText": "playing",
+                "playState": {
+                  "statusText": "playing",
+                  "loadingState": "playing",
+                  "playingState": {
+                    "isPaused": false,
+                    "isCurrent": true,
+                    "isPlaying": true
+                  },
+                  "events": {
+                    "connecting": true,
+                    "noConnection": false,
+                    "connected": true,
+                    "ended": false,
+                    "playing": true,
+                    "seeking": false,
+                    "pauseStateChanged": true
+                  }
+                },
+                "startTime": 1762921779343,
+                "duration": {
+                  "h": 0,
+                  "m": 5,
+                  "s": 10,
+                  "error": false,
+                  "isInfinite": false
+                }
+              },
+              "subText": "December 20, 2024",
+              "url": "https://podcasts.nrjaudio.fm/podcasts/fr/3/16/558d6e44-1a3a-4f57-ad0a-dd1083b38fd6.mp3?awCollectionId=16&awEpisodeId=921877",
+              "sel": null,
+              "id": "Des idées de cadeaux : Florence Foresti, Paul Mirabel, le Trio.",
+              "favLists": [],
+              "logo": "https://cdn-img.nrjaudio.fm/podcasts/fr/3/16/3f6fddeb-8fc5-4b15-b489-932d41611ba9.jpg",
+              "pdc": true,
+              "epi": true,
+              "pubDate": "Fri, 20 Dec 2024 17:40:00 +0000",
+              "groups": [],
+              "key": "Des idées de cadeaux : Florence Foresti, Paul Mirabel, le Trio.https://podcasts.nrjaudio.fm/podcasts/fr/3/16/558d6e44-1a3a-4f57-ad0a-dd1083b38fd6.mp3?awCollectionId=16&awEpisodeId=921877",
+              "ref": {
+                "currentRDList": {
+                  "listId": "Podcast",
+                  "name": "epi",
+                  "$item": {
+                    "0": {},
+                    "length": 1,
+                    "prevObject": {
+                      "0": {
+                        "jQuery3710486476191790265361": {
+                          "events": {
+                            "click": [
+                              {
+                                "type": "click",
+                                "origType": "click",
+                                "guid": 24835,
+                                "namespace": ""
+                              }
+                            ]
+                          }
+                        }
+                      },
+                      "length": 1
+                    }
+                  }
+                },
+                "currentTab": {
+                  "listId": "Podcast",
+                  "tabId": "btn_wrp_podcast"
+                }
+              },
               "pItem": null
             }
           },
-          "pdcSubListId": "epi",
-          "epi": null,
           "epiSubListId": null,
           "noPage": 1,
           "epiOpen": false,
@@ -13989,30 +15159,110 @@
           "pdc": {
             "item": {
               "code": null,
-              "name": "Les Précieuses ridicules by Molière",
-              "qty": 20,
-              "url": "http://www.loyalbooks.com/book/Les-Precieuses-ridicules/feed",
+              "name": "Le Journal du Rire",
+              "qty": 400,
+              "url": "https://aod.nrjaudio.fm/xml/16.xml",
               "store": 1,
               "page": 1,
               "sel": null,
               "selCnt": 0,
-              "id": "Les Précieuses ridicules by Molière",
+              "id": "Le Journal du Rire",
               "favLists": [
-                "----- Podcasts 2 -----"
+                "------ Podcasts Humour"
               ],
               "metadata": {
                 "statusText": ""
               },
               "pdc": true,
               "rss": null,
-              "logo": "http://www.loyalbooks.com/image/feed/Les-Precieuses-ridicules.jpg",
-              "subText": "Loyal Books",
-              "key": "Les Précieuses ridicules by Molièrehttp://www.loyalbooks.com/book/Les-Precieuses-ridicules/feed",
+              "logo": "https://cdn-img.nrjaudio.fm/podcasts/fr/3/16/3f6fddeb-8fc5-4b15-b489-932d41611ba9.jpg",
+              "subText": "Rire et Chansons France",
+              "key": "Le Journal du Rirehttps://aod.nrjaudio.fm/xml/16.xml",
+              "pItem": null
+            },
+            "selCnt": 0
+          },
+          "pdcSubListId": "epi",
+          "epi": {
+            "item": {
+              "code": null,
+              "name": "Des idées de cadeaux : Florence Foresti, Paul Mirabel, le Trio.",
+              "qty": "",
+              "subText2": "",
+              "metadata": {
+                "statusText": "playing",
+                "playState": {
+                  "statusText": "playing",
+                  "loadingState": "playing",
+                  "playingState": {
+                    "isPaused": false,
+                    "isCurrent": true,
+                    "isPlaying": true
+                  },
+                  "events": {
+                    "connecting": true,
+                    "noConnection": false,
+                    "connected": true,
+                    "ended": false,
+                    "playing": true,
+                    "seeking": false,
+                    "pauseStateChanged": true
+                  }
+                },
+                "startTime": 1762921779343,
+                "duration": {
+                  "h": 0,
+                  "m": 5,
+                  "s": 10,
+                  "error": false,
+                  "isInfinite": false
+                }
+              },
+              "subText": "December 20, 2024",
+              "url": "https://podcasts.nrjaudio.fm/podcasts/fr/3/16/558d6e44-1a3a-4f57-ad0a-dd1083b38fd6.mp3?awCollectionId=16&awEpisodeId=921877",
+              "sel": null,
+              "id": "Des idées de cadeaux : Florence Foresti, Paul Mirabel, le Trio.",
+              "favLists": [],
+              "logo": "https://cdn-img.nrjaudio.fm/podcasts/fr/3/16/3f6fddeb-8fc5-4b15-b489-932d41611ba9.jpg",
+              "pdc": true,
+              "epi": true,
+              "pubDate": "Fri, 20 Dec 2024 17:40:00 +0000",
+              "groups": [],
+              "key": "Des idées de cadeaux : Florence Foresti, Paul Mirabel, le Trio.https://podcasts.nrjaudio.fm/podcasts/fr/3/16/558d6e44-1a3a-4f57-ad0a-dd1083b38fd6.mp3?awCollectionId=16&awEpisodeId=921877",
+              "ref": {
+                "currentRDList": {
+                  "listId": "Podcast",
+                  "name": "epi",
+                  "$item": {
+                    "0": {},
+                    "length": 1,
+                    "prevObject": {
+                      "0": {
+                        "jQuery3710486476191790265361": {
+                          "events": {
+                            "click": [
+                              {
+                                "type": "click",
+                                "origType": "click",
+                                "guid": 24835,
+                                "namespace": ""
+                              }
+                            ]
+                          }
+                        }
+                      },
+                      "length": 1
+                    }
+                  }
+                },
+                "currentTab": {
+                  "listId": "Podcast",
+                  "tabId": "btn_wrp_podcast"
+                }
+              },
               "pItem": null
             }
           },
-          "pdcSubListId": "epi",
-          "epi": null,
           "epiSubListId": null,
           "noPage": 1,
           "epiOpen": false,
@@ -14070,30 +15320,110 @@
           "pdc": {
             "item": {
               "code": null,
-              "name": "Les Précieuses ridicules by Molière",
-              "qty": 20,
-              "url": "http://www.loyalbooks.com/book/Les-Precieuses-ridicules/feed",
+              "name": "Le Journal du Rire",
+              "qty": 400,
+              "url": "https://aod.nrjaudio.fm/xml/16.xml",
               "store": 1,
               "page": 1,
               "sel": null,
               "selCnt": 0,
-              "id": "Les Précieuses ridicules by Molière",
+              "id": "Le Journal du Rire",
               "favLists": [
-                "----- Podcasts 2 -----"
+                "------ Podcasts Humour"
               ],
               "metadata": {
                 "statusText": ""
               },
               "pdc": true,
               "rss": null,
-              "logo": "http://www.loyalbooks.com/image/feed/Les-Precieuses-ridicules.jpg",
-              "subText": "Loyal Books",
-              "key": "Les Précieuses ridicules by Molièrehttp://www.loyalbooks.com/book/Les-Precieuses-ridicules/feed",
+              "logo": "https://cdn-img.nrjaudio.fm/podcasts/fr/3/16/3f6fddeb-8fc5-4b15-b489-932d41611ba9.jpg",
+              "subText": "Rire et Chansons France",
+              "key": "Le Journal du Rirehttps://aod.nrjaudio.fm/xml/16.xml",
+              "pItem": null
+            },
+            "selCnt": 0
+          },
+          "pdcSubListId": "epi",
+          "epi": {
+            "item": {
+              "code": null,
+              "name": "Des idées de cadeaux : Florence Foresti, Paul Mirabel, le Trio.",
+              "qty": "",
+              "subText2": "",
+              "metadata": {
+                "statusText": "playing",
+                "playState": {
+                  "statusText": "playing",
+                  "loadingState": "playing",
+                  "playingState": {
+                    "isPaused": false,
+                    "isCurrent": true,
+                    "isPlaying": true
+                  },
+                  "events": {
+                    "connecting": true,
+                    "noConnection": false,
+                    "connected": true,
+                    "ended": false,
+                    "playing": true,
+                    "seeking": false,
+                    "pauseStateChanged": true
+                  }
+                },
+                "startTime": 1762921779343,
+                "duration": {
+                  "h": 0,
+                  "m": 5,
+                  "s": 10,
+                  "error": false,
+                  "isInfinite": false
+                }
+              },
+              "subText": "December 20, 2024",
+              "url": "https://podcasts.nrjaudio.fm/podcasts/fr/3/16/558d6e44-1a3a-4f57-ad0a-dd1083b38fd6.mp3?awCollectionId=16&awEpisodeId=921877",
+              "sel": null,
+              "id": "Des idées de cadeaux : Florence Foresti, Paul Mirabel, le Trio.",
+              "favLists": [],
+              "logo": "https://cdn-img.nrjaudio.fm/podcasts/fr/3/16/3f6fddeb-8fc5-4b15-b489-932d41611ba9.jpg",
+              "pdc": true,
+              "epi": true,
+              "pubDate": "Fri, 20 Dec 2024 17:40:00 +0000",
+              "groups": [],
+              "key": "Des idées de cadeaux : Florence Foresti, Paul Mirabel, le Trio.https://podcasts.nrjaudio.fm/podcasts/fr/3/16/558d6e44-1a3a-4f57-ad0a-dd1083b38fd6.mp3?awCollectionId=16&awEpisodeId=921877",
+              "ref": {
+                "currentRDList": {
+                  "listId": "Podcast",
+                  "name": "epi",
+                  "$item": {
+                    "0": {},
+                    "length": 1,
+                    "prevObject": {
+                      "0": {
+                        "jQuery3710486476191790265361": {
+                          "events": {
+                            "click": [
+                              {
+                                "type": "click",
+                                "origType": "click",
+                                "guid": 24835,
+                                "namespace": ""
+                              }
+                            ]
+                          }
+                        }
+                      },
+                      "length": 1
+                    }
+                  }
+                },
+                "currentTab": {
+                  "listId": "Podcast",
+                  "tabId": "btn_wrp_podcast"
+                }
+              },
               "pItem": null
             }
           },
-          "pdcSubListId": "epi",
-          "epi": null,
           "epiSubListId": null,
           "noPage": 1,
           "epiOpen": false,
@@ -14151,30 +15481,110 @@
           "pdc": {
             "item": {
               "code": null,
-              "name": "Les Précieuses ridicules by Molière",
-              "qty": 20,
-              "url": "http://www.loyalbooks.com/book/Les-Precieuses-ridicules/feed",
+              "name": "Le Journal du Rire",
+              "qty": 400,
+              "url": "https://aod.nrjaudio.fm/xml/16.xml",
               "store": 1,
               "page": 1,
               "sel": null,
               "selCnt": 0,
-              "id": "Les Précieuses ridicules by Molière",
+              "id": "Le Journal du Rire",
               "favLists": [
-                "----- Podcasts 2 -----"
+                "------ Podcasts Humour"
               ],
               "metadata": {
                 "statusText": ""
               },
               "pdc": true,
               "rss": null,
-              "logo": "http://www.loyalbooks.com/image/feed/Les-Precieuses-ridicules.jpg",
-              "subText": "Loyal Books",
-              "key": "Les Précieuses ridicules by Molièrehttp://www.loyalbooks.com/book/Les-Precieuses-ridicules/feed",
+              "logo": "https://cdn-img.nrjaudio.fm/podcasts/fr/3/16/3f6fddeb-8fc5-4b15-b489-932d41611ba9.jpg",
+              "subText": "Rire et Chansons France",
+              "key": "Le Journal du Rirehttps://aod.nrjaudio.fm/xml/16.xml",
+              "pItem": null
+            },
+            "selCnt": 0
+          },
+          "pdcSubListId": "epi",
+          "epi": {
+            "item": {
+              "code": null,
+              "name": "Des idées de cadeaux : Florence Foresti, Paul Mirabel, le Trio.",
+              "qty": "",
+              "subText2": "",
+              "metadata": {
+                "statusText": "playing",
+                "playState": {
+                  "statusText": "playing",
+                  "loadingState": "playing",
+                  "playingState": {
+                    "isPaused": false,
+                    "isCurrent": true,
+                    "isPlaying": true
+                  },
+                  "events": {
+                    "connecting": true,
+                    "noConnection": false,
+                    "connected": true,
+                    "ended": false,
+                    "playing": true,
+                    "seeking": false,
+                    "pauseStateChanged": true
+                  }
+                },
+                "startTime": 1762921779343,
+                "duration": {
+                  "h": 0,
+                  "m": 5,
+                  "s": 10,
+                  "error": false,
+                  "isInfinite": false
+                }
+              },
+              "subText": "December 20, 2024",
+              "url": "https://podcasts.nrjaudio.fm/podcasts/fr/3/16/558d6e44-1a3a-4f57-ad0a-dd1083b38fd6.mp3?awCollectionId=16&awEpisodeId=921877",
+              "sel": null,
+              "id": "Des idées de cadeaux : Florence Foresti, Paul Mirabel, le Trio.",
+              "favLists": [],
+              "logo": "https://cdn-img.nrjaudio.fm/podcasts/fr/3/16/3f6fddeb-8fc5-4b15-b489-932d41611ba9.jpg",
+              "pdc": true,
+              "epi": true,
+              "pubDate": "Fri, 20 Dec 2024 17:40:00 +0000",
+              "groups": [],
+              "key": "Des idées de cadeaux : Florence Foresti, Paul Mirabel, le Trio.https://podcasts.nrjaudio.fm/podcasts/fr/3/16/558d6e44-1a3a-4f57-ad0a-dd1083b38fd6.mp3?awCollectionId=16&awEpisodeId=921877",
+              "ref": {
+                "currentRDList": {
+                  "listId": "Podcast",
+                  "name": "epi",
+                  "$item": {
+                    "0": {},
+                    "length": 1,
+                    "prevObject": {
+                      "0": {
+                        "jQuery3710486476191790265361": {
+                          "events": {
+                            "click": [
+                              {
+                                "type": "click",
+                                "origType": "click",
+                                "guid": 24835,
+                                "namespace": ""
+                              }
+                            ]
+                          }
+                        }
+                      },
+                      "length": 1
+                    }
+                  }
+                },
+                "currentTab": {
+                  "listId": "Podcast",
+                  "tabId": "btn_wrp_podcast"
+                }
+              },
               "pItem": null
             }
           },
-          "pdcSubListId": "epi",
-          "epi": null,
           "epiSubListId": null,
           "noPage": 1,
           "epiOpen": false,
@@ -14232,30 +15642,110 @@
           "pdc": {
             "item": {
               "code": null,
-              "name": "Les Précieuses ridicules by Molière",
-              "qty": 20,
-              "url": "http://www.loyalbooks.com/book/Les-Precieuses-ridicules/feed",
+              "name": "Le Journal du Rire",
+              "qty": 400,
+              "url": "https://aod.nrjaudio.fm/xml/16.xml",
               "store": 1,
               "page": 1,
               "sel": null,
               "selCnt": 0,
-              "id": "Les Précieuses ridicules by Molière",
+              "id": "Le Journal du Rire",
               "favLists": [
-                "----- Podcasts 2 -----"
+                "------ Podcasts Humour"
               ],
               "metadata": {
                 "statusText": ""
               },
               "pdc": true,
               "rss": null,
-              "logo": "http://www.loyalbooks.com/image/feed/Les-Precieuses-ridicules.jpg",
-              "subText": "Loyal Books",
-              "key": "Les Précieuses ridicules by Molièrehttp://www.loyalbooks.com/book/Les-Precieuses-ridicules/feed",
+              "logo": "https://cdn-img.nrjaudio.fm/podcasts/fr/3/16/3f6fddeb-8fc5-4b15-b489-932d41611ba9.jpg",
+              "subText": "Rire et Chansons France",
+              "key": "Le Journal du Rirehttps://aod.nrjaudio.fm/xml/16.xml",
+              "pItem": null
+            },
+            "selCnt": 0
+          },
+          "pdcSubListId": "epi",
+          "epi": {
+            "item": {
+              "code": null,
+              "name": "Des idées de cadeaux : Florence Foresti, Paul Mirabel, le Trio.",
+              "qty": "",
+              "subText2": "",
+              "metadata": {
+                "statusText": "playing",
+                "playState": {
+                  "statusText": "playing",
+                  "loadingState": "playing",
+                  "playingState": {
+                    "isPaused": false,
+                    "isCurrent": true,
+                    "isPlaying": true
+                  },
+                  "events": {
+                    "connecting": true,
+                    "noConnection": false,
+                    "connected": true,
+                    "ended": false,
+                    "playing": true,
+                    "seeking": false,
+                    "pauseStateChanged": true
+                  }
+                },
+                "startTime": 1762921779343,
+                "duration": {
+                  "h": 0,
+                  "m": 5,
+                  "s": 10,
+                  "error": false,
+                  "isInfinite": false
+                }
+              },
+              "subText": "December 20, 2024",
+              "url": "https://podcasts.nrjaudio.fm/podcasts/fr/3/16/558d6e44-1a3a-4f57-ad0a-dd1083b38fd6.mp3?awCollectionId=16&awEpisodeId=921877",
+              "sel": null,
+              "id": "Des idées de cadeaux : Florence Foresti, Paul Mirabel, le Trio.",
+              "favLists": [],
+              "logo": "https://cdn-img.nrjaudio.fm/podcasts/fr/3/16/3f6fddeb-8fc5-4b15-b489-932d41611ba9.jpg",
+              "pdc": true,
+              "epi": true,
+              "pubDate": "Fri, 20 Dec 2024 17:40:00 +0000",
+              "groups": [],
+              "key": "Des idées de cadeaux : Florence Foresti, Paul Mirabel, le Trio.https://podcasts.nrjaudio.fm/podcasts/fr/3/16/558d6e44-1a3a-4f57-ad0a-dd1083b38fd6.mp3?awCollectionId=16&awEpisodeId=921877",
+              "ref": {
+                "currentRDList": {
+                  "listId": "Podcast",
+                  "name": "epi",
+                  "$item": {
+                    "0": {},
+                    "length": 1,
+                    "prevObject": {
+                      "0": {
+                        "jQuery3710486476191790265361": {
+                          "events": {
+                            "click": [
+                              {
+                                "type": "click",
+                                "origType": "click",
+                                "guid": 24835,
+                                "namespace": ""
+                              }
+                            ]
+                          }
+                        }
+                      },
+                      "length": 1
+                    }
+                  }
+                },
+                "currentTab": {
+                  "listId": "Podcast",
+                  "tabId": "btn_wrp_podcast"
+                }
+              },
               "pItem": null
             }
           },
-          "pdcSubListId": "epi",
-          "epi": null,
           "epiSubListId": null,
           "noPage": 1,
           "epiOpen": false,
@@ -25721,35 +27211,34 @@
           "pdc": {
             "item": {
               "code": null,
-              "name": "Le Monde à Poils",
-              "qty": 15,
-              "url": "https://anchor.fm/s/1c740498/podcast/rss",
+              "name": "La Bible du peuple",
+              "qty": 218,
+              "url": "https://feeds.captivate.fm/labibledupeuple/",
               "store": 1,
               "page": 1,
               "sel": null,
-              "selCnt": 1,
-              "id": "Le Monde à Poils",
-              "favLists": [
-                "----- Podcasts lecture -----"
-              ],
+              "selCnt": 0,
+              "id": "La Bible du peuple",
+              "favLists": [],
               "metadata": {
                 "statusText": ""
               },
               "pdc": true,
-              "key": "Le Monde à Poilshttps://anchor.fm/s/1c740498/podcast/rss",
+              "key": "La Bible du peuplehttps://feeds.captivate.fm/labibledupeuple/",
               "rss": null,
-              "logo": "https://d3t3ozftmdmh3i.cloudfront.net/production/podcast_uploaded/4673654/4673654-1586591595264-9e00e76ce2828.jpg",
-              "subText": "Philippine Heron",
+              "logo": "https://artwork.captivate.fm/7567c92a-3e4c-4a71-babc-642b673bf69e/dcd1lrqsy-ulxzwrdt58c29h.jpg",
+              "subText": "Convergence Québec",
               "pItem": null
-            }
+            },
+            "selCnt": 0
           },
           "pdcSubListId": "epi",
           "epi": {
             "item": {
               "code": null,
-              "name": "Le Monde à Poils #14 - L'Ours et le Loup",
+              "name": "Nahum 1",
               "qty": "",
-              "subText2": "00:09 / 02:27",
+              "subText2": "",
               "metadata": {
                 "statusText": "playing",
                 "playState": {
@@ -25770,38 +27259,51 @@
                     "pauseStateChanged": true
                   }
                 },
-                "startTime": 1762920990724,
+                "startTime": 1762921658579,
                 "duration": {
                   "h": 0,
                   "m": 2,
-                  "s": 27,
-                  "error": false,
-                  "isInfinite": false
-                },
-                "currentTime": {
-                  "h": 0,
-                  "m": 0,
-                  "s": 9,
+                  "s": 18,
                   "error": false,
                   "isInfinite": false
                 }
               },
-              "subText": "September 9, 2020",
-              "url": "https://anchor.fm/s/1c740498/podcast/play/19201381/https%3A%2F%2Fd3ctxlq1ktw2nl.cloudfront.net%2Fstaging%2F2020-8-7%2F9f778dfc-8721-e459-c5d8-669a7a1a92f2.mp3",
+              "subText": "June 2, 2023",
+              "url": "https://podcasts.captivate.fm/media/a48e9d7d-e970-46a3-854b-e18a1a4c0cf7/NAHUM-1.mp3",
               "sel": null,
-              "id": "Le Monde à Poils #14 - L'Ours et le Loup",
+              "id": "Nahum 1",
               "favLists": [],
-              "logo": "https://d3t3ozftmdmh3i.cloudfront.net/production/podcast_uploaded_episode/4673654/4673654-1599478143714-6c39069feb58c.jpg",
+              "logo": "https://artwork.captivate.fm/7567c92a-3e4c-4a71-babc-642b673bf69e/dcd1lrqsy-ulxzwrdt58c29h.jpg",
               "pdc": true,
               "epi": true,
-              "pubDate": "Wed, 09 Sep 2020 08:00:00 GMT",
+              "pubDate": "Fri, 02 Jun 2023 00:15:00 -0500",
               "groups": [],
-              "key": "Le Monde à Poils #14 - L'Ours et le Louphttps://anchor.fm/s/1c740498/podcast/play/19201381/https%3A%2F%2Fd3ctxlq1ktw2nl.cloudfront.net%2Fstaging%2F2020-8-7%2F9f778dfc-8721-e459-c5d8-669a7a1a92f2.mp3",
+              "key": "Nahum 1https://podcasts.captivate.fm/media/a48e9d7d-e970-46a3-854b-e18a1a4c0cf7/NAHUM-1.mp3",
               "ref": {
                 "currentRDList": {
                   "listId": "Podcast",
                   "name": "epi",
-                  "$item": null
+                  "$item": {
+                    "0": {},
+                    "length": 1,
+                    "prevObject": {
+                      "0": {
+                        "jQuery3710486476191790265361": {
+                          "events": {
+                            "click": [
+                              {
+                                "type": "click",
+                                "origType": "click",
+                                "guid": 23878,
+                                "namespace": ""
+                              }
+                            ]
+                          }
+                        }
+                      },
+                      "length": 1
+                    }
+                  }
                 },
                 "currentTab": {
                   "listId": "Podcast",
@@ -29057,7 +30559,146 @@
         "url": "http://www.loyalbooks.com/book/Les-Precieuses-ridicules/feed",
         "store": 1,
         "page": 1,
-        "sel": null,
+        "sel": {
+          "lang": {
+            "item": {
+              "code": "fra",
+              "name": "French",
+              "qty": 64492
+            }
+          },
+          "langSubListId": "tag",
+          "tag": {
+            "item": {
+              "code": null,
+              "name": "comedy",
+              "qty": 1128
+            }
+          },
+          "tagSubListId": "letter",
+          "letter": {
+            "item": {
+              "code": null,
+              "name": "L",
+              "qty": 417,
+              "stores": [
+                1
+              ]
+            }
+          },
+          "letterSubListId": "pdc",
+          "pdc": {
+            "item": {
+              "code": null,
+              "name": "Le Journal du Rire",
+              "qty": 400,
+              "url": "https://aod.nrjaudio.fm/xml/16.xml",
+              "store": 1,
+              "page": 1,
+              "sel": null,
+              "selCnt": 0,
+              "id": "Le Journal du Rire",
+              "favLists": [
+                "------ Podcasts Humour"
+              ],
+              "metadata": {
+                "statusText": ""
+              },
+              "pdc": true,
+              "rss": null,
+              "logo": "https://cdn-img.nrjaudio.fm/podcasts/fr/3/16/3f6fddeb-8fc5-4b15-b489-932d41611ba9.jpg",
+              "subText": "Rire et Chansons France",
+              "key": "Le Journal du Rirehttps://aod.nrjaudio.fm/xml/16.xml",
+              "pItem": null
+            },
+            "selCnt": 0
+          },
+          "pdcSubListId": "epi",
+          "epi": {
+            "item": {
+              "code": null,
+              "name": "Des idées de cadeaux : Florence Foresti, Paul Mirabel, le Trio.",
+              "qty": "",
+              "subText2": "",
+              "metadata": {
+                "statusText": "playing",
+                "playState": {
+                  "statusText": "playing",
+                  "loadingState": "playing",
+                  "playingState": {
+                    "isPaused": false,
+                    "isCurrent": true,
+                    "isPlaying": true
+                  },
+                  "events": {
+                    "connecting": true,
+                    "noConnection": false,
+                    "connected": true,
+                    "ended": false,
+                    "playing": true,
+                    "seeking": false,
+                    "pauseStateChanged": true
+                  }
+                },
+                "startTime": 1762921779343,
+                "duration": {
+                  "h": 0,
+                  "m": 5,
+                  "s": 10,
+                  "error": false,
+                  "isInfinite": false
+                }
+              },
+              "subText": "December 20, 2024",
+              "url": "https://podcasts.nrjaudio.fm/podcasts/fr/3/16/558d6e44-1a3a-4f57-ad0a-dd1083b38fd6.mp3?awCollectionId=16&awEpisodeId=921877",
+              "sel": null,
+              "id": "Des idées de cadeaux : Florence Foresti, Paul Mirabel, le Trio.",
+              "favLists": [],
+              "logo": "https://cdn-img.nrjaudio.fm/podcasts/fr/3/16/3f6fddeb-8fc5-4b15-b489-932d41611ba9.jpg",
+              "pdc": true,
+              "epi": true,
+              "pubDate": "Fri, 20 Dec 2024 17:40:00 +0000",
+              "groups": [],
+              "key": "Des idées de cadeaux : Florence Foresti, Paul Mirabel, le Trio.https://podcasts.nrjaudio.fm/podcasts/fr/3/16/558d6e44-1a3a-4f57-ad0a-dd1083b38fd6.mp3?awCollectionId=16&awEpisodeId=921877",
+              "ref": {
+                "currentRDList": {
+                  "listId": "Podcast",
+                  "name": "epi",
+                  "$item": {
+                    "0": {},
+                    "length": 1,
+                    "prevObject": {
+                      "0": {
+                        "jQuery3710486476191790265361": {
+                          "events": {
+                            "click": [
+                              {
+                                "type": "click",
+                                "origType": "click",
+                                "guid": 24835,
+                                "namespace": ""
+                              }
+                            ]
+                          }
+                        }
+                      },
+                      "length": 1
+                    }
+                  }
+                },
+                "currentTab": {
+                  "listId": "Podcast",
+                  "tabId": "btn_wrp_podcast"
+                }
+              },
+              "pItem": null
+            }
+          },
+          "epiSubListId": null,
+          "noPage": 1,
+          "epiOpen": false,
+          "epiOpening": false
+        },
         "selCnt": 0,
         "id": "Les Précieuses ridicules by Molière",
         "favLists": [
@@ -31261,35 +32902,34 @@
           "pdc": {
             "item": {
               "code": null,
-              "name": "Le Monde à Poils",
-              "qty": 15,
-              "url": "https://anchor.fm/s/1c740498/podcast/rss",
+              "name": "La Bible du peuple",
+              "qty": 218,
+              "url": "https://feeds.captivate.fm/labibledupeuple/",
               "store": 1,
               "page": 1,
               "sel": null,
-              "selCnt": 1,
-              "id": "Le Monde à Poils",
-              "favLists": [
-                "----- Podcasts lecture -----"
-              ],
+              "selCnt": 0,
+              "id": "La Bible du peuple",
+              "favLists": [],
               "metadata": {
                 "statusText": ""
               },
               "pdc": true,
-              "key": "Le Monde à Poilshttps://anchor.fm/s/1c740498/podcast/rss",
+              "key": "La Bible du peuplehttps://feeds.captivate.fm/labibledupeuple/",
               "rss": null,
-              "logo": "https://d3t3ozftmdmh3i.cloudfront.net/production/podcast_uploaded/4673654/4673654-1586591595264-9e00e76ce2828.jpg",
-              "subText": "Philippine Heron",
+              "logo": "https://artwork.captivate.fm/7567c92a-3e4c-4a71-babc-642b673bf69e/dcd1lrqsy-ulxzwrdt58c29h.jpg",
+              "subText": "Convergence Québec",
               "pItem": null
-            }
+            },
+            "selCnt": 0
           },
           "pdcSubListId": "epi",
           "epi": {
             "item": {
               "code": null,
-              "name": "Le Monde à Poils #14 - L'Ours et le Loup",
+              "name": "Nahum 1",
               "qty": "",
-              "subText2": "00:09 / 02:27",
+              "subText2": "",
               "metadata": {
                 "statusText": "playing",
                 "playState": {
@@ -31310,38 +32950,51 @@
                     "pauseStateChanged": true
                   }
                 },
-                "startTime": 1762920990724,
+                "startTime": 1762921658579,
                 "duration": {
                   "h": 0,
                   "m": 2,
-                  "s": 27,
-                  "error": false,
-                  "isInfinite": false
-                },
-                "currentTime": {
-                  "h": 0,
-                  "m": 0,
-                  "s": 9,
+                  "s": 18,
                   "error": false,
                   "isInfinite": false
                 }
               },
-              "subText": "September 9, 2020",
-              "url": "https://anchor.fm/s/1c740498/podcast/play/19201381/https%3A%2F%2Fd3ctxlq1ktw2nl.cloudfront.net%2Fstaging%2F2020-8-7%2F9f778dfc-8721-e459-c5d8-669a7a1a92f2.mp3",
+              "subText": "June 2, 2023",
+              "url": "https://podcasts.captivate.fm/media/a48e9d7d-e970-46a3-854b-e18a1a4c0cf7/NAHUM-1.mp3",
               "sel": null,
-              "id": "Le Monde à Poils #14 - L'Ours et le Loup",
+              "id": "Nahum 1",
               "favLists": [],
-              "logo": "https://d3t3ozftmdmh3i.cloudfront.net/production/podcast_uploaded_episode/4673654/4673654-1599478143714-6c39069feb58c.jpg",
+              "logo": "https://artwork.captivate.fm/7567c92a-3e4c-4a71-babc-642b673bf69e/dcd1lrqsy-ulxzwrdt58c29h.jpg",
               "pdc": true,
               "epi": true,
-              "pubDate": "Wed, 09 Sep 2020 08:00:00 GMT",
+              "pubDate": "Fri, 02 Jun 2023 00:15:00 -0500",
               "groups": [],
-              "key": "Le Monde à Poils #14 - L'Ours et le Louphttps://anchor.fm/s/1c740498/podcast/play/19201381/https%3A%2F%2Fd3ctxlq1ktw2nl.cloudfront.net%2Fstaging%2F2020-8-7%2F9f778dfc-8721-e459-c5d8-669a7a1a92f2.mp3",
+              "key": "Nahum 1https://podcasts.captivate.fm/media/a48e9d7d-e970-46a3-854b-e18a1a4c0cf7/NAHUM-1.mp3",
               "ref": {
                 "currentRDList": {
                   "listId": "Podcast",
                   "name": "epi",
-                  "$item": null
+                  "$item": {
+                    "0": {},
+                    "length": 1,
+                    "prevObject": {
+                      "0": {
+                        "jQuery3710486476191790265361": {
+                          "events": {
+                            "click": [
+                              {
+                                "type": "click",
+                                "origType": "click",
+                                "guid": 23878,
+                                "namespace": ""
+                              }
+                            ]
+                          }
+                        }
+                      },
+                      "length": 1
+                    }
+                  }
                 },
                 "currentTab": {
                   "listId": "Podcast",
@@ -31407,35 +33060,34 @@
           "pdc": {
             "item": {
               "code": null,
-              "name": "Le Monde à Poils",
-              "qty": 15,
-              "url": "https://anchor.fm/s/1c740498/podcast/rss",
+              "name": "La Bible du peuple",
+              "qty": 218,
+              "url": "https://feeds.captivate.fm/labibledupeuple/",
               "store": 1,
               "page": 1,
               "sel": null,
-              "selCnt": 1,
-              "id": "Le Monde à Poils",
-              "favLists": [
-                "----- Podcasts lecture -----"
-              ],
+              "selCnt": 0,
+              "id": "La Bible du peuple",
+              "favLists": [],
               "metadata": {
                 "statusText": ""
               },
               "pdc": true,
-              "key": "Le Monde à Poilshttps://anchor.fm/s/1c740498/podcast/rss",
+              "key": "La Bible du peuplehttps://feeds.captivate.fm/labibledupeuple/",
               "rss": null,
-              "logo": "https://d3t3ozftmdmh3i.cloudfront.net/production/podcast_uploaded/4673654/4673654-1586591595264-9e00e76ce2828.jpg",
-              "subText": "Philippine Heron",
+              "logo": "https://artwork.captivate.fm/7567c92a-3e4c-4a71-babc-642b673bf69e/dcd1lrqsy-ulxzwrdt58c29h.jpg",
+              "subText": "Convergence Québec",
               "pItem": null
-            }
+            },
+            "selCnt": 0
           },
           "pdcSubListId": "epi",
           "epi": {
             "item": {
               "code": null,
-              "name": "Le Monde à Poils #14 - L'Ours et le Loup",
+              "name": "Nahum 1",
               "qty": "",
-              "subText2": "00:09 / 02:27",
+              "subText2": "",
               "metadata": {
                 "statusText": "playing",
                 "playState": {
@@ -31456,38 +33108,51 @@
                     "pauseStateChanged": true
                   }
                 },
-                "startTime": 1762920990724,
+                "startTime": 1762921658579,
                 "duration": {
                   "h": 0,
                   "m": 2,
-                  "s": 27,
-                  "error": false,
-                  "isInfinite": false
-                },
-                "currentTime": {
-                  "h": 0,
-                  "m": 0,
-                  "s": 9,
+                  "s": 18,
                   "error": false,
                   "isInfinite": false
                 }
               },
-              "subText": "September 9, 2020",
-              "url": "https://anchor.fm/s/1c740498/podcast/play/19201381/https%3A%2F%2Fd3ctxlq1ktw2nl.cloudfront.net%2Fstaging%2F2020-8-7%2F9f778dfc-8721-e459-c5d8-669a7a1a92f2.mp3",
+              "subText": "June 2, 2023",
+              "url": "https://podcasts.captivate.fm/media/a48e9d7d-e970-46a3-854b-e18a1a4c0cf7/NAHUM-1.mp3",
               "sel": null,
-              "id": "Le Monde à Poils #14 - L'Ours et le Loup",
+              "id": "Nahum 1",
               "favLists": [],
-              "logo": "https://d3t3ozftmdmh3i.cloudfront.net/production/podcast_uploaded_episode/4673654/4673654-1599478143714-6c39069feb58c.jpg",
+              "logo": "https://artwork.captivate.fm/7567c92a-3e4c-4a71-babc-642b673bf69e/dcd1lrqsy-ulxzwrdt58c29h.jpg",
               "pdc": true,
               "epi": true,
-              "pubDate": "Wed, 09 Sep 2020 08:00:00 GMT",
+              "pubDate": "Fri, 02 Jun 2023 00:15:00 -0500",
               "groups": [],
-              "key": "Le Monde à Poils #14 - L'Ours et le Louphttps://anchor.fm/s/1c740498/podcast/play/19201381/https%3A%2F%2Fd3ctxlq1ktw2nl.cloudfront.net%2Fstaging%2F2020-8-7%2F9f778dfc-8721-e459-c5d8-669a7a1a92f2.mp3",
+              "key": "Nahum 1https://podcasts.captivate.fm/media/a48e9d7d-e970-46a3-854b-e18a1a4c0cf7/NAHUM-1.mp3",
               "ref": {
                 "currentRDList": {
                   "listId": "Podcast",
                   "name": "epi",
-                  "$item": null
+                  "$item": {
+                    "0": {},
+                    "length": 1,
+                    "prevObject": {
+                      "0": {
+                        "jQuery3710486476191790265361": {
+                          "events": {
+                            "click": [
+                              {
+                                "type": "click",
+                                "origType": "click",
+                                "guid": 23878,
+                                "namespace": ""
+                              }
+                            ]
+                          }
+                        }
+                      },
+                      "length": 1
+                    }
+                  }
                 },
                 "currentTab": {
                   "listId": "Podcast",
@@ -31561,35 +33226,34 @@
           "pdc": {
             "item": {
               "code": null,
-              "name": "Le Monde à Poils",
-              "qty": 15,
-              "url": "https://anchor.fm/s/1c740498/podcast/rss",
+              "name": "La Bible du peuple",
+              "qty": 218,
+              "url": "https://feeds.captivate.fm/labibledupeuple/",
               "store": 1,
               "page": 1,
               "sel": null,
-              "selCnt": 1,
-              "id": "Le Monde à Poils",
-              "favLists": [
-                "----- Podcasts lecture -----"
-              ],
+              "selCnt": 0,
+              "id": "La Bible du peuple",
+              "favLists": [],
               "metadata": {
                 "statusText": ""
               },
               "pdc": true,
-              "key": "Le Monde à Poilshttps://anchor.fm/s/1c740498/podcast/rss",
+              "key": "La Bible du peuplehttps://feeds.captivate.fm/labibledupeuple/",
               "rss": null,
-              "logo": "https://d3t3ozftmdmh3i.cloudfront.net/production/podcast_uploaded/4673654/4673654-1586591595264-9e00e76ce2828.jpg",
-              "subText": "Philippine Heron",
+              "logo": "https://artwork.captivate.fm/7567c92a-3e4c-4a71-babc-642b673bf69e/dcd1lrqsy-ulxzwrdt58c29h.jpg",
+              "subText": "Convergence Québec",
               "pItem": null
-            }
+            },
+            "selCnt": 0
           },
           "pdcSubListId": "epi",
           "epi": {
             "item": {
               "code": null,
-              "name": "Le Monde à Poils #14 - L'Ours et le Loup",
+              "name": "Nahum 1",
               "qty": "",
-              "subText2": "00:09 / 02:27",
+              "subText2": "",
               "metadata": {
                 "statusText": "playing",
                 "playState": {
@@ -31610,38 +33274,51 @@
                     "pauseStateChanged": true
                   }
                 },
-                "startTime": 1762920990724,
+                "startTime": 1762921658579,
                 "duration": {
                   "h": 0,
                   "m": 2,
-                  "s": 27,
-                  "error": false,
-                  "isInfinite": false
-                },
-                "currentTime": {
-                  "h": 0,
-                  "m": 0,
-                  "s": 9,
+                  "s": 18,
                   "error": false,
                   "isInfinite": false
                 }
               },
-              "subText": "September 9, 2020",
-              "url": "https://anchor.fm/s/1c740498/podcast/play/19201381/https%3A%2F%2Fd3ctxlq1ktw2nl.cloudfront.net%2Fstaging%2F2020-8-7%2F9f778dfc-8721-e459-c5d8-669a7a1a92f2.mp3",
+              "subText": "June 2, 2023",
+              "url": "https://podcasts.captivate.fm/media/a48e9d7d-e970-46a3-854b-e18a1a4c0cf7/NAHUM-1.mp3",
               "sel": null,
-              "id": "Le Monde à Poils #14 - L'Ours et le Loup",
+              "id": "Nahum 1",
               "favLists": [],
-              "logo": "https://d3t3ozftmdmh3i.cloudfront.net/production/podcast_uploaded_episode/4673654/4673654-1599478143714-6c39069feb58c.jpg",
+              "logo": "https://artwork.captivate.fm/7567c92a-3e4c-4a71-babc-642b673bf69e/dcd1lrqsy-ulxzwrdt58c29h.jpg",
               "pdc": true,
               "epi": true,
-              "pubDate": "Wed, 09 Sep 2020 08:00:00 GMT",
+              "pubDate": "Fri, 02 Jun 2023 00:15:00 -0500",
               "groups": [],
-              "key": "Le Monde à Poils #14 - L'Ours et le Louphttps://anchor.fm/s/1c740498/podcast/play/19201381/https%3A%2F%2Fd3ctxlq1ktw2nl.cloudfront.net%2Fstaging%2F2020-8-7%2F9f778dfc-8721-e459-c5d8-669a7a1a92f2.mp3",
+              "key": "Nahum 1https://podcasts.captivate.fm/media/a48e9d7d-e970-46a3-854b-e18a1a4c0cf7/NAHUM-1.mp3",
               "ref": {
                 "currentRDList": {
                   "listId": "Podcast",
                   "name": "epi",
-                  "$item": null
+                  "$item": {
+                    "0": {},
+                    "length": 1,
+                    "prevObject": {
+                      "0": {
+                        "jQuery3710486476191790265361": {
+                          "events": {
+                            "click": [
+                              {
+                                "type": "click",
+                                "origType": "click",
+                                "guid": 23878,
+                                "namespace": ""
+                              }
+                            ]
+                          }
+                        }
+                      },
+                      "length": 1
+                    }
+                  }
                 },
                 "currentTab": {
                   "listId": "Podcast",
@@ -31656,7 +33333,7 @@
           "epiOpen": false,
           "epiOpening": false
         },
-        "selCnt": 2,
+        "selCnt": 0,
         "id": "Le Monde à Poils",
         "favLists": [
           "----- Podcasts lecture -----"
@@ -31709,35 +33386,34 @@
           "pdc": {
             "item": {
               "code": null,
-              "name": "Le Monde à Poils",
-              "qty": 15,
-              "url": "https://anchor.fm/s/1c740498/podcast/rss",
+              "name": "La Bible du peuple",
+              "qty": 218,
+              "url": "https://feeds.captivate.fm/labibledupeuple/",
               "store": 1,
               "page": 1,
               "sel": null,
-              "selCnt": 1,
-              "id": "Le Monde à Poils",
-              "favLists": [
-                "----- Podcasts lecture -----"
-              ],
+              "selCnt": 0,
+              "id": "La Bible du peuple",
+              "favLists": [],
               "metadata": {
                 "statusText": ""
               },
               "pdc": true,
-              "key": "Le Monde à Poilshttps://anchor.fm/s/1c740498/podcast/rss",
+              "key": "La Bible du peuplehttps://feeds.captivate.fm/labibledupeuple/",
               "rss": null,
-              "logo": "https://d3t3ozftmdmh3i.cloudfront.net/production/podcast_uploaded/4673654/4673654-1586591595264-9e00e76ce2828.jpg",
-              "subText": "Philippine Heron",
+              "logo": "https://artwork.captivate.fm/7567c92a-3e4c-4a71-babc-642b673bf69e/dcd1lrqsy-ulxzwrdt58c29h.jpg",
+              "subText": "Convergence Québec",
               "pItem": null
-            }
+            },
+            "selCnt": 0
           },
           "pdcSubListId": "epi",
           "epi": {
             "item": {
               "code": null,
-              "name": "Le Monde à Poils #14 - L'Ours et le Loup",
+              "name": "Nahum 1",
               "qty": "",
-              "subText2": "00:09 / 02:27",
+              "subText2": "",
               "metadata": {
                 "statusText": "playing",
                 "playState": {
@@ -31758,38 +33434,51 @@
                     "pauseStateChanged": true
                   }
                 },
-                "startTime": 1762920990724,
+                "startTime": 1762921658579,
                 "duration": {
                   "h": 0,
                   "m": 2,
-                  "s": 27,
-                  "error": false,
-                  "isInfinite": false
-                },
-                "currentTime": {
-                  "h": 0,
-                  "m": 0,
-                  "s": 9,
+                  "s": 18,
                   "error": false,
                   "isInfinite": false
                 }
               },
-              "subText": "September 9, 2020",
-              "url": "https://anchor.fm/s/1c740498/podcast/play/19201381/https%3A%2F%2Fd3ctxlq1ktw2nl.cloudfront.net%2Fstaging%2F2020-8-7%2F9f778dfc-8721-e459-c5d8-669a7a1a92f2.mp3",
+              "subText": "June 2, 2023",
+              "url": "https://podcasts.captivate.fm/media/a48e9d7d-e970-46a3-854b-e18a1a4c0cf7/NAHUM-1.mp3",
               "sel": null,
-              "id": "Le Monde à Poils #14 - L'Ours et le Loup",
+              "id": "Nahum 1",
               "favLists": [],
-              "logo": "https://d3t3ozftmdmh3i.cloudfront.net/production/podcast_uploaded_episode/4673654/4673654-1599478143714-6c39069feb58c.jpg",
+              "logo": "https://artwork.captivate.fm/7567c92a-3e4c-4a71-babc-642b673bf69e/dcd1lrqsy-ulxzwrdt58c29h.jpg",
               "pdc": true,
               "epi": true,
-              "pubDate": "Wed, 09 Sep 2020 08:00:00 GMT",
+              "pubDate": "Fri, 02 Jun 2023 00:15:00 -0500",
               "groups": [],
-              "key": "Le Monde à Poils #14 - L'Ours et le Louphttps://anchor.fm/s/1c740498/podcast/play/19201381/https%3A%2F%2Fd3ctxlq1ktw2nl.cloudfront.net%2Fstaging%2F2020-8-7%2F9f778dfc-8721-e459-c5d8-669a7a1a92f2.mp3",
+              "key": "Nahum 1https://podcasts.captivate.fm/media/a48e9d7d-e970-46a3-854b-e18a1a4c0cf7/NAHUM-1.mp3",
               "ref": {
                 "currentRDList": {
                   "listId": "Podcast",
                   "name": "epi",
-                  "$item": null
+                  "$item": {
+                    "0": {},
+                    "length": 1,
+                    "prevObject": {
+                      "0": {
+                        "jQuery3710486476191790265361": {
+                          "events": {
+                            "click": [
+                              {
+                                "type": "click",
+                                "origType": "click",
+                                "guid": 23878,
+                                "namespace": ""
+                              }
+                            ]
+                          }
+                        }
+                      },
+                      "length": 1
+                    }
+                  }
                 },
                 "currentTab": {
                   "listId": "Podcast",
@@ -31856,35 +33545,34 @@
           "pdc": {
             "item": {
               "code": null,
-              "name": "Le Monde à Poils",
-              "qty": 15,
-              "url": "https://anchor.fm/s/1c740498/podcast/rss",
+              "name": "La Bible du peuple",
+              "qty": 218,
+              "url": "https://feeds.captivate.fm/labibledupeuple/",
               "store": 1,
               "page": 1,
               "sel": null,
-              "selCnt": 1,
-              "id": "Le Monde à Poils",
-              "favLists": [
-                "----- Podcasts lecture -----"
-              ],
+              "selCnt": 0,
+              "id": "La Bible du peuple",
+              "favLists": [],
               "metadata": {
                 "statusText": ""
               },
               "pdc": true,
-              "key": "Le Monde à Poilshttps://anchor.fm/s/1c740498/podcast/rss",
+              "key": "La Bible du peuplehttps://feeds.captivate.fm/labibledupeuple/",
               "rss": null,
-              "logo": "https://d3t3ozftmdmh3i.cloudfront.net/production/podcast_uploaded/4673654/4673654-1586591595264-9e00e76ce2828.jpg",
-              "subText": "Philippine Heron",
+              "logo": "https://artwork.captivate.fm/7567c92a-3e4c-4a71-babc-642b673bf69e/dcd1lrqsy-ulxzwrdt58c29h.jpg",
+              "subText": "Convergence Québec",
               "pItem": null
-            }
+            },
+            "selCnt": 0
           },
           "pdcSubListId": "epi",
           "epi": {
             "item": {
               "code": null,
-              "name": "Le Monde à Poils #14 - L'Ours et le Loup",
+              "name": "Nahum 1",
               "qty": "",
-              "subText2": "00:09 / 02:27",
+              "subText2": "",
               "metadata": {
                 "statusText": "playing",
                 "playState": {
@@ -31905,38 +33593,51 @@
                     "pauseStateChanged": true
                   }
                 },
-                "startTime": 1762920990724,
+                "startTime": 1762921658579,
                 "duration": {
                   "h": 0,
                   "m": 2,
-                  "s": 27,
-                  "error": false,
-                  "isInfinite": false
-                },
-                "currentTime": {
-                  "h": 0,
-                  "m": 0,
-                  "s": 9,
+                  "s": 18,
                   "error": false,
                   "isInfinite": false
                 }
               },
-              "subText": "September 9, 2020",
-              "url": "https://anchor.fm/s/1c740498/podcast/play/19201381/https%3A%2F%2Fd3ctxlq1ktw2nl.cloudfront.net%2Fstaging%2F2020-8-7%2F9f778dfc-8721-e459-c5d8-669a7a1a92f2.mp3",
+              "subText": "June 2, 2023",
+              "url": "https://podcasts.captivate.fm/media/a48e9d7d-e970-46a3-854b-e18a1a4c0cf7/NAHUM-1.mp3",
               "sel": null,
-              "id": "Le Monde à Poils #14 - L'Ours et le Loup",
+              "id": "Nahum 1",
               "favLists": [],
-              "logo": "https://d3t3ozftmdmh3i.cloudfront.net/production/podcast_uploaded_episode/4673654/4673654-1599478143714-6c39069feb58c.jpg",
+              "logo": "https://artwork.captivate.fm/7567c92a-3e4c-4a71-babc-642b673bf69e/dcd1lrqsy-ulxzwrdt58c29h.jpg",
               "pdc": true,
               "epi": true,
-              "pubDate": "Wed, 09 Sep 2020 08:00:00 GMT",
+              "pubDate": "Fri, 02 Jun 2023 00:15:00 -0500",
               "groups": [],
-              "key": "Le Monde à Poils #14 - L'Ours et le Louphttps://anchor.fm/s/1c740498/podcast/play/19201381/https%3A%2F%2Fd3ctxlq1ktw2nl.cloudfront.net%2Fstaging%2F2020-8-7%2F9f778dfc-8721-e459-c5d8-669a7a1a92f2.mp3",
+              "key": "Nahum 1https://podcasts.captivate.fm/media/a48e9d7d-e970-46a3-854b-e18a1a4c0cf7/NAHUM-1.mp3",
               "ref": {
                 "currentRDList": {
                   "listId": "Podcast",
                   "name": "epi",
-                  "$item": null
+                  "$item": {
+                    "0": {},
+                    "length": 1,
+                    "prevObject": {
+                      "0": {
+                        "jQuery3710486476191790265361": {
+                          "events": {
+                            "click": [
+                              {
+                                "type": "click",
+                                "origType": "click",
+                                "guid": 23878,
+                                "namespace": ""
+                              }
+                            ]
+                          }
+                        }
+                      },
+                      "length": 1
+                    }
+                  }
                 },
                 "currentTab": {
                   "listId": "Podcast",
@@ -32003,35 +33704,34 @@
           "pdc": {
             "item": {
               "code": null,
-              "name": "Le Monde à Poils",
-              "qty": 15,
-              "url": "https://anchor.fm/s/1c740498/podcast/rss",
+              "name": "La Bible du peuple",
+              "qty": 218,
+              "url": "https://feeds.captivate.fm/labibledupeuple/",
               "store": 1,
               "page": 1,
               "sel": null,
-              "selCnt": 1,
-              "id": "Le Monde à Poils",
-              "favLists": [
-                "----- Podcasts lecture -----"
-              ],
+              "selCnt": 0,
+              "id": "La Bible du peuple",
+              "favLists": [],
               "metadata": {
                 "statusText": ""
               },
               "pdc": true,
-              "key": "Le Monde à Poilshttps://anchor.fm/s/1c740498/podcast/rss",
+              "key": "La Bible du peuplehttps://feeds.captivate.fm/labibledupeuple/",
               "rss": null,
-              "logo": "https://d3t3ozftmdmh3i.cloudfront.net/production/podcast_uploaded/4673654/4673654-1586591595264-9e00e76ce2828.jpg",
-              "subText": "Philippine Heron",
+              "logo": "https://artwork.captivate.fm/7567c92a-3e4c-4a71-babc-642b673bf69e/dcd1lrqsy-ulxzwrdt58c29h.jpg",
+              "subText": "Convergence Québec",
               "pItem": null
-            }
+            },
+            "selCnt": 0
           },
           "pdcSubListId": "epi",
           "epi": {
             "item": {
               "code": null,
-              "name": "Le Monde à Poils #14 - L'Ours et le Loup",
+              "name": "Nahum 1",
               "qty": "",
-              "subText2": "00:09 / 02:27",
+              "subText2": "",
               "metadata": {
                 "statusText": "playing",
                 "playState": {
@@ -32052,38 +33752,51 @@
                     "pauseStateChanged": true
                   }
                 },
-                "startTime": 1762920990724,
+                "startTime": 1762921658579,
                 "duration": {
                   "h": 0,
                   "m": 2,
-                  "s": 27,
-                  "error": false,
-                  "isInfinite": false
-                },
-                "currentTime": {
-                  "h": 0,
-                  "m": 0,
-                  "s": 9,
+                  "s": 18,
                   "error": false,
                   "isInfinite": false
                 }
               },
-              "subText": "September 9, 2020",
-              "url": "https://anchor.fm/s/1c740498/podcast/play/19201381/https%3A%2F%2Fd3ctxlq1ktw2nl.cloudfront.net%2Fstaging%2F2020-8-7%2F9f778dfc-8721-e459-c5d8-669a7a1a92f2.mp3",
+              "subText": "June 2, 2023",
+              "url": "https://podcasts.captivate.fm/media/a48e9d7d-e970-46a3-854b-e18a1a4c0cf7/NAHUM-1.mp3",
               "sel": null,
-              "id": "Le Monde à Poils #14 - L'Ours et le Loup",
+              "id": "Nahum 1",
               "favLists": [],
-              "logo": "https://d3t3ozftmdmh3i.cloudfront.net/production/podcast_uploaded_episode/4673654/4673654-1599478143714-6c39069feb58c.jpg",
+              "logo": "https://artwork.captivate.fm/7567c92a-3e4c-4a71-babc-642b673bf69e/dcd1lrqsy-ulxzwrdt58c29h.jpg",
               "pdc": true,
               "epi": true,
-              "pubDate": "Wed, 09 Sep 2020 08:00:00 GMT",
+              "pubDate": "Fri, 02 Jun 2023 00:15:00 -0500",
               "groups": [],
-              "key": "Le Monde à Poils #14 - L'Ours et le Louphttps://anchor.fm/s/1c740498/podcast/play/19201381/https%3A%2F%2Fd3ctxlq1ktw2nl.cloudfront.net%2Fstaging%2F2020-8-7%2F9f778dfc-8721-e459-c5d8-669a7a1a92f2.mp3",
+              "key": "Nahum 1https://podcasts.captivate.fm/media/a48e9d7d-e970-46a3-854b-e18a1a4c0cf7/NAHUM-1.mp3",
               "ref": {
                 "currentRDList": {
                   "listId": "Podcast",
                   "name": "epi",
-                  "$item": null
+                  "$item": {
+                    "0": {},
+                    "length": 1,
+                    "prevObject": {
+                      "0": {
+                        "jQuery3710486476191790265361": {
+                          "events": {
+                            "click": [
+                              {
+                                "type": "click",
+                                "origType": "click",
+                                "guid": 23878,
+                                "namespace": ""
+                              }
+                            ]
+                          }
+                        }
+                      },
+                      "length": 1
+                    }
+                  }
                 },
                 "currentTab": {
                   "listId": "Podcast",
@@ -32150,35 +33863,34 @@
           "pdc": {
             "item": {
               "code": null,
-              "name": "Le Monde à Poils",
-              "qty": 15,
-              "url": "https://anchor.fm/s/1c740498/podcast/rss",
+              "name": "La Bible du peuple",
+              "qty": 218,
+              "url": "https://feeds.captivate.fm/labibledupeuple/",
               "store": 1,
               "page": 1,
               "sel": null,
-              "selCnt": 1,
-              "id": "Le Monde à Poils",
-              "favLists": [
-                "----- Podcasts lecture -----"
-              ],
+              "selCnt": 0,
+              "id": "La Bible du peuple",
+              "favLists": [],
               "metadata": {
                 "statusText": ""
               },
               "pdc": true,
-              "key": "Le Monde à Poilshttps://anchor.fm/s/1c740498/podcast/rss",
+              "key": "La Bible du peuplehttps://feeds.captivate.fm/labibledupeuple/",
               "rss": null,
-              "logo": "https://d3t3ozftmdmh3i.cloudfront.net/production/podcast_uploaded/4673654/4673654-1586591595264-9e00e76ce2828.jpg",
-              "subText": "Philippine Heron",
+              "logo": "https://artwork.captivate.fm/7567c92a-3e4c-4a71-babc-642b673bf69e/dcd1lrqsy-ulxzwrdt58c29h.jpg",
+              "subText": "Convergence Québec",
               "pItem": null
-            }
+            },
+            "selCnt": 0
           },
           "pdcSubListId": "epi",
           "epi": {
             "item": {
               "code": null,
-              "name": "Le Monde à Poils #14 - L'Ours et le Loup",
+              "name": "Nahum 1",
               "qty": "",
-              "subText2": "00:09 / 02:27",
+              "subText2": "",
               "metadata": {
                 "statusText": "playing",
                 "playState": {
@@ -32199,38 +33911,51 @@
                     "pauseStateChanged": true
                   }
                 },
-                "startTime": 1762920990724,
+                "startTime": 1762921658579,
                 "duration": {
                   "h": 0,
                   "m": 2,
-                  "s": 27,
-                  "error": false,
-                  "isInfinite": false
-                },
-                "currentTime": {
-                  "h": 0,
-                  "m": 0,
-                  "s": 9,
+                  "s": 18,
                   "error": false,
                   "isInfinite": false
                 }
               },
-              "subText": "September 9, 2020",
-              "url": "https://anchor.fm/s/1c740498/podcast/play/19201381/https%3A%2F%2Fd3ctxlq1ktw2nl.cloudfront.net%2Fstaging%2F2020-8-7%2F9f778dfc-8721-e459-c5d8-669a7a1a92f2.mp3",
+              "subText": "June 2, 2023",
+              "url": "https://podcasts.captivate.fm/media/a48e9d7d-e970-46a3-854b-e18a1a4c0cf7/NAHUM-1.mp3",
               "sel": null,
-              "id": "Le Monde à Poils #14 - L'Ours et le Loup",
+              "id": "Nahum 1",
               "favLists": [],
-              "logo": "https://d3t3ozftmdmh3i.cloudfront.net/production/podcast_uploaded_episode/4673654/4673654-1599478143714-6c39069feb58c.jpg",
+              "logo": "https://artwork.captivate.fm/7567c92a-3e4c-4a71-babc-642b673bf69e/dcd1lrqsy-ulxzwrdt58c29h.jpg",
               "pdc": true,
               "epi": true,
-              "pubDate": "Wed, 09 Sep 2020 08:00:00 GMT",
+              "pubDate": "Fri, 02 Jun 2023 00:15:00 -0500",
               "groups": [],
-              "key": "Le Monde à Poils #14 - L'Ours et le Louphttps://anchor.fm/s/1c740498/podcast/play/19201381/https%3A%2F%2Fd3ctxlq1ktw2nl.cloudfront.net%2Fstaging%2F2020-8-7%2F9f778dfc-8721-e459-c5d8-669a7a1a92f2.mp3",
+              "key": "Nahum 1https://podcasts.captivate.fm/media/a48e9d7d-e970-46a3-854b-e18a1a4c0cf7/NAHUM-1.mp3",
               "ref": {
                 "currentRDList": {
                   "listId": "Podcast",
                   "name": "epi",
-                  "$item": null
+                  "$item": {
+                    "0": {},
+                    "length": 1,
+                    "prevObject": {
+                      "0": {
+                        "jQuery3710486476191790265361": {
+                          "events": {
+                            "click": [
+                              {
+                                "type": "click",
+                                "origType": "click",
+                                "guid": 23878,
+                                "namespace": ""
+                              }
+                            ]
+                          }
+                        }
+                      },
+                      "length": 1
+                    }
+                  }
                 },
                 "currentTab": {
                   "listId": "Podcast",
@@ -32317,15 +34042,16 @@
               "logo": "https://metaclassique.com/wp-content/uploads/2024/10/cropped-Favicon-32x32.png",
               "subText": "METACLASSIQUE",
               "pItem": null
-            }
+            },
+            "selCnt": 0
           },
           "pdcSubListId": "epi",
           "epi": {
             "item": {
               "code": null,
-              "name": "S.15 : « Poème jardinier » de Louise de Vilmorin",
+              "name": "Metaclassique #346 – Caractériser",
               "qty": "",
-              "subText2": "00:15 / 03:41",
+              "subText2": "",
               "metadata": {
                 "statusText": "playing",
                 "playState": {
@@ -32346,38 +34072,51 @@
                     "pauseStateChanged": true
                   }
                 },
-                "startTime": 1762921150884,
+                "startTime": 1762921636447,
                 "duration": {
-                  "h": 0,
-                  "m": 3,
-                  "s": 41,
-                  "error": false,
-                  "isInfinite": false
-                },
-                "currentTime": {
-                  "h": 0,
-                  "m": 0,
-                  "s": 15,
+                  "h": 2,
+                  "m": 12,
+                  "s": 1,
                   "error": false,
                   "isInfinite": false
                 }
               },
-              "subText": "July 13, 2020",
-              "url": "https://audio.ausha.co/oZLX2TzJxeZX.mp3?t=1651668042",
+              "subText": "September 17, 2025",
+              "url": "https://metaclassique.com/pad/2025/09/Metaclassique_346_Caracteriser.mp3",
               "sel": null,
-              "id": "S.15 : « Poème jardinier » de Louise de Vilmorin",
+              "id": "Metaclassique #346 – Caractériser",
               "favLists": [],
-              "logo": "https://image.ausha.co/d6WAUYc2LRSjSvxTo6QdRa8BueyyKq2VdgcgHknf_1400x1400.jpeg?t=1594639387",
+              "logo": "https://metaclassique.com/wp-content/uploads/2024/10/cropped-Favicon-32x32.png",
               "pdc": true,
               "epi": true,
-              "pubDate": "Mon, 13 Jul 2020 09:14:56 +0000",
+              "pubDate": "Wed, 17 Sep 2025 06:00:00 +0000",
               "groups": [],
-              "key": "S.15 : « Poème jardinier » de Louise de Vilmorinhttps://audio.ausha.co/oZLX2TzJxeZX.mp3?t=1651668042",
+              "key": "Metaclassique #346 – Caractériserhttps://metaclassique.com/pad/2025/09/Metaclassique_346_Caracteriser.mp3",
               "ref": {
                 "currentRDList": {
                   "listId": "Podcast",
                   "name": "epi",
-                  "$item": null
+                  "$item": {
+                    "0": {},
+                    "length": 1,
+                    "prevObject": {
+                      "0": {
+                        "jQuery3710486476191790265361": {
+                          "events": {
+                            "click": [
+                              {
+                                "type": "click",
+                                "origType": "click",
+                                "guid": 23230,
+                                "namespace": ""
+                              }
+                            ]
+                          }
+                        }
+                      },
+                      "length": 1
+                    }
+                  }
                 },
                 "currentTab": {
                   "listId": "Podcast",
@@ -32420,8 +34159,147 @@
         "url": "https://metaclassique.com/feed/",
         "store": 1,
         "page": 1,
-        "sel": null,
-        "selCnt": 1,
+        "sel": {
+          "lang": {
+            "item": {
+              "code": "fra",
+              "name": "French",
+              "qty": 64492
+            }
+          },
+          "langSubListId": "tag",
+          "tag": {
+            "item": {
+              "code": null,
+              "name": "books",
+              "qty": 530
+            }
+          },
+          "tagSubListId": "letter",
+          "letter": {
+            "item": {
+              "code": null,
+              "name": "M",
+              "qty": 32,
+              "stores": [
+                1
+              ]
+            }
+          },
+          "letterSubListId": "pdc",
+          "pdc": {
+            "item": {
+              "code": null,
+              "name": "METACLASSIQUE",
+              "qty": 362,
+              "url": "https://metaclassique.com/feed/",
+              "store": 1,
+              "page": 1,
+              "sel": null,
+              "selCnt": 0,
+              "id": "METACLASSIQUE",
+              "favLists": [
+                "----- Podcasts musique -----"
+              ],
+              "metadata": {
+                "statusText": ""
+              },
+              "pdc": true,
+              "key": "METACLASSIQUEhttps://metaclassique.com/feed/",
+              "rss": null,
+              "logo": "https://metaclassique.com/wp-content/uploads/2024/10/cropped-Favicon-32x32.png",
+              "subText": "METACLASSIQUE",
+              "pItem": null
+            },
+            "selCnt": 0
+          },
+          "pdcSubListId": "epi",
+          "epi": {
+            "item": {
+              "code": null,
+              "name": "Metaclassique #346 – Caractériser",
+              "qty": "",
+              "subText2": "",
+              "metadata": {
+                "statusText": "playing",
+                "playState": {
+                  "statusText": "playing",
+                  "loadingState": "playing",
+                  "playingState": {
+                    "isPaused": false,
+                    "isCurrent": true,
+                    "isPlaying": true
+                  },
+                  "events": {
+                    "connecting": true,
+                    "noConnection": false,
+                    "connected": true,
+                    "ended": false,
+                    "playing": true,
+                    "seeking": false,
+                    "pauseStateChanged": true
+                  }
+                },
+                "startTime": 1762921636447,
+                "duration": {
+                  "h": 2,
+                  "m": 12,
+                  "s": 1,
+                  "error": false,
+                  "isInfinite": false
+                }
+              },
+              "subText": "September 17, 2025",
+              "url": "https://metaclassique.com/pad/2025/09/Metaclassique_346_Caracteriser.mp3",
+              "sel": null,
+              "id": "Metaclassique #346 – Caractériser",
+              "favLists": [],
+              "logo": "https://metaclassique.com/wp-content/uploads/2024/10/cropped-Favicon-32x32.png",
+              "pdc": true,
+              "epi": true,
+              "pubDate": "Wed, 17 Sep 2025 06:00:00 +0000",
+              "groups": [],
+              "key": "Metaclassique #346 – Caractériserhttps://metaclassique.com/pad/2025/09/Metaclassique_346_Caracteriser.mp3",
+              "ref": {
+                "currentRDList": {
+                  "listId": "Podcast",
+                  "name": "epi",
+                  "$item": {
+                    "0": {},
+                    "length": 1,
+                    "prevObject": {
+                      "0": {
+                        "jQuery3710486476191790265361": {
+                          "events": {
+                            "click": [
+                              {
+                                "type": "click",
+                                "origType": "click",
+                                "guid": 23230,
+                                "namespace": ""
+                              }
+                            ]
+                          }
+                        }
+                      },
+                      "length": 1
+                    }
+                  }
+                },
+                "currentTab": {
+                  "listId": "Podcast",
+                  "tabId": "btn_wrp_podcast"
+                }
+              },
+              "pItem": null
+            }
+          },
+          "epiSubListId": null,
+          "noPage": 1,
+          "epiOpen": false,
+          "epiOpening": false
+        },
+        "selCnt": 0,
         "id": "METACLASSIQUE",
         "favLists": [
           "----- Podcasts musique -----"
@@ -32493,15 +34371,16 @@
               "logo": "https://metaclassique.com/wp-content/uploads/2024/10/cropped-Favicon-32x32.png",
               "subText": "METACLASSIQUE",
               "pItem": null
-            }
+            },
+            "selCnt": 0
           },
           "pdcSubListId": "epi",
           "epi": {
             "item": {
               "code": null,
-              "name": "S.15 : « Poème jardinier » de Louise de Vilmorin",
+              "name": "Metaclassique #346 – Caractériser",
               "qty": "",
-              "subText2": "00:15 / 03:41",
+              "subText2": "",
               "metadata": {
                 "statusText": "playing",
                 "playState": {
@@ -32522,38 +34401,51 @@
                     "pauseStateChanged": true
                   }
                 },
-                "startTime": 1762921150884,
+                "startTime": 1762921636447,
                 "duration": {
-                  "h": 0,
-                  "m": 3,
-                  "s": 41,
-                  "error": false,
-                  "isInfinite": false
-                },
-                "currentTime": {
-                  "h": 0,
-                  "m": 0,
-                  "s": 15,
+                  "h": 2,
+                  "m": 12,
+                  "s": 1,
                   "error": false,
                   "isInfinite": false
                 }
               },
-              "subText": "July 13, 2020",
-              "url": "https://audio.ausha.co/oZLX2TzJxeZX.mp3?t=1651668042",
+              "subText": "September 17, 2025",
+              "url": "https://metaclassique.com/pad/2025/09/Metaclassique_346_Caracteriser.mp3",
               "sel": null,
-              "id": "S.15 : « Poème jardinier » de Louise de Vilmorin",
+              "id": "Metaclassique #346 – Caractériser",
               "favLists": [],
-              "logo": "https://image.ausha.co/d6WAUYc2LRSjSvxTo6QdRa8BueyyKq2VdgcgHknf_1400x1400.jpeg?t=1594639387",
+              "logo": "https://metaclassique.com/wp-content/uploads/2024/10/cropped-Favicon-32x32.png",
               "pdc": true,
               "epi": true,
-              "pubDate": "Mon, 13 Jul 2020 09:14:56 +0000",
+              "pubDate": "Wed, 17 Sep 2025 06:00:00 +0000",
               "groups": [],
-              "key": "S.15 : « Poème jardinier » de Louise de Vilmorinhttps://audio.ausha.co/oZLX2TzJxeZX.mp3?t=1651668042",
+              "key": "Metaclassique #346 – Caractériserhttps://metaclassique.com/pad/2025/09/Metaclassique_346_Caracteriser.mp3",
               "ref": {
                 "currentRDList": {
                   "listId": "Podcast",
                   "name": "epi",
-                  "$item": null
+                  "$item": {
+                    "0": {},
+                    "length": 1,
+                    "prevObject": {
+                      "0": {
+                        "jQuery3710486476191790265361": {
+                          "events": {
+                            "click": [
+                              {
+                                "type": "click",
+                                "origType": "click",
+                                "guid": 23230,
+                                "namespace": ""
+                              }
+                            ]
+                          }
+                        }
+                      },
+                      "length": 1
+                    }
+                  }
                 },
                 "currentTab": {
                   "listId": "Podcast",
@@ -32640,15 +34532,16 @@
               "logo": "https://metaclassique.com/wp-content/uploads/2024/10/cropped-Favicon-32x32.png",
               "subText": "METACLASSIQUE",
               "pItem": null
-            }
+            },
+            "selCnt": 0
           },
           "pdcSubListId": "epi",
           "epi": {
             "item": {
               "code": null,
-              "name": "S.15 : « Poème jardinier » de Louise de Vilmorin",
+              "name": "Metaclassique #346 – Caractériser",
               "qty": "",
-              "subText2": "00:15 / 03:41",
+              "subText2": "",
               "metadata": {
                 "statusText": "playing",
                 "playState": {
@@ -32669,38 +34562,51 @@
                     "pauseStateChanged": true
                   }
                 },
-                "startTime": 1762921150884,
+                "startTime": 1762921636447,
                 "duration": {
-                  "h": 0,
-                  "m": 3,
-                  "s": 41,
-                  "error": false,
-                  "isInfinite": false
-                },
-                "currentTime": {
-                  "h": 0,
-                  "m": 0,
-                  "s": 15,
+                  "h": 2,
+                  "m": 12,
+                  "s": 1,
                   "error": false,
                   "isInfinite": false
                 }
               },
-              "subText": "July 13, 2020",
-              "url": "https://audio.ausha.co/oZLX2TzJxeZX.mp3?t=1651668042",
+              "subText": "September 17, 2025",
+              "url": "https://metaclassique.com/pad/2025/09/Metaclassique_346_Caracteriser.mp3",
               "sel": null,
-              "id": "S.15 : « Poème jardinier » de Louise de Vilmorin",
+              "id": "Metaclassique #346 – Caractériser",
               "favLists": [],
-              "logo": "https://image.ausha.co/d6WAUYc2LRSjSvxTo6QdRa8BueyyKq2VdgcgHknf_1400x1400.jpeg?t=1594639387",
+              "logo": "https://metaclassique.com/wp-content/uploads/2024/10/cropped-Favicon-32x32.png",
               "pdc": true,
               "epi": true,
-              "pubDate": "Mon, 13 Jul 2020 09:14:56 +0000",
+              "pubDate": "Wed, 17 Sep 2025 06:00:00 +0000",
               "groups": [],
-              "key": "S.15 : « Poème jardinier » de Louise de Vilmorinhttps://audio.ausha.co/oZLX2TzJxeZX.mp3?t=1651668042",
+              "key": "Metaclassique #346 – Caractériserhttps://metaclassique.com/pad/2025/09/Metaclassique_346_Caracteriser.mp3",
               "ref": {
                 "currentRDList": {
                   "listId": "Podcast",
                   "name": "epi",
-                  "$item": null
+                  "$item": {
+                    "0": {},
+                    "length": 1,
+                    "prevObject": {
+                      "0": {
+                        "jQuery3710486476191790265361": {
+                          "events": {
+                            "click": [
+                              {
+                                "type": "click",
+                                "origType": "click",
+                                "guid": 23230,
+                                "namespace": ""
+                              }
+                            ]
+                          }
+                        }
+                      },
+                      "length": 1
+                    }
+                  }
                 },
                 "currentTab": {
                   "listId": "Podcast",
