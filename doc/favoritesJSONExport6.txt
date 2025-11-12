@@ -4,10 +4,87 @@
     "name": "History",
     "items": [
       {
+        "id": "3758",
+        "name": "Chill Lounge Florida",
+        "description": null,
+        "groupTitle": null,
+        "groups": [
+          "Lounge"
+        ],
+        "url": "https://vip2.fastcast4u.com/proxy/chillfla?mp=/1",
+        "logo": "https://img1.wsimg.com/isteam/stock/nzaDy9/:/cr=t:0%25,l:0%25,w:100%25,h:100%25/rs=h:500,cg:true",
+        "artist": null,
+        "lang": null,
+        "channels": null,
+        "country": null,
+        "favLists": [
+          "History",
+          "Lounge"
+        ],
+        "metadata": {
+          "duration": {
+            "h": null,
+            "m": null,
+            "s": null,
+            "error": false,
+            "isInfinite": true
+          },
+          "stereo": null,
+          "encoding": null,
+          "sampleFrq": null,
+          "sampleRes": null,
+          "country": null,
+          "statusText": "playing",
+          "startTime": 1762926615607,
+          "stopTime": null,
+          "position": null,
+          "playState": {
+            "statusText": "pause",
+            "loadingState": "pauseStateChanged",
+            "playingState": {
+              "isPaused": true,
+              "isCurrent": true,
+              "isPlaying": false
+            },
+            "events": {
+              "connecting": true,
+              "noConnection": false,
+              "connected": true,
+              "ended": false,
+              "playing": true,
+              "seeking": false,
+              "pauseStateChanged": true
+            }
+          },
+          "currentTime": {
+            "h": 0,
+            "m": 6,
+            "s": 0,
+            "error": false,
+            "isInfinite": false
+          },
+          "endTime": 1762926900870
+        },
+        "key": "Chill Lounge Floridahttps://vip2.fastcast4u.com/proxy/chillfla?mp=/1",
+        "subText2": "06:00 ",
+        "ref": {
+          "currentRDList": {
+            "listId": "List",
+            "name": "History",
+            "$item": null
+          },
+          "currentTab": {
+            "listId": "Viz",
+            "tabId": "btn_wrp_logo"
+          }
+        },
+        "listenDate": 1762926526805
+      },
+      {
         "code": null,
-        "name": "Jeune, démocrate et musulman : qui est Zohran Mamdani, le nouveau maire anti-Trump de New-York ?",
+        "name": "Construire un produit Open Source sans lever de fonds, Grégory Rocher",
         "qty": "",
-        "subText2": "01:43 / 01:03:34",
+        "subText2": "01:48 / 02:09:34",
         "metadata": {
           "statusText": "playing",
           "playState": {
@@ -28,7 +105,980 @@
               "pauseStateChanged": true
             }
           },
-          "startTime": 1762925209917,
+          "startTime": 1762926513665,
+          "duration": {
+            "h": 2,
+            "m": 9,
+            "s": 34,
+            "error": false,
+            "isInfinite": false
+          },
+          "currentTime": {
+            "h": 0,
+            "m": 1,
+            "s": 48,
+            "error": false,
+            "isInfinite": false
+          },
+          "endTime": 1762868774811
+        },
+        "subText": "April 28, 2025",
+        "url": "https://sphinx.acast.com/p/open/s/67a716499c6f7f7f280da15b/e/680ff01e6ac0e5213bfd0c74/media.mp3",
+        "sel": {
+          "lang": {
+            "item": {
+              "code": "fra",
+              "name": "French",
+              "qty": 64492
+            }
+          },
+          "langSubListId": "tag",
+          "tag": {
+            "item": {
+              "code": null,
+              "name": "technology",
+              "qty": 1390
+            }
+          },
+          "tagSubListId": "letter",
+          "letter": {
+            "item": {
+              "code": null,
+              "name": "J",
+              "qty": 9,
+              "stores": [
+                1
+              ]
+            }
+          },
+          "letterSubListId": "pdc",
+          "pdc": {
+            "item": {
+              "code": null,
+              "name": "Just a Click",
+              "qty": 111,
+              "url": "https://feeds.acast.com/public/shows/67a716499c6f7f7f280da15b",
+              "store": 1,
+              "page": 1,
+              "sel": null,
+              "selCnt": 1,
+              "id": "Just a Click",
+              "favLists": [
+                "----- Podcast documentaire -----"
+              ],
+              "metadata": {
+                "statusText": ""
+              },
+              "pdc": true,
+              "key": "Just a Clickhttps://feeds.acast.com/public/shows/67a716499c6f7f7f280da15b",
+              "rss": null,
+              "logo": "https://assets.pippa.io/shows/67a716499c6f7f7f280da15b/show-cover.png",
+              "subText": "Terry Michel",
+              "pItem": null
+            }
+          },
+          "pdcSubListId": "epi",
+          "epi": {
+            "item": {
+              "code": null,
+              "name": "Comprendre l'infrastructure technique qui permet aux agents IA d'exister, Rémi Louf",
+              "qty": "",
+              "subText2": "00:09 / 02:03:33",
+              "metadata": {
+                "statusText": "playing",
+                "playState": {
+                  "statusText": "playing",
+                  "loadingState": "playing",
+                  "playingState": {
+                    "isPaused": false,
+                    "isCurrent": true,
+                    "isPlaying": true
+                  },
+                  "events": {
+                    "connecting": true,
+                    "noConnection": false,
+                    "connected": true,
+                    "ended": false,
+                    "playing": true,
+                    "seeking": true,
+                    "pauseStateChanged": true
+                  }
+                },
+                "startTime": 1762925167357,
+                "duration": {
+                  "h": 2,
+                  "m": 3,
+                  "s": 33,
+                  "error": false,
+                  "isInfinite": false
+                },
+                "currentTime": {
+                  "h": 0,
+                  "m": 0,
+                  "s": 9,
+                  "error": false,
+                  "isInfinite": false
+                },
+                "endTime": 1762810638838
+              },
+              "subText": "November 4, 2025",
+              "url": "https://sphinx.acast.com/p/open/s/67a716499c6f7f7f280da15b/e/6907c88a17c1d64648c094fa/media.mp3",
+              "sel": null,
+              "id": "Comprendre l'infrastructure technique qui permet aux agents IA d'exister, Rémi Louf",
+              "favLists": [],
+              "logo": "https://assets.pippa.io/shows/67a716499c6f7f7f280da15b/1762117684157-d19cc72f-4d46-4470-bb60-91b63813756d.jpeg",
+              "pdc": true,
+              "epi": true,
+              "pubDate": "Mon, 03 Nov 2025 23:16:12 GMT",
+              "groups": [],
+              "key": "Comprendre l'infrastructure technique qui permet aux agents IA d'exister, Rémi Loufhttps://sphinx.acast.com/p/open/s/67a716499c6f7f7f280da15b/e/6907c88a17c1d64648c094fa/media.mp3",
+              "ref": {
+                "currentRDList": {
+                  "listId": "List",
+                  "name": "----- Podcasts ------",
+                  "$item": null
+                },
+                "currentTab": {
+                  "listId": "List",
+                  "tabId": "btn_wrp_play_list"
+                }
+              },
+              "listenDate": 1762867059458,
+              "statusText": "ended",
+              "pItem": null
+            }
+          },
+          "epiSubListId": null,
+          "noPage": 1,
+          "epiOpen": false,
+          "epiOpening": false
+        },
+        "id": "Construire un produit Open Source sans lever de fonds, Grégory Rocher",
+        "favLists": [
+          "----- Podcast documentaire -----"
+        ],
+        "logo": "https://assets.pippa.io/shows/67a716499c6f7f7f280da15b/1745874469900-0e2fa7eb-ea5e-40ee-a6fc-b573c365dfb8.jpeg",
+        "pdc": true,
+        "epi": true,
+        "pubDate": "Mon, 28 Apr 2025 21:16:13 GMT",
+        "groups": [],
+        "key": "Construire un produit Open Source sans lever de fonds, Grégory Rocherhttps://sphinx.acast.com/p/open/s/67a716499c6f7f7f280da15b/e/680ff01e6ac0e5213bfd0c74/media.mp3",
+        "ref": {
+          "currentRDList": {
+            "listId": "List",
+            "name": "History",
+            "$item": null
+          },
+          "currentTab": {
+            "listId": "Viz",
+            "tabId": "btn_wrp_logo"
+          }
+        },
+        "listenDate": 1762926481104,
+        "statusText": "ended"
+      },
+      {
+        "code": null,
+        "name": "La sorcière des Bell 🧙🏻‍♀️",
+        "qty": "",
+        "subText2": "02:25 / 18:10",
+        "metadata": {
+          "statusText": "playing",
+          "playState": {
+            "statusText": "playing",
+            "loadingState": "playing",
+            "playingState": {
+              "isPaused": false,
+              "isCurrent": true,
+              "isPlaying": true
+            },
+            "events": {
+              "connecting": true,
+              "noConnection": false,
+              "connected": true,
+              "ended": false,
+              "playing": true,
+              "seeking": true,
+              "pauseStateChanged": true
+            }
+          },
+          "startTime": 1762926329927,
+          "duration": {
+            "h": 0,
+            "m": 18,
+            "s": 10,
+            "error": false,
+            "isInfinite": false
+          },
+          "currentTime": {
+            "h": 0,
+            "m": 2,
+            "s": 25,
+            "error": false,
+            "isInfinite": false
+          }
+        },
+        "subText": "October 1, 2021",
+        "url": "https://audio.audiomeans.fr/file/PgeAPOjsIT/fd1ed5ec-2cd1-4a5a-b5cc-2cb11539090d.mp3?_=1632924035",
+        "sel": {
+          "lang": {
+            "item": {
+              "code": "fra",
+              "name": "French",
+              "qty": 64492
+            }
+          },
+          "langSubListId": "tag",
+          "tag": {
+            "item": {
+              "code": null,
+              "name": "true crime",
+              "qty": 80,
+              "stores": [
+                1
+              ]
+            }
+          },
+          "tagSubListId": "pdc",
+          "letter": null,
+          "letterSubListId": null,
+          "pdc": {
+            "item": {
+              "code": null,
+              "name": "Feu de camp",
+              "qty": 146,
+              "url": "https://feeds.audiomeans.fr/feed/278c8c9f-2297-44cc-8674-65e285cb80c1.xml",
+              "store": 1,
+              "page": 1,
+              "sel": null,
+              "selCnt": 1,
+              "id": "Feu de camp",
+              "favLists": [
+                "----- Podcast Horreur -----"
+              ],
+              "metadata": {
+                "statusText": ""
+              },
+              "pdc": true,
+              "rss": null,
+              "logo": "https://static.audiomeans.fr/img/podcast/2bee1e6b-2048-4338-bca8-c77b04a328d0.jpg",
+              "subText": "NRJ France",
+              "key": "Feu de camphttps://feeds.audiomeans.fr/feed/278c8c9f-2297-44cc-8674-65e285cb80c1.xml",
+              "pItem": null
+            }
+          },
+          "pdcSubListId": "epi",
+          "epi": {
+            "item": {
+              "code": null,
+              "name": "La sorcière des Bell 🧙🏻‍♀️",
+              "qty": "",
+              "subText2": "01:31 / 17:40",
+              "metadata": {
+                "statusText": "playing",
+                "playState": {
+                  "statusText": "playing",
+                  "loadingState": "playing",
+                  "playingState": {
+                    "isPaused": false,
+                    "isCurrent": true,
+                    "isPlaying": true
+                  },
+                  "events": {
+                    "connecting": true,
+                    "noConnection": false,
+                    "connected": true,
+                    "ended": false,
+                    "playing": true,
+                    "seeking": true,
+                    "pauseStateChanged": true
+                  }
+                },
+                "startTime": 1762923390654,
+                "duration": {
+                  "h": 0,
+                  "m": 17,
+                  "s": 40,
+                  "error": false,
+                  "isInfinite": false
+                },
+                "currentTime": {
+                  "h": 0,
+                  "m": 1,
+                  "s": 31,
+                  "error": false,
+                  "isInfinite": false
+                }
+              },
+              "subText": "October 1, 2021",
+              "url": "https://audio.audiomeans.fr/file/PgeAPOjsIT/fd1ed5ec-2cd1-4a5a-b5cc-2cb11539090d.mp3?_=1632924035",
+              "sel": null,
+              "id": "La sorcière des Bell 🧙🏻‍♀️",
+              "favLists": [],
+              "logo": "https://static.audiomeans.fr/img/episode/2f76eef6-8340-4d85-85b7-b120aeb3c3e9.jpg",
+              "pdc": true,
+              "epi": true,
+              "pubDate": "Thu, 30 Sep 2021 22:30:00 GMT",
+              "groups": [],
+              "key": "La sorcière des Bell 🧙🏻‍♀️https://audio.audiomeans.fr/file/PgeAPOjsIT/fd1ed5ec-2cd1-4a5a-b5cc-2cb11539090d.mp3?_=1632924035",
+              "ref": {
+                "currentRDList": {
+                  "listId": "List",
+                  "name": "History",
+                  "$item": null
+                },
+                "currentTab": {
+                  "listId": "List",
+                  "tabId": "btn_wrp_play_list"
+                }
+              },
+              "listenDate": 1762923098648,
+              "pItem": null
+            }
+          },
+          "epiSubListId": null,
+          "noPage": 1,
+          "epiOpen": true,
+          "epiOpening": false
+        },
+        "id": "La sorcière des Bell 🧙🏻‍♀️",
+        "favLists": [
+          "----- Podcast Etrange -----"
+        ],
+        "logo": "https://static.audiomeans.fr/img/episode/2f76eef6-8340-4d85-85b7-b120aeb3c3e9.jpg",
+        "pdc": true,
+        "epi": true,
+        "pubDate": "Thu, 30 Sep 2021 22:30:00 GMT",
+        "groups": [],
+        "key": "La sorcière des Bell 🧙🏻‍♀️https://audio.audiomeans.fr/file/PgeAPOjsIT/fd1ed5ec-2cd1-4a5a-b5cc-2cb11539090d.mp3?_=1632924035",
+        "ref": {
+          "currentRDList": {
+            "listId": "List",
+            "name": "History",
+            "$item": null
+          },
+          "currentTab": {
+            "listId": "List",
+            "tabId": "btn_wrp_play_list"
+          }
+        },
+        "listenDate": 1762926337694
+      },
+      {
+        "code": null,
+        "name": "Comment l'IA révolutionne le produit dans le domaine de la santé, Aurélie Le Guillou",
+        "qty": "",
+        "subText2": "02:39 / 02:02:58",
+        "metadata": {
+          "statusText": "playing",
+          "playState": {
+            "statusText": "playing",
+            "loadingState": "playing",
+            "playingState": {
+              "isPaused": false,
+              "isCurrent": true,
+              "isPlaying": true
+            },
+            "events": {
+              "connecting": true,
+              "noConnection": false,
+              "connected": true,
+              "ended": false,
+              "playing": true,
+              "seeking": true,
+              "pauseStateChanged": true
+            }
+          },
+          "startTime": 1762926345550,
+          "duration": {
+            "h": 2,
+            "m": 2,
+            "s": 58,
+            "error": false,
+            "isInfinite": false
+          },
+          "currentTime": {
+            "h": 0,
+            "m": 2,
+            "s": 39,
+            "error": false,
+            "isInfinite": false
+          }
+        },
+        "subText": "April 9, 2025",
+        "url": "https://sphinx.acast.com/p/open/s/67a716499c6f7f7f280da15b/e/67f6cb7adb6dca4dc27f8f3d/media.mp3",
+        "sel": {
+          "lang": {
+            "item": {
+              "code": "fra",
+              "name": "French",
+              "qty": 64492
+            }
+          },
+          "langSubListId": "tag",
+          "tag": {
+            "item": {
+              "code": null,
+              "name": "technology",
+              "qty": 1390
+            }
+          },
+          "tagSubListId": "letter",
+          "letter": {
+            "item": {
+              "code": null,
+              "name": "J",
+              "qty": 9,
+              "stores": [
+                1
+              ]
+            }
+          },
+          "letterSubListId": "pdc",
+          "pdc": {
+            "item": {
+              "code": null,
+              "name": "Just a Click",
+              "qty": 111,
+              "url": "https://feeds.acast.com/public/shows/67a716499c6f7f7f280da15b",
+              "store": 1,
+              "page": 1,
+              "sel": null,
+              "selCnt": 1,
+              "id": "Just a Click",
+              "favLists": [
+                "----- Podcast documentaire -----"
+              ],
+              "metadata": {
+                "statusText": ""
+              },
+              "pdc": true,
+              "key": "Just a Clickhttps://feeds.acast.com/public/shows/67a716499c6f7f7f280da15b",
+              "rss": null,
+              "logo": "https://assets.pippa.io/shows/67a716499c6f7f7f280da15b/show-cover.png",
+              "subText": "Terry Michel",
+              "pItem": null
+            }
+          },
+          "pdcSubListId": "epi",
+          "epi": {
+            "item": {
+              "code": null,
+              "name": "Comprendre l'infrastructure technique qui permet aux agents IA d'exister, Rémi Louf",
+              "qty": "",
+              "subText2": "00:09 / 02:03:33",
+              "metadata": {
+                "statusText": "playing",
+                "playState": {
+                  "statusText": "playing",
+                  "loadingState": "playing",
+                  "playingState": {
+                    "isPaused": false,
+                    "isCurrent": true,
+                    "isPlaying": true
+                  },
+                  "events": {
+                    "connecting": true,
+                    "noConnection": false,
+                    "connected": true,
+                    "ended": false,
+                    "playing": true,
+                    "seeking": true,
+                    "pauseStateChanged": true
+                  }
+                },
+                "startTime": 1762925167357,
+                "duration": {
+                  "h": 2,
+                  "m": 3,
+                  "s": 33,
+                  "error": false,
+                  "isInfinite": false
+                },
+                "currentTime": {
+                  "h": 0,
+                  "m": 0,
+                  "s": 9,
+                  "error": false,
+                  "isInfinite": false
+                },
+                "endTime": 1762810638838
+              },
+              "subText": "November 4, 2025",
+              "url": "https://sphinx.acast.com/p/open/s/67a716499c6f7f7f280da15b/e/6907c88a17c1d64648c094fa/media.mp3",
+              "sel": null,
+              "id": "Comprendre l'infrastructure technique qui permet aux agents IA d'exister, Rémi Louf",
+              "favLists": [],
+              "logo": "https://assets.pippa.io/shows/67a716499c6f7f7f280da15b/1762117684157-d19cc72f-4d46-4470-bb60-91b63813756d.jpeg",
+              "pdc": true,
+              "epi": true,
+              "pubDate": "Mon, 03 Nov 2025 23:16:12 GMT",
+              "groups": [],
+              "key": "Comprendre l'infrastructure technique qui permet aux agents IA d'exister, Rémi Loufhttps://sphinx.acast.com/p/open/s/67a716499c6f7f7f280da15b/e/6907c88a17c1d64648c094fa/media.mp3",
+              "ref": {
+                "currentRDList": {
+                  "listId": "List",
+                  "name": "----- Podcasts ------",
+                  "$item": null
+                },
+                "currentTab": {
+                  "listId": "List",
+                  "tabId": "btn_wrp_play_list"
+                }
+              },
+              "listenDate": 1762867059458,
+              "statusText": "ended",
+              "pItem": null
+            }
+          },
+          "epiSubListId": null,
+          "noPage": 1,
+          "epiOpen": false,
+          "epiOpening": false
+        },
+        "id": "Comment l'IA révolutionne le produit dans le domaine de la santé, Aurélie Le Guillou",
+        "favLists": [
+          "----- Podcast documentaire -----"
+        ],
+        "logo": "https://assets.pippa.io/shows/67a716499c6f7f7f280da15b/1744228348813-dacfb9be-8add-4f3a-a244-7334abd7153e.jpeg",
+        "pdc": true,
+        "epi": true,
+        "pubDate": "Wed, 09 Apr 2025 19:57:31 GMT",
+        "groups": [],
+        "key": "Comment l'IA révolutionne le produit dans le domaine de la santé, Aurélie Le Guillouhttps://sphinx.acast.com/p/open/s/67a716499c6f7f7f280da15b/e/67f6cb7adb6dca4dc27f8f3d/media.mp3",
+        "ref": {
+          "currentRDList": {
+            "listId": "List",
+            "name": "History",
+            "$item": null
+          },
+          "currentTab": {
+            "listId": "Viz",
+            "tabId": "btn_wrp_logo"
+          }
+        },
+        "listenDate": 1762926177272
+      },
+      {
+        "code": null,
+        "name": "#29 : Le Vampire de Montparnasse",
+        "qty": "",
+        "subText2": "08:05 / 09:00",
+        "subText": "December 27, 2023",
+        "url": "https://traffic.360.audion.fm/622e8b40-1eb8-4719-a46e-439ca78be3b9.mp3",
+        "pItem": null,
+        "sel": {
+          "lang": {
+            "item": {
+              "code": "fra",
+              "name": "French",
+              "qty": 64492
+            }
+          },
+          "langSubListId": "tag",
+          "tag": {
+            "item": {
+              "code": null,
+              "name": "society",
+              "qty": 9159
+            }
+          },
+          "tagSubListId": "letter",
+          "letter": {
+            "item": {
+              "code": null,
+              "name": "S",
+              "qty": 473,
+              "stores": [
+                1
+              ]
+            }
+          },
+          "letterSubListId": "pdc",
+          "pdc": {
+            "item": {
+              "code": null,
+              "name": "Scènes de Crime",
+              "qty": 54,
+              "url": "https://feeds.360.audion.fm/EXKpQ_GdQ1PlZ0dD1pQaF",
+              "store": 1,
+              "page": 1,
+              "pItem": null,
+              "sel": null,
+              "selCnt": 1,
+              "id": "Scènes de Crime",
+              "favLists": [
+                "----- Podcast Enquête -----"
+              ],
+              "metadata": {
+                "statusText": ""
+              },
+              "pdc": true,
+              "rss": null,
+              "logo": "https://artworks.360.audion.fm/3c192d8a-5c9c-451a-8465-dfa614a4d677.jpg?width=3000&height=3000",
+              "subText": "Prisma Media",
+              "key": "Scènes de Crimehttps://feeds.360.audion.fm/EXKpQ_GdQ1PlZ0dD1pQaF"
+            }
+          },
+          "pdcSubListId": "epi",
+          "epi": {
+            "item": {
+              "code": null,
+              "name": "#29 : Le Vampire de Montparnasse",
+              "qty": "",
+              "subText2": "00:55 / 09:01",
+              "subText": "December 27, 2023",
+              "url": "https://traffic.360.audion.fm/622e8b40-1eb8-4719-a46e-439ca78be3b9.mp3",
+              "pItem": null,
+              "sel": null,
+              "id": "#29 : Le Vampire de Montparnasse",
+              "favLists": [],
+              "logo": "https://artworks.360.audion.fm/3c192d8a-5c9c-451a-8465-dfa614a4d677.jpg?width=3000&height=3000",
+              "metadata": {
+                "statusText": "playing",
+                "startTime": 1762923801418,
+                "duration": {
+                  "h": 0,
+                  "m": 9,
+                  "s": 1,
+                  "error": false,
+                  "isInfinite": false
+                },
+                "playState": {
+                  "statusText": "playing",
+                  "loadingState": "playing",
+                  "playingState": {
+                    "isPaused": false,
+                    "isCurrent": true,
+                    "isPlaying": true
+                  },
+                  "events": {
+                    "connecting": true,
+                    "noConnection": false,
+                    "connected": true,
+                    "ended": false,
+                    "playing": true,
+                    "seeking": true,
+                    "pauseStateChanged": true
+                  }
+                },
+                "currentTime": {
+                  "h": 0,
+                  "m": 0,
+                  "s": 55,
+                  "error": false,
+                  "isInfinite": false
+                }
+              },
+              "pdc": true,
+              "epi": true,
+              "pubDate": "Wed, 27 Dec 2023 05:00:00 GMT",
+              "ref": {
+                "currentRDList": {
+                  "listId": "List",
+                  "name": "----- Podcasts ------",
+                  "$item": null
+                },
+                "currentTab": {
+                  "listId": "List",
+                  "tabId": "btn_wrp_play_list"
+                }
+              },
+              "groups": [
+                "true crime"
+              ],
+              "key": "#29 : Le Vampire de Montparnassehttps://traffic.360.audion.fm/622e8b40-1eb8-4719-a46e-439ca78be3b9.mp3",
+              "listenDate": 1762726841951
+            }
+          },
+          "epiSubListId": null,
+          "noPage": 1,
+          "epiOpen": true,
+          "epiOpening": false
+        },
+        "id": "#29 : Le Vampire de Montparnasse",
+        "favLists": [
+          "----- Podcast Enquête -----"
+        ],
+        "logo": "https://artworks.360.audion.fm/3c192d8a-5c9c-451a-8465-dfa614a4d677.jpg?width=3000&height=3000",
+        "metadata": {
+          "statusText": "playing",
+          "startTime": 1762925714905,
+          "duration": {
+            "h": 0,
+            "m": 9,
+            "s": 0,
+            "error": false,
+            "isInfinite": false
+          },
+          "playState": {
+            "statusText": "playing",
+            "loadingState": "playing",
+            "playingState": {
+              "isPaused": false,
+              "isCurrent": true,
+              "isPlaying": true
+            },
+            "events": {
+              "connecting": true,
+              "noConnection": false,
+              "connected": true,
+              "ended": false,
+              "playing": true,
+              "seeking": true,
+              "pauseStateChanged": true
+            }
+          },
+          "currentTime": {
+            "h": 0,
+            "m": 8,
+            "s": 5,
+            "error": false,
+            "isInfinite": false
+          }
+        },
+        "pdc": true,
+        "epi": true,
+        "pubDate": "Wed, 27 Dec 2023 05:00:00 GMT",
+        "ref": {
+          "currentRDList": {
+            "listId": "List",
+            "name": "----- Podcast Enquête -----",
+            "$item": null
+          },
+          "currentTab": {
+            "listId": "Viz",
+            "tabId": "btn_wrp_logo"
+          }
+        },
+        "groups": [
+          "true crime"
+        ],
+        "key": "#29 : Le Vampire de Montparnassehttps://traffic.360.audion.fm/622e8b40-1eb8-4719-a46e-439ca78be3b9.mp3",
+        "listenDate": 1762925724257
+      },
+      {
+        "code": null,
+        "name": "L'abbé Bruneau, le curé assassin ?",
+        "qty": "",
+        "subText2": "04:25 / 04:25",
+        "metadata": {
+          "statusText": "ended",
+          "playState": {
+            "statusText": "ended",
+            "loadingState": "ended",
+            "playingState": {
+              "isPaused": false,
+              "isCurrent": true,
+              "isPlaying": true
+            },
+            "events": {
+              "connecting": true,
+              "noConnection": false,
+              "connected": true,
+              "ended": true,
+              "playing": true,
+              "seeking": true,
+              "pauseStateChanged": true
+            }
+          },
+          "startTime": 1762925569453,
+          "duration": {
+            "h": 0,
+            "m": 4,
+            "s": 25,
+            "error": false,
+            "isInfinite": false
+          },
+          "currentTime": {
+            "h": 0,
+            "m": 4,
+            "s": 25,
+            "error": false,
+            "isInfinite": false
+          }
+        },
+        "subText": "February 24, 2021",
+        "url": "https://sphinx.acast.com/les-amants-de-la-guillotine/labbebruneau-lecureassassin-/media.mp3",
+        "sel": {
+          "lang": {
+            "item": {
+              "code": "fra",
+              "name": "French",
+              "qty": 64492
+            }
+          },
+          "langSubListId": "tag",
+          "tag": {
+            "item": {
+              "code": null,
+              "name": "documentary",
+              "qty": 213
+            }
+          },
+          "tagSubListId": "letter",
+          "letter": {
+            "item": {
+              "code": null,
+              "name": "L",
+              "qty": 66,
+              "stores": [
+                1
+              ]
+            }
+          },
+          "letterSubListId": "pdc",
+          "pdc": {
+            "item": {
+              "code": null,
+              "name": "Les amants de la guillotine",
+              "qty": 12,
+              "url": "https://rss.acast.com/les-amants-de-la-guillotine",
+              "store": 1,
+              "page": 1,
+              "sel": null,
+              "selCnt": 1,
+              "id": "Les amants de la guillotine",
+              "favLists": [
+                "----- Podcasts culture -----"
+              ],
+              "metadata": {
+                "statusText": ""
+              },
+              "pdc": true,
+              "key": "Les amants de la guillotinehttps://rss.acast.com/les-amants-de-la-guillotine",
+              "rss": null,
+              "logo": "https://assets.pippa.io/shows/60dcc5f6c0f8e6d8e64b0294/show-cover.jpg",
+              "subText": "Le Point",
+              "pItem": null
+            }
+          },
+          "pdcSubListId": "epi",
+          "epi": {
+            "item": {
+              "code": null,
+              "name": "L'abbé Bruneau, le curé assassin ?",
+              "qty": "",
+              "subText2": "02:46 / 04:25",
+              "metadata": {
+                "statusText": "playing",
+                "playState": {
+                  "statusText": "playing",
+                  "loadingState": "playing",
+                  "playingState": {
+                    "isPaused": false,
+                    "isCurrent": true,
+                    "isPlaying": true
+                  },
+                  "events": {
+                    "connecting": true,
+                    "noConnection": false,
+                    "connected": true,
+                    "ended": false,
+                    "playing": true,
+                    "seeking": true,
+                    "pauseStateChanged": true
+                  }
+                },
+                "startTime": 1762925181523,
+                "duration": {
+                  "h": 0,
+                  "m": 4,
+                  "s": 25,
+                  "error": false,
+                  "isInfinite": false
+                },
+                "currentTime": {
+                  "h": 0,
+                  "m": 2,
+                  "s": 46,
+                  "error": false,
+                  "isInfinite": false
+                }
+              },
+              "subText": "February 24, 2021",
+              "url": "https://sphinx.acast.com/les-amants-de-la-guillotine/labbebruneau-lecureassassin-/media.mp3",
+              "sel": null,
+              "id": "L'abbé Bruneau, le curé assassin ?",
+              "favLists": [
+                "----- Podcasts ------"
+              ],
+              "logo": "https://assets.pippa.io/shows/60dcc5f6c0f8e6d8e64b0294/60dcc612daf0ac00132d165d.jpg",
+              "pdc": true,
+              "epi": true,
+              "pubDate": "Wed, 24 Feb 2021 05:00:00 GMT",
+              "groups": [],
+              "key": "L'abbé Bruneau, le curé assassin ?https://sphinx.acast.com/les-amants-de-la-guillotine/labbebruneau-lecureassassin-/media.mp3",
+              "ref": {
+                "currentRDList": {
+                  "listId": "List",
+                  "name": "----- Podcasts ------",
+                  "$item": null
+                },
+                "currentTab": {
+                  "listId": "List",
+                  "tabId": "btn_wrp_play_list"
+                }
+              },
+              "listenDate": 1762738517778,
+              "pItem": null
+            }
+          },
+          "epiSubListId": null,
+          "noPage": 1,
+          "epiOpen": true,
+          "epiOpening": false
+        },
+        "id": "L'abbé Bruneau, le curé assassin ?",
+        "favLists": [
+          "----- Podcast Enquête -----"
+        ],
+        "logo": "https://assets.pippa.io/shows/60dcc5f6c0f8e6d8e64b0294/60dcc612daf0ac00132d165d.jpg",
+        "pdc": true,
+        "epi": true,
+        "pubDate": "Wed, 24 Feb 2021 05:00:00 GMT",
+        "groups": [],
+        "key": "L'abbé Bruneau, le curé assassin ?https://sphinx.acast.com/les-amants-de-la-guillotine/labbebruneau-lecureassassin-/media.mp3",
+        "ref": {
+          "currentRDList": {
+            "listId": "List",
+            "name": "----- Podcast Enquête -----",
+            "$item": null
+          },
+          "currentTab": {
+            "listId": "List",
+            "tabId": "btn_wrp_play_list"
+          }
+        },
+        "listenDate": 1762925579070,
+        "statusText": "ended"
+      },
+      {
+        "code": null,
+        "name": "Jeune, démocrate et musulman : qui est Zohran Mamdani, le nouveau maire anti-Trump de New-York ?",
+        "qty": "",
+        "subText2": "02:35 / 01:03:34",
+        "metadata": {
+          "statusText": "playing",
+          "playState": {
+            "statusText": "playing",
+            "loadingState": "playing",
+            "playingState": {
+              "isPaused": false,
+              "isCurrent": true,
+              "isPlaying": true
+            },
+            "events": {
+              "connecting": true,
+              "noConnection": false,
+              "connected": true,
+              "ended": false,
+              "playing": true,
+              "seeking": true,
+              "pauseStateChanged": true
+            }
+          },
+          "startTime": 1762925515424,
           "duration": {
             "h": 1,
             "m": 3,
@@ -38,8 +1088,8 @@
           },
           "currentTime": {
             "h": 0,
-            "m": 1,
-            "s": 43,
+            "m": 2,
+            "s": 35,
             "error": false,
             "isInfinite": false
           },
@@ -187,6 +1237,666 @@
         "key": "Jeune, démocrate et musulman : qui est Zohran Mamdani, le nouveau maire anti-Trump de New-York ?https://audio.audiomeans.fr/file/PgeAPOjsIT/2f23a124-d77c-424f-9743-0deed2db267e.mp3?_=1762536783",
         "ref": {
           "currentRDList": {
+            "listId": "List",
+            "name": "----- Podcast documentaire -----",
+            "$item": null
+          },
+          "currentTab": {
+            "listId": "Viz",
+            "tabId": "btn_wrp_logo"
+          }
+        },
+        "listenDate": 1762925523177
+      },
+      {
+        "code": null,
+        "name": "Épisode 1 - Des pellicules, des femmes et des hommes",
+        "qty": "",
+        "subText2": "04:22 / 12:01",
+        "metadata": {
+          "statusText": "playing",
+          "playState": {
+            "statusText": "playing",
+            "loadingState": "playing",
+            "playingState": {
+              "isPaused": false,
+              "isCurrent": true,
+              "isPlaying": true
+            },
+            "events": {
+              "connecting": true,
+              "noConnection": false,
+              "connected": true,
+              "ended": false,
+              "playing": true,
+              "seeking": true,
+              "pauseStateChanged": true
+            }
+          },
+          "startTime": 1762925461289,
+          "duration": {
+            "h": 0,
+            "m": 12,
+            "s": 1,
+            "error": false,
+            "isInfinite": false
+          },
+          "currentTime": {
+            "h": 0,
+            "m": 4,
+            "s": 22,
+            "error": false,
+            "isInfinite": false
+          },
+          "endTime": 1762739734336
+        },
+        "subText": "July 19, 2022",
+        "url": "https://dts.podtrac.com/redirect.mp3/audio.ausha.co/zB1NGCLKMWEo.mp3?t=1658208198",
+        "sel": {
+          "lang": {
+            "item": {
+              "code": "fra",
+              "name": "French",
+              "qty": 64492
+            }
+          },
+          "langSubListId": "tag",
+          "tag": {
+            "item": {
+              "code": null,
+              "name": "documentary",
+              "qty": 213
+            }
+          },
+          "tagSubListId": "letter",
+          "letter": {
+            "item": {
+              "code": null,
+              "name": "T",
+              "qty": 11,
+              "stores": [
+                1
+              ]
+            }
+          },
+          "letterSubListId": "pdc",
+          "pdc": {
+            "item": {
+              "code": null,
+              "name": "Transmission",
+              "qty": 38,
+              "url": "https://feed.ausha.co/bYrWFLRaGLEB",
+              "store": 1,
+              "page": 1,
+              "pItem": null,
+              "sel": null,
+              "selCnt": 1,
+              "id": "Transmission",
+              "favLists": [
+                "----- Podcasts culture -----"
+              ],
+              "metadata": {
+                "statusText": ""
+              },
+              "pdc": true,
+              "rss": null,
+              "logo": "https://image.ausha.co/Nj7zt2QMrAxMqHjMWzbOWoG49noXqIQyF4kuD1Vs_1400x1400.jpeg?t=1568889519",
+              "subText": "Collectif Transmission",
+              "key": "Transmissionhttps://feed.ausha.co/bYrWFLRaGLEB"
+            }
+          },
+          "pdcSubListId": "epi",
+          "epi": {
+            "item": {
+              "code": null,
+              "name": "Épisode 1 - Des pellicules, des femmes et des hommes",
+              "qty": "",
+              "subText2": "02:26 / 12:01",
+              "metadata": {
+                "statusText": "playing",
+                "playState": {
+                  "statusText": "playing",
+                  "loadingState": "playing",
+                  "playingState": {
+                    "isPaused": false,
+                    "isCurrent": true,
+                    "isPlaying": true
+                  },
+                  "events": {
+                    "connecting": true,
+                    "noConnection": false,
+                    "connected": true,
+                    "ended": false,
+                    "playing": true,
+                    "seeking": true,
+                    "pauseStateChanged": true
+                  }
+                },
+                "startTime": 1762924978391,
+                "duration": {
+                  "h": 0,
+                  "m": 12,
+                  "s": 1,
+                  "error": false,
+                  "isInfinite": false
+                },
+                "currentTime": {
+                  "h": 0,
+                  "m": 2,
+                  "s": 26,
+                  "error": false,
+                  "isInfinite": false
+                },
+                "endTime": 1762739734336
+              },
+              "subText": "July 19, 2022",
+              "url": "https://dts.podtrac.com/redirect.mp3/audio.ausha.co/zB1NGCLKMWEo.mp3?t=1658208198",
+              "sel": null,
+              "id": "Épisode 1 - Des pellicules, des femmes et des hommes",
+              "favLists": [
+                "----- Podcasts ------"
+              ],
+              "logo": "https://image.ausha.co/VImNcm5GUKOf73s0tahdNKCHOkTOfErx8pHegLLY_1400x1400.jpeg?t=1658207842",
+              "pdc": true,
+              "epi": true,
+              "pubDate": "Tue, 19 Jul 2022 05:23:47 +0000",
+              "groups": [],
+              "key": "Épisode 1 - Des pellicules, des femmes et des hommeshttps://dts.podtrac.com/redirect.mp3/audio.ausha.co/zB1NGCLKMWEo.mp3?t=1658208198",
+              "ref": {
+                "currentRDList": {
+                  "listId": "List",
+                  "name": "----- Podcasts ------",
+                  "$item": null
+                },
+                "currentTab": {
+                  "listId": "List",
+                  "tabId": "btn_wrp_play_list"
+                }
+              },
+              "listenDate": 1762739630762,
+              "pItem": null
+            }
+          },
+          "epiSubListId": null,
+          "noPage": 1,
+          "epiOpen": true,
+          "epiOpening": false
+        },
+        "id": "Épisode 1 - Des pellicules, des femmes et des hommes",
+        "favLists": [
+          "----- Podcast documentaire -----"
+        ],
+        "logo": "https://image.ausha.co/VImNcm5GUKOf73s0tahdNKCHOkTOfErx8pHegLLY_1400x1400.jpeg?t=1658207842",
+        "pdc": true,
+        "epi": true,
+        "pubDate": "Tue, 19 Jul 2022 05:23:47 +0000",
+        "groups": [],
+        "key": "Épisode 1 - Des pellicules, des femmes et des hommeshttps://dts.podtrac.com/redirect.mp3/audio.ausha.co/zB1NGCLKMWEo.mp3?t=1658208198",
+        "ref": {
+          "currentRDList": {
+            "listId": "List",
+            "name": "----- Podcast documentaire -----",
+            "$item": null
+          },
+          "currentTab": {
+            "listId": "Viz",
+            "tabId": "btn_wrp_logo"
+          }
+        },
+        "listenDate": 1762925470614
+      },
+      {
+        "code": null,
+        "name": "Soigne ta gauche",
+        "qty": "",
+        "subText2": "04:36 / 01:01:41",
+        "subText": "July 18, 2024",
+        "url": "https://sphinx.acast.com/p/acast/s/au-long/e/66990c379973ff30eacff666/media.mp3",
+        "sel": {
+          "lang": {
+            "item": {
+              "code": "fra",
+              "name": "French",
+              "qty": 64492
+            }
+          },
+          "langSubListId": "tag",
+          "tag": {
+            "item": {
+              "code": null,
+              "name": "documentary",
+              "qty": 213
+            }
+          },
+          "tagSubListId": "letter",
+          "letter": {
+            "item": {
+              "code": null,
+              "name": "A",
+              "qty": 14,
+              "stores": [
+                1
+              ]
+            }
+          },
+          "letterSubListId": "pdc",
+          "pdc": {
+            "item": {
+              "code": null,
+              "name": "AU LONG",
+              "qty": 42,
+              "url": "https://rss.acast.com/au-long",
+              "store": 1,
+              "page": 1,
+              "sel": null,
+              "selCnt": 1,
+              "id": "AU LONG",
+              "favLists": [
+                "----- Podcast documentaire -----"
+              ],
+              "metadata": {
+                "statusText": ""
+              },
+              "pdc": true,
+              "key": "AU LONGhttps://rss.acast.com/au-long",
+              "rss": null,
+              "logo": "https://assets.pippa.io/shows/60dce13fdd59a3ddc63d7e6f/show-cover.jpeg",
+              "subText": "Society",
+              "pItem": null
+            }
+          },
+          "pdcSubListId": "epi",
+          "epi": {
+            "item": {
+              "code": null,
+              "name": "La dépression - Le service 21 ",
+              "qty": "",
+              "subText2": "01:55 / 20:37",
+              "subText": "March 17, 2020",
+              "url": "https://sphinx.acast.com/p/open/s/5e6a643396648a4359821fb0/e/5e70e09d606222ce48310918/media.mp3",
+              "sel": null,
+              "id": "La dépression - Le service 21 ",
+              "favLists": [
+                "----- Podcasts ------"
+              ],
+              "logo": "https://assets.pippa.io/shows/5e6a643396648a4359821fb0/1584538771150-7e012f1fc60cc14d4c3c0691b991bf8f.jpeg",
+              "metadata": {
+                "statusText": "pause",
+                "playState": {
+                  "statusText": "pause",
+                  "loadingState": "pauseStateChanged",
+                  "playingState": {
+                    "isPaused": true,
+                    "isCurrent": true,
+                    "isPlaying": false
+                  },
+                  "events": {
+                    "connecting": true,
+                    "noConnection": false,
+                    "connected": true,
+                    "ended": false,
+                    "playing": true,
+                    "pauseStateChanged": true
+                  }
+                },
+                "startTime": 1762722601996,
+                "duration": {
+                  "h": 0,
+                  "m": 20,
+                  "s": 37,
+                  "error": false,
+                  "isInfinite": false
+                },
+                "currentTime": {
+                  "h": 0,
+                  "m": 1,
+                  "s": 55,
+                  "error": false,
+                  "isInfinite": false
+                },
+                "endTime": 1762722618148
+              },
+              "pdc": true,
+              "epi": true,
+              "pubDate": "Tue, 17 Mar 2020 14:37:14 GMT",
+              "groups": [],
+              "key": "La dépression - Le service 21 https://sphinx.acast.com/p/open/s/5e6a643396648a4359821fb0/e/5e70e09d606222ce48310918/media.mp3",
+              "ref": {
+                "currentRDList": {
+                  "listId": "Podcast",
+                  "name": "epi",
+                  "$item": null
+                },
+                "currentTab": {
+                  "listId": "Podcast",
+                  "tabId": "btn_wrp_podcast"
+                }
+              },
+              "listenDate": 1762722546741,
+              "pItem": null
+            }
+          },
+          "epiSubListId": null,
+          "noPage": 1,
+          "epiOpen": false,
+          "epiOpening": false
+        },
+        "id": "Soigne ta gauche",
+        "favLists": [
+          "----- Podcast documentaire -----"
+        ],
+        "logo": "https://assets.pippa.io/shows/60dce13fdd59a3ddc63d7e6f/show-cover.jpeg",
+        "metadata": {
+          "statusText": "playing",
+          "playState": {
+            "statusText": "playing",
+            "loadingState": "playing",
+            "playingState": {
+              "isPaused": false,
+              "isCurrent": true,
+              "isPlaying": true
+            },
+            "events": {
+              "connecting": true,
+              "noConnection": false,
+              "connected": true,
+              "ended": false,
+              "playing": true,
+              "seeking": true,
+              "pauseStateChanged": true
+            }
+          },
+          "startTime": 1762925445770,
+          "duration": {
+            "h": 1,
+            "m": 1,
+            "s": 41,
+            "error": false,
+            "isInfinite": false
+          },
+          "currentTime": {
+            "h": 0,
+            "m": 4,
+            "s": 36,
+            "error": false,
+            "isInfinite": false
+          }
+        },
+        "pdc": true,
+        "epi": true,
+        "pubDate": "Thu, 18 Jul 2024 13:08:14 GMT",
+        "groups": [],
+        "key": "Soigne ta gauchehttps://sphinx.acast.com/p/acast/s/au-long/e/66990c379973ff30eacff666/media.mp3",
+        "ref": {
+          "currentRDList": {
+            "listId": "List",
+            "name": "----- Podcast documentaire -----",
+            "$item": null
+          },
+          "currentTab": {
+            "listId": "List",
+            "tabId": "btn_wrp_play_list"
+          }
+        },
+        "listenDate": 1762925454841
+      },
+      {
+        "id": "13623",
+        "name": "Chinese Music World",
+        "description": null,
+        "groupTitle": null,
+        "groups": [
+          "Chinese",
+          "Music",
+          "World"
+        ],
+        "url": "https://radio.chinesemusicworld.com/chinesemusic.ogg",
+        "logo": "https://cdn.chinesemusicworld.com/wp-content/uploads/2012/03/logo.png",
+        "artist": null,
+        "lang": "Chinese",
+        "channels": null,
+        "country": null,
+        "favLists": [
+          "Exotique"
+        ],
+        "metadata": {
+          "duration": {
+            "h": null,
+            "m": null,
+            "s": null,
+            "error": false,
+            "isInfinite": true
+          },
+          "stereo": null,
+          "encoding": null,
+          "sampleFrq": null,
+          "sampleRes": null,
+          "country": null,
+          "statusText": "playing",
+          "startTime": 1762925422747,
+          "stopTime": null,
+          "position": null,
+          "playState": {
+            "statusText": "playing",
+            "loadingState": "playing",
+            "playingState": {
+              "isPaused": false,
+              "isCurrent": true,
+              "isPlaying": true
+            },
+            "events": {
+              "connecting": true,
+              "noConnection": false,
+              "connected": true,
+              "ended": false,
+              "playing": true,
+              "seeking": false,
+              "pauseStateChanged": true
+            }
+          },
+          "currentTime": {
+            "h": 0,
+            "m": 2,
+            "s": 28,
+            "error": false,
+            "isInfinite": false
+          }
+        },
+        "key": "Chinese Music Worldhttps://radio.chinesemusicworld.com/chinesemusic.ogg",
+        "subText2": "02:28 ",
+        "ref": {
+          "currentRDList": {
+            "listId": "Podcast",
+            "name": "epi",
+            "$item": null
+          },
+          "currentTab": {
+            "listId": "Viz",
+            "tabId": "btn_wrp_logo"
+          }
+        },
+        "listenDate": 1762925425983
+      },
+      {
+        "code": null,
+        "name": "Cheikh Mamidou -Twahacht Anouchi Galbi Rah Mtouchi- (Studio 22) By Hicham Zakzouki",
+        "qty": "",
+        "subText2": "00:57 / 07:17",
+        "metadata": {
+          "statusText": "playing",
+          "playState": {
+            "statusText": "playing",
+            "loadingState": "playing",
+            "playingState": {
+              "isPaused": false,
+              "isCurrent": true,
+              "isPlaying": true
+            },
+            "events": {
+              "connecting": true,
+              "noConnection": false,
+              "connected": true,
+              "ended": false,
+              "playing": true,
+              "seeking": false,
+              "pauseStateChanged": true
+            }
+          },
+          "startTime": 1762925348852,
+          "duration": {
+            "h": 0,
+            "m": 7,
+            "s": 17,
+            "error": false,
+            "isInfinite": false
+          },
+          "currentTime": {
+            "h": 0,
+            "m": 0,
+            "s": 57,
+            "error": false,
+            "isInfinite": false
+          }
+        },
+        "subText": "April 3, 2017",
+        "url": "https://api.spreaker.com/download/episode/11545617/draft_1491251444785542.mp3",
+        "sel": {
+          "lang": {
+            "item": {
+              "code": "fra",
+              "name": "French",
+              "qty": 64492
+            }
+          },
+          "langSubListId": "tag",
+          "tag": {
+            "item": {
+              "code": null,
+              "name": "society",
+              "qty": 9159
+            }
+          },
+          "tagSubListId": "letter",
+          "letter": {
+            "item": {
+              "code": null,
+              "name": "H",
+              "qty": 187,
+              "stores": [
+                1
+              ]
+            }
+          },
+          "letterSubListId": "pdc",
+          "pdc": {
+            "item": {
+              "code": null,
+              "name": "Hicham Zakzouki's show",
+              "qty": 24,
+              "url": "https://www.spreaker.com/show/2210097/episodes/feed",
+              "store": 1,
+              "page": 1,
+              "sel": null,
+              "selCnt": 1,
+              "id": "Hicham Zakzouki's show",
+              "favLists": [
+                "Exotique"
+              ],
+              "metadata": {
+                "statusText": ""
+              },
+              "pdc": true,
+              "key": "Hicham Zakzouki's showhttps://www.spreaker.com/show/2210097/episodes/feed",
+              "rss": null,
+              "logo": "https://d3wo5wojvuv7l.cloudfront.net/images.spreaker.com/cloudinary/s--5_mNYT7l--/w_1000,h_800,c_fit,l_text:Lato_158_bold:Hicham%20Zakzouki%20s%20show/images.spreaker.com/default/show-1400x1400-20190801.jpg",
+              "subText": "Hicham Zakzouki",
+              "pItem": null
+            }
+          },
+          "pdcSubListId": "epi",
+          "epi": {
+            "item": {
+              "code": null,
+              "name": "L'horoscope du mercredi 12 novembre",
+              "qty": "",
+              "subText2": "00:12 / 01:29",
+              "metadata": {
+                "statusText": "playing",
+                "playState": {
+                  "statusText": "playing",
+                  "loadingState": "playing",
+                  "playingState": {
+                    "isPaused": false,
+                    "isCurrent": true,
+                    "isPlaying": true
+                  },
+                  "events": {
+                    "connecting": true,
+                    "noConnection": false,
+                    "connected": true,
+                    "ended": false,
+                    "playing": true,
+                    "seeking": false,
+                    "pauseStateChanged": true
+                  }
+                },
+                "startTime": 1762922927746,
+                "duration": {
+                  "h": 0,
+                  "m": 1,
+                  "s": 29,
+                  "error": false,
+                  "isInfinite": false
+                },
+                "currentTime": {
+                  "h": 0,
+                  "m": 0,
+                  "s": 12,
+                  "error": false,
+                  "isInfinite": false
+                }
+              },
+              "subText": "November 12, 2025",
+              "url": "https://medias.tendanceouest.com/podcasts/sons/12557-HOROS-251112.mp3",
+              "sel": null,
+              "id": "L'horoscope du mercredi 12 novembre",
+              "favLists": [],
+              "logo": "https://medias.tendanceouest.com/podcasts/1500/HOROS.jpg",
+              "pdc": true,
+              "epi": true,
+              "pubDate": "Wed, 12 Nov 2025 03:00:00 +0100",
+              "groups": [],
+              "key": "L'horoscope du mercredi 12 novembrehttps://medias.tendanceouest.com/podcasts/sons/12557-HOROS-251112.mp3",
+              "ref": {
+                "currentRDList": {
+                  "listId": "Podcast",
+                  "name": "epi",
+                  "$item": null
+                },
+                "currentTab": {
+                  "listId": "Podcast",
+                  "tabId": "btn_wrp_podcast"
+                }
+              },
+              "listenDate": 1762922937960,
+              "pItem": null
+            }
+          },
+          "epiSubListId": null,
+          "noPage": 1,
+          "epiOpen": false,
+          "epiOpening": false
+        },
+        "id": "Cheikh Mamidou -Twahacht Anouchi Galbi Rah Mtouchi- (Studio 22) By Hicham Zakzouki",
+        "favLists": [],
+        "logo": "https://d3wo5wojvuv7l.cloudfront.net/images.spreaker.com/cloudinary/s--5_mNYT7l--/w_1000,h_800,c_fit,l_text:Lato_158_bold:Hicham%20Zakzouki%20s%20show/images.spreaker.com/default/show-1400x1400-20190801.jpg",
+        "pdc": true,
+        "epi": true,
+        "pubDate": "Mon, 03 Apr 2017 20:42:50 +0000",
+        "groups": [],
+        "key": "Cheikh Mamidou -Twahacht Anouchi Galbi Rah Mtouchi- (Studio 22) By Hicham Zakzoukihttps://api.spreaker.com/download/episode/11545617/draft_1491251444785542.mp3",
+        "ref": {
+          "currentRDList": {
             "listId": "Podcast",
             "name": "epi",
             "$item": null
@@ -196,7 +1906,393 @@
             "tabId": "btn_wrp_podcast"
           }
         },
-        "listenDate": 1762925217709
+        "listenDate": 1762925358832
+      },
+      {
+        "code": null,
+        "name": "Tagroupit 2018 guitar tachlhit _ تكروبيت تشلحيت اعزان ( 144 X 176 )",
+        "qty": "",
+        "subText2": "01:39 / 15:53",
+        "subText": "January 18, 2019",
+        "url": "https://api.spreaker.com/download/episode/16746811/tagroupit_2018_guitar_tachlhit_144_x_176.mp3",
+        "sel": {
+          "lang": {
+            "item": {
+              "code": "fra",
+              "name": "French",
+              "qty": 64492
+            }
+          },
+          "langSubListId": "tag",
+          "tag": {
+            "item": {
+              "code": null,
+              "name": "society",
+              "qty": 9159
+            }
+          },
+          "tagSubListId": "letter",
+          "letter": {
+            "item": {
+              "code": null,
+              "name": "H",
+              "qty": 187,
+              "stores": [
+                1
+              ]
+            }
+          },
+          "letterSubListId": "pdc",
+          "pdc": {
+            "item": {
+              "code": null,
+              "name": "Hafid Laabd Amaray",
+              "qty": 10,
+              "url": "https://www.spreaker.com/show/2574179/episodes/feed",
+              "store": 1,
+              "page": 1,
+              "sel": null,
+              "selCnt": 1,
+              "id": "Hafid Laabd Amaray",
+              "favLists": [
+                "Exotique"
+              ],
+              "metadata": {
+                "statusText": ""
+              },
+              "pdc": true,
+              "key": "Hafid Laabd Amarayhttps://www.spreaker.com/show/2574179/episodes/feed",
+              "rss": null,
+              "logo": "https://d3wo5wojvuv7l.cloudfront.net/t_rss_itunes_square_1400/images.spreaker.com/original/9773e69c65a62a730742370c345dd1e4.jpg",
+              "subText": "راديو اسرسال",
+              "pItem": null
+            }
+          },
+          "pdcSubListId": "epi",
+          "epi": {
+            "item": {
+              "code": null,
+              "name": "Tagroupit 2018 guitar tachlhit _ تكروبيت تشلحيت اعزان ( 144 X 176 )",
+              "qty": "",
+              "subText2": "00:40 / 15:53",
+              "subText": "January 18, 2019",
+              "url": "https://api.spreaker.com/download/episode/16746811/tagroupit_2018_guitar_tachlhit_144_x_176.mp3",
+              "sel": null,
+              "id": "Tagroupit 2018 guitar tachlhit _ تكروبيت تشلحيت اعزان ( 144 X 176 )",
+              "favLists": [],
+              "logo": "https://d3wo5wojvuv7l.cloudfront.net/t_rss_itunes_square_1400/images.spreaker.com/original/9773e69c65a62a730742370c345dd1e4.jpg",
+              "metadata": {
+                "statusText": "playing",
+                "playState": {
+                  "statusText": "playing",
+                  "loadingState": "playing",
+                  "playingState": {
+                    "isPaused": false,
+                    "isCurrent": true,
+                    "isPlaying": true
+                  },
+                  "events": {
+                    "connecting": true,
+                    "noConnection": false,
+                    "connected": true,
+                    "ended": false,
+                    "playing": true,
+                    "pauseStateChanged": true
+                  }
+                },
+                "startTime": 1762727451064,
+                "duration": {
+                  "h": 0,
+                  "m": 15,
+                  "s": 53,
+                  "error": false,
+                  "isInfinite": false
+                },
+                "currentTime": {
+                  "h": 0,
+                  "m": 0,
+                  "s": 40,
+                  "error": false,
+                  "isInfinite": false
+                }
+              },
+              "pdc": true,
+              "epi": true,
+              "pubDate": "Fri, 18 Jan 2019 14:40:16 +0000",
+              "groups": [],
+              "key": "Tagroupit 2018 guitar tachlhit _ تكروبيت تشلحيت اعزان ( 144 X 176 )https://api.spreaker.com/download/episode/16746811/tagroupit_2018_guitar_tachlhit_144_x_176.mp3",
+              "ref": {
+                "currentRDList": {
+                  "listId": "Podcast",
+                  "name": "epi",
+                  "$item": null
+                },
+                "currentTab": {
+                  "listId": "Podcast",
+                  "tabId": "btn_wrp_podcast"
+                }
+              },
+              "listenDate": 1762727461051,
+              "pItem": null
+            }
+          },
+          "epiSubListId": null,
+          "noPage": 1,
+          "epiOpen": false,
+          "epiOpening": false
+        },
+        "id": "Tagroupit 2018 guitar tachlhit _ تكروبيت تشلحيت اعزان ( 144 X 176 )",
+        "favLists": [
+          "Exotique"
+        ],
+        "logo": "https://d3wo5wojvuv7l.cloudfront.net/t_rss_itunes_square_1400/images.spreaker.com/original/9773e69c65a62a730742370c345dd1e4.jpg",
+        "metadata": {
+          "statusText": "playing",
+          "playState": {
+            "statusText": "playing",
+            "loadingState": "playing",
+            "playingState": {
+              "isPaused": false,
+              "isCurrent": true,
+              "isPlaying": true
+            },
+            "events": {
+              "connecting": true,
+              "noConnection": false,
+              "connected": true,
+              "ended": false,
+              "playing": true,
+              "seeking": true,
+              "pauseStateChanged": true
+            }
+          },
+          "startTime": 1762925326280,
+          "duration": {
+            "h": 0,
+            "m": 15,
+            "s": 53,
+            "error": false,
+            "isInfinite": false
+          },
+          "currentTime": {
+            "h": 0,
+            "m": 1,
+            "s": 39,
+            "error": false,
+            "isInfinite": false
+          }
+        },
+        "pdc": true,
+        "epi": true,
+        "pubDate": "Fri, 18 Jan 2019 14:40:16 +0000",
+        "groups": [],
+        "key": "Tagroupit 2018 guitar tachlhit _ تكروبيت تشلحيت اعزان ( 144 X 176 )https://api.spreaker.com/download/episode/16746811/tagroupit_2018_guitar_tachlhit_144_x_176.mp3",
+        "ref": {
+          "currentRDList": {
+            "listId": "List",
+            "name": "Exotique",
+            "$item": null
+          },
+          "currentTab": {
+            "listId": "List",
+            "tabId": "btn_wrp_play_list"
+          }
+        },
+        "listenDate": 1762925334375
+      },
+      {
+        "code": null,
+        "name": "La dépression - Le service 21 ",
+        "qty": "",
+        "subText2": "05:49 / 20:37",
+        "subText": "March 17, 2020",
+        "url": "https://sphinx.acast.com/p/open/s/5e6a643396648a4359821fb0/e/5e70e09d606222ce48310918/media.mp3",
+        "sel": {
+          "lang": {
+            "item": {
+              "code": "fra",
+              "name": "French",
+              "qty": 64492
+            }
+          },
+          "langSubListId": "tag",
+          "tag": {
+            "item": {
+              "code": null,
+              "name": "documentary",
+              "qty": 213
+            }
+          },
+          "tagSubListId": "letter",
+          "letter": {
+            "item": {
+              "code": null,
+              "name": "S",
+              "qty": 9,
+              "stores": [
+                1
+              ]
+            }
+          },
+          "letterSubListId": "pdc",
+          "pdc": {
+            "item": {
+              "code": null,
+              "name": "Spleen",
+              "qty": 5,
+              "url": "https://feeds.acast.com/public/shows/5e6a643396648a4359821fb0",
+              "store": 1,
+              "page": 1,
+              "sel": null,
+              "selCnt": 1,
+              "id": "Spleen",
+              "favLists": [
+                "---- Podcast social -----"
+              ],
+              "metadata": {
+                "statusText": ""
+              },
+              "pdc": true,
+              "key": "Spleenhttps://feeds.acast.com/public/shows/5e6a643396648a4359821fb0",
+              "rss": null,
+              "logo": "https://assets.pippa.io/shows/5e6a643396648a4359821fb0/1584031404886-95403382db240a1f31892232850bf7e6.jpeg",
+              "subText": "Lorine Le Louvier",
+              "pItem": null
+            }
+          },
+          "pdcSubListId": "epi",
+          "epi": {
+            "item": {
+              "code": null,
+              "name": "Une histoire de la médecine chinoise - 1/6",
+              "qty": "",
+              "subText2": "01:21 / 13:14",
+              "metadata": {
+                "statusText": "playing",
+                "playState": {
+                  "statusText": "playing",
+                  "loadingState": "playing",
+                  "playingState": {
+                    "isPaused": false,
+                    "isCurrent": true,
+                    "isPlaying": true
+                  },
+                  "events": {
+                    "connecting": true,
+                    "noConnection": false,
+                    "connected": true,
+                    "ended": false,
+                    "playing": true,
+                    "pauseStateChanged": true
+                  }
+                },
+                "startTime": 1762736637502,
+                "duration": {
+                  "h": 0,
+                  "m": 13,
+                  "s": 14,
+                  "error": false,
+                  "isInfinite": false
+                },
+                "currentTime": {
+                  "h": 0,
+                  "m": 1,
+                  "s": 21,
+                  "error": false,
+                  "isInfinite": false
+                }
+              },
+              "subText": "October 24, 2025",
+              "url": "https://audio.audiomeans.fr/file/uQzNZnSuzb/7f1621c9-f895-4361-bece-b9adf410f3b5.mp3?_=1760363491&ps=37944b5d-a1e1-466f-afe7-50ef2fa97d0c",
+              "sel": null,
+              "id": "Une histoire de la médecine chinoise - 1/6",
+              "favLists": [],
+              "logo": "https://static.audiomeans.fr/img/episode/1ad631d4-45d6-4e8a-911d-adcb0de71dd4.jpg",
+              "pdc": true,
+              "epi": true,
+              "pubDate": "Fri, 24 Oct 2025 04:00:00 GMT",
+              "groups": [],
+              "key": "Une histoire de la médecine chinoise - 1/6https://audio.audiomeans.fr/file/uQzNZnSuzb/7f1621c9-f895-4361-bece-b9adf410f3b5.mp3?_=1760363491&ps=37944b5d-a1e1-466f-afe7-50ef2fa97d0c",
+              "ref": {
+                "currentRDList": {
+                  "listId": "Podcast",
+                  "name": "epi",
+                  "$item": null
+                },
+                "currentTab": {
+                  "listId": "Podcast",
+                  "tabId": "btn_wrp_podcast"
+                }
+              },
+              "listenDate": 1762736644346,
+              "pItem": null
+            }
+          },
+          "epiSubListId": null,
+          "noPage": 1,
+          "epiOpen": false,
+          "epiOpening": false
+        },
+        "id": "La dépression - Le service 21 ",
+        "favLists": [
+          "---- Podcast social -----"
+        ],
+        "logo": "https://assets.pippa.io/shows/5e6a643396648a4359821fb0/1584538771150-7e012f1fc60cc14d4c3c0691b991bf8f.jpeg",
+        "metadata": {
+          "statusText": "playing",
+          "playState": {
+            "statusText": "playing",
+            "loadingState": "playing",
+            "playingState": {
+              "isPaused": false,
+              "isCurrent": true,
+              "isPlaying": true
+            },
+            "events": {
+              "connecting": true,
+              "noConnection": false,
+              "connected": true,
+              "ended": false,
+              "playing": true,
+              "seeking": true,
+              "pauseStateChanged": true
+            }
+          },
+          "startTime": 1762925269732,
+          "duration": {
+            "h": 0,
+            "m": 20,
+            "s": 37,
+            "error": false,
+            "isInfinite": false
+          },
+          "currentTime": {
+            "h": 0,
+            "m": 5,
+            "s": 49,
+            "error": false,
+            "isInfinite": false
+          },
+          "endTime": 1762726907792
+        },
+        "pdc": true,
+        "epi": true,
+        "pubDate": "Tue, 17 Mar 2020 14:37:14 GMT",
+        "groups": [],
+        "key": "La dépression - Le service 21 https://sphinx.acast.com/p/open/s/5e6a643396648a4359821fb0/e/5e70e09d606222ce48310918/media.mp3",
+        "ref": {
+          "currentRDList": {
+            "listId": "List",
+            "name": "----- Podcast social -----",
+            "$item": null
+          },
+          "currentTab": {
+            "listId": "List",
+            "tabId": "btn_wrp_play_list"
+          }
+        },
+        "listenDate": 1762925279107,
+        "statusText": "ended"
       },
       {
         "code": null,
@@ -949,201 +3045,6 @@
         },
         "listenDate": 1762924663018,
         "statusText": "ended"
-      },
-      {
-        "code": null,
-        "name": "Soigne ta gauche",
-        "qty": "",
-        "subText2": "04:23 / 01:00:33",
-        "subText": "July 18, 2024",
-        "url": "https://sphinx.acast.com/p/acast/s/au-long/e/66990c379973ff30eacff666/media.mp3",
-        "sel": {
-          "lang": {
-            "item": {
-              "code": "fra",
-              "name": "French",
-              "qty": 64492
-            }
-          },
-          "langSubListId": "tag",
-          "tag": {
-            "item": {
-              "code": null,
-              "name": "documentary",
-              "qty": 213
-            }
-          },
-          "tagSubListId": "letter",
-          "letter": {
-            "item": {
-              "code": null,
-              "name": "A",
-              "qty": 14,
-              "stores": [
-                1
-              ]
-            }
-          },
-          "letterSubListId": "pdc",
-          "pdc": {
-            "item": {
-              "code": null,
-              "name": "AU LONG",
-              "qty": 42,
-              "url": "https://rss.acast.com/au-long",
-              "store": 1,
-              "page": 1,
-              "sel": null,
-              "selCnt": 1,
-              "id": "AU LONG",
-              "favLists": [
-                "----- Podcast documentaire -----"
-              ],
-              "metadata": {
-                "statusText": ""
-              },
-              "pdc": true,
-              "key": "AU LONGhttps://rss.acast.com/au-long",
-              "rss": null,
-              "logo": "https://assets.pippa.io/shows/60dce13fdd59a3ddc63d7e6f/show-cover.jpeg",
-              "subText": "Society",
-              "pItem": null
-            }
-          },
-          "pdcSubListId": "epi",
-          "epi": {
-            "item": {
-              "code": null,
-              "name": "La dépression - Le service 21 ",
-              "qty": "",
-              "subText2": "01:55 / 20:37",
-              "subText": "March 17, 2020",
-              "url": "https://sphinx.acast.com/p/open/s/5e6a643396648a4359821fb0/e/5e70e09d606222ce48310918/media.mp3",
-              "sel": null,
-              "id": "La dépression - Le service 21 ",
-              "favLists": [
-                "----- Podcasts ------"
-              ],
-              "logo": "https://assets.pippa.io/shows/5e6a643396648a4359821fb0/1584538771150-7e012f1fc60cc14d4c3c0691b991bf8f.jpeg",
-              "metadata": {
-                "statusText": "pause",
-                "playState": {
-                  "statusText": "pause",
-                  "loadingState": "pauseStateChanged",
-                  "playingState": {
-                    "isPaused": true,
-                    "isCurrent": true,
-                    "isPlaying": false
-                  },
-                  "events": {
-                    "connecting": true,
-                    "noConnection": false,
-                    "connected": true,
-                    "ended": false,
-                    "playing": true,
-                    "pauseStateChanged": true
-                  }
-                },
-                "startTime": 1762722601996,
-                "duration": {
-                  "h": 0,
-                  "m": 20,
-                  "s": 37,
-                  "error": false,
-                  "isInfinite": false
-                },
-                "currentTime": {
-                  "h": 0,
-                  "m": 1,
-                  "s": 55,
-                  "error": false,
-                  "isInfinite": false
-                },
-                "endTime": 1762722618148
-              },
-              "pdc": true,
-              "epi": true,
-              "pubDate": "Tue, 17 Mar 2020 14:37:14 GMT",
-              "groups": [],
-              "key": "La dépression - Le service 21 https://sphinx.acast.com/p/open/s/5e6a643396648a4359821fb0/e/5e70e09d606222ce48310918/media.mp3",
-              "ref": {
-                "currentRDList": {
-                  "listId": "Podcast",
-                  "name": "epi",
-                  "$item": null
-                },
-                "currentTab": {
-                  "listId": "Podcast",
-                  "tabId": "btn_wrp_podcast"
-                }
-              },
-              "listenDate": 1762722546741,
-              "pItem": null
-            }
-          },
-          "epiSubListId": null,
-          "noPage": 1,
-          "epiOpen": false,
-          "epiOpening": false
-        },
-        "id": "Soigne ta gauche",
-        "favLists": [
-          "----- Podcast documentaire -----"
-        ],
-        "logo": "https://assets.pippa.io/shows/60dce13fdd59a3ddc63d7e6f/show-cover.jpeg",
-        "metadata": {
-          "statusText": "playing",
-          "playState": {
-            "statusText": "playing",
-            "loadingState": "playing",
-            "playingState": {
-              "isPaused": false,
-              "isCurrent": true,
-              "isPlaying": true
-            },
-            "events": {
-              "connecting": true,
-              "noConnection": false,
-              "connected": true,
-              "ended": false,
-              "playing": true,
-              "seeking": true,
-              "pauseStateChanged": true
-            }
-          },
-          "startTime": 1762924354862,
-          "duration": {
-            "h": 1,
-            "m": 0,
-            "s": 33,
-            "error": false,
-            "isInfinite": false
-          },
-          "currentTime": {
-            "h": 0,
-            "m": 4,
-            "s": 23,
-            "error": false,
-            "isInfinite": false
-          }
-        },
-        "pdc": true,
-        "epi": true,
-        "pubDate": "Thu, 18 Jul 2024 13:08:14 GMT",
-        "groups": [],
-        "key": "Soigne ta gauchehttps://sphinx.acast.com/p/acast/s/au-long/e/66990c379973ff30eacff666/media.mp3",
-        "ref": {
-          "currentRDList": {
-            "listId": "List",
-            "name": "----- Podcasts ------",
-            "$item": null
-          },
-          "currentTab": {
-            "listId": "List",
-            "tabId": "btn_wrp_play_list"
-          }
-        },
-        "listenDate": 1762924363967
       },
       {
         "code": null,
@@ -2097,193 +3998,6 @@
         },
         "key": "Du crime à mes oreilles - 70 - The Doors pt. 1https://dts.podtrac.com/redirect.mp3/https://baladoquebec.ca/media/du-bruit-a-mes-oreilles-propulse-par-baladoquebecca/du-crime-a-mes-oreilles-70-the-doors-pt-1.mp3",
         "listenDate": 1762923351639
-      },
-      {
-        "code": null,
-        "name": "La sorcière des Bell 🧙🏻‍♀️",
-        "qty": "",
-        "subText2": "02:13 / 17:40",
-        "metadata": {
-          "statusText": "playing",
-          "playState": {
-            "statusText": "playing",
-            "loadingState": "playing",
-            "playingState": {
-              "isPaused": false,
-              "isCurrent": true,
-              "isPlaying": true
-            },
-            "events": {
-              "connecting": true,
-              "noConnection": false,
-              "connected": true,
-              "ended": false,
-              "playing": true,
-              "seeking": true,
-              "pauseStateChanged": true
-            }
-          },
-          "startTime": 1762923390654,
-          "duration": {
-            "h": 0,
-            "m": 17,
-            "s": 40,
-            "error": false,
-            "isInfinite": false
-          },
-          "currentTime": {
-            "h": 0,
-            "m": 2,
-            "s": 13,
-            "error": false,
-            "isInfinite": false
-          }
-        },
-        "subText": "October 1, 2021",
-        "url": "https://audio.audiomeans.fr/file/PgeAPOjsIT/fd1ed5ec-2cd1-4a5a-b5cc-2cb11539090d.mp3?_=1632924035",
-        "sel": {
-          "lang": {
-            "item": {
-              "code": "fra",
-              "name": "French",
-              "qty": 64492
-            }
-          },
-          "langSubListId": "tag",
-          "tag": {
-            "item": {
-              "code": null,
-              "name": "true crime",
-              "qty": 80,
-              "stores": [
-                1
-              ]
-            }
-          },
-          "tagSubListId": "pdc",
-          "letter": null,
-          "letterSubListId": null,
-          "pdc": {
-            "item": {
-              "code": null,
-              "name": "Feu de camp",
-              "qty": 146,
-              "url": "https://feeds.audiomeans.fr/feed/278c8c9f-2297-44cc-8674-65e285cb80c1.xml",
-              "store": 1,
-              "page": 1,
-              "sel": null,
-              "selCnt": 1,
-              "id": "Feu de camp",
-              "favLists": [
-                "----- Podcast Horreur -----"
-              ],
-              "metadata": {
-                "statusText": ""
-              },
-              "pdc": true,
-              "rss": null,
-              "logo": "https://static.audiomeans.fr/img/podcast/2bee1e6b-2048-4338-bca8-c77b04a328d0.jpg",
-              "subText": "NRJ France",
-              "key": "Feu de camphttps://feeds.audiomeans.fr/feed/278c8c9f-2297-44cc-8674-65e285cb80c1.xml",
-              "pItem": null
-            }
-          },
-          "pdcSubListId": "epi",
-          "epi": {
-            "item": {
-              "code": null,
-              "name": "La sorcière des Bell 🧙🏻‍♀️",
-              "qty": "",
-              "subText2": "01:31 / 17:40",
-              "metadata": {
-                "statusText": "playing",
-                "playState": {
-                  "statusText": "playing",
-                  "loadingState": "playing",
-                  "playingState": {
-                    "isPaused": false,
-                    "isCurrent": true,
-                    "isPlaying": true
-                  },
-                  "events": {
-                    "connecting": true,
-                    "noConnection": false,
-                    "connected": true,
-                    "ended": false,
-                    "playing": true,
-                    "seeking": true,
-                    "pauseStateChanged": true
-                  }
-                },
-                "startTime": 1762923390654,
-                "duration": {
-                  "h": 0,
-                  "m": 17,
-                  "s": 40,
-                  "error": false,
-                  "isInfinite": false
-                },
-                "currentTime": {
-                  "h": 0,
-                  "m": 1,
-                  "s": 31,
-                  "error": false,
-                  "isInfinite": false
-                }
-              },
-              "subText": "October 1, 2021",
-              "url": "https://audio.audiomeans.fr/file/PgeAPOjsIT/fd1ed5ec-2cd1-4a5a-b5cc-2cb11539090d.mp3?_=1632924035",
-              "sel": null,
-              "id": "La sorcière des Bell 🧙🏻‍♀️",
-              "favLists": [],
-              "logo": "https://static.audiomeans.fr/img/episode/2f76eef6-8340-4d85-85b7-b120aeb3c3e9.jpg",
-              "pdc": true,
-              "epi": true,
-              "pubDate": "Thu, 30 Sep 2021 22:30:00 GMT",
-              "groups": [],
-              "key": "La sorcière des Bell 🧙🏻‍♀️https://audio.audiomeans.fr/file/PgeAPOjsIT/fd1ed5ec-2cd1-4a5a-b5cc-2cb11539090d.mp3?_=1632924035",
-              "ref": {
-                "currentRDList": {
-                  "listId": "List",
-                  "name": "History",
-                  "$item": null
-                },
-                "currentTab": {
-                  "listId": "List",
-                  "tabId": "btn_wrp_play_list"
-                }
-              },
-              "listenDate": 1762923098648,
-              "pItem": null
-            }
-          },
-          "epiSubListId": null,
-          "noPage": 1,
-          "epiOpen": true,
-          "epiOpening": false
-        },
-        "id": "La sorcière des Bell 🧙🏻‍♀️",
-        "favLists": [
-          "----- Podcast Etrange -----"
-        ],
-        "logo": "https://static.audiomeans.fr/img/episode/2f76eef6-8340-4d85-85b7-b120aeb3c3e9.jpg",
-        "pdc": true,
-        "epi": true,
-        "pubDate": "Thu, 30 Sep 2021 22:30:00 GMT",
-        "groups": [],
-        "key": "La sorcière des Bell 🧙🏻‍♀️https://audio.audiomeans.fr/file/PgeAPOjsIT/fd1ed5ec-2cd1-4a5a-b5cc-2cb11539090d.mp3?_=1632924035",
-        "ref": {
-          "currentRDList": {
-            "listId": "List",
-            "name": "History",
-            "$item": null
-          },
-          "currentTab": {
-            "listId": "List",
-            "tabId": "btn_wrp_play_list"
-          }
-        },
-        "listenDate": 1762923098648
       },
       {
         "code": null,
@@ -8178,7 +9892,7 @@
         "code": null,
         "name": "Brigitte Macron",
         "qty": "",
-        "subText2": "",
+        "subText2": "00:19 / 01:05:54",
         "metadata": {
           "statusText": "playing",
           "playState": {
@@ -8348,7 +10062,7 @@
         },
         "id": "Brigitte Macron",
         "favLists": [
-          "----- Podcasts ------"
+          "----- Podcast documentaire -----"
         ],
         "logo": "https://medias.podcastics.com/podcastics/episodes/3735/artwork/brigitte-macron-tous-parano.png.5600fe5888f08f56f1a3473d8ac91404.png",
         "pdc": true,
@@ -8369,82 +10083,6 @@
         },
         "listenDate": 1762918847017,
         "statusText": "ended"
-      },
-      {
-        "id": "3758",
-        "name": "Chill Lounge Florida",
-        "description": null,
-        "groupTitle": null,
-        "groups": [
-          "Lounge"
-        ],
-        "url": "https://vip2.fastcast4u.com/proxy/chillfla?mp=/1",
-        "logo": "https://img1.wsimg.com/isteam/stock/nzaDy9/:/cr=t:0%25,l:0%25,w:100%25,h:100%25/rs=h:500,cg:true",
-        "artist": null,
-        "lang": null,
-        "channels": null,
-        "country": null,
-        "favLists": [
-          "History",
-          "Lounge"
-        ],
-        "metadata": {
-          "duration": {
-            "h": null,
-            "m": null,
-            "s": null,
-            "error": false,
-            "isInfinite": true
-          },
-          "stereo": null,
-          "encoding": null,
-          "sampleFrq": null,
-          "sampleRes": null,
-          "country": null,
-          "statusText": "playing",
-          "startTime": 1762918370735,
-          "stopTime": null,
-          "position": null,
-          "playState": {
-            "statusText": "playing",
-            "loadingState": "playing",
-            "playingState": {
-              "isPaused": false,
-              "isCurrent": true,
-              "isPlaying": true
-            },
-            "events": {
-              "connecting": true,
-              "noConnection": false,
-              "connected": true,
-              "ended": false,
-              "playing": true,
-              "seeking": false,
-              "pauseStateChanged": true
-            }
-          },
-          "currentTime": {
-            "h": 0,
-            "m": 7,
-            "s": 44,
-            "error": false,
-            "isInfinite": false
-          }
-        },
-        "key": "Chill Lounge Floridahttps://vip2.fastcast4u.com/proxy/chillfla?mp=/1",
-        "subText2": "07:44 ",
-        "ref": {
-          "currentRDList": {
-            "listId": "List",
-            "name": "Lounge",
-            "$item": null
-          },
-          "currentTab": {
-            "listId": "Viz",
-            "tabId": "btn_wrp_logo"
-          }
-        },
-        "listenDate": 1762918380534
       },
       {
         "id": "7415",
@@ -14744,16 +16382,16 @@
           "sampleRes": null,
           "country": null,
           "statusText": "playing",
-          "startTime": 1762918370735,
+          "startTime": 1762926615607,
           "stopTime": null,
           "position": null,
           "playState": {
-            "statusText": "playing",
-            "loadingState": "playing",
+            "statusText": "pause",
+            "loadingState": "pauseStateChanged",
             "playingState": {
-              "isPaused": false,
+              "isPaused": true,
               "isCurrent": true,
-              "isPlaying": true
+              "isPlaying": false
             },
             "events": {
               "connecting": true,
@@ -14767,18 +16405,19 @@
           },
           "currentTime": {
             "h": 0,
-            "m": 7,
-            "s": 44,
+            "m": 6,
+            "s": 0,
             "error": false,
             "isInfinite": false
-          }
+          },
+          "endTime": 1762926900870
         },
         "key": "Chill Lounge Floridahttps://vip2.fastcast4u.com/proxy/chillfla?mp=/1",
-        "subText2": "07:44 ",
+        "subText2": "06:00 ",
         "ref": {
           "currentRDList": {
             "listId": "List",
-            "name": "Lounge",
+            "name": "History",
             "$item": null
           },
           "currentTab": {
@@ -14786,7 +16425,7 @@
             "tabId": "btn_wrp_logo"
           }
         },
-        "listenDate": 1762918380534
+        "listenDate": 1762926526805
       },
       {
         "id": "10462",
@@ -15378,18 +17017,62 @@
           "Exotique"
         ],
         "metadata": {
-          "duration": null,
+          "duration": {
+            "h": null,
+            "m": null,
+            "s": null,
+            "error": false,
+            "isInfinite": true
+          },
           "stereo": null,
           "encoding": null,
           "sampleFrq": null,
           "sampleRes": null,
           "country": null,
-          "statusText": null,
-          "startTime": null,
+          "statusText": "playing",
+          "startTime": 1762925422747,
           "stopTime": null,
-          "position": null
+          "position": null,
+          "playState": {
+            "statusText": "playing",
+            "loadingState": "playing",
+            "playingState": {
+              "isPaused": false,
+              "isCurrent": true,
+              "isPlaying": true
+            },
+            "events": {
+              "connecting": true,
+              "noConnection": false,
+              "connected": true,
+              "ended": false,
+              "playing": true,
+              "seeking": false,
+              "pauseStateChanged": true
+            }
+          },
+          "currentTime": {
+            "h": 0,
+            "m": 2,
+            "s": 28,
+            "error": false,
+            "isInfinite": false
+          }
         },
-        "key": "Chinese Music Worldhttps://radio.chinesemusicworld.com/chinesemusic.ogg"
+        "key": "Chinese Music Worldhttps://radio.chinesemusicworld.com/chinesemusic.ogg",
+        "subText2": "02:28 ",
+        "ref": {
+          "currentRDList": {
+            "listId": "Podcast",
+            "name": "epi",
+            "$item": null
+          },
+          "currentTab": {
+            "listId": "Viz",
+            "tabId": "btn_wrp_logo"
+          }
+        },
+        "listenDate": 1762925425983
       },
       {
         "id": "16397",
@@ -15412,18 +17095,61 @@
           "Exotique"
         ],
         "metadata": {
-          "duration": null,
+          "duration": {
+            "h": null,
+            "m": null,
+            "s": null,
+            "error": false,
+            "isInfinite": true
+          },
           "stereo": null,
           "encoding": null,
           "sampleFrq": null,
           "sampleRes": null,
           "country": null,
-          "statusText": null,
-          "startTime": null,
+          "statusText": "playing",
+          "startTime": 1762925409423,
           "stopTime": null,
-          "position": null
+          "position": null,
+          "playState": {
+            "statusText": "playing",
+            "loadingState": "playing",
+            "playingState": {
+              "isPaused": false,
+              "isCurrent": true,
+              "isPlaying": true
+            },
+            "events": {
+              "connecting": true,
+              "noConnection": false,
+              "connected": true,
+              "ended": false,
+              "playing": true,
+              "seeking": false,
+              "pauseStateChanged": true
+            }
+          },
+          "currentTime": {
+            "h": 0,
+            "m": 0,
+            "s": 5,
+            "error": false,
+            "isInfinite": false
+          }
         },
-        "key": "Radio Karahttps://stream-153.zeno.fm/2bsx1sxr2vduv"
+        "key": "Radio Karahttps://stream-153.zeno.fm/2bsx1sxr2vduv",
+        "subText2": "00:05 ",
+        "ref": {
+          "currentRDList": {
+            "listId": "Podcast",
+            "name": "epi",
+            "$item": null
+          },
+          "currentTab": {
+            "listId": "List",
+            "tabId": "btn_wrp_play_list"
+          }
+        }
       },
       {
         "code": null,
@@ -15463,23 +17189,25 @@
           "pdc": {
             "item": {
               "code": null,
-              "name": "Hypercondriaque",
-              "qty": 56,
-              "url": "https://feeds.acast.com/public/shows/7b30e0f2-4bc0-4af6-9633-b0eff7221062",
+              "name": "Hicham Zakzouki's show",
+              "qty": 24,
+              "url": "https://www.spreaker.com/show/2210097/episodes/feed",
               "store": 1,
               "page": 1,
               "sel": null,
               "selCnt": 0,
-              "id": "Hypercondriaque",
-              "favLists": [],
+              "id": "Hicham Zakzouki's show",
+              "favLists": [
+                "Exotique"
+              ],
               "metadata": {
                 "statusText": ""
               },
               "pdc": true,
-              "key": "Hypercondriaquehttps://feeds.acast.com/public/shows/7b30e0f2-4bc0-4af6-9633-b0eff7221062",
+              "key": "Hicham Zakzouki's showhttps://www.spreaker.com/show/2210097/episodes/feed",
               "rss": null,
-              "logo": "https://assets.pippa.io/shows/61694f8386d7b13da020b813/show-cover.jpg",
-              "subText": "Santé magazine",
+              "logo": "https://d3wo5wojvuv7l.cloudfront.net/images.spreaker.com/cloudinary/s--5_mNYT7l--/w_1000,h_800,c_fit,l_text:Lato_158_bold:Hicham%20Zakzouki%20s%20show/images.spreaker.com/default/show-1400x1400-20190801.jpg",
+              "subText": "Hicham Zakzouki",
               "pItem": null
             },
             "selCnt": 0
@@ -15488,9 +17216,9 @@
           "epi": {
             "item": {
               "code": null,
-              "name": "L'horoscope du mercredi 12 novembre",
+              "name": "Cheikh Mamidou -Twahacht Anouchi Galbi Rah Mtouchi- (Studio 22) By Hicham Zakzouki",
               "qty": "",
-              "subText2": "00:12 / 01:29",
+              "subText2": "00:57 / 07:17",
               "metadata": {
                 "statusText": "playing",
                 "playState": {
@@ -15511,33 +17239,33 @@
                     "pauseStateChanged": true
                   }
                 },
-                "startTime": 1762922927746,
+                "startTime": 1762925348852,
                 "duration": {
                   "h": 0,
-                  "m": 1,
-                  "s": 29,
+                  "m": 7,
+                  "s": 17,
                   "error": false,
                   "isInfinite": false
                 },
                 "currentTime": {
                   "h": 0,
                   "m": 0,
-                  "s": 12,
+                  "s": 57,
                   "error": false,
                   "isInfinite": false
                 }
               },
-              "subText": "November 12, 2025",
-              "url": "https://medias.tendanceouest.com/podcasts/sons/12557-HOROS-251112.mp3",
+              "subText": "April 3, 2017",
+              "url": "https://api.spreaker.com/download/episode/11545617/draft_1491251444785542.mp3",
               "sel": null,
-              "id": "L'horoscope du mercredi 12 novembre",
+              "id": "Cheikh Mamidou -Twahacht Anouchi Galbi Rah Mtouchi- (Studio 22) By Hicham Zakzouki",
               "favLists": [],
-              "logo": "https://medias.tendanceouest.com/podcasts/1500/HOROS.jpg",
+              "logo": "https://d3wo5wojvuv7l.cloudfront.net/images.spreaker.com/cloudinary/s--5_mNYT7l--/w_1000,h_800,c_fit,l_text:Lato_158_bold:Hicham%20Zakzouki%20s%20show/images.spreaker.com/default/show-1400x1400-20190801.jpg",
               "pdc": true,
               "epi": true,
-              "pubDate": "Wed, 12 Nov 2025 03:00:00 +0100",
+              "pubDate": "Mon, 03 Apr 2017 20:42:50 +0000",
               "groups": [],
-              "key": "L'horoscope du mercredi 12 novembrehttps://medias.tendanceouest.com/podcasts/sons/12557-HOROS-251112.mp3",
+              "key": "Cheikh Mamidou -Twahacht Anouchi Galbi Rah Mtouchi- (Studio 22) By Hicham Zakzoukihttps://api.spreaker.com/download/episode/11545617/draft_1491251444785542.mp3",
               "ref": {
                 "currentRDList": {
                   "listId": "Podcast",
@@ -15549,7 +17277,7 @@
                   "tabId": "btn_wrp_podcast"
                 }
               },
-              "listenDate": 1762922937960,
+              "listenDate": 1762925358832,
               "pItem": null
             }
           },
@@ -15576,7 +17304,7 @@
         "code": null,
         "name": "Tagroupit 2018 guitar tachlhit _ تكروبيت تشلحيت اعزان ( 144 X 176 )",
         "qty": "",
-        "subText2": "01:19 / 15:53",
+        "subText2": "01:39 / 15:53",
         "subText": "January 18, 2019",
         "url": "https://api.spreaker.com/download/episode/16746811/tagroupit_2018_guitar_tachlhit_144_x_176.mp3",
         "sel": {
@@ -15726,10 +17454,11 @@
               "connected": true,
               "ended": false,
               "playing": true,
+              "seeking": true,
               "pauseStateChanged": true
             }
           },
-          "startTime": 1762727530467,
+          "startTime": 1762925326280,
           "duration": {
             "h": 0,
             "m": 15,
@@ -15740,7 +17469,7 @@
           "currentTime": {
             "h": 0,
             "m": 1,
-            "s": 19,
+            "s": 39,
             "error": false,
             "isInfinite": false
           }
@@ -15752,16 +17481,16 @@
         "key": "Tagroupit 2018 guitar tachlhit _ تكروبيت تشلحيت اعزان ( 144 X 176 )https://api.spreaker.com/download/episode/16746811/tagroupit_2018_guitar_tachlhit_144_x_176.mp3",
         "ref": {
           "currentRDList": {
-            "listId": "Podcast",
-            "name": "epi",
+            "listId": "List",
+            "name": "Exotique",
             "$item": null
           },
           "currentTab": {
-            "listId": "Podcast",
-            "tabId": "btn_wrp_podcast"
+            "listId": "List",
+            "tabId": "btn_wrp_play_list"
           }
         },
-        "listenDate": 1762727540451
+        "listenDate": 1762925334375
       },
       {
         "code": null,
@@ -15801,23 +17530,25 @@
           "pdc": {
             "item": {
               "code": null,
-              "name": "Hypercondriaque",
-              "qty": 56,
-              "url": "https://feeds.acast.com/public/shows/7b30e0f2-4bc0-4af6-9633-b0eff7221062",
+              "name": "Hicham Zakzouki's show",
+              "qty": 24,
+              "url": "https://www.spreaker.com/show/2210097/episodes/feed",
               "store": 1,
               "page": 1,
               "sel": null,
               "selCnt": 0,
-              "id": "Hypercondriaque",
-              "favLists": [],
+              "id": "Hicham Zakzouki's show",
+              "favLists": [
+                "Exotique"
+              ],
               "metadata": {
                 "statusText": ""
               },
               "pdc": true,
-              "key": "Hypercondriaquehttps://feeds.acast.com/public/shows/7b30e0f2-4bc0-4af6-9633-b0eff7221062",
+              "key": "Hicham Zakzouki's showhttps://www.spreaker.com/show/2210097/episodes/feed",
               "rss": null,
-              "logo": "https://assets.pippa.io/shows/61694f8386d7b13da020b813/show-cover.jpg",
-              "subText": "Santé magazine",
+              "logo": "https://d3wo5wojvuv7l.cloudfront.net/images.spreaker.com/cloudinary/s--5_mNYT7l--/w_1000,h_800,c_fit,l_text:Lato_158_bold:Hicham%20Zakzouki%20s%20show/images.spreaker.com/default/show-1400x1400-20190801.jpg",
+              "subText": "Hicham Zakzouki",
               "pItem": null
             },
             "selCnt": 0
@@ -15826,9 +17557,9 @@
           "epi": {
             "item": {
               "code": null,
-              "name": "L'horoscope du mercredi 12 novembre",
+              "name": "Cheikh Mamidou -Twahacht Anouchi Galbi Rah Mtouchi- (Studio 22) By Hicham Zakzouki",
               "qty": "",
-              "subText2": "00:12 / 01:29",
+              "subText2": "00:57 / 07:17",
               "metadata": {
                 "statusText": "playing",
                 "playState": {
@@ -15849,33 +17580,33 @@
                     "pauseStateChanged": true
                   }
                 },
-                "startTime": 1762922927746,
+                "startTime": 1762925348852,
                 "duration": {
                   "h": 0,
-                  "m": 1,
-                  "s": 29,
+                  "m": 7,
+                  "s": 17,
                   "error": false,
                   "isInfinite": false
                 },
                 "currentTime": {
                   "h": 0,
                   "m": 0,
-                  "s": 12,
+                  "s": 57,
                   "error": false,
                   "isInfinite": false
                 }
               },
-              "subText": "November 12, 2025",
-              "url": "https://medias.tendanceouest.com/podcasts/sons/12557-HOROS-251112.mp3",
+              "subText": "April 3, 2017",
+              "url": "https://api.spreaker.com/download/episode/11545617/draft_1491251444785542.mp3",
               "sel": null,
-              "id": "L'horoscope du mercredi 12 novembre",
+              "id": "Cheikh Mamidou -Twahacht Anouchi Galbi Rah Mtouchi- (Studio 22) By Hicham Zakzouki",
               "favLists": [],
-              "logo": "https://medias.tendanceouest.com/podcasts/1500/HOROS.jpg",
+              "logo": "https://d3wo5wojvuv7l.cloudfront.net/images.spreaker.com/cloudinary/s--5_mNYT7l--/w_1000,h_800,c_fit,l_text:Lato_158_bold:Hicham%20Zakzouki%20s%20show/images.spreaker.com/default/show-1400x1400-20190801.jpg",
               "pdc": true,
               "epi": true,
-              "pubDate": "Wed, 12 Nov 2025 03:00:00 +0100",
+              "pubDate": "Mon, 03 Apr 2017 20:42:50 +0000",
               "groups": [],
-              "key": "L'horoscope du mercredi 12 novembrehttps://medias.tendanceouest.com/podcasts/sons/12557-HOROS-251112.mp3",
+              "key": "Cheikh Mamidou -Twahacht Anouchi Galbi Rah Mtouchi- (Studio 22) By Hicham Zakzoukihttps://api.spreaker.com/download/episode/11545617/draft_1491251444785542.mp3",
               "ref": {
                 "currentRDList": {
                   "listId": "Podcast",
@@ -15887,7 +17618,7 @@
                   "tabId": "btn_wrp_podcast"
                 }
               },
-              "listenDate": 1762922937960,
+              "listenDate": 1762925358832,
               "pItem": null
             }
           },
@@ -25545,7 +27276,7 @@
         "code": null,
         "name": "La sorcière des Bell 🧙🏻‍♀️",
         "qty": "",
-        "subText2": "02:13 / 17:40",
+        "subText2": "02:25 / 18:10",
         "metadata": {
           "statusText": "playing",
           "playState": {
@@ -25566,18 +27297,18 @@
               "pauseStateChanged": true
             }
           },
-          "startTime": 1762923390654,
+          "startTime": 1762926329927,
           "duration": {
             "h": 0,
-            "m": 17,
-            "s": 40,
+            "m": 18,
+            "s": 10,
             "error": false,
             "isInfinite": false
           },
           "currentTime": {
             "h": 0,
             "m": 2,
-            "s": 13,
+            "s": 25,
             "error": false,
             "isInfinite": false
           }
@@ -25726,7 +27457,7 @@
             "tabId": "btn_wrp_play_list"
           }
         },
-        "listenDate": 1762923098648
+        "listenDate": 1762926337694
       },
       {
         "code": null,
@@ -27792,7 +29523,7 @@
         "code": null,
         "name": "#29 : Le Vampire de Montparnasse",
         "qty": "",
-        "subText2": "01:03 / 09:01",
+        "subText2": "08:05 / 09:00",
         "subText": "December 27, 2023",
         "url": "https://traffic.360.audion.fm/622e8b40-1eb8-4719-a46e-439ca78be3b9.mp3",
         "pItem": null,
@@ -27932,11 +29663,11 @@
         "logo": "https://artworks.360.audion.fm/3c192d8a-5c9c-451a-8465-dfa614a4d677.jpg?width=3000&height=3000",
         "metadata": {
           "statusText": "playing",
-          "startTime": 1762923801418,
+          "startTime": 1762925714905,
           "duration": {
             "h": 0,
             "m": 9,
-            "s": 1,
+            "s": 0,
             "error": false,
             "isInfinite": false
           },
@@ -27960,8 +29691,8 @@
           },
           "currentTime": {
             "h": 0,
-            "m": 1,
-            "s": 3,
+            "m": 8,
+            "s": 5,
             "error": false,
             "isInfinite": false
           }
@@ -27972,19 +29703,19 @@
         "ref": {
           "currentRDList": {
             "listId": "List",
-            "name": "----- Podcasts ------",
+            "name": "----- Podcast Enquête -----",
             "$item": null
           },
           "currentTab": {
-            "listId": "List",
-            "tabId": "btn_wrp_play_list"
+            "listId": "Viz",
+            "tabId": "btn_wrp_logo"
           }
         },
         "groups": [
           "true crime"
         ],
         "key": "#29 : Le Vampire de Montparnassehttps://traffic.360.audion.fm/622e8b40-1eb8-4719-a46e-439ca78be3b9.mp3",
-        "listenDate": 1762726841951
+        "listenDate": 1762925724257
       },
       {
         "code": null,
@@ -29185,12 +30916,12 @@
         "code": null,
         "name": "L'abbé Bruneau, le curé assassin ?",
         "qty": "",
-        "subText2": "02:58 / 04:25",
+        "subText2": "04:25 / 04:25",
         "metadata": {
-          "statusText": "playing",
+          "statusText": "ended",
           "playState": {
-            "statusText": "playing",
-            "loadingState": "playing",
+            "statusText": "ended",
+            "loadingState": "ended",
             "playingState": {
               "isPaused": false,
               "isCurrent": true,
@@ -29200,13 +30931,13 @@
               "connecting": true,
               "noConnection": false,
               "connected": true,
-              "ended": false,
+              "ended": true,
               "playing": true,
               "seeking": true,
               "pauseStateChanged": true
             }
           },
-          "startTime": 1762925181523,
+          "startTime": 1762925569453,
           "duration": {
             "h": 0,
             "m": 4,
@@ -29216,8 +30947,8 @@
           },
           "currentTime": {
             "h": 0,
-            "m": 2,
-            "s": 58,
+            "m": 4,
+            "s": 25,
             "error": false,
             "isInfinite": false
           }
@@ -29366,7 +31097,7 @@
         "ref": {
           "currentRDList": {
             "listId": "List",
-            "name": "----- Podcasts ------",
+            "name": "----- Podcast Enquête -----",
             "$item": null
           },
           "currentTab": {
@@ -29374,7 +31105,8 @@
             "tabId": "btn_wrp_play_list"
           }
         },
-        "listenDate": 1762738517778
+        "listenDate": 1762925579070,
+        "statusText": "ended"
       }
     ],
     "isSystem": false
@@ -29421,23 +31153,25 @@
           "pdc": {
             "item": {
               "code": null,
-              "name": "Hypercondriaque",
-              "qty": 56,
-              "url": "https://feeds.acast.com/public/shows/7b30e0f2-4bc0-4af6-9633-b0eff7221062",
+              "name": "Hicham Zakzouki's show",
+              "qty": 24,
+              "url": "https://www.spreaker.com/show/2210097/episodes/feed",
               "store": 1,
               "page": 1,
               "sel": null,
               "selCnt": 0,
-              "id": "Hypercondriaque",
-              "favLists": [],
+              "id": "Hicham Zakzouki's show",
+              "favLists": [
+                "Exotique"
+              ],
               "metadata": {
                 "statusText": ""
               },
               "pdc": true,
-              "key": "Hypercondriaquehttps://feeds.acast.com/public/shows/7b30e0f2-4bc0-4af6-9633-b0eff7221062",
+              "key": "Hicham Zakzouki's showhttps://www.spreaker.com/show/2210097/episodes/feed",
               "rss": null,
-              "logo": "https://assets.pippa.io/shows/61694f8386d7b13da020b813/show-cover.jpg",
-              "subText": "Santé magazine",
+              "logo": "https://d3wo5wojvuv7l.cloudfront.net/images.spreaker.com/cloudinary/s--5_mNYT7l--/w_1000,h_800,c_fit,l_text:Lato_158_bold:Hicham%20Zakzouki%20s%20show/images.spreaker.com/default/show-1400x1400-20190801.jpg",
+              "subText": "Hicham Zakzouki",
               "pItem": null
             },
             "selCnt": 0
@@ -29446,9 +31180,9 @@
           "epi": {
             "item": {
               "code": null,
-              "name": "L'horoscope du mercredi 12 novembre",
+              "name": "Cheikh Mamidou -Twahacht Anouchi Galbi Rah Mtouchi- (Studio 22) By Hicham Zakzouki",
               "qty": "",
-              "subText2": "00:12 / 01:29",
+              "subText2": "00:57 / 07:17",
               "metadata": {
                 "statusText": "playing",
                 "playState": {
@@ -29469,33 +31203,33 @@
                     "pauseStateChanged": true
                   }
                 },
-                "startTime": 1762922927746,
+                "startTime": 1762925348852,
                 "duration": {
                   "h": 0,
-                  "m": 1,
-                  "s": 29,
+                  "m": 7,
+                  "s": 17,
                   "error": false,
                   "isInfinite": false
                 },
                 "currentTime": {
                   "h": 0,
                   "m": 0,
-                  "s": 12,
+                  "s": 57,
                   "error": false,
                   "isInfinite": false
                 }
               },
-              "subText": "November 12, 2025",
-              "url": "https://medias.tendanceouest.com/podcasts/sons/12557-HOROS-251112.mp3",
+              "subText": "April 3, 2017",
+              "url": "https://api.spreaker.com/download/episode/11545617/draft_1491251444785542.mp3",
               "sel": null,
-              "id": "L'horoscope du mercredi 12 novembre",
+              "id": "Cheikh Mamidou -Twahacht Anouchi Galbi Rah Mtouchi- (Studio 22) By Hicham Zakzouki",
               "favLists": [],
-              "logo": "https://medias.tendanceouest.com/podcasts/1500/HOROS.jpg",
+              "logo": "https://d3wo5wojvuv7l.cloudfront.net/images.spreaker.com/cloudinary/s--5_mNYT7l--/w_1000,h_800,c_fit,l_text:Lato_158_bold:Hicham%20Zakzouki%20s%20show/images.spreaker.com/default/show-1400x1400-20190801.jpg",
               "pdc": true,
               "epi": true,
-              "pubDate": "Wed, 12 Nov 2025 03:00:00 +0100",
+              "pubDate": "Mon, 03 Apr 2017 20:42:50 +0000",
               "groups": [],
-              "key": "L'horoscope du mercredi 12 novembrehttps://medias.tendanceouest.com/podcasts/sons/12557-HOROS-251112.mp3",
+              "key": "Cheikh Mamidou -Twahacht Anouchi Galbi Rah Mtouchi- (Studio 22) By Hicham Zakzoukihttps://api.spreaker.com/download/episode/11545617/draft_1491251444785542.mp3",
               "ref": {
                 "currentRDList": {
                   "listId": "Podcast",
@@ -29507,7 +31241,7 @@
                   "tabId": "btn_wrp_podcast"
                 }
               },
-              "listenDate": 1762922937960,
+              "listenDate": 1762925358832,
               "pItem": null
             }
           },
@@ -29598,7 +31332,7 @@
               "code": null,
               "name": "Jeune, démocrate et musulman : qui est Zohran Mamdani, le nouveau maire anti-Trump de New-York ?",
               "qty": "",
-              "subText2": "00:45 / 01:03:34",
+              "subText2": "01:43 / 01:03:34",
               "metadata": {
                 "statusText": "playing",
                 "playState": {
@@ -29629,8 +31363,8 @@
                 },
                 "currentTime": {
                   "h": 0,
-                  "m": 0,
-                  "s": 45,
+                  "m": 1,
+                  "s": 43,
                   "error": false,
                   "isInfinite": false
                 },
@@ -29640,7 +31374,9 @@
               "url": "https://audio.audiomeans.fr/file/PgeAPOjsIT/2f23a124-d77c-424f-9743-0deed2db267e.mp3?_=1762536783",
               "sel": null,
               "id": "Jeune, démocrate et musulman : qui est Zohran Mamdani, le nouveau maire anti-Trump de New-York ?",
-              "favLists": [],
+              "favLists": [
+                "----- Podcast documentaire -----"
+              ],
               "logo": "https://static.audiomeans.fr/img/episode/2f008391-be8d-40c4-b566-54f187055ca2.jpg",
               "pdc": true,
               "epi": true,
@@ -29658,7 +31394,7 @@
                   "tabId": "btn_wrp_podcast"
                 }
               },
-              "listenDate": 1762924873014,
+              "listenDate": 1762925217709,
               "pItem": null
             }
           },
@@ -29992,7 +31728,7 @@
         "code": null,
         "name": "Soigne ta gauche",
         "qty": "",
-        "subText2": "04:23 / 01:00:33",
+        "subText2": "04:36 / 01:01:41",
         "subText": "July 18, 2024",
         "url": "https://sphinx.acast.com/p/acast/s/au-long/e/66990c379973ff30eacff666/media.mp3",
         "sel": {
@@ -30149,18 +31885,18 @@
               "pauseStateChanged": true
             }
           },
-          "startTime": 1762924354862,
+          "startTime": 1762925445770,
           "duration": {
             "h": 1,
-            "m": 0,
-            "s": 33,
+            "m": 1,
+            "s": 41,
             "error": false,
             "isInfinite": false
           },
           "currentTime": {
             "h": 0,
             "m": 4,
-            "s": 23,
+            "s": 36,
             "error": false,
             "isInfinite": false
           }
@@ -30173,7 +31909,7 @@
         "ref": {
           "currentRDList": {
             "listId": "List",
-            "name": "----- Podcasts ------",
+            "name": "----- Podcast documentaire -----",
             "$item": null
           },
           "currentTab": {
@@ -30181,7 +31917,7 @@
             "tabId": "btn_wrp_play_list"
           }
         },
-        "listenDate": 1762924363967
+        "listenDate": 1762925454841
       },
       {
         "code": null,
@@ -30687,23 +32423,25 @@
           "pdc": {
             "item": {
               "code": null,
-              "name": "Hypercondriaque",
-              "qty": 56,
-              "url": "https://feeds.acast.com/public/shows/7b30e0f2-4bc0-4af6-9633-b0eff7221062",
+              "name": "Hicham Zakzouki's show",
+              "qty": 24,
+              "url": "https://www.spreaker.com/show/2210097/episodes/feed",
               "store": 1,
               "page": 1,
               "sel": null,
               "selCnt": 0,
-              "id": "Hypercondriaque",
-              "favLists": [],
+              "id": "Hicham Zakzouki's show",
+              "favLists": [
+                "Exotique"
+              ],
               "metadata": {
                 "statusText": ""
               },
               "pdc": true,
-              "key": "Hypercondriaquehttps://feeds.acast.com/public/shows/7b30e0f2-4bc0-4af6-9633-b0eff7221062",
+              "key": "Hicham Zakzouki's showhttps://www.spreaker.com/show/2210097/episodes/feed",
               "rss": null,
-              "logo": "https://assets.pippa.io/shows/61694f8386d7b13da020b813/show-cover.jpg",
-              "subText": "Santé magazine",
+              "logo": "https://d3wo5wojvuv7l.cloudfront.net/images.spreaker.com/cloudinary/s--5_mNYT7l--/w_1000,h_800,c_fit,l_text:Lato_158_bold:Hicham%20Zakzouki%20s%20show/images.spreaker.com/default/show-1400x1400-20190801.jpg",
+              "subText": "Hicham Zakzouki",
               "pItem": null
             },
             "selCnt": 0
@@ -30712,9 +32450,9 @@
           "epi": {
             "item": {
               "code": null,
-              "name": "L'horoscope du mercredi 12 novembre",
+              "name": "Cheikh Mamidou -Twahacht Anouchi Galbi Rah Mtouchi- (Studio 22) By Hicham Zakzouki",
               "qty": "",
-              "subText2": "00:12 / 01:29",
+              "subText2": "00:57 / 07:17",
               "metadata": {
                 "statusText": "playing",
                 "playState": {
@@ -30735,33 +32473,33 @@
                     "pauseStateChanged": true
                   }
                 },
-                "startTime": 1762922927746,
+                "startTime": 1762925348852,
                 "duration": {
                   "h": 0,
-                  "m": 1,
-                  "s": 29,
+                  "m": 7,
+                  "s": 17,
                   "error": false,
                   "isInfinite": false
                 },
                 "currentTime": {
                   "h": 0,
                   "m": 0,
-                  "s": 12,
+                  "s": 57,
                   "error": false,
                   "isInfinite": false
                 }
               },
-              "subText": "November 12, 2025",
-              "url": "https://medias.tendanceouest.com/podcasts/sons/12557-HOROS-251112.mp3",
+              "subText": "April 3, 2017",
+              "url": "https://api.spreaker.com/download/episode/11545617/draft_1491251444785542.mp3",
               "sel": null,
-              "id": "L'horoscope du mercredi 12 novembre",
+              "id": "Cheikh Mamidou -Twahacht Anouchi Galbi Rah Mtouchi- (Studio 22) By Hicham Zakzouki",
               "favLists": [],
-              "logo": "https://medias.tendanceouest.com/podcasts/1500/HOROS.jpg",
+              "logo": "https://d3wo5wojvuv7l.cloudfront.net/images.spreaker.com/cloudinary/s--5_mNYT7l--/w_1000,h_800,c_fit,l_text:Lato_158_bold:Hicham%20Zakzouki%20s%20show/images.spreaker.com/default/show-1400x1400-20190801.jpg",
               "pdc": true,
               "epi": true,
-              "pubDate": "Wed, 12 Nov 2025 03:00:00 +0100",
+              "pubDate": "Mon, 03 Apr 2017 20:42:50 +0000",
               "groups": [],
-              "key": "L'horoscope du mercredi 12 novembrehttps://medias.tendanceouest.com/podcasts/sons/12557-HOROS-251112.mp3",
+              "key": "Cheikh Mamidou -Twahacht Anouchi Galbi Rah Mtouchi- (Studio 22) By Hicham Zakzoukihttps://api.spreaker.com/download/episode/11545617/draft_1491251444785542.mp3",
               "ref": {
                 "currentRDList": {
                   "listId": "Podcast",
@@ -30773,7 +32511,7 @@
                   "tabId": "btn_wrp_podcast"
                 }
               },
-              "listenDate": 1762922937960,
+              "listenDate": 1762925358832,
               "pItem": null
             }
           },
@@ -30834,23 +32572,25 @@
           "pdc": {
             "item": {
               "code": null,
-              "name": "Hypercondriaque",
-              "qty": 56,
-              "url": "https://feeds.acast.com/public/shows/7b30e0f2-4bc0-4af6-9633-b0eff7221062",
+              "name": "Hicham Zakzouki's show",
+              "qty": 24,
+              "url": "https://www.spreaker.com/show/2210097/episodes/feed",
               "store": 1,
               "page": 1,
               "sel": null,
               "selCnt": 0,
-              "id": "Hypercondriaque",
-              "favLists": [],
+              "id": "Hicham Zakzouki's show",
+              "favLists": [
+                "Exotique"
+              ],
               "metadata": {
                 "statusText": ""
               },
               "pdc": true,
-              "key": "Hypercondriaquehttps://feeds.acast.com/public/shows/7b30e0f2-4bc0-4af6-9633-b0eff7221062",
+              "key": "Hicham Zakzouki's showhttps://www.spreaker.com/show/2210097/episodes/feed",
               "rss": null,
-              "logo": "https://assets.pippa.io/shows/61694f8386d7b13da020b813/show-cover.jpg",
-              "subText": "Santé magazine",
+              "logo": "https://d3wo5wojvuv7l.cloudfront.net/images.spreaker.com/cloudinary/s--5_mNYT7l--/w_1000,h_800,c_fit,l_text:Lato_158_bold:Hicham%20Zakzouki%20s%20show/images.spreaker.com/default/show-1400x1400-20190801.jpg",
+              "subText": "Hicham Zakzouki",
               "pItem": null
             },
             "selCnt": 0
@@ -30859,9 +32599,9 @@
           "epi": {
             "item": {
               "code": null,
-              "name": "L'horoscope du mercredi 12 novembre",
+              "name": "Cheikh Mamidou -Twahacht Anouchi Galbi Rah Mtouchi- (Studio 22) By Hicham Zakzouki",
               "qty": "",
-              "subText2": "00:12 / 01:29",
+              "subText2": "00:57 / 07:17",
               "metadata": {
                 "statusText": "playing",
                 "playState": {
@@ -30882,33 +32622,33 @@
                     "pauseStateChanged": true
                   }
                 },
-                "startTime": 1762922927746,
+                "startTime": 1762925348852,
                 "duration": {
                   "h": 0,
-                  "m": 1,
-                  "s": 29,
+                  "m": 7,
+                  "s": 17,
                   "error": false,
                   "isInfinite": false
                 },
                 "currentTime": {
                   "h": 0,
                   "m": 0,
-                  "s": 12,
+                  "s": 57,
                   "error": false,
                   "isInfinite": false
                 }
               },
-              "subText": "November 12, 2025",
-              "url": "https://medias.tendanceouest.com/podcasts/sons/12557-HOROS-251112.mp3",
+              "subText": "April 3, 2017",
+              "url": "https://api.spreaker.com/download/episode/11545617/draft_1491251444785542.mp3",
               "sel": null,
-              "id": "L'horoscope du mercredi 12 novembre",
+              "id": "Cheikh Mamidou -Twahacht Anouchi Galbi Rah Mtouchi- (Studio 22) By Hicham Zakzouki",
               "favLists": [],
-              "logo": "https://medias.tendanceouest.com/podcasts/1500/HOROS.jpg",
+              "logo": "https://d3wo5wojvuv7l.cloudfront.net/images.spreaker.com/cloudinary/s--5_mNYT7l--/w_1000,h_800,c_fit,l_text:Lato_158_bold:Hicham%20Zakzouki%20s%20show/images.spreaker.com/default/show-1400x1400-20190801.jpg",
               "pdc": true,
               "epi": true,
-              "pubDate": "Wed, 12 Nov 2025 03:00:00 +0100",
+              "pubDate": "Mon, 03 Apr 2017 20:42:50 +0000",
               "groups": [],
-              "key": "L'horoscope du mercredi 12 novembrehttps://medias.tendanceouest.com/podcasts/sons/12557-HOROS-251112.mp3",
+              "key": "Cheikh Mamidou -Twahacht Anouchi Galbi Rah Mtouchi- (Studio 22) By Hicham Zakzoukihttps://api.spreaker.com/download/episode/11545617/draft_1491251444785542.mp3",
               "ref": {
                 "currentRDList": {
                   "listId": "Podcast",
@@ -30920,7 +32660,7 @@
                   "tabId": "btn_wrp_podcast"
                 }
               },
-              "listenDate": 1762922937960,
+              "listenDate": 1762925358832,
               "pItem": null
             }
           },
@@ -31094,7 +32834,7 @@
         "code": null,
         "name": "Épisode 1 - Des pellicules, des femmes et des hommes",
         "qty": "",
-        "subText2": "03:33 / 12:01",
+        "subText2": "04:22 / 12:01",
         "metadata": {
           "statusText": "playing",
           "playState": {
@@ -31115,7 +32855,7 @@
               "pauseStateChanged": true
             }
           },
-          "startTime": 1762924978391,
+          "startTime": 1762925461289,
           "duration": {
             "h": 0,
             "m": 12,
@@ -31125,8 +32865,8 @@
           },
           "currentTime": {
             "h": 0,
-            "m": 3,
-            "s": 33,
+            "m": 4,
+            "s": 22,
             "error": false,
             "isInfinite": false
           },
@@ -31277,15 +33017,15 @@
         "ref": {
           "currentRDList": {
             "listId": "List",
-            "name": "----- Podcasts ------",
+            "name": "----- Podcast documentaire -----",
             "$item": null
           },
           "currentTab": {
-            "listId": "List",
-            "tabId": "btn_wrp_play_list"
+            "listId": "Viz",
+            "tabId": "btn_wrp_logo"
           }
         },
-        "listenDate": 1762739630762
+        "listenDate": 1762925470614
       },
       {
         "code": null,
@@ -31431,7 +33171,7 @@
         "code": null,
         "name": "Construire un produit Open Source sans lever de fonds, Grégory Rocher",
         "qty": "",
-        "subText2": "00:13 / 02:09:34",
+        "subText2": "01:48 / 02:09:34",
         "metadata": {
           "statusText": "playing",
           "playState": {
@@ -31452,7 +33192,7 @@
               "pauseStateChanged": true
             }
           },
-          "startTime": 1762925050079,
+          "startTime": 1762926513665,
           "duration": {
             "h": 2,
             "m": 9,
@@ -31462,8 +33202,8 @@
           },
           "currentTime": {
             "h": 0,
-            "m": 0,
-            "s": 13,
+            "m": 1,
+            "s": 48,
             "error": false,
             "isInfinite": false
           },
@@ -31523,167 +33263,6 @@
               "subText": "Terry Michel",
               "pItem": null
             }
-          },
-          "pdcSubListId": "epi",
-          "epi": {
-            "item": {
-              "code": null,
-              "name": "Comprendre l'infrastructure technique qui permet aux agents IA d'exister, Rémi Louf",
-              "qty": "",
-              "subText2": "00:06 / 02:03:33",
-              "metadata": {
-                "statusText": "playing",
-                "playState": {
-                  "statusText": "playing",
-                  "loadingState": "playing",
-                  "playingState": {
-                    "isPaused": false,
-                    "isCurrent": true,
-                    "isPlaying": true
-                  },
-                  "events": {
-                    "connecting": true,
-                    "noConnection": false,
-                    "connected": true,
-                    "ended": false,
-                    "playing": true,
-                    "seeking": true,
-                    "pauseStateChanged": true
-                  }
-                },
-                "startTime": 1762925167357,
-                "duration": {
-                  "h": 2,
-                  "m": 3,
-                  "s": 33,
-                  "error": false,
-                  "isInfinite": false
-                },
-                "currentTime": {
-                  "h": 0,
-                  "m": 0,
-                  "s": 6,
-                  "error": false,
-                  "isInfinite": false
-                },
-                "endTime": 1762810638838
-              },
-              "subText": "November 4, 2025",
-              "url": "https://sphinx.acast.com/p/open/s/67a716499c6f7f7f280da15b/e/6907c88a17c1d64648c094fa/media.mp3",
-              "sel": null,
-              "id": "Comprendre l'infrastructure technique qui permet aux agents IA d'exister, Rémi Louf",
-              "favLists": [],
-              "logo": "https://assets.pippa.io/shows/67a716499c6f7f7f280da15b/1762117684157-d19cc72f-4d46-4470-bb60-91b63813756d.jpeg",
-              "pdc": true,
-              "epi": true,
-              "pubDate": "Mon, 03 Nov 2025 23:16:12 GMT",
-              "groups": [],
-              "key": "Comprendre l'infrastructure technique qui permet aux agents IA d'exister, Rémi Loufhttps://sphinx.acast.com/p/open/s/67a716499c6f7f7f280da15b/e/6907c88a17c1d64648c094fa/media.mp3",
-              "ref": {
-                "currentRDList": {
-                  "listId": "List",
-                  "name": "----- Podcasts ------",
-                  "$item": null
-                },
-                "currentTab": {
-                  "listId": "List",
-                  "tabId": "btn_wrp_play_list"
-                }
-              },
-              "listenDate": 1762867059458,
-              "statusText": "ended",
-              "pItem": null
-            }
-          },
-          "epiSubListId": null,
-          "noPage": 1,
-          "epiOpen": true,
-          "epiOpening": false
-        },
-        "id": "Construire un produit Open Source sans lever de fonds, Grégory Rocher",
-        "favLists": [
-          "----- Podcast documentaire -----"
-        ],
-        "logo": "https://assets.pippa.io/shows/67a716499c6f7f7f280da15b/1745874469900-0e2fa7eb-ea5e-40ee-a6fc-b573c365dfb8.jpeg",
-        "pdc": true,
-        "epi": true,
-        "pubDate": "Mon, 28 Apr 2025 21:16:13 GMT",
-        "groups": [],
-        "key": "Construire un produit Open Source sans lever de fonds, Grégory Rocherhttps://sphinx.acast.com/p/open/s/67a716499c6f7f7f280da15b/e/680ff01e6ac0e5213bfd0c74/media.mp3",
-        "ref": {
-          "currentRDList": {
-            "listId": "List",
-            "name": "----- Podcasts ------",
-            "$item": null
-          },
-          "currentTab": {
-            "listId": "List",
-            "tabId": "btn_wrp_play_list"
-          }
-        },
-        "listenDate": 1762872913705,
-        "statusText": "ended"
-      },
-      {
-        "code": null,
-        "name": "Just a Click",
-        "qty": 111,
-        "url": "https://feeds.acast.com/public/shows/67a716499c6f7f7f280da15b",
-        "store": 1,
-        "page": 1,
-        "sel": {
-          "lang": {
-            "item": {
-              "code": "fra",
-              "name": "French",
-              "qty": 64492
-            }
-          },
-          "langSubListId": "tag",
-          "tag": {
-            "item": {
-              "code": null,
-              "name": "technology",
-              "qty": 1390
-            }
-          },
-          "tagSubListId": "letter",
-          "letter": {
-            "item": {
-              "code": null,
-              "name": "J",
-              "qty": 9,
-              "stores": [
-                1
-              ]
-            }
-          },
-          "letterSubListId": "pdc",
-          "pdc": {
-            "item": {
-              "code": null,
-              "name": "Just a Click",
-              "qty": 111,
-              "url": "https://feeds.acast.com/public/shows/67a716499c6f7f7f280da15b",
-              "store": 1,
-              "page": 1,
-              "sel": null,
-              "selCnt": 0,
-              "id": "Just a Click",
-              "favLists": [
-                "----- Podcast documentaire -----"
-              ],
-              "metadata": {
-                "statusText": ""
-              },
-              "pdc": true,
-              "key": "Just a Clickhttps://feeds.acast.com/public/shows/67a716499c6f7f7f280da15b",
-              "rss": null,
-              "logo": "https://assets.pippa.io/shows/67a716499c6f7f7f280da15b/show-cover.png",
-              "subText": "Terry Michel",
-              "pItem": null
-            },
-            "selCnt": 0
           },
           "pdcSubListId": "epi",
           "epi": {
@@ -31753,6 +33332,165 @@
               },
               "listenDate": 1762867059458,
               "statusText": "ended",
+              "pItem": null
+            }
+          },
+          "epiSubListId": null,
+          "noPage": 1,
+          "epiOpen": false,
+          "epiOpening": false
+        },
+        "id": "Construire un produit Open Source sans lever de fonds, Grégory Rocher",
+        "favLists": [
+          "----- Podcast documentaire -----"
+        ],
+        "logo": "https://assets.pippa.io/shows/67a716499c6f7f7f280da15b/1745874469900-0e2fa7eb-ea5e-40ee-a6fc-b573c365dfb8.jpeg",
+        "pdc": true,
+        "epi": true,
+        "pubDate": "Mon, 28 Apr 2025 21:16:13 GMT",
+        "groups": [],
+        "key": "Construire un produit Open Source sans lever de fonds, Grégory Rocherhttps://sphinx.acast.com/p/open/s/67a716499c6f7f7f280da15b/e/680ff01e6ac0e5213bfd0c74/media.mp3",
+        "ref": {
+          "currentRDList": {
+            "listId": "List",
+            "name": "History",
+            "$item": null
+          },
+          "currentTab": {
+            "listId": "Viz",
+            "tabId": "btn_wrp_logo"
+          }
+        },
+        "listenDate": 1762926481104,
+        "statusText": "ended"
+      },
+      {
+        "code": null,
+        "name": "Just a Click",
+        "qty": 111,
+        "url": "https://feeds.acast.com/public/shows/67a716499c6f7f7f280da15b",
+        "store": 1,
+        "page": 1,
+        "sel": {
+          "lang": {
+            "item": {
+              "code": "fra",
+              "name": "French",
+              "qty": 64492
+            }
+          },
+          "langSubListId": "tag",
+          "tag": {
+            "item": {
+              "code": null,
+              "name": "technology",
+              "qty": 1390
+            }
+          },
+          "tagSubListId": "letter",
+          "letter": {
+            "item": {
+              "code": null,
+              "name": "J",
+              "qty": 9,
+              "stores": [
+                1
+              ]
+            }
+          },
+          "letterSubListId": "pdc",
+          "pdc": {
+            "item": {
+              "code": null,
+              "name": "Just a Click",
+              "qty": 111,
+              "url": "https://feeds.acast.com/public/shows/67a716499c6f7f7f280da15b",
+              "store": 1,
+              "page": 1,
+              "sel": null,
+              "selCnt": 0,
+              "id": "Just a Click",
+              "favLists": [
+                "----- Podcast documentaire -----"
+              ],
+              "metadata": {
+                "statusText": ""
+              },
+              "pdc": true,
+              "key": "Just a Clickhttps://feeds.acast.com/public/shows/67a716499c6f7f7f280da15b",
+              "rss": null,
+              "logo": "https://assets.pippa.io/shows/67a716499c6f7f7f280da15b/show-cover.png",
+              "subText": "Terry Michel",
+              "pItem": null
+            },
+            "selCnt": 0
+          },
+          "pdcSubListId": "epi",
+          "epi": {
+            "item": {
+              "code": null,
+              "name": "Comment l'IA révolutionne le produit dans le domaine de la santé, Aurélie Le Guillou",
+              "qty": "",
+              "subText2": "01:58 / 02:02:58",
+              "metadata": {
+                "statusText": "playing",
+                "playState": {
+                  "statusText": "playing",
+                  "loadingState": "playing",
+                  "playingState": {
+                    "isPaused": false,
+                    "isCurrent": true,
+                    "isPlaying": true
+                  },
+                  "events": {
+                    "connecting": true,
+                    "noConnection": false,
+                    "connected": true,
+                    "ended": false,
+                    "playing": true,
+                    "seeking": false,
+                    "pauseStateChanged": true
+                  }
+                },
+                "startTime": 1762926167301,
+                "duration": {
+                  "h": 2,
+                  "m": 2,
+                  "s": 58,
+                  "error": false,
+                  "isInfinite": false
+                },
+                "currentTime": {
+                  "h": 0,
+                  "m": 1,
+                  "s": 58,
+                  "error": false,
+                  "isInfinite": false
+                }
+              },
+              "subText": "April 9, 2025",
+              "url": "https://sphinx.acast.com/p/open/s/67a716499c6f7f7f280da15b/e/67f6cb7adb6dca4dc27f8f3d/media.mp3",
+              "sel": null,
+              "id": "Comment l'IA révolutionne le produit dans le domaine de la santé, Aurélie Le Guillou",
+              "favLists": [],
+              "logo": "https://assets.pippa.io/shows/67a716499c6f7f7f280da15b/1744228348813-dacfb9be-8add-4f3a-a244-7334abd7153e.jpeg",
+              "pdc": true,
+              "epi": true,
+              "pubDate": "Wed, 09 Apr 2025 19:57:31 GMT",
+              "groups": [],
+              "key": "Comment l'IA révolutionne le produit dans le domaine de la santé, Aurélie Le Guillouhttps://sphinx.acast.com/p/open/s/67a716499c6f7f7f280da15b/e/67f6cb7adb6dca4dc27f8f3d/media.mp3",
+              "ref": {
+                "currentRDList": {
+                  "listId": "Podcast",
+                  "name": "epi",
+                  "$item": null
+                },
+                "currentTab": {
+                  "listId": "Podcast",
+                  "tabId": "btn_wrp_podcast"
+                }
+              },
+              "listenDate": 1762926177272,
               "pItem": null
             }
           },
@@ -31986,9 +33724,9 @@
           "epi": {
             "item": {
               "code": null,
-              "name": "Comprendre l'infrastructure technique qui permet aux agents IA d'exister, Rémi Louf",
+              "name": "Comment l'IA révolutionne le produit dans le domaine de la santé, Aurélie Le Guillou",
               "qty": "",
-              "subText2": "00:09 / 02:03:33",
+              "subText2": "01:58 / 02:02:58",
               "metadata": {
                 "statusText": "playing",
                 "playState": {
@@ -32005,51 +33743,49 @@
                     "connected": true,
                     "ended": false,
                     "playing": true,
-                    "seeking": true,
+                    "seeking": false,
                     "pauseStateChanged": true
                   }
                 },
-                "startTime": 1762925167357,
+                "startTime": 1762926167301,
                 "duration": {
                   "h": 2,
-                  "m": 3,
-                  "s": 33,
+                  "m": 2,
+                  "s": 58,
                   "error": false,
                   "isInfinite": false
                 },
                 "currentTime": {
                   "h": 0,
-                  "m": 0,
-                  "s": 9,
+                  "m": 1,
+                  "s": 58,
                   "error": false,
                   "isInfinite": false
-                },
-                "endTime": 1762810638838
+                }
               },
-              "subText": "November 4, 2025",
-              "url": "https://sphinx.acast.com/p/open/s/67a716499c6f7f7f280da15b/e/6907c88a17c1d64648c094fa/media.mp3",
+              "subText": "April 9, 2025",
+              "url": "https://sphinx.acast.com/p/open/s/67a716499c6f7f7f280da15b/e/67f6cb7adb6dca4dc27f8f3d/media.mp3",
               "sel": null,
-              "id": "Comprendre l'infrastructure technique qui permet aux agents IA d'exister, Rémi Louf",
+              "id": "Comment l'IA révolutionne le produit dans le domaine de la santé, Aurélie Le Guillou",
               "favLists": [],
-              "logo": "https://assets.pippa.io/shows/67a716499c6f7f7f280da15b/1762117684157-d19cc72f-4d46-4470-bb60-91b63813756d.jpeg",
+              "logo": "https://assets.pippa.io/shows/67a716499c6f7f7f280da15b/1744228348813-dacfb9be-8add-4f3a-a244-7334abd7153e.jpeg",
               "pdc": true,
               "epi": true,
-              "pubDate": "Mon, 03 Nov 2025 23:16:12 GMT",
+              "pubDate": "Wed, 09 Apr 2025 19:57:31 GMT",
               "groups": [],
-              "key": "Comprendre l'infrastructure technique qui permet aux agents IA d'exister, Rémi Loufhttps://sphinx.acast.com/p/open/s/67a716499c6f7f7f280da15b/e/6907c88a17c1d64648c094fa/media.mp3",
+              "key": "Comment l'IA révolutionne le produit dans le domaine de la santé, Aurélie Le Guillouhttps://sphinx.acast.com/p/open/s/67a716499c6f7f7f280da15b/e/67f6cb7adb6dca4dc27f8f3d/media.mp3",
               "ref": {
                 "currentRDList": {
-                  "listId": "List",
-                  "name": "----- Podcasts ------",
+                  "listId": "Podcast",
+                  "name": "epi",
                   "$item": null
                 },
                 "currentTab": {
-                  "listId": "List",
-                  "tabId": "btn_wrp_play_list"
+                  "listId": "Podcast",
+                  "tabId": "btn_wrp_podcast"
                 }
               },
-              "listenDate": 1762867059458,
-              "statusText": "ended",
+              "listenDate": 1762926177272,
               "pItem": null
             }
           },
@@ -32369,7 +34105,7 @@
               "code": null,
               "name": "Comprendre l'infrastructure technique qui permet aux agents IA d'exister, Rémi Louf",
               "qty": "",
-              "subText2": "00:06 / 02:03:33",
+              "subText2": "00:09 / 02:03:33",
               "metadata": {
                 "statusText": "playing",
                 "playState": {
@@ -32401,7 +34137,7 @@
                 "currentTime": {
                   "h": 0,
                   "m": 0,
-                  "s": 6,
+                  "s": 9,
                   "error": false,
                   "isInfinite": false
                 },
@@ -32436,7 +34172,7 @@
           },
           "epiSubListId": null,
           "noPage": 1,
-          "epiOpen": true,
+          "epiOpen": false,
           "epiOpening": false
         },
         "id": "Comprendre l'infrastructure technique qui permet aux agents IA d'exister, Rémi Louf",
@@ -32467,7 +34203,7 @@
         "code": null,
         "name": "Jeune, démocrate et musulman : qui est Zohran Mamdani, le nouveau maire anti-Trump de New-York ?",
         "qty": "",
-        "subText2": "01:43 / 01:03:34",
+        "subText2": "02:35 / 01:03:34",
         "metadata": {
           "statusText": "playing",
           "playState": {
@@ -32488,7 +34224,7 @@
               "pauseStateChanged": true
             }
           },
-          "startTime": 1762925209917,
+          "startTime": 1762925515424,
           "duration": {
             "h": 1,
             "m": 3,
@@ -32498,8 +34234,8 @@
           },
           "currentTime": {
             "h": 0,
-            "m": 1,
-            "s": 43,
+            "m": 2,
+            "s": 35,
             "error": false,
             "isInfinite": false
           },
@@ -32647,16 +34383,211 @@
         "key": "Jeune, démocrate et musulman : qui est Zohran Mamdani, le nouveau maire anti-Trump de New-York ?https://audio.audiomeans.fr/file/PgeAPOjsIT/2f23a124-d77c-424f-9743-0deed2db267e.mp3?_=1762536783",
         "ref": {
           "currentRDList": {
-            "listId": "Podcast",
-            "name": "epi",
+            "listId": "List",
+            "name": "----- Podcast documentaire -----",
             "$item": null
           },
           "currentTab": {
-            "listId": "Podcast",
-            "tabId": "btn_wrp_podcast"
+            "listId": "Viz",
+            "tabId": "btn_wrp_logo"
           }
         },
-        "listenDate": 1762925217709
+        "listenDate": 1762925523177
+      },
+      {
+        "code": null,
+        "name": "Comment l'IA révolutionne le produit dans le domaine de la santé, Aurélie Le Guillou",
+        "qty": "",
+        "subText2": "02:39 / 02:02:58",
+        "metadata": {
+          "statusText": "playing",
+          "playState": {
+            "statusText": "playing",
+            "loadingState": "playing",
+            "playingState": {
+              "isPaused": false,
+              "isCurrent": true,
+              "isPlaying": true
+            },
+            "events": {
+              "connecting": true,
+              "noConnection": false,
+              "connected": true,
+              "ended": false,
+              "playing": true,
+              "seeking": true,
+              "pauseStateChanged": true
+            }
+          },
+          "startTime": 1762926345550,
+          "duration": {
+            "h": 2,
+            "m": 2,
+            "s": 58,
+            "error": false,
+            "isInfinite": false
+          },
+          "currentTime": {
+            "h": 0,
+            "m": 2,
+            "s": 39,
+            "error": false,
+            "isInfinite": false
+          }
+        },
+        "subText": "April 9, 2025",
+        "url": "https://sphinx.acast.com/p/open/s/67a716499c6f7f7f280da15b/e/67f6cb7adb6dca4dc27f8f3d/media.mp3",
+        "sel": {
+          "lang": {
+            "item": {
+              "code": "fra",
+              "name": "French",
+              "qty": 64492
+            }
+          },
+          "langSubListId": "tag",
+          "tag": {
+            "item": {
+              "code": null,
+              "name": "technology",
+              "qty": 1390
+            }
+          },
+          "tagSubListId": "letter",
+          "letter": {
+            "item": {
+              "code": null,
+              "name": "J",
+              "qty": 9,
+              "stores": [
+                1
+              ]
+            }
+          },
+          "letterSubListId": "pdc",
+          "pdc": {
+            "item": {
+              "code": null,
+              "name": "Just a Click",
+              "qty": 111,
+              "url": "https://feeds.acast.com/public/shows/67a716499c6f7f7f280da15b",
+              "store": 1,
+              "page": 1,
+              "sel": null,
+              "selCnt": 1,
+              "id": "Just a Click",
+              "favLists": [
+                "----- Podcast documentaire -----"
+              ],
+              "metadata": {
+                "statusText": ""
+              },
+              "pdc": true,
+              "key": "Just a Clickhttps://feeds.acast.com/public/shows/67a716499c6f7f7f280da15b",
+              "rss": null,
+              "logo": "https://assets.pippa.io/shows/67a716499c6f7f7f280da15b/show-cover.png",
+              "subText": "Terry Michel",
+              "pItem": null
+            }
+          },
+          "pdcSubListId": "epi",
+          "epi": {
+            "item": {
+              "code": null,
+              "name": "Comprendre l'infrastructure technique qui permet aux agents IA d'exister, Rémi Louf",
+              "qty": "",
+              "subText2": "00:09 / 02:03:33",
+              "metadata": {
+                "statusText": "playing",
+                "playState": {
+                  "statusText": "playing",
+                  "loadingState": "playing",
+                  "playingState": {
+                    "isPaused": false,
+                    "isCurrent": true,
+                    "isPlaying": true
+                  },
+                  "events": {
+                    "connecting": true,
+                    "noConnection": false,
+                    "connected": true,
+                    "ended": false,
+                    "playing": true,
+                    "seeking": true,
+                    "pauseStateChanged": true
+                  }
+                },
+                "startTime": 1762925167357,
+                "duration": {
+                  "h": 2,
+                  "m": 3,
+                  "s": 33,
+                  "error": false,
+                  "isInfinite": false
+                },
+                "currentTime": {
+                  "h": 0,
+                  "m": 0,
+                  "s": 9,
+                  "error": false,
+                  "isInfinite": false
+                },
+                "endTime": 1762810638838
+              },
+              "subText": "November 4, 2025",
+              "url": "https://sphinx.acast.com/p/open/s/67a716499c6f7f7f280da15b/e/6907c88a17c1d64648c094fa/media.mp3",
+              "sel": null,
+              "id": "Comprendre l'infrastructure technique qui permet aux agents IA d'exister, Rémi Louf",
+              "favLists": [],
+              "logo": "https://assets.pippa.io/shows/67a716499c6f7f7f280da15b/1762117684157-d19cc72f-4d46-4470-bb60-91b63813756d.jpeg",
+              "pdc": true,
+              "epi": true,
+              "pubDate": "Mon, 03 Nov 2025 23:16:12 GMT",
+              "groups": [],
+              "key": "Comprendre l'infrastructure technique qui permet aux agents IA d'exister, Rémi Loufhttps://sphinx.acast.com/p/open/s/67a716499c6f7f7f280da15b/e/6907c88a17c1d64648c094fa/media.mp3",
+              "ref": {
+                "currentRDList": {
+                  "listId": "List",
+                  "name": "----- Podcasts ------",
+                  "$item": null
+                },
+                "currentTab": {
+                  "listId": "List",
+                  "tabId": "btn_wrp_play_list"
+                }
+              },
+              "listenDate": 1762867059458,
+              "statusText": "ended",
+              "pItem": null
+            }
+          },
+          "epiSubListId": null,
+          "noPage": 1,
+          "epiOpen": false,
+          "epiOpening": false
+        },
+        "id": "Comment l'IA révolutionne le produit dans le domaine de la santé, Aurélie Le Guillou",
+        "favLists": [
+          "----- Podcast documentaire -----"
+        ],
+        "logo": "https://assets.pippa.io/shows/67a716499c6f7f7f280da15b/1744228348813-dacfb9be-8add-4f3a-a244-7334abd7153e.jpeg",
+        "pdc": true,
+        "epi": true,
+        "pubDate": "Wed, 09 Apr 2025 19:57:31 GMT",
+        "groups": [],
+        "key": "Comment l'IA révolutionne le produit dans le domaine de la santé, Aurélie Le Guillouhttps://sphinx.acast.com/p/open/s/67a716499c6f7f7f280da15b/e/67f6cb7adb6dca4dc27f8f3d/media.mp3",
+        "ref": {
+          "currentRDList": {
+            "listId": "List",
+            "name": "History",
+            "$item": null
+          },
+          "currentTab": {
+            "listId": "Viz",
+            "tabId": "btn_wrp_logo"
+          }
+        },
+        "listenDate": 1762926177272
       }
     ],
     "isSystem": false
@@ -35341,7 +37272,7 @@
         "code": null,
         "name": "La dépression - Le service 21 ",
         "qty": "",
-        "subText2": "05:-1 / 20:37",
+        "subText2": "05:49 / 20:37",
         "subText": "March 17, 2020",
         "url": "https://sphinx.acast.com/p/open/s/5e6a643396648a4359821fb0/e/5e70e09d606222ce48310918/media.mp3",
         "sel": {
@@ -35506,7 +37437,7 @@
           "currentTime": {
             "h": 0,
             "m": 5,
-            "s": -1,
+            "s": 49,
             "error": false,
             "isInfinite": false
           },
@@ -35528,7 +37459,7 @@
             "tabId": "btn_wrp_play_list"
           }
         },
-        "listenDate": 1762728985709,
+        "listenDate": 1762925279107,
         "statusText": "ended"
       },
       {
@@ -35863,23 +37794,25 @@
           "pdc": {
             "item": {
               "code": null,
-              "name": "Hypercondriaque",
-              "qty": 56,
-              "url": "https://feeds.acast.com/public/shows/7b30e0f2-4bc0-4af6-9633-b0eff7221062",
+              "name": "Hicham Zakzouki's show",
+              "qty": 24,
+              "url": "https://www.spreaker.com/show/2210097/episodes/feed",
               "store": 1,
               "page": 1,
               "sel": null,
               "selCnt": 0,
-              "id": "Hypercondriaque",
-              "favLists": [],
+              "id": "Hicham Zakzouki's show",
+              "favLists": [
+                "Exotique"
+              ],
               "metadata": {
                 "statusText": ""
               },
               "pdc": true,
-              "key": "Hypercondriaquehttps://feeds.acast.com/public/shows/7b30e0f2-4bc0-4af6-9633-b0eff7221062",
+              "key": "Hicham Zakzouki's showhttps://www.spreaker.com/show/2210097/episodes/feed",
               "rss": null,
-              "logo": "https://assets.pippa.io/shows/61694f8386d7b13da020b813/show-cover.jpg",
-              "subText": "Santé magazine",
+              "logo": "https://d3wo5wojvuv7l.cloudfront.net/images.spreaker.com/cloudinary/s--5_mNYT7l--/w_1000,h_800,c_fit,l_text:Lato_158_bold:Hicham%20Zakzouki%20s%20show/images.spreaker.com/default/show-1400x1400-20190801.jpg",
+              "subText": "Hicham Zakzouki",
               "pItem": null
             },
             "selCnt": 0
@@ -35888,9 +37821,9 @@
           "epi": {
             "item": {
               "code": null,
-              "name": "L'horoscope du mercredi 12 novembre",
+              "name": "Cheikh Mamidou -Twahacht Anouchi Galbi Rah Mtouchi- (Studio 22) By Hicham Zakzouki",
               "qty": "",
-              "subText2": "00:12 / 01:29",
+              "subText2": "00:57 / 07:17",
               "metadata": {
                 "statusText": "playing",
                 "playState": {
@@ -35911,33 +37844,33 @@
                     "pauseStateChanged": true
                   }
                 },
-                "startTime": 1762922927746,
+                "startTime": 1762925348852,
                 "duration": {
                   "h": 0,
-                  "m": 1,
-                  "s": 29,
+                  "m": 7,
+                  "s": 17,
                   "error": false,
                   "isInfinite": false
                 },
                 "currentTime": {
                   "h": 0,
                   "m": 0,
-                  "s": 12,
+                  "s": 57,
                   "error": false,
                   "isInfinite": false
                 }
               },
-              "subText": "November 12, 2025",
-              "url": "https://medias.tendanceouest.com/podcasts/sons/12557-HOROS-251112.mp3",
+              "subText": "April 3, 2017",
+              "url": "https://api.spreaker.com/download/episode/11545617/draft_1491251444785542.mp3",
               "sel": null,
-              "id": "L'horoscope du mercredi 12 novembre",
+              "id": "Cheikh Mamidou -Twahacht Anouchi Galbi Rah Mtouchi- (Studio 22) By Hicham Zakzouki",
               "favLists": [],
-              "logo": "https://medias.tendanceouest.com/podcasts/1500/HOROS.jpg",
+              "logo": "https://d3wo5wojvuv7l.cloudfront.net/images.spreaker.com/cloudinary/s--5_mNYT7l--/w_1000,h_800,c_fit,l_text:Lato_158_bold:Hicham%20Zakzouki%20s%20show/images.spreaker.com/default/show-1400x1400-20190801.jpg",
               "pdc": true,
               "epi": true,
-              "pubDate": "Wed, 12 Nov 2025 03:00:00 +0100",
+              "pubDate": "Mon, 03 Apr 2017 20:42:50 +0000",
               "groups": [],
-              "key": "L'horoscope du mercredi 12 novembrehttps://medias.tendanceouest.com/podcasts/sons/12557-HOROS-251112.mp3",
+              "key": "Cheikh Mamidou -Twahacht Anouchi Galbi Rah Mtouchi- (Studio 22) By Hicham Zakzoukihttps://api.spreaker.com/download/episode/11545617/draft_1491251444785542.mp3",
               "ref": {
                 "currentRDList": {
                   "listId": "Podcast",
@@ -35949,7 +37882,7 @@
                   "tabId": "btn_wrp_podcast"
                 }
               },
-              "listenDate": 1762922937960,
+              "listenDate": 1762925358832,
               "pItem": null
             }
           },
@@ -36010,23 +37943,25 @@
           "pdc": {
             "item": {
               "code": null,
-              "name": "Hypercondriaque",
-              "qty": 56,
-              "url": "https://feeds.acast.com/public/shows/7b30e0f2-4bc0-4af6-9633-b0eff7221062",
+              "name": "Hicham Zakzouki's show",
+              "qty": 24,
+              "url": "https://www.spreaker.com/show/2210097/episodes/feed",
               "store": 1,
               "page": 1,
               "sel": null,
               "selCnt": 0,
-              "id": "Hypercondriaque",
-              "favLists": [],
+              "id": "Hicham Zakzouki's show",
+              "favLists": [
+                "Exotique"
+              ],
               "metadata": {
                 "statusText": ""
               },
               "pdc": true,
-              "key": "Hypercondriaquehttps://feeds.acast.com/public/shows/7b30e0f2-4bc0-4af6-9633-b0eff7221062",
+              "key": "Hicham Zakzouki's showhttps://www.spreaker.com/show/2210097/episodes/feed",
               "rss": null,
-              "logo": "https://assets.pippa.io/shows/61694f8386d7b13da020b813/show-cover.jpg",
-              "subText": "Santé magazine",
+              "logo": "https://d3wo5wojvuv7l.cloudfront.net/images.spreaker.com/cloudinary/s--5_mNYT7l--/w_1000,h_800,c_fit,l_text:Lato_158_bold:Hicham%20Zakzouki%20s%20show/images.spreaker.com/default/show-1400x1400-20190801.jpg",
+              "subText": "Hicham Zakzouki",
               "pItem": null
             },
             "selCnt": 0
@@ -36035,9 +37970,9 @@
           "epi": {
             "item": {
               "code": null,
-              "name": "L'horoscope du mercredi 12 novembre",
+              "name": "Cheikh Mamidou -Twahacht Anouchi Galbi Rah Mtouchi- (Studio 22) By Hicham Zakzouki",
               "qty": "",
-              "subText2": "00:12 / 01:29",
+              "subText2": "00:57 / 07:17",
               "metadata": {
                 "statusText": "playing",
                 "playState": {
@@ -36058,33 +37993,33 @@
                     "pauseStateChanged": true
                   }
                 },
-                "startTime": 1762922927746,
+                "startTime": 1762925348852,
                 "duration": {
                   "h": 0,
-                  "m": 1,
-                  "s": 29,
+                  "m": 7,
+                  "s": 17,
                   "error": false,
                   "isInfinite": false
                 },
                 "currentTime": {
                   "h": 0,
                   "m": 0,
-                  "s": 12,
+                  "s": 57,
                   "error": false,
                   "isInfinite": false
                 }
               },
-              "subText": "November 12, 2025",
-              "url": "https://medias.tendanceouest.com/podcasts/sons/12557-HOROS-251112.mp3",
+              "subText": "April 3, 2017",
+              "url": "https://api.spreaker.com/download/episode/11545617/draft_1491251444785542.mp3",
               "sel": null,
-              "id": "L'horoscope du mercredi 12 novembre",
+              "id": "Cheikh Mamidou -Twahacht Anouchi Galbi Rah Mtouchi- (Studio 22) By Hicham Zakzouki",
               "favLists": [],
-              "logo": "https://medias.tendanceouest.com/podcasts/1500/HOROS.jpg",
+              "logo": "https://d3wo5wojvuv7l.cloudfront.net/images.spreaker.com/cloudinary/s--5_mNYT7l--/w_1000,h_800,c_fit,l_text:Lato_158_bold:Hicham%20Zakzouki%20s%20show/images.spreaker.com/default/show-1400x1400-20190801.jpg",
               "pdc": true,
               "epi": true,
-              "pubDate": "Wed, 12 Nov 2025 03:00:00 +0100",
+              "pubDate": "Mon, 03 Apr 2017 20:42:50 +0000",
               "groups": [],
-              "key": "L'horoscope du mercredi 12 novembrehttps://medias.tendanceouest.com/podcasts/sons/12557-HOROS-251112.mp3",
+              "key": "Cheikh Mamidou -Twahacht Anouchi Galbi Rah Mtouchi- (Studio 22) By Hicham Zakzoukihttps://api.spreaker.com/download/episode/11545617/draft_1491251444785542.mp3",
               "ref": {
                 "currentRDList": {
                   "listId": "Podcast",
@@ -36096,7 +38031,7 @@
                   "tabId": "btn_wrp_podcast"
                 }
               },
-              "listenDate": 1762922937960,
+              "listenDate": 1762925358832,
               "pItem": null
             }
           },
