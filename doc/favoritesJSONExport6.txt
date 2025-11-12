@@ -4,6 +4,158 @@
     "name": "History",
     "items": [
       {
+        "id": "8457",
+        "name": "France Info",
+        "description": null,
+        "groupTitle": null,
+        "groups": [
+          "French"
+        ],
+        "url": "https://icecast.radiofrance.fr/franceinfo-hifi.aac",
+        "logo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTTOrtJJ0l34GIjFRRUcl-X_GxOtNNRNT9rXw&s",
+        "artist": null,
+        "lang": "French",
+        "channels": null,
+        "country": null,
+        "favLists": [
+          "History",
+          "Infos"
+        ],
+        "metadata": {
+          "duration": {
+            "h": null,
+            "m": null,
+            "s": null,
+            "error": false,
+            "isInfinite": true
+          },
+          "stereo": null,
+          "encoding": null,
+          "sampleFrq": null,
+          "sampleRes": null,
+          "country": null,
+          "statusText": "playing",
+          "startTime": 1762952684720,
+          "stopTime": null,
+          "position": null,
+          "playState": {
+            "statusText": "playing",
+            "loadingState": "playing",
+            "playingState": {
+              "isPaused": false,
+              "isCurrent": true,
+              "isPlaying": true
+            },
+            "events": {
+              "connecting": true,
+              "noConnection": false,
+              "connected": true,
+              "ended": false,
+              "playing": true,
+              "seeking": false,
+              "pauseStateChanged": true
+            }
+          },
+          "currentTime": {
+            "h": 0,
+            "m": 4,
+            "s": 9,
+            "error": false,
+            "isInfinite": false
+          }
+        },
+        "key": "France Infohttps://icecast.radiofrance.fr/franceinfo-hifi.aac",
+        "subText2": "04:09 ",
+        "ref": {
+          "currentRDList": {
+            "listId": "List",
+            "name": "Infos",
+            "$item": null
+          },
+          "currentTab": {
+            "listId": "Viz",
+            "tabId": "btn_wrp_logo"
+          }
+        },
+        "listenDate": 1762952692605
+      },
+      {
+        "id": "8459",
+        "name": "France Inter",
+        "description": null,
+        "groupTitle": null,
+        "groups": [
+          "French"
+        ],
+        "url": "https://icecast.radiofrance.fr/franceinter-hifi.aac",
+        "logo": "https://canada-culture.org/wp-content/uploads/2018/05/logo-france-inter.png",
+        "artist": null,
+        "lang": "French",
+        "channels": null,
+        "country": null,
+        "favLists": [
+          "History",
+          "Infos"
+        ],
+        "metadata": {
+          "duration": {
+            "h": null,
+            "m": null,
+            "s": null,
+            "error": false,
+            "isInfinite": true
+          },
+          "stereo": null,
+          "encoding": null,
+          "sampleFrq": null,
+          "sampleRes": null,
+          "country": null,
+          "statusText": "playing",
+          "startTime": 1762952631067,
+          "stopTime": null,
+          "position": null,
+          "playState": {
+            "statusText": "playing",
+            "loadingState": "playing",
+            "playingState": {
+              "isPaused": false,
+              "isCurrent": true,
+              "isPlaying": true
+            },
+            "events": {
+              "connecting": true,
+              "noConnection": false,
+              "connected": true,
+              "ended": false,
+              "playing": true,
+              "seeking": false,
+              "pauseStateChanged": true
+            }
+          },
+          "currentTime": {
+            "h": 0,
+            "m": 0,
+            "s": 49,
+            "error": false,
+            "isInfinite": false
+          }
+        },
+        "key": "France Interhttps://icecast.radiofrance.fr/franceinter-hifi.aac",
+        "subText2": "00:49 ",
+        "ref": {
+          "currentRDList": {
+            "listId": "List",
+            "name": "Infos",
+            "$item": null
+          },
+          "currentTab": {
+            "listId": "Viz",
+            "tabId": "btn_wrp_logo"
+          }
+        },
+        "listenDate": 1762952639192
+      },
+      {
         "id": "3758",
         "name": "Chill Lounge Florida",
         "description": null,
@@ -35,7 +187,7 @@
           "sampleRes": null,
           "country": null,
           "statusText": "playing",
-          "startTime": 1762926615607,
+          "startTime": 1762926961530,
           "stopTime": null,
           "position": null,
           "playState": {
@@ -59,14 +211,14 @@
           "currentTime": {
             "h": 0,
             "m": 6,
-            "s": 0,
+            "s": 10,
             "error": false,
             "isInfinite": false
           },
-          "endTime": 1762926900870
+          "endTime": 1762926971807
         },
         "key": "Chill Lounge Floridahttps://vip2.fastcast4u.com/proxy/chillfla?mp=/1",
-        "subText2": "06:00 ",
+        "subText2": "06:10 ",
         "ref": {
           "currentRDList": {
             "listId": "List",
@@ -1156,13 +1308,7 @@
               "code": null,
               "name": "Jeune, démocrate et musulman : qui est Zohran Mamdani, le nouveau maire anti-Trump de New-York ?",
               "qty": "",
-              "subText2": "12:17 / 01:03:34",
-              "subText": "November 7, 2025",
-              "url": "https://audio.audiomeans.fr/file/uQzNZnSuzb/2f23a124-d77c-424f-9743-0deed2db267e.mp3?_=1762536783",
-              "sel": null,
-              "id": "Jeune, démocrate et musulman : qui est Zohran Mamdani, le nouveau maire anti-Trump de New-York ?",
-              "favLists": [],
-              "logo": "https://static.audiomeans.fr/img/episode/2f008391-be8d-40c4-b566-54f187055ca2.jpg",
+              "subText2": "01:43 / 01:03:34",
               "metadata": {
                 "statusText": "playing",
                 "playState": {
@@ -1183,7 +1329,7 @@
                     "pauseStateChanged": true
                   }
                 },
-                "startTime": 1762925204090,
+                "startTime": 1762925209917,
                 "duration": {
                   "h": 1,
                   "m": 3,
@@ -1193,36 +1339,44 @@
                 },
                 "currentTime": {
                   "h": 0,
-                  "m": 12,
-                  "s": 17,
+                  "m": 1,
+                  "s": 43,
                   "error": false,
                   "isInfinite": false
                 },
-                "endTime": 1762632373269
+                "endTime": 1762924908838
               },
+              "subText": "November 7, 2025",
+              "url": "https://audio.audiomeans.fr/file/PgeAPOjsIT/2f23a124-d77c-424f-9743-0deed2db267e.mp3?_=1762536783",
+              "sel": null,
+              "id": "Jeune, démocrate et musulman : qui est Zohran Mamdani, le nouveau maire anti-Trump de New-York ?",
+              "favLists": [
+                "----- Podcast documentaire -----"
+              ],
+              "logo": "https://static.audiomeans.fr/img/episode/2f008391-be8d-40c4-b566-54f187055ca2.jpg",
               "pdc": true,
               "epi": true,
               "pubDate": "Fri, 07 Nov 2025 17:29:00 GMT",
               "groups": [],
-              "key": "Jeune, démocrate et musulman : qui est Zohran Mamdani, le nouveau maire anti-Trump de New-York ?https://audio.audiomeans.fr/file/uQzNZnSuzb/2f23a124-d77c-424f-9743-0deed2db267e.mp3?_=1762536783",
+              "key": "Jeune, démocrate et musulman : qui est Zohran Mamdani, le nouveau maire anti-Trump de New-York ?https://audio.audiomeans.fr/file/PgeAPOjsIT/2f23a124-d77c-424f-9743-0deed2db267e.mp3?_=1762536783",
               "ref": {
                 "currentRDList": {
-                  "listId": "List",
-                  "name": "----- Podcasts ------",
+                  "listId": "Podcast",
+                  "name": "epi",
                   "$item": null
                 },
                 "currentTab": {
-                  "listId": "List",
-                  "tabId": "btn_wrp_play_list"
+                  "listId": "Podcast",
+                  "tabId": "btn_wrp_podcast"
                 }
               },
-              "listenDate": 1762632120524,
+              "listenDate": 1762925217709,
               "pItem": null
             }
           },
           "epiSubListId": null,
           "noPage": 1,
-          "epiOpen": true,
+          "epiOpen": false,
           "epiOpening": false
         },
         "id": "Jeune, démocrate et musulman : qui est Zohran Mamdani, le nouveau maire anti-Trump de New-York ?",
@@ -16382,7 +16536,7 @@
           "sampleRes": null,
           "country": null,
           "statusText": "playing",
-          "startTime": 1762926615607,
+          "startTime": 1762926961530,
           "stopTime": null,
           "position": null,
           "playState": {
@@ -16406,14 +16560,14 @@
           "currentTime": {
             "h": 0,
             "m": 6,
-            "s": 0,
+            "s": 10,
             "error": false,
             "isInfinite": false
           },
-          "endTime": 1762926900870
+          "endTime": 1762926971807
         },
         "key": "Chill Lounge Floridahttps://vip2.fastcast4u.com/proxy/chillfla?mp=/1",
-        "subText2": "06:00 ",
+        "subText2": "06:10 ",
         "ref": {
           "currentRDList": {
             "listId": "List",
@@ -17189,25 +17343,25 @@
           "pdc": {
             "item": {
               "code": null,
-              "name": "Hicham Zakzouki's show",
-              "qty": 24,
-              "url": "https://www.spreaker.com/show/2210097/episodes/feed",
+              "name": "Horoscope",
+              "qty": 2139,
+              "url": "https://podcasts.tendanceouest.com/rss-podcast-71-horoscope/",
               "store": 1,
               "page": 1,
               "sel": null,
               "selCnt": 0,
-              "id": "Hicham Zakzouki's show",
+              "id": "Horoscope",
               "favLists": [
-                "Exotique"
+                "Infos"
               ],
               "metadata": {
                 "statusText": ""
               },
               "pdc": true,
-              "key": "Hicham Zakzouki's showhttps://www.spreaker.com/show/2210097/episodes/feed",
+              "key": "Horoscopehttps://podcasts.tendanceouest.com/rss-podcast-71-horoscope/",
               "rss": null,
-              "logo": "https://d3wo5wojvuv7l.cloudfront.net/images.spreaker.com/cloudinary/s--5_mNYT7l--/w_1000,h_800,c_fit,l_text:Lato_158_bold:Hicham%20Zakzouki%20s%20show/images.spreaker.com/default/show-1400x1400-20190801.jpg",
-              "subText": "Hicham Zakzouki",
+              "logo": "https://medias.tendanceouest.com/podcasts/1500/HOROS.jpg",
+              "subText": "Tendance Ouest",
               "pItem": null
             },
             "selCnt": 0
@@ -17530,25 +17684,25 @@
           "pdc": {
             "item": {
               "code": null,
-              "name": "Hicham Zakzouki's show",
-              "qty": 24,
-              "url": "https://www.spreaker.com/show/2210097/episodes/feed",
+              "name": "Horoscope",
+              "qty": 2139,
+              "url": "https://podcasts.tendanceouest.com/rss-podcast-71-horoscope/",
               "store": 1,
               "page": 1,
               "sel": null,
               "selCnt": 0,
-              "id": "Hicham Zakzouki's show",
+              "id": "Horoscope",
               "favLists": [
-                "Exotique"
+                "Infos"
               ],
               "metadata": {
                 "statusText": ""
               },
               "pdc": true,
-              "key": "Hicham Zakzouki's showhttps://www.spreaker.com/show/2210097/episodes/feed",
+              "key": "Horoscopehttps://podcasts.tendanceouest.com/rss-podcast-71-horoscope/",
               "rss": null,
-              "logo": "https://d3wo5wojvuv7l.cloudfront.net/images.spreaker.com/cloudinary/s--5_mNYT7l--/w_1000,h_800,c_fit,l_text:Lato_158_bold:Hicham%20Zakzouki%20s%20show/images.spreaker.com/default/show-1400x1400-20190801.jpg",
-              "subText": "Hicham Zakzouki",
+              "logo": "https://medias.tendanceouest.com/podcasts/1500/HOROS.jpg",
+              "subText": "Tendance Ouest",
               "pItem": null
             },
             "selCnt": 0
@@ -19317,18 +19471,62 @@
           "Infos"
         ],
         "metadata": {
-          "duration": null,
+          "duration": {
+            "h": null,
+            "m": null,
+            "s": null,
+            "error": false,
+            "isInfinite": true
+          },
           "stereo": null,
           "encoding": null,
           "sampleFrq": null,
           "sampleRes": null,
           "country": null,
-          "statusText": null,
-          "startTime": null,
+          "statusText": "playing",
+          "startTime": 1762952684720,
           "stopTime": null,
-          "position": null
+          "position": null,
+          "playState": {
+            "statusText": "playing",
+            "loadingState": "playing",
+            "playingState": {
+              "isPaused": false,
+              "isCurrent": true,
+              "isPlaying": true
+            },
+            "events": {
+              "connecting": true,
+              "noConnection": false,
+              "connected": true,
+              "ended": false,
+              "playing": true,
+              "seeking": false,
+              "pauseStateChanged": true
+            }
+          },
+          "currentTime": {
+            "h": 0,
+            "m": 4,
+            "s": 9,
+            "error": false,
+            "isInfinite": false
+          }
         },
-        "key": "France Infohttps://icecast.radiofrance.fr/franceinfo-hifi.aac"
+        "key": "France Infohttps://icecast.radiofrance.fr/franceinfo-hifi.aac",
+        "subText2": "04:09 ",
+        "ref": {
+          "currentRDList": {
+            "listId": "List",
+            "name": "Infos",
+            "$item": null
+          },
+          "currentTab": {
+            "listId": "Viz",
+            "tabId": "btn_wrp_logo"
+          }
+        },
+        "listenDate": 1762952692605
       },
       {
         "id": "8455",
@@ -19382,18 +19580,62 @@
           "Infos"
         ],
         "metadata": {
-          "duration": null,
+          "duration": {
+            "h": null,
+            "m": null,
+            "s": null,
+            "error": false,
+            "isInfinite": true
+          },
           "stereo": null,
           "encoding": null,
           "sampleFrq": null,
           "sampleRes": null,
           "country": null,
-          "statusText": null,
-          "startTime": null,
+          "statusText": "playing",
+          "startTime": 1762952631067,
           "stopTime": null,
-          "position": null
+          "position": null,
+          "playState": {
+            "statusText": "playing",
+            "loadingState": "playing",
+            "playingState": {
+              "isPaused": false,
+              "isCurrent": true,
+              "isPlaying": true
+            },
+            "events": {
+              "connecting": true,
+              "noConnection": false,
+              "connected": true,
+              "ended": false,
+              "playing": true,
+              "seeking": false,
+              "pauseStateChanged": true
+            }
+          },
+          "currentTime": {
+            "h": 0,
+            "m": 0,
+            "s": 49,
+            "error": false,
+            "isInfinite": false
+          }
         },
-        "key": "France Interhttps://icecast.radiofrance.fr/franceinter-hifi.aac"
+        "key": "France Interhttps://icecast.radiofrance.fr/franceinter-hifi.aac",
+        "subText2": "00:49 ",
+        "ref": {
+          "currentRDList": {
+            "listId": "List",
+            "name": "Infos",
+            "$item": null
+          },
+          "currentTab": {
+            "listId": "Viz",
+            "tabId": "btn_wrp_logo"
+          }
+        },
+        "listenDate": 1762952639192
       },
       {
         "id": "7378",
@@ -19586,6 +19828,155 @@
           "position": null
         },
         "key": "RTShttps://sc.creacast.com/rts-national.mp3"
+      },
+      {
+        "code": null,
+        "name": "Horoscope",
+        "qty": 2139,
+        "url": "https://podcasts.tendanceouest.com/rss-podcast-71-horoscope/",
+        "store": 1,
+        "page": 1,
+        "sel": {
+          "lang": {
+            "item": {
+              "code": "fra",
+              "name": "French",
+              "qty": 64492
+            }
+          },
+          "langSubListId": "tag",
+          "tag": {
+            "item": {
+              "code": null,
+              "name": "society",
+              "qty": 9159
+            }
+          },
+          "tagSubListId": "letter",
+          "letter": {
+            "item": {
+              "code": null,
+              "name": "H",
+              "qty": 187,
+              "stores": [
+                1
+              ]
+            }
+          },
+          "letterSubListId": "pdc",
+          "pdc": {
+            "item": {
+              "code": null,
+              "name": "Horoscope",
+              "qty": 2139,
+              "url": "https://podcasts.tendanceouest.com/rss-podcast-71-horoscope/",
+              "store": 1,
+              "page": 1,
+              "sel": null,
+              "selCnt": 0,
+              "id": "Horoscope",
+              "favLists": [
+                "Infos"
+              ],
+              "metadata": {
+                "statusText": ""
+              },
+              "pdc": true,
+              "key": "Horoscopehttps://podcasts.tendanceouest.com/rss-podcast-71-horoscope/",
+              "rss": null,
+              "logo": "https://medias.tendanceouest.com/podcasts/1500/HOROS.jpg",
+              "subText": "Tendance Ouest",
+              "pItem": null
+            },
+            "selCnt": 0
+          },
+          "pdcSubListId": "epi",
+          "epi": {
+            "item": {
+              "code": null,
+              "name": "Cheikh Mamidou -Twahacht Anouchi Galbi Rah Mtouchi- (Studio 22) By Hicham Zakzouki",
+              "qty": "",
+              "subText2": "00:57 / 07:17",
+              "metadata": {
+                "statusText": "playing",
+                "playState": {
+                  "statusText": "playing",
+                  "loadingState": "playing",
+                  "playingState": {
+                    "isPaused": false,
+                    "isCurrent": true,
+                    "isPlaying": true
+                  },
+                  "events": {
+                    "connecting": true,
+                    "noConnection": false,
+                    "connected": true,
+                    "ended": false,
+                    "playing": true,
+                    "seeking": false,
+                    "pauseStateChanged": true
+                  }
+                },
+                "startTime": 1762925348852,
+                "duration": {
+                  "h": 0,
+                  "m": 7,
+                  "s": 17,
+                  "error": false,
+                  "isInfinite": false
+                },
+                "currentTime": {
+                  "h": 0,
+                  "m": 0,
+                  "s": 57,
+                  "error": false,
+                  "isInfinite": false
+                }
+              },
+              "subText": "April 3, 2017",
+              "url": "https://api.spreaker.com/download/episode/11545617/draft_1491251444785542.mp3",
+              "sel": null,
+              "id": "Cheikh Mamidou -Twahacht Anouchi Galbi Rah Mtouchi- (Studio 22) By Hicham Zakzouki",
+              "favLists": [],
+              "logo": "https://d3wo5wojvuv7l.cloudfront.net/images.spreaker.com/cloudinary/s--5_mNYT7l--/w_1000,h_800,c_fit,l_text:Lato_158_bold:Hicham%20Zakzouki%20s%20show/images.spreaker.com/default/show-1400x1400-20190801.jpg",
+              "pdc": true,
+              "epi": true,
+              "pubDate": "Mon, 03 Apr 2017 20:42:50 +0000",
+              "groups": [],
+              "key": "Cheikh Mamidou -Twahacht Anouchi Galbi Rah Mtouchi- (Studio 22) By Hicham Zakzoukihttps://api.spreaker.com/download/episode/11545617/draft_1491251444785542.mp3",
+              "ref": {
+                "currentRDList": {
+                  "listId": "Podcast",
+                  "name": "epi",
+                  "$item": null
+                },
+                "currentTab": {
+                  "listId": "Podcast",
+                  "tabId": "btn_wrp_podcast"
+                }
+              },
+              "listenDate": 1762925358832,
+              "pItem": null
+            }
+          },
+          "epiSubListId": null,
+          "noPage": 1,
+          "epiOpen": false,
+          "epiOpening": false
+        },
+        "selCnt": 0,
+        "id": "Horoscope",
+        "favLists": [
+          "Infos"
+        ],
+        "metadata": {
+          "statusText": ""
+        },
+        "pdc": true,
+        "key": "Horoscopehttps://podcasts.tendanceouest.com/rss-podcast-71-horoscope/",
+        "rss": null,
+        "logo": "https://medias.tendanceouest.com/podcasts/1500/HOROS.jpg",
+        "subText": "Tendance Ouest"
       }
     ],
     "isSystem": false
@@ -23068,26 +23459,26 @@
           "pdc": {
             "item": {
               "code": null,
-              "name": "Tous Parano",
-              "qty": 56,
-              "url": "https://feeds.podcastics.com/podcastics/podcasts/rss/3735_58ead7f8566998862f14b7e2ec28af42.rss",
+              "name": "Trump - Photo Op",
+              "qty": 7,
+              "url": "https://feeds.audiomeans.fr/feed/f53df183-75c4-4fc0-a8ab-80bc50118135.xml",
               "store": 1,
               "page": 1,
               "pItem": null,
               "sel": null,
               "selCnt": 0,
-              "id": "Tous Parano",
+              "id": "Trump - Photo Op",
               "favLists": [
-                "----- Podcast Enquête -----"
+                "----- Podcast documentaire -----"
               ],
               "metadata": {
                 "statusText": ""
               },
               "pdc": true,
               "rss": null,
-              "logo": "https://medias.podcastics.com/podcastics/podcasts/artwork/tous-parano.jpg.2d71cceb4f9c8ef04d0edd9cdd308720.jpg",
-              "subText": "Tous Parano",
-              "key": "Tous Paranohttps://feeds.podcastics.com/podcastics/podcasts/rss/3735_58ead7f8566998862f14b7e2ec28af42.rss"
+              "logo": "https://static.audiomeans.fr/img/podcast/3df0a8cb-9ce3-41c1-9e3b-a8c862c484b3.jpg",
+              "subText": "RTL",
+              "key": "Trump - Photo Ophttps://feeds.audiomeans.fr/feed/f53df183-75c4-4fc0-a8ab-80bc50118135.xml"
             },
             "selCnt": 0
           },
@@ -23757,26 +24148,26 @@
           "pdc": {
             "item": {
               "code": null,
-              "name": "Tous Parano",
-              "qty": 56,
-              "url": "https://feeds.podcastics.com/podcastics/podcasts/rss/3735_58ead7f8566998862f14b7e2ec28af42.rss",
+              "name": "Trump - Photo Op",
+              "qty": 7,
+              "url": "https://feeds.audiomeans.fr/feed/f53df183-75c4-4fc0-a8ab-80bc50118135.xml",
               "store": 1,
               "page": 1,
               "pItem": null,
               "sel": null,
               "selCnt": 0,
-              "id": "Tous Parano",
+              "id": "Trump - Photo Op",
               "favLists": [
-                "----- Podcast Enquête -----"
+                "----- Podcast documentaire -----"
               ],
               "metadata": {
                 "statusText": ""
               },
               "pdc": true,
               "rss": null,
-              "logo": "https://medias.podcastics.com/podcastics/podcasts/artwork/tous-parano.jpg.2d71cceb4f9c8ef04d0edd9cdd308720.jpg",
-              "subText": "Tous Parano",
-              "key": "Tous Paranohttps://feeds.podcastics.com/podcastics/podcasts/rss/3735_58ead7f8566998862f14b7e2ec28af42.rss"
+              "logo": "https://static.audiomeans.fr/img/podcast/3df0a8cb-9ce3-41c1-9e3b-a8c862c484b3.jpg",
+              "subText": "RTL",
+              "key": "Trump - Photo Ophttps://feeds.audiomeans.fr/feed/f53df183-75c4-4fc0-a8ab-80bc50118135.xml"
             },
             "selCnt": 0
           },
@@ -23906,26 +24297,26 @@
           "pdc": {
             "item": {
               "code": null,
-              "name": "Tous Parano",
-              "qty": 56,
-              "url": "https://feeds.podcastics.com/podcastics/podcasts/rss/3735_58ead7f8566998862f14b7e2ec28af42.rss",
+              "name": "Trump - Photo Op",
+              "qty": 7,
+              "url": "https://feeds.audiomeans.fr/feed/f53df183-75c4-4fc0-a8ab-80bc50118135.xml",
               "store": 1,
               "page": 1,
               "pItem": null,
               "sel": null,
               "selCnt": 0,
-              "id": "Tous Parano",
+              "id": "Trump - Photo Op",
               "favLists": [
-                "----- Podcast Enquête -----"
+                "----- Podcast documentaire -----"
               ],
               "metadata": {
                 "statusText": ""
               },
               "pdc": true,
               "rss": null,
-              "logo": "https://medias.podcastics.com/podcastics/podcasts/artwork/tous-parano.jpg.2d71cceb4f9c8ef04d0edd9cdd308720.jpg",
-              "subText": "Tous Parano",
-              "key": "Tous Paranohttps://feeds.podcastics.com/podcastics/podcasts/rss/3735_58ead7f8566998862f14b7e2ec28af42.rss"
+              "logo": "https://static.audiomeans.fr/img/podcast/3df0a8cb-9ce3-41c1-9e3b-a8c862c484b3.jpg",
+              "subText": "RTL",
+              "key": "Trump - Photo Ophttps://feeds.audiomeans.fr/feed/f53df183-75c4-4fc0-a8ab-80bc50118135.xml"
             },
             "selCnt": 0
           },
@@ -29756,26 +30147,26 @@
           "pdc": {
             "item": {
               "code": null,
-              "name": "Tous Parano",
-              "qty": 56,
-              "url": "https://feeds.podcastics.com/podcastics/podcasts/rss/3735_58ead7f8566998862f14b7e2ec28af42.rss",
+              "name": "Trump - Photo Op",
+              "qty": 7,
+              "url": "https://feeds.audiomeans.fr/feed/f53df183-75c4-4fc0-a8ab-80bc50118135.xml",
               "store": 1,
               "page": 1,
               "pItem": null,
               "sel": null,
               "selCnt": 0,
-              "id": "Tous Parano",
+              "id": "Trump - Photo Op",
               "favLists": [
-                "----- Podcast Enquête -----"
+                "----- Podcast documentaire -----"
               ],
               "metadata": {
                 "statusText": ""
               },
               "pdc": true,
               "rss": null,
-              "logo": "https://medias.podcastics.com/podcastics/podcasts/artwork/tous-parano.jpg.2d71cceb4f9c8ef04d0edd9cdd308720.jpg",
-              "subText": "Tous Parano",
-              "key": "Tous Paranohttps://feeds.podcastics.com/podcastics/podcasts/rss/3735_58ead7f8566998862f14b7e2ec28af42.rss"
+              "logo": "https://static.audiomeans.fr/img/podcast/3df0a8cb-9ce3-41c1-9e3b-a8c862c484b3.jpg",
+              "subText": "RTL",
+              "key": "Trump - Photo Ophttps://feeds.audiomeans.fr/feed/f53df183-75c4-4fc0-a8ab-80bc50118135.xml"
             },
             "selCnt": 0
           },
@@ -31114,459 +31505,7 @@
   "----- Podcast Info -----": {
     "listId": "List",
     "name": "----- Podcast Info -----",
-    "items": [
-      {
-        "code": null,
-        "name": "Horoscope",
-        "qty": 2139,
-        "url": "https://podcasts.tendanceouest.com/rss-podcast-71-horoscope/",
-        "store": 1,
-        "page": 1,
-        "sel": {
-          "lang": {
-            "item": {
-              "code": "fra",
-              "name": "French",
-              "qty": 64492
-            }
-          },
-          "langSubListId": "tag",
-          "tag": {
-            "item": {
-              "code": null,
-              "name": "society",
-              "qty": 9159
-            }
-          },
-          "tagSubListId": "letter",
-          "letter": {
-            "item": {
-              "code": null,
-              "name": "H",
-              "qty": 187,
-              "stores": [
-                1
-              ]
-            }
-          },
-          "letterSubListId": "pdc",
-          "pdc": {
-            "item": {
-              "code": null,
-              "name": "Hicham Zakzouki's show",
-              "qty": 24,
-              "url": "https://www.spreaker.com/show/2210097/episodes/feed",
-              "store": 1,
-              "page": 1,
-              "sel": null,
-              "selCnt": 0,
-              "id": "Hicham Zakzouki's show",
-              "favLists": [
-                "Exotique"
-              ],
-              "metadata": {
-                "statusText": ""
-              },
-              "pdc": true,
-              "key": "Hicham Zakzouki's showhttps://www.spreaker.com/show/2210097/episodes/feed",
-              "rss": null,
-              "logo": "https://d3wo5wojvuv7l.cloudfront.net/images.spreaker.com/cloudinary/s--5_mNYT7l--/w_1000,h_800,c_fit,l_text:Lato_158_bold:Hicham%20Zakzouki%20s%20show/images.spreaker.com/default/show-1400x1400-20190801.jpg",
-              "subText": "Hicham Zakzouki",
-              "pItem": null
-            },
-            "selCnt": 0
-          },
-          "pdcSubListId": "epi",
-          "epi": {
-            "item": {
-              "code": null,
-              "name": "Cheikh Mamidou -Twahacht Anouchi Galbi Rah Mtouchi- (Studio 22) By Hicham Zakzouki",
-              "qty": "",
-              "subText2": "00:57 / 07:17",
-              "metadata": {
-                "statusText": "playing",
-                "playState": {
-                  "statusText": "playing",
-                  "loadingState": "playing",
-                  "playingState": {
-                    "isPaused": false,
-                    "isCurrent": true,
-                    "isPlaying": true
-                  },
-                  "events": {
-                    "connecting": true,
-                    "noConnection": false,
-                    "connected": true,
-                    "ended": false,
-                    "playing": true,
-                    "seeking": false,
-                    "pauseStateChanged": true
-                  }
-                },
-                "startTime": 1762925348852,
-                "duration": {
-                  "h": 0,
-                  "m": 7,
-                  "s": 17,
-                  "error": false,
-                  "isInfinite": false
-                },
-                "currentTime": {
-                  "h": 0,
-                  "m": 0,
-                  "s": 57,
-                  "error": false,
-                  "isInfinite": false
-                }
-              },
-              "subText": "April 3, 2017",
-              "url": "https://api.spreaker.com/download/episode/11545617/draft_1491251444785542.mp3",
-              "sel": null,
-              "id": "Cheikh Mamidou -Twahacht Anouchi Galbi Rah Mtouchi- (Studio 22) By Hicham Zakzouki",
-              "favLists": [],
-              "logo": "https://d3wo5wojvuv7l.cloudfront.net/images.spreaker.com/cloudinary/s--5_mNYT7l--/w_1000,h_800,c_fit,l_text:Lato_158_bold:Hicham%20Zakzouki%20s%20show/images.spreaker.com/default/show-1400x1400-20190801.jpg",
-              "pdc": true,
-              "epi": true,
-              "pubDate": "Mon, 03 Apr 2017 20:42:50 +0000",
-              "groups": [],
-              "key": "Cheikh Mamidou -Twahacht Anouchi Galbi Rah Mtouchi- (Studio 22) By Hicham Zakzoukihttps://api.spreaker.com/download/episode/11545617/draft_1491251444785542.mp3",
-              "ref": {
-                "currentRDList": {
-                  "listId": "Podcast",
-                  "name": "epi",
-                  "$item": null
-                },
-                "currentTab": {
-                  "listId": "Podcast",
-                  "tabId": "btn_wrp_podcast"
-                }
-              },
-              "listenDate": 1762925358832,
-              "pItem": null
-            }
-          },
-          "epiSubListId": null,
-          "noPage": 1,
-          "epiOpen": false,
-          "epiOpening": false
-        },
-        "selCnt": 0,
-        "id": "Horoscope",
-        "favLists": [
-          "----- Podcast Info -----"
-        ],
-        "metadata": {
-          "statusText": ""
-        },
-        "pdc": true,
-        "key": "Horoscopehttps://podcasts.tendanceouest.com/rss-podcast-71-horoscope/",
-        "rss": null,
-        "logo": "https://medias.tendanceouest.com/podcasts/1500/HOROS.jpg",
-        "subText": "Tendance Ouest"
-      },
-      {
-        "code": null,
-        "name": "Une lettre d'Amérique",
-        "qty": 101,
-        "url": "https://feeds.audiomeans.fr/feed/d9f89da8-ed1c-4b97-abe8-597fabb10eff.xml",
-        "store": 1,
-        "page": 1,
-        "pItem": null,
-        "sel": {
-          "lang": {
-            "item": {
-              "code": "fra",
-              "name": "French",
-              "qty": 64492
-            }
-          },
-          "langSubListId": "tag",
-          "tag": {
-            "item": {
-              "code": null,
-              "name": "documentary",
-              "qty": 213
-            }
-          },
-          "tagSubListId": "letter",
-          "letter": {
-            "item": {
-              "code": null,
-              "name": "U",
-              "qty": 2,
-              "stores": [
-                1
-              ]
-            }
-          },
-          "letterSubListId": "pdc",
-          "pdc": {
-            "item": {
-              "code": null,
-              "name": "Une lettre d'Amérique",
-              "qty": 101,
-              "url": "https://feeds.audiomeans.fr/feed/d9f89da8-ed1c-4b97-abe8-597fabb10eff.xml",
-              "store": 1,
-              "page": 1,
-              "pItem": null,
-              "sel": null,
-              "selCnt": 0,
-              "id": "Une lettre d'Amérique",
-              "favLists": [
-                "----- Podcast Info -----"
-              ],
-              "metadata": {
-                "statusText": ""
-              },
-              "pdc": true,
-              "rss": null,
-              "logo": "https://static.audiomeans.fr/img/podcast/cdf1f21c-e0b4-4c01-a0b4-d7115186a063.jpg",
-              "key": "Une lettre d'Amériquehttps://feeds.audiomeans.fr/feed/d9f89da8-ed1c-4b97-abe8-597fabb10eff.xml",
-              "subText": "RTL"
-            },
-            "selCnt": 0
-          },
-          "pdcSubListId": "epi",
-          "epi": {
-            "item": {
-              "code": null,
-              "name": "Jeune, démocrate et musulman : qui est Zohran Mamdani, le nouveau maire anti-Trump de New-York ?",
-              "qty": "",
-              "subText2": "01:43 / 01:03:34",
-              "metadata": {
-                "statusText": "playing",
-                "playState": {
-                  "statusText": "playing",
-                  "loadingState": "playing",
-                  "playingState": {
-                    "isPaused": false,
-                    "isCurrent": true,
-                    "isPlaying": true
-                  },
-                  "events": {
-                    "connecting": true,
-                    "noConnection": false,
-                    "connected": true,
-                    "ended": false,
-                    "playing": true,
-                    "seeking": true,
-                    "pauseStateChanged": true
-                  }
-                },
-                "startTime": 1762925209917,
-                "duration": {
-                  "h": 1,
-                  "m": 3,
-                  "s": 34,
-                  "error": false,
-                  "isInfinite": false
-                },
-                "currentTime": {
-                  "h": 0,
-                  "m": 1,
-                  "s": 43,
-                  "error": false,
-                  "isInfinite": false
-                },
-                "endTime": 1762924908838
-              },
-              "subText": "November 7, 2025",
-              "url": "https://audio.audiomeans.fr/file/PgeAPOjsIT/2f23a124-d77c-424f-9743-0deed2db267e.mp3?_=1762536783",
-              "sel": null,
-              "id": "Jeune, démocrate et musulman : qui est Zohran Mamdani, le nouveau maire anti-Trump de New-York ?",
-              "favLists": [
-                "----- Podcast documentaire -----"
-              ],
-              "logo": "https://static.audiomeans.fr/img/episode/2f008391-be8d-40c4-b566-54f187055ca2.jpg",
-              "pdc": true,
-              "epi": true,
-              "pubDate": "Fri, 07 Nov 2025 17:29:00 GMT",
-              "groups": [],
-              "key": "Jeune, démocrate et musulman : qui est Zohran Mamdani, le nouveau maire anti-Trump de New-York ?https://audio.audiomeans.fr/file/PgeAPOjsIT/2f23a124-d77c-424f-9743-0deed2db267e.mp3?_=1762536783",
-              "ref": {
-                "currentRDList": {
-                  "listId": "Podcast",
-                  "name": "epi",
-                  "$item": null
-                },
-                "currentTab": {
-                  "listId": "Podcast",
-                  "tabId": "btn_wrp_podcast"
-                }
-              },
-              "listenDate": 1762925217709,
-              "pItem": null
-            }
-          },
-          "epiSubListId": null,
-          "noPage": 1,
-          "epiOpen": false,
-          "epiOpening": false
-        },
-        "selCnt": 0,
-        "id": "Une lettre d'Amérique",
-        "favLists": [
-          "----- Podcast Info -----"
-        ],
-        "metadata": {
-          "statusText": ""
-        },
-        "pdc": true,
-        "rss": null,
-        "logo": "https://static.audiomeans.fr/img/podcast/cdf1f21c-e0b4-4c01-a0b4-d7115186a063.jpg",
-        "key": "Une lettre d'Amériquehttps://feeds.audiomeans.fr/feed/d9f89da8-ed1c-4b97-abe8-597fabb10eff.xml",
-        "subText": "RTL"
-      },
-      {
-        "code": null,
-        "name": "Trump - Photo Op",
-        "qty": 7,
-        "url": "https://feeds.audiomeans.fr/feed/f53df183-75c4-4fc0-a8ab-80bc50118135.xml",
-        "store": 1,
-        "page": 1,
-        "pItem": null,
-        "sel": {
-          "lang": {
-            "item": {
-              "code": "fra",
-              "name": "French",
-              "qty": 64492
-            }
-          },
-          "langSubListId": "tag",
-          "tag": {
-            "item": {
-              "code": null,
-              "name": "documentary",
-              "qty": 213
-            }
-          },
-          "tagSubListId": "letter",
-          "letter": {
-            "item": {
-              "code": null,
-              "name": "T",
-              "qty": 11,
-              "stores": [
-                1
-              ]
-            }
-          },
-          "letterSubListId": "pdc",
-          "pdc": {
-            "item": {
-              "code": null,
-              "name": "Tous Parano",
-              "qty": 56,
-              "url": "https://feeds.podcastics.com/podcastics/podcasts/rss/3735_58ead7f8566998862f14b7e2ec28af42.rss",
-              "store": 1,
-              "page": 1,
-              "pItem": null,
-              "sel": null,
-              "selCnt": 0,
-              "id": "Tous Parano",
-              "favLists": [
-                "----- Podcast Enquête -----"
-              ],
-              "metadata": {
-                "statusText": ""
-              },
-              "pdc": true,
-              "rss": null,
-              "logo": "https://medias.podcastics.com/podcastics/podcasts/artwork/tous-parano.jpg.2d71cceb4f9c8ef04d0edd9cdd308720.jpg",
-              "subText": "Tous Parano",
-              "key": "Tous Paranohttps://feeds.podcastics.com/podcastics/podcasts/rss/3735_58ead7f8566998862f14b7e2ec28af42.rss"
-            },
-            "selCnt": 0
-          },
-          "pdcSubListId": "epi",
-          "epi": {
-            "item": {
-              "code": null,
-              "name": "Brigitte Macron",
-              "qty": "",
-              "subText2": "00:07 / 01:05:54",
-              "metadata": {
-                "statusText": "playing",
-                "playState": {
-                  "statusText": "playing",
-                  "loadingState": "playing",
-                  "playingState": {
-                    "isPaused": false,
-                    "isCurrent": true,
-                    "isPlaying": true
-                  },
-                  "events": {
-                    "connecting": true,
-                    "noConnection": false,
-                    "connected": true,
-                    "ended": false,
-                    "playing": true,
-                    "seeking": false,
-                    "pauseStateChanged": true
-                  }
-                },
-                "startTime": 1762925146965,
-                "duration": {
-                  "h": 1,
-                  "m": 5,
-                  "s": 54,
-                  "error": false,
-                  "isInfinite": false
-                },
-                "currentTime": {
-                  "h": 0,
-                  "m": 0,
-                  "s": 7,
-                  "error": false,
-                  "isInfinite": false
-                }
-              },
-              "subText": "August 31, 2022",
-              "url": "https://track.podcastics.com/3735/141178.mp3",
-              "sel": null,
-              "id": "Brigitte Macron",
-              "favLists": [],
-              "logo": "https://medias.podcastics.com/podcastics/episodes/3735/artwork/brigitte-macron-tous-parano.png.5600fe5888f08f56f1a3473d8ac91404.png",
-              "pdc": true,
-              "epi": true,
-              "pubDate": "Wed, 31 Aug 2022 04:00:00 +0000",
-              "groups": [],
-              "key": "Brigitte Macronhttps://track.podcastics.com/3735/141178.mp3",
-              "ref": {
-                "currentRDList": {
-                  "listId": "List",
-                  "name": "----- Podcasts ------",
-                  "$item": null
-                },
-                "currentTab": {
-                  "listId": "List",
-                  "tabId": "btn_wrp_play_list"
-                }
-              },
-              "pItem": null
-            }
-          },
-          "epiSubListId": null,
-          "noPage": 1,
-          "epiOpen": false,
-          "epiOpening": false
-        },
-        "selCnt": 0,
-        "id": "Trump - Photo Op",
-        "favLists": [
-          "----- Podcast Info -----"
-        ],
-        "metadata": {
-          "statusText": ""
-        },
-        "pdc": true,
-        "rss": null,
-        "logo": "https://static.audiomeans.fr/img/podcast/3df0a8cb-9ce3-41c1-9e3b-a8c862c484b3.jpg",
-        "subText": "RTL",
-        "key": "Trump - Photo Ophttps://feeds.audiomeans.fr/feed/f53df183-75c4-4fc0-a8ab-80bc50118135.xml"
-      }
-    ],
+    "items": [],
     "isSystem": false
   },
   "----- Podcast documentaire -----": {
@@ -32423,25 +32362,25 @@
           "pdc": {
             "item": {
               "code": null,
-              "name": "Hicham Zakzouki's show",
-              "qty": 24,
-              "url": "https://www.spreaker.com/show/2210097/episodes/feed",
+              "name": "Horoscope",
+              "qty": 2139,
+              "url": "https://podcasts.tendanceouest.com/rss-podcast-71-horoscope/",
               "store": 1,
               "page": 1,
               "sel": null,
               "selCnt": 0,
-              "id": "Hicham Zakzouki's show",
+              "id": "Horoscope",
               "favLists": [
-                "Exotique"
+                "Infos"
               ],
               "metadata": {
                 "statusText": ""
               },
               "pdc": true,
-              "key": "Hicham Zakzouki's showhttps://www.spreaker.com/show/2210097/episodes/feed",
+              "key": "Horoscopehttps://podcasts.tendanceouest.com/rss-podcast-71-horoscope/",
               "rss": null,
-              "logo": "https://d3wo5wojvuv7l.cloudfront.net/images.spreaker.com/cloudinary/s--5_mNYT7l--/w_1000,h_800,c_fit,l_text:Lato_158_bold:Hicham%20Zakzouki%20s%20show/images.spreaker.com/default/show-1400x1400-20190801.jpg",
-              "subText": "Hicham Zakzouki",
+              "logo": "https://medias.tendanceouest.com/podcasts/1500/HOROS.jpg",
+              "subText": "Tendance Ouest",
               "pItem": null
             },
             "selCnt": 0
@@ -32572,25 +32511,25 @@
           "pdc": {
             "item": {
               "code": null,
-              "name": "Hicham Zakzouki's show",
-              "qty": 24,
-              "url": "https://www.spreaker.com/show/2210097/episodes/feed",
+              "name": "Horoscope",
+              "qty": 2139,
+              "url": "https://podcasts.tendanceouest.com/rss-podcast-71-horoscope/",
               "store": 1,
               "page": 1,
               "sel": null,
               "selCnt": 0,
-              "id": "Hicham Zakzouki's show",
+              "id": "Horoscope",
               "favLists": [
-                "Exotique"
+                "Infos"
               ],
               "metadata": {
                 "statusText": ""
               },
               "pdc": true,
-              "key": "Hicham Zakzouki's showhttps://www.spreaker.com/show/2210097/episodes/feed",
+              "key": "Horoscopehttps://podcasts.tendanceouest.com/rss-podcast-71-horoscope/",
               "rss": null,
-              "logo": "https://d3wo5wojvuv7l.cloudfront.net/images.spreaker.com/cloudinary/s--5_mNYT7l--/w_1000,h_800,c_fit,l_text:Lato_158_bold:Hicham%20Zakzouki%20s%20show/images.spreaker.com/default/show-1400x1400-20190801.jpg",
-              "subText": "Hicham Zakzouki",
+              "logo": "https://medias.tendanceouest.com/podcasts/1500/HOROS.jpg",
+              "subText": "Tendance Ouest",
               "pItem": null
             },
             "selCnt": 0
@@ -34302,13 +34241,7 @@
               "code": null,
               "name": "Jeune, démocrate et musulman : qui est Zohran Mamdani, le nouveau maire anti-Trump de New-York ?",
               "qty": "",
-              "subText2": "12:17 / 01:03:34",
-              "subText": "November 7, 2025",
-              "url": "https://audio.audiomeans.fr/file/uQzNZnSuzb/2f23a124-d77c-424f-9743-0deed2db267e.mp3?_=1762536783",
-              "sel": null,
-              "id": "Jeune, démocrate et musulman : qui est Zohran Mamdani, le nouveau maire anti-Trump de New-York ?",
-              "favLists": [],
-              "logo": "https://static.audiomeans.fr/img/episode/2f008391-be8d-40c4-b566-54f187055ca2.jpg",
+              "subText2": "01:43 / 01:03:34",
               "metadata": {
                 "statusText": "playing",
                 "playState": {
@@ -34329,7 +34262,7 @@
                     "pauseStateChanged": true
                   }
                 },
-                "startTime": 1762925204090,
+                "startTime": 1762925209917,
                 "duration": {
                   "h": 1,
                   "m": 3,
@@ -34339,36 +34272,44 @@
                 },
                 "currentTime": {
                   "h": 0,
-                  "m": 12,
-                  "s": 17,
+                  "m": 1,
+                  "s": 43,
                   "error": false,
                   "isInfinite": false
                 },
-                "endTime": 1762632373269
+                "endTime": 1762924908838
               },
+              "subText": "November 7, 2025",
+              "url": "https://audio.audiomeans.fr/file/PgeAPOjsIT/2f23a124-d77c-424f-9743-0deed2db267e.mp3?_=1762536783",
+              "sel": null,
+              "id": "Jeune, démocrate et musulman : qui est Zohran Mamdani, le nouveau maire anti-Trump de New-York ?",
+              "favLists": [
+                "----- Podcast documentaire -----"
+              ],
+              "logo": "https://static.audiomeans.fr/img/episode/2f008391-be8d-40c4-b566-54f187055ca2.jpg",
               "pdc": true,
               "epi": true,
               "pubDate": "Fri, 07 Nov 2025 17:29:00 GMT",
               "groups": [],
-              "key": "Jeune, démocrate et musulman : qui est Zohran Mamdani, le nouveau maire anti-Trump de New-York ?https://audio.audiomeans.fr/file/uQzNZnSuzb/2f23a124-d77c-424f-9743-0deed2db267e.mp3?_=1762536783",
+              "key": "Jeune, démocrate et musulman : qui est Zohran Mamdani, le nouveau maire anti-Trump de New-York ?https://audio.audiomeans.fr/file/PgeAPOjsIT/2f23a124-d77c-424f-9743-0deed2db267e.mp3?_=1762536783",
               "ref": {
                 "currentRDList": {
-                  "listId": "List",
-                  "name": "----- Podcasts ------",
+                  "listId": "Podcast",
+                  "name": "epi",
                   "$item": null
                 },
                 "currentTab": {
-                  "listId": "List",
-                  "tabId": "btn_wrp_play_list"
+                  "listId": "Podcast",
+                  "tabId": "btn_wrp_podcast"
                 }
               },
-              "listenDate": 1762632120524,
+              "listenDate": 1762925217709,
               "pItem": null
             }
           },
           "epiSubListId": null,
           "noPage": 1,
-          "epiOpen": true,
+          "epiOpen": false,
           "epiOpening": false
         },
         "id": "Jeune, démocrate et musulman : qui est Zohran Mamdani, le nouveau maire anti-Trump de New-York ?",
@@ -34588,6 +34529,306 @@
           }
         },
         "listenDate": 1762926177272
+      },
+      {
+        "code": null,
+        "name": "Une lettre d'Amérique",
+        "qty": 101,
+        "url": "https://feeds.audiomeans.fr/feed/d9f89da8-ed1c-4b97-abe8-597fabb10eff.xml",
+        "store": 1,
+        "page": 1,
+        "pItem": null,
+        "sel": {
+          "lang": {
+            "item": {
+              "code": "fra",
+              "name": "French",
+              "qty": 64492
+            }
+          },
+          "langSubListId": "tag",
+          "tag": {
+            "item": {
+              "code": null,
+              "name": "documentary",
+              "qty": 213
+            }
+          },
+          "tagSubListId": "letter",
+          "letter": {
+            "item": {
+              "code": null,
+              "name": "U",
+              "qty": 2,
+              "stores": [
+                1
+              ]
+            }
+          },
+          "letterSubListId": "pdc",
+          "pdc": {
+            "item": {
+              "code": null,
+              "name": "Une lettre d'Amérique",
+              "qty": 101,
+              "url": "https://feeds.audiomeans.fr/feed/d9f89da8-ed1c-4b97-abe8-597fabb10eff.xml",
+              "store": 1,
+              "page": 1,
+              "pItem": null,
+              "sel": null,
+              "selCnt": 0,
+              "id": "Une lettre d'Amérique",
+              "favLists": [],
+              "metadata": {
+                "statusText": ""
+              },
+              "pdc": true,
+              "rss": null,
+              "logo": "https://static.audiomeans.fr/img/podcast/cdf1f21c-e0b4-4c01-a0b4-d7115186a063.jpg",
+              "key": "Une lettre d'Amériquehttps://feeds.audiomeans.fr/feed/d9f89da8-ed1c-4b97-abe8-597fabb10eff.xml",
+              "subText": "RTL"
+            },
+            "selCnt": 0
+          },
+          "pdcSubListId": "epi",
+          "epi": {
+            "item": {
+              "code": null,
+              "name": "Jeune, démocrate et musulman : qui est Zohran Mamdani, le nouveau maire anti-Trump de New-York ?",
+              "qty": "",
+              "subText2": "01:43 / 01:03:34",
+              "metadata": {
+                "statusText": "playing",
+                "playState": {
+                  "statusText": "playing",
+                  "loadingState": "playing",
+                  "playingState": {
+                    "isPaused": false,
+                    "isCurrent": true,
+                    "isPlaying": true
+                  },
+                  "events": {
+                    "connecting": true,
+                    "noConnection": false,
+                    "connected": true,
+                    "ended": false,
+                    "playing": true,
+                    "seeking": true,
+                    "pauseStateChanged": true
+                  }
+                },
+                "startTime": 1762925209917,
+                "duration": {
+                  "h": 1,
+                  "m": 3,
+                  "s": 34,
+                  "error": false,
+                  "isInfinite": false
+                },
+                "currentTime": {
+                  "h": 0,
+                  "m": 1,
+                  "s": 43,
+                  "error": false,
+                  "isInfinite": false
+                },
+                "endTime": 1762924908838
+              },
+              "subText": "November 7, 2025",
+              "url": "https://audio.audiomeans.fr/file/PgeAPOjsIT/2f23a124-d77c-424f-9743-0deed2db267e.mp3?_=1762536783",
+              "sel": null,
+              "id": "Jeune, démocrate et musulman : qui est Zohran Mamdani, le nouveau maire anti-Trump de New-York ?",
+              "favLists": [
+                "----- Podcast documentaire -----"
+              ],
+              "logo": "https://static.audiomeans.fr/img/episode/2f008391-be8d-40c4-b566-54f187055ca2.jpg",
+              "pdc": true,
+              "epi": true,
+              "pubDate": "Fri, 07 Nov 2025 17:29:00 GMT",
+              "groups": [],
+              "key": "Jeune, démocrate et musulman : qui est Zohran Mamdani, le nouveau maire anti-Trump de New-York ?https://audio.audiomeans.fr/file/PgeAPOjsIT/2f23a124-d77c-424f-9743-0deed2db267e.mp3?_=1762536783",
+              "ref": {
+                "currentRDList": {
+                  "listId": "Podcast",
+                  "name": "epi",
+                  "$item": null
+                },
+                "currentTab": {
+                  "listId": "Podcast",
+                  "tabId": "btn_wrp_podcast"
+                }
+              },
+              "listenDate": 1762925217709,
+              "pItem": null
+            }
+          },
+          "epiSubListId": null,
+          "noPage": 1,
+          "epiOpen": false,
+          "epiOpening": false
+        },
+        "selCnt": 0,
+        "id": "Une lettre d'Amérique",
+        "favLists": [
+          "----- Podcast documentaire -----"
+        ],
+        "metadata": {
+          "statusText": ""
+        },
+        "pdc": true,
+        "rss": null,
+        "logo": "https://static.audiomeans.fr/img/podcast/cdf1f21c-e0b4-4c01-a0b4-d7115186a063.jpg",
+        "key": "Une lettre d'Amériquehttps://feeds.audiomeans.fr/feed/d9f89da8-ed1c-4b97-abe8-597fabb10eff.xml",
+        "subText": "RTL"
+      },
+      {
+        "code": null,
+        "name": "Trump - Photo Op",
+        "qty": 7,
+        "url": "https://feeds.audiomeans.fr/feed/f53df183-75c4-4fc0-a8ab-80bc50118135.xml",
+        "store": 1,
+        "page": 1,
+        "pItem": null,
+        "sel": {
+          "lang": {
+            "item": {
+              "code": "fra",
+              "name": "French",
+              "qty": 64492
+            }
+          },
+          "langSubListId": "tag",
+          "tag": {
+            "item": {
+              "code": null,
+              "name": "documentary",
+              "qty": 213
+            }
+          },
+          "tagSubListId": "letter",
+          "letter": {
+            "item": {
+              "code": null,
+              "name": "T",
+              "qty": 11,
+              "stores": [
+                1
+              ]
+            }
+          },
+          "letterSubListId": "pdc",
+          "pdc": {
+            "item": {
+              "code": null,
+              "name": "Trump - Photo Op",
+              "qty": 7,
+              "url": "https://feeds.audiomeans.fr/feed/f53df183-75c4-4fc0-a8ab-80bc50118135.xml",
+              "store": 1,
+              "page": 1,
+              "pItem": null,
+              "sel": null,
+              "selCnt": 0,
+              "id": "Trump - Photo Op",
+              "favLists": [
+                "----- Podcast documentaire -----"
+              ],
+              "metadata": {
+                "statusText": ""
+              },
+              "pdc": true,
+              "rss": null,
+              "logo": "https://static.audiomeans.fr/img/podcast/3df0a8cb-9ce3-41c1-9e3b-a8c862c484b3.jpg",
+              "subText": "RTL",
+              "key": "Trump - Photo Ophttps://feeds.audiomeans.fr/feed/f53df183-75c4-4fc0-a8ab-80bc50118135.xml"
+            },
+            "selCnt": 0
+          },
+          "pdcSubListId": "epi",
+          "epi": {
+            "item": {
+              "code": null,
+              "name": "Brigitte Macron",
+              "qty": "",
+              "subText2": "00:07 / 01:05:54",
+              "metadata": {
+                "statusText": "playing",
+                "playState": {
+                  "statusText": "playing",
+                  "loadingState": "playing",
+                  "playingState": {
+                    "isPaused": false,
+                    "isCurrent": true,
+                    "isPlaying": true
+                  },
+                  "events": {
+                    "connecting": true,
+                    "noConnection": false,
+                    "connected": true,
+                    "ended": false,
+                    "playing": true,
+                    "seeking": false,
+                    "pauseStateChanged": true
+                  }
+                },
+                "startTime": 1762925146965,
+                "duration": {
+                  "h": 1,
+                  "m": 5,
+                  "s": 54,
+                  "error": false,
+                  "isInfinite": false
+                },
+                "currentTime": {
+                  "h": 0,
+                  "m": 0,
+                  "s": 7,
+                  "error": false,
+                  "isInfinite": false
+                }
+              },
+              "subText": "August 31, 2022",
+              "url": "https://track.podcastics.com/3735/141178.mp3",
+              "sel": null,
+              "id": "Brigitte Macron",
+              "favLists": [],
+              "logo": "https://medias.podcastics.com/podcastics/episodes/3735/artwork/brigitte-macron-tous-parano.png.5600fe5888f08f56f1a3473d8ac91404.png",
+              "pdc": true,
+              "epi": true,
+              "pubDate": "Wed, 31 Aug 2022 04:00:00 +0000",
+              "groups": [],
+              "key": "Brigitte Macronhttps://track.podcastics.com/3735/141178.mp3",
+              "ref": {
+                "currentRDList": {
+                  "listId": "List",
+                  "name": "----- Podcasts ------",
+                  "$item": null
+                },
+                "currentTab": {
+                  "listId": "List",
+                  "tabId": "btn_wrp_play_list"
+                }
+              },
+              "pItem": null
+            }
+          },
+          "epiSubListId": null,
+          "noPage": 1,
+          "epiOpen": false,
+          "epiOpening": false
+        },
+        "selCnt": 0,
+        "id": "Trump - Photo Op",
+        "favLists": [
+          "----- Podcast documentaire -----"
+        ],
+        "metadata": {
+          "statusText": ""
+        },
+        "pdc": true,
+        "rss": null,
+        "logo": "https://static.audiomeans.fr/img/podcast/3df0a8cb-9ce3-41c1-9e3b-a8c862c484b3.jpg",
+        "subText": "RTL",
+        "key": "Trump - Photo Ophttps://feeds.audiomeans.fr/feed/f53df183-75c4-4fc0-a8ab-80bc50118135.xml"
       }
     ],
     "isSystem": false
@@ -37794,25 +38035,25 @@
           "pdc": {
             "item": {
               "code": null,
-              "name": "Hicham Zakzouki's show",
-              "qty": 24,
-              "url": "https://www.spreaker.com/show/2210097/episodes/feed",
+              "name": "Horoscope",
+              "qty": 2139,
+              "url": "https://podcasts.tendanceouest.com/rss-podcast-71-horoscope/",
               "store": 1,
               "page": 1,
               "sel": null,
               "selCnt": 0,
-              "id": "Hicham Zakzouki's show",
+              "id": "Horoscope",
               "favLists": [
-                "Exotique"
+                "Infos"
               ],
               "metadata": {
                 "statusText": ""
               },
               "pdc": true,
-              "key": "Hicham Zakzouki's showhttps://www.spreaker.com/show/2210097/episodes/feed",
+              "key": "Horoscopehttps://podcasts.tendanceouest.com/rss-podcast-71-horoscope/",
               "rss": null,
-              "logo": "https://d3wo5wojvuv7l.cloudfront.net/images.spreaker.com/cloudinary/s--5_mNYT7l--/w_1000,h_800,c_fit,l_text:Lato_158_bold:Hicham%20Zakzouki%20s%20show/images.spreaker.com/default/show-1400x1400-20190801.jpg",
-              "subText": "Hicham Zakzouki",
+              "logo": "https://medias.tendanceouest.com/podcasts/1500/HOROS.jpg",
+              "subText": "Tendance Ouest",
               "pItem": null
             },
             "selCnt": 0
@@ -37943,25 +38184,25 @@
           "pdc": {
             "item": {
               "code": null,
-              "name": "Hicham Zakzouki's show",
-              "qty": 24,
-              "url": "https://www.spreaker.com/show/2210097/episodes/feed",
+              "name": "Horoscope",
+              "qty": 2139,
+              "url": "https://podcasts.tendanceouest.com/rss-podcast-71-horoscope/",
               "store": 1,
               "page": 1,
               "sel": null,
               "selCnt": 0,
-              "id": "Hicham Zakzouki's show",
+              "id": "Horoscope",
               "favLists": [
-                "Exotique"
+                "Infos"
               ],
               "metadata": {
                 "statusText": ""
               },
               "pdc": true,
-              "key": "Hicham Zakzouki's showhttps://www.spreaker.com/show/2210097/episodes/feed",
+              "key": "Horoscopehttps://podcasts.tendanceouest.com/rss-podcast-71-horoscope/",
               "rss": null,
-              "logo": "https://d3wo5wojvuv7l.cloudfront.net/images.spreaker.com/cloudinary/s--5_mNYT7l--/w_1000,h_800,c_fit,l_text:Lato_158_bold:Hicham%20Zakzouki%20s%20show/images.spreaker.com/default/show-1400x1400-20190801.jpg",
-              "subText": "Hicham Zakzouki",
+              "logo": "https://medias.tendanceouest.com/podcasts/1500/HOROS.jpg",
+              "subText": "Tendance Ouest",
               "pItem": null
             },
             "selCnt": 0
