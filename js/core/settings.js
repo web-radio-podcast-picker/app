@@ -216,6 +216,7 @@ window.settings = {
 
         minWidth: 670,
         minHeight: 405,
+        refRatioXonY: 712 / 483,
 
         themes: {
             default: {
