@@ -14,7 +14,7 @@ window.settings = {
             verDate: '8/23/2025'
         },
         wrp: {
-            version: '1.3.25',
+            version: '1.3.26',
             verDate: '11/12/2025'
         }
     },
@@ -213,6 +213,9 @@ window.settings = {
 
         updatePositionPerdiod: 500,
         updatePositionEnabled: true,
+
+        minWidth: 670,
+        minHeight: 405,
 
         themes: {
             default: {
