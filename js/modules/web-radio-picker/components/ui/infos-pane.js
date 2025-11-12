@@ -58,15 +58,20 @@ class InfosPane {
         }
         const appinf = '?'//await this.getRelatedApps()
         w('app', settings.app.wrp.version + ' ' + settings.app.wrp.verDate)
+        w('distro', settings.app.distro.id + ' ' +
+            settings.app.distro.version + ' ' + settings.app.distro.verDate)
         if (appinf != '?')
             val(appinf)
+
         w('user agent', navigator.userAgent)
         const brand = navigator.userAgentData?.brands.map(x => x?.brand)?.join(' | ')
         w('brand', brand)
         w('iphone', settings.features.constraints.isIPhone ? 'yes' : 'no')
+
         w('window size', this.getWindowSizeText())
         w('platform', settings.sys.platformText)
         w('mobile', settings.sys.mobile ? 'yes' : 'no')
+
         var ps = window.location.search
         if (ps == null || ps === undefined || ps == '') ps = '-'
         w('parameters', ps)
