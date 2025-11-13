@@ -388,5 +388,14 @@ ui = {
         }
         logger.log('getOrientation = ' + ori)
         return ori
+    },
+
+    // #region ------------- ELECTRON SPECIFIC --------------
+
+    onWindowPropsChanged(wp) {
+        if (settings.debug.debug)
+            console.log('windows props changed: ', wp)
     }
+
+    // #endregion
 }
