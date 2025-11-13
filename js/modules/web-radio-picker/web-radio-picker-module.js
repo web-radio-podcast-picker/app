@@ -381,6 +381,7 @@ class WebRadioPickerModule extends ModuleBase {
         $('#btn_wrp_infos').addClass('no-drag')
         $('#btn_wrp_exit').addClass('no-drag')
 
+        this.clearRadioView()
         this.initApp(firstInit)
     }
 

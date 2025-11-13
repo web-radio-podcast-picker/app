@@ -19,6 +19,7 @@ class Db {
     dbReady = false
     #count = 0
     onDbReady = null
+    winPropsKey = 'windowProps'
 
     constructor(onDbReady) {
         this.onDbReady = onDbReady
@@ -186,6 +187,16 @@ class Db {
         this.#saveSingleObject(o, this.uiStateStoreName, 'ui state')
     }
 
+    /**
+     * save window properties
+     * @param {Object} windowProps window properties from electron side
+     */
+    saveWindowProps(windowProps) {
+        const label = 'window props'
+        windowProps[StoreObjectKeyName] = this.winPropsKey
+        this.#saveObject(windowProps, this.propertiesStoreName, label)
+    }
+
     #saveSingleObject(o, storeName, label, nolog) {
         const tc = this.db.transaction(storeName, 'readwrite')
             .objectStore(storeName)
@@ -251,6 +262,15 @@ class Db {
      */
     loadUIState(onLoaded) {
         this.#loadSingleObject(this.uiStateStoreName, 'uiState', 'ui state', onLoaded)
+    }
+
+    /**
+     * load window properties
+     * @returns {Object} windowProps window properties from electron side
+     */
+    loadWindowProps(onLoaded) {
+        const label = 'window props'
+        this.#loadSingleObject(this.propertiesStoreName, this.winPropsKey, label, onLoaded)
     }
 
     #loadAllObjects(storeName, label, onLoaded) {

@@ -395,6 +395,8 @@ ui = {
     onWindowPropsChanged(wp) {
         if (settings.debug.debug)
             console.log('windows props changed: ', wp)
+        settings.dataStore.db.saveWindowProps(wp)
+        //if !cdveApp() return
     }
 
     // #endregion
