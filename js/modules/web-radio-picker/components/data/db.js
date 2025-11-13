@@ -274,7 +274,7 @@ class Db {
     }
 
     #loadAllObjects(storeName, label, onLoaded) {
-        const tc = this.db.transaction(storeName, 'readwrite')
+        const tc = this.db.transaction(storeName, 'readwrite')  // TODO: readonly
             .objectStore(storeName)
         const req = tc.getAll()
         req.onerror = e => this.dbError(e)
@@ -287,10 +287,13 @@ class Db {
     }
 
     #loadSingleObject(storeName, key, label, onLoaded) {
-        const tc = this.db.transaction(storeName, 'readwrite')
+        const tc = this.db.transaction(storeName, 'readwrite')  // TODO: readonly
             .objectStore(storeName)
         const req = tc.get(key)
-        req.onerror = e => this.dbError(e)
+        req.onerror = e => {
+            this.dbError(e)
+            onLoaded(null)    // TODO: to be discussed
+        }
         req.onsuccess = e => {
             if (settings.debug.debug)
                 logger.log(DbLogPfx + label + ' loaded from db')
