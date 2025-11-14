@@ -45,7 +45,9 @@ class RadListBuilder {
             xcl += 'wrp-list-item-text-container-pdc'
             str = '<img name="pod" src="./img/icons8-podcast-50.png" class="wrp-item-pod-icon">' + str
         }
-        const $textBox = $('<div class="wrp-list-item-text-container ' + xcl + '">' + str + '</div>')
+        const $textBox = $('<div class="wrp-list-item-text-container ' + xcl + '">'
+            + str   // TODO: encapsulate in a div + style in grid + fix code that update this
+            + '</div>')
 
         // TODO: FIX :: listId == listName == null on startup ?!
         // eventually sub text

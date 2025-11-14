@@ -243,6 +243,9 @@ div.wrp-list-epi-item-sub > span.wrp-item-info-text {
     margin-right: 1.5em;
     min-height: 2.3em;
     align-content: center;
+    /* TODO: display: block */
+    align-content: center;
+    align-self: center;
 }
 
 .wrp-list-item-text-container-epi {
