@@ -46,7 +46,7 @@ class RadListBuilder {
             str = '<img name="pod" src="./img/icons8-podcast-50.png" class="wrp-item-pod-icon">' + str
         }
         const $textBox = $('<div class="wrp-list-item-text-container ' + xcl + '">'
-            + str   // TODO: encapsulate in a div + style in grid + fix code that update this
+            + '<div class="wrp-list-item-text-title">' + str + '</div>'   // TODO: encapsulate in a div + style in grid + fix code that update this
             + '</div>')
 
         // TODO: FIX :: listId == listName == null on startup ?!
@@ -111,7 +111,7 @@ class RadListBuilder {
     }
 
     updateListItemText($item, text) {
-        const $textBox = $item.find('.wrp-list-item-text-container')
+        const $textBox = $item.find('.wrp-list-item-text-title') //container')
         $textBox.text(text)
     }
 
