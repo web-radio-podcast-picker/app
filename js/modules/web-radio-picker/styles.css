@@ -532,7 +532,7 @@ div.wrp-list-epi-item-sub > span.wrp-item-info-text {
     display: inline-block;
     text-wrap: nowrap;
     /* display: grid; */
-    height: 2.3em;
+    /*height: 2.3em;*/
 }
 
 #wrp_list_count {
