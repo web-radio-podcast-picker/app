@@ -969,4 +969,6 @@ h1 {
 
 #wrp_footer_path_container {
     display: grid;
+    grid-template-columns: min-content auto;
+    grid-template*column: ;
 }
