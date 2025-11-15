@@ -33,6 +33,9 @@ const RadioList = 'rad'
 const RadioList_History = 'History'
 const RadioList_List_VisibleName = '- History -'
 
+const PodcastSwitchButtonLabel = '<img name="fav_pdc_but" src="./img/icons8-podcast-50.png" class="wrp-item-pod-head-icon" width="24" height="24" alt="fav_but">'
+const StationSwitchButtonLabel = '<span class="station-button-switch">Stations</span>'
+
 // out of 'lists' pane
 const RadioList_List = 'List'
 const RadioList_All = 'All'
